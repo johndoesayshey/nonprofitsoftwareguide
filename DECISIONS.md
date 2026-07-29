@@ -195,6 +195,28 @@ leaks to an indexed page.
 huge display figure, so draft previews stay readable. Real short figures render at
 full display size as designed.
 
+## Step 10 — SEO plumbing
+
+**D31. Custom sitemap instead of `@astrojs/sitemap`.** The integration would list
+every built page, including draft (noindex) previews and `/go/` redirects. A custom
+`/sitemap.xml` endpoint lists only indexable URLs — published content + static hubs
+— which is what belongs in a sitemap. Dropped the integration dependency.
+
+## Step 11 — first three posts
+
+**D32. `rehype` plugin tags `/go/` links.** So the operator can write plain
+markdown affiliate links (`[Text](/go/slug)`) and still emit `rel="sponsored
+nofollow noopener"` (required by affiliate terms), a small rehype plugin in
+`astro.config.mjs` adds that rel to any `/go/` link. The `<AffiliateLink>`
+component already set it; this covers hand-written links across all 30 future posts.
+
+**D33. First three posts.** Two grant, one prospect (per "grant or prospect,
+narrow and concrete"): funder-priorities-vs-990, when-to-buy-wealth-screening,
+how-to-research-a-foundation. Each is answer-first (40–60 word lead), has 2 FAQ
+entries (→ FAQPage schema), 2 `[OPERATOR INPUT]` slots for first-hand judgment,
+links up to its hub, and ships `draft: true`. No fabricated first-hand claims — the
+"we tested / I did X" content lives entirely in the operator slots.
+
 ## Step 5 continued
 
 **D24. `/disclosure` and `/about` are `noindex` until the operator writes them.**
