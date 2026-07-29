@@ -20,9 +20,29 @@ const rows = STACK_TIERS.map((t) => {
 });
 
 const dateFmt = formatMonthYear;
+
+const site = Astro.site ?? new URL('https://nonprofitsoftwareguide.com');
+const orgLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'Nonprofit Software Guide',
+  url: site.href,
+  description:
+    'Independent guide to the nonprofit fundraising software stack, organized by shop size.',
+};
+const siteLd = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: 'Nonprofit Software Guide',
+  url: site.href,
+};
 ---
 
 <BaseLayout title="Nonprofit Software Guide">
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(orgLd)} is:inline />
+    <script type="application/ld+json" set:html={JSON.stringify(siteLd)} is:inline />
+  </Fragment>
   <div class="wrap">
     <section class="hero" style="padding: clamp(2.2rem,6vw,4rem) 0 1rem;">
       <p class="kicker">The fundraising stack ledger</p>

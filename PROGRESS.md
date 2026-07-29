@@ -16,7 +16,7 @@ from here. Each step is committed separately.
 | 7 | 4 stack files | ✅ done |
 | 8 | content-calendar.md (30 posts) | ✅ done |
 | 9 | link-targets.md (25 targets) | ✅ done |
-| 10 | Sitemap, RSS, meta, JSON-LD, GA4/GSC env | ⬜ todo |
+| 10 | Sitemap, RSS, meta, JSON-LD, GA4/GSC env | ✅ done |
 | 11 | Draft first 3 posts | ⬜ todo |
 | 12 | DEPLOY.md | ⬜ todo |
 

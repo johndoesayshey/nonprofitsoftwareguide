@@ -24,8 +24,9 @@ const canonical = new URL(Astro.url.pathname, Astro.site ?? Astro.url).href;
 const siteName = 'Nonprofit Software Guide';
 const fullTitle = title === siteName ? title : `${title} — ${siteName}`;
 
-// GA4 / Search Console pulled from env; left empty until the operator fills them (step 10/12).
+// GA4 / Search Console pulled from env; left empty until the operator fills them (see .env.example / DEPLOY.md).
 const GA4_ID = import.meta.env.PUBLIC_GA4_ID ?? '';
+const GSC_VERIFICATION = import.meta.env.PUBLIC_GSC_VERIFICATION ?? '';
 ---
 
 <!doctype html>
@@ -38,6 +39,7 @@ const GA4_ID = import.meta.env.PUBLIC_GA4_ID ?? '';
     <meta name="description" content={description} />
     <link rel="canonical" href={canonical} />
     {noindex && <meta name="robots" content="noindex, nofollow" />}
+    {GSC_VERIFICATION && <meta name="google-site-verification" content={GSC_VERIFICATION} />}
 
     <!-- Open Graph / Twitter -->
     <meta property="og:site_name" content={siteName} />

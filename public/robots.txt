@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+# Affiliate redirect hops should never be crawled or indexed.
+Disallow: /go/
+
+Sitemap: https://nonprofitsoftwareguide.com/sitemap.xml
