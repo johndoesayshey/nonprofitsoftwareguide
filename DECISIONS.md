@@ -174,6 +174,27 @@ timezone — caught by viewing the actual page, not the code. Centralized all da
 formatting in `src/lib/dates.ts` with `timeZone: 'UTC'` so dates display exactly
 as authored.
 
+## Step 7 — stack files
+
+**D28. `[OPERATOR INPUT]` per line item.** The spec says "[OPERATOR INPUT] on every
+recommendation rationale." Implemented as: the frontmatter `rationale` is a short
+factual descriptor (shown in the ledger table), and the body's "Why these picks"
+walks each line item with a dedicated `[OPERATOR INPUT]` slot for the operator's
+first-hand reasoning. Every stack also has the required "what to cut first when the
+budget gets cut" section and an "outgrown this stack" upgrade-trigger section.
+
+**D29. Component slugs stay within the 14 platform files.** Each stack line's
+`platformSlug` points to a real platform page so the ledger links resolve. Free
+lines cost "$0" (fact); paid lines are `[FACT-CHECK]`; the Grassroots total is a
+real "$0" while the other three totals are `[FACT-CHECK]` placeholders. The
+homepage/stacks index only render totals for published stacks, so no placeholder
+leaks to an indexed page.
+
+**D30. Stack total placeholder renders small.** When `totalStackCost` still holds a
+`[FACT-CHECK]` string, the total card renders it at body size in red instead of the
+huge display figure, so draft previews stay readable. Real short figures render at
+full display size as designed.
+
 ## Step 5 continued
 
 **D24. `/disclosure` and `/about` are `noindex` until the operator writes them.**

@@ -13,7 +13,7 @@ from here. Each step is committed separately.
 | 4 | Layouts, design system, 3 design options, homepage | ✅ done |
 | 5 | Stack / platform / compare / blog / disclosure / about pages | ✅ done |
 | 6 | 14 platform files | ✅ done |
-| 7 | 4 stack files | ⬜ todo |
+| 7 | 4 stack files | ✅ done |
 | 8 | content-calendar.md (30 posts) | ⬜ todo |
 | 9 | link-targets.md (25 targets) | ⬜ todo |
 | 10 | Sitemap, RSS, meta, JSON-LD, GA4/GSC env | ⬜ todo |
