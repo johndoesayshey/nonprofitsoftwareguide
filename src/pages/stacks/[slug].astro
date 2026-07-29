@@ -6,6 +6,7 @@ import AffiliateDisclosure from '../../components/AffiliateDisclosure.astro';
 import DraftBanner from '../../components/DraftBanner.astro';
 import { categoryLabel } from '../../lib/categories';
 import { tierBySlug } from '../../lib/stacks';
+import { formatMedium } from '../../lib/dates';
 
 export async function getStaticPaths() {
   const stacks = await getCollection('stacks');
@@ -24,7 +25,7 @@ const supporting = allPosts
   .filter((p) => p.data.stack === s.slug)
   .sort((a, b) => +b.data.publishDate - +a.data.publishDate);
 
-const verified = s.lastVerified.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+const verified = formatMedium(s.lastVerified);
 ---
 
 <BaseLayout

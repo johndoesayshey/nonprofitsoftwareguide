@@ -2,6 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
 import { STACK_TIERS } from '../lib/stacks';
+import { formatMonthYear } from '../lib/dates';
 
 // Enrich each tier with its published stack's verified total cost, when one
 // exists. Draft/unbuilt stacks show the revenue band instead — we never print an
@@ -18,8 +19,7 @@ const rows = STACK_TIERS.map((t) => {
   };
 });
 
-const dateFmt = (d: Date) =>
-  d.toLocaleDateString('en-US', { month: 'short', year: 'numeric' });
+const dateFmt = formatMonthYear;
 ---
 
 <BaseLayout title="Nonprofit Software Guide">

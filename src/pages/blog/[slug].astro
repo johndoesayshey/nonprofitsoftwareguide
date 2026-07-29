@@ -5,6 +5,7 @@ import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import AffiliateDisclosure from '../../components/AffiliateDisclosure.astro';
 import DraftBanner from '../../components/DraftBanner.astro';
 import { tierBySlug } from '../../lib/stacks';
+import { formatLong } from '../../lib/dates';
 
 export async function getStaticPaths() {
   const posts = await getCollection('posts');
@@ -17,9 +18,8 @@ const { Content } = await render(entry);
 const isDraft = post.draft !== false;
 const hub = tierBySlug(post.stack);
 
-const fmt = (d: Date) => d.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
-const published = fmt(post.publishDate);
-const modified = post.updatedDate ? fmt(post.updatedDate) : null;
+const published = formatLong(post.publishDate);
+const modified = post.updatedDate ? formatLong(post.updatedDate) : null;
 
 const site = Astro.site ?? new URL('/', Astro.url);
 const articleLd = {

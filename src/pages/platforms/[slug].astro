@@ -7,6 +7,7 @@ import AffiliateDisclosure from '../../components/AffiliateDisclosure.astro';
 import DraftBanner from '../../components/DraftBanner.astro';
 import { CATEGORIES } from '../../lib/categories';
 import { getAffiliate } from '../../lib/affiliates';
+import { formatMedium } from '../../lib/dates';
 
 export async function getStaticPaths() {
   const platforms = await getCollection('platforms');
@@ -20,7 +21,7 @@ const cat = CATEGORIES[p.category];
 const affiliate = p.affiliateSlug ? getAffiliate(p.affiliateSlug) : undefined;
 const isDraft = p.draft !== false;
 
-const verified = p.lastVerified.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+const verified = formatMedium(p.lastVerified);
 
 // Product JSON-LD. Only attach an Offer when we have a clean (non-placeholder)
 // price — never emit a [FACT-CHECK] string as structured data.

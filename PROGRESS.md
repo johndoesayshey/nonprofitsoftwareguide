@@ -12,7 +12,7 @@ from here. Each step is committed separately.
 | 3 | Five guardrail scripts wired into build | ✅ done |
 | 4 | Layouts, design system, 3 design options, homepage | ✅ done |
 | 5 | Stack / platform / compare / blog / disclosure / about pages | ✅ done |
-| 6 | 14 platform files | ⬜ todo |
+| 6 | 14 platform files | ✅ done |
 | 7 | 4 stack files | ⬜ todo |
 | 8 | content-calendar.md (30 posts) | ⬜ todo |
 | 9 | link-targets.md (25 targets) | ⬜ todo |

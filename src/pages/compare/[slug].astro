@@ -7,6 +7,7 @@ import DraftBanner from '../../components/DraftBanner.astro';
 import { comparePairs } from '../../lib/compare';
 import { categoryLabel } from '../../lib/categories';
 import { getAffiliate } from '../../lib/affiliates';
+import { formatMonthYear } from '../../lib/dates';
 
 export async function getStaticPaths() {
   const pairs = await comparePairs();
@@ -23,7 +24,7 @@ const isDraft = a.draft !== false || b.draft !== false;
 
 const affA = a.affiliateSlug ? getAffiliate(a.affiliateSlug) : undefined;
 const affB = b.affiliateSlug ? getAffiliate(b.affiliateSlug) : undefined;
-const fmt = (d: Date) => d.toLocaleDateString('en-US', { month: 'short', year: 'numeric' });
+const fmt = formatMonthYear;
 
 const site = Astro.site ?? new URL('/', Astro.url);
 const itemListLd = {

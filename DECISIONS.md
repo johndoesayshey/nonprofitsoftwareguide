@@ -152,6 +152,30 @@ A comparison is `noindex` if either side is a draft, and the `/compare` index
 lists only pairs where both sides are published. Cross-category pairs are
 intentionally not generated — "grant tool vs CRM" isn't a real query.
 
+## Step 6 — platform files
+
+**D25. Which 14 platforms.** Grant (4): Instrumentl, GrantStation, Candid,
+Grants.gov. Prospect (3): Kindsight, DonorSearch, WealthEngine. CRM (4):
+Bloomerang, DonorDock, Neon, Little Green Light. Processing (3): Donorbox, Zeffy,
+Givebutter. That's 7/14 in the two money categories, matching the spec's weighting,
+while still covering the free options (Zeffy, Givebutter, Grants.gov, LGL) so the
+paid recommendations stay credible.
+
+**D26. No invented prices.** Every `entryPrice` either says "Free" (a verifiable
+fact, for Grants.gov / Zeffy / Givebutter) or is a `[FACT-CHECK]` placeholder that
+tells the operator exactly where to verify the real number. I did not write
+specific dollar figures from memory — training-data pricing is stale and the spec
+forbids inventing numbers. Each file also has 1–2 `[OPERATOR INPUT]` slots for
+first-hand judgment. All ship `draft: true`.
+
+**D27. Timezone date bug fixed.** Frontmatter dates (`2026-07-28`) parse as UTC
+midnight and rendered a day early ("Jul 27") via `toLocaleDateString` in a US
+timezone — caught by viewing the actual page, not the code. Centralized all date
+formatting in `src/lib/dates.ts` with `timeZone: 'UTC'` so dates display exactly
+as authored.
+
+## Step 5 continued
+
 **D24. `/disclosure` and `/about` are `noindex` until the operator writes them.**
 Both carry a visible `[OPERATOR INPUT]` block instead of invented legal text or a
 fabricated bio (the bio is the site's credibility and must be real). They flip to
