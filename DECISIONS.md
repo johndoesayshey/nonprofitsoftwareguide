@@ -217,6 +217,25 @@ entries (→ FAQPage schema), 2 `[OPERATOR INPUT]` slots for first-hand judgment
 links up to its hub, and ships `draft: true`. No fabricated first-hand claims — the
 "we tested / I did X" content lives entirely in the operator slots.
 
+## Link-magnet assets (SEO requirement, beyond the numbered work order)
+
+**D34. Calculator uses editable prices, not baked-in figures.** The stack cost
+calculator seeds free tools at $0 (fact) and leaves paid tools blank, but every
+price is an editable input the user (or operator) fills. This makes it useful and
+honest immediately — no invented prices — and it becomes a stronger tool as the
+operator fills `src/data/pricing.json`. Shop-size presets pull the recommended
+tools straight from the stack files, so the calculator and stacks never drift.
+Vanilla JS, ~23KB page total, within the performance budget.
+
+**D35. Benchmark ships as a noindex scaffold.** The annual spend benchmark is the
+best link magnet, but its whole value is *original data* — which must be the
+operator's real figures, not invented (spec: "never invent a number"). So the page
+is a complete, authoritative-looking template (grid + methodology + cite-this +
+`Dataset` JSON-LD) with `[OPERATOR INPUT]`/`null` cells, held `noindex` and out of
+the sitemap until the operator fills `src/data/benchmarks.json` and sets
+`"ready": true`. Publishing an empty benchmark would be a thin page; this way the
+structure is done and only the data is owed.
+
 ## Step 5 continued
 
 **D24. `/disclosure` and `/about` are `noindex` until the operator writes them.**

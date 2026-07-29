@@ -1,0 +1,200 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import AffiliateDisclosure from '../../components/AffiliateDisclosure.astro';
+import { CATEGORIES } from '../../lib/categories';
+import { STACK_TIERS } from '../../lib/stacks';
+import pricingData from '../../data/pricing.json';
+
+const prices = (pricingData as any).prices as Record<string, { annual: number | null; note: string }>;
+
+// Build the tool list from the platform pages, enriched with seed prices.
+const platforms = await getCollection('platforms');
+const bySlug = new Map(platforms.map((p) => [p.data.slug, p.data]));
+
+const tools = Object.keys(prices)
+  .map((slug) => {
+    const p = bySlug.get(slug);
+    if (!p) return null;
+    return {
+      slug,
+      name: p.name,
+      category: p.category,
+      seed: prices[slug].annual, // number | null
+      note: prices[slug].note,
+    };
+  })
+  .filter(Boolean) as { slug: string; name: string; category: string; seed: number | null; note: string }[];
+
+// Group by category in display order.
+const grouped = Object.values(CATEGORIES)
+  .map((cat) => ({ cat, items: tools.filter((t) => t.category === cat.slug) }))
+  .filter((g) => g.items.length > 0);
+
+// Presets: each shop-size tier's recommended tools, from the stack files.
+const stacks = await getCollection('stacks');
+const stackBySlug = new Map(stacks.map((s) => [s.data.slug, s.data]));
+const presets = STACK_TIERS.map((t) => ({
+  slug: t.slug,
+  tier: t.tier,
+  revenue: t.revenue,
+  toolSlugs: (stackBySlug.get(t.slug)?.components ?? []).map((c) => c.platformSlug).filter((s) => prices[s]),
+}));
+
+// Data handed to the inline script.
+const clientData = { presets };
+---
+
+<BaseLayout
+  title="Nonprofit fundraising stack cost calculator"
+  description="Add up the real annual cost of your nonprofit's fundraising software. Pick your tools or start from your shop size, enter your quoted prices, and get a live total.">
+  <div class="wrap">
+    <Breadcrumbs crumbs={[{ label: 'Home', href: '/' }, { label: 'Tools' }, { label: 'Stack cost calculator' }]} />
+
+    <section class="prose" style="margin-top: 1.2rem;">
+      <p class="kicker">Free tool</p>
+      <h1>Fundraising stack cost calculator</h1>
+      <p class="lede">
+        Add up what your fundraising software actually costs per year. Start from
+        your shop size or pick tools by hand, then adjust each price to the number
+        you were quoted — nonprofit pricing varies, so the total is only as honest
+        as the figures you enter.
+      </p>
+    </section>
+
+    <!-- Live total: updated by JS, announced to screen readers. -->
+    <div class="calc-total" aria-live="polite">
+      <div>
+        <span class="calc-total-label">Estimated annual software cost</span>
+        <span class="calc-total-amt mono" id="calcTotal">$0</span>
+      </div>
+      <p class="calc-total-meta" id="calcMeta">No tools selected yet.</p>
+    </div>
+
+    <div class="calc-presets">
+      <span class="calc-presets-label">Start from a shop size:</span>
+      {presets.map((p) => (
+        <button type="button" class="calc-preset" data-preset={p.slug}>{p.tier} <small>{p.revenue}</small></button>
+      ))}
+      <button type="button" class="calc-reset" id="calcReset">Clear all</button>
+    </div>
+
+    <form class="calc-form" id="calcForm">
+      {grouped.map((g) => (
+        <fieldset class="calc-cat">
+          <legend>{g.cat.label}</legend>
+          {g.items.map((t) => (
+            <div class="calc-row">
+              <label class="calc-check">
+                <input type="checkbox" data-include data-slug={t.slug} />
+                <span><a href={`/platforms/${t.slug}/`}>{t.name}</a></span>
+              </label>
+              <div class="calc-costwrap">
+                <span aria-hidden="true">$</span>
+                <input
+                  type="number" min="0" step="1" inputmode="numeric"
+                  class="calc-cost" data-cost data-slug={t.slug}
+                  value={t.seed === 0 ? '0' : ''}
+                  aria-label={`${t.name} annual cost in dollars`}
+                  placeholder={t.seed === 0 ? '0' : 'annual $'} />
+                <small class="calc-note">/yr · {t.note.replace('[FACT-CHECK]', 'verify').replace('[FACT-CHECK: ', '').replace(']', '')}</small>
+              </div>
+            </div>
+          ))}
+        </fieldset>
+      ))}
+    </form>
+
+    <div class="prose" style="margin-top: 2rem;">
+      <p class="calc-fineprint">
+        Prices you enter stay in your browser — nothing is sent anywhere. Free tools
+        (Zeffy, Givebutter, Grants.gov) are pre-filled at $0. Paid tools start blank
+        because nonprofit pricing varies by size and discount; enter the figure you
+        were quoted. See each tool's page for what drives its price.
+      </p>
+      <p>
+        Not sure what belongs in your stack? Start with the
+        <a href="/stacks/">recommended stack for your shop size</a>.
+      </p>
+      <AffiliateDisclosure />
+    </div>
+  </div>
+
+  <script type="module" is:inline define:vars={{ clientData }}>
+    const presets = clientData.presets;
+    const fmt = (n) => '$' + Math.round(n).toLocaleString('en-US');
+    const totalEl = document.getElementById('calcTotal');
+    const metaEl = document.getElementById('calcMeta');
+
+    function recompute() {
+      let total = 0, count = 0, missing = 0;
+      document.querySelectorAll('[data-include]').forEach((cb) => {
+        if (!cb.checked) return;
+        count++;
+        const costEl = document.querySelector(`[data-cost][data-slug="${cb.dataset.slug}"]`);
+        const v = parseFloat(costEl?.value ?? '');
+        if (costEl && costEl.value !== '' && !isNaN(v)) total += v; else missing++;
+      });
+      totalEl.textContent = fmt(total);
+      if (count === 0) metaEl.textContent = 'No tools selected yet.';
+      else metaEl.textContent =
+        `${count} tool${count === 1 ? '' : 's'} selected` +
+        (missing > 0 ? ` · ${missing} still need a price` : ' · total is complete');
+    }
+
+    function applyPreset(slug) {
+      const preset = presets.find((p) => p.slug === slug);
+      const set = new Set(preset ? preset.toolSlugs : []);
+      document.querySelectorAll('[data-include]').forEach((cb) => {
+        cb.checked = set.has(cb.dataset.slug);
+      });
+      recompute();
+    }
+
+    document.querySelectorAll('.calc-preset').forEach((b) =>
+      b.addEventListener('click', () => applyPreset(b.dataset.preset)));
+    document.getElementById('calcReset').addEventListener('click', () => {
+      document.querySelectorAll('[data-include]').forEach((cb) => (cb.checked = false));
+      recompute();
+    });
+    document.getElementById('calcForm').addEventListener('input', recompute);
+    document.getElementById('calcForm').addEventListener('change', recompute);
+    recompute();
+  </script>
+</BaseLayout>
+
+<style>
+  .calc-total { position: sticky; top: 0; z-index: 4; background: var(--color-ink); color: var(--color-paper);
+    border-radius: 3px; padding: 1rem 1.2rem; margin: 1.4rem 0; display: flex; flex-wrap: wrap;
+    justify-content: space-between; align-items: baseline; gap: .4rem 1rem; }
+  .calc-total-label { font-family: var(--font-mono); font-size: .68rem; text-transform: uppercase;
+    letter-spacing: .12em; color: var(--color-rule-strong); display: block; }
+  .calc-total-amt { font-size: clamp(1.8rem, 1.4rem + 2.4vw, 2.8rem); font-weight: 700; }
+  .calc-total-meta { margin: 0; font-family: var(--font-mono); font-size: .74rem; color: var(--color-rule-strong); }
+  .calc-presets { display: flex; flex-wrap: wrap; gap: .5rem; align-items: center; margin: 1rem 0 1.6rem; }
+  .calc-presets-label { font-family: var(--font-mono); font-size: .72rem; text-transform: uppercase;
+    letter-spacing: .08em; color: var(--color-muted); margin-right: .3rem; }
+  .calc-preset, .calc-reset { font-family: var(--font-mono); font-size: .78rem; cursor: pointer;
+    border: 1px solid var(--color-rule-strong); background: var(--color-paper); color: var(--color-ink);
+    padding: .4rem .7rem; border-radius: 3px; }
+  .calc-preset small { color: var(--color-muted); }
+  .calc-preset:hover, .calc-reset:hover { border-color: var(--color-green); }
+  .calc-reset { margin-left: auto; color: var(--color-red); border-color: var(--color-red); }
+  .calc-form { display: grid; gap: 1.4rem; }
+  .calc-cat { border: 1px solid var(--color-rule); border-radius: 3px; padding: 1rem 1.1rem; margin: 0; }
+  .calc-cat legend { font-family: var(--font-mono); font-size: .68rem; text-transform: uppercase;
+    letter-spacing: .1em; color: var(--color-green-deep); padding: 0 .4rem; }
+  .calc-row { display: flex; flex-wrap: wrap; justify-content: space-between; gap: .4rem 1rem;
+    padding: .6rem 0; border-bottom: 1px solid var(--color-rule); align-items: center; }
+  .calc-row:last-child { border-bottom: 0; }
+  .calc-check { display: flex; align-items: center; gap: .5rem; cursor: pointer; }
+  .calc-check input { width: 1.1rem; height: 1.1rem; }
+  .calc-costwrap { display: flex; align-items: baseline; gap: .3rem; font-family: var(--font-mono); }
+  .calc-cost { width: 6.5rem; font-family: var(--font-mono); font-variant-numeric: tabular-nums;
+    padding: .3rem .4rem; border: 1px solid var(--color-rule-strong); border-radius: 2px;
+    background: var(--color-paper); color: var(--color-ink); text-align: right; }
+  .calc-note { color: var(--color-muted); font-size: .64rem; }
+  .calc-fineprint { color: var(--color-muted); font-size: .85rem; }
+  @media (max-width: 460px) { .calc-costwrap { width: 100%; } }
+</style>

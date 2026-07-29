@@ -20,11 +20,29 @@ from here. Each step is committed separately.
 | 11 | Draft first 3 posts | ✅ done |
 | 12 | DEPLOY.md | ✅ done |
 
-**All 12 work-order steps complete.** Full build green (73 pages), all guardrails
-passing. Everything generated ships `draft: true` — see DEPLOY.md Part 5 for how to
-verify and publish. Remaining owner tasks: fill `[FACT-CHECK]` prices, write
+**All 12 work-order steps complete.** Full build green, all guardrails passing.
+Everything generated ships `draft: true` — see DEPLOY.md Part 5 for how to verify
+and publish. Remaining owner tasks: fill `[FACT-CHECK]` prices, write
 `[OPERATOR INPUT]` slots + the `/about` bio + `/disclosure` text, then flip pages to
 `draft: false`.
+
+## Link-magnet assets (spec SEO requirement, beyond steps 1–12)
+
+| Asset | State |
+|---|---|
+| Stack cost calculator (`/tools/calculator/`) | ✅ built, live, indexable |
+| Annual benchmark table (`/benchmarks/`) | ✅ scaffold built; noindex until data filled |
+
+- **Calculator** is fully working: interactive tool selection, shop-size presets
+  from the stack files, editable per-tool prices (free tools pre-filled at $0),
+  live total. ~23KB total page — well under the JS budget.
+- **Benchmark** is a ready-to-fill grid (6 categories × 4 shop sizes) with
+  methodology, cite-this block, and `Dataset` JSON-LD. It is the site's strongest
+  link magnet but needs the operator's real figures — edit
+  `src/data/benchmarks.json`, fill the cells + methodology, set `"ready": true`.
+  Until then it is noindex and kept out of the sitemap.
+- Both are linked from the homepage and footer; calculator prices seed from
+  `src/data/pricing.json` (fill paid tools' annual figures there).
 
 ## Environment notes
 

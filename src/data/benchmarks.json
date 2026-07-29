@@ -1,0 +1,29 @@
+{
+  "_comment": "The annual benchmark: what nonprofits at each shop size actually spend on fundraising software, per category. This is ORIGINAL DATA — it is the site's strongest link magnet, and it must be the operator's real figures (from experience or a reader survey), not invented. Fill each cell with a typical annual spend (a number or a short range like '$3k–$6k'). Set \"ready\": true once the grid is populated to make the page public (until then it is noindex and shows a 'data being collected' banner). Update \"updated\" and re-verify at least annually.",
+  "updated": "2026-07-29",
+  "ready": false,
+  "methodology": "[OPERATOR INPUT — 3-5 sentences describing how you gathered these numbers: how many organizations, what sectors (e.g. K-12 education), whether it is drawn from your direct experience, client work, or a reader survey, and what 'typical' means here (median? most common?). Credibility of the whole table rests on this paragraph.]",
+  "tiers": [
+    { "slug": "under-250k", "label": "Under $250k", "revenue": "under $250k raised" },
+    { "slug": "250k-1m", "label": "$250k–$1M", "revenue": "$250k – $1M raised" },
+    { "slug": "1m-5m", "label": "$1M–$5M", "revenue": "$1M – $5M raised" },
+    { "slug": "5m-plus", "label": "$5M+", "revenue": "$5M+ raised" }
+  ],
+  "categories": [
+    { "slug": "grant-research", "label": "Grant research" },
+    { "slug": "prospect-research", "label": "Prospect research / wealth screening" },
+    { "slug": "donor-crm", "label": "Donor CRM" },
+    { "slug": "donation-processing", "label": "Donation processing" },
+    { "slug": "forms-ops", "label": "Forms & operations" },
+    { "slug": "events-auctions", "label": "Events & auctions" }
+  ],
+  "data": {
+    "grant-research":       { "under-250k": null, "250k-1m": null, "1m-5m": null, "5m-plus": null },
+    "prospect-research":    { "under-250k": null, "250k-1m": null, "1m-5m": null, "5m-plus": null },
+    "donor-crm":            { "under-250k": null, "250k-1m": null, "1m-5m": null, "5m-plus": null },
+    "donation-processing":  { "under-250k": null, "250k-1m": null, "1m-5m": null, "5m-plus": null },
+    "forms-ops":            { "under-250k": null, "250k-1m": null, "1m-5m": null, "5m-plus": null },
+    "events-auctions":      { "under-250k": null, "250k-1m": null, "1m-5m": null, "5m-plus": null }
+  },
+  "totals": { "under-250k": null, "250k-1m": null, "1m-5m": null, "5m-plus": null }
+}

@@ -1,6 +1,7 @@
 import type { APIContext } from 'astro';
 import { getCollection } from 'astro:content';
 import { comparePairs } from '../lib/compare';
+import benchmarks from '../data/benchmarks.json';
 
 // A hand-built sitemap listing only indexable URLs: published content plus the
 // static hubs. Excludes drafts (noindex), /go/ redirects, and the noindex
@@ -12,10 +13,12 @@ export async function GET(context: APIContext) {
   type Entry = { loc: string; lastmod?: string };
   const entries: Entry[] = [];
 
-  // Static hubs that are always indexable.
-  for (const p of ['/', '/stacks/', '/platforms/', '/compare/', '/blog/', '/grant-research/', '/wealth-screening/']) {
+  // Static hubs that are always indexable (the calculator is a public tool).
+  for (const p of ['/', '/stacks/', '/platforms/', '/compare/', '/blog/', '/grant-research/', '/wealth-screening/', '/tools/calculator/']) {
     entries.push({ loc: url(p) });
   }
+  // The benchmark joins the sitemap only once its data is filled in (ready:true).
+  if ((benchmarks as any).ready === true) entries.push({ loc: url('/benchmarks/') });
 
   const iso = (d?: Date) => (d ? new Date(d).toISOString() : undefined);
 

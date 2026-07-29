@@ -1,0 +1,120 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import { formatLong } from '../lib/dates';
+import benchmarks from '../data/benchmarks.json';
+
+const b = benchmarks as any;
+const ready: boolean = b.ready === true;
+const updated = new Date(b.updated);
+const updatedLabel = formatLong(updated);
+
+// Until the operator populates the grid and flips ready:true, the page is noindex
+// (an empty benchmark is a thin page) and shows a "data being collected" banner.
+const cell = (v: unknown) => (v == null || v === '' ? '—' : String(v));
+
+const site = Astro.site ?? new URL('https://nonprofitsoftwareguide.com');
+const datasetLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Dataset',
+  name: 'Nonprofit fundraising software spend benchmark',
+  description:
+    'What nonprofits at each shop size ($250k to $5M+) typically spend per year on fundraising software, by category.',
+  url: new URL('/benchmarks/', site).href,
+  creator: { '@type': 'Organization', name: 'Nonprofit Software Guide' },
+  dateModified: updated.toISOString(),
+  license: 'https://creativecommons.org/licenses/by/4.0/',
+  isAccessibleForFree: true,
+};
+---
+
+<BaseLayout
+  title="Nonprofit fundraising software spend benchmark"
+  description="What nonprofits at each shop size actually spend per year on fundraising software, by category — an annual benchmark."
+  noindex={!ready}>
+  <div class="wrap">
+    <Breadcrumbs crumbs={[{ label: 'Home', href: '/' }, { label: 'Benchmark' }]} />
+
+    {!ready && (
+      <aside class="draft-banner" role="note">
+        <strong>Data being collected.</strong> This benchmark isn't published yet —
+        the grid below is a template awaiting real figures. It's hidden from search
+        until the numbers are filled in and verified (edit
+        <code>src/data/benchmarks.json</code>, then set <code>"ready": true</code>).
+      </aside>
+    )}
+
+    <article class="prose" style="margin-top: 1.2rem;">
+      <p class="kicker">Annual benchmark · original data</p>
+      <h1>What nonprofits spend on fundraising software</h1>
+
+      <p class="lede">
+        Typical annual software spend by shop size and category. Most "how much
+        should we budget" answers are guesses; this is a benchmark you can point a
+        board at. Figures are per year and reflect typical spend, not the maximum a
+        vendor could sell you.
+      </p>
+
+      <p class="benchmark-updated"><span class="verified">Updated {updatedLabel}</span></p>
+
+      <div class="table-scroll">
+        <table class="benchmark">
+          <thead>
+            <tr>
+              <th scope="col">Category</th>
+              {b.tiers.map((t: any) => (
+                <th scope="col" class="num">{t.label}<br /><small>{t.revenue}</small></th>
+              ))}
+            </tr>
+          </thead>
+          <tbody>
+            {b.categories.map((c: any) => (
+              <tr>
+                <th scope="row">{c.label}</th>
+                {b.tiers.map((t: any) => <td class="num">{cell(b.data[c.slug]?.[t.slug])}</td>)}
+              </tr>
+            ))}
+          </tbody>
+          <tfoot>
+            <tr>
+              <th scope="row">Typical total stack</th>
+              {b.tiers.map((t: any) => <td class="num">{cell(b.totals?.[t.slug])}</td>)}
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+
+      <h2>Methodology</h2>
+      <p>{b.methodology}</p>
+
+      <h2>Cite this benchmark</h2>
+      <p>Free to cite with attribution. Suggested citation:</p>
+      <blockquote>
+        Nonprofit Software Guide, “What nonprofits spend on fundraising software”
+        (annual benchmark), {updatedLabel}. https://nonprofitsoftwareguide.com/benchmarks/
+      </blockquote>
+
+      <p>
+        Want to model your own stack? Use the
+        <a href="/tools/calculator/">stack cost calculator</a>, or read the
+        <a href="/stacks/">recommended stack for your shop size</a>.
+      </p>
+    </article>
+  </div>
+
+  <script type="application/ld+json" slot="head" set:html={JSON.stringify(datasetLd)} is:inline />
+</BaseLayout>
+
+<style>
+  .draft-banner { border: 2px dashed var(--color-red); color: var(--color-red);
+    background: #fbeeee; padding: .7rem 1rem; margin: 1rem 0; font-size: .9rem;
+    font-family: var(--font-mono); border-radius: 2px; }
+  .draft-banner strong { font-family: var(--font-serif); }
+  .draft-banner code { background: rgba(0,0,0,.06); padding: .05em .3em; border-radius: 2px; }
+  .benchmark-updated { margin: 0 0 1rem; }
+  .table-scroll { overflow-x: auto; margin: 1.2rem 0; }
+  table.benchmark { min-width: 40rem; }
+  table.benchmark th[scope="row"] { white-space: nowrap; }
+  table.benchmark tfoot th, table.benchmark tfoot td { border-top: 2px solid var(--color-ink); font-weight: 700; }
+  table.benchmark small { font-weight: 400; color: var(--color-muted); }
+</style>

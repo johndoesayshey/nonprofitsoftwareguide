@@ -84,6 +84,19 @@ const siteLd = {
       </div>
     </section>
 
+    <section class="tools-callout" aria-label="Free tools">
+      <a class="tool-card" href="/tools/calculator/">
+        <span class="tool-card-kicker">Free tool</span>
+        <span class="tool-card-title">Stack cost calculator →</span>
+        <span class="tool-card-desc">Pick your tools, enter your quotes, get a live annual total.</span>
+      </a>
+      <a class="tool-card" href="/benchmarks/">
+        <span class="tool-card-kicker">Original data</span>
+        <span class="tool-card-title">Spending benchmark →</span>
+        <span class="tool-card-desc">What shops at each size actually spend on software.</span>
+      </a>
+    </section>
+
     <section class="prose" style="margin: 2.6rem 0 1rem;">
       <h2>Why organize by shop size?</h2>
       <p>
@@ -104,3 +117,15 @@ const siteLd = {
     </section>
   </div>
 </BaseLayout>
+
+<style>
+  .tools-callout { display: grid; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    gap: 1rem; margin: 2rem 0 1rem; }
+  .tool-card { display: block; border: 1px solid var(--color-rule-strong); border-left: 3px solid var(--color-green);
+    border-radius: 2px; padding: 1rem 1.1rem; background: var(--color-paper-2); text-decoration: none; color: inherit; }
+  .tool-card:hover { border-left-color: var(--color-green-deep); background: var(--color-paper); }
+  .tool-card-kicker { font-family: var(--font-mono); font-size: .62rem; text-transform: uppercase;
+    letter-spacing: .12em; color: var(--color-green); display: block; }
+  .tool-card-title { display: block; font-size: 1.2rem; font-weight: 600; margin: .2rem 0; }
+  .tool-card-desc { display: block; color: var(--color-muted); font-size: .92rem; }
+</style>
