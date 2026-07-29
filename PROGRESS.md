@@ -9,7 +9,7 @@ from here. Each step is committed separately.
 |---|---|---|
 | 1 | Scaffold Astro + Tailwind + content collections | ✅ done |
 | 2 | Affiliate system (affiliates.json, /go/[slug], components) | ✅ done |
-| 3 | Five guardrail scripts wired into build | ⬜ todo |
+| 3 | Five guardrail scripts wired into build | ✅ done |
 | 4 | Layouts, design system, 3 design options, homepage | ⬜ todo |
 | 5 | Stack / platform / compare / blog / disclosure / about pages | ⬜ todo |
 | 6 | 14 platform files | ⬜ todo |
