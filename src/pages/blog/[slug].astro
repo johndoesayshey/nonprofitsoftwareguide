@@ -1,0 +1,99 @@
+---
+import { getCollection, render } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import AffiliateDisclosure from '../../components/AffiliateDisclosure.astro';
+import DraftBanner from '../../components/DraftBanner.astro';
+import { tierBySlug } from '../../lib/stacks';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('posts');
+  return posts.map((entry) => ({ params: { slug: entry.id }, props: { entry } }));
+}
+
+const { entry } = Astro.props;
+const post = entry.data;
+const { Content } = await render(entry);
+const isDraft = post.draft !== false;
+const hub = tierBySlug(post.stack);
+
+const fmt = (d: Date) => d.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+const published = fmt(post.publishDate);
+const modified = post.updatedDate ? fmt(post.updatedDate) : null;
+
+const site = Astro.site ?? new URL('/', Astro.url);
+const articleLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: post.title,
+  description: post.description,
+  datePublished: post.publishDate.toISOString(),
+  dateModified: (post.updatedDate ?? post.publishDate).toISOString(),
+  mainEntityOfPage: new URL(`/blog/${entry.id}/`, site).href,
+};
+const faqLd = post.faq && post.faq.length > 0 ? {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: post.faq.map((f) => ({
+    '@type': 'Question',
+    name: f.q,
+    acceptedAnswer: { '@type': 'Answer', text: f.a },
+  })),
+} : null;
+---
+
+<BaseLayout title={post.title} description={post.description} section="blog" ogType="article" noindex={isDraft}>
+  <div class="wrap">
+    <Breadcrumbs crumbs={[
+      { label: 'Home', href: '/' },
+      { label: 'Blog', href: '/blog/' },
+      { label: post.title },
+    ]} />
+
+    {isDraft && <DraftBanner />}
+
+    <article class="prose" style="margin-top: 1.2rem;">
+      <h1>{post.title}</h1>
+      <p class="post-meta mono">
+        Published {published}{modified && ` · Updated ${modified}`}
+        {hub && <> · <a href={`/stacks/${post.stack}/`}>Part of the {hub.tier.toLowerCase()} stack</a></>}
+      </p>
+
+      <Content />
+
+      {post.faq && post.faq.length > 0 && (
+        <section class="faq">
+          <h2>Common questions</h2>
+          {post.faq.map((f) => (
+            <details>
+              <summary>{f.q}</summary>
+              <p>{f.a}</p>
+            </details>
+          ))}
+        </section>
+      )}
+
+      {hub && (
+        <p class="uplink">
+          This post is part of the guide to <a href={`/stacks/${post.stack}/`}>the {hub.tier.toLowerCase()} fundraising stack ({hub.revenue} raised)</a>.
+        </p>
+      )}
+
+      <AffiliateDisclosure />
+    </article>
+  </div>
+
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(articleLd)} is:inline />
+    {faqLd && <script type="application/ld+json" set:html={JSON.stringify(faqLd)} is:inline />}
+  </Fragment>
+</BaseLayout>
+
+<style>
+  .post-meta { color: var(--color-muted); font-size: .78rem; margin: 0 0 1.6rem; }
+  .faq { margin-top: 2rem; }
+  .faq details { border-bottom: 1px solid var(--color-rule); padding: .6rem 0; }
+  .faq summary { cursor: pointer; font-weight: 600; }
+  .faq summary:hover { color: var(--color-green-deep); }
+  .uplink { margin-top: 2rem; padding-top: 1rem; border-top: 1px solid var(--color-rule); color: var(--color-muted); }
+</style>

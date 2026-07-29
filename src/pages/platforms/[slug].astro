@@ -1,0 +1,112 @@
+---
+import { getCollection, render } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import AffiliateLink from '../../components/AffiliateLink.astro';
+import AffiliateDisclosure from '../../components/AffiliateDisclosure.astro';
+import DraftBanner from '../../components/DraftBanner.astro';
+import { CATEGORIES } from '../../lib/categories';
+import { getAffiliate } from '../../lib/affiliates';
+
+export async function getStaticPaths() {
+  const platforms = await getCollection('platforms');
+  return platforms.map((entry) => ({ params: { slug: entry.data.slug }, props: { entry } }));
+}
+
+const { entry } = Astro.props;
+const p = entry.data;
+const { Content } = await render(entry);
+const cat = CATEGORIES[p.category];
+const affiliate = p.affiliateSlug ? getAffiliate(p.affiliateSlug) : undefined;
+const isDraft = p.draft !== false;
+
+const verified = p.lastVerified.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+
+// Product JSON-LD. Only attach an Offer when we have a clean (non-placeholder)
+// price — never emit a [FACT-CHECK] string as structured data.
+const priceClean = !/\[FACT-CHECK/i.test(p.entryPrice);
+const productLd: Record<string, unknown> = {
+  '@context': 'https://schema.org',
+  '@type': 'Product',
+  name: p.name,
+  category: cat?.label ?? p.category,
+  description: p.bestFor,
+};
+if (priceClean && affiliate) {
+  productLd.brand = { '@type': 'Brand', name: p.name };
+}
+---
+
+<BaseLayout
+  title={p.name}
+  description={p.bestFor}
+  ogType="product"
+  noindex={isDraft}>
+  <div class="wrap">
+    <Breadcrumbs crumbs={[
+      { label: 'Home', href: '/' },
+      { label: cat?.label ?? p.category, href: cat?.path },
+      { label: p.name },
+    ]} />
+
+    {isDraft && <DraftBanner />}
+
+    <article class="prose" style="margin-top: 1.2rem;">
+      <p class="kicker">{cat?.label ?? p.category}</p>
+      <h1>{p.name}</h1>
+
+      <div class="pricebox">
+        <div>
+          <span class="pricebox-label">Entry price</span>
+          <span class="pricebox-value">{p.entryPrice}</span>
+        </div>
+        <div>
+          <span class="pricebox-label">Pricing model</span>
+          <span class="pricebox-value">{p.pricingModel}</span>
+        </div>
+        <div>
+          <span class="pricebox-label">Free tier</span>
+          <span class="pricebox-value">{p.freeTier ? 'Yes' : 'No'}</span>
+        </div>
+        <div>
+          <span class="pricebox-label">Best for</span>
+          <span class="pricebox-value">{p.bestFor}</span>
+        </div>
+        <p class="pricebox-verified"><span class="verified">Last verified {verified}</span></p>
+      </div>
+
+      <Content />
+
+      <h2>Where it's strong</h2>
+      <ul>{p.strengths.map((s) => <li>{s}</li>)}</ul>
+
+      <h2>Where it falls short</h2>
+      <ul>{p.limitations.map((s) => <li>{s}</li>)}</ul>
+
+      {affiliate && (
+        <p class="cta">
+          <AffiliateLink slug={p.affiliateSlug!} text={`Try ${p.name}`} />
+          {affiliate.status !== 'active' && (
+            <span class="cta-note"> — link goes to {p.name}; affiliate application {affiliate.status}.</span>
+          )}
+        </p>
+      )}
+
+      <AffiliateDisclosure />
+    </article>
+  </div>
+
+  <script type="application/ld+json" slot="head" set:html={JSON.stringify(productLd)} is:inline />
+</BaseLayout>
+
+<style>
+  .pricebox { display: grid; grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr)); gap: .9rem 1.4rem;
+    border: 1px solid var(--color-rule-strong); border-left: 3px solid var(--color-green);
+    background: var(--color-paper-2); padding: 1.1rem 1.2rem; margin: 1.4rem 0; border-radius: 2px; }
+  .pricebox-label { display: block; font-family: var(--font-mono); font-size: .64rem; letter-spacing: .1em;
+    text-transform: uppercase; color: var(--color-muted); }
+  .pricebox-value { display: block; font-size: 1.05rem; margin-top: .15rem; }
+  .pricebox-verified { grid-column: 1 / -1; margin: 0; }
+  .cta { margin: 1.6rem 0 .4rem; font-size: 1.1rem; }
+  .cta-note { font-size: .9rem; color: var(--color-muted); }
+</style>

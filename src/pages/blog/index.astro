@@ -1,0 +1,45 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import { getCollection } from 'astro:content';
+import { tierBySlug } from '../../lib/stacks';
+
+const posts = (await getCollection('posts', ({ data }) => data.draft === false))
+  .sort((a, b) => +b.data.publishDate - +a.data.publishDate);
+const fmt = (d: Date) => d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+---
+<BaseLayout title="Blog" description="Practical, first-hand notes on nonprofit fundraising software — grant research, wealth screening, and the whole stack." section="blog">
+  <div class="wrap">
+    <Breadcrumbs crumbs={[{ label: 'Home', href: '/' }, { label: 'Blog' }]} />
+    <section class="prose" style="margin-top: 1.2rem;">
+      <p class="kicker">Notes from the field</p>
+      <h1>Blog</h1>
+      <p class="lede">Concrete, practitioner-to-practitioner writing on the fundraising stack — no throat-clearing about why donor management matters.</p>
+
+      {posts.length === 0 ? (
+        <p class="empty">The first posts are being drafted. Check back shortly.</p>
+      ) : (
+        <ul class="post-list">
+          {posts.map((p) => {
+            const hub = tierBySlug(p.data.stack);
+            return (
+              <li>
+                <a href={`/blog/${p.id}/`}>{p.data.title}</a>
+                <p class="post-desc">{p.data.description}</p>
+                <p class="post-meta mono">{fmt(p.data.publishDate)}{hub && ` · ${hub.tier} stack`}</p>
+              </li>
+            );
+          })}
+        </ul>
+      )}
+    </section>
+  </div>
+</BaseLayout>
+<style>
+  .post-list { list-style: none; padding: 0; }
+  .post-list li { padding: 1.1rem 0; border-bottom: 1px solid var(--color-rule); }
+  .post-list a { font-size: 1.3rem; font-weight: 600; }
+  .post-desc { margin: .3rem 0 .2rem; color: var(--color-muted); }
+  .post-meta { font-size: .72rem; color: var(--color-muted); text-transform: uppercase; letter-spacing: .06em; }
+  .empty { color: var(--color-muted); font-style: italic; }
+</style>

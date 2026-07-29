@@ -1,0 +1,30 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+// Legal / compliance text is intentionally NOT written here — it must be the
+// operator's own. Page is noindex until the [OPERATOR INPUT] block is replaced.
+---
+<BaseLayout title="Affiliate disclosure" description="How this site uses affiliate links." noindex={true}>
+  <div class="wrap">
+    <Breadcrumbs crumbs={[{ label: 'Home', href: '/' }, { label: 'Disclosure' }]} />
+    <article class="prose" style="margin-top: 1.2rem;">
+      <h1>Affiliate disclosure</h1>
+
+      <blockquote>
+        <strong>[OPERATOR INPUT — the affiliate + FTC disclosure, in your own words.]</strong><br />
+        Claude deliberately did not draft compliance language here. Write (or have
+        reviewed) your own disclosure covering: that some outbound links are
+        affiliate links; that the site may earn a commission at no cost to the
+        reader; that recommendations are made on fit, not commission; and any
+        program-specific language your affiliate agreements require (Amazon-style
+        programs, for instance, mandate exact wording). A few sentences is plenty.
+      </blockquote>
+
+      <p>
+        In the meantime, the short version shown across the site is: some links
+        are affiliate links, they never change which tool gets recommended, and
+        where a reader discount exists it is noted beside the link.
+      </p>
+    </article>
+  </div>
+</BaseLayout>

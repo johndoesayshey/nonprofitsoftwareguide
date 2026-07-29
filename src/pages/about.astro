@@ -1,0 +1,32 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+// The operator's real credentials are the site's entire competitive advantage —
+// they must be written by the operator, not invented. Page is noindex until the
+// [OPERATOR INPUT] block is replaced with the real bio.
+---
+<BaseLayout title="About" description="Who writes this guide." noindex={true}>
+  <div class="wrap">
+    <Breadcrumbs crumbs={[{ label: 'Home', href: '/' }, { label: 'About' }]} />
+    <article class="prose" style="margin-top: 1.2rem;">
+      <h1>About this guide</h1>
+
+      <blockquote>
+        <strong>[OPERATOR INPUT — your real bio, in the first person.]</strong><br />
+        This page is your credibility, so Claude left it for you. Cover: your years
+        in fundraising and grant work; the specific institutions or sectors (K–12,
+        higher ed, etc.) you've worked in; which of these platforms you have
+        personally used or migrated; and why you started this guide. Name real
+        things — that first-hand experience and your network are what make the
+        recommendations trustworthy and what the rest of the site leans on.
+      </blockquote>
+
+      <p>
+        The guide's premise: fundraising software should be chosen by the size of
+        your shop, not by whichever vendor has the biggest ad budget. Every
+        recommendation names a real constraint, every price carries a
+        last-verified date, and affiliate links never decide the pick.
+      </p>
+    </article>
+  </div>
+</BaseLayout>

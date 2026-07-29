@@ -1,0 +1,16 @@
+---
+// Shown on any draft (unverified) content page. The page is built so the operator
+// can preview it at its real URL, but it is noindex and excluded from listings and
+// the sitemap until draft: false.
+---
+<aside class="draft-banner" role="note">
+  <strong>Draft — not yet verified.</strong> Prices and terms on this page still
+  carry fact-check markers and are not final. This page is hidden from search and
+  from site listings until it is reviewed and published.
+</aside>
+<style>
+  .draft-banner { border: 2px dashed var(--color-red); color: var(--color-red);
+    background: #fbeeee; padding: .7rem 1rem; margin: 1rem 0; font-size: .9rem;
+    font-family: var(--font-mono); border-radius: 2px; }
+  .draft-banner strong { font-family: var(--font-serif); }
+</style>

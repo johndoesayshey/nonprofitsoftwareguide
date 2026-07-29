@@ -1,0 +1,31 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import { getCollection } from 'astro:content';
+import { STACK_TIERS } from '../../lib/stacks';
+
+const stacks = await getCollection('stacks', ({ data }) => data.draft === false);
+const bySlug = new Map(stacks.map((s) => [s.data.slug, s.data]));
+const rows = STACK_TIERS.map((t) => ({ ...t, total: bySlug.get(t.slug)?.totalStackCost ?? null }));
+---
+<BaseLayout title="Fundraising stacks by shop size" description="Recommended fundraising software stacks for every size of nonprofit, from under $250k to $5M+, costed line by line." section="stacks">
+  <div class="wrap">
+    <Breadcrumbs crumbs={[{ label: 'Home', href: '/' }, { label: 'Stacks' }]} />
+    <section class="prose" style="margin-top: 1.2rem;">
+      <p class="kicker">The primary guides</p>
+      <h1>Fundraising stacks, by shop size</h1>
+      <p class="lede">Four recommended stacks — one per revenue tier. Each is costed line by line, with what to cut first when the budget gets trimmed and the signals that you've outgrown it.</p>
+    </section>
+
+    <div class="ledger">
+      <div class="ledger-head"><span>Shop size — annual revenue raised</span><span>Recommended stack</span></div>
+      {rows.map((r) => (
+        <a class="ledger-row" href={`/stacks/${r.slug}/`}>
+          <span class="tier">{r.tier}<small>{r.revenue} raised / yr · {r.blurb}</small></span>
+          <span class="amt">{r.total ?? 'costed inside'}<small>{r.total ? 'total stack / yr' : 'in progress'}</small></span>
+          <span class="go">Open the {r.tier.toLowerCase()} stack →</span>
+        </a>
+      ))}
+    </div>
+  </div>
+</BaseLayout>

@@ -1,0 +1,38 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import { comparePairs } from '../../lib/compare';
+import { CATEGORIES } from '../../lib/categories';
+
+// List only comparisons where BOTH sides are published — an unverified side would
+// mean an unverified table. Draft comparisons still build (noindex) for preview.
+const pairs = (await comparePairs()).filter((p) => p.a.data.draft === false && p.b.data.draft === false);
+const grouped = Object.values(CATEGORIES).map((cat) => ({
+  cat,
+  items: pairs.filter((p) => p.category === cat.slug),
+})).filter((g) => g.items.length > 0);
+---
+<BaseLayout title="Head-to-head software comparisons" description="Side-by-side comparisons of nonprofit fundraising tools — price, free tier, and fit — for every meaningful pair we cover." section="compare">
+  <div class="wrap">
+    <Breadcrumbs crumbs={[{ label: 'Home', href: '/' }, { label: 'Compare' }]} />
+    <section class="prose" style="margin-top: 1.2rem;">
+      <p class="kicker">Head to head</p>
+      <h1>Software comparisons</h1>
+      <p class="lede">Every meaningful pairing within a category, lined up on price, free tier, and fit — so a high-intent search lands on a straight answer.</p>
+
+      {grouped.length === 0 ? (
+        <p class="empty">Comparisons appear here as platform write-ups are published.</p>
+      ) : grouped.map((g) => (
+        <section>
+          <h2>{g.cat.label}</h2>
+          <ul>
+            {g.items.map((p) => (
+              <li><a href={`/compare/${p.slug}/`}>{p.a.data.name} vs {p.b.data.name}</a></li>
+            ))}
+          </ul>
+        </section>
+      ))}
+    </section>
+  </div>
+</BaseLayout>
+<style>.empty { color: var(--color-muted); font-style: italic; }</style>

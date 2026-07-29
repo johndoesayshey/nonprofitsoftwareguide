@@ -1,0 +1,37 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import { getCollection } from 'astro:content';
+import { CATEGORIES } from '../../lib/categories';
+
+const platforms = await getCollection('platforms', ({ data }) => data.draft === false);
+// Group by category, preserving the CATEGORIES display order.
+const grouped = Object.values(CATEGORIES).map((cat) => ({
+  cat,
+  items: platforms.filter((p) => p.data.category === cat.slug).sort((a, b) => a.data.name.localeCompare(b.data.name)),
+})).filter((g) => g.items.length > 0);
+---
+<BaseLayout title="Every platform we cover" description="Individual write-ups of the nonprofit fundraising tools we cover, grouped by category, each with price, fit, and a last-verified date.">
+  <div class="wrap">
+    <Breadcrumbs crumbs={[{ label: 'Home', href: '/' }, { label: 'Platforms' }]} />
+    <section class="prose" style="margin-top: 1.2rem;">
+      <p class="kicker">Reference</p>
+      <h1>Every platform we cover</h1>
+      <p class="lede">The individual tools, grouped by category. Each write-up leads with price and fit, and carries the date its pricing was last verified.</p>
+
+      {grouped.length === 0 ? (
+        <p class="empty">Platform write-ups are in progress.</p>
+      ) : grouped.map((g) => (
+        <section>
+          <h2>{g.cat.label}</h2>
+          <ul>
+            {g.items.map((p) => (
+              <li><a href={`/platforms/${p.data.slug}/`}>{p.data.name}</a> — {p.data.bestFor}</li>
+            ))}
+          </ul>
+        </section>
+      ))}
+    </section>
+  </div>
+</BaseLayout>
+<style>.empty { color: var(--color-muted); font-style: italic; }</style>

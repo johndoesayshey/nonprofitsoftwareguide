@@ -1,0 +1,116 @@
+---
+import { getCollection, render } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import AffiliateDisclosure from '../../components/AffiliateDisclosure.astro';
+import DraftBanner from '../../components/DraftBanner.astro';
+import { categoryLabel } from '../../lib/categories';
+import { tierBySlug } from '../../lib/stacks';
+
+export async function getStaticPaths() {
+  const stacks = await getCollection('stacks');
+  return stacks.map((entry) => ({ params: { slug: entry.data.slug }, props: { entry } }));
+}
+
+const { entry } = Astro.props;
+const s = entry.data;
+const { Content } = await render(entry);
+const isDraft = s.draft !== false;
+const tier = tierBySlug(s.slug);
+
+// Supporting posts that name this hub (cluster down-links). Only published ones.
+const allPosts = await getCollection('posts', ({ data }) => data.draft === false);
+const supporting = allPosts
+  .filter((p) => p.data.stack === s.slug)
+  .sort((a, b) => +b.data.publishDate - +a.data.publishDate);
+
+const verified = s.lastVerified.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+---
+
+<BaseLayout
+  title={`The ${s.shopSize} fundraising stack`}
+  description={`What a ${s.annualRevenue} nonprofit should run: total cost ${s.totalStackCost}, line by line, plus what to cut first.`}
+  section="stacks"
+  noindex={isDraft}>
+  <div class="wrap">
+    <Breadcrumbs crumbs={[
+      { label: 'Home', href: '/' },
+      { label: 'Stacks', href: '/stacks/' },
+      { label: s.shopSize },
+    ]} />
+
+    {isDraft && <DraftBanner />}
+
+    <article class="prose" style="margin-top: 1.2rem;">
+      <p class="kicker">{tier?.tier ?? 'Recommended stack'} · {s.annualRevenue} raised / yr</p>
+      <h1>The {s.shopSize} fundraising stack</h1>
+
+      <!-- Lead with the total annual cost, per the spec. -->
+      <div class="total-card">
+        <div class="total-amt mono">{s.totalStackCost}</div>
+        <div class="total-meta">
+          <span>total software / year</span>
+          <span class="verified">Verified {verified}</span>
+        </div>
+        <dl class="total-facts">
+          <div><dt>Annual revenue</dt><dd>{s.annualRevenue}</dd></div>
+          <div><dt>Staff size</dt><dd>{s.staffSize}</dd></div>
+          <div><dt>Line items</dt><dd>{s.components.length}</dd></div>
+        </dl>
+      </div>
+
+      <!-- The stack, line by line, as a ledger. -->
+      <h2>The stack, line by line</h2>
+      <table>
+        <thead>
+          <tr><th>Category</th><th>Tool</th><th class="num">Per year</th></tr>
+        </thead>
+        <tbody>
+          {s.components.map((c) => (
+            <tr>
+              <td>{categoryLabel(c.category)}</td>
+              <td><a href={`/platforms/${c.platformSlug}/`}>{c.platformSlug}</a><br /><small style="color:var(--color-muted)">{c.rationale}</small></td>
+              <td class="num">{c.annualCost}</td>
+            </tr>
+          ))}
+        </tbody>
+        <tfoot>
+          <tr><th>Total</th><th></th><th class="num">{s.totalStackCost}</th></tr>
+        </tfoot>
+      </table>
+
+      <!-- Body carries the narrative: what to cut first, upgrade triggers, rationale. -->
+      <Content />
+
+      {supporting.length > 0 && (
+        <section class="cluster">
+          <h2>Go deeper</h2>
+          <ul>
+            {supporting.map((p) => (
+              <li><a href={`/blog/${p.id}/`}>{p.data.title}</a></li>
+            ))}
+          </ul>
+        </section>
+      )}
+
+      <AffiliateDisclosure />
+    </article>
+  </div>
+</BaseLayout>
+
+<style>
+  .total-card { border: 2px solid var(--color-ink); border-radius: 3px; padding: 1.2rem 1.3rem;
+    margin: 1.4rem 0 2rem; background: var(--color-paper-2); }
+  .total-amt { font-size: clamp(2.2rem, 1.6rem + 3vw, 3.4rem); font-weight: 700; line-height: 1;
+    color: var(--color-green-deep); }
+  .total-meta { display: flex; flex-wrap: wrap; gap: .6rem 1rem; align-items: center; margin-top: .5rem;
+    font-family: var(--font-mono); font-size: .72rem; text-transform: uppercase; letter-spacing: .08em;
+    color: var(--color-muted); }
+  .total-facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr)); gap: .8rem;
+    margin: 1rem 0 0; padding-top: 1rem; border-top: 1px solid var(--color-rule); }
+  .total-facts div { margin: 0; }
+  .total-facts dt { font-family: var(--font-mono); font-size: .62rem; letter-spacing: .1em;
+    text-transform: uppercase; color: var(--color-muted); }
+  .total-facts dd { margin: .1rem 0 0; font-size: 1.05rem; }
+  .cluster { margin-top: 2rem; padding-top: 1rem; border-top: 1px solid var(--color-rule); }
+</style>

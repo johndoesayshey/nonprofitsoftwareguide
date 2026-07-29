@@ -124,3 +124,35 @@ palette can't drift. Accessibility baked in: skip link, `:focus-visible` outline
 **D19. Nav points to section index pages** (`/stacks/`, `/grant-research/`,
 `/wealth-screening/`, `/compare/`, `/blog/`) that are built in step 5. At the
 step-4 checkpoint those links 404; resolved in the next commit.
+
+## Step 5 — templates
+
+**D20. JSON-LD built into templates now, not deferred to step 10.** Product
+(platform), ItemList (compare), Article + FAQPage (blog), and BreadcrumbList
+(sitewide) are intrinsic to each template, so writing them here avoids touching
+every template again in step 10. Step 10 keeps sitemap, RSS, global meta, and the
+GA4/GSC env wiring. All step-10 requirements are still met.
+
+**D21. Drafts build as noindex previews, excluded from listings.** Detail pages
+(`/platforms/[slug]`, `/stacks/[slug]`, `/blog/[slug]`, `/compare/[slug]`) build
+for *all* entries so the operator can preview them at their real URL, but draft
+pages get `<meta noindex>` + a red "Draft — not verified" banner and never appear
+in index/category listings or (step 10) the sitemap. This is what lets the whole
+site build green while every generated content file ships `draft: true`.
+
+**D22. Cluster "hub links down" check moved to dist.** The stack template
+auto-renders its supporting-post links, so verifying them against the markdown
+*source* (the old approach) was wrong. Split into `check-clusters.mjs` (source:
+no orphan posts) and `check-cluster-links.mjs` (dist: each published hub page
+links to each published child). The latter joins `guardrails:dist`.
+
+**D23. Comparison pages: every within-category pair.** `/compare/[slug]` generates
+all unordered same-category pairs (slug `a-vs-b`, alphabetical for stable URLs).
+A comparison is `noindex` if either side is a draft, and the `/compare` index
+lists only pairs where both sides are published. Cross-category pairs are
+intentionally not generated — "grant tool vs CRM" isn't a real query.
+
+**D24. `/disclosure` and `/about` are `noindex` until the operator writes them.**
+Both carry a visible `[OPERATOR INPUT]` block instead of invented legal text or a
+fabricated bio (the bio is the site's credibility and must be real). They flip to
+indexable when the operator replaces the block and removes `noindex`.

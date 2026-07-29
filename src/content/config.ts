@@ -68,6 +68,8 @@ const posts = defineCollection({
     targetQuery: z.string(),
     platformsMentioned: z.array(z.string()).default([]),
     affiliateSlugs: z.array(z.string()).default([]),
+    // Optional Q&A block → renders an FAQ section and FAQPage structured data.
+    faq: z.array(z.object({ q: z.string(), a: z.string() })).optional(),
     draft: z.boolean().default(true),
   }),
 });

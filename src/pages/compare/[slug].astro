@@ -1,0 +1,116 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import AffiliateLink from '../../components/AffiliateLink.astro';
+import AffiliateDisclosure from '../../components/AffiliateDisclosure.astro';
+import DraftBanner from '../../components/DraftBanner.astro';
+import { comparePairs } from '../../lib/compare';
+import { categoryLabel } from '../../lib/categories';
+import { getAffiliate } from '../../lib/affiliates';
+
+export async function getStaticPaths() {
+  const pairs = await comparePairs();
+  return pairs.map((pair) => ({ params: { slug: pair.slug }, props: { pair } }));
+}
+
+const { pair } = Astro.props;
+const a = pair.a.data;
+const b = pair.b.data;
+const catLabel = categoryLabel(pair.category);
+
+// A comparison is unverified if either side is still a draft.
+const isDraft = a.draft !== false || b.draft !== false;
+
+const affA = a.affiliateSlug ? getAffiliate(a.affiliateSlug) : undefined;
+const affB = b.affiliateSlug ? getAffiliate(b.affiliateSlug) : undefined;
+const fmt = (d: Date) => d.toLocaleDateString('en-US', { month: 'short', year: 'numeric' });
+
+const site = Astro.site ?? new URL('/', Astro.url);
+const itemListLd = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: `${a.name} vs ${b.name}`,
+  itemListElement: [a, b].map((p, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    name: p.name,
+    url: new URL(`/platforms/${p.slug}/`, site).href,
+  })),
+};
+
+const rows: Array<[string, string, string]> = [
+  ['Entry price', a.entryPrice, b.entryPrice],
+  ['Pricing model', a.pricingModel, b.pricingModel],
+  ['Free tier', a.freeTier ? 'Yes' : 'No', b.freeTier ? 'Yes' : 'No'],
+  ['Best for', a.bestFor, b.bestFor],
+  ['Last verified', fmt(a.lastVerified), fmt(b.lastVerified)],
+];
+---
+
+<BaseLayout
+  title={`${a.name} vs ${b.name}`}
+  description={`${a.name} vs ${b.name}: price, free tier, and fit for ${catLabel.toLowerCase()}. Which one fits your shop.`}
+  section="compare"
+  noindex={isDraft}>
+  <div class="wrap">
+    <Breadcrumbs crumbs={[
+      { label: 'Home', href: '/' },
+      { label: 'Compare', href: '/compare/' },
+      { label: `${a.name} vs ${b.name}` },
+    ]} />
+
+    {isDraft && <DraftBanner />}
+
+    <article class="prose" style="margin-top: 1.2rem;">
+      <p class="kicker">{catLabel} · head to head</p>
+      <h1>{a.name} vs {b.name}</h1>
+
+      <!-- Answer first: assembled from real fields, not invented. -->
+      <p class="lead">
+        {a.name} and {b.name} are both {catLabel.toLowerCase()} tools.
+        {a.name} fits {a.bestFor.toLowerCase()}; {b.name} fits {b.bestFor.toLowerCase()}.
+        The table below lines up price, free tier, and fit so you can see which one
+        matches your shop.
+      </p>
+
+      <table>
+        <thead>
+          <tr><th></th><th>{a.name}</th><th>{b.name}</th></tr>
+        </thead>
+        <tbody>
+          {rows.map(([label, av, bv]) => (
+            <tr><th scope="row">{label}</th><td>{av}</td><td>{bv}</td></tr>
+          ))}
+        </tbody>
+      </table>
+
+      <div class="verdicts">
+        <div class="verdict">
+          <h3>{a.name}</h3>
+          <p><strong>Strengths:</strong> {a.strengths.join('; ')}.</p>
+          <p><strong>Watch for:</strong> {a.limitations.join('; ')}.</p>
+          <p><a href={`/platforms/${a.slug}/`}>Full {a.name} write-up →</a></p>
+          {affA && <p>{a.affiliateSlug && <AffiliateLink slug={a.affiliateSlug} text={`Try ${a.name}`} />}</p>}
+        </div>
+        <div class="verdict">
+          <h3>{b.name}</h3>
+          <p><strong>Strengths:</strong> {b.strengths.join('; ')}.</p>
+          <p><strong>Watch for:</strong> {b.limitations.join('; ')}.</p>
+          <p><a href={`/platforms/${b.slug}/`}>Full {b.name} write-up →</a></p>
+          {affB && <p>{b.affiliateSlug && <AffiliateLink slug={b.affiliateSlug} text={`Try ${b.name}`} />}</p>}
+        </div>
+      </div>
+
+      <AffiliateDisclosure />
+    </article>
+  </div>
+
+  <script type="application/ld+json" slot="head" set:html={JSON.stringify(itemListLd)} is:inline />
+</BaseLayout>
+
+<style>
+  .lead { font-size: 1.15rem; color: var(--color-muted); }
+  .verdicts { display: grid; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); gap: 1.4rem; margin: 1.6rem 0; }
+  .verdict { border: 1px solid var(--color-rule-strong); border-radius: 2px; padding: 1rem 1.1rem; background: var(--color-paper-2); }
+  .verdict h3 { margin-top: 0; }
+</style>

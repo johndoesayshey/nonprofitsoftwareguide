@@ -1,19 +1,18 @@
-// Guardrail #5: cluster integrity. Every published post declares a `stack` that
-// resolves to a real stack hub, and every hub links down to each published post
-// that names it. Orphans fail the build. Drafts are exempt (works in progress).
+// Guardrail #5a (source): no orphan posts. Every published post must declare a
+// `stack` that resolves to a real stack hub. A post with no hub will not rank.
+// The complementary "hub links down to each post" check runs post-build on the
+// rendered HTML (check-cluster-links.mjs), because the stack template auto-renders
+// those links rather than hard-coding them in markdown.
 import { readCollection, report } from './_lib.mjs';
 
 const stacks = readCollection('stacks');
 const posts = readCollection('posts');
 
 const stackSlugs = new Set(stacks.map((s) => s.data.slug ?? s.slug));
-const publishedPosts = posts.filter((p) => p.data.draft === false);
-const publishedStacks = stacks.filter((s) => s.data.draft === false);
-
 const failures = [];
 
-// 1. Each published post points up to an existing hub.
-for (const post of publishedPosts) {
+for (const post of posts) {
+  if (post.data.draft !== false) continue; // drafts are exempt
   const stack = post.data.stack;
   if (!stack) {
     failures.push(`${post.file} has no "stack" (every post must join a cluster hub)`);
@@ -22,18 +21,4 @@ for (const post of publishedPosts) {
   }
 }
 
-// 2. Each published hub links down to every published post that names it.
-for (const stack of publishedStacks) {
-  const slug = stack.data.slug ?? stack.slug;
-  const children = publishedPosts.filter((p) => p.data.stack === slug);
-  for (const child of children) {
-    const link = `/blog/${child.slug}`;
-    if (!stack.body.includes(link)) {
-      failures.push(
-        `stacks/${slug}: hub does not link down to its post ${link} (${child.file})`
-      );
-    }
-  }
-}
-
-report('cluster integrity (no orphans, hubs link down)', failures);
+report('cluster integrity — no orphan posts', failures);
