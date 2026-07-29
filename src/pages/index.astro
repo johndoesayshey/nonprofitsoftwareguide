@@ -1,10 +1,86 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+import { STACK_TIERS } from '../lib/stacks';
+
+// Enrich each tier with its published stack's verified total cost, when one
+// exists. Draft/unbuilt stacks show the revenue band instead — we never print an
+// unverified dollar figure on a published page.
+const stacks = await getCollection('stacks', ({ data }) => data.draft === false);
+const bySlug = new Map(stacks.map((s) => [s.data.slug, s.data]));
+
+const rows = STACK_TIERS.map((t) => {
+  const stack = bySlug.get(t.slug);
+  return {
+    ...t,
+    total: stack?.totalStackCost ?? null,
+    verified: stack?.lastVerified ?? null,
+  };
+});
+
+const dateFmt = (d: Date) =>
+  d.toLocaleDateString('en-US', { month: 'short', year: 'numeric' });
 ---
 
 <BaseLayout title="Nonprofit Software Guide">
-  <main style="max-width: 40rem; margin: 4rem auto; padding: 0 1rem; font-family: system-ui;">
-    <h1>Nonprofit Software Guide</h1>
-    <p>Scaffold is running. The real homepage and design system land in step 4.</p>
-  </main>
+  <div class="wrap">
+    <section class="hero" style="padding: clamp(2.2rem,6vw,4rem) 0 1rem;">
+      <p class="kicker">The fundraising stack ledger</p>
+      <h1>Pick your software by the <em>size of your shop</em>, not the vendor's demo.</h1>
+      <p class="lede">
+        Most guides sell you a CRM. A real budget is a line-by-line ledger: grant
+        research, wealth screening, donation processing — and the database last.
+        Here's the whole stack each size of shop should actually run, costed, with
+        the one thing nobody tells you: what to cut first when the board trims the
+        budget.
+      </p>
+    </section>
+
+    <section aria-label="Recommended stacks by shop size">
+      <div class="ledger">
+        <div class="ledger-head">
+          <span>Shop size — annual revenue raised</span>
+          <span>Recommended stack</span>
+        </div>
+
+        {rows.map((r) => (
+          <a class="ledger-row" href={`/stacks/${r.slug}/`}>
+            <span class="tier">
+              {r.tier}
+              <small>{r.revenue} raised / yr · {r.blurb}</small>
+            </span>
+            <span class="amt">
+              {r.total ? r.total : 'costed inside'}
+              <small>{r.total && r.verified ? `verified ${dateFmt(r.verified)}` : 'total stack / yr'}</small>
+            </span>
+            <span class="go">Open the {r.tier.toLowerCase()} stack →</span>
+          </a>
+        ))}
+
+        <div class="ledger-total">
+          <span>Every figure carries a “last verified” date and a source.</span>
+          <span class="amt">4 stacks</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="prose" style="margin: 2.6rem 0 1rem;">
+      <h2>Why organize by shop size?</h2>
+      <p>
+        The stack that fits a $400k shop and the stack that fits a $6M shop share
+        almost no line items. A grassroots shop can run a completely credible
+        operation for close to nothing; a $5M shop that skips prospect research is
+        leaving major gifts on the table. Product-by-product “best CRM” lists
+        can't tell you which of those you are. Your revenue can.
+      </p>
+      <h2>What's in a stack</h2>
+      <p>
+        Six categories, in rough order of return on the dollar for most shops:
+        grant research, prospect and wealth screening, donation processing, donor
+        CRM, forms and operations, and events. The pages under each stack walk the
+        line items one at a time — what it costs, why it's on the list, and when
+        you've outgrown it.
+      </p>
+    </section>
+  </div>
 </BaseLayout>

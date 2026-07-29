@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Design B — Index Cards — Nonprofit Software Guide</title>
+<style>
+  :root{
+    --felt:#e7dcc4; --felt-2:#ded0b2;
+    --card:#fdfcf7; --ink:#221f18; --muted:#6b6455;
+    --line:#d8cdb2; --rule:#c9dbe6;
+    --tab-grant:#2f7d5b; --tab-wealth:#8a5a2b; --tab-crm:#3b5c8a; --tab-proc:#9a3b52;
+    --stamp:#a33;
+    --pad:clamp(1rem,4vw,3rem);
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:
+      radial-gradient(circle at 1px 1px,rgba(0,0,0,.04) 1px,transparent 0) 0 0/22px 22px,
+      var(--felt);
+    color:var(--ink);font-family:"Helvetica Neue",Arial,system-ui,sans-serif;line-height:1.5}
+  .mono{font-family:"Courier New",ui-monospace,monospace}
+  a{color:inherit}
+  a:focus-visible{outline:3px solid var(--stamp);outline-offset:3px}
+  .wrap{max-width:64rem;margin:0 auto;padding:0 var(--pad)}
+
+  header.site{padding:1.3rem 0;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.8rem}
+  .wordmark{font-family:"Courier New",monospace;font-weight:700;letter-spacing:.04em;
+    background:var(--ink);color:var(--felt);padding:.35rem .6rem;font-size:.9rem;transform:rotate(-1deg)}
+  nav.site a{font-family:"Courier New",monospace;font-size:.8rem;text-decoration:none;color:var(--muted);margin-left:1rem}
+  nav.site a:hover{color:var(--ink);text-decoration:underline}
+
+  .hero{padding:clamp(1.6rem,5vw,3rem) 0 1rem;max-width:40rem}
+  .card-label{display:inline-block;font-family:"Courier New",monospace;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--stamp);border:1px solid var(--stamp);padding:.15rem .5rem;border-radius:2px;margin-bottom:1rem}
+  h1{font-size:clamp(1.9rem,1.3rem + 3.2vw,3.2rem);line-height:1.08;margin:0 0 .8rem;font-weight:800;letter-spacing:-.02em}
+  .lede{color:var(--muted);font-size:clamp(1.02rem,1rem + .35vw,1.2rem);max-width:44ch}
+
+  /* Signature element: catalog index cards with a colored tab + ruled first line. */
+  .catalog{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,15rem),1fr));gap:1.4rem;margin:2.4rem 0 1rem}
+  .card{position:relative;background:var(--card);border:1px solid var(--line);border-radius:3px;
+    padding:1.9rem 1.15rem 1.15rem;box-shadow:0 1px 0 var(--felt-2),0 10px 18px -14px rgba(0,0,0,.45);
+    text-decoration:none;color:inherit;display:flex;flex-direction:column;min-height:12.5rem}
+  .card::before{content:"";position:absolute;left:0;right:0;top:1.55rem;height:0;border-top:1px solid var(--rule)}
+  .tab{position:absolute;top:-.7rem;left:1rem;color:#fff;font-family:"Courier New",monospace;font-size:.66rem;
+    letter-spacing:.1em;text-transform:uppercase;padding:.2rem .55rem;border-radius:3px 3px 0 0}
+  .t-grant{background:var(--tab-grant)}.t-wealth{background:var(--tab-wealth)}.t-crm{background:var(--tab-crm)}.t-proc{background:var(--tab-proc)}
+  .card h2{font-size:1.35rem;margin:.1rem 0 .1rem;font-weight:800}
+  .card .rev{font-family:"Courier New",monospace;font-size:.8rem;color:var(--muted)}
+  .card .amt{margin-top:auto;font-family:"Courier New",monospace;font-weight:700;font-size:1.6rem;color:var(--ink)}
+  .card .amt span{display:block;font-size:.64rem;font-weight:400;color:var(--muted);letter-spacing:.1em;text-transform:uppercase}
+  .card .open{margin-top:.7rem;font-family:"Courier New",monospace;font-size:.74rem;color:var(--stamp)}
+  .card:hover{transform:translateY(-3px);box-shadow:0 1px 0 var(--felt-2),0 16px 26px -14px rgba(0,0,0,.5)}
+  @media (prefers-reduced-motion:reduce){.card{transition:none}.card:hover{transform:none}.wordmark{transform:none}}
+  .card{transition:transform .12s ease,box-shadow .12s ease}
+
+  .foot-note{font-family:"Courier New",monospace;font-size:.78rem;color:var(--muted);margin:.4rem 0 0}
+  footer.site{margin-top:3rem;padding:1.6rem 0 3rem;border-top:1px dashed var(--muted);color:var(--muted);font-size:.82rem}
+</style>
+</head>
+<body>
+<header class="site wrap" style="max-width:64rem">
+  <span class="wordmark">NPSG · card catalog</span>
+  <nav class="site" aria-label="Primary"><a href="#">Stacks</a><a href="#">Grants</a><a href="#">Wealth screening</a><a href="#">Compare</a></nav>
+</header>
+
+<main class="wrap">
+  <section class="hero">
+    <span class="card-label">File under: shop size</span>
+    <h1>The fundraising stack, filed by the size of your shop.</h1>
+    <p class="lede">Not another CRM ranking. Each card is a complete recommended stack — grant research, wealth screening, processing, CRM — with the real annual cost and what to pull first when the budget gets cut.</p>
+  </section>
+
+  <section aria-label="Recommended stacks by shop size">
+    <div class="catalog">
+      <a class="card" href="#">
+        <span class="tab t-grant">Stack 01</span>
+        <h2>Grassroots</h2>
+        <p class="rev">under $250k raised / yr</p>
+        <p class="amt">$0–$2k<span>total stack / yr</span></p>
+        <p class="open">Pull the card →</p>
+      </a>
+      <a class="card" href="#">
+        <span class="tab t-proc">Stack 02</span>
+        <h2>Growing</h2>
+        <p class="rev">$250k – $1M raised / yr</p>
+        <p class="amt">$3k–$8k<span>total stack / yr</span></p>
+        <p class="open">Pull the card →</p>
+      </a>
+      <a class="card" href="#">
+        <span class="tab t-crm">Stack 03</span>
+        <h2>Established</h2>
+        <p class="rev">$1M – $5M raised / yr</p>
+        <p class="amt">$12k–$30k<span>total stack / yr</span></p>
+        <p class="open">Pull the card →</p>
+      </a>
+      <a class="card" href="#">
+        <span class="tab t-wealth">Stack 04</span>
+        <h2>Institutional</h2>
+        <p class="rev">$5M+ raised / yr</p>
+        <p class="amt">$40k+<span>total stack / yr</span></p>
+        <p class="open">Pull the card →</p>
+      </a>
+    </div>
+    <p class="foot-note">Sample figures shown for layout. Real cards carry a “last verified” date beside every price.</p>
+  </section>
+</main>
+
+<footer class="site wrap">Kept by a fundraiser with 10+ years in grants and institutional giving. Affiliate links are labeled and never drive the pick.</footer>
+</body>
+</html>

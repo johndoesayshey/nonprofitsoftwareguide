@@ -96,3 +96,31 @@ vendor sites sit behind bot-blocking WAFs (e.g. neonone.com returns 403 to
 automated clients while being fully live). A dead link instead produces a DNS/
 connect error, timeout, 404, or 5xx — those still fail. This keeps
 `npm run check-links` from crying wolf. 24/25 URLs returned 200 on first run.
+
+## Step 4 — design system + homepage
+
+**D16. Chose the "Ledger" direction (A).** Three directions were built as
+standalone files in `/design-options/`: A ledger, B index cards, C annual report.
+Picked A because the site's thesis is cost math, and an account-book ledger is the
+native visual form for it — the ruled rows and double-rule grand total serve the
+content rather than decorating it, and the same language extends to stack pages
+(line-by-line cost ledgers), platform pages, and comparison tables. B's manila
+skeuomorphism fights readability on long articles and dense tables; C is clean but
+the least distinctive. The other two files are kept for the operator to review.
+
+**D17. Homepage prints no unverified prices.** The ledger's amount column shows a
+stack's `totalStackCost` + a "verified {month year}" pill *only* for published
+stacks; until then it reads "costed inside." This honors "never invent a number"
+on the most-visited published page, and auto-fills real totals once the operator
+verifies and publishes each stack (step 7). The revenue bands shown are
+definitional facts (the tier boundaries), not prices.
+
+**D18. Serif body, monospace figures.** Prose is set in a serif (Iowan/Palatino
+stack) for annual-report readability; labels, figures, nav, and the wordmark use a
+monospace for the ledger feel. Tokens live in `@theme` in `global.css` so the
+palette can't drift. Accessibility baked in: skip link, `:focus-visible` outlines,
+`prefers-reduced-motion` guard, min-width 320px.
+
+**D19. Nav points to section index pages** (`/stacks/`, `/grant-research/`,
+`/wealth-screening/`, `/compare/`, `/blog/`) that are built in step 5. At the
+step-4 checkpoint those links 404; resolved in the next commit.

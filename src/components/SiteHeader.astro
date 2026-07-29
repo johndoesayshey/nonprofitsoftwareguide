@@ -1,0 +1,23 @@
+---
+interface Props {
+  section?: string;
+}
+const { section } = Astro.props;
+const nav = [
+  { href: '/stacks/', label: 'Stacks', key: 'stacks' },
+  { href: '/grant-research/', label: 'Grant research', key: 'grant' },
+  { href: '/wealth-screening/', label: 'Wealth screening', key: 'wealth' },
+  { href: '/compare/', label: 'Compare', key: 'compare' },
+  { href: '/blog/', label: 'Blog', key: 'blog' },
+];
+---
+<header class="site-header">
+  <div class="wrap masthead">
+    <a href="/" class="wordmark">Nonprofit&nbsp;<b>Software</b>&nbsp;Guide</a>
+    <nav class="site-nav" aria-label="Primary">
+      {nav.map((n) => (
+        <a href={n.href} aria-current={section === n.key ? 'page' : undefined}>{n.label}</a>
+      ))}
+    </nav>
+  </div>
+</header>
