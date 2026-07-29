@@ -1,0 +1,26 @@
+{
+  "name": "nonprofitsoftwareguide",
+  "type": "module",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "npm run guardrails && astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "guardrails": "node scripts/check-disclosure.mjs && node scripts/check-factcheck.mjs && node scripts/check-clusters.mjs && node scripts/check-depth.mjs && node scripts/check-queries.mjs",
+    "check-freshness": "node scripts/check-freshness.mjs",
+    "check-links": "node scripts/check-links.mjs"
+  },
+  "dependencies": {
+    "astro": "^5.13.0",
+    "@astrojs/rss": "^4.0.11",
+    "@astrojs/sitemap": "^3.4.0",
+    "@astrojs/mdx": "^4.2.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.1.0",
+    "tailwindcss": "^4.1.0"
+  }
+}
