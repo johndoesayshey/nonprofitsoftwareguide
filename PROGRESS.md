@@ -18,7 +18,13 @@ from here. Each step is committed separately.
 | 9 | link-targets.md (25 targets) | ✅ done |
 | 10 | Sitemap, RSS, meta, JSON-LD, GA4/GSC env | ✅ done |
 | 11 | Draft first 3 posts | ✅ done |
-| 12 | DEPLOY.md | ⬜ todo |
+| 12 | DEPLOY.md | ✅ done |
+
+**All 12 work-order steps complete.** Full build green (73 pages), all guardrails
+passing. Everything generated ships `draft: true` — see DEPLOY.md Part 5 for how to
+verify and publish. Remaining owner tasks: fill `[FACT-CHECK]` prices, write
+`[OPERATOR INPUT]` slots + the `/about` bio + `/disclosure` text, then flip pages to
+`draft: false`.
 
 ## Environment notes
 
