@@ -1,0 +1,35 @@
+---
+import { getAffiliate } from '../lib/affiliates';
+
+interface Props {
+  slug: string;
+  /** Link text. Defaults to the product name from affiliates.json. */
+  text?: string;
+  /** Show the reader offer badge beside the link when one exists. Default true. */
+  showOffer?: boolean;
+}
+
+const { slug, text, showOffer = true } = Astro.props;
+const affiliate = getAffiliate(slug);
+
+if (!affiliate) {
+  throw new Error(
+    `<AffiliateLink slug="${slug}" /> — no entry in src/data/affiliates.json. ` +
+      `Every affiliate link must route through a known slug.`
+  );
+}
+
+const label = text ?? affiliate.name;
+const offer = showOffer ? affiliate.readerOffer : null;
+---
+
+<a
+  href={`/go/${slug}`}
+  rel="sponsored nofollow noopener"
+  class="aff-link font-medium underline underline-offset-2 decoration-2"
+  data-affiliate={slug}>{label}</a
+>{
+  offer && (
+    <span class="aff-offer ml-1 whitespace-nowrap text-sm font-medium">— {offer}</span>
+  )
+}

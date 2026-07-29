@@ -8,7 +8,7 @@ from here. Each step is committed separately.
 | Step | What | State |
 |---|---|---|
 | 1 | Scaffold Astro + Tailwind + content collections | ✅ done |
-| 2 | Affiliate system (affiliates.json, /go/[slug], components) | ⬜ todo |
+| 2 | Affiliate system (affiliates.json, /go/[slug], components) | ✅ done |
 | 3 | Five guardrail scripts wired into build | ⬜ todo |
 | 4 | Layouts, design system, 3 design options, homepage | ⬜ todo |
 | 5 | Stack / platform / compare / blog / disclosure / about pages | ⬜ todo |

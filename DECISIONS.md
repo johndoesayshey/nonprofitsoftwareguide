@@ -31,3 +31,30 @@ directly. Result is identical to a clean Astro 5 + Tailwind 4 project.
 (`grant-research`, `prospect-research`, `donor-crm`, `donation-processing`,
 `forms-ops`, `events-auctions`) used by platforms, stacks, and posts so category
 strings can't drift. Mirrors the "Software categories to cover" table.
+
+## Step 2 — affiliate system
+
+**D6. 25 affiliate entries, not 14.** `affiliates.json` is the link source of
+truth, so it covers every product the site links to (Tier A + B + C + the
+free/gov tools with no program). The 14 *platform content files* (step 6) are a
+subset. More link entries than content pages is expected and correct.
+
+**D7. Tier B status = `pending`, not `none`.** Tier C is explicitly `status:
+"none"` in the spec. Tier B (Kindsight, DonorSearch, Neon One) has real
+negotiated programs the operator intends to pursue once the site has traffic, so
+`pending` is more accurate than `none`. Redirect behavior is identical either way
+(both fall back to the plain URL), so this only affects intent tracking. `none`
+is reserved for products with genuinely no program.
+
+**D8. Reader offers only where stated.** Per "never invent a number," `readerOffer`
+is populated only where the spec's program table gives a reader-facing discount —
+that is DonorDock's "10% off." The Instrumentl "$50 off" in the spec's JSON
+*example* was illustrative, so it is left `null` for the operator to confirm.
+
+**D9. Redirect is meta-refresh + `location.replace()`, not a true 302.** A pure
+static host (Cloudflare Pages, "no serverless functions" per spec) cannot emit a
+real 302 for a path that has a static file. Meta-refresh + `replace()` + `noindex,
+nofollow` achieves the same SEO outcome: the hop is not indexed, no link equity
+passes, and it stays out of browser history. A `_redirects` file was considered
+but would be shadowed by the generated static page. Documented so it can be
+revisited if the site later moves to SSR.

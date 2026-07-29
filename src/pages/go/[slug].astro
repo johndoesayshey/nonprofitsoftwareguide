@@ -1,0 +1,34 @@
+---
+import { allAffiliateSlugs, getAffiliate, resolveDestination } from '../../lib/affiliates';
+
+export function getStaticPaths() {
+  return allAffiliateSlugs().map((slug) => ({ params: { slug } }));
+}
+
+const { slug } = Astro.params;
+const affiliate = slug ? getAffiliate(slug) : undefined;
+const destination = affiliate ? resolveDestination(affiliate) : '/';
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <!-- The redirect hop itself must never be indexed. -->
+    <meta name="robots" content="noindex, nofollow" />
+    <meta http-equiv="refresh" content={`0; url=${destination}`} />
+    <link rel="canonical" href={destination} />
+    <title>Redirecting…</title>
+  </head>
+  <body>
+    <p>
+      Redirecting to
+      <a href={destination} rel="sponsored nofollow noopener">{destination}</a>.
+    </p>
+    <script is:inline define:vars={{ destination }}>
+      // 302-style client redirect. A static host can't emit a real 302, so we
+      // meta-refresh + replace() (replace keeps the hop out of history).
+      window.location.replace(destination);
+    </script>
+  </body>
+</html>
