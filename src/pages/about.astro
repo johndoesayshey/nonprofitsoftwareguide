@@ -1,10 +1,10 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Breadcrumbs from '../components/Breadcrumbs.astro';
-// Drafted for the operator to personalize (name, sectors, specific platforms
-// used). Remove `noindex={true}` when the bio is final.
+// Personalized by the operator. Contact email is a placeholder until the site
+// mailbox is set up (tracked in OWNER-GUIDE.md).
 ---
-<BaseLayout title="About" description="Who writes this guide, and how it makes money." noindex={true}>
+<BaseLayout title="About" description="Who writes this guide.">
   <div class="wrap">
     <Breadcrumbs crumbs={[{ label: 'Home', href: '/' }, { label: 'About' }]} />
     <article class="prose" style="margin-top: 1.2rem;">
@@ -12,10 +12,9 @@ import Breadcrumbs from '../components/Breadcrumbs.astro';
       <h1>About this guide</h1>
 
       <p>
-        I've spent more than ten years in institutional fundraising and grant
-        work: writing the proposals, running the research, and using many of the
-        tools reviewed here in real fundraising programs. Most of that time has
-        been in and around education, where budgets are tight and a software
+        I've spent more than fifteen years in fundraising, using many of the
+        tools reviewed here. Most of that time has been in and around
+        education and the arts, where budgets are tight and a software
         decision follows you for years.
       </p>
       <p>
@@ -36,16 +35,9 @@ import Breadcrumbs from '../components/Breadcrumbs.astro';
         show you things no review can.
       </p>
 
-      <h2>How it makes money</h2>
       <p>
-        Some outbound links are affiliate links. If you start a paid plan
-        through one, this site may earn a commission at no cost to you. Several
-        tools recommended here pay nothing at all. Recommendations run on fit;
-        the links come after. Read the <a href="/disclosure/">full disclosure</a>.
-      </p>
-
-      <p>
-        Spotted a stale price or a recommendation that missed the mark? Tell me.
+        Spotted a stale price or a recommendation that missed the mark?
+        <a href="mailto:hello@nonprofitsoftwareguide.com">Tell me</a>.
         Reader corrections are what keep a guide like this accurate.
       </p>
     </article>

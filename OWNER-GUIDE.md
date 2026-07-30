@@ -42,7 +42,8 @@ npm run build
 
 ## Launch to-dos (one time)
 
-- [ ] Personalize the About page (`src/pages/about.astro`): add your name and specifics, then delete the `noindex={true}` line
+- [x] Personalize the About page (`src/pages/about.astro`) and make it live (noindex removed)
+- [ ] Set up a real mailbox for the site (e.g. hello@nonprofitsoftwareguide.com) and swap it into the About page's contact link (currently a placeholder)
 - [ ] Push the repo to GitHub and connect Cloudflare Pages (DEPLOY.md Parts 1-2)
 - [ ] Point nonprofitsoftwareguide.com at Cloudflare (DEPLOY.md Part 3)
 - [ ] Set up Google Analytics: add `PUBLIC_GA4_ID` in Cloudflare env vars (DEPLOY.md Part 4)
