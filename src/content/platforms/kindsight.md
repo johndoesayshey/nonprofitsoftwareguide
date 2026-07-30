@@ -2,8 +2,8 @@
 name: Kindsight (iWave)
 slug: kindsight
 category: prospect-research
-entryPrice: "Reported from ~$4,150/yr (quote-based)"
-pricingModel: "Annual contract by seats and screening volume; no public pricing"
+entryPrice: "Reported from ~$4,150/yr (quoted per organization)"
+pricingModel: "Annual subscription by seats and screening volume"
 lastVerified: 2026-07-29
 bestFor: "Shops that want repeatable wealth screening and prospect scoring at scale"
 targetQuery: "kindsight iwave review"
@@ -12,34 +12,34 @@ freeTier: false
 draft: false
 strengths:
   - "Deep wealth and philanthropic data with transparent, sourced scores"
-  - "Screens whole lists at once — the pre-campaign and pre-appeal workhorse"
-  - "Long data track record under the iWave name; the strongest satisfaction scores in the category on review sites"
+  - "Screens whole lists at once, the pre-campaign workhorse"
+  - "Top satisfaction ratings in its category on major review sites"
 limitations:
-  - "Quote-based annual contract — reported entry around $4,150/yr for one seat"
-  - "Capacity data tells you who can give, never whether they will"
+  - "Pricing is quoted per organization; entry reportedly starts around $4,150/yr"
+  - "Capacity data tells you who can give, not who will"
   - "Below roughly $1M raised, most shops can't put the results to work"
 ---
 
-Kindsight — still "iWave" to most fundraisers — is wealth-screening software that scores donors on capacity and philanthropic history, one prospect at a time or a whole file at once. There's no public pricing; widely reported figures put the entry tier around $4,150/year for one user and ~1,500 screens, rising with seats and volume. It's worth that when a major-gifts officer will actually work the results, and not before.
+[Kindsight](/go/kindsight), still called iWave by most fundraisers, is wealth-screening software that scores donors on capacity and philanthropic history, one prospect at a time or a whole file at once. Pricing is quoted per organization; reported entry tiers start around $4,150 a year. It pays off when a major-gifts officer works the results into portfolios and visits.
 
 ## Who it fits
 
-Established shops with a real major-gifts function: a campaign to segment for, portfolios to build, limited cultivation hours to allocate. Review-site data consistently ranks iWave/Kindsight at the top of the category for satisfaction, and practitioners tend to credit the transparency of its scoring — you can see *why* a prospect scored high, which matters when you're defending a portfolio decision.
+Established shops with a real major-gifts function: a campaign to segment, portfolios to build, limited cultivation hours to allocate. Reviewers consistently rank Kindsight at the top of the category, and users credit the transparency of its scoring. You can see why a prospect scored high, which matters when you're deciding whose portfolio they join.
 
-## What it costs
+## Pricing
 
 | Tier (reported) | Approx. annual | Included |
 |---|---|---|
 | Starter | ~$4,150 | 1 user, ~1,500 screens |
 | Professional | ~$5,350 | 3 users, ~5,000 screens |
-| Premium | Quote only | Custom |
+| Premium | Custom | Custom |
 
-These are aggregator-reported figures, not vendor list prices — treat them as negotiating anchors and get your quote in writing.
+Exact pricing is quoted; the demo call is where you'll get your number.
 
-## The honest caveat
+## How it compares
 
-The skepticism experienced researchers voice about every screening tool applies here: capacity is not inclination. A high score means someone could give; whether they will is what cultivation discovers. The screens that pay for themselves are the ones a gift officer turns into a visit list within the month. The ones that don't are expensive PDFs.
+[DonorSearch](/go/donorsearch) weights demonstrated giving history most heavily; Kindsight balances wealth indicators with philanthropy data and scores each transparently. [WealthEngine](/go/wealthengine) leans hardest on wealth modeling for large-list triage. All three demo well; the useful test is asking each to score a sample of donors you already know.
 
-## What to watch
+## Bottom line
 
-Contracts are annual and quoted, so negotiate — seats and screen volume are both levers. And decide who owns the output before you buy: a named person who builds portfolios from the results is the difference between a tool and a subscription.
+If you have major-gift work waiting on better prioritization, book the demo and bring your own donor sample. Watching it score people whose capacity you can verify tells you more than any feature list.

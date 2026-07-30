@@ -26,7 +26,7 @@ const grouped = Object.values(CATEGORIES).map((cat) => ({
           <h2>{g.cat.label}</h2>
           <ul>
             {g.items.map((p) => (
-              <li><a href={`/platforms/${p.data.slug}/`}>{p.data.name}</a> — {p.data.bestFor}</li>
+              <li><a href={`/platforms/${p.data.slug}/`}>{p.data.name}</a>: {p.data.bestFor}</li>
             ))}
           </ul>
         </section>

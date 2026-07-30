@@ -1,6 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 import { CATEGORIES } from '../lib/categories';
+import { getAffiliate } from '../lib/affiliates';
 
 interface Props {
   category: string; // category slug
@@ -16,38 +17,64 @@ const posts = (await getCollection('posts', ({ data }) => data.draft === false))
   .filter((p) => p.data.platformsMentioned.some((s) => platforms.find((pl) => pl.data.slug === s)))
   .sort((a, b) => +b.data.publishDate - +a.data.publishDate);
 ---
-<div class="prose">
-  <h2>Tools we cover</h2>
-  {platforms.length === 0 ? (
-    <p class="empty">Platform write-ups for {meta?.label.toLowerCase()} are in the pipeline.</p>
-  ) : (
-    <ul class="tool-list">
-      {platforms.map((p) => (
-        <li>
-          <a href={`/platforms/${p.data.slug}/`}>{p.data.name}</a>
-          {p.data.freeTier && <span class="tag">free tier</span>}
-          <span class="tool-best">{p.data.bestFor}</span>
-        </li>
-      ))}
-    </ul>
-  )}
-
-  {posts.length > 0 && (
-    <>
-      <h2>Related reading</h2>
-      <ul>
-        {posts.map((p) => <li><a href={`/blog/${p.id}/`}>{p.data.title}</a></li>)}
-      </ul>
-    </>
-  )}
+<div class="prose" style="max-width: none;">
+  <h2>The tools, at a glance</h2>
 </div>
+
+{platforms.length === 0 ? (
+  <p class="empty">Coverage for {meta?.label.toLowerCase()} is in the pipeline.</p>
+) : (
+  <div class="tool-grid">
+    {platforms.map((p) => {
+      const aff = p.data.affiliateSlug ? getAffiliate(p.data.affiliateSlug) : undefined;
+      return (
+        <div class="tool-card">
+          <div class="tool-head">
+            <a class="tool-name" href={`/platforms/${p.data.slug}/`}>{p.data.name}</a>
+            {p.data.freeTier && <span class="tag">free tier</span>}
+          </div>
+          <p class="tool-price num">{p.data.entryPrice}</p>
+          <p class="tool-best">{p.data.bestFor}</p>
+          <div class="tool-actions">
+            {aff && p.data.affiliateSlug ? (
+              <a class="btn-visit" href={`/go/${p.data.affiliateSlug}`} rel="sponsored nofollow noopener">Visit site →</a>
+            ) : null}
+            <a class="link-review" href={`/platforms/${p.data.slug}/`}>Review</a>
+          </div>
+          {aff?.readerOffer && <p class="offer">{aff.readerOffer}</p>}
+        </div>
+      );
+    })}
+  </div>
+)}
+
+{posts.length > 0 && (
+  <div class="prose" style="margin-top: 1.6rem;">
+    <h2>Related reading</h2>
+    <ul>
+      {posts.slice(0, 6).map((p) => <li><a href={`/blog/${p.id}/`}>{p.data.title}</a></li>)}
+    </ul>
+  </div>
+)}
+
 <style>
-  .tool-list { list-style: none; padding: 0; }
-  .tool-list li { padding: .8rem 0; border-bottom: 1px solid var(--color-rule); }
-  .tool-list a { font-size: 1.15rem; font-weight: 600; }
-  .tool-best { display: block; color: var(--color-muted); font-size: .92rem; }
-  .tag { font-family: var(--font-mono); font-size: .6rem; text-transform: uppercase; letter-spacing: .08em;
+  .tool-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 17rem), 1fr));
+    gap: 1rem; margin: 1rem 0; }
+  .tool-card { border: 1px solid var(--color-rule-strong); border-radius: 4px; padding: 1rem 1.1rem;
+    background: var(--color-paper); display: flex; flex-direction: column; gap: .35rem; }
+  .tool-head { display: flex; align-items: baseline; gap: .5rem; flex-wrap: wrap; }
+  .tool-name { font-weight: 800; font-size: 1.12rem; text-decoration: none; color: var(--color-ink); }
+  .tool-name:hover { color: var(--color-green-deep); text-decoration: underline; }
+  .tag { font-size: .62rem; text-transform: uppercase; letter-spacing: .08em; font-weight: 700;
     color: var(--color-green-deep); border: 1px solid var(--color-rule-strong); border-radius: 999px;
-    padding: .05rem .45rem; margin-left: .5rem; }
+    padding: .05rem .45rem; }
+  .tool-price { margin: 0; font-weight: 700; color: var(--color-green-deep); font-size: .95rem; }
+  .tool-best { margin: 0; color: var(--color-muted); font-size: .88rem; flex: 1; }
+  .tool-actions { display: flex; gap: .8rem; align-items: center; margin-top: .4rem; }
+  .btn-visit { display: inline-block; background: var(--color-green-deep); color: #fff; font-weight: 700;
+    text-decoration: none; padding: .4rem .75rem; border-radius: 3px; font-size: .85rem; }
+  .btn-visit:hover { background: var(--color-green); }
+  .link-review { font-size: .85rem; font-weight: 600; }
+  .offer { margin: 0; font-size: .75rem; font-weight: 700; color: var(--color-green-deep); }
   .empty { color: var(--color-muted); font-style: italic; }
 </style>

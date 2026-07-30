@@ -2,10 +2,10 @@
 name: Donorbox
 slug: donorbox
 category: donation-processing
-entryPrice: "Free to start; ~2.95% platform fee (Pro at ~$150/mo lowers it)"
-pricingModel: "Percentage platform fee + processor fees; paid plans reduce the percentage"
+entryPrice: "Free to start; ~2.95% platform fee"
+pricingModel: "Percentage platform fee + processing; Pro plan lowers the percentage"
 lastVerified: 2026-07-29
-bestFor: "Shops that want serious recurring-gift tooling and integrations without building anything"
+bestFor: "Shops that want serious recurring-gift tooling without building anything"
 targetQuery: "donorbox review"
 affiliateSlug: donorbox
 freeTier: true
@@ -13,34 +13,32 @@ draft: false
 strengths:
   - "Donation forms live in minutes and embed anywhere"
   - "The strongest recurring-gift management in its price class"
-  - "Free to start — no subscription until the fee math justifies Pro"
+  - "Free to start; upgrade only when volume justifies it"
 limitations:
-  - "Platform fee stacks on top of Stripe/PayPal processing — model your real net"
-  - "Raw Stripe or PayPal is always cheaper; you're paying for the donor tooling"
-  - "At high volume, free rivals (Zeffy, Givebutter) or Pro's flat fee change the math"
+  - "Platform fee sits on top of payment processing"
+  - "Free platforms compete hard for simple use cases"
+  - "The donor-facing pages are more utilitarian than Givebutter's"
 ---
 
-Donorbox is donation-processing software you can launch in an afternoon: embeddable forms, recurring giving, and donor management. The standard plan is free to start with a ~2.95% platform fee on top of payment processing (Stripe ~2.7% + 5¢); the Pro plan (~$150/month billed annually) cuts the platform fee to roughly 1.75%. The candid framing practitioners eventually arrive at: going direct to Stripe is always cheaper — what you're buying is the recurring-gift and donor tooling, and Donorbox's is the best in its class.
+[Donorbox](/go/donorbox) is donation-processing software you can launch in an afternoon: embeddable forms, recurring giving, and donor management. The standard plan is free to start with a platform fee of about 2.95% plus payment processing; the Pro plan (about $150 a month billed annually) cuts the platform fee to roughly 1.75%. What you're buying is the recurring-gift tooling, and Donorbox's is the best in its class.
 
 ## Who it fits
 
-Shops that are serious about monthly giving. Recurring-donation management — upgrades, failed-card recovery, donor portals — is where Donorbox out-tools the free platforms, and recurring revenue is where that tooling pays for its fee. If your online program is mostly one-time campaign gifts, look hard at the free options first.
+Shops serious about monthly giving. Recurring-donation management (upgrade prompts, failed-card recovery, donor portals) is where Donorbox out-tools the free platforms, and recurring revenue is where that tooling pays for its fee. Its integration ecosystem also connects cleanly to the major donor CRMs.
 
-## What it costs
+## Pricing
 
 | Plan | Platform fee | Subscription |
 |---|---|---|
 | Standard | ~2.95% | $0 |
 | Pro | ~1.75% | ~$150/mo (annual) |
 
-Plus processing on every gift. The break-even is mechanical: at roughly $150k/year of online giving, Pro's subscription costs less than the fee points it saves — run your own volume through it.
+Processing fees apply on every gift. At roughly $150k a year of online giving, Pro's lower fee covers its own subscription; run your volume through the percentages.
 
-## The honest comparison
+## How it compares
 
-Against [Zeffy](/platforms/zeffy/): Zeffy charges you nothing at all, funded by donor tips — for fee-sensitive shops with straightforward needs, it's the stronger deal. Against [Givebutter](/platforms/givebutter/): Givebutter is free-with-tips and broader on events; Donorbox is deeper on recurring. Donorbox wins where the donor lifecycle, integrations, and recurring tooling matter more than the fee.
+[Zeffy](/go/zeffy) charges nothing at all, funded by donor tips, and fits fee-sensitive shops with straightforward needs. [Givebutter](/go/givebutter) is free-with-tips and broader on events. Donorbox wins where recurring-gift depth and integrations matter more than the fee.
 
-## What to watch
+## Bottom line
 
-Model the full stack — platform fee plus processor fee — against your actual annual volume before choosing. One housekeeping note for readers of this site: our Donorbox links are tracked referral links, and using them is how the site earns its keep at no cost to you.
-
-[Start free with Donorbox](/go/donorbox) and upgrade to Pro only when your volume says so.
+Starting is free, so the test costs nothing: [set up a Donorbox form](/go/donorbox), run a month of gifts through it, and watch what the recurring tools do with a failed card. One tip for readers here: use our link when you sign up, since Donorbox referrals only count at click time.

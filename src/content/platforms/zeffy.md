@@ -2,8 +2,8 @@
 name: Zeffy
 slug: zeffy
 category: donation-processing
-entryPrice: "Free — no platform or processing fees to the nonprofit"
-pricingModel: "100% free; funded by optional donor tips at checkout"
+entryPrice: "Free (no platform or processing fees)"
+pricingModel: "100% free to nonprofits; funded by optional donor tips"
 lastVerified: 2026-07-29
 bestFor: "Fee-sensitive shops that want to keep every dollar of every gift"
 targetQuery: "is zeffy really free"
@@ -11,22 +11,22 @@ affiliateSlug: zeffy
 freeTier: true
 draft: false
 strengths:
-  - "Genuinely $0 — no platform fee and no processing fee passed to the nonprofit"
-  - "Covers donations, ticketing, raffles, and memberships, not just a donate button"
-  - "Runs on Stripe underneath — the 'is it legit' question has a boring, reassuring answer"
+  - "Zero fees to the nonprofit: a $100 gift deposits $100"
+  - "Covers donations, ticketing, raffles, and memberships"
+  - "Runs on Stripe underneath"
 limitations:
-  - "Funded by prompting your donors to tip Zeffy at checkout — decide if you're comfortable with that"
-  - "Payouts run on a schedule; cash isn't instant, which stings around event dates"
-  - "Fewer deep integrations than paid processors"
+  - "Donors see an optional tip prompt at checkout"
+  - "Payouts run on a schedule, not on demand"
+  - "Fewer integrations than paid processors"
 ---
 
-Yes — Zeffy is really free. No platform fee, no processing fee: a $100 gift puts $100 in your account. The model funds itself by asking your donors for an optional tip to Zeffy at checkout, and payments run on Stripe underneath, which settles the "is this legit" question that follows the platform everywhere. The real tradeoffs are different ones: the donor-facing tip prompt, and payout timing.
+Yes, [Zeffy](/go/zeffy) is really free. No platform fee and no processing fee: a $100 gift puts $100 in your account. The model funds itself by offering your donors an optional tip to Zeffy at checkout, and payments run on Stripe underneath. For a fee-sensitive shop, the math has no competition.
 
 ## Who it fits
 
-Grassroots and small shops where every fee dollar matters, and any organization whose online giving is forms, ticketing, and campaigns rather than complex integrations. For a shop keeping 100% of ticket sales to a community event, the math is unbeatable — which is exactly why "too good to be true" is the most common first reaction.
+Grassroots and small shops where every fee dollar matters, and any organization whose online giving is forms, ticketing, and campaigns rather than complex integrations. Keeping 100% of ticket sales to a community event is the pitch, and it delivers exactly that.
 
-## What it actually costs
+## What it costs
 
 | Item | Cost to you |
 |---|---|
@@ -34,12 +34,12 @@ Grassroots and small shops where every fee dollar matters, and any organization 
 | Processing fee | $0 |
 | Funded by | Optional donor tips at checkout |
 
-The two real caveats, straight from organizations that use it: **the tip prompt** is presented to your donors, and some fundraisers are uneasy having supporters nudged to fund a third party — look at the checkout flow yourself and decide. **Payouts are scheduled**, not on-demand; organizations have been caught with event revenue still inside Zeffy the week they needed to pay the caterer. Plan disbursement timing before a cash-critical event.
+Two things to plan around. The tip prompt is donor-facing, so look at the checkout flow yourself and make sure you're comfortable with it; many shops are, and donors can always decline. Payouts are scheduled rather than instant, so if event cash needs to arrive by a specific date, check the disbursement calendar ahead of time.
 
-## The honest comparison
+## How it compares
 
-Against [Donorbox](/platforms/donorbox/): Donorbox's recurring-gift tooling and integration ecosystem are deeper; Zeffy's price is zero. Against [Givebutter](/platforms/givebutter/): both are free-by-tips; Givebutter is stronger for events and peer-to-peer, Zeffy is the purer "keep 100%" pitch.
+[Donorbox](/go/donorbox) charges a platform fee and, in exchange, brings deeper recurring-gift tooling and a bigger integration ecosystem. [Givebutter](/go/givebutter) is also free with tips on and is stronger for events and peer-to-peer campaigns. Zeffy is the purest keep-everything option of the three.
 
-## What to watch
+## Bottom line
 
-Zeffy has no affiliate program — free-to-nonprofit platforms have no margin to share. We recommend it where it fits anyway; that's precisely what should make you trust the recommendations that do carry a referral link.
+Zeffy has no affiliate program, so this site earns nothing from recommending it. We recommend it anyway wherever the fit is right, and trying it costs exactly nothing: set up a form, run a test gift, and watch the full amount arrive.

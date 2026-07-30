@@ -10,7 +10,7 @@ export async function GET(context) {
   return rss({
     title: 'Nonprofit Software Guide',
     description:
-      'The nonprofit fundraising stack, organized by shop size — grant research, wealth screening, processing, and the CRM last.',
+      'The nonprofit fundraising stack, organized by shop size: grant research, wealth screening, processing, and the CRM last.',
     site: context.site ?? 'https://nonprofitsoftwareguide.com',
     items: posts.map((post) => ({
       title: post.data.title,

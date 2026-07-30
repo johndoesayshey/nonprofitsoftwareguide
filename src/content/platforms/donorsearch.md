@@ -2,44 +2,44 @@
 name: DonorSearch
 slug: donorsearch
 category: prospect-research
-entryPrice: "Quote-based (reported ~$4,000–$6,000/yr entry)"
-pricingModel: "Annual contract; pay-per-screen options reported around $1–$2 per record"
+entryPrice: "Quoted per organization (reported ~$4,000-$6,000/yr entry)"
+pricingModel: "Annual subscription; per-record screening options available"
 lastVerified: 2026-07-29
-bestFor: "Shops that weight proven giving history over wealth markers and want screening inside their CRM"
+bestFor: "Shops that weight proven giving history and want screening inside their CRM"
 targetQuery: "donorsearch review"
 affiliateSlug: donorsearch
 freeTier: false
 draft: false
 strengths:
-  - "Leads with demonstrated philanthropy — actual gifts to other organizations — not just asset markers"
-  - "The tool practitioners most often call approachable and readable in this category"
+  - "Leads with demonstrated philanthropy, not just wealth markers"
+  - "Often described as the most readable, usable screener in the category"
   - "Integrations push scores directly into major donor CRMs"
 limitations:
-  - "No public pricing; all figures are negotiated"
-  - "History predicts better than wealth, but still isn't a promise of future gifts"
+  - "No public pricing; plans are quoted per organization"
+  - "Giving history predicts better than wealth alone, but nothing guarantees a gift"
   - "Full value requires a CRM it integrates with"
 ---
 
-DonorSearch is prospect-research software built on a specific bet: that a person's record of actual giving — to your organization and everyone else's — predicts future gifts better than boats and square footage do. Pricing is quote-based; commonly reported figures run about $4,000–$6,000/year at entry, with pay-per-screen options around $1–$2 a record. Among fundraisers comparing screeners, it's the one most often described as pricey but readable and genuinely usable.
+[DonorSearch](/go/donorsearch) is prospect-research software built on a specific bet: a person's record of actual giving predicts future gifts better than assets do. Pricing is quoted per organization; commonly reported entry figures run about $4,000-$6,000 a year, with per-record screening options for smaller projects. Fundraisers comparing screeners tend to describe it as pricey but readable and genuinely usable.
 
 ## Who it fits
 
-Development teams that already run cultivation and want to prioritize by proven generosity. The philosophical difference from wealth-marker tools is real: veteran researchers consistently advise weighting philanthropic history over luxury indicators, because giving behavior predicts giving. DonorSearch productized that advice. If your CRM is on its integration list, scores land where gift officers already work — which is most of the practical value.
+Development teams that already run cultivation and want to prioritize by proven generosity. Veteran researchers weight demonstrated philanthropy over luxury indicators, and DonorSearch productized that thinking. If your CRM is on its integration list, scores land where gift officers already work, which is most of the practical value.
 
-## What it costs
+## Pricing
 
 | Route (reported) | Approx. price |
 |---|---|
-| Entry subscription | ~$4,000–$6,000/yr |
-| Mid/standard | ~$7,000–$10,000/yr |
-| Pay-per-screen | ~$1–$2 per record |
+| Entry subscription | ~$4,000-$6,000/yr |
+| Standard | ~$7,000-$10,000/yr |
+| Per-record screening | ~$1-$2 per record |
 
-None of this is published; every deal is negotiated. Use these as anchors and get the quote in writing, including screen volumes and seat counts.
+Plans are quoted; the sales conversation will price your seat count and screening volume.
 
-## The honest caveat
+## How it compares
 
-Same as the whole category: even proven-philanthropy scores only tell you where to spend cultivation time. The shops that get their money's worth turn each screen into portfolio assignments with owners and deadlines. The shops that don't were not ready to buy.
+[Kindsight](/go/kindsight) balances wealth indicators with philanthropy data and posts the category's top satisfaction scores. [WealthEngine](/go/wealthengine) is the wealth-modeling specialist for large-list triage. DonorSearch is the giving-history specialist, and the one users call easiest to read.
 
-## What to watch
+## Bottom line
 
-Confirm your CRM integration before signing — exporting spreadsheets between systems quietly kills adoption. And if you're comparing against [Kindsight](/platforms/kindsight/), make both vendors quote the same seat count and screen volume so the numbers are actually comparable.
+Confirm your CRM integration during the demo, and ask them to screen a sample of donors you already know well. If the scores match your instincts on people you can verify, that's the trust you need before turning it loose on the rest of the file.

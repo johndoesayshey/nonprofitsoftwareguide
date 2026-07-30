@@ -1,29 +1,43 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Breadcrumbs from '../components/Breadcrumbs.astro';
-// Legal / compliance text is intentionally NOT written here — it must be the
-// operator's own. Page is noindex until the [OPERATOR INPUT] block is replaced.
 ---
-<BaseLayout title="Affiliate disclosure" description="How this site uses affiliate links." noindex={true}>
+<BaseLayout title="Disclosure" description="How Nonprofit Software Guide makes money, and how that affects (and doesn't affect) what we recommend.">
   <div class="wrap">
     <Breadcrumbs crumbs={[{ label: 'Home', href: '/' }, { label: 'Disclosure' }]} />
     <article class="prose" style="margin-top: 1.2rem;">
-      <h1>Affiliate disclosure</h1>
-
-      <blockquote>
-        <strong>[OPERATOR INPUT — the affiliate + FTC disclosure, in your own words.]</strong><br />
-        Claude deliberately did not draft compliance language here. Write (or have
-        reviewed) your own disclosure covering: that some outbound links are
-        affiliate links; that the site may earn a commission at no cost to the
-        reader; that recommendations are made on fit, not commission; and any
-        program-specific language your affiliate agreements require (Amazon-style
-        programs, for instance, mandate exact wording). A few sentences is plenty.
-      </blockquote>
+      <p class="kicker">Disclosure</p>
+      <h1>How this site makes money</h1>
 
       <p>
-        In the meantime, the short version shown across the site is: some links
-        are affiliate links, they never change which tool gets recommended, and
-        where a reader discount exists it is noted beside the link.
+        Nonprofit Software Guide is a free, independent publication. Some of the
+        links on this site are affiliate links. If you click one and later start
+        a paid plan with that vendor, the vendor pays this site a commission. You
+        pay nothing extra, and in some cases you pay less: where a vendor offers
+        a reader discount through our link, we note it next to the link.
+      </p>
+
+      <h2>What that means in practice</h2>
+      <ul>
+        <li>Links that route through this site's tracking (our <code>/go/</code> links) may earn a commission.</li>
+        <li>Affiliate relationships never decide a recommendation. Several of the tools we recommend most strongly, including Zeffy and Little Green Light, pay us nothing.</li>
+        <li>We do not accept payment for placement, rankings, or reviews. No vendor sees content before it publishes.</li>
+        <li>Prices and terms come from vendor pricing pages and are checked on a regular schedule. Vendors change pricing; always confirm current terms on the vendor's site before buying.</li>
+      </ul>
+
+      <h2>Our relationship with vendors</h2>
+      <p>
+        We want the software companies we cover to succeed. Good fundraising
+        software makes nonprofits more effective, and the best way to evaluate
+        any tool on this site is to take the vendor up on a demo or free trial
+        and test it against your own data. When we recommend booking a demo,
+        that is the recommendation: see it yourself before you decide.
+      </p>
+
+      <p>
+        This disclosure is made in accordance with the FTC's guidelines on
+        endorsements and testimonials. Questions about it can be sent through
+        the contact information on the <a href="/about/">about page</a>.
       </p>
     </article>
   </div>

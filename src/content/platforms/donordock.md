@@ -3,30 +3,30 @@ name: DonorDock
 slug: donordock
 category: donor-crm
 entryPrice: "From ~$98/mo (billed annually)"
-pricingModel: "Flat tiers with unlimited contacts; discounts for orgs under $300k revenue"
+pricingModel: "Flat tiers with unlimited contacts"
 lastVerified: 2026-07-29
-bestFor: "Solo fundraisers and tiny teams who need the CRM to tell them what to do next"
+bestFor: "Solo fundraisers who need the CRM to tell them what to do next"
 targetQuery: "donordock review"
 affiliateSlug: donordock
 freeTier: false
 draft: false
 strengths:
-  - "The ActionBoard turns the database into a daily to-do list — built for people without time to plan follow-up"
-  - "Unlimited contacts on flat tiers — no record-count bill creep as your list grows"
-  - "90-day money-back guarantee, and reduced pricing for orgs under $300k revenue"
+  - "The ActionBoard turns the database into a daily to-do list"
+  - "Unlimited contacts on flat tiers; no record-count bill creep"
+  - "90-day money-back guarantee, and 10% off through this site"
 limitations:
-  - "Deliberately lean — power users will miss advanced automation and reporting"
-  - "Smaller vendor than Bloomerang or Neon; check the integration list against your stack"
-  - "Flat pricing means tiny databases pay the same as big ones — LGL is cheaper below ~2,500 records"
+  - "Deliberately lean; power users will miss advanced automation"
+  - "Smaller vendor; check the integration list against your stack"
+  - "Below ~2,500 records, LGL costs less"
 ---
 
-DonorDock is a donor CRM aimed at the smallest development shops — often a shop of one — with its signature ActionBoard: a guided feed that tells you which donor to thank, call, or follow up with today. Pricing starts around $98/month billed annually with unlimited contacts, and organizations under $300k in revenue can ask about discounted pricing. It's the tool for people whose problem isn't data, it's follow-through.
+[DonorDock](/go/donordock) is a donor CRM aimed at the smallest development shops, often a shop of one. Its signature ActionBoard is a guided daily feed: which donor to thank, call, or follow up with today. Pricing starts around $98 a month billed annually with unlimited contacts, and there's a 90-day money-back guarantee.
 
 ## Who it fits
 
-The one-person development office. The consistent pattern across small-shop fundraisers is that the database isn't the hard part — remembering to work it is. DonorDock's bet is that a CRM should behave like a task list, and for a stretched ED or solo fundraiser juggling grants, events, and thank-yous, that design earns its keep in donors who don't slip.
+The one-person development office. For most small shops the database isn't the hard part; remembering to work it is. DonorDock behaves like a task list, and for a stretched ED juggling grants, events, and thank-yous, that design shows up as donors who don't slip.
 
-## What it costs
+## Pricing
 
 | Tier | Monthly (annual billing) |
 |---|---|
@@ -34,14 +34,12 @@ The one-person development office. The consistent pattern across small-shop fund
 | Grow | ~$300 |
 | Amplify | ~$585 |
 
-All tiers include unlimited contacts — the inverse of Bloomerang's record-count model. There's a 90-day money-back guarantee, and sub-$300k organizations should ask for the discounted rate before paying list.
+All tiers include unlimited contacts. Organizations under $300k in revenue can ask about reduced pricing, and readers get 10% off through [this site's referral link](/go/donordock).
 
-## The honest comparison
+## How it compares
 
-Against [Little Green Light](/platforms/littlegreenlight/): LGL is meaningfully cheaper for small lists and more flexible; DonorDock is more guided and modern. Against [Bloomerang](/platforms/bloomerang/): Bloomerang has deeper retention analytics; DonorDock has the stronger daily-workflow nudge. The honest dividing line is temperament — pick DonorDock if you need the software to drive the habit.
+[Little Green Light](/go/littlegreenlight) is cheaper for small lists and more flexible; DonorDock is more guided and more modern. [Bloomerang](/go/bloomerang) has deeper retention analytics for growing teams. The dividing line is temperament: pick DonorDock if you want the software to drive the habit.
 
-## What to watch
+## Bottom line
 
-Unlimited contacts cuts both ways: below ~2,500 records, LGL's $45/month undercuts it badly. And as a smaller vendor, confirm integrations with your email and processing tools before committing.
-
-[Try DonorDock](/go/donordock) — 10% off through this site's referral, and a 90-day guarantee to test the ActionBoard habit.
+The 90-day guarantee makes this the lowest-risk trial in the category. [Start with DonorDock](/go/donordock), live in the ActionBoard for a month, and see whether your follow-up rate moves. If it does, that habit is worth far more than the subscription.

@@ -5,28 +5,28 @@ category: grant-research
 entryPrice: "From $179/mo (billed annually)"
 pricingModel: "Tiered by active grant projects; 14-day free trial"
 lastVerified: 2026-07-29
-bestFor: "Shops managing 10+ concurrent grant applications that need matching and deadline tracking in one place"
+bestFor: "Shops managing 10+ grant applications that want matching and deadline tracking in one place"
 targetQuery: "is instrumentl worth it"
 affiliateSlug: instrumentl
 freeTier: false
 draft: false
 strengths:
-  - "Active matching surfaces funders you would not find by keyword search alone"
-  - "Deadline and reporting tracker replaces the spreadsheet most shops limp along on"
-  - "990 and giving-history data sit next to each funder, so you vet without leaving the tool"
+  - "Active matching surfaces funders you would not find by keyword search"
+  - "Deadline and reporting tracker replaces the spreadsheet most teams limp along on"
+  - "990 and giving-history data sit next to each funder"
 limitations:
-  - "At $2,100+ per year, it is a real budget line — overkill below roughly 10 active applications"
-  - "Matching is only as good as your profile; a thin profile returns thin matches"
-  - "Tiers cap active projects, so a busy pipeline pushes you up the price ladder"
+  - "A real budget line at $2,100+ per year; light users won't max its value"
+  - "Matching quality depends on the profile you build at setup"
+  - "Tiers cap active projects, so busy pipelines cost more"
 ---
 
-Instrumentl is grant-research software that matches funders to your work and tracks every deadline and report in one pipeline. Plans start at $179/month billed annually (about $2,148/year), tiered by how many active grant projects you run. It is worth it once grants are a program — roughly ten or more concurrent applications — and overkill before that.
+[Instrumentl](/go/instrumentl) is the leading grant research platform: it matches funders to your programs and tracks every deadline and report in one pipeline. Plans start at $179 a month billed annually, tiered by active grant projects. It earns its price once grants are a program, roughly ten or more concurrent applications.
 
 ## Who it fits
 
-The sweet spot is a shop where prospecting and deadline-juggling have become a recurring drain: a development director running 15–20 applications a year, or a grants manager who inherited a tracking spreadsheet nobody trusts. Instrumentl's real value, in the words of the fundraisers who defend the price, is the pipeline management as much as the database — the matching finds funders, but the tracker is what keeps a multi-person grant calendar from slipping.
+A development director running 15-20 applications a year, or a grants manager who inherited a tracking spreadsheet nobody trusts. Users who love it point to the pipeline as much as the database: matching finds new funders, and the tracker keeps a multi-person grant calendar from slipping.
 
-## What it costs
+## Pricing
 
 | Plan | Monthly (billed annually) | Active projects |
 |---|---|---|
@@ -34,14 +34,12 @@ The sweet spot is a shop where prospecting and deadline-juggling have become a r
 | Standard | $299 | ~10 |
 | Pro | $499 | ~20 |
 
-Tier names shift occasionally; confirm current packaging on the pricing page. There's a 14-day free trial and no perpetual free tier.
+There is a 14-day free trial and no long-term lock-in below the annual term.
 
-## The honest counterargument
+## How it compares
 
-Plenty of experienced grant writers pay for nothing: they work funder newsletters, Grants.gov, ProPublica's Nonprofit Explorer, and free Foundation Directory access at a Candid partner library, and read 990s directly. For a small shop chasing a handful of local funders, that free workflow genuinely competes. Instrumentl wins when your time stops being free — when the hours spent hand-searching cost more than the subscription.
+[GrantStation](/go/grantstation) costs about a tenth as much and gives you a searchable database without the matching or pipeline. [Candid](/go/candid) goes deeper on any single funder but doesn't manage the work. Teams that outgrow spreadsheets usually land on Instrumentl because it replaces both the search and the tracker at once.
 
-## What to watch
+## Bottom line
 
-Value is front-loaded onto the profile you build; a vague profile returns generic matches, so budget a real afternoon for setup. And count your active applications honestly before choosing a tier — the project caps are the pricing model.
-
-[Try Instrumentl free for 14 days](/go/instrumentl) and see what its matching finds that your current process hasn't.
+If you run a real pipeline, the fastest way to decide is the [14-day trial](/go/instrumentl): load your active applications, let the matching run, and see what it finds that your current process hasn't. Two weeks with your own data beats any review, including this one.

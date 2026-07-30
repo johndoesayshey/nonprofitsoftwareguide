@@ -1,13 +1,13 @@
 ---
 import { getCollection, render } from 'astro:content';
+import { existsSync } from 'node:fs';
+import { fileURLToPath } from 'node:url';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
-import AffiliateLink from '../../components/AffiliateLink.astro';
 import AffiliateDisclosure from '../../components/AffiliateDisclosure.astro';
 import DraftBanner from '../../components/DraftBanner.astro';
 import { CATEGORIES } from '../../lib/categories';
 import { getAffiliate } from '../../lib/affiliates';
-import { formatMedium } from '../../lib/dates';
 
 export async function getStaticPaths() {
   const platforms = await getCollection('platforms');
@@ -21,27 +21,29 @@ const cat = CATEGORIES[p.category];
 const affiliate = p.affiliateSlug ? getAffiliate(p.affiliateSlug) : undefined;
 const isDraft = p.draft !== false;
 
-const verified = formatMedium(p.lastVerified);
+// Screenshot slot: drop a product screenshot at public/images/platforms/<slug>.png
+// (or .webp / .jpg) and it renders automatically with SEO-friendly alt text.
+const pubDir = fileURLToPath(new URL('../../../public', import.meta.url));
+const shot = ['png', 'webp', 'jpg'].map((ext) => `/images/platforms/${p.slug}.${ext}`)
+  .find((rel) => existsSync(pubDir + rel));
 
-// Product JSON-LD. Only attach an Offer when we have a clean (non-placeholder)
-// price — never emit a [FACT-CHECK] string as structured data.
-const priceClean = !/\[FACT-CHECK/i.test(p.entryPrice);
+// Product JSON-LD. Only attach clean data — never placeholder strings.
 const productLd: Record<string, unknown> = {
   '@context': 'https://schema.org',
   '@type': 'Product',
   name: p.name,
   category: cat?.label ?? p.category,
   description: p.bestFor,
+  brand: { '@type': 'Brand', name: p.name },
+  ...(shot ? { image: new URL(shot, Astro.site ?? Astro.url).href } : {}),
 };
-if (priceClean && affiliate) {
-  productLd.brand = { '@type': 'Brand', name: p.name };
-}
 ---
 
 <BaseLayout
-  title={p.name}
-  description={p.bestFor}
+  title={`${p.name} review & pricing`}
+  description={`${p.name} for nonprofits: pricing, who it fits, and how it compares. ${p.bestFor}.`}
   ogType="product"
+  section={p.category}
   noindex={isDraft}>
   <div class="wrap">
     <Breadcrumbs crumbs={[
@@ -58,7 +60,7 @@ if (priceClean && affiliate) {
 
       <div class="pricebox">
         <div>
-          <span class="pricebox-label">Entry price</span>
+          <span class="pricebox-label">Starting price</span>
           <span class="pricebox-value">{p.entryPrice}</span>
         </div>
         <div>
@@ -69,27 +71,36 @@ if (priceClean && affiliate) {
           <span class="pricebox-label">Free tier</span>
           <span class="pricebox-value">{p.freeTier ? 'Yes' : 'No'}</span>
         </div>
-        <div>
-          <span class="pricebox-label">Best for</span>
-          <span class="pricebox-value">{p.bestFor}</span>
-        </div>
-        <p class="pricebox-verified"><span class="verified">Last verified {verified}</span></p>
+        {affiliate && p.affiliateSlug && (
+          <div class="pricebox-cta">
+            <a class="btn-primary" href={`/go/${p.affiliateSlug}`} rel="sponsored nofollow noopener">
+              Visit {p.name} →
+            </a>
+            {affiliate.readerOffer && <span class="offer">{affiliate.readerOffer}</span>}
+          </div>
+        )}
       </div>
+
+      {shot && (
+        <figure class="shot">
+          <img src={shot} alt={`${p.name} dashboard screenshot showing the main ${cat?.label.toLowerCase() ?? ''} workspace`} loading="lazy" decoding="async" />
+          <figcaption>Inside {p.name}.</figcaption>
+        </figure>
+      )}
 
       <Content />
 
-      <h2>Where it's strong</h2>
+      <h2>Strengths</h2>
       <ul>{p.strengths.map((s) => <li>{s}</li>)}</ul>
 
-      <h2>Where it falls short</h2>
+      <h2>Limitations</h2>
       <ul>{p.limitations.map((s) => <li>{s}</li>)}</ul>
 
-      {affiliate && (
+      {affiliate && p.affiliateSlug && (
         <p class="cta">
-          <AffiliateLink slug={p.affiliateSlug!} text={`Try ${p.name}`} />
-          {affiliate.status !== 'active' && (
-            <span class="cta-note"> — link goes to {p.name}; affiliate application {affiliate.status}.</span>
-          )}
+          <a class="btn-primary" href={`/go/${p.affiliateSlug}`} rel="sponsored nofollow noopener">
+            See {p.name} pricing & book a demo →
+          </a>
         </p>
       )}
 
@@ -103,11 +114,19 @@ if (priceClean && affiliate) {
 <style>
   .pricebox { display: grid; grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr)); gap: .9rem 1.4rem;
     border: 1px solid var(--color-rule-strong); border-left: 3px solid var(--color-green);
-    background: var(--color-paper-2); padding: 1.1rem 1.2rem; margin: 1.4rem 0; border-radius: 2px; }
-  .pricebox-label { display: block; font-family: var(--font-mono); font-size: .64rem; letter-spacing: .1em;
+    background: var(--color-paper-2); padding: 1.1rem 1.2rem; margin: 1.4rem 0; border-radius: 2px;
+    align-items: center; }
+  .pricebox-label { display: block; font-size: .68rem; letter-spacing: .1em; font-weight: 700;
     text-transform: uppercase; color: var(--color-muted); }
-  .pricebox-value { display: block; font-size: 1.05rem; margin-top: .15rem; }
-  .pricebox-verified { grid-column: 1 / -1; margin: 0; }
-  .cta { margin: 1.6rem 0 .4rem; font-size: 1.1rem; }
-  .cta-note { font-size: .9rem; color: var(--color-muted); }
+  .pricebox-value { display: block; font-size: 1.02rem; margin-top: .15rem; }
+  .pricebox-cta { display: flex; flex-direction: column; gap: .3rem; align-items: flex-start; }
+  .btn-primary { display: inline-block; background: var(--color-green-deep); color: #fff !important;
+    font-weight: 700; text-decoration: none; padding: .55rem .95rem; border-radius: 3px; font-size: .95rem; }
+  .btn-primary:hover { background: var(--color-green); }
+  .offer { font-size: .78rem; font-weight: 700; color: var(--color-green-deep); }
+  .shot { margin: 1.4rem 0; }
+  .shot img { max-width: 100%; height: auto; border: 1px solid var(--color-rule); border-radius: 4px;
+    box-shadow: 0 10px 24px -18px rgba(0,0,0,.4); }
+  .shot figcaption { font-size: .78rem; color: var(--color-muted); margin-top: .4rem; }
+  .cta { margin: 1.6rem 0 .4rem; }
 </style>

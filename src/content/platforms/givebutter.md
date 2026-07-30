@@ -2,10 +2,10 @@
 name: Givebutter
 slug: givebutter
 category: donation-processing
-entryPrice: "Free with donor tips on (0% platform fee); 3% flat if tips off"
-pricingModel: "Tip-or-fee model + standard processing; optional Plus CRM tier from ~$29/mo"
+entryPrice: "Free with donor tips on (0% platform fee)"
+pricingModel: "Tips-on free or flat 3%; processing fees apply; optional Plus tier"
 lastVerified: 2026-07-29
-bestFor: "Shops running campaigns, events, and peer-to-peer who want one modern, free platform"
+bestFor: "Shops running campaigns, events, and peer-to-peer on one modern platform"
 targetQuery: "givebutter review"
 affiliateSlug: givebutter
 freeTier: true
@@ -13,34 +13,34 @@ draft: false
 strengths:
   - "Free platform spanning donations, ticketing, auctions, and peer-to-peer"
   - "The most modern donor-facing experience among the free options"
-  - "Transparent switch: tips on = 0% platform fee, tips off = flat 3%"
+  - "Clean pricing switch: tips on for 0%, tips off for a flat 3%"
 limitations:
-  - "Tip-funded like Zeffy — your donors see the prompt"
-  - "Processing fees still apply (~2.9% + 30¢ cards, 1.9% + 30¢ ACH)"
-  - "The free tier is a fundraising tool, not a full CRM — Plus costs extra"
+  - "Processing fees still apply either way"
+  - "The free tier is a fundraising engine, not a full CRM"
+  - "Complex recurring-gift programs get more from Donorbox"
 ---
 
-Givebutter is a free fundraising platform covering donation forms, ticketing, auctions, and peer-to-peer campaigns. The model is a clean either/or: leave optional donor tips on and pay a 0% platform fee, or turn tips off and pay a flat 3%. Payment processing (~2.9% + 30¢ on cards) applies either way. For campaign- and event-driven shops, it's the most polished free option on the market.
+[Givebutter](/go/givebutter) is a free fundraising platform covering donation forms, ticketing, auctions, and peer-to-peer campaigns. The pricing is a clean either/or: leave optional donor tips on and pay a 0% platform fee, or turn tips off and pay a flat 3%. Payment processing applies either way. For campaign and event fundraising, it's the most polished free option available.
 
 ## Who it fits
 
-Organizations whose fundraising has a public face: giving days, galas, walk-a-thons, team pages. Givebutter's donor experience — modern pages, Venmo/PayPal wallets, live displays — is its real differentiator, and donor-facing polish moves conversion more than fee points do. Practitioner chatter about Givebutter is notably mundane (billing mechanics, feature questions) rather than suspicious, which tells you the model has earned baseline trust.
+Organizations whose fundraising has a public face: giving days, galas, walk-a-thons, team pages. The donor experience (modern pages, wallet payments, live displays) is Givebutter's real edge, and donor-facing polish moves conversion more than fee points do.
 
-## What it costs
+## Pricing
 
 | Configuration | Platform fee |
 |---|---|
 | Donor tips enabled | 0% |
 | Tips disabled | 3% flat |
 | Processing (always) | ~2.9% + 30¢ cards / 1.9% + 30¢ ACH |
-| Givebutter Plus (optional CRM/automation) | from ~$29/mo (annual) |
+| Givebutter Plus (optional CRM tools) | from ~$29/mo |
 
-The tips-off option is the honest pressure valve: if the tip prompt bothers you, 3% flat is a fair, known cost — cheaper than many paid platforms' all-in stack.
+The tips-off option is a fair, known cost if the tip prompt isn't for you.
 
-## The honest comparison
+## How it compares
 
-Against [Zeffy](/platforms/zeffy/): Zeffy is the purer free deal (no processing fees at all); Givebutter is stronger for events, auctions, and peer-to-peer. Against [Donorbox](/platforms/donorbox/): Donorbox is deeper on recurring-gift management; Givebutter is broader and more fun in front of donors.
+[Zeffy](/go/zeffy) is the purer free deal, with no processing fees at all, and fits simple forms-and-tickets needs. [Donorbox](/go/donorbox) is deeper on recurring-gift management. [OneCause](/go/onecause) takes over when a signature gala needs live-auction machinery. Givebutter owns the middle: real events and campaigns, zero platform cost, modern donor experience.
 
-## What to watch
+## Bottom line
 
-Export your event and donor data into your CRM after every campaign — the free tier is a fundraising engine, not a database of record. No affiliate program exists here; we recommend it where it fits regardless.
+Setting up costs nothing, so run your next campaign on it and judge the results. One habit worth keeping: export attendees and donors into your CRM after every event, so this year's gala feeds next year's asks.

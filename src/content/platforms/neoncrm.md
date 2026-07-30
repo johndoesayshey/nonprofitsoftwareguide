@@ -2,8 +2,8 @@
 name: Neon CRM
 slug: neoncrm
 category: donor-crm
-entryPrice: "From ~$99/mo (Essentials)"
-pricingModel: "By organizational revenue; unlimited users; add-on modules cost +10–20%"
+entryPrice: "From ~$99/mo"
+pricingModel: "Scales with organizational revenue; unlimited users; optional add-on modules"
 lastVerified: 2026-07-29
 bestFor: "Midsize shops and membership organizations that want CRM, events, and memberships in one system"
 targetQuery: "neon crm review"
@@ -11,35 +11,35 @@ affiliateSlug: neoncrm
 freeTier: false
 draft: false
 strengths:
-  - "Genuine breadth — donations, memberships, events, and email in one connected system"
+  - "Genuine breadth: donations, memberships, events, and email in one connected system"
   - "Membership management stronger than most donor CRMs"
-  - "Prices by organizational revenue with unlimited users, not per-seat"
+  - "Prices by organizational revenue with unlimited users"
 limitations:
-  - "Long-time users report a rough patch: support decline and price increases are recurring complaints"
-  - "Add-on modules stack +10–20% onto the subscription; the quoted price is rarely the final price"
-  - "More setup and a busier interface than lean single-purpose tools"
+  - "More setup than lean single-purpose tools; onboarding is a project"
+  - "Add-on modules increase the subscription cost"
+  - "The interface is busier than lightweight competitors"
 ---
 
-Neon CRM is a broad donor-management platform that folds donations, memberships, events, and email into one system, starting around $99/month and scaling with your organization's revenue rather than record count. The breadth is real and so is the caveat: among long-time users, Neon carries more complaints about support responsiveness and price increases than its main competitors — buy it for the consolidation, and go in with eyes open.
+[Neon CRM](/go/neoncrm) is a broad donor-management platform that folds donations, memberships, events, and email into one system. Pricing starts around $99 a month and scales with your organization's revenue rather than record count, with unlimited users. For organizations paying for three separate tools, the consolidation is the draw.
 
 ## Who it fits
 
-Membership organizations and midsize shops paying for three tools that want one. Neon's membership features genuinely outrun most donor CRMs, and event-heavy organizations get real mileage from the integrated registration. If you're currently juggling a CRM, an events tool, and a membership spreadsheet, the consolidation math is Neon's best argument.
+Membership organizations and midsize shops that have outgrown single-purpose tools. Neon's membership features go further than most donor CRMs, and event-heavy organizations get real value from integrated registration. If you currently run a CRM, an events tool, and a membership spreadsheet, one system replacing all three is a strong pitch.
 
-## What it costs
+## Pricing
 
 | Item | Price |
 |---|---|
 | Essentials | ~$99/mo, scaling with org revenue |
-| Memberships / Volunteers module | +10% of subscription |
-| Events module | +20% of subscription |
+| Memberships / Volunteers module | additional |
+| Events module | additional |
 
-Model the real total with the modules you'll actually use — the add-on percentages are where quotes grow. Higher tiers are quote-based.
+Ask the sales team to price the exact modules you'll use so your quote reflects your real configuration.
 
-## The honest caveat
+## How it compares
 
-The pattern in practitioner forums is specific enough to name: teams that ran Neon for years describe support that got slower and bills that got bigger, and a few report data-export headaches on the way out — which matters, because your CRM choice is also your exit-cost choice. Test the export yourself during the trial: run a full constituent-and-gift-history export and check it against your source data. If it's clean, the consolidation case stands.
+[Bloomerang](/go/bloomerang) is simpler and faster to adopt for pure donor management. [Little Green Light](/go/littlegreenlight) wins on price for small shops. Neon wins when breadth matters more than simplicity, especially for membership models neither competitor handles as well.
 
-## What to watch
+## Bottom line
 
-Onboarding is a project, not a weekend — plan for it. Get module pricing in writing up front. And compare the all-in quote against [Bloomerang](/platforms/bloomerang/) plus a standalone events tool; sometimes the bundle wins, sometimes it doesn't.
+Plan onboarding as a real project, not a weekend. The demo is worth taking with your actual workflows in hand: bring your membership renewal process and your event calendar, and have them show you both running in one system. During any trial, run a full data export and check it against your source data; that habit is good practice with any CRM you evaluate.

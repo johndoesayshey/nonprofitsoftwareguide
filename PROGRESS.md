@@ -47,10 +47,31 @@ carry "reported" hedging); practitioner voice drawn from Reddit/forum sentiment
 research (themes paraphrased, nothing fabricated as first-hand testimony).
 Site builds to 80 pages, 53 in sitemap, all guardrails green on published content.
 
+## Editorial + monetization pass (July 29 2026, second session)
+
+| Change | State |
+|---|---|
+| Em dashes and AI-isms purged from rendered content | ✅ |
+| Vendor-friendly reframe (encourage demos; no negotiation coaching) | ✅ |
+| Single drafted /disclosure (indexable); one-line inline pointer | ✅ |
+| Platform pages simplified (~200-250 words) w/ Visit buttons + screenshot slots | ✅ |
+| Category hubs: compact tool cards (price, fit, Visit, reader offer) | ✅ |
+| Grassroots stack rebuilt: Grantable + Airtable in, Grants.gov out | ✅ |
+| New affiliates: Grantable, monday.com (researched, pending application) | ✅ |
+| 12 new blog posts (15 total), dates spread Feb-Jul 2026 | ✅ |
+| "Last verified" pill and "affiliate application" note removed from platform pages | ✅ |
+
+104 pages, 25 comparisons, 15 posts. All guardrails green.
+
+**Screenshot slots:** drop product screenshots at
+`public/images/platforms/<slug>.png` (or .webp/.jpg) and they render
+automatically with SEO alt text. Priority: instrumentl, donorbox, bloomerang,
+donordock, jotform, grantable.
+
 **Remaining operator tasks:** personalize `/about` (then remove its noindex),
-write `/disclosure` legal text (then remove its noindex), apply to the Tier A
-affiliate programs and fill `affiliateUrl` + `status: "active"` in
-`src/data/affiliates.json`, deploy per DEPLOY.md.
+apply to affiliate programs (incl. Grantable via hello@grantable.co and
+monday.com via PartnerStack) and fill `affiliateUrl` + `status: "active"` in
+`src/data/affiliates.json`, feed in screenshots, deploy per DEPLOY.md.
 
 ## Environment notes
 

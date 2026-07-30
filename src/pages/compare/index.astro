@@ -12,13 +12,13 @@ const grouped = Object.values(CATEGORIES).map((cat) => ({
   items: pairs.filter((p) => p.category === cat.slug),
 })).filter((g) => g.items.length > 0);
 ---
-<BaseLayout title="Head-to-head software comparisons" description="Side-by-side comparisons of nonprofit fundraising tools — price, free tier, and fit — for every meaningful pair we cover." section="compare">
+<BaseLayout title="Head-to-head software comparisons" description="Side-by-side comparisons of nonprofit fundraising tools (price, free tier, fit) for every meaningful pair we cover." section="compare">
   <div class="wrap">
     <Breadcrumbs crumbs={[{ label: 'Home', href: '/' }, { label: 'Compare' }]} />
     <section class="prose" style="margin-top: 1.2rem;">
       <p class="kicker">Head to head</p>
       <h1>Software comparisons</h1>
-      <p class="lede">Every meaningful pairing within a category, lined up on price, free tier, and fit — so a high-intent search lands on a straight answer.</p>
+      <p class="lede">Every meaningful pairing within a category, lined up on price, free tier, and fit.</p>
 
       {grouped.length === 0 ? (
         <p class="empty">Comparisons appear here as platform write-ups are published.</p>

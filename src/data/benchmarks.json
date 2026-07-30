@@ -1,29 +1,98 @@
 {
-  "_comment": "What nonprofits at each shop size typically spend on fundraising software, per category and per year. Figures are modeled from vendor list prices verified July 2026 plus reported quote ranges for the no-public-pricing categories (wealth screening, events) — see methodology. Update alongside the platform pages' lastVerified dates; re-verify at least annually.",
+  "_comment": "What nonprofits at each shop size typically spend on fundraising software, per category and per year. Modeled from vendor list prices verified July 2026 plus reported quote ranges. Update alongside the platform pages' lastVerified dates; re-verify at least annually.",
   "updated": "2026-07-29",
   "ready": true,
-  "methodology": "Figures are modeled, not surveyed: each cell combines vendor list prices verified in July 2026 (Instrumentl, Bloomerang, Little Green Light, Jotform, Donorbox, GrantStation-via-TechSoup, and peers) with widely reported quote ranges for the categories that publish no pricing (wealth screening, dedicated event software), applied to the tool choices a shop at each size typically makes. 'Typical' means the spend of a shop running the recommended stack for its tier — not the maximum a vendor could sell. Free-tool choices (Zeffy, Givebutter, Grants.gov, library access to Candid) are counted at $0 where they are the norm for that size.",
+  "methodology": "Figures are modeled, not surveyed: each cell combines vendor list prices verified in July 2026 (Instrumentl, Bloomerang, Little Green Light, Jotform, Donorbox, GrantStation via TechSoup, Grantable, and peers) with widely reported quote ranges for the categories that publish no pricing (wealth screening, dedicated event software), applied to the tool choices a shop at each size typically makes. 'Typical' means the spend of a shop running the recommended stack for its tier, not the maximum a vendor could sell. Free-tool choices (Zeffy, Givebutter, Airtable's free tier, library access to Candid) are counted at $0 where they are the norm for that size.",
   "tiers": [
-    { "slug": "under-250k", "label": "Under $250k", "revenue": "under $250k raised" },
-    { "slug": "250k-1m", "label": "$250k–$1M", "revenue": "$250k – $1M raised" },
-    { "slug": "1m-5m", "label": "$1M–$5M", "revenue": "$1M – $5M raised" },
-    { "slug": "5m-plus", "label": "$5M+", "revenue": "$5M+ raised" }
+    {
+      "slug": "under-250k",
+      "label": "Under $250k",
+      "revenue": "under $250k raised"
+    },
+    {
+      "slug": "250k-1m",
+      "label": "$250k–$1M",
+      "revenue": "$250k – $1M raised"
+    },
+    {
+      "slug": "1m-5m",
+      "label": "$1M–$5M",
+      "revenue": "$1M – $5M raised"
+    },
+    {
+      "slug": "5m-plus",
+      "label": "$5M+",
+      "revenue": "$5M+ raised"
+    }
   ],
   "categories": [
-    { "slug": "grant-research", "label": "Grant research" },
-    { "slug": "prospect-research", "label": "Prospect research / wealth screening" },
-    { "slug": "donor-crm", "label": "Donor CRM" },
-    { "slug": "donation-processing", "label": "Donation processing" },
-    { "slug": "forms-ops", "label": "Forms & operations" },
-    { "slug": "events-auctions", "label": "Events & auctions" }
+    {
+      "slug": "grant-research",
+      "label": "Grant research"
+    },
+    {
+      "slug": "prospect-research",
+      "label": "Prospect research / wealth screening"
+    },
+    {
+      "slug": "donor-crm",
+      "label": "Donor CRM"
+    },
+    {
+      "slug": "donation-processing",
+      "label": "Donation processing"
+    },
+    {
+      "slug": "forms-ops",
+      "label": "Forms & operations"
+    },
+    {
+      "slug": "events-auctions",
+      "label": "Events & auctions"
+    }
   ],
   "data": {
-    "grant-research":       { "under-250k": "$0", "250k-1m": "$200–$2,150", "1m-5m": "$2,150–$3,600", "5m-plus": "$3,600–$7,600" },
-    "prospect-research":    { "under-250k": "$0", "250k-1m": "$0", "1m-5m": "$4,000–$6,000", "5m-plus": "$5,000–$8,000" },
-    "donor-crm":            { "under-250k": "$0", "250k-1m": "$540–$950", "1m-5m": "$1,200–$1,800", "5m-plus": "$2,400–$6,000" },
-    "donation-processing":  { "under-250k": "$0", "250k-1m": "$0", "1m-5m": "$0–$1,800", "5m-plus": "$1,800+" },
-    "forms-ops":            { "under-250k": "$0", "250k-1m": "$0–$210", "1m-5m": "$210–$300", "5m-plus": "$300–$600" },
-    "events-auctions":      { "under-250k": "$0", "250k-1m": "$0", "1m-5m": "$0", "5m-plus": "$3,000–$5,000" }
+    "grant-research": {
+      "under-250k": "$0-$600",
+      "250k-1m": "$200–$2,150",
+      "1m-5m": "$2,150–$3,600",
+      "5m-plus": "$3,600–$7,600"
+    },
+    "prospect-research": {
+      "under-250k": "$0",
+      "250k-1m": "$0",
+      "1m-5m": "$4,000–$6,000",
+      "5m-plus": "$5,000–$8,000"
+    },
+    "donor-crm": {
+      "under-250k": "$0",
+      "250k-1m": "$540–$950",
+      "1m-5m": "$1,200–$1,800",
+      "5m-plus": "$2,400–$6,000"
+    },
+    "donation-processing": {
+      "under-250k": "$0",
+      "250k-1m": "$0",
+      "1m-5m": "$0–$1,800",
+      "5m-plus": "$1,800+"
+    },
+    "forms-ops": {
+      "under-250k": "$0",
+      "250k-1m": "$0–$210",
+      "1m-5m": "$210–$300",
+      "5m-plus": "$300–$600"
+    },
+    "events-auctions": {
+      "under-250k": "$0",
+      "250k-1m": "$0",
+      "1m-5m": "$0",
+      "5m-plus": "$3,000–$5,000"
+    }
   },
-  "totals": { "under-250k": "$0", "250k-1m": "$750–$3,300", "1m-5m": "$7,500–$13,500", "5m-plus": "$16,000–$28,000" }
+  "totals": {
+    "under-250k": "$0-$600",
+    "250k-1m": "$750–$3,300",
+    "1m-5m": "$7,500–$13,500",
+    "5m-plus": "$16,000–$28,000"
+  }
 }

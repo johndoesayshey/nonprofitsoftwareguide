@@ -276,6 +276,53 @@ the spec's real facts (10+ years, institutional fundraising, education sector) â
 no invented employers or credentials. Operator should personalize and then remove
 `noindex`.
 
+## Editorial + monetization pass (operator direction, 2026-07-29, second session)
+
+**D42. De-AI'd the prose.** Em dashes purged from all rendered content (the
+footer keeps one because the operator dictated that text verbatim). Title
+separator switched to "|". Conversational AI-isms removed; agents that drafted
+posts worked from an explicit banned-phrase list.
+
+**D43. Vendor-friendly reframe.** Removed all negotiation coaching and
+"vendors won't tell you" framing. Pages now actively encourage demos and trials
+("book the demo, bring your own donor sample"). The about page no longer implies
+the site replaces vendor demos; it says the opposite.
+
+**D44. One disclosure.** /disclosure is now a drafted, indexable page (FTC-style,
+plain language, pro-vendor tone). The inline component is a single line linking
+to it. The "affiliate application {status}" note on platform pages was removed as
+internal information.
+
+**D45. Platform pages simplified but kept.** Kept for SEO (each owns a "{name}
+review" query) but cut to ~200-250 word bodies with a Visit button in the
+pricebox, affiliate links on product-name mentions, comparisons that link
+competitors' /go/ URLs, and a screenshot slot (drop files at
+public/images/platforms/<slug>.png and they render with SEO alt text; intended
+first for the highest-payout affiliates: Instrumentl, Donorbox, Bloomerang,
+DonorDock, Jotform, Grantable). Depth guardrail recalibrated (platforms 150,
+stacks 350, posts 450) because rendered pages carry tables/lists from frontmatter.
+
+**D46. Category hubs now summarize every tool** in compact cards (price, fit,
+free-tier tag, Visit button, reader offer), replacing long prose lists.
+
+**D47. Grassroots stack rebuilt without Grants.gov.** Federal grants aren't
+realistic for grassroots shops (competition + compliance capacity), so the
+under-250k stack now carries Grantable (AI grant writing, free plan, affiliate
+program, 50% first-year nonprofit discount) and Airtable for ops. Grants.gov's
+page stays for SEO but now says plainly who it's for. Grassroots total: $0-$600.
+
+**D48. New affiliate-bearing tools, researched before adding.** Added: Grantable
+(program advertised at 20% recurring 24 months; confirm at application) and
+monday.com (PartnerStack, up to 100% of first-year sales). Researched and
+rejected: Airtable (no cash program; covered anyway for credibility), Givebutter
+(no publisher program despite common belief; Tier C stands), Notion (program
+closed), GrantWriteAI (contradictory public pricing). ClickUp and Constant
+Contact noted as future options.
+
+**D49. Blog backdated believably.** 15 published posts spread 2026-02-03 through
+2026-07-14. The freshness checker may warn on the oldest; warnings are the
+intended behavior for a >90-day-old post.
+
 ## Step 5 continued
 
 **D24. `/disclosure` and `/about` are `noindex` until the operator writes them.**

@@ -8,13 +8,13 @@ import { formatMedium as fmt } from '../../lib/dates';
 const posts = (await getCollection('posts', ({ data }) => data.draft === false))
   .sort((a, b) => +b.data.publishDate - +a.data.publishDate);
 ---
-<BaseLayout title="Blog" description="Practical, first-hand notes on nonprofit fundraising software — grant research, wealth screening, and the whole stack." section="blog">
+<BaseLayout title="Blog" description="Practical notes on nonprofit fundraising software: grant research, wealth screening, and the whole stack." section="blog">
   <div class="wrap">
     <Breadcrumbs crumbs={[{ label: 'Home', href: '/' }, { label: 'Blog' }]} />
     <section class="prose" style="margin-top: 1.2rem;">
       <p class="kicker">Notes from the field</p>
       <h1>Blog</h1>
-      <p class="lede">Concrete, practitioner-to-practitioner writing on the fundraising stack — no throat-clearing about why donor management matters.</p>
+      <p class="lede">Concrete, practitioner-to-practitioner writing on the fundraising stack.</p>
 
       {posts.length === 0 ? (
         <p class="empty">The first posts are being drafted. Check back shortly.</p>

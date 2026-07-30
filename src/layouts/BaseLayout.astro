@@ -14,7 +14,7 @@ interface Props {
 
 const {
   title,
-  description = 'The nonprofit fundraising stack, organized by the size of your shop — grant research, wealth screening, processing, and the CRM last.',
+  description = 'The nonprofit fundraising stack, organized by the size of your shop: grant research, wealth screening, processing, and the CRM last.',
   section,
   ogType = 'website',
   noindex = false,
@@ -22,7 +22,7 @@ const {
 
 const canonical = new URL(Astro.url.pathname, Astro.site ?? Astro.url).href;
 const siteName = 'Nonprofit Software Guide';
-const fullTitle = title === siteName ? title : `${title} — ${siteName}`;
+const fullTitle = title === siteName ? title : `${title} | ${siteName}`;
 
 // GA4 / Search Console pulled from env; left empty until the operator fills them (see .env.example / DEPLOY.md).
 const GA4_ID = import.meta.env.PUBLIC_GA4_ID ?? '';

@@ -14,11 +14,11 @@ const rows = STACK_TIERS.map((t) => ({ ...t, total: bySlug.get(t.slug)?.totalSta
     <section class="prose" style="margin-top: 1.2rem;">
       <p class="kicker">The primary guides</p>
       <h1>Fundraising stacks, by shop size</h1>
-      <p class="lede">Four recommended stacks — one per revenue tier. Each is costed line by line, with what to cut first when the budget gets trimmed and the signals that you've outgrown it.</p>
+      <p class="lede">Four recommended stacks, one per revenue tier. Each is costed line by line, with what to cut first when the budget gets trimmed and the signals that you've outgrown it.</p>
     </section>
 
     <div class="ledger">
-      <div class="ledger-head"><span>Shop size — annual revenue raised</span><span>Recommended stack</span></div>
+      <div class="ledger-head"><span>Shop size / annual revenue raised</span><span>Recommended stack</span></div>
       {rows.map((r) => (
         <a class="ledger-row" href={`/stacks/${r.slug}/`}>
           <span class="tier">{r.tier}<small>{r.revenue} raised / yr · {r.blurb}</small></span>

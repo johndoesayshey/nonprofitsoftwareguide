@@ -282,8 +282,32 @@
     "url": "https://www.airtable.com",
     "affiliateUrl": null,
     "readerOffer": null,
-    "terms": "No nonprofit-specific affiliate program used here.",
+    "terms": "No cash publisher program (verified Jul 2026); only $10-credit user referrals and a services partner program.",
     "signupUrl": null,
+    "appliedOn": null,
+    "approvedOn": null
+  },
+  "grantable": {
+    "name": "Grantable",
+    "category": "grant-research",
+    "status": "pending",
+    "url": "https://www.grantable.co",
+    "affiliateUrl": null,
+    "readerOffer": "50% off first year for nonprofits under $500k budget",
+    "terms": "Program advertised at 20% of subscription revenue recurring 24 months; affiliates page currently redirects to contact, so email hello@grantable.co to apply and confirm terms. [FACT-CHECK: confirm at signup]",
+    "signupUrl": "https://www.grantable.co/affiliates",
+    "appliedOn": null,
+    "approvedOn": null
+  },
+  "monday": {
+    "name": "monday.com",
+    "category": "forms-ops",
+    "status": "pending",
+    "url": "https://monday.com",
+    "affiliateUrl": null,
+    "readerOffer": null,
+    "terms": "Self-serve via PartnerStack; vendor page says tiered rewards up to 100% of first-year sales. Base rate and cookie window shown at signup. [FACT-CHECK: confirm at signup]",
+    "signupUrl": "https://mondaycom.partnerstack.com/?group=mbmarketplace",
     "appliedOn": null,
     "approvedOn": null
   },
