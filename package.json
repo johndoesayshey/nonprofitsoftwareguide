@@ -13,7 +13,8 @@
     "guardrails:src": "node scripts/check-factcheck.mjs && node scripts/check-clusters.mjs && node scripts/check-depth.mjs && node scripts/check-queries.mjs",
     "guardrails:dist": "node scripts/check-disclosure.mjs && node scripts/check-cluster-links.mjs",
     "check-freshness": "node scripts/check-freshness.mjs",
-    "check-links": "node scripts/check-links.mjs"
+    "check-links": "node scripts/check-links.mjs",
+    "owner": "node scripts/owner-dashboard.mjs"
   },
   "dependencies": {
     "@astrojs/mdx": "^4.2.0",
