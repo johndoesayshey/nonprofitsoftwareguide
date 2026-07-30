@@ -2,17 +2,64 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import CategoryHub from '../../components/CategoryHub.astro';
-import { CATEGORIES } from '../../lib/categories';
-const meta = CATEGORIES['grant-research'];
+import AffiliateDisclosure from '../../components/AffiliateDisclosure.astro';
 ---
-<BaseLayout title="Grant research software" description={meta.blurb} section="grant">
+<BaseLayout
+  title="Grant research software for nonprofits"
+  description="The grant research tools worth paying for — Instrumentl, GrantStation, Candid, Grants.gov — compared by price and shop size, with what each actually does."
+  section="grant-research">
   <div class="wrap">
     <Breadcrumbs crumbs={[{ label: 'Home', href: '/' }, { label: 'Grant research' }]} />
     <section class="prose" style="margin-top: 1.2rem;">
-      <p class="kicker">Category</p>
+      <p class="kicker">Category guide</p>
       <h1>Grant research software</h1>
-      <p class="lede">{meta.blurb}</p>
+      <p class="lede">
+        Grant research tools answer one question: which funders are worth your
+        limited hours? The credible options run from free (Grants.gov) to about
+        $200 a year (GrantStation via TechSoup) to $2,000+ a year (Instrumentl) —
+        and the right answer depends almost entirely on how many grants your shop
+        pursues.
+      </p>
+
+      <h2>How to choose</h2>
+      <p>
+        Start with volume. If you submit a handful of applications a year to
+        funders you already know, a paid database mostly confirms what you know —
+        Grants.gov plus free library access to Candid covers you. Once
+        prospecting becomes a recurring job — you're hunting new funders every
+        month, tracking a dozen deadlines, managing renewals — a paid tool starts
+        paying for itself in hours.
+      </p>
+      <p>
+        The practical ladder most shops climb: <strong>Grants.gov</strong> (free,
+        federal only) → <strong>GrantStation</strong> (~$199/yr through TechSoup —
+        a broad database you filter yourself) → <strong>Instrumentl</strong>
+        (from $179/mo — active matching, deadline tracking, and 990 data in one
+        place, priced like the productivity tool it is). <strong>Candid's
+        Foundation Directory</strong> sits alongside as the research standard for
+        deep 990 diligence, and many public libraries offer it free.
+      </p>
+
+      <h2>The one mistake to avoid</h2>
+      <p>
+        Don't buy the expensive tool to fix a pipeline problem. A database finds
+        funders; it doesn't write the proposals or build the funder
+        relationships. If your last five applications died from lack of writing
+        time, more prospects will not help. Buy research software when
+        <em>finding</em> funders is the bottleneck — it's the best money you'll
+        spend — and not before.
+      </p>
     </section>
+
     <CategoryHub category="grant-research" />
+
+    <div class="prose">
+      <p>
+        See where grant research fits in <a href="/stacks/250k-1m/">the $250k–$1M
+        stack</a> (first paid tool) and <a href="/stacks/1m-5m/">the $1M–$5M
+        stack</a> (team-scale).
+      </p>
+      <AffiliateDisclosure />
+    </div>
   </div>
 </BaseLayout>

@@ -2,17 +2,62 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import CategoryHub from '../../components/CategoryHub.astro';
-import { CATEGORIES } from '../../lib/categories';
-const meta = CATEGORIES['prospect-research'];
+import AffiliateDisclosure from '../../components/AffiliateDisclosure.astro';
 ---
-<BaseLayout title="Wealth screening & prospect research software" description={meta.blurb} section="wealth">
+<BaseLayout
+  title="Wealth screening & prospect research software for nonprofits"
+  description="DonorSearch, Kindsight (iWave), and WealthEngine compared — what wealth screening costs, what it actually tells you, and the shop size where it starts paying off."
+  section="prospect-research">
   <div class="wrap">
-    <Breadcrumbs crumbs={[{ label: 'Home', href: '/' }, { label: 'Wealth screening' }]} />
+    <Breadcrumbs crumbs={[{ label: 'Home', href: '/' }, { label: 'Wealth prospecting' }]} />
     <section class="prose" style="margin-top: 1.2rem;">
-      <p class="kicker">Category</p>
+      <p class="kicker">Category guide</p>
       <h1>Wealth screening &amp; prospect research</h1>
-      <p class="lede">{meta.blurb}</p>
+      <p class="lede">
+        Wealth screening scores your donors on capacity — assets, real estate,
+        stock, past giving — so gift officers spend cultivation time on the right
+        people. It's the most expensive category in the stack (real contracts
+        start around $4,000–$5,000 a year) and the easiest to buy too early.
+      </p>
+
+      <h2>The honest economics</h2>
+      <p>
+        None of the major vendors publish prices; every deal is quoted. Based on
+        widely reported figures, entry contracts run roughly
+        <strong>$4,150/yr for Kindsight (formerly iWave)</strong>, around
+        <strong>$4,000–$6,000/yr for DonorSearch</strong>, and about
+        <strong>$5,000/yr for WealthEngine</strong> — all scaling with seats and
+        screening volume. Treat those as negotiating anchors, not list prices,
+        and get every number in writing.
+      </p>
+
+      <h2>When it pays off</h2>
+      <p>
+        The rule that holds across hundreds of shops: screening earns its cost
+        when there's a major-gifts function to act on it — typically around $1M
+        raised, but the trigger is a person with a portfolio, not a revenue line.
+        A screen that lands in a drawer is the most expensive PDF in fundraising.
+        Below the threshold, hand-research your top 25 prospects instead; when
+        that stops keeping up, that's your buy signal.
+      </p>
+      <p>
+        And remember what the data is: capacity is not intent. A high score means
+        someone <em>could</em> give — the cultivation still has to discover
+        whether they <em>will</em>. Platforms that weight demonstrated
+        philanthropy (DonorSearch's specialty) get you closer to intent than raw
+        wealth markers do.
+      </p>
     </section>
+
     <CategoryHub category="prospect-research" />
+
+    <div class="prose">
+      <p>
+        Screening enters the recommended stack at
+        <a href="/stacks/1m-5m/">$1M–$5M</a> and becomes continuous at
+        <a href="/stacks/5m-plus/">$5M+</a>.
+      </p>
+      <AffiliateDisclosure />
+    </div>
   </div>
 </BaseLayout>

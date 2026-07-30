@@ -1,0 +1,59 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import CategoryHub from '../../components/CategoryHub.astro';
+import AffiliateDisclosure from '../../components/AffiliateDisclosure.astro';
+---
+<BaseLayout
+  title="Event & auction software for nonprofits"
+  description="Givebutter vs OneCause and the real cost of gala and auction software — when free event tools are enough and when dedicated auction software earns its fee."
+  section="events-auctions">
+  <div class="wrap">
+    <Breadcrumbs crumbs={[{ label: 'Home', href: '/' }, { label: 'Events & auctions' }]} />
+    <section class="prose" style="margin-top: 1.2rem;">
+      <p class="kicker">Category guide</p>
+      <h1>Event &amp; auction software</h1>
+      <p class="lede">
+        Event software is the most seasonal line in the stack — you need it
+        intensely for a few weeks a year. That's why the honest default is a free
+        platform (Givebutter covers ticketing, auctions, and peer-to-peer at no
+        platform cost with donor tips), with dedicated auction software
+        (OneCause, from roughly $2,995/yr plus fees) reserved for shops whose
+        gala is a six-figure production.
+      </p>
+
+      <h2>How to choose</h2>
+      <p>
+        Size the tool to the event, not the organization. A $20k community
+        gala with a silent auction runs fine on Givebutter — mobile bidding,
+        ticketing, and payments included, at zero platform fee. A $250k signature
+        event with live auction, sponsorships, seating charts, and volunteer
+        check-in crews is where OneCause-class software earns its package price:
+        the fee is insurance against a chaotic night on your biggest revenue day.
+      </p>
+      <p>
+        The math to run: dedicated auction platforms typically cost a base
+        package plus ~5% of funds raised plus card processing. Against a $50k
+        event, that's real money — against a $500k event, it's rounding. Decide
+        at your event's size, not the vendor's demo.
+      </p>
+
+      <h2>The one mistake to avoid</h2>
+      <p>
+        Don't let the event tool become a shadow database. Export attendees,
+        bidders, and donors into your CRM the week after the event — the
+        follow-up gifts live there, not in last year's event platform.
+      </p>
+    </section>
+
+    <CategoryHub category="events-auctions" />
+
+    <div class="prose">
+      <p>
+        Events software stays free until <a href="/stacks/5m-plus/">the $5M+
+        stack</a>, where a dedicated platform starts to justify itself.
+      </p>
+      <AffiliateDisclosure />
+    </div>
+  </div>
+</BaseLayout>

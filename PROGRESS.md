@@ -26,23 +26,31 @@ and publish. Remaining owner tasks: fill `[FACT-CHECK]` prices, write
 `[OPERATOR INPUT]` slots + the `/about` bio + `/disclosure` text, then flip pages to
 `draft: false`.
 
-## Link-magnet assets (spec SEO requirement, beyond steps 1–12)
+## Post-work-order build-out (operator direction, July 29 2026)
 
-| Asset | State |
+| Change | State |
 |---|---|
-| Stack cost calculator (`/tools/calculator/`) | ✅ built, live, indexable |
-| Annual benchmark table (`/benchmarks/`) | ✅ scaffold built; noindex until data filled |
+| Design C ("Annual Report") locked in — full reskin | ✅ |
+| Nav: Stacks + all 6 categories + Compare + Benchmark + Blog | ✅ |
+| Footer trimmed to operator's exact wording (About · Disclosure · RSS) | ✅ |
+| Cost calculator removed (operator call) | ✅ |
+| Six category hub pages with editorial content | ✅ |
+| Real, sourced prices in all platform files (verified 2026-07-29) | ✅ |
+| 16 platform pages **published** (was 14 drafts) — incl. new Jotform, OneCause | ✅ |
+| 4 stack pages **published** with computed totals ($0 / ~$2.7k / $11–14k / $18–28k) | ✅ |
+| 3 blog posts **published** (grant + prospect research) | ✅ |
+| Benchmark **published** with modeled data + methodology (`ready: true`) | ✅ |
+| About page drafted (still noindex until operator personalizes) | ✅ |
 
-- **Calculator** is fully working: interactive tool selection, shop-size presets
-  from the stack files, editable per-tool prices (free tools pre-filled at $0),
-  live total. ~23KB total page — well under the JS budget.
-- **Benchmark** is a ready-to-fill grid (6 categories × 4 shop sizes) with
-  methodology, cite-this block, and `Dataset` JSON-LD. It is the site's strongest
-  link magnet but needs the operator's real figures — edit
-  `src/data/benchmarks.json`, fill the cells + methodology, set `"ready": true`.
-  Until then it is noindex and kept out of the sitemap.
-- Both are linked from the homepage and footer; calculator prices seed from
-  `src/data/pricing.json` (fill paid tools' annual figures there).
+Content approach: prices from web research with sources (quote-based categories
+carry "reported" hedging); practitioner voice drawn from Reddit/forum sentiment
+research (themes paraphrased, nothing fabricated as first-hand testimony).
+Site builds to 80 pages, 53 in sitemap, all guardrails green on published content.
+
+**Remaining operator tasks:** personalize `/about` (then remove its noindex),
+write `/disclosure` legal text (then remove its noindex), apply to the Tier A
+affiliate programs and fill `affiliateUrl` + `status: "active"` in
+`src/data/affiliates.json`, deploy per DEPLOY.md.
 
 ## Environment notes
 

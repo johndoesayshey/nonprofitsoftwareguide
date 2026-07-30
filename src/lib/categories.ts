@@ -14,7 +14,7 @@ export const CATEGORIES: Record<string, CategoryMeta> = {
   'grant-research': {
     slug: 'grant-research',
     label: 'Grant research',
-    short: 'Grants',
+    short: 'Grant Research',
     blurb:
       'Finding the funders worth your time — databases, deadline tracking, and 990 research. The best return on a fundraising software dollar for most shops.',
     path: '/grant-research/',
@@ -22,7 +22,7 @@ export const CATEGORIES: Record<string, CategoryMeta> = {
   'prospect-research': {
     slug: 'prospect-research',
     label: 'Prospect research & wealth screening',
-    short: 'Wealth screening',
+    short: 'Wealth Prospecting',
     blurb:
       'Telling capacity from inclination — wealth indicators, giving history, and screening at scale. Highest-cost category; skip it below roughly $1M raised.',
     path: '/wealth-screening/',
@@ -30,26 +30,30 @@ export const CATEGORIES: Record<string, CategoryMeta> = {
   'donor-crm': {
     slug: 'donor-crm',
     label: 'Donor CRM',
-    short: 'CRM',
+    short: 'Donor CRM',
     blurb: 'The database of record for donors, gifts, and relationships. The last decision, not the first.',
+    path: '/donor-crm/',
   },
   'donation-processing': {
     slug: 'donation-processing',
     label: 'Donation processing',
-    short: 'Processing',
+    short: 'Donation Processing',
     blurb: 'Taking the money — online donation forms, recurring gifts, and payment fees. Where the free options genuinely compete.',
+    path: '/donation-processing/',
   },
   'forms-ops': {
     slug: 'forms-ops',
-    label: 'Forms & operations',
-    short: 'Forms',
+    label: 'Forms & other operations',
+    short: 'Forms/Other Ops',
     blurb: 'The glue — intake forms, event registrations, and lightweight databases.',
+    path: '/forms-operations/',
   },
   'events-auctions': {
     slug: 'events-auctions',
     label: 'Events & auctions',
     short: 'Events',
     blurb: 'Galas, auctions, and peer-to-peer — software you rent for a season, not a year.',
+    path: '/events/',
   },
 };
 

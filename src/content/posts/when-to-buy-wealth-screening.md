@@ -6,10 +6,12 @@ stack: 1m-5m
 targetQuery: "when to buy wealth screening"
 platformsMentioned: [donorsearch, kindsight, wealthengine]
 affiliateSlugs: [donorsearch]
-draft: true
+draft: false
 faq:
   - q: "What revenue level justifies wealth screening?"
     a: "Roughly $1M raised is the common threshold, but revenue is a proxy. The real trigger is having a major-gifts function — a gift officer with a portfolio — to act on the results. Below that, a screen is data with nowhere to go."
+  - q: "What does wealth screening cost?"
+    a: "No vendor publishes pricing; every deal is quoted. Widely reported entry figures run about $4,000–$6,000 per year for the major platforms, scaling with seats and screening volume."
   - q: "Can I screen my list without paying for a platform?"
     a: "Partly. You can hand-research your top prospects using public giving records and property data. It doesn't scale, but for a shop that isn't ready to buy, researching your top 25 by hand beats buying a platform nobody has time to use."
 ---
@@ -18,25 +20,30 @@ Buy wealth screening when you have a major-gifts program to point it at — typi
 
 ## What screening actually does
 
-A wealth screen scores your donors and prospects on capacity (assets, real estate, stock, business ownership) and, on better platforms, on philanthropic history — what they've actually given elsewhere. Platforms like [DonorSearch](/go/donorsearch) weight demonstrated giving; others like [Kindsight](/platforms/kindsight/) and [WealthEngine](/platforms/wealthengine/) lean harder on wealth indicators. All of them turn "we have 4,000 donors" into "here are the 40 worth a gift officer's time."
+A wealth screen scores your donors and prospects on capacity — assets, real estate, stock, business ownership — and, on the better platforms, on philanthropic history: what they've actually given, to you and everyone else. [DonorSearch](/go/donorsearch) built its reputation on weighting demonstrated giving; [Kindsight](/platforms/kindsight/) (which most fundraisers still call iWave) and [WealthEngine](/platforms/wealthengine/) lean harder on wealth indicators. All of them turn "we have 4,000 donors" into "here are the 40 worth a gift officer's time."
 
-That triage is the entire value. And triage only helps if someone is going to act on it.
-
-> [OPERATOR INPUT — 3-4 sentences: your first-hand read on the revenue or staffing level where screening started paying off in shops you've worked in. Name what changed — a new major-gifts hire, a campaign, a board push — that turned screening from a nice report into a tool that actually moved money.]
+That triage is the entire value. And triage only helps if someone acts on it.
 
 ## The two conditions
 
 Screening is worth buying when both are true:
 
-1. **You have someone to work the results.** A gift officer, an ED with real cultivation time, or a board member who takes assignments. Without a person, the screen is a PDF nobody opens.
-2. **You have a reason to prioritize.** A campaign, a year-end major-gift push, or simply more prospects than you can cultivate. If you can already give every worthwhile prospect real attention, screening tells you nothing you can act on.
+1. **Someone will work the results.** A gift officer, an ED with protected cultivation time, or a board member who takes assignments. The recurring failure mode — the one experienced researchers warn about in every forum where this comes up — is the screen that lands in a drawer. If no named person will turn scores into a visit list within a month, you're buying the most expensive PDF in fundraising.
 
-Miss either condition and you're buying data you can't use. That's the "waste" case, and it's more common than vendors admit.
+2. **You have a reason to prioritize.** A campaign, a major-gift push, or simply more plausible prospects than you can cultivate. If you can already give every worthwhile prospect real attention, a screen tells you nothing actionable.
 
-> [OPERATOR INPUT — 2-3 sentences: a time you saw a shop buy screening too early, or skip it too long. What did it cost them, and what would you tell a peer weighing the purchase right now?]
+Miss either condition and it's the waste case — which is more common than any vendor will tell you, because vendors are structurally unable to say "don't buy this yet."
 
-## What to do before you can afford it
+## Capacity is not inclination
 
-If you're below the threshold, don't buy — research. Take your top 25 prospects and look them up by hand: public giving to other organizations, property records, board memberships. It's slow and it doesn't scale, which is exactly why you'll want a platform once you have more than 25 prospects worth the effort. That moment — when hand-research stops keeping up — is your real buy signal.
+The other thing veterans repeat: a wealth score tells you someone *could* give, never that they *will*. A luxury-asset profile with no giving history is a "could give, probably won't" record. That's why practitioners who've been burned weight demonstrated philanthropy — actual gifts to peer organizations — over boats and square footage, and why the screen is the beginning of cultivation, not a shortcut past it. The score picks who gets a visit; the visit discovers whether there's a gift.
 
-Screening enters the stack at [the $1M–$5M tier](/stacks/1m-5m/), where major-gift work becomes a real part of the operation.
+## What it costs, honestly
+
+No public pricing exists anywhere in the category. Reported entry contracts run roughly $4,000–$6,000 a year — Kindsight around $4,150, DonorSearch in the same band, WealthEngine from about $5,000 — scaling with seats and screening volume. Treat every figure as a negotiating anchor, make competing vendors quote identical scopes, and get it in writing.
+
+## Before you can afford it
+
+If you're below the threshold, don't buy — research. Take your top 25 prospects and look them up by hand: public giving to other organizations, property records, board memberships, foundation 990s. It's slow, which is the point: the month hand-research stops keeping up with your prospect flow is the month you have a real business case for the subscription.
+
+Screening enters the recommended stack at [the $1M–$5M tier](/stacks/1m-5m/), where major-gift work becomes a real part of the operation.

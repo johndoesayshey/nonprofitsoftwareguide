@@ -2,32 +2,44 @@
 name: WealthEngine
 slug: wealthengine
 category: prospect-research
-entryPrice: "[FACT-CHECK: quote-based; verify current pricing with WealthEngine — no public price]"
-pricingModel: "Annual contract, quote-based [FACT-CHECK: confirm terms]"
-lastVerified: 2026-07-28
-bestFor: "Wealth-indicator modeling and quick capacity estimates on large lists"
+entryPrice: "Quote-based (reported from ~$5,000/yr)"
+pricingModel: "Annual contract by seats, plus implementation; no public pricing"
+lastVerified: 2026-07-29
+bestFor: "Wealth-indicator modeling and fast capacity estimates across large lists"
 targetQuery: "wealthengine review"
 affiliateSlug: wealthengine
 freeTier: false
-draft: true
+draft: false
 strengths:
   - "Strong wealth-indicator modeling and fast capacity estimates"
   - "Handles large-list screening for broad segmentation"
-  - "Prebuilt profiles speed up individual prospect look-ups"
+  - "Prebuilt profiles speed up individual look-ups"
 limitations:
-  - "Quote-based annual contract"
-  - "Weighted toward wealth signals; pair it with giving-history data for the full picture"
-  - "No affiliate program — coverage here is for completeness, not commission"
+  - "Quote-based; reported figures start around $5,000/yr plus implementation"
+  - "Weighted toward wealth signals — pair with giving-history data before acting"
+  - "Trails iWave/Kindsight and DonorSearch in review-site satisfaction"
 ---
 
-WealthEngine is wealth-screening software focused on wealth-indicator modeling and fast capacity scores across large lists. It is worth it for shops that need to segment a big audience by estimated capacity quickly. Its emphasis on wealth signals means you'll want giving-history data alongside it before you decide who to actually cultivate.
+WealthEngine is wealth-screening software focused on wealth-indicator modeling: fast capacity estimates across large lists, built from assets, real estate, and market data. Pricing is quote-based; third-party-reported figures start around $5,000/year for a single seat, with implementation fees on top. It suits shops that need to triage a big file by estimated capacity — and it needs giving-history data next to it before anyone books a visit.
 
 ## Who it fits
 
-Shops with large lists to triage — a broad donor file you need to sort into "worth a gift officer's time" and "keep in the newsletter." WealthEngine's modeling is built for that first-pass capacity cut.
+Organizations with large donor files and a segmentation problem: tens of thousands of records that need sorting into "worth a gift officer's time" and "keep in the newsletter." That first-pass capacity cut is WealthEngine's job, and scale is its argument.
 
-> [OPERATOR INPUT — 2-3 sentences: how much you trust wealth-indicator modeling versus proven giving history, and where you've seen capacity scores mislead. A concrete example makes this page.]
+## What it costs
+
+| Item (reported) | Approx. price |
+|---|---|
+| Single-seat subscription | ~$5,000/yr |
+| ~10 seats | ~$15,000/yr |
+| Implementation | ~$2,000–$20,000 one-time |
+
+All third-party estimates — no public pricing exists. Negotiate, and make competing vendors quote identical scopes.
+
+## The honest caveat
+
+Practitioner satisfaction data consistently places WealthEngine behind [Kindsight](/platforms/kindsight/) and [DonorSearch](/platforms/donorsearch/), and the recurring critique maps to its design: wealth markers alone over-promise. A luxury-asset profile with no philanthropic history is a "could give, probably won't" record — researchers who've been burned weight actual giving behavior first. If you shortlist WealthEngine, shortlist it for scale and speed, and plan to cross-check inclination elsewhere.
 
 ## What to watch
 
-Capacity modeling is an estimate, not a fact, and it skews toward wealth rather than intent — read it next to real philanthropic history. Pricing is quote-based and annual. We cover WealthEngine for a complete category picture even though it has no affiliate program.
+We cover WealthEngine for a complete category picture — it has no affiliate program, and it earns its place in a comparison regardless. Budget for implementation, not just the subscription, and pressure-test the modeling against a sample of donors you already know well: the fastest way to evaluate any screener is watching it score people whose real capacity you can verify.

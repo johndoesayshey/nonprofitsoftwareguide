@@ -236,6 +236,46 @@ the sitemap until the operator fills `src/data/benchmarks.json` and sets
 `"ready": true`. Publishing an empty benchmark would be a thin page; this way the
 structure is done and only the data is owed.
 
+## Build-out session (operator direction, 2026-07-29)
+
+**D36. Design C locked in; calculator removed.** Operator picked the annual-report
+direction and judged the calculator not useful. Reskinned via `global.css` tokens
+(white/ink/teal, sans-serif editorial, stat-band signature element); deleted
+`/tools/calculator/` and its `pricing.json`; benchmark promoted to top nav.
+
+**D37. Published prices carry sourced hedging, not invented certainty.** All
+prices came from a web-research pass (vendor pricing pages first, aggregators for
+quote-based categories). Public list prices are stated plainly ("From $179/mo");
+quote-based categories (wealth screening, events, Classy-style enterprise) are
+labeled "reported" / "quoted" with ranges, which is accurate — those vendors have
+no list price. `lastVerified: 2026-07-29` throughout.
+
+**D38. Practitioner voice without fabricated testimony.** Content draws on a
+research pass over Reddit/forum sentiment (migration pain, contact-count pricing
+complaints, Neon support arc, Zeffy tip-model debate, capacity-vs-inclination
+skepticism, NPSP "free like a puppy"). Themes are woven in as "practitioners
+report / the recurring critique is" — never as the operator's invented first-hand
+war stories, which would violate affiliate ToS and the spec's no-fabrication rule.
+The operator-input slots are gone; pages read complete.
+
+**D39. Benchmark published as *modeled* data.** Cells derive from verified list
+prices + reported quote ranges applied to each tier's recommended stack; the
+methodology paragraph says exactly that. This is defensible original data (a
+model, honestly labeled) rather than a fake survey. Totals reconcile with the
+four stack pages.
+
+**D40. Affiliate-revenue weighting in copy.** Tier-A programs with real payouts
+(Instrumentl, DonorDock, Donorbox, Bloomerang, Jotform, GrantStation) get the
+strongest calls-to-action and reader-offer mentions; free/no-program tools are
+still recommended where they genuinely win (Zeffy, LGL) because that credibility
+is what converts the paid recommendations. Jotform's 50% nonprofit discount added
+as a `readerOffer`.
+
+**D41. `/about` drafted but still noindex.** Written in the operator's voice from
+the spec's real facts (10+ years, institutional fundraising, education sector) —
+no invented employers or credentials. Operator should personalize and then remove
+`noindex`.
+
 ## Step 5 continued
 
 **D24. `/disclosure` and `/about` are `noindex` until the operator writes them.**

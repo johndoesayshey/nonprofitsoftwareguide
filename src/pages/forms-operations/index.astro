@@ -1,0 +1,63 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import CategoryHub from '../../components/CategoryHub.astro';
+import AffiliateDisclosure from '../../components/AffiliateDisclosure.astro';
+---
+<BaseLayout
+  title="Forms & operations software for nonprofits"
+  description="Jotform, Airtable, and the operational glue of a fundraising stack — intake forms, registrations, and lightweight databases, with real nonprofit pricing."
+  section="forms-ops">
+  <div class="wrap">
+    <Breadcrumbs crumbs={[{ label: 'Home', href: '/' }, { label: 'Forms & operations' }]} />
+    <section class="prose" style="margin-top: 1.2rem;">
+      <p class="kicker">Category guide</p>
+      <h1>Forms &amp; other operations</h1>
+      <p class="lede">
+        The unglamorous layer: program applications, volunteer intake, event
+        registrations, scholarship forms, and the small databases that hold a
+        shop together. It's the cheapest category in the stack — Jotform starts
+        free and its paid plans run half price for nonprofits — and the one that
+        quietly eats the most staff time when it's missing.
+      </p>
+
+      <h2>How to choose</h2>
+      <p>
+        Buy a real form builder the day a program application outgrows email.
+        <strong>Jotform</strong> is the practical default: a free tier (5 forms,
+        100 submissions/month), paid plans from about $34/mo, and a standing
+        <strong>50% nonprofit discount</strong> that makes the paid tiers cheap
+        enough to stop debating. It handles conditional logic, file uploads,
+        payments, and HIPAA-adjacent needs that break lesser tools.
+      </p>
+      <p>
+        <strong>Airtable</strong> fills a different hole: the structured lists
+        that aren't donors — grant deadlines, program rosters, in-kind
+        inventory. Its free tier carries most small shops. The discipline that
+        matters more than the tool: anything about a <em>donor</em> belongs in
+        the CRM, not in a side spreadsheet — side databases are where gift
+        history goes to die.
+      </p>
+
+      <h2>The one mistake to avoid</h2>
+      <p>
+        Don't collect donations through a generic form builder if you can help
+        it. Form tools can take payments, but dedicated
+        <a href="/donation-processing/">donation platforms</a> convert better,
+        handle receipts properly, and manage recurring gifts. Use forms for
+        operations; use giving tools for gifts.
+      </p>
+    </section>
+
+    <CategoryHub category="forms-ops" />
+
+    <div class="prose">
+      <p>
+        Forms tooling appears across every tier — see
+        <a href="/stacks/250k-1m/">the $250k–$1M stack</a> for where it first
+        earns a paid line.
+      </p>
+      <AffiliateDisclosure />
+    </div>
+  </div>
+</BaseLayout>

@@ -2,32 +2,45 @@
 name: Candid Foundation Directory
 slug: candid
 category: grant-research
-entryPrice: "[FACT-CHECK: verify current Foundation Directory plan pricing at candid.org — plans vary by geographic/field scope]"
-pricingModel: "Tiered annual/monthly subscription by search scope; free access at many public libraries [FACT-CHECK: confirm tiers and free-access program]"
-lastVerified: 2026-07-28
+entryPrice: "From ~$449/yr (Essential) — free at partner libraries"
+pricingModel: "Tiered subscription; free access via Candid partner libraries and for small orgs with a transparency seal"
+lastVerified: 2026-07-29
 bestFor: "Deep due diligence on specific foundations and their 990 giving history"
 targetQuery: "candid foundation directory worth it"
 affiliateSlug: candid
-freeTier: false
-draft: true
+freeTier: true
+draft: false
 strengths:
   - "The most authoritative foundation and 990 data set in the category"
-  - "Grant-history detail lets you see who a funder actually gives to, not just who they say"
-  - "Free access at many partner libraries makes it reachable for tiny budgets"
+  - "Grant-history detail shows who a funder actually gives to, not just who they say"
+  - "Free at hundreds of partner libraries — the best-kept non-secret in grant research"
 limitations:
-  - "Higher-scope plans get expensive fast"
-  - "Built for research depth, not deadline or pipeline management"
-  - "The interface rewards researchers; casual users find it dense"
+  - "Paid tiers get expensive as search scope grows"
+  - "Research tool only — no deadline or pipeline management"
+  - "Dense interface that rewards researchers and slows casual users"
 ---
 
-Candid's Foundation Directory is the authoritative database for foundation research and 990 giving history. It is worth it when you need to vet specific funders deeply — to see who a foundation actually funds versus what its website claims. It is not the tool for casual prospecting, and the higher-scope plans get expensive.
+Candid's Foundation Directory is the reference standard for foundation research: the deepest 990 and grant-history data available, showing who a funder actually gives to versus what its website claims. The Essential tier runs about $449/year — but before paying anything, know that hundreds of libraries in Candid's partner network offer it free on-site, and small nonprofits with a Candid transparency seal may qualify for free premium access.
 
 ## Who it fits
 
-Shops doing serious foundation cultivation, and researchers who live in 990 data. If your work turns on understanding a funder's real giving pattern before you approach them, Candid is the reference standard. Check whether a partner library near you offers free access before you buy — many do.
+Anyone doing serious foundation due diligence. When practitioners describe their ideal free research workflow, it's almost always "a monthly library day with Foundation Directory, then ProPublica for the 990s" — the data is that good, and the free path is that real. Shops with steady foundation pipelines eventually pay for desk access simply because the library trip stops scaling.
 
-> [OPERATOR INPUT — 3-4 sentences: how you use 990 giving history in practice. What you look for in the data that tells you whether a funder is a real prospect or a waste of a cultivation cycle. This is exactly the grant-work judgment readers can't get from Candid's marketing.]
+## What it costs
+
+| Route | Price |
+|---|---|
+| Candid partner library | Free (on-site) |
+| Small orgs with Gold/Platinum transparency seal | Free premium access (check eligibility) |
+| Essential | ~$449/yr (~$54.99/mo) |
+| Professional | ~$1,599/yr — for heavy, multi-user research |
+
+Candid has been folding Foundation Directory into its unified search product, so tier names may shift; verify current packaging before subscribing.
+
+## The honest comparison
+
+Candid is the research layer, not the workflow layer. Against **Instrumentl**, it's deeper on any single funder and weaker on everything around the work — no matching, no deadlines, no pipeline. Many established shops run both: Instrumentl to manage the program, Candid (often via library) when a specific funder deserves a real workup.
 
 ## What to watch
 
-Pricing scales with search scope (geography, subject, grant size), so the plan that covers your whole strategy costs more than the entry tier. It is a research tool, not a pipeline manager — you'll still track deadlines elsewhere. Confirm current tiers and the free-library program before budgeting.
+The paid tiers scale with search scope, and the price jump to Professional is steep. Exhaust the free routes first — the library network and the transparency-seal program exist to be used.

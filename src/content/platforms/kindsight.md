@@ -1,33 +1,45 @@
 ---
-name: Kindsight
+name: Kindsight (iWave)
 slug: kindsight
 category: prospect-research
-entryPrice: "[FACT-CHECK: quote-based; verify current pricing with Kindsight sales — no public price]"
-pricingModel: "Annual contract, quote-based (formerly iWave) [FACT-CHECK: confirm contract terms]"
-lastVerified: 2026-07-28
-bestFor: "Shops that need repeatable wealth screening and prospect scoring at scale"
+entryPrice: "Reported from ~$4,150/yr (quote-based)"
+pricingModel: "Annual contract by seats and screening volume; no public pricing"
+lastVerified: 2026-07-29
+bestFor: "Shops that want repeatable wealth screening and prospect scoring at scale"
 targetQuery: "kindsight iwave review"
 affiliateSlug: kindsight
 freeTier: false
-draft: true
+draft: false
 strengths:
   - "Deep wealth and philanthropic data with transparent, sourced scores"
-  - "Screens a whole list at once — useful before an appeal or a campaign"
-  - "Established platform (formerly iWave) with a long data track record"
+  - "Screens whole lists at once — the pre-campaign and pre-appeal workhorse"
+  - "Long data track record under the iWave name; the strongest satisfaction scores in the category on review sites"
 limitations:
-  - "Quote-based annual contract; a real budget commitment, not a monthly tool"
+  - "Quote-based annual contract — reported entry around $4,150/yr for one seat"
   - "Capacity data tells you who can give, never whether they will"
-  - "Below roughly $1M raised, most shops can't justify the cost"
+  - "Below roughly $1M raised, most shops can't put the results to work"
 ---
 
-Kindsight (formerly iWave) is wealth-screening and prospect-research software: it scores donors and prospects on capacity and philanthropic history, and screens whole lists at once. It is worth it for shops running major-gift or campaign work where knowing capacity changes who you cultivate. Below about $1M raised, it is usually more tool than the program needs.
+Kindsight — still "iWave" to most fundraisers — is wealth-screening software that scores donors on capacity and philanthropic history, one prospect at a time or a whole file at once. There's no public pricing; widely reported figures put the entry tier around $4,150/year for one user and ~1,500 screens, rising with seats and volume. It's worth that when a major-gifts officer will actually work the results, and not before.
 
 ## Who it fits
 
-Established development shops with a major-gifts function. If you are segmenting a list for a campaign or deciding where to spend limited cultivation time, screening pays for itself. If you have no major-gifts motion yet, the data has nowhere to go.
+Established shops with a real major-gifts function: a campaign to segment for, portfolios to build, limited cultivation hours to allocate. Review-site data consistently ranks iWave/Kindsight at the top of the category for satisfaction, and practitioners tend to credit the transparency of its scoring — you can see *why* a prospect scored high, which matters when you're defending a portfolio decision.
 
-> [OPERATOR INPUT — 3-4 sentences: how you actually act on a wealth screen. What you do with a high-capacity, low-affinity result versus a modest-capacity, high-affinity one — the judgment that separates useful screening from an expensive list.]
+## What it costs
+
+| Tier (reported) | Approx. annual | Included |
+|---|---|---|
+| Starter | ~$4,150 | 1 user, ~1,500 screens |
+| Professional | ~$5,350 | 3 users, ~5,000 screens |
+| Premium | Quote only | Custom |
+
+These are aggregator-reported figures, not vendor list prices — treat them as negotiating anchors and get your quote in writing.
+
+## The honest caveat
+
+The skepticism experienced researchers voice about every screening tool applies here: capacity is not inclination. A high score means someone could give; whether they will is what cultivation discovers. The screens that pay for themselves are the ones a gift officer turns into a visit list within the month. The ones that don't are expensive PDFs.
 
 ## What to watch
 
-Pricing is quote-based and annual — get the number in writing before you plan around it. Remember what the data is and isn't: capacity is not intent. A screen tells you who *could* give; your cultivation still has to find out who *will*.
+Contracts are annual and quoted, so negotiate — seats and screen volume are both levers. And decide who owns the output before you buy: a named person who builds portfolios from the results is the difference between a tool and a subscription.

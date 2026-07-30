@@ -9,9 +9,8 @@ each with a pitch angle built on the operator's actual leverage:
   bloggers don't have. CASE, education-sector outlets, and school-foundation
   associations are unusually reachable.
 - **Hands-on use** of several platforms — first-hand, not affiliate-farmed.
-- **Original data** — the stack cost calculator and the annual benchmark table are
-  citation bait; lead pitches to data-driven outlets with those, not with product
-  roundups.
+- **Original data** — the annual benchmark table is citation bait; lead pitches
+  to data-driven outlets with it, not with product roundups.
 
 > **Verify before pitching.** Submission guidelines, editors, and whether a site
 > currently accepts contributors change often. Treat the contact/URL notes below
@@ -33,12 +32,12 @@ each with a pitch angle built on the operator's actual leverage:
 
 | # | Target | Type | Pitch angle |
 |---|---|---|---|
-| 8 | Grant Professionals Association (GPA) — chapter resources | Assoc. resource pages | Offer the stack cost calculator as a member resource; pitch a chapter webinar on research tools. |
+| 8 | Grant Professionals Association (GPA) — chapter resources | Assoc. resource pages | Offer the spending benchmark as a member resource; pitch a chapter webinar on research tools. |
 | 9 | Learn Grant Writing (Meredith Noble community) | Grant-writing community | Contributor tutorial: free vs paid grant research, and when to switch. |
 | 10 | The Grant Writing & Funding podcast (Holly Rustick) | Podcast | Guest episode: choosing grant-research tools by shop size — practitioner POV. |
 | 11 | Nonprofit Ally | Grant/fundraising blog | How-to on grant pipeline metrics that predict revenue. |
 | 12 | GrantWatch blog | Grant site | Comparison-style contributed piece on grant-research options for small nonprofits. |
-| 13 | Federal/foundation grant-writing consultant blogs (roundup outreach) | Consultant blogs | Offer the benchmark data + calculator as a linkable resource for their readers. |
+| 13 | Federal/foundation grant-writing consultant blogs (roundup outreach) | Consultant blogs | Offer the benchmark data as a linkable resource for their readers. |
 
 ## Tier 3 — nonprofit sector publications & blogs
 
@@ -55,7 +54,7 @@ each with a pitch angle built on the operator's actual leverage:
 
 | # | Target | Type | Pitch angle |
 |---|---|---|---|
-| 20 | National Council of Nonprofits — state association network | Assoc. resource hub | Get the calculator/benchmark listed on member-resource pages across state associations. |
+| 20 | National Council of Nonprofits — state association network | Assoc. resource hub | Get the benchmark listed on member-resource pages across state associations. |
 | 21 | Minnesota Council of Nonprofits (and peer state associations) | State assoc. resources | Offer the benchmark table as a member resource; localize the cost data. |
 | 22 | AFP (Assoc. of Fundraising Professionals) chapter resource pages | Assoc. resources | Chapter resource listing + a lunch-and-learn on the fundraising stack. |
 | 23 | Nonprofit Lowdown (Rhea Wong) podcast | Podcast | Guest episode on spending fundraising dollars wisely on software. |
@@ -64,8 +63,8 @@ each with a pitch angle built on the operator's actual leverage:
 
 ## Outreach notes
 
-- **Lead with data, not products.** The calculator and benchmark table are the
-  hooks that earn links; a product roundup does not. Pitch those first.
+- **Lead with data, not products.** The benchmark table is the hook that earns
+  links; a product roundup does not. Pitch it first.
 - **Use the K–12 network for warm intros** (CASE, school-foundation associations,
   education-sector editors) before cold-pitching general nonprofit outlets.
 - **Sequence:** Tier 1 first (highest authority + best fit), then Tier 2 grant

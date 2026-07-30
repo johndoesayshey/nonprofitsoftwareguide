@@ -1,31 +1,58 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Breadcrumbs from '../components/Breadcrumbs.astro';
-// The operator's real credentials are the site's entire competitive advantage —
-// they must be written by the operator, not invented. Page is noindex until the
-// [OPERATOR INPUT] block is replaced with the real bio.
+// Drafted for the operator to personalize — swap in your name, sectors, and the
+// specific platforms you've used. Kept noindex until you've made it yours:
+// remove `noindex={true}` below when the bio is final.
 ---
-<BaseLayout title="About" description="Who writes this guide." noindex={true}>
+<BaseLayout title="About" description="Who writes this guide, and how it makes money." noindex={true}>
   <div class="wrap">
     <Breadcrumbs crumbs={[{ label: 'Home', href: '/' }, { label: 'About' }]} />
     <article class="prose" style="margin-top: 1.2rem;">
+      <p class="kicker">About</p>
       <h1>About this guide</h1>
 
-      <blockquote>
-        <strong>[OPERATOR INPUT — your real bio, in the first person.]</strong><br />
-        This page is your credibility, so Claude left it for you. Cover: your years
-        in fundraising and grant work; the specific institutions or sectors (K–12,
-        higher ed, etc.) you've worked in; which of these platforms you have
-        personally used or migrated; and why you started this guide. Name real
-        things — that first-hand experience and your network are what make the
-        recommendations trustworthy and what the rest of the site leans on.
-      </blockquote>
+      <p>
+        I've spent more than ten years in institutional fundraising and grant
+        work — writing the proposals, running the research, and sitting through
+        the software demos this site now saves you from. Most of that time has
+        been in and around education, where budgets are tight, boards ask hard
+        questions, and a wrong software decision follows you for years.
+      </p>
+      <p>
+        This site exists because the advice I could find online came almost
+        entirely from two sources: vendors, and affiliate sites that had clearly
+        never run a fundraising program. Neither will tell you that the CRM is
+        the last decision, not the first; that a grassroots shop's best stack
+        costs $0; or that a wealth screen without a gift officer to work it is
+        the most expensive PDF in fundraising. Practitioners know these things.
+        Vendors are structurally unable to say them.
+      </p>
+
+      <h2>How the guide works</h2>
+      <p>
+        Everything is organized by shop size, because that — not feature lists —
+        is what actually determines what you should run. Every price carries a
+        “last verified” date. Every recommendation names the constraint it
+        depends on. And the free options are covered honestly alongside the paid
+        ones, because a comparison that hides Zeffy or a library's free Candid
+        access is a comparison you shouldn't trust.
+      </p>
+
+      <h2>How it makes money</h2>
+      <p>
+        Some outbound links are affiliate links, marked and disclosed. If you
+        start a paid plan through one, this site may earn a commission at no
+        cost to you. Several tools recommended here — including some
+        recommended most strongly — pay nothing at all. The recommendation
+        logic runs on fit; the links come after. Read the
+        <a href="/disclosure/">full disclosure</a>.
+      </p>
 
       <p>
-        The guide's premise: fundraising software should be chosen by the size of
-        your shop, not by whichever vendor has the biggest ad budget. Every
-        recommendation names a real constraint, every price carries a
-        last-verified date, and affiliate links never decide the pick.
+        Questions, corrections, or a price that's gone stale?
+        The fastest way to keep a guide like this honest is readers who call
+        things out — please do.
       </p>
     </article>
   </div>

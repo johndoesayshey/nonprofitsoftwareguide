@@ -13,8 +13,12 @@ export async function GET(context: APIContext) {
   type Entry = { loc: string; lastmod?: string };
   const entries: Entry[] = [];
 
-  // Static hubs that are always indexable (the calculator is a public tool).
-  for (const p of ['/', '/stacks/', '/platforms/', '/compare/', '/blog/', '/grant-research/', '/wealth-screening/', '/tools/calculator/']) {
+  // Static hubs that are always indexable — one per nav section.
+  for (const p of [
+    '/', '/stacks/', '/platforms/', '/compare/', '/blog/',
+    '/grant-research/', '/wealth-screening/', '/donor-crm/',
+    '/donation-processing/', '/events/', '/forms-operations/',
+  ]) {
     entries.push({ loc: url(p) });
   }
   // The benchmark joins the sitemap only once its data is filled in (ready:true).

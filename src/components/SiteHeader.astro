@@ -1,19 +1,37 @@
 ---
+import { CATEGORIES } from '../lib/categories';
+
 interface Props {
   section?: string;
 }
 const { section } = Astro.props;
+
+// Top nav: Stacks first (the primary content unit), then every software category
+// exactly as the stacks cover them, then Compare / Benchmark / Blog.
+const categoryOrder = [
+  'donor-crm',
+  'grant-research',
+  'donation-processing',
+  'events-auctions',
+  'prospect-research',
+  'forms-ops',
+];
+
 const nav = [
   { href: '/stacks/', label: 'Stacks', key: 'stacks' },
-  { href: '/grant-research/', label: 'Grant research', key: 'grant' },
-  { href: '/wealth-screening/', label: 'Wealth screening', key: 'wealth' },
+  ...categoryOrder.map((slug) => ({
+    href: CATEGORIES[slug].path!,
+    label: CATEGORIES[slug].short,
+    key: slug,
+  })),
   { href: '/compare/', label: 'Compare', key: 'compare' },
+  { href: '/benchmarks/', label: 'Benchmark', key: 'benchmark' },
   { href: '/blog/', label: 'Blog', key: 'blog' },
 ];
 ---
 <header class="site-header">
   <div class="wrap masthead">
-    <a href="/" class="wordmark">Nonprofit&nbsp;<b>Software</b>&nbsp;Guide</a>
+    <a href="/" class="wordmark">Nonprofit Software <b>Guide</b></a>
     <nav class="site-nav" aria-label="Primary">
       {nav.map((n) => (
         <a href={n.href} aria-current={section === n.key ? 'page' : undefined}>{n.label}</a>

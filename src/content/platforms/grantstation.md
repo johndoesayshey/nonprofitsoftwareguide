@@ -2,32 +2,45 @@
 name: GrantStation
 slug: grantstation
 category: grant-research
-entryPrice: "[FACT-CHECK: verify current annual membership price at grantstation.com — note TechSoup discount route]"
-pricingModel: "Annual membership; discounted memberships often available through TechSoup [FACT-CHECK: confirm current TechSoup offer]"
-lastVerified: 2026-07-28
-bestFor: "Shops that want a broad funder database at a low annual price, especially via a TechSoup discount"
+entryPrice: "~$199/yr via TechSoup (direct list price runs several times higher)"
+pricingModel: "Flat annual membership; deep discounts through TechSoup and seasonal promos"
+lastVerified: 2026-07-29
+bestFor: "Budget-conscious shops that want a broad funder database and will do their own filtering"
 targetQuery: "grantstation review"
 affiliateSlug: grantstation
 freeTier: false
-draft: true
+draft: false
 strengths:
-  - "Low annual cost relative to the category, especially through a discounted membership"
+  - "At the TechSoup price (~$199/yr), among the cheapest paid entries into funder research"
   - "Covers private, corporate, and government funders in one searchable database"
   - "Weekly funding alerts keep new opportunities in front of you without extra effort"
 limitations:
-  - "Search is more manual than active-matching tools — you do more of the filtering"
-  - "Data depth per funder is thinner than premium research platforms"
-  - "No built-in deadline or reporting tracker"
+  - "Search is manual — you do the filtering that matching tools automate"
+  - "No pipeline or deadline management; bring your own tracker"
+  - "Data depth per funder is thinner than Candid or Instrumentl"
 ---
 
-GrantStation is a low-cost grant database: you search private, corporate, and government funders and get weekly alerts on new opportunities. It fits a shop that wants broad coverage on a small budget and is willing to do its own filtering. It is not a match-and-manage tool — you bring the workflow.
+GrantStation is a flat-fee grant database covering private, corporate, and government funders, with weekly alert newsletters. The number that matters: through TechSoup, eligible nonprofits pay around $199 a year (sometimes ~$150 on promo) — a fraction of the direct membership price, and roughly a tenth of what an Instrumentl subscription runs. At that price, the question isn't whether it's polished; it's whether it earns $199 of your time back. For most shops starting a grant program, it does.
 
 ## Who it fits
 
-Best for budget-conscious shops, and especially anyone eligible for a discounted membership through TechSoup — at that price it is one of the cheapest ways into funder research. If your constraint is money and your time is more flexible, GrantStation trades automation for affordability.
+The shop that wants coverage without commitment: you're building a funder list, you have more time than budget, and you're willing to run your own searches and keep your own deadline tracker. Practitioners who question GrantStation's value are usually reacting to the direct list price — the recurring critique is "basic listings, no pipeline management," which is fair and mostly beside the point at the TechSoup rate.
 
-> [OPERATOR INPUT — 2-3 sentences: whether GrantStation's funder data has been accurate and current in your experience, and how its coverage compares to what you get from Instrumentl or Candid. Name a specific gap or strength you've hit.]
+## What it costs
+
+| Route | Price |
+|---|---|
+| TechSoup member offer | ~$199/yr (promos as low as ~$150) |
+| Direct membership | Several times higher — don't pay it |
+
+Check TechSoup eligibility first; it's the whole value case.
+
+## The honest comparison
+
+Against **Instrumentl**: GrantStation is a database, Instrumentl is a workflow. If you're running a real pipeline of concurrent applications, Instrumentl's matching and tracking justify the 10x price. If you're prospecting a few hours a month, GrantStation plus a spreadsheet does the job. Against **free**: Grants.gov and library access to Candid's Foundation Directory cover federal and deep foundation research at $0 — GrantStation's edge is having it all in one place with alerts.
 
 ## What to watch
 
-You do the filtering the software won't. There is no active matching and no deadline tracker, so pair it with your own spreadsheet or CRM for pipeline management. Confirm the current membership price and whether the TechSoup discount still applies before you commit.
+There's no deadline tracker, so pair it with your own calendar from day one. And set a renewal reminder — the value case depends on renewing at the discounted rate, not list price.
+
+[Check current GrantStation membership offers](/go/grantstation) before buying direct.
