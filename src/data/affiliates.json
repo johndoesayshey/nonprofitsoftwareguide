@@ -1,5 +1,5 @@
 {
-  "_comment": "Affiliate links and earning potential. Every entry with a program now carries an `evidence` block: the live vendor URL, the date checked, and a verbatim quote. Do not add or raise a `potential` rating without one. `payout`/`potential`/`badge` drive the editor money overlay (npm run edit). Re-verify quarterly: vendor affiliate pages disappear often (4 of 11 were dead or moved when checked 2026-07-31).",
+  "_comment": "Affiliate links and earning potential. Every entry with a program now carries an `evidence` block: the live vendor URL, the date checked, and a verbatim quote. Do not add or raise a `potential` rating without one. `payout`/`potential`/`badge` drive the editor money overlay (npm run edit). Re-verify quarterly: vendor affiliate pages disappear often (4 of 11 were dead or moved when checked 2026-07-31). Customer refer-a-friend schemes (Kindful $250 gift card, Keela $250, ClickBid $100 gift card) are NOT publisher programs and are deliberately excluded. Never link clickbid.com: it is a parked domain for sale; the real product is try.cbo.io.",
   "instrumentl": {
     "name": "Instrumentl",
     "category": "grant-research",
@@ -154,18 +154,18 @@
     "url": "https://bloomerang.co",
     "affiliateUrl": null,
     "readerOffer": null,
-    "terms": "Program exists; commission not published. The $250-per-referral figure could NOT be confirmed. bloomerang.co/partners now redirects to partners.bloomerang.com, which publishes no rates, and their PartnerStack signup page states only \"commissions last for the lifetime of the account\". Ask for the rate in writing when you apply.",
+    "terms": "Bloomerang does publish a rate, but on the nonprofit-to-nonprofit track: the reward is a DONATION to your organization, not cash to a publisher. Likely unusable without a 501(c)(3) entity. Their separate PartnerStack agency program publishes no rate before login. Ask which track a publisher qualifies for.",
     "signupUrl": "https://bloomerang.partnerstack.com/?group=agencies",
     "appliedOn": null,
     "approvedOn": null,
-    "payout": "Program exists; commission not published",
+    "payout": "$250 min or 10% of ARR, paid as a donation to your organization",
     "potential": "unknown",
-    "badge": "?",
-    "potentialNote": "The $250-per-referral figure could NOT be confirmed. bloomerang.co/partners now redirects to partners.bloomerang.com, which publishes no rates, and their PartnerStack signup page states only \"commissions last for the lifetime of the account\". Ask for the rate in writing when you apply.",
+    "badge": "250/10%",
+    "potentialNote": "Bloomerang does publish a rate, but on the nonprofit-to-nonprofit track: the reward is a DONATION to your organization, not cash to a publisher. Likely unusable without a 501(c)(3) entity. Their separate PartnerStack agency program publishes no rate before login. Ask which track a publisher qualifies for.",
     "evidence": {
-      "url": "https://bloomerang.partnerstack.com/?group=agencies",
+      "url": "https://bloomerang.com/company/referral",
       "checked": "2026-07-31",
-      "quote": "Unless otherwise stated, commissions last for the lifetime of the account."
+      "quote": "we'll make a donation to your organization worth either: $250 minimum guaranteed / 10% of the referred organization's annual recurring contract (whichever is higher)"
     }
   },
   "donorsnap": {
@@ -224,18 +224,23 @@
   "neoncrm": {
     "name": "Neon One",
     "category": "donor-crm",
-    "status": "pending",
+    "status": "none",
     "url": "https://neonone.com",
     "affiliateUrl": null,
     "readerOffer": null,
-    "terms": "Tier B: CAP program relaunched Oct 2025 — 10% discount on referred sales, commissions 'available'. [FACT-CHECK: confirm terms with partnerships manager]",
+    "terms": "The live CAP page names only a 10% discount passed to the referred client, Marketing Development Funds, and donations-in-name. The word 'commission' appears in a press release, not on the vendor page.",
     "signupUrl": null,
     "appliedOn": null,
     "approvedOn": null,
-    "payout": "CAP program: commissions 'available', terms not public",
-    "potential": "low",
-    "badge": "CAP",
-    "potentialNote": "Relationship program. Worth asking about once you have traffic."
+    "payout": "No cash commission published",
+    "potential": "none",
+    "badge": "—",
+    "potentialNote": "CORRECTED: previously rated low on a press-release claim. The live partner page publishes no cash commission to the partner. Their other referral program is customer-only (free month each) and the link is only obtainable inside Neon CRM, so a publisher cannot use it.",
+    "evidence": {
+      "url": "https://neonone.com/partners/partner-program/",
+      "checked": "2026-07-31",
+      "quote": "We offer a built-in 10% discount on all software sales you refer... You can also earn Marketing Development Funds or Donations-in-Name based on your closed referrals."
+    }
   },
   "zeffy": {
     "name": "Zeffy",
@@ -481,5 +486,47 @@
     "potential": "none",
     "badge": "—",
     "potentialNote": "No affiliate program exists. Covered for credibility, and it will never earn. Do not build a page around it expecting revenue."
+  },
+  "greatergiving": {
+    "name": "Greater Giving",
+    "category": "events-auctions",
+    "status": "pending",
+    "url": "https://www.greatergiving.com",
+    "affiliateUrl": null,
+    "readerOffer": "$300 can be applied to their first invoice",
+    "terms": "$300 per referred organization that becomes a customer. The page says \"referral credit\"/\"incentive\", never cash, so confirm the payout form when you apply.",
+    "signupUrl": "https://www.greatergiving.com/en/partners/partner-referral",
+    "appliedOn": null,
+    "approvedOn": null,
+    "payout": "$300 per referred organization that becomes a customer",
+    "potential": "high",
+    "badge": "$300",
+    "potentialNote": "The only real earner in events. Worded as a \"referral credit\" you may keep or gift to the client, so confirm whether it pays as cash. A stale 2016 page still advertises $150; $300 is current.",
+    "evidence": {
+      "url": "https://www.greatergiving.com/en/partners/partner-referral",
+      "checked": "2026-07-31",
+      "quote": "Get a $300 incentive for every referral that becomes a client... you'll receive a $300 referral credit as a thank-you."
+    }
+  },
+  "eleo": {
+    "name": "Eleo",
+    "category": "donor-crm",
+    "status": "pending",
+    "url": "https://eleoonline.com",
+    "affiliateUrl": null,
+    "readerOffer": null,
+    "terms": "$100 Partner Share per referred client, paid after the client has been active 90 days. No quotas, no exclusivity.",
+    "signupUrl": "https://eleoonline.com/become-eleo-nonprofit-consultant-community-partner/",
+    "appliedOn": null,
+    "approvedOn": null,
+    "payout": "$100 per referred client (after 90 days)",
+    "potential": "medium",
+    "badge": "$100",
+    "potentialNote": "Small but clean and self-serve, on one of the cheapest real CRMs ($39/mo). Note the domain is eleoonline.com; eleo.com does not resolve.",
+    "evidence": {
+      "url": "https://eleoonline.com/become-eleo-nonprofit-consultant-community-partner/",
+      "checked": "2026-07-31",
+      "quote": "$100 Partner Share for every client referred to Eleo (after 90 days of client status)"
+    }
   }
 }
