@@ -45,6 +45,23 @@ the real source file and the page reloads.
 Saved edits are local only. Tell Claude to push them when you're happy, or they
 go out with the next push.
 
+### Seeing the money while you write
+
+Press **💰 Deals** in the editor toolbar. Every affiliate link on the page is
+colour-coded, and the toolbar totals them up:
+
+| Marker | Means |
+|---|---|
+| green, `$` | Program approved. This link earns. |
+| amber, `◑` | Program exists but is not approved yet. Earns nothing today. |
+| grey, `·` | No program exists. Will never earn (Zeffy, Airtable, Grants.gov). |
+| amber left bar | A product with a program is named here but **not linked**. Money on the floor. |
+
+Hover any of them to see the deal: status, commission terms and reader offer,
+straight from `affiliates.json`. Use it while editing to check you are not
+building a page around a product that cannot pay you, and to catch mentions that
+should be links. It is local-only and never appears on the public site.
+
 Two limits worth knowing: text with a link inside it (like the "What's in a
 stack" paragraph) is not click-editable, and if the exact same sentence appears
 in two files the editor will skip it rather than guess. In both cases just ask

@@ -11,7 +11,7 @@ import { createServer } from 'node:http';
 import { spawn } from 'node:child_process';
 import { readFileSync, writeFileSync, readdirSync, statSync } from 'node:fs';
 import { join, extname } from 'node:path';
-import { ROOT, green, yellow, red, bold } from './_lib.mjs';
+import { ROOT, loadAffiliates, green, yellow, red, bold } from './_lib.mjs';
 
 const ASTRO_PORT = 4321;
 const EDIT_PORT = 4400;
@@ -117,6 +117,40 @@ function applyEdit(original, updated, file, line) {
   return applyByLocation(original, updated, file, line) ?? applyByText(original, updated);
 }
 
+// ---------- affiliate deal data for the overlay -------------------------------
+
+// Extra names a product goes by in prose, so unlinked mentions are still caught.
+const ALIASES = {
+  kindsight: ['iWave'],
+  neoncrm: ['Neon CRM', 'Neon One', 'Neon'],
+  littlegreenlight: ['LGL'],
+  candid: ['Candid', 'Foundation Directory'],
+  grantsgov: ['Grants.gov'],
+  monday: ['monday.com', 'Monday.com'],
+  salesforcenpsp: ['Salesforce', 'NPSP'],
+  '4agoodcause': ['4aGoodCause'],
+};
+
+function buildDeals() {
+  const affiliates = loadAffiliates();
+  const out = {};
+  for (const [slug, a] of Object.entries(affiliates)) {
+    const names = [a.name, ...(ALIASES[slug] ?? [])]
+      .filter(Boolean)
+      .sort((x, y) => y.length - x.length)
+      .map((n) => n.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'));
+    out[slug] = {
+      name: a.name,
+      status: a.status,
+      terms: a.terms,
+      readerOffer: a.readerOffer,
+      signupUrl: a.signupUrl,
+      rx: `(?:${names.join('|')})`, // matched case-insensitively, on word boundaries
+    };
+  }
+  return out;
+}
+
 // ---------- injected client ---------------------------------------------------
 
 const CLIENT = `
@@ -138,9 +172,37 @@ const CLIENT = `
   #nsg-toggle.on { background: #0e4f4a; }
   #nsg-msg { opacity: .85; font-weight: 500; max-width: 380px; }
   #nsg-bar a { color: #7fd7c4; }
+  #nsg-deals { background: #2b2b2b; color: #fff; }
+  #nsg-deals.on { background: #7a5c12; }
+
+  /* ---- affiliate deal layer ---- */
+  .nsg-deal { text-decoration: none !important;
+    box-shadow: inset 0 -0.55em 0 var(--nsg-tint), 0 1px 0 var(--nsg-ink); border-radius: 2px; }
+  .nsg-deal::after { content: attr(data-nsg-tag); font-size: .62em; font-weight: 800;
+    letter-spacing: .04em; vertical-align: super; margin-left: .18em; color: var(--nsg-ink); }
+  .nsg-deal-active  { --nsg-tint: rgba(23,160,106,.28); --nsg-ink: #0f7a4f; }
+  .nsg-deal-pending { --nsg-tint: rgba(183,121,31,.28); --nsg-ink: #9a6510; }
+  .nsg-deal-none    { --nsg-tint: rgba(140,140,140,.28); --nsg-ink: #6b6b6b; }
+  /* A mention that could be an earning link but isn't. No DOM children added. */
+  .nsg-missed { border-left: 3px solid #b7791f !important; padding-left: .5rem !important;
+    background: rgba(183,121,31,.07); }
+  #nsg-tip { position: fixed; z-index: 1000000; max-width: 22rem; display: none;
+    background: #141514; color: #fff; border-radius: 6px; padding: .7rem .85rem;
+    font: 500 12px/1.45 -apple-system, system-ui, sans-serif; box-shadow: 0 10px 30px rgba(0,0,0,.45); }
+  #nsg-tip h4 { margin: 0 0 .25rem; font-size: 13px; font-weight: 800; }
+  #nsg-tip .pill { display: inline-block; font-size: 10px; font-weight: 800; letter-spacing: .08em;
+    text-transform: uppercase; padding: .1rem .4rem; border-radius: 999px; margin-bottom: .35rem; }
+  #nsg-tip .pill.active { background: #17a06a; }
+  #nsg-tip .pill.pending { background: #b7791f; }
+  #nsg-tip .pill.none { background: #6b6b6b; }
+  #nsg-tip .terms { opacity: .9; }
+  #nsg-tip .offer { color: #8ee0bd; margin-top: .3rem; }
+  #nsg-tip .hint { opacity: .65; margin-top: .4rem; font-size: 11px; }
 </style>
+<div id="nsg-tip"></div>
 <div id="nsg-bar">
   <button id="nsg-toggle" class="on">✏️ Edit: ON</button>
+  <button id="nsg-deals">💰 Deals</button>
   <span id="nsg-msg">Click any text to edit it.</span>
   <button id="nsg-save" disabled>Save 0</button>
 </div>
@@ -229,8 +291,114 @@ const CLIENT = `
     }).catch(function (e) { msg('Save failed: ' + e.message); });
   });
 
+  // ---------- affiliate deal layer ----------
+  var DEALS = __NSG_DEALS__;
+  var dealsOn = false;
+  var tip = document.getElementById('nsg-tip');
+
+  function esc(s) { return String(s == null ? '' : s).replace(/[<>&]/g, function (c) {
+    return { '<': '&lt;', '>': '&gt;', '&': '&amp;' }[c]; }); }
+
+  function showTip(html, el) {
+    tip.innerHTML = html;
+    tip.style.display = 'block';
+    var r = el.getBoundingClientRect();
+    var top = r.bottom + 8;
+    if (top + tip.offsetHeight > window.innerHeight - 10) top = r.top - tip.offsetHeight - 8;
+    tip.style.top = Math.max(8, top) + 'px';
+    tip.style.left = Math.min(Math.max(8, r.left), window.innerWidth - tip.offsetWidth - 8) + 'px';
+  }
+  function hideTip() { tip.style.display = 'none'; }
+
+  function dealCard(d, extra) {
+    var label = d.status === 'active' ? 'Earning' :
+                d.status === 'pending' ? 'Not applied / pending' : 'No program';
+    return '<h4>' + esc(d.name) + '</h4>' +
+      '<span class="pill ' + d.status + '">' + label + '</span>' +
+      '<div class="terms">' + esc(d.terms || 'No terms recorded.') + '</div>' +
+      (d.readerOffer ? '<div class="offer">Reader offer: ' + esc(d.readerOffer) + '</div>' : '') +
+      (extra || '');
+  }
+
+  function applyDeals() {
+    var counts = { active: 0, pending: 0, none: 0, missed: 0 };
+
+    // 1. Existing /go/ links: tint by status, show the deal on hover.
+    document.querySelectorAll('a[href^="/go/"]').forEach(function (a) {
+      var slug = a.getAttribute('href').split('/')[2];
+      var d = DEALS[slug];
+      if (!d) return;
+      counts[d.status] = (counts[d.status] || 0) + 1;
+      if (!dealsOn) {
+        a.classList.remove('nsg-deal', 'nsg-deal-active', 'nsg-deal-pending', 'nsg-deal-none');
+        a.removeAttribute('data-nsg-tag');
+        return;
+      }
+      a.classList.add('nsg-deal', 'nsg-deal-' + d.status);
+      a.setAttribute('data-nsg-tag', d.status === 'active' ? '$' : d.status === 'pending' ? '◑' : '·');
+      if (a.dataset.nsgDealBound) return;
+      a.dataset.nsgDealBound = '1';
+      a.addEventListener('mouseenter', function () {
+        if (dealsOn) showTip(dealCard(DEALS[slug], '<div class="hint">This link is live in your content.</div>'), a);
+      });
+      a.addEventListener('mouseleave', hideTip);
+    });
+
+    // 2. Product mentions that could be earning links but are not.
+    var BLOCKS = 'p,li,td,h2,h3,h4,dd,figcaption,blockquote';
+    document.querySelectorAll(BLOCKS).forEach(function (el) {
+      if (el.closest('#nsg-bar') || el.closest('#nsg-tip')) return;
+      el.classList.remove('nsg-missed');
+      el.removeAttribute('data-nsg-missed');
+      if (!dealsOn) return;
+      var text = el.textContent || '';
+      if (!text.trim()) return;
+      var missed = [];
+      Object.keys(DEALS).forEach(function (slug) {
+        var d = DEALS[slug];
+        if (d.status === 'none') return;               // nothing to earn, nothing to flag
+        if (!new RegExp('\\\\b' + d.rx + '\\\\b', 'i').test(text)) return;
+        if (el.querySelector('a[href="/go/' + slug + '"]')) return;   // already linked here
+        missed.push(slug);
+      });
+      if (!missed.length) return;
+      counts.missed += missed.length;
+      el.classList.add('nsg-missed');
+      el.setAttribute('data-nsg-missed', missed.join(','));
+      if (el.dataset.nsgMissBound) return;
+      el.dataset.nsgMissBound = '1';
+      el.addEventListener('mouseenter', function () {
+        if (!dealsOn || !el.getAttribute('data-nsg-missed')) return;
+        var list = el.getAttribute('data-nsg-missed').split(',');
+        var html = '<h4>Unlinked money</h4><div class="terms">Mentioned here without a /go/ link:</div>';
+        list.forEach(function (s) {
+          html += '<div style="margin-top:.45rem">' + dealCard(DEALS[s]) + '</div>';
+        });
+        html += '<div class="hint">Ask Claude to link these, or leave them if the mention is incidental.</div>';
+        showTip(html, el);
+      });
+      el.addEventListener('mouseleave', hideTip);
+    });
+
+    return counts;
+  }
+
+  document.getElementById('nsg-deals').addEventListener('click', function () {
+    dealsOn = !dealsOn;
+    this.classList.toggle('on', dealsOn);
+    hideTip();
+    var c = applyDeals();
+    if (dealsOn) {
+      msg('<b>' + c.active + '</b> earning · <b>' + c.pending + '</b> pending · <b>' +
+          c.none + '</b> no program · <b>' + c.missed + '</b> unlinked. Hover any to see the deal.');
+    } else {
+      msg('Click any text to edit it.');
+    }
+  });
+
   mark();
-  new MutationObserver(mark).observe(document.body, { childList: true, subtree: true });
+  new MutationObserver(function () { mark(); if (dealsOn) applyDeals(); })
+    .observe(document.body, { childList: true, subtree: true });
 })();
 </script>
 `;
@@ -294,9 +462,14 @@ createServer(async (req, res) => {
 
     if (type.includes('text/html')) {
       let html = await upstream.text();
+      // Re-read affiliates each request so status edits show up without a restart.
+      // The replacement MUST be a function: a string replacement would treat `$'`
+      // and `$&` in the client code as special patterns.
+      const deals = JSON.stringify(buildDeals());
+      const client = CLIENT.replace('__NSG_DEALS__', () => deals);
       html = html.includes('</body>')
-        ? html.replace('</body>', CLIENT + '</body>')
-        : html + CLIENT;
+        ? html.replace('</body>', () => client + '</body>')
+        : html + client;
       res.writeHead(upstream.status, { ...headers, 'content-type': 'text/html; charset=utf-8' });
       return res.end(html);
     }
