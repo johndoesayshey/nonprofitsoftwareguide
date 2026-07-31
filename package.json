@@ -14,7 +14,8 @@
     "guardrails:dist": "node scripts/check-disclosure.mjs && node scripts/check-cluster-links.mjs",
     "check-freshness": "node scripts/check-freshness.mjs",
     "check-links": "node scripts/check-links.mjs",
-    "owner": "node scripts/owner-dashboard.mjs"
+    "owner": "node scripts/owner-dashboard.mjs",
+    "edit": "node scripts/edit-server.mjs"
   },
   "dependencies": {
     "@astrojs/mdx": "^4.2.0",

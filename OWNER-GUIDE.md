@@ -26,6 +26,30 @@ Run it weekly. It reads the actual site data and tells you:
 | SEO & setup | GA4, Search Console, About page still hidden | `.env`, `src/pages/about.astro` |
 | Your to-dos | Every unchecked box in this file | this file |
 
+## Editing text visually (no typing file names)
+
+```bash
+npm run edit
+```
+
+Then open **http://localhost:4400/**. Every paragraph and heading gets a dashed
+outline. Click one, type over it, and press **Save**. The change is written into
+the real source file and the page reloads.
+
+- **Enter** or clicking away finishes a field. **Escape** undoes it.
+- The button shows how many changes are pending, so nothing saves by surprise.
+- Works on every page, not just the homepage. Navigate normally while editing.
+- Toggle **Edit: OFF** to browse without the outlines.
+- **Ctrl+C** in the terminal when you're done.
+
+Saved edits are local only. Tell Claude to push them when you're happy, or they
+go out with the next push.
+
+Two limits worth knowing: text with a link inside it (like the "What's in a
+stack" paragraph) is not click-editable, and if the exact same sentence appears
+in two files the editor will skip it rather than guess. In both cases just ask
+Claude to make the change.
+
 Two deeper checks when you want them:
 
 ```bash
