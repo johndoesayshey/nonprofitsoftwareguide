@@ -47,4 +47,4 @@ At that point, book demos with [DonorSearch](/go/donorsearch) and [Kindsight](/g
 
 Your hand-research months are not a detour. The profiles you built become the validation set for choosing a platform, and the routine of turning research into visits is the habit that makes the eventual purchase pay off.
 
-Prospect research sits alongside your CRM and grant tools in [the $250k-$1M stack](/stacks/250k-1m/).
+Prospect research is deliberately not a software line in [the $250k-$1M stack](/stacks/250k-1m/): at that size the recommendation is a consultant-run screen rather than a subscription.

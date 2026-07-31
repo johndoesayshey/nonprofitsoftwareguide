@@ -93,12 +93,12 @@ const verified = formatMedium(s.lastVerified);
         </tfoot>
       </table>
 
+      <!-- Body carries the narrative: per-line rationale and upgrade triggers. -->
+      <Content />
+
       {s.consultantNote && (
         <ConsultantSlot heading={s.consultantNote.heading} body={s.consultantNote.body} />
       )}
-
-      <!-- Body carries the narrative: per-line rationale and upgrade triggers. -->
-      <Content />
 
       {supporting.length > 0 && (
         <section class="cluster">

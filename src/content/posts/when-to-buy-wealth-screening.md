@@ -46,4 +46,4 @@ No vendor in this category publishes pricing; every deal is quoted per organizat
 
 Below the threshold, research by hand. Take your top 25 prospects and look up public giving to other organizations, property records, board memberships, and foundation 990s. It is slow, and that is the point: the month hand-research stops keeping up with your prospect flow is the month you have a real case for the subscription.
 
-Screening enters the recommended stack at [the $1M-$5M tier](/stacks/1m-5m/), where major-gift work becomes a real part of the operation.
+In our stacks, screening starts as a consultant-run project at [$1M-$5M](/stacks/1m-5m/) and only becomes a subscription at [$5M+](/stacks/5m-plus/), once a named researcher owns the output.

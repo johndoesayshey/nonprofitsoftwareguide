@@ -48,4 +48,4 @@ Take advantage of the fact that both vendors make trying easy. LGL offers a free
 
 Then ask the one question that settles it: who, by name, will open this system every day? Buy for that person.
 
-Both tools anchor the CRM line in [the $250k-$1M stack](/stacks/250k-1m/).
+Both are credible answers to the CRM line in [the $250k-$1M stack](/stacks/250k-1m/), where our own default is DonorDock for its unlimited contacts and 90-day guarantee. Bloomerang becomes the recommendation at [$5M+](/stacks/5m-plus/), where the reporting is the point.

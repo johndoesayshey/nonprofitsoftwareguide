@@ -48,4 +48,4 @@ Second, payouts arrive on a schedule rather than instantly. For most organizatio
 
 Both are quick to evaluate. Zeffy costs nothing to try by definition, and Donorbox's free tier means you can run a live form this week. Set up a test form on each, make a $5 donation to yourself, and judge the donor experience firsthand.
 
-Either one fills the donation-processing line in [the under-$250k stack](/stacks/under-250k/).
+Both are alternatives to the donation-processing line in [the under-$250k stack](/stacks/under-250k/), where our default is collecting gifts through the Jotform pages a small shop already needs.

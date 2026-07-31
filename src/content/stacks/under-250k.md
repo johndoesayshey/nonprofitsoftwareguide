@@ -2,7 +2,7 @@
 shopSize: "under-$250k"
 annualRevenue: "under $250k"
 staffSize: "0-1 development staff (often the ED)"
-totalStackCost: "$0-$2,400/yr"
+totalStackCost: "$0-$2,600/yr"
 slug: under-250k
 targetQuery: "nonprofit software stack under 250k"
 lastVerified: 2026-07-31
@@ -20,9 +20,14 @@ components:
     platformSlug: instrumentl
     annualCost: "$0-$2,148/yr"
     rationale: "The one line worth real money, and only once grant applications are a monthly job rather than an annual scramble."
+  - category: donor-crm
+    advisory: true
+    label: "Not yet"
+    annualCost: "$0"
+    rationale: "Deliberately absent. Your monday.com list is the donor record until receipting, soft credits or lapsed-donor reporting become real problems."
 ---
 
-At under $250k raised, almost your whole stack should be free. Run operations and your contact list in one place, collect money through forms you already need, and skip everything else. Budget $0 to start. The only line that can reach four figures is grant research, and only when grants become a monthly job.
+At under $250k raised, almost your whole stack should be free. Run operations and your contact list in one place, collect money through forms you already need, and skip everything else. Budget $0 to start, up to about $2,600 a year at the top end. There is no CRM line here on purpose, and the only line that reaches four figures is grant research.
 
 ## Why these picks
 

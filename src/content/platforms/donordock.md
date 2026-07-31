@@ -5,7 +5,7 @@ category: donor-crm
 entryPrice: "From ~$98/mo (billed annually)"
 pricingModel: "Flat tiers with unlimited contacts"
 lastVerified: 2026-07-29
-bestFor: "Solo fundraisers who need the CRM to tell them what to do next"
+bestFor: "Shops that want the CRM to drive daily follow-up, from a team of one to a team of eight"
 targetQuery: "donordock review"
 affiliateSlug: donordock
 freeTier: false
@@ -18,13 +18,16 @@ limitations:
   - "Deliberately lean; power users will miss advanced automation"
   - "Smaller vendor; check the integration list against your stack"
   - "Below ~2,500 records, LGL costs less"
+  - "Retention and analytics reporting runs lighter than Bloomerang's"
 ---
 
-[DonorDock](/go/donordock) is a donor CRM aimed at the smallest development shops, often a shop of one. Its signature ActionBoard is a guided daily feed: which donor to thank, call, or follow up with today. Pricing starts around $98 a month billed annually with unlimited contacts, and there's a 90-day money-back guarantee.
+[DonorDock](/go/donordock) is a donor CRM built around doing the work rather than storing it. Its signature ActionBoard is a guided daily feed: which donor to thank, call, or follow up with today. Pricing starts around $98 a month billed annually, every tier includes unlimited contacts, and there's a 90-day money-back guarantee.
 
 ## Who it fits
 
-The one-person development office. For most small shops the database isn't the hard part; remembering to work it is. DonorDock behaves like a task list, and for a stretched ED juggling grants, events, and thank-yous, that design shows up as donors who don't slip.
+It starts with the one-person development office, where the database isn't the hard part and remembering to work it is. But the Grow and Amplify tiers are why it stays in the stack as you grow: unlimited contacts on every tier means a file that doubles doesn't re-price your contract, which is exactly what happens on record-count pricing between $1M and $5M. A team of five gets the same guided follow-up, with the work divided among them.
+
+Where it stops fitting is analytics. If your team's most common ask is deeper retention and segmentation reporting, [Bloomerang](/go/bloomerang) is the better home, and it prices by record count.
 
 ## Pricing
 
@@ -38,7 +41,7 @@ All tiers include unlimited contacts. Organizations under $300k in revenue can a
 
 ## How it compares
 
-[Little Green Light](/go/littlegreenlight) is cheaper for small lists and more flexible; DonorDock is more guided and more modern. [Bloomerang](/go/bloomerang) has deeper retention analytics for growing teams. The dividing line is temperament: pick DonorDock if you want the software to drive the habit.
+[Little Green Light](/go/littlegreenlight) is cheaper for small lists and more flexible; DonorDock is more guided and more modern. [Bloomerang](/go/bloomerang) has deeper retention analytics and is where we point shops past about $5M. [Eleo](/go/eleo) is the budget option with published pricing. The dividing line is temperament: pick DonorDock if you want the software to drive the habit, and price out record-count pricing over three years before choosing on entry price alone.
 
 ## Bottom line
 

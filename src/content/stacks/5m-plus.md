@@ -2,7 +2,7 @@
 shopSize: "$5M+"
 annualRevenue: "$5M+"
 staffSize: "8+ development staff, often with a researcher"
-totalStackCost: "~$18,000-$24,000/yr"
+totalStackCost: "~$17,900-$20,300/yr"
 slug: 5m-plus
 targetQuery: "enterprise nonprofit fundraising software stack"
 lastVerified: 2026-07-31
@@ -35,7 +35,7 @@ components:
     rationale: "Eight-plus seats for campaign planning, grant deliverables and cross-department program work."
 ---
 
-At $5M+ the stack is a full operation: continuous wealth screening, a system-of-record CRM with real reporting, team-scale grant research, high-volume processing, and events that run inside the database rather than beside it. Budget roughly $18,000-$24,000 a year. Every line supports a role, and the total is small against the salaries it makes productive.
+At $5M+ the stack is a full operation: continuous wealth screening, a system-of-record CRM with real reporting, team-scale grant research, high-volume processing, and events that run inside the database rather than beside it. Budget roughly $18,000-$20,000 a year in subscriptions, plus processing fees. Every line supports a role, and the total is small against the salaries it makes productive.
 
 ## Why these picks
 

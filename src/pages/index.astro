@@ -1,4 +1,5 @@
 ---
+import benchmarks from '../data/benchmarks.json';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
 import { STACK_TIERS } from '../lib/stacks';
@@ -10,6 +11,12 @@ import AwardCard from '../components/AwardCard.astro';
 // unverified dollar figure on a published page.
 const stacks = await getCollection('stacks', ({ data }) => data.draft === false);
 const bySlug = new Map(stacks.map((s) => [s.data.slug, s.data]));
+
+// Headline stat comes straight from the benchmark table, so the homepage can
+// never claim a number the benchmark page does not support.
+const growingTotal = (benchmarks as any).totals['250k-1m'] as string;
+const bounds = growingTotal.match(/[\d,]+/g)!.map((n) => Number(n.replace(/,/g, '')));
+const typicalSpend = '$' + Math.round((bounds[0] + bounds[bounds.length - 1]) / 2).toLocaleString('en-US');
 
 const rows = STACK_TIERS.map((t, i) => {
   const stack = bySlug.get(t.slug);
@@ -78,9 +85,9 @@ const siteLd = {
 
   <!-- Signature element: the "by the numbers" band. -->
   <div class="stat-band"><div class="wrap stat-band-inner">
-    <div class="stat"><div class="big num">6</div><div class="lbl">most common software categories reviewed by real fundraisers</div></div>
+    <div class="stat"><div class="big num">6</div><div class="lbl">software categories, priced and compared line by line</div></div>
     <div class="stat"><div class="big num">4</div><div class="lbl">shop sizes, each with its own recommended stack</div></div>
-    <div class="stat"><div class="big num">$4,862</div><div class="lbl">average cost of non-profit fundraising stacks across 50+ surveys</div></div>
+    <div class="stat"><div class="big num">{typicalSpend}</div><div class="lbl">typical software spend for a $250k-$1M shop · <a href="/benchmarks/">see the benchmark</a></div></div>
     <div class="stat"><div class="big num">15+</div><div class="lbl">years the author has spent in fundraising</div></div>
   </div></div>
 
