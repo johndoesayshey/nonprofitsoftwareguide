@@ -19,7 +19,7 @@ const SRC = join(ROOT, 'src');
 
 // ---------- source-file search & replace -------------------------------------
 
-const EDITABLE_EXT = new Set(['.astro', '.md', '.mdx']);
+const EDITABLE_EXT = new Set(['.astro', '.md', '.mdx', '.json']);
 
 function allSourceFiles(dir = SRC, out = []) {
   for (const name of readdirSync(dir)) {

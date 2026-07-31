@@ -3,6 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
 import { STACK_TIERS } from '../lib/stacks';
 import { formatMonthYear } from '../lib/dates';
+import AwardCard from '../components/AwardCard.astro';
 
 // Enrich each tier with its published stack's verified total cost, when one
 // exists. Draft/unbuilt stacks show the revenue band instead — we never print an
@@ -47,8 +48,13 @@ const siteLd = {
 
   <div class="wrap">
     <section class="hero">
-      <p class="kicker">fundraising stack RECOMMENDATIONS</p>
-      <h1>What software you need by the size of your operation.</h1>
+      <div class="hero-top">
+        <div class="hero-head">
+          <p class="kicker">fundraising stack RECOMMENDATIONS</p>
+          <h1>What software you need by the size of your operation.</h1>
+        </div>
+        <AwardCard />
+      </div>
       <div class="cols">
         <p>
           A software "stack" is all the software you use to run your fundraising
@@ -131,6 +137,10 @@ const siteLd = {
 <style>
   .hero { padding: clamp(2.2rem, 6vw, 4.4rem) 0 clamp(1.2rem, 3vw, 2rem); }
   .hero h1 { max-width: 17ch; }
+  /* Headline left, award spotlight in what used to be dead space on the right. */
+  .hero-top { display: grid; grid-template-columns: minmax(0, 1fr) 21rem; gap: 2.6rem;
+    align-items: start; margin-bottom: clamp(1.4rem, 3vw, 2.2rem); }
+  @media (max-width: 900px) { .hero-top { grid-template-columns: 1fr; gap: 1.6rem; } }
   .cols { columns: 2; column-gap: 2.4rem; color: var(--color-muted); max-width: 54rem; }
   .cols p { margin: 0 0 1rem; break-inside: avoid; }
   @media (max-width: 640px) { .cols { columns: 1; } }

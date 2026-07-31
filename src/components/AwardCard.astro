@@ -1,0 +1,87 @@
+---
+import { getCollection } from 'astro:content';
+import { getAffiliate } from '../lib/affiliates';
+import award from '../data/featured-award.json';
+
+// Homepage award spotlight. Everything except the headline copy comes from the
+// platform page and affiliates.json, so swapping the winner is a one-line edit
+// in src/data/featured-award.json.
+const a = award as any;
+const platforms = await getCollection('platforms');
+const platform = platforms.find((p) => p.data.slug === a.slug)?.data;
+const affiliate = getAffiliate(a.slug);
+const show = a.show !== false && !!platform;
+---
+{show && (
+  <aside class="award" aria-label={`Editor's pick: ${a.award} ${a.year}`}>
+    <div class="award-ribbon">
+      <svg class="award-seal" viewBox="0 0 24 24" aria-hidden="true" fill="none">
+        <circle cx="12" cy="9.5" r="6" stroke="currentColor" stroke-width="1.6" />
+        <path d="M9 8.9l2 2 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M8.4 15.2L7 22l5-2.4L17 22l-1.4-6.8" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" />
+      </svg>
+      <span>Editor's Pick · {a.year}</span>
+    </div>
+
+    <div class="award-body">
+      <p class="award-title">{a.award}</p>
+      <p class="award-winner">{platform.name}</p>
+      <p class="award-verdict">{a.verdict}</p>
+
+      <dl class="award-facts">
+        <dt>Starting price</dt>
+        <dd>{platform.entryPrice}</dd>
+      </dl>
+
+      {affiliate ? (
+        <a class="award-cta" href={`/go/${a.slug}`} rel="sponsored nofollow noopener">
+          {a.cta} →
+        </a>
+      ) : (
+        <a class="award-cta" href={`/platforms/${a.slug}/`}>{a.cta} →</a>
+      )}
+
+      {affiliate?.readerOffer && <p class="award-offer">{affiliate.readerOffer}</p>}
+
+      {affiliate && (
+        <p class="award-disclose" data-affiliate-disclosure>
+          Affiliate link. <a href="/disclosure/">How this site makes money</a>.
+        </p>
+      )}
+
+      <p class="award-why">
+        <a href={`/platforms/${a.slug}/`}>Why {platform.name} won →</a>
+      </p>
+    </div>
+  </aside>
+)}
+
+<style>
+  .award { border: 2px solid var(--color-ink); border-radius: 5px; background: #fff;
+    box-shadow: 0 14px 34px -22px rgba(0,0,0,.55); overflow: hidden; }
+  .award-ribbon { background: var(--color-ink); color: #f5d38b; display: flex; align-items: center;
+    gap: .45rem; padding: .5rem .9rem; font-size: .7rem; font-weight: 800; letter-spacing: .12em;
+    text-transform: uppercase; }
+  .award-seal { width: 1.05rem; height: 1.05rem; flex: none; }
+  .award-body { padding: .95rem 1.05rem 1.1rem; }
+  .award-title { margin: 0; font-size: .78rem; font-weight: 800; letter-spacing: .06em;
+    text-transform: uppercase; color: var(--color-muted); }
+  .award-winner { margin: .1rem 0 .4rem; font-size: 1.65rem; font-weight: 800; letter-spacing: -.02em;
+    line-height: 1.05; }
+  .award-verdict { margin: 0 0 .8rem; font-size: .9rem; color: var(--color-muted); }
+  .award-facts { display: flex; align-items: baseline; gap: .5rem; margin: 0 0 .9rem;
+    padding-top: .7rem; border-top: 1px solid var(--color-rule); }
+  .award-facts dt { font-size: .64rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase;
+    color: var(--color-muted); }
+  .award-facts dd { margin: 0; font-size: .92rem; font-weight: 700; color: var(--color-green-deep); }
+  .award-cta { display: block; text-align: center; background: var(--color-green-deep); color: #fff;
+    font-weight: 800; font-size: .92rem; text-decoration: none; padding: .6rem .9rem; border-radius: 3px; }
+  .award-cta:hover { background: var(--color-green); }
+  .award-offer { margin: .5rem 0 0; text-align: center; font-size: .76rem; font-weight: 700;
+    color: var(--color-green-deep); }
+  .award-disclose { margin: .55rem 0 0; text-align: center; font-size: .68rem; color: var(--color-muted); }
+  .award-disclose a { color: var(--color-muted); }
+  .award-why { margin: .5rem 0 0; text-align: center; font-size: .78rem; }
+  .award-why a { color: var(--color-muted); }
+  .award-why a:hover { color: var(--color-green-deep); }
+</style>

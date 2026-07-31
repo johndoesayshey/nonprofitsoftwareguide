@@ -74,6 +74,26 @@ npm run build
 - [ ] Verify Google Search Console, then submit `https://nonprofitsoftwareguide.com/sitemap.xml`
 - [ ] Read the /disclosure page once and confirm you're comfortable with the wording (it's drafted for you)
 
+## The homepage award (your best conversion slot)
+
+The card in the top right of the homepage is the most valuable space on the
+site. Point it at whichever program pays you best and is actually approved.
+
+To change the winner, edit `src/data/featured-award.json`:
+
+- `slug` — any platform slug (`jotform`, `instrumentl`, `donorbox`, `donordock`,
+  `bloomerang`, `grantable`...). Price, link and reader discount are pulled in
+  automatically from that platform's page and `affiliates.json`.
+- `award` — the award name, e.g. "Most Versatile Software"
+- `verdict` — one or two honest sentences on why it won
+- `cta` — the button text
+- `show` — set to `false` to hide the card entirely
+
+Rotate it when a better-paying program approves, or seasonally to keep the page
+fresh. Keep the claim honest and specific: it is labeled Editor's Pick because it
+is your editorial opinion, not a third-party award, and that distinction is what
+keeps it credible with both readers and affiliate managers.
+
 ## Affiliate applications (the money list)
 
 Apply in this order: fastest approvals and best payouts first. When one is
