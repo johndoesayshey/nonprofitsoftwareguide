@@ -57,6 +57,19 @@ function candidates(text) {
   return [...new Set(out)];
 }
 
+// Rendered HTML carries Astro/editor bookkeeping attributes that never appear in
+// source. Strip them so an edited paragraph can be matched back to its file.
+function cleanHtml(html) {
+  return String(html)
+    .replace(/\s+data-astro-[a-z-]+(="[^"]*")?/g, '')
+    .replace(/\s+data-nsg-[a-z-]+(="[^"]*")?/g, '')
+    .replace(/\s+contenteditable="[^"]*"/g, '')
+    .replace(/\s+spellcheck="[^"]*"/g, '')
+    .replace(/\s+class="((?:nsg-[^"\s]*|astro-[^"\s]*)(?:\s+(?:nsg-[^"\s]*|astro-[^"\s]*))*)"/g, '')
+    .replace(/(\s+class=")((?:[^"]*?)\s*)((?:nsg-|astro-)[^"\s]*\s*)/g, '$1$2')
+    .replace(/\s+class=""/g, '');
+}
+
 function writeSpan(file, raw, start, end, updated) {
   writeFileSync(file, raw.slice(0, start) + updated.trim() + raw.slice(end));
   return { ok: true, file: file.replace(ROOT, '') };
@@ -143,7 +156,8 @@ function applyByFile(original, updated, file) {
   return null;
 }
 
-function applyEdit(original, updated, file, line, page) {
+function applyEdit(original, updated, file, line, page, isHtml) {
+  if (isHtml) { original = cleanHtml(original); updated = cleanHtml(updated); }
   return applyByLocation(original, updated, file, line)
       ?? applyByFile(original, updated, fileForPage(page))
       ?? applyByText(original, updated);
@@ -311,12 +325,25 @@ const CLIENT = `
   var on = true;
 
   var SEL = 'p,h1,h2,h3,h4,li,td,th,figcaption,blockquote,span,small,dd,dt,div,summary,strong,em,label';
+  // Text-only elements are simplest, but most real prose has links in it. Allow
+  // those too, as long as every child is a plain inline tag we can round-trip.
+  var INLINE_OK = { A: 1, STRONG: 1, EM: 1, B: 1, I: 1, CODE: 1, SMALL: 1, ABBR: 1, SPAN: 1 };
+  function inlineOnly(el) {
+    for (var i = 0; i < el.children.length; i++) {
+      var c = el.children[i];
+      if (!INLINE_OK[c.tagName]) return false;
+      if (c.children.length > 0) return false;         // no nested markup
+    }
+    return true;
+  }
   function eligible(el) {
-    if (el.closest('#nsg-bar')) return false;
-    if (el.children.length > 0) return false;          // text-only nodes stay safe to write back
+    if (el.closest('#nsg-bar') || el.closest('#nsg-composer')) return false;
+    if (!inlineOnly(el)) return false;
     var t = (el.textContent || '').trim();
     return t.length >= 1 && t.length < 3000;
   }
+  function isHtmlEl(el) { return el.children.length > 0; }
+  function valueOf(el) { return isHtmlEl(el) ? el.innerHTML : el.textContent; }
 
   function mark() {
     document.querySelectorAll(SEL).forEach(function (el) {
@@ -327,17 +354,19 @@ const CLIENT = `
       if (el.dataset.nsgBound) return;
       el.dataset.nsgBound = '1';
       el.addEventListener('focus', function () {
-        if (!el.dataset.nsgOriginal) el.dataset.nsgOriginal = el.textContent;
+        if (!el.dataset.nsgOriginal) el.dataset.nsgOriginal = valueOf(el);
       });
       el.addEventListener('input', function () {
         var orig = el.dataset.nsgOriginal || '';
-        if (el.textContent.trim() !== orig.trim()) { edits.set(el, orig); el.classList.add('nsg-dirty'); }
+        if (valueOf(el).trim() !== orig.trim()) { edits.set(el, orig); el.classList.add('nsg-dirty'); }
         else { edits.delete(el); el.classList.remove('nsg-dirty'); }
         refresh();
       });
       el.addEventListener('keydown', function (e) {
         if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); el.blur(); }
-        if (e.key === 'Escape') { el.textContent = el.dataset.nsgOriginal; edits.delete(el);
+        if (e.key === 'Escape') {
+          if (isHtmlEl(el)) el.innerHTML = el.dataset.nsgOriginal; else el.textContent = el.dataset.nsgOriginal;
+          edits.delete(el);
           el.classList.remove('nsg-dirty'); el.blur(); refresh(); }
       });
     });
@@ -368,7 +397,8 @@ const CLIENT = `
     edits.forEach(function (orig, el) {
       payload.push({
         original: orig,
-        updated: el.textContent,
+        updated: valueOf(el),
+        isHtml: isHtmlEl(el),
         file: el.getAttribute('data-nsg-file') || '',
         line: parseInt(el.getAttribute('data-nsg-line'), 10) || 0,
         page: location.pathname
@@ -704,7 +734,7 @@ createServer(async (req, res) => {
     try {
       const { edits } = JSON.parse(body);
       results = edits.map((e) => {
-        const r = applyEdit(e.original, e.updated, e.file, e.line, e.page);
+        const r = applyEdit(e.original, e.updated, e.file, e.line, e.page, e.isHtml);
         const label = e.original.slice(0, 55).replace(/\s+/g, ' ');
         if (r.ok) console.log(green(`  ✓ ${r.file}  "${label}…"`));
         else console.log(yellow(`  ! skipped (${r.reason}): "${label}…"`));

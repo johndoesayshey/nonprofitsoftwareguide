@@ -5,7 +5,7 @@ import AffiliateDisclosure from '../../components/AffiliateDisclosure.astro';
 import { comparePairs } from '../../lib/compare';
 import { CATEGORIES } from '../../lib/categories';
 import { getAffiliate } from '../../lib/affiliates';
-import { valueOf, categoryValue, potentialOf } from '../../lib/affiliate-value';
+import { valueOf, categoryValue, relFor } from '../../lib/affiliate-value';
 
 // List only comparisons where BOTH sides are published.
 const pairs = (await comparePairs()).filter((p) => p.a.data.draft === false && p.b.data.draft === false);
@@ -79,7 +79,6 @@ for (const p of pairs) {
                 <tbody>
                   {tools.map((t) => {
                     const aff = t.data.affiliateSlug ? getAffiliate(t.data.affiliateSlug) : undefined;
-                    const earns = potentialOf(t.data.affiliateSlug) !== 'none';
                     return (
                       <tr>
                         <th scope="row"><a href={`/platforms/${t.data.slug}/`}>{t.data.name}</a></th>
@@ -87,11 +86,7 @@ for (const p of pairs) {
                         <td>{t.data.freeTier ? 'Yes' : 'No'}</td>
                         <td class="cmp-best">{t.data.bestFor}</td>
                         <td class="cmp-cta">
-                          {earns && t.data.affiliateSlug ? (
-                            <a class="btn-visit" href={`/go/${t.data.affiliateSlug}`} rel="sponsored nofollow noopener">Visit →</a>
-                          ) : (
-                            <a class="link-review" href={`/platforms/${t.data.slug}/`}>Review</a>
-                          )}
+                          <a class="btn-visit" href={`/go/${t.data.affiliateSlug}`} rel={relFor(t.data.affiliateSlug)}>Visit →</a>
                           {aff?.readerOffer && <span class="offer">{aff.readerOffer}</span>}
                         </td>
                       </tr>

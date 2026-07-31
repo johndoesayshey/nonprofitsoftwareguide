@@ -52,10 +52,7 @@ const siteLd = {
         <div class="hero-head">
           <p class="kicker">fundraising stack RECOMMENDATIONS</p>
           <h1>What software you need by the size of your operation.</h1>
-        </div>
-        <AwardCard />
-      </div>
-      <div class="cols">
+          <div class="cols">
         <p>
           A software "stack" is all the software you use to run your fundraising
           operation. Most non-profits have a way to
@@ -72,6 +69,9 @@ const siteLd = {
         <p>
           Built by a frontline fundraiser with over 15 years experience alongside hundreds of hours of information interviews with 20+ frontline fundraisers across the USA. We make real recommendations you can confidently take to your board and other decision makers.
         </p>
+          </div>
+        </div>
+        <AwardCard />
       </div>
     </section>
   </div>
@@ -136,14 +136,15 @@ const siteLd = {
 
 <style>
   .hero { padding: clamp(2.2rem, 6vw, 4.4rem) 0 clamp(1.2rem, 3vw, 2rem); }
-  .hero h1 { max-width: 17ch; }
+  .hero h1 { max-width: 15ch; margin-bottom: 1.2rem; }
   /* Headline left, award spotlight in what used to be dead space on the right. */
   .hero-top { display: grid; grid-template-columns: minmax(0, 1fr) 21rem; gap: 2.6rem;
     align-items: start; margin-bottom: clamp(1.4rem, 3vw, 2.2rem); }
+  .hero-head { min-width: 0; }
   @media (max-width: 900px) { .hero-top { grid-template-columns: 1fr; gap: 1.6rem; } }
-  .cols { columns: 2; column-gap: 2.4rem; color: var(--color-muted); max-width: 54rem; }
-  .cols p { margin: 0 0 1rem; break-inside: avoid; }
-  @media (max-width: 640px) { .cols { columns: 1; } }
+  /* Intro copy sits beside the award card so the hero has no dead corner. */
+  .cols { color: var(--color-muted); max-width: 40rem; }
+  .cols p { margin: 0 0 1rem; }
   .section-h { font-size: .95rem; text-transform: uppercase; letter-spacing: .14em;
     color: var(--color-muted); font-weight: 700; margin: 2.4rem 0 .4rem; }
 </style>

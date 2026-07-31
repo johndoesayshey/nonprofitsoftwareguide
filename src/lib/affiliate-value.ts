@@ -43,3 +43,12 @@ export function categoryValue(slugs: string[]): number {
   const vals = slugs.map(valueOf).sort((a, b) => b - a);
   return vals[0] + vals.slice(1).reduce((n, v) => n + v * 0.25, 0);
 }
+
+/**
+ * Every product links out through /go/ so clicks are consistent and a link starts
+ * earning the moment a program is approved. Only claim "sponsored" where there is
+ * actually a program behind it.
+ */
+export function relFor(slug: string | null | undefined): string {
+  return potentialOf(slug) === 'none' ? 'nofollow noopener' : 'sponsored nofollow noopener';
+}
