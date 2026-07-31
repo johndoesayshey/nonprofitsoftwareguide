@@ -2,6 +2,7 @@
 import { getCollection } from 'astro:content';
 import { CATEGORIES } from '../lib/categories';
 import { getAffiliate } from '../lib/affiliates';
+import { byValue, potentialOf } from '../lib/affiliate-value';
 
 interface Props {
   category: string; // category slug
@@ -9,16 +10,62 @@ interface Props {
 const { category } = Astro.props;
 const meta = CATEGORIES[category];
 
-const platforms = (await getCollection('platforms', ({ data }) => data.draft === false))
+// Tools are listed highest-earning first. Products with no working affiliate
+// program still appear (a guide that hides the free options is not credible)
+// but they sink to the bottom rather than leading the page.
+const inCategory = (await getCollection('platforms', ({ data }) => data.draft === false))
   .filter((p) => p.data.category === category)
   .sort((a, b) => a.data.name.localeCompare(b.data.name));
+
+const platforms = byValue(inCategory, (p) => p.data.affiliateSlug);
 
 const posts = (await getCollection('posts', ({ data }) => data.draft === false))
   .filter((p) => p.data.platformsMentioned.some((s) => platforms.find((pl) => pl.data.slug === s)))
   .sort((a, b) => +b.data.publishDate - +a.data.publishDate);
 ---
+{platforms.length > 1 && (
+  <div class="prose" style="max-width: none;">
+    <h2>Compare at a glance</h2>
+    <div class="cmp-scroll">
+      <table class="cmp">
+        <thead>
+          <tr>
+            <th scope="col">Tool</th>
+            <th scope="col">Starting price</th>
+            <th scope="col">Free tier</th>
+            <th scope="col">Best for</th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+          {platforms.map((p) => {
+            const aff = p.data.affiliateSlug ? getAffiliate(p.data.affiliateSlug) : undefined;
+            const earns = potentialOf(p.data.affiliateSlug) !== 'none';
+            return (
+              <tr>
+                <th scope="row"><a href={`/platforms/${p.data.slug}/`}>{p.data.name}</a></th>
+                <td class="num">{p.data.entryPrice}</td>
+                <td>{p.data.freeTier ? 'Yes' : 'No'}</td>
+                <td class="cmp-best">{p.data.bestFor}</td>
+                <td class="cmp-cta">
+                  {earns && p.data.affiliateSlug ? (
+                    <a class="btn-visit" href={`/go/${p.data.affiliateSlug}`} rel="sponsored nofollow noopener">Visit →</a>
+                  ) : (
+                    <a class="link-review" href={`/platforms/${p.data.slug}/`}>Review</a>
+                  )}
+                  {aff?.readerOffer && <span class="offer">{aff.readerOffer}</span>}
+                </td>
+              </tr>
+            );
+          })}
+        </tbody>
+      </table>
+    </div>
+  </div>
+)}
+
 <div class="prose" style="max-width: none;">
-  <h2>The tools, at a glance</h2>
+  <h2>The tools in detail</h2>
 </div>
 
 {platforms.length === 0 ? (
@@ -27,6 +74,7 @@ const posts = (await getCollection('posts', ({ data }) => data.draft === false))
   <div class="tool-grid">
     {platforms.map((p) => {
       const aff = p.data.affiliateSlug ? getAffiliate(p.data.affiliateSlug) : undefined;
+      const earns = potentialOf(p.data.affiliateSlug) !== 'none';
       return (
         <div class="tool-card">
           <div class="tool-head">
@@ -36,9 +84,9 @@ const posts = (await getCollection('posts', ({ data }) => data.draft === false))
           <p class="tool-price num">{p.data.entryPrice}</p>
           <p class="tool-best">{p.data.bestFor}</p>
           <div class="tool-actions">
-            {aff && p.data.affiliateSlug ? (
+            {earns && p.data.affiliateSlug && (
               <a class="btn-visit" href={`/go/${p.data.affiliateSlug}`} rel="sponsored nofollow noopener">Visit site →</a>
-            ) : null}
+            )}
             <a class="link-review" href={`/platforms/${p.data.slug}/`}>Review</a>
           </div>
           {aff?.readerOffer && <p class="offer">{aff.readerOffer}</p>}
@@ -58,6 +106,19 @@ const posts = (await getCollection('posts', ({ data }) => data.draft === false))
 )}
 
 <style>
+  .cmp-scroll { overflow-x: auto; margin: 1rem 0 1.6rem; }
+  table.cmp { width: 100%; min-width: 44rem; border-collapse: collapse; font-size: .92rem; }
+  table.cmp th, table.cmp td { text-align: left; padding: .6rem .7rem; border-bottom: 1px solid var(--color-rule);
+    vertical-align: top; }
+  table.cmp thead th { font-size: .68rem; letter-spacing: .08em; text-transform: uppercase; font-weight: 800;
+    color: var(--color-muted); border-bottom: 2px solid var(--color-ink); }
+  table.cmp tbody th a { font-weight: 800; text-decoration: none; color: var(--color-ink); }
+  table.cmp tbody th a:hover { color: var(--color-green-deep); text-decoration: underline; }
+  table.cmp .num { font-weight: 700; color: var(--color-green-deep); white-space: nowrap; }
+  .cmp-best { color: var(--color-muted); }
+  .cmp-cta { white-space: nowrap; }
+  .cmp-cta .offer { display: block; margin-top: .25rem; }
+
   .tool-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 17rem), 1fr));
     gap: 1rem; margin: 1rem 0; }
   .tool-card { border: 1px solid var(--color-rule-strong); border-radius: 4px; padding: 1rem 1.1rem;

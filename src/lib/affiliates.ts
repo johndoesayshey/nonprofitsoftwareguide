@@ -13,6 +13,11 @@ export interface Affiliate {
   signupUrl: string | null;
   appliedOn: string | null;
   approvedOn: string | null;
+  payout?: string;
+  potential?: 'high' | 'medium' | 'low' | 'unknown' | 'none';
+  badge?: string;
+  potentialNote?: string;
+  evidence?: { url: string; checked: string; quote: string } | null;
 }
 
 const affiliates = affiliatesData as Record<string, Affiliate>;

@@ -1,5 +1,7 @@
 ---
+import { getCollection } from 'astro:content';
 import { CATEGORIES } from '../lib/categories';
+import { categoryValue } from '../lib/affiliate-value';
 
 interface Props {
   section?: string;
@@ -7,23 +9,23 @@ interface Props {
 const { section } = Astro.props;
 
 // The six software categories live behind one "Software" menu so the nav stays
-// short. Everything else keeps its own top-level link.
-const categoryOrder = [
-  'donor-crm',
-  'grant-research',
-  'donation-processing',
-  'events-auctions',
-  'prospect-research',
-  'forms-ops',
-];
+// short, ordered by how much the category can actually earn. Categories with no
+// working affiliate program sink to the bottom. This reorders itself from
+// affiliates.json as programs are approved or die.
+const allPlatforms = await getCollection('platforms');
+const categories = Object.values(CATEGORIES)
+  .filter((c) => c.path)
+  .map((c) => ({
+    href: c.path!,
+    label: c.label,
+    key: c.slug,
+    value: categoryValue(
+      allPlatforms.filter((p) => p.data.category === c.slug).map((p) => p.data.affiliateSlug ?? '')
+    ),
+  }))
+  .sort((a, b) => b.value - a.value);
 
-const categories = categoryOrder.map((slug) => ({
-  href: CATEGORIES[slug].path!,
-  label: CATEGORIES[slug].label,
-  key: slug,
-}));
-
-const softwareActive = categoryOrder.includes(section ?? '');
+const softwareActive = categories.some((c) => c.key === section);
 
 // "Stacks" points home: the homepage already is the stack index, so a separate
 // /stacks/ page would compete with it for the same search intent.

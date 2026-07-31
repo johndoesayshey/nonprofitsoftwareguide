@@ -1,38 +1,140 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import AffiliateDisclosure from '../../components/AffiliateDisclosure.astro';
 import { comparePairs } from '../../lib/compare';
 import { CATEGORIES } from '../../lib/categories';
+import { getAffiliate } from '../../lib/affiliates';
+import { valueOf, categoryValue, potentialOf } from '../../lib/affiliate-value';
 
-// List only comparisons where BOTH sides are published — an unverified side would
-// mean an unverified table. Draft comparisons still build (noindex) for preview.
+// List only comparisons where BOTH sides are published.
 const pairs = (await comparePairs()).filter((p) => p.a.data.draft === false && p.b.data.draft === false);
-const grouped = Object.values(CATEGORIES).map((cat) => ({
-  cat,
-  items: pairs.filter((p) => p.category === cat.slug),
-})).filter((g) => g.items.length > 0);
+
+// Categories first by what they can earn, then pairs within each category by the
+// combined value of the two products. Same ordering as the Software menu.
+const grouped = Object.values(CATEGORIES)
+  .map((cat) => {
+    const items = pairs
+      .filter((p) => p.category === cat.slug)
+      .map((p) => ({
+        ...p,
+        value: valueOf(p.a.data.affiliateSlug) + valueOf(p.b.data.affiliateSlug),
+      }))
+      .sort((x, y) => y.value - x.value || x.slug.localeCompare(y.slug));
+    const slugs = [...new Set(items.flatMap((p) => [p.a.data.affiliateSlug, p.b.data.affiliateSlug]))]
+      .filter(Boolean) as string[];
+    return { cat, items, value: categoryValue(slugs) };
+  })
+  .filter((g) => g.items.length > 0)
+  .sort((a, b) => b.value - a.value);
+
+// Every published product per category, for the at-a-glance tables.
+const byCategory = new Map<string, typeof pairs[number]['a'][]>();
+for (const p of pairs) {
+  for (const side of [p.a, p.b]) {
+    const list = byCategory.get(p.category) ?? [];
+    if (!list.find((x) => x.data.slug === side.data.slug)) list.push(side);
+    byCategory.set(p.category, list);
+  }
+}
 ---
-<BaseLayout title="Head-to-head software comparisons" description="Side-by-side comparisons of nonprofit fundraising tools (price, free tier, fit) for every meaningful pair we cover." section="compare">
+<BaseLayout
+  title="Compare nonprofit fundraising software"
+  description="Side-by-side comparisons of nonprofit fundraising tools: price, free tier, and fit, for every meaningful pair we cover."
+  section="compare">
   <div class="wrap">
     <Breadcrumbs crumbs={[{ label: 'Home', href: '/' }, { label: 'Compare' }]} />
-    <section class="prose" style="margin-top: 1.2rem;">
+    <section class="prose" style="max-width: none;">
       <p class="kicker">Head to head</p>
       <h1>Software comparisons</h1>
-      <p class="lede">Every meaningful pairing within a category, lined up on price, free tier, and fit.</p>
+      <p class="lede" style="max-width: 46ch;">
+        Every tool we cover, lined up by category, plus a head-to-head page for
+        each meaningful pairing.
+      </p>
+
+      <AffiliateDisclosure />
 
       {grouped.length === 0 ? (
         <p class="empty">Comparisons appear here as platform write-ups are published.</p>
-      ) : grouped.map((g) => (
-        <section>
-          <h2>{g.cat.label}</h2>
-          <ul>
-            {g.items.map((p) => (
-              <li><a href={`/compare/${p.slug}/`}>{p.a.data.name} vs {p.b.data.name}</a></li>
-            ))}
-          </ul>
-        </section>
-      ))}
+      ) : grouped.map((g) => {
+        const tools = (byCategory.get(g.cat.slug) ?? [])
+          .map((t) => ({ t, v: valueOf(t.data.affiliateSlug) }))
+          .sort((a, b) => b.v - a.v || a.t.data.name.localeCompare(b.t.data.name))
+          .map((x) => x.t);
+        return (
+          <section class="cmp-block">
+            <h2>{g.cat.label}</h2>
+
+            <div class="cmp-scroll">
+              <table class="cmp">
+                <thead>
+                  <tr>
+                    <th scope="col">Tool</th>
+                    <th scope="col">Starting price</th>
+                    <th scope="col">Free tier</th>
+                    <th scope="col">Best for</th>
+                    <th scope="col"></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {tools.map((t) => {
+                    const aff = t.data.affiliateSlug ? getAffiliate(t.data.affiliateSlug) : undefined;
+                    const earns = potentialOf(t.data.affiliateSlug) !== 'none';
+                    return (
+                      <tr>
+                        <th scope="row"><a href={`/platforms/${t.data.slug}/`}>{t.data.name}</a></th>
+                        <td class="num">{t.data.entryPrice}</td>
+                        <td>{t.data.freeTier ? 'Yes' : 'No'}</td>
+                        <td class="cmp-best">{t.data.bestFor}</td>
+                        <td class="cmp-cta">
+                          {earns && t.data.affiliateSlug ? (
+                            <a class="btn-visit" href={`/go/${t.data.affiliateSlug}`} rel="sponsored nofollow noopener">Visit →</a>
+                          ) : (
+                            <a class="link-review" href={`/platforms/${t.data.slug}/`}>Review</a>
+                          )}
+                          {aff?.readerOffer && <span class="offer">{aff.readerOffer}</span>}
+                        </td>
+                      </tr>
+                    );
+                  })}
+                </tbody>
+              </table>
+            </div>
+
+            <ul class="pair-list">
+              {g.items.map((p) => (
+                <li><a href={`/compare/${p.slug}/`}>{p.a.data.name} vs {p.b.data.name}</a></li>
+              ))}
+            </ul>
+          </section>
+        );
+      })}
     </section>
   </div>
 </BaseLayout>
-<style>.empty { color: var(--color-muted); font-style: italic; }</style>
+
+<style>
+  .cmp-block { margin: 2rem 0 2.4rem; }
+  .cmp-scroll { overflow-x: auto; margin: .8rem 0 1rem; }
+  table.cmp { width: 100%; min-width: 44rem; border-collapse: collapse; font-size: .92rem; }
+  table.cmp th, table.cmp td { text-align: left; padding: .6rem .7rem;
+    border-bottom: 1px solid var(--color-rule); vertical-align: top; }
+  table.cmp thead th { font-size: .68rem; letter-spacing: .08em; text-transform: uppercase;
+    font-weight: 800; color: var(--color-muted); border-bottom: 2px solid var(--color-ink); }
+  table.cmp tbody th a { font-weight: 800; text-decoration: none; color: var(--color-ink); }
+  table.cmp tbody th a:hover { color: var(--color-green-deep); text-decoration: underline; }
+  table.cmp .num { font-weight: 700; color: var(--color-green-deep); white-space: nowrap; }
+  .cmp-best { color: var(--color-muted); }
+  .cmp-cta { white-space: nowrap; }
+  .btn-visit { display: inline-block; background: var(--color-green-deep); color: #fff; font-weight: 700;
+    text-decoration: none; padding: .35rem .7rem; border-radius: 3px; font-size: .82rem; }
+  .btn-visit:hover { background: var(--color-green); }
+  .link-review { font-size: .84rem; font-weight: 600; }
+  .offer { display: block; margin-top: .25rem; font-size: .72rem; font-weight: 700; color: var(--color-green-deep); }
+  .pair-list { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: .4rem .6rem; }
+  .pair-list li { margin: 0; }
+  .pair-list a { display: inline-block; border: 1px solid var(--color-rule-strong); border-radius: 999px;
+    padding: .25rem .7rem; font-size: .85rem; text-decoration: none; color: var(--color-ink); }
+  .pair-list a:hover { border-color: var(--color-green); color: var(--color-green-deep); }
+  .empty { color: var(--color-muted); font-style: italic; }
+</style>

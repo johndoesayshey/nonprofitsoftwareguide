@@ -9,7 +9,7 @@
 // nothing in the built site.
 import { createServer } from 'node:http';
 import { spawn } from 'node:child_process';
-import { readFileSync, writeFileSync, readdirSync, statSync } from 'node:fs';
+import { readFileSync, writeFileSync, readdirSync, statSync, existsSync } from 'node:fs';
 import { join, extname } from 'node:path';
 import { ROOT, loadAffiliates, green, yellow, red, bold } from './_lib.mjs';
 
@@ -113,8 +113,40 @@ function applyByText(original, updated) {
   return writeSpan(file, raw, start, end, updated);
 }
 
-function applyEdit(original, updated, file, line) {
-  return applyByLocation(original, updated, file, line) ?? applyByText(original, updated);
+// Markdown-rendered body content carries no Astro source stamp, so map the page
+// URL back to its content file and search just that file. Far safer than a
+// site-wide text match.
+function fileForPage(page) {
+  const m = String(page || '').match(/^\/(blog|platforms|stacks)\/([^/]+)\/?$/);
+  if (!m) return null;
+  const dir = { blog: 'posts', platforms: 'platforms', stacks: 'stacks' }[m[1]];
+  for (const ext of ['.md', '.mdx']) {
+    const f = join(SRC, 'content', dir, m[2] + ext);
+    if (existsSync(f)) return f;
+  }
+  return null;
+}
+
+function applyByFile(original, updated, file) {
+  if (!file) return null;
+  let raw;
+  try { raw = readFileSync(file, 'utf8'); } catch { return null; }
+  const { norm: nsrc, map } = normalizeWithMap(raw);
+  for (const t of candidates(norm(original))) {
+    const first = nsrc.indexOf(t);
+    if (first === -1) continue;
+    if (nsrc.indexOf(t, first + 1) !== -1) {
+      return { ok: false, reason: 'appears twice in this file; edit it directly' };
+    }
+    return writeSpan(file, raw, map[first], map[first + t.length - 1] + 1, updated);
+  }
+  return null;
+}
+
+function applyEdit(original, updated, file, line, page) {
+  return applyByLocation(original, updated, file, line)
+      ?? applyByFile(original, updated, fileForPage(page))
+      ?? applyByText(original, updated);
 }
 
 // ---------- feedback notes ----------------------------------------------------
@@ -282,7 +314,6 @@ const CLIENT = `
   function eligible(el) {
     if (el.closest('#nsg-bar')) return false;
     if (el.children.length > 0) return false;          // text-only nodes stay safe to write back
-    if (!el.getAttribute('data-nsg-file')) return false;
     var t = (el.textContent || '').trim();
     return t.length >= 1 && t.length < 3000;
   }
@@ -339,7 +370,8 @@ const CLIENT = `
         original: orig,
         updated: el.textContent,
         file: el.getAttribute('data-nsg-file') || '',
-        line: parseInt(el.getAttribute('data-nsg-line'), 10) || 0
+        line: parseInt(el.getAttribute('data-nsg-line'), 10) || 0,
+        page: location.pathname
       });
     });
     msg('Saving…');
@@ -672,7 +704,7 @@ createServer(async (req, res) => {
     try {
       const { edits } = JSON.parse(body);
       results = edits.map((e) => {
-        const r = applyEdit(e.original, e.updated, e.file, e.line);
+        const r = applyEdit(e.original, e.updated, e.file, e.line, e.page);
         const label = e.original.slice(0, 55).replace(/\s+/g, ' ');
         if (r.ok) console.log(green(`  ✓ ${r.file}  "${label}…"`));
         else console.log(yellow(`  ! skipped (${r.reason}): "${label}…"`));

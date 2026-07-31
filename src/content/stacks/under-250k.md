@@ -21,9 +21,9 @@ components:
     annualCost: "$0-$600/yr"
     rationale: "AI grant writing; free to start, $50/mo when application volume grows"
   - category: forms-ops
-    platformSlug: airtable
+    platformSlug: monday
     annualCost: "$0"
-    rationale: "Free tier covers rosters, trackers, and the lists that aren't donor data"
+    rationale: "Free plan covers grant deadlines, program tracking, and the work that isn't donor data"
 ---
 
 At under $250k raised, your fundraising stack should cost almost nothing: free processing, free events, free operations tools, and one smart spend on grant writing help. Budget $0 to about $600 a year. What a grassroots shop is short on is hours, and the one paid line here buys hours back.
@@ -36,7 +36,7 @@ At under $250k raised, your fundraising stack should cost almost nothing: free p
 
 **Grant writing: Grantable ($0 to start, $50/mo as you grow).** The honest problem at this size isn't finding grant lists; it's the writing. Federal portals are a poor fit for grassroots shops (federal grants demand compliance capacity small organizations don't have yet), and foundation prospects are findable free at a [Candid](/go/candid) partner library. The bottleneck is drafting, and [Grantable's](/go/grantable) AI drafts from your past applications turn a two-hour proposal into a forty-minute edit. Start on the free plan; nonprofits under $500k get half off the first paid year.
 
-**Operations: Airtable ($0).** Program rosters, volunteer lists, a grant-deadline tracker. [Airtable's](/go/airtable) free tier covers a small shop, and [monday.com](/go/monday) is the alternative if your work is more projects than lists. Many grassroots shops pay for one of these before anything donor-facing, which is a sane order of operations.
+**Operations: monday.com ($0).** Grant deadlines, program tracking, volunteer coordination. [monday.com's](/go/monday) free plan covers two seats, which is a small shop, and there is a nonprofit program with discounted paid plans when you outgrow it. Many grassroots shops pay for something like this before anything donor-facing, which is a sane order of operations.
 
 ## What to cut first when the budget gets cut
 

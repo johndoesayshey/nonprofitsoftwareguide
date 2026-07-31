@@ -38,7 +38,7 @@ Apply to the nonprofit program before paying list price; discounted plans are av
 
 ## How it compares
 
-[Airtable](/platforms/airtable/) is the database-shaped alternative: better for structured lists, lighter on project workflow. [Jotform](/go/jotform) handles the intake forms that feed either one. None of these replaces a donor CRM; anything you learn about a donor still belongs in the [database of record](/donor-crm/).
+[Jotform](/go/jotform) handles the intake forms that feed your boards. None of these replaces a donor CRM; anything you learn about a donor still belongs in the [database of record](/donor-crm/).
 
 ## Bottom line
 

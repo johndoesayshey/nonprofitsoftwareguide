@@ -1,9 +1,9 @@
 {
   "_comment": "The homepage award spotlight. To feature a different product, change `slug` to any platform slug (jotform, instrumentl, donorbox, donordock, bloomerang, grantable...) and rewrite award/verdict. Everything else on the card (price, link, reader offer) is pulled automatically from the platform page and affiliates.json. Set `show` to false to hide the card. Keep the verdict honest and specific: it is our own editorial pick, not a third-party accreditation.",
   "show": true,
-  "slug": "jotform",
-  "award": "Most Versatile Software",
+  "slug": "donordock",
+  "award": "Best CRM for a One-Person Shop",
   "year": 2026,
-  "verdict": "One tool handles program applications, volunteer intake, event registration and scholarship forms, and the nonprofit discount is permanent rather than a first-year teaser.",
-  "cta": "See Jotform pricing"
+  "verdict": "The ActionBoard turns the database into a daily follow-up list, which is the actual problem when fundraising is one person's third job. Unlimited contacts, and a 90-day money-back guarantee if it doesn't stick.",
+  "cta": "See DonorDock pricing"
 }

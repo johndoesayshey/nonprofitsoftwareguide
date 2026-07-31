@@ -39,7 +39,7 @@ The discount is permanent, not a first-year teaser, and the application is quick
 
 ## How it compares
 
-Generic form tools can take donations, but a [dedicated giving platform](/donation-processing/) converts better and handles receipts and recurring gifts properly; use Jotform for operations and a giving tool for gifts. For structured lists and light databases, [Airtable](/platforms/airtable/) covers the ground forms don't.
+Generic form tools can take donations, but a [dedicated giving platform](/donation-processing/) converts better and handles receipts and recurring gifts properly; use Jotform for operations and a giving tool for gifts. For the project and list work behind the forms, [monday.com](/go/monday) covers the ground forms don't.
 
 ## Bottom line
 
