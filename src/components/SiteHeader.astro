@@ -6,8 +6,8 @@ interface Props {
 }
 const { section } = Astro.props;
 
-// Top nav: Stacks first (the primary content unit), then every software category
-// exactly as the stacks cover them, then Compare / Benchmark / Blog.
+// The six software categories live behind one "Software" menu so the nav stays
+// short. Everything else keeps its own top-level link.
 const categoryOrder = [
   'donor-crm',
   'grant-research',
@@ -17,13 +17,16 @@ const categoryOrder = [
   'forms-ops',
 ];
 
-const nav = [
-  { href: '/stacks/', label: 'Stacks', key: 'stacks' },
-  ...categoryOrder.map((slug) => ({
-    href: CATEGORIES[slug].path!,
-    label: CATEGORIES[slug].short,
-    key: slug,
-  })),
+const categories = categoryOrder.map((slug) => ({
+  href: CATEGORIES[slug].path!,
+  label: CATEGORIES[slug].label,
+  key: slug,
+}));
+
+const softwareActive = categoryOrder.includes(section ?? '');
+
+const before = [{ href: '/stacks/', label: 'Stacks', key: 'stacks' }];
+const after = [
   { href: '/compare/', label: 'Compare', key: 'compare' },
   { href: '/benchmarks/', label: 'Benchmark', key: 'benchmark' },
   { href: '/blog/', label: 'Blog', key: 'blog' },
@@ -33,9 +36,45 @@ const nav = [
   <div class="wrap masthead">
     <a href="/" class="wordmark">Nonprofit Software <b>Guide</b></a>
     <nav class="site-nav" aria-label="Primary">
-      {nav.map((n) => (
+      {before.map((n) => (
+        <a href={n.href} aria-current={section === n.key ? 'page' : undefined}>{n.label}</a>
+      ))}
+
+      <details class="nav-menu" data-nav-menu>
+        <summary aria-current={softwareActive ? 'page' : undefined}>
+          Software<span class="caret" aria-hidden="true">▾</span>
+        </summary>
+        <ul>
+          {categories.map((c) => (
+            <li>
+              <a href={c.href} aria-current={section === c.key ? 'page' : undefined}>{c.label}</a>
+            </li>
+          ))}
+          <li class="nav-menu-all">
+            <a href="/platforms/">All platforms</a>
+          </li>
+        </ul>
+      </details>
+
+      {after.map((n) => (
         <a href={n.href} aria-current={section === n.key ? 'page' : undefined}>{n.label}</a>
       ))}
     </nav>
   </div>
 </header>
+
+<script is:inline>
+  // Close the menu on outside click or Escape. Without JS the <details> element
+  // still opens and closes on click, so the nav degrades gracefully.
+  (function () {
+    var menus = document.querySelectorAll('[data-nav-menu]');
+    document.addEventListener('click', function (e) {
+      menus.forEach(function (m) {
+        if (!m.contains(e.target)) m.removeAttribute('open');
+      });
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') menus.forEach(function (m) { m.removeAttribute('open'); });
+    });
+  })();
+</script>

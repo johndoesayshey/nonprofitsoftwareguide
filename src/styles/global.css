@@ -74,6 +74,35 @@ a { color: var(--color-green); }
 .site-nav a:hover { color: var(--color-ink); }
 .site-nav a[aria-current="page"] { color: var(--color-green-deep); box-shadow: 0 2px 0 var(--color-green-deep); }
 
+/* ---- "Software" dropdown ---- */
+.nav-menu { position: relative; }
+.nav-menu > summary { font-weight: 600; font-size: .82rem; color: var(--color-muted); cursor: pointer;
+  list-style: none; padding: .15rem 0; display: inline-flex; align-items: center; gap: .25rem;
+  user-select: none; }
+.nav-menu > summary::-webkit-details-marker { display: none; }
+.nav-menu > summary:hover { color: var(--color-ink); }
+.nav-menu > summary[aria-current="page"] { color: var(--color-green-deep); box-shadow: 0 2px 0 var(--color-green-deep); }
+.nav-menu > summary:focus-visible { outline: 3px solid var(--color-green); outline-offset: 2px; }
+.nav-menu .caret { font-size: .6em; transition: transform .12s ease; }
+.nav-menu[open] > summary { color: var(--color-ink); }
+.nav-menu[open] .caret { transform: rotate(180deg); }
+.nav-menu > ul { position: absolute; top: calc(100% + .5rem); left: 0; z-index: 50; margin: 0;
+  padding: .4rem; list-style: none; min-width: 15rem; background: #fff;
+  border: 1px solid var(--color-rule-strong); border-radius: 4px;
+  box-shadow: 0 12px 28px -14px rgba(0,0,0,.4); }
+.nav-menu > ul li { margin: 0; }
+.nav-menu > ul a { display: block; padding: .45rem .6rem; border-radius: 3px; font-size: .85rem;
+  color: var(--color-ink); text-decoration: none; white-space: nowrap; }
+.nav-menu > ul a:hover { background: var(--color-paper-2); color: var(--color-green-deep); }
+.nav-menu > ul a[aria-current="page"] { color: var(--color-green-deep); background: var(--color-paper-2);
+  box-shadow: none; }
+.nav-menu-all { border-top: 1px solid var(--color-rule); margin-top: .3rem !important; padding-top: .3rem; }
+.nav-menu-all a { color: var(--color-muted) !important; font-weight: 600; }
+@media (max-width: 640px) {
+  .nav-menu > ul { position: static; box-shadow: none; border: 0; padding: .2rem 0 .2rem .6rem;
+    min-width: 0; border-left: 2px solid var(--color-rule); border-radius: 0; margin: .3rem 0; }
+}
+
 .site-footer { border-top: 1px solid var(--color-ink); margin-top: 3.5rem;
   padding: 1.6rem 0 3rem; color: var(--color-muted); font-size: .88rem; }
 .site-footer a { color: var(--color-green); }

@@ -57,7 +57,38 @@ function candidates(text) {
   return [...new Set(out)];
 }
 
-function applyEdit(original, updated) {
+function writeSpan(file, raw, start, end, updated) {
+  writeFileSync(file, raw.slice(0, start) + updated.trim() + raw.slice(end));
+  return { ok: true, file: file.replace(ROOT, '') };
+}
+
+// Preferred path: Astro's dev server stamps every element with the source file
+// and line it came from, so we can scope the search to a small window instead of
+// hunting the whole codebase. That makes even one-character edits ("6" → "7")
+// unambiguous.
+function applyByLocation(original, updated, file, line) {
+  if (!file || !line) return null;
+  if (!file.startsWith(SRC)) return null; // never write outside src/
+  let raw;
+  try { raw = readFileSync(file, 'utf8'); } catch { return null; }
+
+  const lines = raw.split('\n');
+  const startLine = Math.max(0, line - 1);
+  const offset = lines.slice(0, startLine).reduce((n, l) => n + l.length + 1, 0);
+  const window = raw.slice(offset, offset + 6000);
+  const { norm: nwin, map } = normalizeWithMap(window);
+
+  for (const t of candidates(norm(original))) {
+    const idx = nwin.indexOf(t);
+    if (idx !== -1) {
+      return writeSpan(file, raw, offset + map[idx], offset + map[idx + t.length - 1] + 1, updated);
+    }
+  }
+  return null;
+}
+
+// Fallback for anything without a source stamp: unique text match across src/.
+function applyByText(original, updated) {
   const targets = candidates(norm(original));
   const hits = [];
 
@@ -76,22 +107,26 @@ function applyEdit(original, updated) {
   }
 
   if (hits.length === 0) return { ok: false, reason: 'not found in source' };
-  if (hits.length > 1) {
-    return { ok: false, reason: `appears ${hits.length} times; edit it directly` };
-  }
+  if (hits.length > 1) return { ok: false, reason: `appears ${hits.length} times; edit it directly` };
 
   const { file, raw, start, end } = hits[0];
-  writeFileSync(file, raw.slice(0, start) + updated.trim() + raw.slice(end));
-  return { ok: true, file: file.replace(ROOT, '') };
+  return writeSpan(file, raw, start, end, updated);
+}
+
+function applyEdit(original, updated, file, line) {
+  return applyByLocation(original, updated, file, line) ?? applyByText(original, updated);
 }
 
 // ---------- injected client ---------------------------------------------------
 
 const CLIENT = `
 <style id="nsg-edit-style">
-  .nsg-editable { outline: 1px dashed rgba(14,79,74,.35); outline-offset: 3px; cursor: text; border-radius: 2px; }
-  .nsg-editable:hover { outline: 2px dashed #0e4f4a; background: rgba(14,79,74,.05); }
-  .nsg-editable:focus { outline: 2px solid #0e4f4a; background: #fff; box-shadow: 0 0 0 4px rgba(14,79,74,.12); }
+  /* currentColor keeps the outline visible on both the paper and dark-teal bands */
+  .nsg-editable { outline: 1px dashed currentColor; outline-offset: 3px; opacity: .999;
+    cursor: text; border-radius: 2px; }
+  .nsg-editable:hover { outline: 2px dashed currentColor; background: rgba(127,127,127,.14); }
+  .nsg-editable:focus { outline: 2px solid #0e4f4a; background: #fff; color: #141514 !important;
+    box-shadow: 0 0 0 4px rgba(14,79,74,.18); }
   .nsg-dirty { background: #fff8dc !important; outline-color: #b7791f !important; }
   #nsg-bar { position: fixed; z-index: 999999; bottom: 18px; left: 50%; transform: translateX(-50%);
     background: #141514; color: #fff; border-radius: 999px; padding: 10px 14px; display: flex; gap: 10px;
@@ -114,12 +149,13 @@ const CLIENT = `
   var edits = new Map(); // element -> original text
   var on = true;
 
-  var SEL = 'p,h1,h2,h3,h4,li,td,th,figcaption,blockquote,span,small,dd,dt';
+  var SEL = 'p,h1,h2,h3,h4,li,td,th,figcaption,blockquote,span,small,dd,dt,div,summary,strong,em,label';
   function eligible(el) {
     if (el.closest('#nsg-bar')) return false;
     if (el.children.length > 0) return false;          // text-only nodes stay safe to write back
+    if (!el.getAttribute('data-astro-source-file')) return false;
     var t = (el.textContent || '').trim();
-    return t.length > 1 && t.length < 3000;
+    return t.length >= 1 && t.length < 3000;
   }
 
   function mark() {
@@ -169,7 +205,15 @@ const CLIENT = `
 
   document.getElementById('nsg-save').addEventListener('click', function () {
     var payload = [];
-    edits.forEach(function (orig, el) { payload.push({ original: orig, updated: el.textContent }); });
+    edits.forEach(function (orig, el) {
+      var loc = el.getAttribute('data-astro-source-loc') || '';
+      payload.push({
+        original: orig,
+        updated: el.textContent,
+        file: el.getAttribute('data-astro-source-file') || '',
+        line: parseInt(loc.split(':')[0], 10) || 0
+      });
+    });
     msg('Saving…');
     fetch('/__nsg/save', {
       method: 'POST', headers: { 'content-type': 'application/json' },
@@ -224,7 +268,7 @@ createServer(async (req, res) => {
     try {
       const { edits } = JSON.parse(body);
       results = edits.map((e) => {
-        const r = applyEdit(e.original, e.updated);
+        const r = applyEdit(e.original, e.updated, e.file, e.line);
         const label = e.original.slice(0, 55).replace(/\s+/g, ' ');
         if (r.ok) console.log(green(`  ✓ ${r.file}  "${label}…"`));
         else console.log(yellow(`  ! skipped (${r.reason}): "${label}…"`));
