@@ -155,18 +155,15 @@ approved, open `src/data/affiliates.json`, paste your tracking link into
 `affiliateUrl`, change `status` to `"active"`, fill `approvedOn`, then push.
 Every existing link on the site starts earning immediately.
 
-- [ ] Jotform — jotform.com/partnership/affiliate (30% first year; approves in ~a day)
-- [ ] Donorbox — donorbox.org/affiliate-partner-program (15% of fees for 3 yrs; links are already placed sitewide)
-- [ ] DonorDock — donordock.com/partners ($500 per closed customer)
-- [ ] Bloomerang — bloomerang.co/partners/join ($250 per closed referral)
-- [ ] Instrumentl — instrumentl.com/partners (your best content category)
-- [ ] GrantStation — grantstation.com/partner-programs/prp (apply and ask; program is aimed at associations)
-- [ ] GiveWP — givewp.com footer → Affiliates (30-40%)
-- [ ] 4aGoodCause — 4agoodcause.com/referral-program (25% recurring)
-- [ ] DonorSnap — donorsnap.com → Affiliate ($200 per customer)
-- [ ] Grantable — email hello@grantable.co and ASK whether an affiliate program still exists. Their /affiliates page now redirects to contact, and /partners offers cross-promotion only. Assume no revenue until they confirm.
-- [ ] monday.com — mondaycom.partnerstack.com (self-serve via PartnerStack)
-- [ ] Later, once traffic is real: Kindsight, DonorSearch, Neon One (relationship deals; email their partnerships teams with your numbers)
+- [ ] **DonorDock** — donordock.com/partners · **$500 cash per new paid customer**, reader gets 10% off. Verified 2026-07-31. Best payout on the site.
+- [ ] **4aGoodCause** — 4agoodcause.com/referral-program · **25% recurring on every renewal**, via FirstPromoter. Verified 2026-07-31. Only compounding deal you have.
+- [ ] **monday.com** — mondaycom.partnerstack.com · **up to 100% of first-year sales**, tiered. Verified 2026-07-31. Base rate not published.
+- [ ] **Donorbox** — donorbox.org/affiliate-partner-program · **15% of fees for 3 years**, $50 min payout. Verified 2026-07-31. Link-only attribution.
+- [ ] **Jotform** — jotform.com/partnership/affiliate · **30%, first year only**, ~1 day approval, 60-day qualifying period. Verified 2026-07-31. Fastest to go live.
+- [ ] **Bloomerang** — bloomerang.partnerstack.com · program is real but **the rate is not published anywhere**. Ask for it in writing. The "$250" figure was never confirmable.
+- [ ] **Instrumentl** — instrumentl.com/partners · **$50 flat per customer**, reader gets $50 off first month. Verified 2026-07-31. Much smaller than it looked; still worth linking for the reader discount and category strength.
+- [ ] Ask-only, no live program page (all 404 or moved when checked 2026-07-31): **GrantStation**, **GiveWP** (now under LiquidWeb), **DonorSnap**, **Grantable**. Email each if the product matters to your coverage, but plan no revenue from them.
+- [ ] Later, once traffic is real: Kindsight, DonorSearch, Neon One (negotiated deals, highest contract values on the site)
 
 ## Screenshots (feeds the top pages)
 

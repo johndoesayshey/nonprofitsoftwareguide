@@ -161,6 +161,7 @@ function buildDeals() {
       potential: a.potential || 'none',
       badge: a.badge || '—',
       potentialNote: a.potentialNote,
+      evidence: a.evidence || null,
       rx: `(?:${names.join('|')})`, // matched case-insensitively, on word boundaries
     };
   }
@@ -232,6 +233,7 @@ const CLIENT = `
   .nsg-deal-high   { --nsg-tint: rgba(23,160,106,.30); --nsg-ink: #0b6d45; }
   .nsg-deal-medium { --nsg-tint: rgba(48,116,196,.26); --nsg-ink: #1d5fa8; }
   .nsg-deal-low    { --nsg-tint: rgba(183,121,31,.26); --nsg-ink: #9a6510; }
+  .nsg-deal-unknown{ --nsg-tint: rgba(120,120,120,.22); --nsg-ink: #555; }
   .nsg-deal-none   { --nsg-tint: rgba(190,60,60,.20);  --nsg-ink: #a33; }
   .nsg-deal-none::after { text-decoration: line-through; }
   /* A mention that could be an earning link but isn't. No DOM children added. */
@@ -246,6 +248,7 @@ const CLIENT = `
   #nsg-tip .pill.high { background: #17a06a; }
   #nsg-tip .pill.medium { background: #3074c4; }
   #nsg-tip .pill.low { background: #b7791f; }
+  #nsg-tip .pill.unknown { background: #6b6b6b; }
   #nsg-tip .pill.none { background: #a33; }
   #nsg-tip .payout { font-size: 15px; font-weight: 800; margin: .1rem 0 .3rem; }
   #nsg-tip .status { opacity: .7; margin-top: .45rem; font-size: 11px;
@@ -374,7 +377,8 @@ const CLIENT = `
   function hideTip() { tip.style.display = 'none'; }
 
   var POT_LABEL = { high: 'High earning potential', medium: 'Medium potential',
-                    low: 'Low potential', none: 'Cannot earn' };
+                    low: 'Low potential', unknown: 'Rate not published',
+                    none: 'Cannot earn' };
 
   function dealCard(d, extra) {
     var status = d.status === 'active' ? 'Approved — links are live'
@@ -384,13 +388,16 @@ const CLIENT = `
       '<span class="pill ' + d.potential + '">' + POT_LABEL[d.potential] + '</span>' +
       '<div class="payout">' + esc(d.payout || 'No program') + '</div>' +
       '<div class="terms">' + esc(d.potentialNote || '') + '</div>' +
+      (d.evidence && d.evidence.quote
+        ? '<div class="status">Verified ' + esc(d.evidence.checked) + ': “' +
+          esc(String(d.evidence.quote).slice(0, 150)) + '”</div>' : '') +
       (d.readerOffer ? '<div class="offer">Reader offer: ' + esc(d.readerOffer) + '</div>' : '') +
       '<div class="status">Application: ' + esc(status) + '</div>' +
       (extra || '');
   }
 
   function applyDeals() {
-    var counts = { high: 0, medium: 0, low: 0, none: 0, missed: 0 };
+    var counts = { high: 0, medium: 0, low: 0, unknown: 0, none: 0, missed: 0 };
 
     // 1. Existing /go/ links: tint by status, show the deal on hover.
     document.querySelectorAll('a[href^="/go/"]').forEach(function (a) {
