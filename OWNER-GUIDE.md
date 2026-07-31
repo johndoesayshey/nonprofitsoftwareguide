@@ -47,20 +47,30 @@ go out with the next push.
 
 ### Seeing the money while you write
 
-Press **💰 Deals** in the editor toolbar. Every affiliate link on the page is
-colour-coded, and the toolbar totals them up:
+Press **💰 Deals** in the editor toolbar. Every product link is tinted by how
+much a conversion is worth, with the payout printed right on it:
 
-| Marker | Means |
-|---|---|
-| green, `$` | Program approved. This link earns. |
-| amber, `◑` | Program exists but is not approved yet. Earns nothing today. |
-| grey, `·` | No program exists. Will never earn (Zeffy, Airtable, Grants.gov). |
-| amber left bar | A product with a program is named here but **not linked**. Money on the floor. |
+| Colour | Badge shows | Means |
+|---|---|---|
+| green | `$500`, `$250`, `25%` | **High.** Worth building a page around. |
+| blue | `15%`, `30%`, `$200` | **Medium.** Fine to recommend, smaller cheque. |
+| amber | `PRP`, `CAP` | **Low.** Real program, small money. |
+| red, struck through | `—` | **Cannot earn.** No program exists, ever. |
+| amber left bar | — | A product that *could* pay is named here with no link. |
 
-Hover any of them to see the deal: status, commission terms and reader offer,
-straight from `affiliates.json`. Use it while editing to check you are not
-building a page around a product that cannot pay you, and to catch mentions that
-should be links. It is local-only and never appears on the public site.
+Hover any of them for the payout, why it is rated that way, the reader offer,
+and (as a footnote) whether you have applied yet. The toolbar totals the page:
+`3 high · 1 medium · 1 low · 2 can't earn · 4 unlinked`.
+
+Use it to sanity-check where your writing effort is going. A 900-word page whose
+links are all red is a page that will never pay you, however good it is. That is
+sometimes the right call (Zeffy and Airtable earn nothing and are covered anyway,
+because a guide that hides the free options is not credible) but it should be a
+decision, not an accident.
+
+The ratings live in `src/data/affiliates.json` as `payout`, `potential` and
+`badge`. They are planning judgments, not promises. Re-rate them once you have
+real conversion data.
 
 Two limits worth knowing: text with a link inside it (like the "What's in a
 stack" paragraph) is not click-editable, and if the exact same sentence appears

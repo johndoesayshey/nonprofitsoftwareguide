@@ -1,4 +1,5 @@
 {
+  "_comment": "Affiliate links and earning potential. `payout`/`potential`/`badge` drive the editor's money overlay (npm run edit). `potential` is a planning judgment about what one conversion is worth to you (high/medium/low/none), not a promise; re-rate it once real conversion data exists. `status` tracks the application separately.",
   "instrumentl": {
     "name": "Instrumentl",
     "category": "grant-research",
@@ -9,7 +10,11 @@
     "terms": "Commissions confirmed, rate not public. [FACT-CHECK: confirm at signup]",
     "signupUrl": "https://www.instrumentl.com/partners",
     "appliedOn": null,
-    "approvedOn": null
+    "approvedOn": null,
+    "payout": "Commissions confirmed, rate not public",
+    "potential": "high",
+    "badge": "ACV",
+    "potentialNote": "Highest-value product in your strongest category ($2.1k-$6k/yr plans). Confirm the rate at signup."
   },
   "grantstation": {
     "name": "GrantStation",
@@ -21,7 +26,11 @@
     "terms": "Product Referral Program (PRP), free to join. Written for associations/alliances; apply and ask. [FACT-CHECK: confirm at signup]",
     "signupUrl": "https://grantstation.com/partner-programs/prp",
     "appliedOn": null,
-    "approvedOn": null
+    "approvedOn": null,
+    "payout": "Product Referral Program, terms not public",
+    "potential": "low",
+    "badge": "PRP",
+    "potentialNote": "The product is only ~$199/yr, so any percentage is small. Volume play at best."
   },
   "donordock": {
     "name": "DonorDock",
@@ -33,7 +42,11 @@
     "terms": "$500 per new paid customer; referral gets 10% off. [FACT-CHECK: confirm at signup]",
     "signupUrl": "https://www.donordock.com/partners",
     "appliedOn": null,
-    "approvedOn": null
+    "approvedOn": null,
+    "payout": "$500 per new paid customer",
+    "potential": "high",
+    "badge": "$500",
+    "potentialNote": "Largest flat payout on the site, and an easy self-serve signup."
   },
   "4agoodcause": {
     "name": "4aGoodCause",
@@ -45,7 +58,11 @@
     "terms": "25%, recurring on every renewal. [FACT-CHECK: confirm at signup]",
     "signupUrl": "https://www.4agoodcause.com/referral-program",
     "appliedOn": null,
-    "approvedOn": null
+    "approvedOn": null,
+    "payout": "25% recurring on every renewal",
+    "potential": "high",
+    "badge": "25%",
+    "potentialNote": "Recurring forever, so it compounds. Rare in this space."
   },
   "donorbox": {
     "name": "Donorbox",
@@ -57,7 +74,11 @@
     "terms": "15% of fees, 3 yrs, 45-day cookie, $50 min payout. Attribution is link-only and never retroactive. [FACT-CHECK: confirm at signup]",
     "signupUrl": "https://donorbox.org/affiliate-partner-program",
     "appliedOn": null,
-    "approvedOn": null
+    "approvedOn": null,
+    "payout": "15% of fees for 3 years, 45-day cookie",
+    "potential": "medium",
+    "badge": "15%",
+    "potentialNote": "Recurring for three years, but a share of platform fees only. Best on high-volume shops. Link-only attribution: never mention Donorbox without the /go/ link."
   },
   "givewp": {
     "name": "GiveWP",
@@ -69,7 +90,11 @@
     "terms": "30% first 24 referrals, then 40%. [FACT-CHECK: confirm at signup]",
     "signupUrl": "https://givewp.com/affiliates/",
     "appliedOn": null,
-    "approvedOn": null
+    "approvedOn": null,
+    "payout": "30% for first 24 referrals, then 40%",
+    "potential": "medium",
+    "badge": "30-40%",
+    "potentialNote": "Rate rises with volume. WordPress shops only."
   },
   "jotform": {
     "name": "Jotform",
@@ -81,7 +106,11 @@
     "terms": "30%, first year, ~1 day approval. [FACT-CHECK: confirm at signup]",
     "signupUrl": "https://www.jotform.com/partnership/affiliate/",
     "appliedOn": null,
-    "approvedOn": null
+    "approvedOn": null,
+    "payout": "30% of first year",
+    "potential": "medium",
+    "badge": "30%",
+    "potentialNote": "Approves in about a day, so it is the fastest path to a live link. Entry plans are cheap, so per-sale is modest."
   },
   "bloomerang": {
     "name": "Bloomerang",
@@ -93,7 +122,11 @@
     "terms": "$250 per closed referral. [FACT-CHECK: confirm at signup]",
     "signupUrl": "https://bloomerang.co/partners/join/",
     "appliedOn": null,
-    "approvedOn": null
+    "approvedOn": null,
+    "payout": "$250 per closed referral",
+    "potential": "high",
+    "badge": "$250",
+    "potentialNote": "Flat and large. CRM deals close slowly, so expect a lag."
   },
   "donorsnap": {
     "name": "DonorSnap",
@@ -105,7 +138,11 @@
     "terms": "$200 per paying customer, monthly, US/CA. [FACT-CHECK: confirm at signup]",
     "signupUrl": "https://www.donorsnap.com/affiliate-program/",
     "appliedOn": null,
-    "approvedOn": null
+    "approvedOn": null,
+    "payout": "$200 per paying customer",
+    "potential": "medium",
+    "badge": "$200",
+    "potentialNote": "Flat $200, US/CA only, paid monthly."
   },
   "kindsight": {
     "name": "Kindsight",
@@ -117,7 +154,11 @@
     "terms": "Tier B: negotiated consulting partner program (formerly iWave). No signup form; email partnerships. [FACT-CHECK: confirm terms with partnerships manager]",
     "signupUrl": null,
     "appliedOn": null,
-    "approvedOn": null
+    "approvedOn": null,
+    "payout": "No program yet — negotiated consulting partnership",
+    "potential": "none",
+    "badge": "negotiate",
+    "potentialNote": "Earns nothing today, but $4k-$6k contracts make it the best thing on the site to negotiate once you have real traffic."
   },
   "donorsearch": {
     "name": "DonorSearch",
@@ -129,7 +170,11 @@
     "terms": "Tier B: negotiated consulting partner program. No signup form; email partnerships. [FACT-CHECK: confirm terms with partnerships manager]",
     "signupUrl": null,
     "appliedOn": null,
-    "approvedOn": null
+    "approvedOn": null,
+    "payout": "No program yet — negotiated consulting partnership",
+    "potential": "none",
+    "badge": "negotiate",
+    "potentialNote": "Earns nothing today. Same high-ACV negotiation target as Kindsight."
   },
   "neoncrm": {
     "name": "Neon One",
@@ -141,7 +186,11 @@
     "terms": "Tier B: CAP program relaunched Oct 2025 — 10% discount on referred sales, commissions 'available'. [FACT-CHECK: confirm terms with partnerships manager]",
     "signupUrl": null,
     "appliedOn": null,
-    "approvedOn": null
+    "approvedOn": null,
+    "payout": "CAP program: commissions 'available', terms not public",
+    "potential": "low",
+    "badge": "CAP",
+    "potentialNote": "Relationship program. Worth asking about once you have traffic."
   },
   "zeffy": {
     "name": "Zeffy",
@@ -153,7 +202,11 @@
     "terms": "Tier C: free to nonprofits, funded by donor tips. No affiliate program exists.",
     "signupUrl": null,
     "appliedOn": null,
-    "approvedOn": null
+    "approvedOn": null,
+    "payout": "No program",
+    "potential": "none",
+    "badge": "—",
+    "potentialNote": "No affiliate program exists. Covered for credibility, and it will never earn. Do not build a page around it expecting revenue."
   },
   "givebutter": {
     "name": "Givebutter",
@@ -165,7 +218,11 @@
     "terms": "Tier C: free to nonprofits, funded by donor tips. No affiliate program exists.",
     "signupUrl": null,
     "appliedOn": null,
-    "approvedOn": null
+    "approvedOn": null,
+    "payout": "No program",
+    "potential": "none",
+    "badge": "—",
+    "potentialNote": "No affiliate program exists. Covered for credibility, and it will never earn. Do not build a page around it expecting revenue."
   },
   "candid": {
     "name": "Candid Foundation Directory",
@@ -177,7 +234,11 @@
     "terms": "Tier C: Candid is a 501(c)(3). No affiliate program.",
     "signupUrl": null,
     "appliedOn": null,
-    "approvedOn": null
+    "approvedOn": null,
+    "payout": "No program",
+    "potential": "none",
+    "badge": "—",
+    "potentialNote": "No affiliate program exists. Covered for credibility, and it will never earn. Do not build a page around it expecting revenue."
   },
   "littlegreenlight": {
     "name": "Little Green Light",
@@ -189,7 +250,11 @@
     "terms": "Tier C: small and bootstrapped. Nothing public found.",
     "signupUrl": null,
     "appliedOn": null,
-    "approvedOn": null
+    "approvedOn": null,
+    "payout": "No program",
+    "potential": "none",
+    "badge": "—",
+    "potentialNote": "No affiliate program exists. Covered for credibility, and it will never earn. Do not build a page around it expecting revenue."
   },
   "wealthengine": {
     "name": "WealthEngine",
@@ -201,7 +266,11 @@
     "terms": "Tier C: nothing public found.",
     "signupUrl": null,
     "appliedOn": null,
-    "approvedOn": null
+    "approvedOn": null,
+    "payout": "No program",
+    "potential": "none",
+    "badge": "—",
+    "potentialNote": "No affiliate program exists. Covered for credibility, and it will never earn. Do not build a page around it expecting revenue."
   },
   "classy": {
     "name": "Classy",
@@ -213,7 +282,11 @@
     "terms": "Tier C: nothing public found.",
     "signupUrl": null,
     "appliedOn": null,
-    "approvedOn": null
+    "approvedOn": null,
+    "payout": "No program",
+    "potential": "none",
+    "badge": "—",
+    "potentialNote": "No affiliate program exists. Covered for credibility, and it will never earn. Do not build a page around it expecting revenue."
   },
   "donorperfect": {
     "name": "DonorPerfect",
@@ -225,7 +298,11 @@
     "terms": "Tier C: nothing public found.",
     "signupUrl": null,
     "appliedOn": null,
-    "approvedOn": null
+    "approvedOn": null,
+    "payout": "No program",
+    "potential": "none",
+    "badge": "—",
+    "potentialNote": "No affiliate program exists. Covered for credibility, and it will never earn. Do not build a page around it expecting revenue."
   },
   "keela": {
     "name": "Keela",
@@ -237,7 +314,11 @@
     "terms": "Tier C: nothing public found (now part of Aplos).",
     "signupUrl": null,
     "appliedOn": null,
-    "approvedOn": null
+    "approvedOn": null,
+    "payout": "No program",
+    "potential": "none",
+    "badge": "—",
+    "potentialNote": "No affiliate program exists. Covered for credibility, and it will never earn. Do not build a page around it expecting revenue."
   },
   "grantsgov": {
     "name": "Grants.gov",
@@ -249,7 +330,11 @@
     "terms": "Free federal government service. No affiliate program.",
     "signupUrl": null,
     "appliedOn": null,
-    "approvedOn": null
+    "approvedOn": null,
+    "payout": "No program",
+    "potential": "none",
+    "badge": "—",
+    "potentialNote": "No affiliate program exists. Covered for credibility, and it will never earn. Do not build a page around it expecting revenue."
   },
   "windfall": {
     "name": "Windfall",
@@ -261,7 +346,11 @@
     "terms": "No affiliate program found.",
     "signupUrl": null,
     "appliedOn": null,
-    "approvedOn": null
+    "approvedOn": null,
+    "payout": "No program",
+    "potential": "none",
+    "badge": "—",
+    "potentialNote": "No affiliate program exists. Covered for credibility, and it will never earn. Do not build a page around it expecting revenue."
   },
   "onecause": {
     "name": "OneCause",
@@ -273,7 +362,11 @@
     "terms": "No public affiliate program found.",
     "signupUrl": null,
     "appliedOn": null,
-    "approvedOn": null
+    "approvedOn": null,
+    "payout": "No program",
+    "potential": "none",
+    "badge": "—",
+    "potentialNote": "No affiliate program exists. Covered for credibility, and it will never earn. Do not build a page around it expecting revenue."
   },
   "airtable": {
     "name": "Airtable",
@@ -285,7 +378,11 @@
     "terms": "No cash publisher program (verified Jul 2026); only $10-credit user referrals and a services partner program.",
     "signupUrl": null,
     "appliedOn": null,
-    "approvedOn": null
+    "approvedOn": null,
+    "payout": "No program",
+    "potential": "none",
+    "badge": "—",
+    "potentialNote": "No affiliate program exists. Covered for credibility, and it will never earn. Do not build a page around it expecting revenue."
   },
   "grantable": {
     "name": "Grantable",
@@ -297,7 +394,11 @@
     "terms": "Program advertised at 20% of subscription revenue recurring 24 months; affiliates page currently redirects to contact, so email hello@grantable.co to apply and confirm terms. [FACT-CHECK: confirm at signup]",
     "signupUrl": "https://www.grantable.co/affiliates",
     "appliedOn": null,
-    "approvedOn": null
+    "approvedOn": null,
+    "payout": "20% recurring for 24 months (advertised, unconfirmed)",
+    "potential": "high",
+    "badge": "20%",
+    "potentialNote": "Two years of recurring if the advertised terms hold. Confirm by email before leaning on it."
   },
   "monday": {
     "name": "monday.com",
@@ -309,7 +410,11 @@
     "terms": "Self-serve via PartnerStack; vendor page says tiered rewards up to 100% of first-year sales. Base rate and cookie window shown at signup. [FACT-CHECK: confirm at signup]",
     "signupUrl": "https://mondaycom.partnerstack.com/?group=mbmarketplace",
     "appliedOn": null,
-    "approvedOn": null
+    "approvedOn": null,
+    "payout": "Up to 100% of first-year sales (tiered, PartnerStack)",
+    "potential": "high",
+    "badge": "up to 100%",
+    "potentialNote": "Base rate not published; tiers reward volume."
   },
   "salesforcenpsp": {
     "name": "Salesforce Nonprofit Cloud",
@@ -321,6 +426,10 @@
     "terms": "No direct affiliate program. Note: NPSP is being superseded by Nonprofit Cloud.",
     "signupUrl": null,
     "appliedOn": null,
-    "approvedOn": null
+    "approvedOn": null,
+    "payout": "No program",
+    "potential": "none",
+    "badge": "—",
+    "potentialNote": "No affiliate program exists. Covered for credibility, and it will never earn. Do not build a page around it expecting revenue."
   }
 }

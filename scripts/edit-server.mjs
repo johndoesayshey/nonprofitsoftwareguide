@@ -145,6 +145,10 @@ function buildDeals() {
       terms: a.terms,
       readerOffer: a.readerOffer,
       signupUrl: a.signupUrl,
+      payout: a.payout,
+      potential: a.potential || 'none',
+      badge: a.badge || '—',
+      potentialNote: a.potentialNote,
       rx: `(?:${names.join('|')})`, // matched case-insensitively, on word boundaries
     };
   }
@@ -180,9 +184,11 @@ const CLIENT = `
     box-shadow: inset 0 -0.55em 0 var(--nsg-tint), 0 1px 0 var(--nsg-ink); border-radius: 2px; }
   .nsg-deal::after { content: attr(data-nsg-tag); font-size: .62em; font-weight: 800;
     letter-spacing: .04em; vertical-align: super; margin-left: .18em; color: var(--nsg-ink); }
-  .nsg-deal-active  { --nsg-tint: rgba(23,160,106,.28); --nsg-ink: #0f7a4f; }
-  .nsg-deal-pending { --nsg-tint: rgba(183,121,31,.28); --nsg-ink: #9a6510; }
-  .nsg-deal-none    { --nsg-tint: rgba(140,140,140,.28); --nsg-ink: #6b6b6b; }
+  .nsg-deal-high   { --nsg-tint: rgba(23,160,106,.30); --nsg-ink: #0b6d45; }
+  .nsg-deal-medium { --nsg-tint: rgba(48,116,196,.26); --nsg-ink: #1d5fa8; }
+  .nsg-deal-low    { --nsg-tint: rgba(183,121,31,.26); --nsg-ink: #9a6510; }
+  .nsg-deal-none   { --nsg-tint: rgba(190,60,60,.20);  --nsg-ink: #a33; }
+  .nsg-deal-none::after { text-decoration: line-through; }
   /* A mention that could be an earning link but isn't. No DOM children added. */
   .nsg-missed { border-left: 3px solid #b7791f !important; padding-left: .5rem !important;
     background: rgba(183,121,31,.07); }
@@ -192,9 +198,13 @@ const CLIENT = `
   #nsg-tip h4 { margin: 0 0 .25rem; font-size: 13px; font-weight: 800; }
   #nsg-tip .pill { display: inline-block; font-size: 10px; font-weight: 800; letter-spacing: .08em;
     text-transform: uppercase; padding: .1rem .4rem; border-radius: 999px; margin-bottom: .35rem; }
-  #nsg-tip .pill.active { background: #17a06a; }
-  #nsg-tip .pill.pending { background: #b7791f; }
-  #nsg-tip .pill.none { background: #6b6b6b; }
+  #nsg-tip .pill.high { background: #17a06a; }
+  #nsg-tip .pill.medium { background: #3074c4; }
+  #nsg-tip .pill.low { background: #b7791f; }
+  #nsg-tip .pill.none { background: #a33; }
+  #nsg-tip .payout { font-size: 15px; font-weight: 800; margin: .1rem 0 .3rem; }
+  #nsg-tip .status { opacity: .7; margin-top: .45rem; font-size: 11px;
+    border-top: 1px solid rgba(255,255,255,.15); padding-top: .35rem; }
   #nsg-tip .terms { opacity: .9; }
   #nsg-tip .offer { color: #8ee0bd; margin-top: .3rem; }
   #nsg-tip .hint { opacity: .65; margin-top: .4rem; font-size: 11px; }
@@ -310,36 +320,42 @@ const CLIENT = `
   }
   function hideTip() { tip.style.display = 'none'; }
 
+  var POT_LABEL = { high: 'High earning potential', medium: 'Medium potential',
+                    low: 'Low potential', none: 'Cannot earn' };
+
   function dealCard(d, extra) {
-    var label = d.status === 'active' ? 'Earning' :
-                d.status === 'pending' ? 'Not applied / pending' : 'No program';
+    var status = d.status === 'active' ? 'Approved — links are live'
+               : d.potential === 'none' ? 'No program to apply to'
+               : 'Not applied yet — earns nothing until you do';
     return '<h4>' + esc(d.name) + '</h4>' +
-      '<span class="pill ' + d.status + '">' + label + '</span>' +
-      '<div class="terms">' + esc(d.terms || 'No terms recorded.') + '</div>' +
+      '<span class="pill ' + d.potential + '">' + POT_LABEL[d.potential] + '</span>' +
+      '<div class="payout">' + esc(d.payout || 'No program') + '</div>' +
+      '<div class="terms">' + esc(d.potentialNote || '') + '</div>' +
       (d.readerOffer ? '<div class="offer">Reader offer: ' + esc(d.readerOffer) + '</div>' : '') +
+      '<div class="status">Application: ' + esc(status) + '</div>' +
       (extra || '');
   }
 
   function applyDeals() {
-    var counts = { active: 0, pending: 0, none: 0, missed: 0 };
+    var counts = { high: 0, medium: 0, low: 0, none: 0, missed: 0 };
 
     // 1. Existing /go/ links: tint by status, show the deal on hover.
     document.querySelectorAll('a[href^="/go/"]').forEach(function (a) {
       var slug = a.getAttribute('href').split('/')[2];
       var d = DEALS[slug];
       if (!d) return;
-      counts[d.status] = (counts[d.status] || 0) + 1;
+      counts[d.potential] = (counts[d.potential] || 0) + 1;
       if (!dealsOn) {
-        a.classList.remove('nsg-deal', 'nsg-deal-active', 'nsg-deal-pending', 'nsg-deal-none');
+        a.classList.remove('nsg-deal', 'nsg-deal-high', 'nsg-deal-medium', 'nsg-deal-low', 'nsg-deal-none');
         a.removeAttribute('data-nsg-tag');
         return;
       }
-      a.classList.add('nsg-deal', 'nsg-deal-' + d.status);
-      a.setAttribute('data-nsg-tag', d.status === 'active' ? '$' : d.status === 'pending' ? '◑' : '·');
+      a.classList.add('nsg-deal', 'nsg-deal-' + d.potential);
+      a.setAttribute('data-nsg-tag', d.badge);
       if (a.dataset.nsgDealBound) return;
       a.dataset.nsgDealBound = '1';
       a.addEventListener('mouseenter', function () {
-        if (dealsOn) showTip(dealCard(DEALS[slug], '<div class="hint">This link is live in your content.</div>'), a);
+        if (dealsOn) showTip(dealCard(DEALS[slug], ''), a);
       });
       a.addEventListener('mouseleave', hideTip);
     });
@@ -356,7 +372,7 @@ const CLIENT = `
       var missed = [];
       Object.keys(DEALS).forEach(function (slug) {
         var d = DEALS[slug];
-        if (d.status === 'none') return;               // nothing to earn, nothing to flag
+        if (d.potential === 'none') return;            // cannot earn, nothing to flag
         if (!new RegExp('\\\\b' + d.rx + '\\\\b', 'i').test(text)) return;
         if (el.querySelector('a[href="/go/' + slug + '"]')) return;   // already linked here
         missed.push(slug);
@@ -370,7 +386,7 @@ const CLIENT = `
       el.addEventListener('mouseenter', function () {
         if (!dealsOn || !el.getAttribute('data-nsg-missed')) return;
         var list = el.getAttribute('data-nsg-missed').split(',');
-        var html = '<h4>Unlinked money</h4><div class="terms">Mentioned here without a /go/ link:</div>';
+        var html = '<h4>Unlinked money</h4><div class="terms">Named here with no /go/ link:</div>';
         list.forEach(function (s) {
           html += '<div style="margin-top:.45rem">' + dealCard(DEALS[s]) + '</div>';
         });
@@ -389,8 +405,9 @@ const CLIENT = `
     hideTip();
     var c = applyDeals();
     if (dealsOn) {
-      msg('<b>' + c.active + '</b> earning · <b>' + c.pending + '</b> pending · <b>' +
-          c.none + '</b> no program · <b>' + c.missed + '</b> unlinked. Hover any to see the deal.');
+      msg('<b>' + c.high + '</b> high · <b>' + c.medium + '</b> medium · <b>' + c.low +
+          '</b> low · <b>' + c.none + '</b> can\\'t earn · <b>' + c.missed +
+          '</b> unlinked. Hover for the payout.');
     } else {
       msg('Click any text to edit it.');
     }
