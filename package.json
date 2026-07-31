@@ -15,7 +15,8 @@
     "check-freshness": "node scripts/check-freshness.mjs",
     "check-links": "node scripts/check-links.mjs",
     "owner": "node scripts/owner-dashboard.mjs",
-    "edit": "node scripts/edit-server.mjs"
+    "edit": "node scripts/edit-server.mjs",
+    "notes": "node scripts/notes.mjs"
   },
   "dependencies": {
     "@astrojs/mdx": "^4.2.0",

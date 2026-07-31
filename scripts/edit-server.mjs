@@ -117,6 +117,18 @@ function applyEdit(original, updated, file, line) {
   return applyByLocation(original, updated, file, line) ?? applyByText(original, updated);
 }
 
+// ---------- feedback notes ----------------------------------------------------
+// Click an element in Notes mode, type an instruction, and it lands here for
+// Claude to read. Kept out of git (the repo is public and these are your notes).
+const NOTES_FILE = join(ROOT, 'feedback.json');
+
+function loadNotes() {
+  try { return JSON.parse(readFileSync(NOTES_FILE, 'utf8')); } catch { return []; }
+}
+function saveNotes(notes) {
+  writeFileSync(NOTES_FILE, JSON.stringify(notes, null, 2) + '\n');
+}
+
 // ---------- affiliate deal data for the overlay -------------------------------
 
 // Extra names a product goes by in prose, so unlinked mentions are still caught.
@@ -179,6 +191,39 @@ const CLIENT = `
   #nsg-deals { background: #2b2b2b; color: #fff; }
   #nsg-deals.on { background: #7a5c12; }
 
+  #nsg-notes { background: #2b2b2b; color: #fff; }
+  #nsg-notes.on { background: #6d3fbf; }
+
+  /* ---- notes mode ---- */
+  .nsg-note-hover { outline: 2px dashed #8b5cf6 !important; outline-offset: 2px !important;
+    background: rgba(139,92,246,.08) !important; cursor: crosshair !important; }
+  .nsg-note-picked { outline: 3px solid #6d3fbf !important; outline-offset: 2px !important;
+    background: rgba(109,63,191,.12) !important; }
+  .nsg-noted { outline: 2px solid #6d3fbf !important; outline-offset: 2px !important; }
+  .nsg-noted::after { content: '💬' attr(data-nsg-note-n); background: #6d3fbf; color: #fff;
+    font: 800 10px/1 -apple-system, system-ui, sans-serif; padding: 3px 5px; border-radius: 999px;
+    margin-left: .3em; vertical-align: super; white-space: nowrap; }
+  #nsg-composer { position: fixed; z-index: 1000001; width: 22rem; display: none;
+    background: #17131f; color: #fff; border: 1px solid #6d3fbf; border-radius: 8px; padding: .8rem;
+    font: 500 13px/1.4 -apple-system, system-ui, sans-serif; box-shadow: 0 16px 40px rgba(0,0,0,.5); }
+  #nsg-composer .target { font-size: 11px; opacity: .75; margin-bottom: .5rem; word-break: break-word; }
+  #nsg-composer .target b { color: #c4b5fd; }
+  #nsg-composer textarea { width: 100%; box-sizing: border-box; min-height: 4.5rem; resize: vertical;
+    background: #0e0b14; color: #fff; border: 1px solid #3c3350; border-radius: 5px; padding: .5rem;
+    font: 500 13px/1.4 inherit; }
+  #nsg-composer .chips { display: flex; flex-wrap: wrap; gap: .3rem; margin: .5rem 0; }
+  #nsg-composer .chips button { background: #2a2338; color: #d9cffb; border: 0; border-radius: 999px;
+    font: 700 11px/1 inherit; padding: .35rem .55rem; cursor: pointer; }
+  #nsg-composer .chips button:hover { background: #3c3350; }
+  #nsg-composer .row { display: flex; gap: .4rem; justify-content: flex-end; margin-top: .5rem; }
+  #nsg-composer .row button { border: 0; border-radius: 999px; font: 700 12px/1 inherit;
+    padding: .45rem .8rem; cursor: pointer; }
+  #nsg-c-save { background: #6d3fbf; color: #fff; }
+  #nsg-c-cancel, #nsg-c-wider { background: #2a2338; color: #d9cffb; }
+  #nsg-c-resolve { background: #17a06a; color: #fff; }
+  #nsg-composer .existing { background: #0e0b14; border-radius: 5px; padding: .5rem; margin-bottom: .5rem;
+    border-left: 3px solid #6d3fbf; }
+
   /* ---- affiliate deal layer ---- */
   .nsg-deal { text-decoration: none !important;
     box-shadow: inset 0 -0.55em 0 var(--nsg-tint), 0 1px 0 var(--nsg-ink); border-radius: 2px; }
@@ -210,14 +255,23 @@ const CLIENT = `
   #nsg-tip .hint { opacity: .65; margin-top: .4rem; font-size: 11px; }
 </style>
 <div id="nsg-tip"></div>
+<div id="nsg-composer"></div>
 <div id="nsg-bar">
   <button id="nsg-toggle" class="on">✏️ Edit: ON</button>
   <button id="nsg-deals">💰 Deals</button>
+  <button id="nsg-notes">💬 Notes</button>
   <span id="nsg-msg">Click any text to edit it.</span>
   <button id="nsg-save" disabled>Save 0</button>
 </div>
 <script>
 (function () {
+  // Astro's dev toolbar strips data-astro-source-* shortly after load. This inline
+  // script runs before it does, so snapshot the source map onto our own attributes.
+  document.querySelectorAll('[data-astro-source-file]').forEach(function (el) {
+    el.setAttribute('data-nsg-file', el.getAttribute('data-astro-source-file'));
+    el.setAttribute('data-nsg-line', (el.getAttribute('data-astro-source-loc') || '').split(':')[0]);
+  });
+
   var edits = new Map(); // element -> original text
   var on = true;
 
@@ -225,7 +279,7 @@ const CLIENT = `
   function eligible(el) {
     if (el.closest('#nsg-bar')) return false;
     if (el.children.length > 0) return false;          // text-only nodes stay safe to write back
-    if (!el.getAttribute('data-astro-source-file')) return false;
+    if (!el.getAttribute('data-nsg-file')) return false;
     var t = (el.textContent || '').trim();
     return t.length >= 1 && t.length < 3000;
   }
@@ -278,12 +332,11 @@ const CLIENT = `
   document.getElementById('nsg-save').addEventListener('click', function () {
     var payload = [];
     edits.forEach(function (orig, el) {
-      var loc = el.getAttribute('data-astro-source-loc') || '';
       payload.push({
         original: orig,
         updated: el.textContent,
-        file: el.getAttribute('data-astro-source-file') || '',
-        line: parseInt(loc.split(':')[0], 10) || 0
+        file: el.getAttribute('data-nsg-file') || '',
+        line: parseInt(el.getAttribute('data-nsg-line'), 10) || 0
       });
     });
     msg('Saving…');
@@ -413,6 +466,165 @@ const CLIENT = `
     }
   });
 
+  // ---------- feedback notes ----------
+  var NOTES = __NSG_NOTES__;
+  var notesOn = false, picked = null, hovered = null;
+  var composer = document.getElementById('nsg-composer');
+  var PAGE = location.pathname;
+
+  function describe(el) {
+    var t = el.tagName.toLowerCase();
+    var cls = (el.className || '').toString().split(/\\s+/)
+      .filter(function (c) { return c && c.indexOf('nsg-') !== 0 && c.indexOf('astro-') !== 0; })
+      .slice(0, 2).join('.');
+    return t + (cls ? '.' + cls : '');
+  }
+  function srcOf(el) {
+    var n = el;
+    while (n && n.getAttribute && !n.getAttribute('data-nsg-file')) n = n.parentElement;
+    if (!n || !n.getAttribute) return { file: '', line: 0 };
+    return {
+      file: n.getAttribute('data-nsg-file') || '',
+      line: parseInt(n.getAttribute('data-nsg-line'), 10) || 0
+    };
+  }
+  function snippet(el) { return (el.textContent || '').trim().replace(/\\s+/g, ' ').slice(0, 90); }
+
+  function noteFor(el) {
+    var src = srcOf(el), snip = snippet(el);
+    for (var i = 0; i < NOTES.length; i++) {
+      var n = NOTES[i];
+      if (n.status !== 'open' || n.page !== PAGE) continue;
+      if (n.file && src.file && n.file === src.file && n.line === src.line && n.element === describe(el)) return n;
+      if (n.snippet && snip && n.snippet === snip) return n;
+    }
+    return null;
+  }
+
+  function paintPins() {
+    document.querySelectorAll('.nsg-noted').forEach(function (el) {
+      el.classList.remove('nsg-noted'); el.removeAttribute('data-nsg-note-n');
+    });
+    if (!notesOn) return;
+    var open = NOTES.filter(function (n) { return n.status === 'open' && n.page === PAGE; });
+    document.querySelectorAll('body *').forEach(function (el) {
+      if (el.closest('#nsg-bar') || el.closest('#nsg-composer') || el.closest('#nsg-tip')) return;
+      var n = noteFor(el);
+      if (!n) return;
+      el.classList.add('nsg-noted');
+      el.setAttribute('data-nsg-note-n', open.indexOf(n) + 1);
+    });
+  }
+
+  function closeComposer() {
+    composer.style.display = 'none';
+    if (picked) picked.classList.remove('nsg-note-picked');
+    picked = null;
+  }
+
+  function openComposer(el) {
+    if (picked) picked.classList.remove('nsg-note-picked');
+    picked = el;
+    el.classList.add('nsg-note-picked');
+    var existing = noteFor(el);
+    var src = srcOf(el);
+    var chips = ['Move this up', 'Move this down', 'Make this bigger', 'Make this smaller',
+                 'Remove this', 'Reword this', 'Change the colour'];
+    composer.innerHTML =
+      '<div class="target">Selected: <b>' + esc(describe(el)) + '</b>' +
+        (src.file ? '<br>' + esc(src.file.split('/src/')[1] || src.file) + ':' + src.line : '') +
+      '</div>' +
+      (existing ? '<div class="existing">Existing note: ' + esc(existing.note) + '</div>' : '') +
+      '<textarea id="nsg-c-text" placeholder="What should change here?"></textarea>' +
+      '<div class="chips">' + chips.map(function (c) {
+        return '<button type="button" data-chip="' + esc(c) + '">' + esc(c) + '</button>'; }).join('') + '</div>' +
+      '<div class="row">' +
+        '<button id="nsg-c-wider" type="button">↑ Wider</button>' +
+        (existing ? '<button id="nsg-c-resolve" type="button">Done</button>' : '') +
+        '<button id="nsg-c-cancel" type="button">Cancel</button>' +
+        '<button id="nsg-c-save" type="button">Save note</button>' +
+      '</div>';
+    composer.style.display = 'block';
+    var r = el.getBoundingClientRect();
+    var top = Math.min(r.bottom + 8, window.innerHeight - composer.offsetHeight - 12);
+    composer.style.top = Math.max(8, top) + 'px';
+    composer.style.left = Math.min(Math.max(8, r.left), window.innerWidth - composer.offsetWidth - 8) + 'px';
+
+    var ta = document.getElementById('nsg-c-text');
+    ta.focus();
+    composer.querySelectorAll('[data-chip]').forEach(function (b) {
+      b.addEventListener('click', function () {
+        ta.value = (ta.value ? ta.value.replace(/\\s*$/, '') + '. ' : '') + b.dataset.chip;
+        ta.focus();
+      });
+    });
+    document.getElementById('nsg-c-cancel').addEventListener('click', closeComposer);
+    document.getElementById('nsg-c-wider').addEventListener('click', function () {
+      if (picked && picked.parentElement && picked.parentElement !== document.body) openComposer(picked.parentElement);
+    });
+    if (existing) {
+      document.getElementById('nsg-c-resolve').addEventListener('click', function () {
+        fetch('/__nsg/note-resolve', { method: 'POST', headers: { 'content-type': 'application/json' },
+          body: JSON.stringify({ id: existing.id }) })
+          .then(function (r) { return r.json(); })
+          .then(function (res) { NOTES = res.notes; closeComposer(); paintPins(); refreshNotesMsg(); });
+      });
+    }
+    document.getElementById('nsg-c-save').addEventListener('click', function () {
+      var text = ta.value.trim();
+      if (!text) { ta.focus(); return; }
+      fetch('/__nsg/note', { method: 'POST', headers: { 'content-type': 'application/json' },
+        body: JSON.stringify({ page: PAGE, file: src.file, line: src.line,
+                               element: describe(el), snippet: snippet(el), note: text }) })
+        .then(function (r) { return r.json(); })
+        .then(function (res) { NOTES = res.notes; closeComposer(); paintPins(); refreshNotesMsg(); });
+    });
+  }
+
+  function refreshNotesMsg() {
+    var openAll = NOTES.filter(function (n) { return n.status === 'open'; });
+    var here = openAll.filter(function (n) { return n.page === PAGE; });
+    msg(notesOn
+      ? '<b>' + here.length + '</b> note' + (here.length === 1 ? '' : 's') + ' on this page · <b>' +
+        openAll.length + '</b> total. Click anything to leave one.'
+      : 'Click any text to edit it.');
+  }
+
+  document.addEventListener('mouseover', function (e) {
+    if (!notesOn || picked) return;
+    var el = e.target;
+    if (!el || el.closest('#nsg-bar') || el.closest('#nsg-composer')) return;
+    if (hovered) hovered.classList.remove('nsg-note-hover');
+    hovered = el; el.classList.add('nsg-note-hover');
+  }, true);
+
+  document.addEventListener('click', function (e) {
+    if (!notesOn) return;
+    if (e.target.closest('#nsg-bar') || e.target.closest('#nsg-composer')) return;
+    e.preventDefault(); e.stopPropagation();
+    if (hovered) hovered.classList.remove('nsg-note-hover');
+    openComposer(e.target);
+  }, true);
+
+  document.getElementById('nsg-notes').addEventListener('click', function () {
+    notesOn = !notesOn;
+    this.classList.toggle('on', notesOn);
+    if (!notesOn) {
+      closeComposer();
+      if (hovered) hovered.classList.remove('nsg-note-hover');
+      document.querySelectorAll('.nsg-editable').forEach(function (el) {
+        el.setAttribute('contenteditable', on ? 'true' : 'false'); });
+    } else {
+      // editing and note-picking would fight over clicks
+      document.querySelectorAll('.nsg-editable').forEach(function (el) {
+        el.setAttribute('contenteditable', 'false'); });
+    }
+    paintPins();
+    refreshNotesMsg();
+  });
+
+  paintPins();
+
   mark();
   new MutationObserver(function () { mark(); if (dealsOn) applyDeals(); })
     .observe(document.body, { childList: true, subtree: true });
@@ -466,6 +678,41 @@ createServer(async (req, res) => {
     return res.end(JSON.stringify({ results }));
   }
 
+  if (req.url === '/__nsg/note' && req.method === 'POST') {
+    let body = '';
+    for await (const chunk of req) body += chunk;
+    const notes = loadNotes();
+    try {
+      const n = JSON.parse(body);
+      const note = {
+        id: 'n' + (notes.length + 1) + '-' + Math.random().toString(36).slice(2, 6),
+        created: new Date().toISOString(),
+        status: 'open',
+        page: n.page, file: (n.file || '').replace(ROOT, ''), line: n.line,
+        element: n.element, snippet: n.snippet, note: n.note,
+      };
+      notes.push(note);
+      saveNotes(notes);
+      console.log(yellow(`  💬 note on ${note.page} (${note.element}): ${note.note}`));
+    } catch (err) { console.log(red('  note error: ' + err.message)); }
+    res.writeHead(200, { 'content-type': 'application/json' });
+    return res.end(JSON.stringify({ notes: loadNotes() }));
+  }
+
+  if (req.url === '/__nsg/note-resolve' && req.method === 'POST') {
+    let body = '';
+    for await (const chunk of req) body += chunk;
+    const notes = loadNotes();
+    try {
+      const { id } = JSON.parse(body);
+      const n = notes.find((x) => x.id === id);
+      if (n) { n.status = 'done'; n.resolved = new Date().toISOString(); saveNotes(notes); }
+      console.log(green(`  ✓ note resolved: ${id}`));
+    } catch (err) { console.log(red('  resolve error: ' + err.message)); }
+    res.writeHead(200, { 'content-type': 'application/json' });
+    return res.end(JSON.stringify({ notes: loadNotes() }));
+  }
+
   // Proxy everything else to Astro, injecting the editor into HTML pages.
   try {
     const upstream = await fetch(`http://localhost:${ASTRO_PORT}${req.url}`, {
@@ -483,7 +730,10 @@ createServer(async (req, res) => {
       // The replacement MUST be a function: a string replacement would treat `$'`
       // and `$&` in the client code as special patterns.
       const deals = JSON.stringify(buildDeals());
-      const client = CLIENT.replace('__NSG_DEALS__', () => deals);
+      const notes = JSON.stringify(loadNotes());
+      const client = CLIENT
+        .replace('__NSG_DEALS__', () => deals)
+        .replace('__NSG_NOTES__', () => notes);
       html = html.includes('</body>')
         ? html.replace('</body>', () => client + '</body>')
         : html + client;

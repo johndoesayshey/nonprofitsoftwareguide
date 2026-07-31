@@ -72,6 +72,33 @@ The ratings live in `src/data/affiliates.json` as `payout`, `potential` and
 `badge`. They are planning judgments, not promises. Re-rate them once you have
 real conversion data.
 
+### Telling Claude what to change
+
+Press **💬 Notes** in the editor toolbar, then click *any* element on the page,
+not just text. A little panel opens where you type what you want changed:
+
+> "Move this below the ledger" · "Make this smaller" · "This should be two
+> columns" · "Swap this for the Instrumentl card"
+
+There are one-tap chips for the common ones (Move up, Make bigger, Remove this),
+and an **↑ Wider** button that selects the parent element when you meant the
+whole section rather than the bit you clicked. Elements with an open note get a
+purple 💬 pin, and clicking a pinned element again lets you mark it **Done**.
+
+Then just tell Claude **"read my notes"**. Each note is saved with the page, the
+element, and the exact source file and line, so there is no guessing about which
+thing you meant. Claude can also run:
+
+```bash
+npm run notes
+```
+
+Notes live in `feedback.json`, which is deliberately kept out of git: the repo is
+public and these are your private working notes.
+
+Notes mode pauses text editing while it is on (the two would fight over your
+clicks). Turn it off to go back to typing.
+
 Two limits worth knowing: text with a link inside it (like the "What's in a
 stack" paragraph) is not click-editable, and if the exact same sentence appears
 in two files the editor will skip it rather than guess. In both cases just ask

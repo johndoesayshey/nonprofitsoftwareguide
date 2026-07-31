@@ -17,3 +17,6 @@ pnpm-debug.log*
 # jetbrains / vscode
 .idea/
 .vscode/
+
+# visual-editor feedback notes (private; repo is public)
+feedback.json
