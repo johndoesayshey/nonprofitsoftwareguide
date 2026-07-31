@@ -59,6 +59,8 @@ const faqLd = post.faq && post.faq.length > 0 ? {
         {hub && <> · <a href={`/stacks/${post.stack}/`}>Part of the {hub.tier.toLowerCase()} stack</a></>}
       </p>
 
+      <AffiliateDisclosure />
+
       <Content />
 
       {post.faq && post.faq.length > 0 && (
@@ -78,8 +80,6 @@ const faqLd = post.faq && post.faq.length > 0 ? {
           This post is part of the guide to <a href={`/stacks/${post.stack}/`}>the {hub.tier.toLowerCase()} fundraising stack ({hub.revenue} raised)</a>.
         </p>
       )}
-
-      <AffiliateDisclosure />
     </article>
   </div>
 

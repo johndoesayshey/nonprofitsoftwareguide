@@ -1,13 +1,18 @@
 ---
-// One-line disclosure, auto-included wherever /go/ links render (enforced by
-// scripts/check-disclosure.mjs). The single canonical disclosure lives at
-// /disclosure; this just points there.
+// Minimum viable disclosure: one short line, placed ABOVE the affiliate links so
+// a reader sees it before clicking. The FTC's guidance is about proximity and
+// visibility, not word count, so this is deliberately as small as it can be while
+// still appearing on the same page and before the links. The full detail lives
+// on /disclosure.
 ---
 
-<aside
-  class="affiliate-disclosure my-6 border-l-2 pl-3 text-sm"
-  role="note"
-  data-affiliate-disclosure>
-  Some links on this page are affiliate links, and reader discounts are noted
-  where they exist. <a href="/disclosure/">How this site makes money</a>.
-</aside>
+<p class="affiliate-disclosure" data-affiliate-disclosure>
+  Some links on this page are affiliate links.
+  <a href="/disclosure/">Disclosure</a>
+</p>
+
+<style>
+  .affiliate-disclosure { margin: .2rem 0 1.4rem; font-size: .78rem; color: var(--color-muted); }
+  .affiliate-disclosure a { color: var(--color-muted); text-underline-offset: 2px; }
+  .affiliate-disclosure a:hover { color: var(--color-green-deep); }
+</style>

@@ -74,6 +74,9 @@ const rows: Array<[string, string, string]> = [
         matches your shop.
       </p>
 
+      <AffiliateDisclosure />
+
+
       <table>
         <thead>
           <tr><th></th><th>{a.name}</th><th>{b.name}</th></tr>
@@ -101,8 +104,6 @@ const rows: Array<[string, string, string]> = [
           {affB && <p>{b.affiliateSlug && <AffiliateLink slug={b.affiliateSlug} text={`Try ${b.name}`} />}</p>}
         </div>
       </div>
-
-      <AffiliateDisclosure />
     </article>
   </div>
 

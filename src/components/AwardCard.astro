@@ -33,6 +33,12 @@ const show = a.show !== false && !!platform;
         <dd>{platform.entryPrice}</dd>
       </dl>
 
+      {affiliate && (
+        <p class="award-disclose" data-affiliate-disclosure>
+          Affiliate link. <a href="/disclosure/">Disclosure</a>.
+        </p>
+      )}
+
       {affiliate ? (
         <a class="award-cta" href={`/go/${a.slug}`} rel="sponsored nofollow noopener">
           {a.cta} →
@@ -42,12 +48,6 @@ const show = a.show !== false && !!platform;
       )}
 
       {affiliate?.readerOffer && <p class="award-offer">{affiliate.readerOffer}</p>}
-
-      {affiliate && (
-        <p class="award-disclose" data-affiliate-disclosure>
-          Affiliate link. <a href="/disclosure/">How this site makes money</a>.
-        </p>
-      )}
 
       <p class="award-why">
         <a href={`/platforms/${a.slug}/`}>Why {platform.name} won →</a>
@@ -79,7 +79,7 @@ const show = a.show !== false && !!platform;
   .award-cta:hover { background: var(--color-green); }
   .award-offer { margin: .5rem 0 0; text-align: center; font-size: .76rem; font-weight: 700;
     color: var(--color-green-deep); }
-  .award-disclose { margin: .55rem 0 0; text-align: center; font-size: .68rem; color: var(--color-muted); }
+  .award-disclose { margin: 0 0 .5rem; text-align: center; font-size: .68rem; color: var(--color-muted); }
   .award-disclose a { color: var(--color-muted); }
   .award-why { margin: .5rem 0 0; text-align: center; font-size: .78rem; }
   .award-why a { color: var(--color-muted); }

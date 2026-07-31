@@ -58,6 +58,8 @@ const productLd: Record<string, unknown> = {
       <p class="kicker">{cat?.label ?? p.category}</p>
       <h1>{p.name}</h1>
 
+      <AffiliateDisclosure />
+
       <div class="pricebox">
         <div>
           <span class="pricebox-label">Starting price</span>
@@ -103,8 +105,6 @@ const productLd: Record<string, unknown> = {
           </a>
         </p>
       )}
-
-      <AffiliateDisclosure />
     </article>
   </div>
 
