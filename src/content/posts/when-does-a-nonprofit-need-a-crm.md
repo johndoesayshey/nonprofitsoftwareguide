@@ -34,6 +34,8 @@ One trigger is a warning. Two is a decision.
 
 Don't buy ahead of the need. A platform like [Givebutter](/go/givebutter) processes donations free with donor tips enabled and records who gave what, and its optional Plus CRM tier starts around $29/mo if you want light donor management bolted on. Pair that with a clean spreadsheet and disciplined weekly thank-yous, and a shop under the triggers loses nothing by waiting.
 
+The upgrade most shops actually make first is not a CRM at all: it is moving the spreadsheet somewhere structured. [monday.com](/go/monday) and [Jotform](/go/jotform) both get used this way, and for a few hundred donors they work. You get custom fields, filtered views per person, intake forms writing straight into the list, and reminders on the next touch, for somewhere between nothing and about $17 a month. What you do not get is the fundraising layer: no receipting, no soft credits or household records, no retention reporting, and no giving history a real CRM can import cleanly later. That trade is fine right up until one of the four triggers above fires, and then it stops being fine quickly.
+
 The one thing to do while waiting: keep the sheet clean. One row per person, consistent date formats, hard and soft credits in separate columns. Your future migration will thank you.
 
 ## The low-risk first step
