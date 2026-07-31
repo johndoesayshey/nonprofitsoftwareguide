@@ -25,7 +25,9 @@ const categories = categoryOrder.map((slug) => ({
 
 const softwareActive = categoryOrder.includes(section ?? '');
 
-const before = [{ href: '/stacks/', label: 'Stacks', key: 'stacks' }];
+// "Stacks" points home: the homepage already is the stack index, so a separate
+// /stacks/ page would compete with it for the same search intent.
+const before = [{ href: '/', label: 'Stacks', key: 'stacks' }];
 const after = [
   { href: '/compare/', label: 'Compare', key: 'compare' },
   { href: '/benchmarks/', label: 'Benchmark', key: 'benchmark' },
