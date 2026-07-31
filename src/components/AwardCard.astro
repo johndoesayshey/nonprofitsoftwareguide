@@ -1,5 +1,6 @@
 ---
 import { getCollection } from 'astro:content';
+import { relFor } from '../lib/affiliate-value';
 import { getAffiliate } from '../lib/affiliates';
 import award from '../data/featured-award.json';
 
@@ -40,7 +41,7 @@ const show = a.show !== false && !!platform;
       )}
 
       {affiliate ? (
-        <a class="award-cta" href={`/go/${a.slug}`} rel="sponsored nofollow noopener">
+        <a class="award-cta" href={`/go/${a.slug}`} rel={relFor(a.slug)}>
           {a.cta} →
         </a>
       ) : (

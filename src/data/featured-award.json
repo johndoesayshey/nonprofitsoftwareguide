@@ -1,5 +1,5 @@
 {
-  "_comment": "The homepage award spotlight. To feature a different product, change `slug` to any platform slug (jotform, instrumentl, donorbox, donordock, bloomerang, grantable...) and rewrite award/verdict. Everything else on the card (price, link, reader offer) is pulled automatically from the platform page and affiliates.json. Set `show` to false to hide the card. Keep the verdict honest and specific: it is our own editorial pick, not a third-party accreditation.",
+  "_comment": "The homepage award spotlight. To feature a different product, change `slug` to any platform slug (jotform, instrumentl, donorbox, donordock, monday, greatergiving...) and rewrite award/verdict. Everything else on the card (price, link, reader offer) is pulled automatically from the platform page and affiliates.json. Set `show` to false to hide the card. Keep the verdict honest and specific: it is our own editorial pick, not a third-party accreditation.",
   "show": true,
   "slug": "donordock",
   "award": "Best CRM for a One-Person Shop",

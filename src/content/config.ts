@@ -45,12 +45,25 @@ const stacks = defineCollection({
     components: z.array(
       z.object({
         category,
-        platformSlug: z.string(),
+        // A line can point at a product, or carry no product at all. Some
+        // categories are better bought as a consulting project than a
+        // subscription at a given size; those lines set advisory: true and
+        // leave platformSlug empty.
+        platformSlug: z.string().nullable().default(null),
+        advisory: z.boolean().default(false),
+        // Overrides the product name in the ledger. Used when one platform
+        // fills two roles, or when an advisory line needs its own label.
+        label: z.string().optional(),
         annualCost: z.string(),
         rationale: z.string(),
       })
     ),
     lastVerified: z.coerce.date(),
+    // Explains any advisory line in the ledger (a category better bought as a
+    // consulting project than a subscription at this size).
+    consultantNote: z
+      .object({ heading: z.string(), body: z.string() })
+      .optional(),
     draft: z.boolean().default(true),
   }),
 });

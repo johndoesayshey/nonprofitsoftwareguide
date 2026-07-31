@@ -341,3 +341,35 @@ intended behavior for a >90-day-old post.
 Both carry a visible `[OPERATOR INPUT]` block instead of invented legal text or a
 fabricated bio (the bio is the site's credibility and must be real). They flip to
 indexable when the operator replaces the block and removes `noindex`.
+
+## 2026-07-31 — Stack pages rebuilt around programs that pay
+
+**Decision.** All four stack pages were re-specified by the operator against verified
+affiliate programs. monday.com leads the grassroots stack; Jotform handles money in at that
+size; Instrumentl appears at every tier; DonorDock is the CRM through $5M; Greater Giving
+carries events from $250k up; Bloomerang and Kindsight appear only at $5M+.
+
+**Why.** Products with no path to a commission were absorbing prime placement on the highest-
+intent pages. Coverage of them stays (a guide that hides Zeffy is not credible), but the
+recommended ledger now leads with tools that both fit the shop size and can pay.
+
+**Bloomerang serving two lines.** At $5M+ Bloomerang appears as both CRM and event platform.
+Verified against bloomerang.com/features/event-management and /features/auctions: ticketing,
+QR check-in, and live/virtual/hybrid auctions are native to the platform.
+
+**Advisory lines.** Stack components may now carry `advisory: true` and no platformSlug. Used
+for wealth screening below $5M, where a consultant-run screen (~$4,000-$5,000 as a project)
+delivers more than a subscription nobody logs into. Rendered by `ConsultantSlot.astro`, which
+states plainly that introductions are not live yet rather than showing a dead button.
+
+**"What to cut first" removed sitewide.** Operator judgment: fundraisers, EDs and boards do
+not evaluate software through that lens, so the section read as invented rather than observed.
+CLAUDE.md updated to match.
+
+**Grantable removed.** No verifiable affiliate program, and no editorial reason to keep an AI
+grant-writing subscription in a stack when a general assistant drafts as well. Platform page
+deleted, 301 written to /grant-research/.
+
+**rel=sponsored is now conditional.** Both the markdown rehype plugin and every .astro link use
+the program's actual status. Labelling a Zeffy or Candid link "sponsored" would be a false
+statement about a relationship that does not exist.

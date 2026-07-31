@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import { relFor } from '../../lib/affiliate-value';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import CategoryHub from '../../components/CategoryHub.astro';
 import AffiliateDisclosure from '../../components/AffiliateDisclosure.astro';
@@ -32,22 +33,22 @@ import AffiliateDisclosure from '../../components/AffiliateDisclosure.astro';
       <h2>How to choose</h2>
       <p>
         Pick by who will run it. A solo fundraiser wants approachable and cheap:
-        <a href="/go/littlegreenlight" rel="sponsored nofollow noopener">Little Green Light</a>
+        <a href="/go/littlegreenlight" rel={relFor('littlegreenlight')}>Little Green Light</a>
         ($45/mo) for value, or
-        <a href="/go/donordock" rel="sponsored nofollow noopener">DonorDock</a>
+        <a href="/go/donordock" rel={relFor('donordock')}>DonorDock</a>
         (from ~$98/mo, 90-day guarantee) if you want the software to drive your
         daily follow-up. A team of three to eight wants adoption and retention
         analytics, which is
-        <a href="/go/bloomerang" rel="sponsored nofollow noopener">Bloomerang's</a>
+        <a href="/go/bloomerang" rel={relFor('bloomerang')}>Bloomerang's</a>
         home turf (from $79/mo). Membership and event-heavy organizations should
-        demo <a href="/go/neoncrm" rel="sponsored nofollow noopener">Neon CRM</a>
+        demo <a href="/go/neoncrm" rel={relFor('neoncrm')}>Neon CRM</a>
         before buying separate tools.
       </p>
       <h2>The interactive-spreadsheet option</h2>
       <p>
         A lot of small shops run their donor list on
-        <a href="/go/monday" rel="sponsored nofollow noopener">monday.com</a> or
-        <a href="/go/jotform" rel="sponsored nofollow noopener">Jotform</a>
+        <a href="/go/monday" rel={relFor('monday')}>monday.com</a> or
+        <a href="/go/jotform" rel={relFor('jotform')}>Jotform</a>
         instead of buying a CRM, and for a few hundred donors it works. What you
         get is a shared, structured spreadsheet: custom fields for anything you
         want to track, filtered views per staff member, intake forms that write
@@ -71,7 +72,7 @@ import AffiliateDisclosure from '../../components/AffiliateDisclosure.astro';
         touch the data and you find yourself explaining the conventions. Until
         then, an interactive spreadsheet you actually maintain beats a CRM you
         bought and never populated. If you want the middle path,
-        <a href="/go/donordock" rel="sponsored nofollow noopener">DonorDock's</a>
+        <a href="/go/donordock" rel={relFor('donordock')}>DonorDock's</a>
         90-day money-back guarantee makes the first real CRM a low-risk test.
       </p>
 

@@ -10,10 +10,10 @@ export interface StackTier {
 }
 
 export const STACK_TIERS: StackTier[] = [
-  { slug: 'under-250k', tier: 'Grassroots', blurb: 'the (nearly) all-free stack', revenue: 'under $250k', order: 1 },
+  { slug: 'under-250k', tier: 'Grassroots', blurb: 'start free, spend on grants', revenue: 'under $250k', order: 1 },
   { slug: '250k-1m', tier: 'Growing', blurb: 'the first paid tools', revenue: '$250k – $1M', order: 2 },
-  { slug: '1m-5m', tier: 'Established', blurb: 'research + wealth screening', revenue: '$1M – $5M', order: 3 },
-  { slug: '5m-plus', tier: 'Institutional', blurb: 'the full stack', revenue: '$5M+', order: 4 },
+  { slug: '1m-5m', tier: 'Established', blurb: 'grants at program scale', revenue: '$1M – $5M', order: 3 },
+  { slug: '5m-plus', tier: 'Institutional', blurb: 'the full operation', revenue: '$5M+', order: 4 },
 ];
 
 export function tierBySlug(slug: string): StackTier | undefined {

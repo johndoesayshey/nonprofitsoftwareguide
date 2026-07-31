@@ -1,5 +1,6 @@
 ---
 import { getCollection, render } from 'astro:content';
+import { relFor } from '../../lib/affiliate-value';
 import { existsSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import BaseLayout from '../../layouts/BaseLayout.astro';
@@ -75,7 +76,7 @@ const productLd: Record<string, unknown> = {
         </div>
         {affiliate && p.affiliateSlug && (
           <div class="pricebox-cta">
-            <a class="btn-primary" href={`/go/${p.affiliateSlug}`} rel="sponsored nofollow noopener">
+            <a class="btn-primary" href={`/go/${p.affiliateSlug}`} rel={relFor(p.affiliateSlug)}>
               Visit {p.name} →
             </a>
             {affiliate.readerOffer && <span class="offer">{affiliate.readerOffer}</span>}
@@ -100,7 +101,7 @@ const productLd: Record<string, unknown> = {
 
       {affiliate && p.affiliateSlug && (
         <p class="cta">
-          <a class="btn-primary" href={`/go/${p.affiliateSlug}`} rel="sponsored nofollow noopener">
+          <a class="btn-primary" href={`/go/${p.affiliateSlug}`} rel={relFor(p.affiliateSlug)}>
             See {p.name} pricing & book a demo →
           </a>
         </p>

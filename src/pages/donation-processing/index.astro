@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import { relFor } from '../../lib/affiliate-value';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import CategoryHub from '../../components/CategoryHub.astro';
 import AffiliateDisclosure from '../../components/AffiliateDisclosure.astro';
@@ -30,17 +31,17 @@ import AffiliateDisclosure from '../../components/AffiliateDisclosure.astro';
       <h2>How to choose</h2>
       <p>
         Three models compete.
-        <a href="/go/zeffy" rel="sponsored nofollow noopener">Zeffy</a> charges
+        <a href="/go/zeffy" rel={relFor('zeffy')}>Zeffy</a> charges
         the nonprofit nothing at all, funded by optional donor tips.
-        <a href="/go/givebutter" rel="sponsored nofollow noopener">Givebutter</a>
+        <a href="/go/givebutter" rel={relFor('givebutter')}>Givebutter</a>
         is free with tips on (0% platform fee) or a flat 3% with tips off, and
         adds events, auctions, and peer-to-peer.
-        <a href="/go/donorbox" rel="sponsored nofollow noopener">Donorbox</a>
+        <a href="/go/donorbox" rel={relFor('donorbox')}>Donorbox</a>
         charges a platform fee (about 2.95%, lower on Pro) and delivers the
         deepest recurring-gift tooling in the class: failed-card recovery, donor
         portals, and CRM integrations. WordPress shops reach for
-        <a href="/go/givewp" rel="sponsored nofollow noopener">GiveWP</a>, and
-        <a href="/go/4agoodcause" rel="sponsored nofollow noopener">4aGoodCause</a>
+        <a href="/go/givewp" rel={relFor('givewp')}>GiveWP</a>, and
+        <a href="/go/4agoodcause" rel={relFor('4agoodcause')}>4aGoodCause</a>
         offers flat monthly pricing with no transaction fees.
       </p>
       <p>

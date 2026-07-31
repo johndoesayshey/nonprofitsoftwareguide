@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import { relFor } from '../../lib/affiliate-value';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import CategoryHub from '../../components/CategoryHub.astro';
 import AffiliateDisclosure from '../../components/AffiliateDisclosure.astro';
@@ -32,11 +33,11 @@ import AffiliateDisclosure from '../../components/AffiliateDisclosure.astro';
       <p>
         Start with where the mess is. If it is <em>work</em> (grant deadlines,
         program tracking, who owes what by when), that is
-        <a href="/go/monday" rel="sponsored nofollow noopener">monday.com</a>:
+        <a href="/go/monday" rel={relFor('monday')}>monday.com</a>:
         a free two-seat plan, paid plans from about $9 per seat, and a nonprofit
         program with discounted pricing. If it is <em>intake</em> (program
         applications, volunteer sign-ups, scholarship forms), that is
-        <a href="/go/jotform" rel="sponsored nofollow noopener">Jotform</a>:
+        <a href="/go/jotform" rel={relFor('jotform')}>Jotform</a>:
         a capable free tier and a permanent 50% nonprofit discount that brings
         paid plans to roughly $17 a month.
       </p>

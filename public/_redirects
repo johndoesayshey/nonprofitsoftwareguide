@@ -3,3 +3,5 @@
 
 # Airtable dropped: no affiliate program, monday.com covers the same need.
 /platforms/airtable/  /forms-operations/  301
+# Grantable removed: no verifiable affiliate program and no editorial reason to keep it.
+/platforms/grantable/  /grant-research/  301

@@ -207,8 +207,12 @@ meeting Thursday. Short sentences. Name the tradeoff. Never "game-changing," "ro
 donor management matters.
 
 **Stack pages specifically:** lead with the total annual cost of the recommended stack, then
-justify each line. Include a "what to cut first when the budget gets cut" section — that is the
-question people actually have and nobody answers it.
+justify each line. Where a category is better bought as a consulting project than a
+subscription at that size, say so and mark the line advisory rather than naming a product.
+
+*(Superseded 2026-07-31: the original spec required a "what to cut first when the budget gets
+cut" section on every stack page. The operator removed it — fundraisers, EDs and boards are not
+evaluating software through that lens, so the section read as invented. Do not reintroduce it.)*
 
 ## Content schema
 
@@ -225,7 +229,7 @@ posts:     { title, description, publishDate, updatedDate, stack, targetQuery (u
 
 - `/` — the thesis and the four stack entry points
 - `/stacks/[slug]` — **the primary pages.** One per shop size: under $250k, $250k–1M, $1M–5M,
-  $5M+. Total cost, line-by-line rationale, what to cut first, upgrade triggers.
+  $5M+. Total cost, line-by-line rationale, upgrade triggers.
 - `/platforms/[slug]`, `/compare/[slug]`, `/blog/[slug]`
 - `/disclosure` — leave legal text as `[OPERATOR INPUT]`; do not write compliance language
 - `/about` — operator's real credentials, written by the operator

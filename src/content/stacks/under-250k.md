@@ -2,46 +2,44 @@
 shopSize: "under-$250k"
 annualRevenue: "under $250k"
 staffSize: "0-1 development staff (often the ED)"
-totalStackCost: "$0-$600/yr"
+totalStackCost: "$0-$2,400/yr"
 slug: under-250k
 targetQuery: "nonprofit software stack under 250k"
-lastVerified: 2026-07-29
+lastVerified: 2026-07-31
 draft: false
 components:
-  - category: donation-processing
-    platformSlug: zeffy
-    annualCost: "$0"
-    rationale: "100% free processing; no platform or processing fees at all"
-  - category: events-auctions
-    platformSlug: givebutter
-    annualCost: "$0"
-    rationale: "Free events, campaigns, and basic donor tracking"
-  - category: grant-research
-    platformSlug: grantable
-    annualCost: "$0-$600/yr"
-    rationale: "AI grant writing; free to start, $50/mo when application volume grows"
   - category: forms-ops
     platformSlug: monday
-    annualCost: "$0"
-    rationale: "Free plan covers grant deadlines, program tracking, and the work that isn't donor data"
+    annualCost: "$0-$216/yr"
+    rationale: "The first system you actually need: grant deadlines, program tracking, and a contact list that beats a spreadsheet. Free for two seats."
+  - category: donation-processing
+    platformSlug: jotform
+    annualCost: "$0-$204/yr"
+    rationale: "Donation, registration and intake forms in one place. Free to start; about $17/mo with the nonprofit discount."
+  - category: grant-research
+    platformSlug: instrumentl
+    annualCost: "$0-$2,148/yr"
+    rationale: "The one line worth real money, and only once grant applications are a monthly job rather than an annual scramble."
 ---
 
-At under $250k raised, your fundraising stack should cost almost nothing: free processing, free events, free operations tools, and one smart spend on grant writing help. Budget $0 to about $600 a year. What a grassroots shop is short on is hours, and the one paid line here buys hours back.
+At under $250k raised, almost your whole stack should be free. Run operations and your contact list in one place, collect money through forms you already need, and skip everything else. Budget $0 to start. The only line that can reach four figures is grant research, and only when grants become a monthly job.
 
 ## Why these picks
 
-**Processing: Zeffy ($0).** No platform fee and no processing fee, so a $100 gift deposits $100. [Zeffy](/go/zeffy) funds itself with an optional donor tip at checkout and runs on Stripe. Look at the checkout flow, plan around its scheduled payout dates before a cash-critical event, and keep every dollar.
+**Operations and your first contact list: monday.com ($0 for two seats).** Start here, before anything donor-facing. A shop this size does not lose donors because the database is weak. It loses them because nobody remembered to follow up. [monday.com](/go/monday) gives you a grant-deadline board with owners and due dates, a program tracker, and a contact list with columns you control. It is not a donor CRM and will not pretend to be one, but as a shared, sortable list with reminders attached it beats the spreadsheet you are using now. There is a nonprofit program with discounted paid plans for when two seats stops being enough.
 
-**Events and light CRM: Givebutter ($0).** Ticketing, campaign pages, and enough donor tracking to carry a small shop for years. [Givebutter's](/go/givebutter) donor-facing pages are more modern than what many paid tools show supporters. Keep tips on and the platform fee is zero.
+**Money in: Jotform ($0 to about $17/mo).** [Jotform](/go/jotform) covers the donate form, event registration, volunteer intake and the program application, all with payment collection through Stripe, PayPal or Square. One tool, one place submissions land. The honest tradeoff: a dedicated giving platform handles recurring gifts and automatic receipting better, so if monthly donors become a real program, add one. Until then, paying a giving platform to process a few dozen gifts a year is money spent ahead of the need. If you would rather no fee came out of any gift, [Zeffy](/go/zeffy) is genuinely free and worth a look.
 
-**Grant writing: Grantable ($0 to start, $50/mo as you grow).** The honest problem at this size isn't finding grant lists; it's the writing. Federal portals are a poor fit for grassroots shops (federal grants demand compliance capacity small organizations don't have yet), and foundation prospects are findable free at a [Candid](/go/candid) partner library. The bottleneck is drafting, and [Grantable's](/go/grantable) AI drafts from your past applications turn a two-hour proposal into a forty-minute edit. Start on the free plan; nonprofits under $500k get half off the first paid year.
+**Grant research: Instrumentl (14-day trial, then $179/mo).** This is the one place a small shop should consider spending real money, and it comes with a condition. If you apply for three grants a year, do not buy it. If you are searching for funders every month, tracking deadlines across two people, and losing applications to dates that slipped, [Instrumentl](/go/instrumentl) pays for itself the first time it surfaces a funder you would not have found. Run the trial with your actual active applications loaded before deciding. Federal portals are a poor fit at this size: [Grants.gov](/grant-research/) is free but built for organizations with compliance capacity you do not have yet.
 
-**Operations: monday.com ($0).** Grant deadlines, program tracking, volunteer coordination. [monday.com's](/go/monday) free plan covers two seats, which is a small shop, and there is a nonprofit program with discounted paid plans when you outgrow it. Many grassroots shops pay for something like this before anything donor-facing, which is a sane order of operations.
+## What you should not buy yet
 
-## What to cut first when the budget gets cut
+Two categories get sold hard to small shops, and neither belongs here.
 
-Grantable's paid tier is the only line that can be cut, and dropping back to its free plan costs you drafting speed, not data. Everything else is already free. If a board member pushes for "real software," the better first spend is almost always a few hours of grant-writing help or a spring mailing.
+**Wealth screening.** Screening tells you which donors have capacity. That is only useful if someone has time to build a portfolio and go make the visits. At under $250k with one fundraiser who is also the ED, nobody has that time, and a screening report you cannot act on is a report you paid for twice. Skip it until major gifts are somebody's actual job.
+
+**Event and auction software.** A dedicated auction platform is priced for a gala clearing six figures. A community event of eighty people runs fine on a registration form and a spreadsheet of items. Add the software when the event outgrows the volunteer running it, not before.
 
 ## When you've outgrown this stack
 
-Move up to the [Growing stack](/stacks/250k-1m/) when donor history starts slipping through Givebutter's tracking, when you're hand-searching for funders every month, or when you hire your first dedicated fundraiser. That's when a real CRM and a research platform with funder matching start paying for themselves.
+Move up to the [Growing stack](/stacks/250k-1m/) when donor history starts living in three places at once, when you hire your first dedicated fundraiser, or when someone asks a reporting question your board deck cannot answer. That is when a real CRM starts earning its line.

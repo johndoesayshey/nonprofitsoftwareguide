@@ -2,11 +2,12 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import CategoryHub from '../../components/CategoryHub.astro';
+import { relFor } from '../../lib/affiliate-value';
 import AffiliateDisclosure from '../../components/AffiliateDisclosure.astro';
 ---
 <BaseLayout
   title="Grant research software for nonprofits"
-  description="The grant research and grant writing tools worth paying for, compared by price and shop size: Instrumentl, GrantStation, Grantable, and Candid."
+  description="The grant research tools worth paying for, compared by price and shop size: Instrumentl, GrantStation, Candid, and Grants.gov."
   section="grant-research">
   <div class="wrap">
     <Breadcrumbs crumbs={[{ label: 'Home', href: '/' }, { label: 'Grant research' }]} />
@@ -31,21 +32,22 @@ import AffiliateDisclosure from '../../components/AffiliateDisclosure.astro';
       <h2>How to choose</h2>
       <p>
         Match the tool to your volume. A handful of applications a year:
-        <a href="/go/grantstation" rel="sponsored nofollow noopener">GrantStation</a>
+        <a href="/go/grantstation" rel={relFor('grantstation')}>GrantStation</a>
         (about $199/yr through TechSoup) plus free library access to
-        <a href="/go/candid" rel="sponsored nofollow noopener">Candid</a> covers
-        the research, and <a href="/go/grantable" rel="sponsored nofollow noopener">Grantable</a>
-        speeds up the writing from a free plan. Ten or more concurrent
-        applications: <a href="/go/instrumentl" rel="sponsored nofollow noopener">Instrumentl</a>
+        <a href="/go/candid" rel={relFor('candid')}>Candid</a> covers it, and a
+        general AI assistant will draft faster than any grant-specific writing
+        tool you would pay for at that volume. Ten or more concurrent
+        applications: <a href="/go/instrumentl" rel={relFor('instrumentl')}>Instrumentl</a>
         (from $179/mo) replaces both the searching and the tracking spreadsheet,
         and its 14-day trial is the fastest way to see whether the matching earns
         the price for your programs.
       </p>
       <p>
         One rule keeps this category honest: buy research software when finding
-        funders is the bottleneck, and buy writing software when drafting is.
-        More prospects won't fix a writing backlog, and faster drafts won't fix
-        an empty pipeline.
+        funders is the bottleneck. If drafting is the bottleneck instead, the
+        honest answer is that a $20/month general AI assistant handles first
+        drafts as well as the grant-specific writing tools we have looked at,
+        and no software fixes a program that isn't fundable yet.
       </p>
     </section>
 

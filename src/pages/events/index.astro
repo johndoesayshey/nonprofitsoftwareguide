@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import { relFor } from '../../lib/affiliate-value';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import CategoryHub from '../../components/CategoryHub.astro';
 import AffiliateDisclosure from '../../components/AffiliateDisclosure.astro';
@@ -30,11 +31,11 @@ import AffiliateDisclosure from '../../components/AffiliateDisclosure.astro';
       <h2>How to choose</h2>
       <p>
         A community gala with a silent auction runs well on
-        <a href="/go/givebutter" rel="sponsored nofollow noopener">Givebutter</a>:
+        <a href="/go/givebutter" rel={relFor('givebutter')}>Givebutter</a>:
         mobile bidding, ticketing, and payments included, at zero platform fee
         with donor tips on. A signature event with a live auctioneer, sponsor
         tables, seating charts, and a six-figure target is where
-        <a href="/go/onecause" rel="sponsored nofollow noopener">OneCause</a>
+        <a href="/go/onecause" rel={relFor('onecause')}>OneCause</a>
         earns its package price (annual plans from about $2,995 plus a
         percentage of funds raised). The fee is insurance on your biggest
         revenue night, and their demo of the mobile-bidding flow is worth the

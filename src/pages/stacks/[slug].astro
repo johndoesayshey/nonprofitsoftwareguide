@@ -3,6 +3,7 @@ import { getCollection, render } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import AffiliateDisclosure from '../../components/AffiliateDisclosure.astro';
+import ConsultantSlot from '../../components/ConsultantSlot.astro';
 import DraftBanner from '../../components/DraftBanner.astro';
 import { categoryLabel } from '../../lib/categories';
 import { tierBySlug } from '../../lib/stacks';
@@ -34,7 +35,7 @@ const verified = formatMedium(s.lastVerified);
 
 <BaseLayout
   title={`The ${s.shopSize} fundraising stack`}
-  description={`What a ${s.annualRevenue} nonprofit should run: total cost ${s.totalStackCost}, line by line, plus what to cut first.`}
+  description={`What a ${s.annualRevenue} nonprofit should run: total cost ${s.totalStackCost}, line by line, with what each tool is actually for.`}
   section="stacks"
   noindex={isDraft}>
   <div class="wrap">
@@ -73,9 +74,16 @@ const verified = formatMedium(s.lastVerified);
         </thead>
         <tbody>
           {s.components.map((c) => (
-            <tr>
+            <tr class:list={{ advisory: c.advisory }}>
               <td>{categoryLabel(c.category)}</td>
-              <td><a href={`/platforms/${c.platformSlug}/`}>{platformName.get(c.platformSlug) ?? c.platformSlug}</a><br /><small style="color:var(--color-muted)">{c.rationale}</small></td>
+              <td>
+                {c.advisory || !c.platformSlug ? (
+                  <span class="line-name">{c.label ?? 'No software yet'}</span>
+                ) : (
+                  <a href={`/platforms/${c.platformSlug}/`}>{c.label ?? platformName.get(c.platformSlug) ?? c.platformSlug}</a>
+                )}
+                <br /><small style="color:var(--color-muted)">{c.rationale}</small>
+              </td>
               <td class="num">{c.annualCost}</td>
             </tr>
           ))}
@@ -85,7 +93,11 @@ const verified = formatMedium(s.lastVerified);
         </tfoot>
       </table>
 
-      <!-- Body carries the narrative: what to cut first, upgrade triggers, rationale. -->
+      {s.consultantNote && (
+        <ConsultantSlot heading={s.consultantNote.heading} body={s.consultantNote.body} />
+      )}
+
+      <!-- Body carries the narrative: per-line rationale and upgrade triggers. -->
       <Content />
 
       {supporting.length > 0 && (
@@ -119,4 +131,7 @@ const verified = formatMedium(s.lastVerified);
     text-transform: uppercase; color: var(--color-muted); }
   .total-facts dd { margin: .1rem 0 0; font-size: 1.05rem; }
   .cluster { margin-top: 2rem; padding-top: 1rem; border-top: 1px solid var(--color-rule); }
+  /* A line with no product still belongs in the ledger, but it should not read
+     like a recommendation to buy something. */
+  .advisory .line-name { font-weight: 700; color: var(--color-muted); }
 </style>

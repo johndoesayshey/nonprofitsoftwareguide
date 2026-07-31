@@ -2,14 +2,17 @@
 import { defineConfig } from 'astro/config';
 import mdx from '@astrojs/mdx';
 import tailwindcss from '@tailwindcss/vite';
+import affiliates from './src/data/affiliates.json' with { type: 'json' };
 
 // The public site origin. Used for canonical URLs, sitemap, RSS, and JSON-LD.
 export const SITE = 'https://nonprofitsoftwareguide.com';
 
-// Any /go/ link written in markdown gets rel="sponsored nofollow noopener"
-// automatically, so authors can write plain [Text](/go/slug) links and stay
-// compliant with affiliate-program terms. (Component-rendered AffiliateLinks
-// already set this; this covers hand-written markdown links.)
+// Any /go/ link written in markdown gets its rel set automatically, so authors
+// can write plain [Text](/go/slug) links and stay compliant with affiliate
+// terms. "sponsored" is only claimed where a program actually exists; a product
+// we cover but earn nothing from gets plain nofollow, because labelling it
+// sponsored would be a false statement about the relationship. Mirrors
+// relFor() in src/lib/affiliate-value.ts.
 function rehypeAffiliateRel() {
   const walk = (node) => {
     if (
@@ -18,7 +21,11 @@ function rehypeAffiliateRel() {
       typeof node.properties?.href === 'string' &&
       node.properties.href.startsWith('/go/')
     ) {
-      node.properties.rel = ['sponsored', 'nofollow', 'noopener'];
+      const slug = node.properties.href.replace('/go/', '').replace(/\/$/, '');
+      const earns = (affiliates[slug]?.potential ?? 'none') !== 'none';
+      node.properties.rel = earns
+        ? ['sponsored', 'nofollow', 'noopener']
+        : ['nofollow', 'noopener'];
     }
     node.children?.forEach(walk);
   };
