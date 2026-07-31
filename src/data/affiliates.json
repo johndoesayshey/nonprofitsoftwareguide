@@ -387,18 +387,18 @@
   "grantable": {
     "name": "Grantable",
     "category": "grant-research",
-    "status": "pending",
+    "status": "none",
     "url": "https://www.grantable.co",
     "affiliateUrl": null,
     "readerOffer": "50% off first year for nonprofits under $500k budget",
-    "terms": "Program advertised at 20% of subscription revenue recurring 24 months; affiliates page currently redirects to contact, so email hello@grantable.co to apply and confirm terms. [FACT-CHECK: confirm at signup]",
-    "signupUrl": "https://www.grantable.co/affiliates",
+    "terms": "No confirmed commission program. grantable.co/affiliates now redirects to their contact page, and grantable.co/partners describes only reciprocal visibility ('we feature you on our site, you feature us on yours'), with no commission terms. Search engines still index an old affiliate page, so a program likely existed at some point. Verified 2026-07-31.",
+    "signupUrl": null,
     "appliedOn": null,
     "approvedOn": null,
-    "payout": "20% recurring for 24 months (advertised, unconfirmed)",
-    "potential": "high",
-    "badge": "20%",
-    "potentialNote": "Two years of recurring if the advertised terms hold. Confirm by email before leaning on it."
+    "payout": "No confirmed commission program",
+    "potential": "none",
+    "badge": "ask",
+    "potentialNote": "Earns nothing today. The affiliates page is gone and the live partners page offers cross-promotion only. Worth one email to hello@grantable.co asking whether the affiliate program still exists, but do not plan revenue on it."
   },
   "monday": {
     "name": "monday.com",

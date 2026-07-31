@@ -164,7 +164,7 @@ Every existing link on the site starts earning immediately.
 - [ ] GiveWP — givewp.com footer → Affiliates (30-40%)
 - [ ] 4aGoodCause — 4agoodcause.com/referral-program (25% recurring)
 - [ ] DonorSnap — donorsnap.com → Affiliate ($200 per customer)
-- [ ] Grantable — email hello@grantable.co (advertised 20% recurring for 24 months; confirm terms when you apply)
+- [ ] Grantable — email hello@grantable.co and ASK whether an affiliate program still exists. Their /affiliates page now redirects to contact, and /partners offers cross-promotion only. Assume no revenue until they confirm.
 - [ ] monday.com — mondaycom.partnerstack.com (self-serve via PartnerStack)
 - [ ] Later, once traffic is real: Kindsight, DonorSearch, Neon One (relationship deals; email their partnerships teams with your numbers)
 

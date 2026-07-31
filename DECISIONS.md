@@ -311,6 +311,18 @@ under-250k stack now carries Grantable (AI grant writing, free plan, affiliate
 program, 50% first-year nonprofit discount) and Airtable for ops. Grants.gov's
 page stays for SEO but now says plainly who it's for. Grassroots total: $0-$600.
 
+**D50. Correction: Grantable has no confirmed affiliate program (2026-07-31).**
+D48 recorded Grantable at "20% recurring for 24 months" on the strength of
+search-indexed content. Re-checked live at the operator's prompting:
+`grantable.co/affiliates` now 302s to their contact page, and `grantable.co/partners`
+describes reciprocal visibility only ("we feature you on our site, you feature us
+on yours") with no commission terms anywhere. The 20%/24-month figure could not be
+reproduced from any live vendor page. Downgraded to `status: none`,
+`potential: none`. Lesson: a search snippet describing a page is not the same as
+the page existing; verify affiliate terms against a live vendor URL before rating
+them. monday.com from the same batch was re-verified and does check out
+("up to 100% commission on the first year's sales", verbatim from their page).
+
 **D48. New affiliate-bearing tools, researched before adding.** Added: Grantable
 (program advertised at 20% recurring 24 months; confirm at application) and
 monday.com (PartnerStack, up to 100% of first-year sales). Researched and
