@@ -158,9 +158,28 @@ function applyByFile(original, updated, file) {
 
 function applyEdit(original, updated, file, line, page, isHtml) {
   if (isHtml) { original = cleanHtml(original); updated = cleanHtml(updated); }
-  return applyByLocation(original, updated, file, line)
+  const result = applyByLocation(original, updated, file, line)
       ?? applyByFile(original, updated, fileForPage(page))
       ?? applyByText(original, updated);
+
+  // A value can render in more than one place from a single source field — a
+  // stack total appears in the headline card and again in the table footer. Edit
+  // both and the second lookup fails, because the first save already replaced
+  // the text it was searching for. That is a success, not an error.
+  if (!result.ok && result.reason === 'not found in source' && alreadyApplied(updated)) {
+    return { ok: true, file: 'already applied (same value edited twice on the page)' };
+  }
+  return result;
+}
+
+// True when the new value is already in the source and the old one is gone.
+function alreadyApplied(updated) {
+  const needle = norm(updated);
+  if (needle.length < 3) return false;
+  for (const file of allSourceFiles()) {
+    if (normalizeWithMap(readFileSync(file, 'utf8')).norm.includes(needle)) return true;
+  }
+  return false;
 }
 
 // ---------- feedback notes ----------------------------------------------------
