@@ -14,10 +14,16 @@ strengths:
   - "Among the cheapest real donor CRMs, and the full price ladder is published"
   - "Covers donors, gifts, events, volunteers and mailings without add-on modules"
   - "Pricing scales in small steps, so growth does not trigger a big jump"
-limitations:
-  - "Smaller vendor with a lighter integration list than Bloomerang or Neon"
-  - "Interface is functional rather than modern"
-  - "Priced by record count, so a bloated list costs you"
+otherOptions:
+  - need: "Want the software to drive daily follow-up?"
+    platformSlug: donordock
+    note: "DonorDock's ActionBoard turns the database into a task list, and it carries a 90-day money-back guarantee."
+  - need: "List growing fast?"
+    platformSlug: donordock
+    note: "Record-count pricing re-prices your contract as you succeed; DonorDock includes unlimited contacts on every tier."
+  - need: "Need deeper retention analytics?"
+    platformSlug: bloomerang
+    note: "Bloomerang's reporting is built around who is about to lapse."
 ---
 
 [Eleo](/go/eleo) is a low-cost donor CRM for small shops: donors, gifts, events, volunteers and mailings in one system, starting at $39 a month for up to 2,500 records. Its real advantage is transparency, since the whole price ladder is published rather than quoted.

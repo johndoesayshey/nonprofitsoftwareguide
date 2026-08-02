@@ -14,10 +14,16 @@ strengths:
   - "Purpose-built auction machinery: mobile bidding, live-auction support, seating, check-in"
   - "Scales to six-figure event nights without improvisation"
   - "Pay-as-you-go entry lets a shop trial it on one event"
-limitations:
-  - "Real money: packages plus a percentage of funds raised plus processing"
-  - "Per-event add-ons and implementation vary widely by scope"
-  - "More than a community-scale gala needs"
+otherOptions:
+  - need: "Event under about $100k?"
+    platformSlug: givebutter
+    note: "The package pricing and event-night production here are sized for large managed auctions; a smaller event pays for capacity it will not use."
+  - need: "Want one vendor for a mid-size gala?"
+    platformSlug: greatergiving
+    note: "Greater Giving bundles bidding, check-in and hardware without the enterprise footprint."
+  - need: "Budgeting the true cost?"
+    platformSlug: null
+    note: "A percentage of event funds sits on top of the annual package, so model both together before signing."
 ---
 
 [OneCause](/go/onecause) is dedicated event-and-auction software: mobile bidding, live auction management, ticketing, seating charts, and check-in. Entry runs from roughly $200 pay-as-you-go (plus about 5% of funds raised) to annual packages around $2,995 a year plus fees. The buying question is event size: for a six-figure signature gala, the fee is insurance on your biggest revenue night.

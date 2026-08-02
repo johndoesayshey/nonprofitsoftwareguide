@@ -14,10 +14,16 @@ strengths:
   - "Donation forms live in minutes and embed anywhere"
   - "The strongest recurring-gift management in its price class"
   - "Free to start; upgrade only when volume justifies it"
-limitations:
-  - "Platform fee sits on top of payment processing"
-  - "Free platforms compete hard for simple use cases"
-  - "The donor-facing pages are more utilitarian than Givebutter's"
+otherOptions:
+  - need: "Online giving past about $40,000 a year?"
+    platformSlug: 4agoodcause
+    note: "A flat subscription stops scaling with your success, and past roughly $40k the percentage costs more than 4aGoodCause's entry tier."
+  - need: "Want no platform fee at all?"
+    platformSlug: zeffy
+    note: "Zeffy takes nothing, funded by an optional donor tip."
+  - need: "Event-led fundraising?"
+    platformSlug: givebutter
+    note: "Givebutter's ticketing and campaign pages carry a community-scale event for free."
 ---
 
 [Donorbox](/go/donorbox) is donation-processing software you can launch in an afternoon: embeddable forms, recurring giving, and donor management. The standard plan is free to start with a platform fee of about 2.95% plus payment processing; the Pro plan (about $150 a month billed annually) cuts the platform fee to roughly 1.75%. What you're buying is the recurring-gift tooling, and Donorbox's is the best in its class.

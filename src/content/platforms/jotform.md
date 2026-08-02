@@ -14,10 +14,16 @@ strengths:
   - "Permanent 50% nonprofit discount brings Bronze to about $17/mo"
   - "Conditional logic, file uploads, payments, and approval workflows"
   - "Free tier covers a tiny shop's needs (5 forms, 100 submissions/mo)"
-limitations:
-  - "Submission caps drive the tier ladder during busy intake seasons"
-  - "Dedicated giving platforms convert donations better"
-  - "Form sprawl needs naming discipline"
+otherOptions:
+  - need: "Recurring giving becoming a real program?"
+    platformSlug: donorbox
+    note: "Purpose-built giving tools handle automatic receipting, donor portals and failed-card recovery that a form builder does not."
+  - need: "Tracking work rather than collecting it?"
+    platformSlug: monday
+    note: "monday.com is the board-and-owner side of the same job; Jotform feeds it."
+  - need: "Need a donor database behind the forms?"
+    platformSlug: donordock
+    note: "Submissions are data; a CRM is where the relationship history lives."
 ---
 
 [Jotform](/go/jotform) is the workhorse form builder for nonprofit operations: program applications, volunteer intake, scholarship forms, event registrations, board surveys. The free tier covers 5 forms and 100 monthly submissions. Paid plans start around $34 a month, and Jotform's permanent 50% nonprofit discount cuts that to roughly $17.

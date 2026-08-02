@@ -14,10 +14,16 @@ strengths:
   - "Free, and the authoritative source for every federal grant opportunity"
   - "Required for federal applications, so established shops end up here anyway"
   - "Saved searches and email alerts for new opportunities"
-limitations:
-  - "Federal grants are highly competitive; rarely a realistic first move for a grassroots shop"
-  - "Covers no foundation, corporate, or state funders"
-  - "SAM.gov registration is slow; start weeks before any deadline"
+otherOptions:
+  - need: "Chasing foundation money?"
+    platformSlug: instrumentl
+    note: "Grants.gov indexes federal opportunities only, so the foundations that fund most small nonprofits are simply not in it."
+  - need: "Small shop without compliance staff?"
+    platformSlug: instrumentl
+    note: "Federal awards carry reporting, audit and single-audit obligations that a one-person office cannot absorb; foundation grants are the better use of the same hours."
+  - need: "Need deadline tracking?"
+    platformSlug: instrumentl
+    note: "There is no pipeline, no matching and no alerting here beyond saved searches."
 ---
 
 Grants.gov is the free federal system for finding and applying to U.S. federal grants. If your organization pursues federal money, you'll use it; it is the system of record. One caution up front: federal grants are among the most competitive and compliance-heavy dollars in fundraising, and they are rarely the right first move for a small grassroots shop.

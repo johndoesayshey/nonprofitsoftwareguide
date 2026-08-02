@@ -14,10 +14,16 @@ strengths:
   - "Zero fees to the nonprofit: a $100 gift deposits $100"
   - "Covers donations, ticketing, raffles, and memberships"
   - "Runs on Stripe underneath"
-limitations:
-  - "Donors see an optional tip prompt at checkout"
-  - "Payouts run on a schedule, not on demand"
-  - "Fewer integrations than paid processors"
+otherOptions:
+  - need: "Want a predictable effective rate?"
+    platformSlug: 4agoodcause
+    note: "Zeffy is free because donors are asked to tip at checkout; when they decline, your net per gift moves, and a flat subscription removes that variable entirely."
+  - need: "Need recurring-gift tooling?"
+    platformSlug: donorbox
+    note: "Failed-card recovery, upgrade prompts and donor portals are what a paid platform is actually for."
+  - need: "Need a donor database?"
+    platformSlug: donordock
+    note: "Zeffy holds transactions, not relationship history, soft credits or household records."
 ---
 
 Yes, [Zeffy](/go/zeffy) is really free. No platform fee and no processing fee: a $100 gift puts $100 in your account. The model funds itself by offering your donors an optional tip to Zeffy at checkout, and payments run on Stripe underneath. For a fee-sensitive shop, the math has no competition.

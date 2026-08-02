@@ -1,4 +1,5 @@
 ---
+import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import AffiliateLink from '../../components/AffiliateLink.astro';
@@ -15,6 +16,11 @@ export async function getStaticPaths() {
 }
 
 const { pair } = Astro.props;
+// Names for the "not the fit?" links, so a slug typo shows up as the raw slug
+// rather than a plausible-looking wrong label.
+const allPlatformEntries = await getCollection('platforms');
+const platformName = new Map(allPlatformEntries.map((x) => [x.data.slug, x.data.name]));
+
 const a = pair.a.data;
 const b = pair.b.data;
 const catLabel = categoryLabel(pair.category);
@@ -92,14 +98,24 @@ const rows: Array<[string, string, string]> = [
         <div class="verdict">
           <h3>{a.name}</h3>
           <p><strong>Strengths:</strong> {a.strengths.join('; ')}.</p>
-          <p><strong>Watch for:</strong> {a.limitations.join('; ')}.</p>
+          <p><strong>Not the fit?</strong></p>
+          <ul class="alt-list">
+            {a.otherOptions.filter((o) => o.platformSlug).slice(0, 2).map((o) => (
+              <li>{o.need} <a href={`/platforms/${o.platformSlug}/`}>{platformName.get(o.platformSlug) ?? o.platformSlug} →</a></li>
+            ))}
+          </ul>
           <p><a href={`/platforms/${a.slug}/`}>Full {a.name} write-up →</a></p>
           {affA && <p>{a.affiliateSlug && <AffiliateLink slug={a.affiliateSlug} text={`Try ${a.name}`} />}</p>}
         </div>
         <div class="verdict">
           <h3>{b.name}</h3>
           <p><strong>Strengths:</strong> {b.strengths.join('; ')}.</p>
-          <p><strong>Watch for:</strong> {b.limitations.join('; ')}.</p>
+          <p><strong>Not the fit?</strong></p>
+          <ul class="alt-list">
+            {b.otherOptions.filter((o) => o.platformSlug).slice(0, 2).map((o) => (
+              <li>{o.need} <a href={`/platforms/${o.platformSlug}/`}>{platformName.get(o.platformSlug) ?? o.platformSlug} →</a></li>
+            ))}
+          </ul>
           <p><a href={`/platforms/${b.slug}/`}>Full {b.name} write-up →</a></p>
           {affB && <p>{b.affiliateSlug && <AffiliateLink slug={b.affiliateSlug} text={`Try ${b.name}`} />}</p>}
         </div>
@@ -111,6 +127,9 @@ const rows: Array<[string, string, string]> = [
 </BaseLayout>
 
 <style>
+  .alt-list { margin: .2rem 0 .6rem; padding-left: 1.1rem; font-size: .93rem; }
+  .alt-list li { margin-bottom: .3rem; color: var(--color-muted); }
+
   .lead { font-size: 1.15rem; color: var(--color-muted); }
   .verdicts { display: grid; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); gap: 1.4rem; margin: 1.6rem 0; }
   .verdict { border: 1px solid var(--color-rule-strong); border-radius: 2px; padding: 1rem 1.1rem; background: var(--color-paper-2); }

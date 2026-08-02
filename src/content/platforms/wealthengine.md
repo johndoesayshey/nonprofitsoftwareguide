@@ -14,10 +14,16 @@ strengths:
   - "Strong wealth-indicator modeling and fast capacity estimates"
   - "Built for large-list screening and broad segmentation"
   - "Prebuilt profiles speed up individual look-ups"
-limitations:
-  - "No public pricing; reported figures start around $5,000/yr plus implementation"
-  - "Weighted toward wealth signals; pair with giving-history data before acting"
-  - "Trails Kindsight and DonorSearch in review-site satisfaction"
+otherOptions:
+  - need: "Want a vendor that will run a sample screen?"
+    platformSlug: donorsearch
+    note: "Pricing here is quote-only with nothing published, which makes a like-for-like comparison slow; DonorSearch and Kindsight both score a sample of your own donors on request."
+  - need: "Want transparent scoring?"
+    platformSlug: kindsight
+    note: "Kindsight explains how its scores are built, which matters when you have to defend a rating in a portfolio meeting."
+  - need: "Under about $1M raised?"
+    platformSlug: null
+    note: "Hand-research your top 25 prospects. No screening platform pays for itself before someone owns major gifts."
 ---
 
 [WealthEngine](/go/wealthengine) is wealth-screening software focused on wealth-indicator modeling: fast capacity estimates across large lists, built from assets, real estate, and market data. Pricing is quoted per organization; reported figures start around $5,000 a year plus implementation. Its lane is scale, sorting a big file quickly by estimated capacity.

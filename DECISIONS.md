@@ -373,3 +373,37 @@ deleted, 301 written to /grant-research/.
 **rel=sponsored is now conditional.** Both the markdown rehype plugin and every .astro link use
 the program's actual status. Labelling a Zeffy or Candid link "sponsored" would be a false
 statement about a relationship that does not exist.
+
+## 2026-08-02 — "Limitations" replaced by "Other options"; 4aGoodCause added
+
+**Decision.** The `limitations` array is gone from the platform schema, replaced by
+`otherOptions[{need, platformSlug, note}]`. Pages now render an "Other options" section that
+states the reader's situation and names the tool that fits it, with a link.
+
+**Why.** A bare list of faults reads as a verdict and leaves the reader nowhere to go. Framing
+the same information as a routing decision keeps the page honest, sends traffic to another page
+we control, and reads better to a buyer.
+
+**Tone is an editorial call per product, not a template.**
+- Products with a live program (`potential !== 'none'`) or a plausible future one get the need
+  stated neutrally: "Want deeper retention reporting? → Bloomerang."
+- Little Green Light and Neon One are treated the same way. LGL is small and bootstrapped and
+  Neon relaunched its CAP program in Oct 2025; both are negotiable later, so nothing on their
+  pages should read as a takedown.
+- Products with no path to a program and no prospect of one — Zeffy, Givebutter, Candid,
+  Grants.gov, GrantStation, OneCause, WealthEngine — keep the same structure but state the
+  constraint plainly. Naming the tradeoff there costs nothing and is what makes the softer
+  framing elsewhere credible.
+
+**4aGoodCause added** (`src/content/platforms/4agoodcause.md`, donation-processing). Its
+affiliate program pays 25% recurring on renewals, the strongest terms we have verified. The
+page's unique data is the break-even table against Donorbox's ~2.95% platform fee: the
+crossover is about $40,270 of annual online giving, below which the percentage wins and above
+which the flat $1,188/yr does. That figure is repeated on the category page and in the $250k-$1M
+and $1M-$5M stack prose. Pricing verified against 4agoodcause.com/pricing on 2026-08-02.
+
+The stack ledger lines stay on Donorbox per the operator's note n21; 4aGoodCause is presented
+as the priced alternative with the arithmetic to decide it.
+
+**GiveWP mention dropped** from the donation-processing page: the program moved to LiquidWeb,
+there is no platform page behind the link, and it was the only unreviewed product on the page.

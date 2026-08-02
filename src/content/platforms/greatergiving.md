@@ -14,10 +14,16 @@ strengths:
   - "Built around the full auction night: mobile bidding, check-in, payment devices"
   - "Long track record with school and hospital foundation galas"
   - "Packages bundle hardware and event-night support, not just software"
-limitations:
-  - "No published pricing anywhere; every deal goes through a quote"
-  - "Bundled packages are more than a small community event needs"
-  - "Event-first, so it does not replace a donor CRM"
+otherOptions:
+  - need: "Gala clearing under about $100k?"
+    platformSlug: givebutter
+    note: "Givebutter runs ticketing and a silent auction free, which covers most community-scale events."
+  - need: "Already paying for a CRM with events built in?"
+    platformSlug: bloomerang
+    note: "Bloomerang includes ticketing, QR check-in and auctions, so check what you own before buying a second platform."
+  - need: "Want a price before you talk to anyone?"
+    platformSlug: null
+    note: "Every package here is quoted per organization, so start the conversation early in your event cycle."
 ---
 
 [Greater Giving](/go/greatergiving) is auction and event software aimed at the full gala night: mobile bidding, guest check-in, payment hardware and seating, sold as a package rather than a plugin. It is worth a quote when the auction itself is the revenue engine and you want one vendor accountable for the night working.

@@ -15,6 +15,11 @@ export async function getStaticPaths() {
   return platforms.map((entry) => ({ params: { slug: entry.data.slug }, props: { entry } }));
 }
 
+// Names for the "other options" links, so a slug change surfaces as a build error
+// rather than a wrong label.
+const allPlatforms = await getCollection('platforms');
+const platformName = new Map(allPlatforms.map((x) => [x.data.slug, x.data.name]));
+
 const { entry } = Astro.props;
 const p = entry.data;
 const { Content } = await render(entry);
@@ -96,8 +101,17 @@ const productLd: Record<string, unknown> = {
       <h2>Strengths</h2>
       <ul>{p.strengths.map((s) => <li>{s}</li>)}</ul>
 
-      <h2>Limitations</h2>
-      <ul>{p.limitations.map((s) => <li>{s}</li>)}</ul>
+      <h2>Other options</h2>
+      <ul class="alts">
+        {p.otherOptions.map((o) => (
+          <li>
+            <strong>{o.need}</strong> {o.note}
+            {o.platformSlug && (
+              <> <a href={`/platforms/${o.platformSlug}/`}>Read our {platformName.get(o.platformSlug) ?? o.platformSlug} write-up →</a></>
+            )}
+          </li>
+        ))}
+      </ul>
 
       {affiliate && p.affiliateSlug && (
         <p class="cta">
@@ -113,6 +127,9 @@ const productLd: Record<string, unknown> = {
 </BaseLayout>
 
 <style>
+  .alts li { margin-bottom: .6rem; }
+  .alts strong { color: var(--color-ink); }
+
   .pricebox { display: grid; grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr)); gap: .9rem 1.4rem;
     border: 1px solid var(--color-rule-strong); border-left: 3px solid var(--color-green);
     background: var(--color-paper-2); padding: 1.1rem 1.2rem; margin: 1.4rem 0; border-radius: 2px;

@@ -14,10 +14,16 @@ strengths:
   - "Retention dashboards show who is lapsing before they're gone"
   - "Consistently top-rated for ease of use; new hires are productive fast"
   - "Unlimited users at every tier"
-limitations:
-  - "Priced by record count, so large lists cost more"
-  - "Advanced automation and reporting run lighter than power users want"
-  - "Less customizable than Salesforce-based systems, by design"
+otherOptions:
+  - need: "Watching every dollar?"
+    platformSlug: eleo
+    note: "Eleo covers donors, gifts, events and volunteers from $39 a month with published pricing."
+  - need: "Want the database to drive your daily follow-up?"
+    platformSlug: donordock
+    note: "DonorDock's ActionBoard is a to-do list rather than a dashboard, which suits a team that keeps dropping the follow-up."
+  - need: "Memberships central to your model?"
+    platformSlug: neoncrm
+    note: "Neon CRM handles renewals and member benefits natively."
 ---
 
 [Bloomerang](/go/bloomerang) is a donor CRM built around retention. Its dashboards put lapsing donors in front of you before they're gone. Pricing starts at $79 a month for about 1,000 contact records, with unlimited users at every tier. It's the ease-of-use pick for small and midsize teams.

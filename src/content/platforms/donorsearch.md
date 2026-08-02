@@ -14,10 +14,16 @@ strengths:
   - "Leads with demonstrated philanthropy, not just wealth markers"
   - "Often described as the most readable, usable screener in the category"
   - "Integrations push scores directly into major donor CRMs"
-limitations:
-  - "No public pricing; plans are quoted per organization"
-  - "Giving history predicts better than wealth alone, but nothing guarantees a gift"
-  - "Full value requires a CRM it integrates with"
+otherOptions:
+  - need: "Want capacity and wealth indicators weighted heavily?"
+    platformSlug: kindsight
+    note: "Kindsight is transparent about how its scores are built, which makes them easier to defend in a portfolio meeting."
+  - need: "Not ready for an annual contract?"
+    platformSlug: null
+    note: "Buy the first screen as a consulting project, around $4,000-$5,000, and subscribe once your team is demonstrably working the list."
+  - need: "No one owns major gifts yet?"
+    platformSlug: null
+    note: "Screening only pays when a named person turns the output into visits."
 ---
 
 [DonorSearch](/go/donorsearch) is prospect-research software built on a specific bet: a person's record of actual giving predicts future gifts better than assets do. Pricing is quoted per organization; commonly reported entry figures run about $4,000-$6,000 a year, with per-record screening options for smaller projects. Fundraisers comparing screeners tend to describe it as pricey but readable and genuinely usable.

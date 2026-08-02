@@ -14,10 +14,16 @@ strengths:
   - "Flexible boards handle program tracking, grant deliverables, and event planning"
   - "A dedicated nonprofit program with discounted plans; check eligibility"
   - "Automations reduce the reminder-chasing that eats small-team time"
-limitations:
-  - "Per-seat pricing adds up as the team grows"
-  - "General-purpose tool; it won't replace a donor CRM"
-  - "Powerful enough to over-build; start with simple boards"
+otherOptions:
+  - need: "Need a real donor database?"
+    platformSlug: donordock
+    note: "A board with a contacts column is not a CRM once receipting, soft credits or lapsed-donor reporting matter."
+  - need: "Mostly collecting information rather than tracking it?"
+    platformSlug: jotform
+    note: "Jotform is the better front door for applications, intake and registrations."
+  - need: "Team past a few seats?"
+    platformSlug: null
+    note: "Per-seat pricing adds up, so apply to the nonprofit program before you scale the licence count."
 ---
 
 [monday.com](/go/monday) is a work-management platform that many nonprofits run alongside their fundraising stack: program tracking, grant deliverables, event run-of-show, volunteer coordination. There's a free two-seat plan, paid plans start at $9 per seat per month billed annually, and monday.com operates a nonprofit program with discounted plans.

@@ -14,10 +14,16 @@ strengths:
   - "Among the cheapest paid entries into funder research at the TechSoup price"
   - "Covers private, corporate, and government funders in one database"
   - "Weekly funding alerts arrive without extra effort"
-limitations:
-  - "Search is manual; you do the filtering that matching tools automate"
-  - "No pipeline or deadline management built in"
-  - "Funder profiles are thinner than premium research platforms"
+otherOptions:
+  - need: "Prospecting every month?"
+    platformSlug: instrumentl
+    note: "This is a searchable database, not a workflow: no funder matching, no deadline pipeline, no shared tracking, so the spreadsheet stays."
+  - need: "Need depth on one specific funder?"
+    platformSlug: candid
+    note: "Foundation Directory carries fuller records, free at partner libraries."
+  - need: "Want federal opportunities?"
+    platformSlug: grantsgov
+    note: "Grants.gov is the source of record and costs nothing."
 ---
 
 [GrantStation](/go/grantstation) is a flat-fee grant database covering private, corporate, and government funders, with weekly alert newsletters. Through TechSoup, eligible nonprofits pay about $199 a year, sometimes closer to $150 on seasonal promotions. At that price it's the easiest yes in grant research: one found funder pays for a decade of membership.

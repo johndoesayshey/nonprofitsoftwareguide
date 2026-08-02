@@ -14,10 +14,16 @@ strengths:
   - "Free platform spanning donations, ticketing, auctions, and peer-to-peer"
   - "The most modern donor-facing experience among the free options"
   - "Clean pricing switch: tips on for 0%, tips off for a flat 3%"
-limitations:
-  - "Processing fees still apply either way"
-  - "The free tier is a fundraising engine, not a full CRM"
-  - "Complex recurring-gift programs get more from Donorbox"
+otherOptions:
+  - need: "Want fees that don't depend on donor behaviour?"
+    platformSlug: 4agoodcause
+    note: "The 0% headline holds only while tips are on and donors leave them on; turn tips off and a platform fee applies."
+  - need: "Running a large auction?"
+    platformSlug: greatergiving
+    note: "Event-night hardware, check-in and bidding support are a different product from a free campaign page."
+  - need: "Need a donor database?"
+    platformSlug: donordock
+    note: "The built-in donor tracking is contact storage, not a CRM: no soft credits, no household records, no retention reporting."
 ---
 
 [Givebutter](/go/givebutter) is a free fundraising platform covering donation forms, ticketing, auctions, and peer-to-peer campaigns. The pricing is a clean either/or: leave optional donor tips on and pay a 0% platform fee, or turn tips off and pay a flat 3%. Payment processing applies either way. For campaign and event fundraising, it's the most polished free option available.

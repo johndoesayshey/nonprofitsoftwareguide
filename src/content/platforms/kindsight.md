@@ -14,10 +14,16 @@ strengths:
   - "Deep wealth and philanthropic data with transparent, sourced scores"
   - "Screens whole lists at once, the pre-campaign workhorse"
   - "Top satisfaction ratings in its category on major review sites"
-limitations:
-  - "Pricing is quoted per organization; entry reportedly starts around $4,150/yr"
-  - "Capacity data tells you who can give, not who will"
-  - "Below roughly $1M raised, most shops can't put the results to work"
+otherOptions:
+  - need: "Not ready for an annual contract?"
+    platformSlug: null
+    note: "A consultant-run screen costs roughly $4,000-$5,000 as a project and includes the person who turns scores into a portfolio."
+  - need: "Want demonstrated giving weighted over wealth markers?"
+    platformSlug: donorsearch
+    note: "DonorSearch built its reputation on philanthropic history first; ask both to score donors you already know."
+  - need: "Under about $1M raised?"
+    platformSlug: null
+    note: "Hand-research your top 25 prospects instead. The month that stops keeping up is the month you have a case for a platform."
 ---
 
 [Kindsight](/go/kindsight), still called iWave by most fundraisers, is wealth-screening software that scores donors on capacity and philanthropic history, one prospect at a time or a whole file at once. Pricing is quoted per organization; reported entry tiers start around $4,150 a year. It pays off when a major-gifts officer works the results into portfolios and visits.

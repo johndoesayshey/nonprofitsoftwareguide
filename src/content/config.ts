@@ -24,7 +24,17 @@ const platforms = defineCollection({
     lastVerified: z.coerce.date(),
     bestFor: z.string(),
     strengths: z.array(z.string()),
-    limitations: z.array(z.string()),
+    // Replaces the old `limitations` list. A bare list of faults reads as a
+    // verdict against the product and gives the reader nowhere to go; this says
+    // what the tool is not for and names the tool that is. How blunt the `note`
+    // gets is an editorial call per product — see DECISIONS.md.
+    otherOptions: z.array(
+      z.object({
+        need: z.string(),           // the reader's situation, phrased as theirs
+        platformSlug: z.string().nullable().default(null),
+        note: z.string(),           // one sentence: why that one instead
+      })
+    ),
     affiliateSlug: z.string().nullable().default(null),
     freeTier: z.boolean().default(false),
     // Not in the original spec schema; added so the [FACT-CHECK] guardrail can

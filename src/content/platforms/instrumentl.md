@@ -14,10 +14,16 @@ strengths:
   - "Active matching surfaces funders you would not find by keyword search"
   - "Deadline and reporting tracker replaces the spreadsheet most teams limp along on"
   - "990 and giving-history data sit next to each funder"
-limitations:
-  - "A real budget line at $2,100+ per year; light users won't max its value"
-  - "Matching quality depends on the profile you build at setup"
-  - "Tiers cap active projects, so busy pipelines cost more"
+otherOptions:
+  - need: "Applying for a handful of grants a year?"
+    platformSlug: grantstation
+    note: "GrantStation through TechSoup is about $199 a year for a searchable database, which is the right size when prospecting isn't a monthly job."
+  - need: "Need one funder researched properly?"
+    platformSlug: candid
+    note: "Candid's Foundation Directory goes deeper on a single foundation and is free at partner libraries."
+  - need: "Chasing federal or state money?"
+    platformSlug: grantsgov
+    note: "Grants.gov is the authoritative free source for federal opportunities."
 ---
 
 [Instrumentl](/go/instrumentl) is the leading grant research platform: it matches funders to your programs and tracks every deadline and report in one pipeline. Plans start at $179 a month billed annually, tiered by active grant projects. It earns its price once grants are a program, roughly ten or more concurrent applications.

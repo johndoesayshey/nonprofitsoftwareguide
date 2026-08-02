@@ -14,10 +14,16 @@ strengths:
   - "Genuine breadth: donations, memberships, events, and email in one connected system"
   - "Membership management stronger than most donor CRMs"
   - "Prices by organizational revenue with unlimited users"
-limitations:
-  - "More setup than lean single-purpose tools; onboarding is a project"
-  - "Add-on modules increase the subscription cost"
-  - "The interface is busier than lightweight competitors"
+otherOptions:
+  - need: "Don't actually run memberships?"
+    platformSlug: donordock
+    note: "Most of Neon's breadth is membership and event machinery; without those, a simpler CRM costs less and gets used more."
+  - need: "Want the lowest entry price?"
+    platformSlug: eleo
+    note: "Eleo starts at $39 a month with the full ladder published."
+  - need: "Retention reporting your first priority?"
+    platformSlug: bloomerang
+    note: "Bloomerang leads with lapsing donors rather than breadth."
 ---
 
 [Neon CRM](/go/neoncrm) is a broad donor-management platform that folds donations, memberships, events, and email into one system. Pricing starts around $99 a month and scales with your organization's revenue rather than record count, with unlimited users. For organizations paying for three separate tools, the consolidation is the draw.

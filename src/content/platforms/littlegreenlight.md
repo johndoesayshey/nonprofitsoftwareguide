@@ -14,10 +14,16 @@ strengths:
   - "The small-shop value pick; switchers often report paying far less than at bigger systems"
   - "Flexible fields, real reporting, and mailing tools at a low price"
   - "No contracts, no setup fees, 10% off annual prepay"
-limitations:
-  - "The interface is functional, not modern"
-  - "Smaller vendor: leaner support and fewer native integrations"
-  - "Little built-in marketing automation"
+otherOptions:
+  - need: "Want a more modern interface for a growing team?"
+    platformSlug: donordock
+    note: "New staff get productive faster on DonorDock, and unlimited contacts keep the bill flat as the file grows."
+  - need: "Need retention analytics for board reporting?"
+    platformSlug: bloomerang
+    note: "Bloomerang answers the lapsing-donor question without building a report each time."
+  - need: "Past 2,500 constituents?"
+    platformSlug: null
+    note: "Pricing steps up with record count, so clean the list and price the next two tiers before you commit."
 ---
 
 [Little Green Light](/go/littlegreenlight) is the donor CRM that wins on arithmetic: $45 a month covers up to 2,500 constituents with unlimited users, and there are no contracts or setup fees. Among budget-minded fundraisers it's the recurring answer for a first real database, with capability well above its price.

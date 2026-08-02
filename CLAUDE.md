@@ -218,7 +218,8 @@ evaluating software through that lens, so the section read as invented. Do not r
 
 ```ts
 platforms: { name, slug, category, entryPrice, pricingModel, lastVerified,
-             bestFor, strengths[], limitations[], affiliateSlug, freeTier }
+             bestFor, strengths[], otherOptions[{need, platformSlug, note}],
+             affiliateSlug, freeTier }
 stacks:    { shopSize, annualRevenue, staffSize, totalStackCost, slug,
              components[{category, platformSlug, annualCost, rationale}], lastVerified }
 posts:     { title, description, publishDate, updatedDate, stack, targetQuery (unique),

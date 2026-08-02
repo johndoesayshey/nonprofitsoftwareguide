@@ -14,11 +14,16 @@ strengths:
   - "The ActionBoard turns the database into a daily to-do list"
   - "Unlimited contacts on flat tiers; no record-count bill creep"
   - "90-day money-back guarantee, and 10% off through this site"
-limitations:
-  - "Deliberately lean; power users will miss advanced automation"
-  - "Smaller vendor; check the integration list against your stack"
-  - "Below ~2,500 records, LGL costs less"
-  - "Retention and analytics reporting runs lighter than Bloomerang's"
+otherOptions:
+  - need: "Want deeper retention and segmentation reporting?"
+    platformSlug: bloomerang
+    note: "Bloomerang's dashboards are built around lapsing donors and answer board questions without a report build."
+  - need: "Counting every dollar?"
+    platformSlug: eleo
+    note: "Eleo starts at $39 a month and publishes its whole price ladder, so you can budget three years out without a call."
+  - need: "Running memberships or complex event structures?"
+    platformSlug: neoncrm
+    note: "Neon CRM carries memberships and events inside the database of record."
 ---
 
 [DonorDock](/go/donordock) is a donor CRM built around doing the work rather than storing it. Its signature ActionBoard is a guided daily feed: which donor to thank, call, or follow up with today. Pricing starts around $98 a month billed annually, every tier includes unlimited contacts, and there's a 90-day money-back guarantee.
