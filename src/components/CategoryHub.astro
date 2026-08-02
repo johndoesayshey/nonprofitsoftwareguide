@@ -1,5 +1,6 @@
 ---
 import { getCollection } from 'astro:content';
+import ReaderOffer from './ReaderOffer.astro';
 import { CATEGORIES } from '../lib/categories';
 import { getAffiliate } from '../lib/affiliates';
 import { byValue, potentialOf, relFor } from '../lib/affiliate-value';
@@ -49,7 +50,7 @@ const posts = (await getCollection('posts', ({ data }) => data.draft === false))
                 <td class="cmp-best">{p.data.bestFor}</td>
                 <td class="cmp-cta">
                   <a class="btn-visit" href={`/go/${p.data.affiliateSlug}`} rel={relFor(p.data.affiliateSlug)}>Visit →</a>
-                  {aff?.readerOffer && <span class="offer">{aff.readerOffer}</span>}
+                  <ReaderOffer slug={p.data.affiliateSlug} />
                 </td>
               </tr>
             );
@@ -85,7 +86,7 @@ const posts = (await getCollection('posts', ({ data }) => data.draft === false))
             <a class="btn-visit" href={`/go/${p.data.affiliateSlug}`} rel={relFor(p.data.affiliateSlug)}>Visit site →</a>
             <a class="link-review" href={`/platforms/${p.data.slug}/`}>Review</a>
           </div>
-          {aff?.readerOffer && <p class="offer">{aff.readerOffer}</p>}
+          <ReaderOffer slug={p.data.affiliateSlug} as="p" />
         </div>
       );
     })}

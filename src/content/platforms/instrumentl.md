@@ -21,9 +21,9 @@ otherOptions:
   - need: "Need one funder researched properly?"
     platformSlug: candid
     note: "Candid's Foundation Directory goes deeper on a single foundation and is free at partner libraries."
-  - need: "Chasing federal or state money?"
-    platformSlug: grantsgov
-    note: "Grants.gov is the authoritative free source for federal opportunities."
+  - need: "Only need to check one foundation?"
+    platformSlug: candid
+    note: "Foundation Directory is free at partner libraries and goes deeper on a single funder than any matching tool."
 ---
 
 [Instrumentl](/go/instrumentl) is the leading grant research platform: it matches funders to your programs and tracks every deadline and report in one pipeline. Plans start at $179 a month billed annually, tiered by active grant projects. It earns its price once grants are a program, roughly ten or more concurrent applications.

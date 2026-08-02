@@ -5,3 +5,5 @@
 /platforms/airtable/  /forms-operations/  301
 # Grantable removed: no verifiable affiliate program and no editorial reason to keep it.
 /platforms/grantable/  /grant-research/  301
+# Grants.gov dropped: federal portal, no program, and a poor fit for the shops we serve.
+/platforms/grantsgov/  /grant-research/  301

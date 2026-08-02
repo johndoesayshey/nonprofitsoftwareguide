@@ -1,17 +1,32 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Breadcrumbs from '../components/Breadcrumbs.astro';
+import { getCollection } from 'astro:content';
 import { formatLong } from '../lib/dates';
-import benchmarks from '../data/benchmarks.json';
+import { CATEGORIES } from '../lib/categories';
+import { STACK_TIERS } from '../lib/stacks';
 
-const b = benchmarks as any;
-const ready: boolean = b.ready === true;
-const updated = new Date(b.updated);
+// Every figure on this page is read straight off the four stack pages at build
+// time. They were maintained as two separate lists and drifted apart within a
+// week; now there is one source and the table cannot contradict the pages it
+// summarises.
+const stacks = await getCollection('stacks', ({ data }) => data.draft === false);
+const bySlug = new Map(stacks.map((s) => [s.data.slug, s.data]));
+
+const tiers = STACK_TIERS.filter((t) => bySlug.has(t.slug));
+const categories = Object.values(CATEGORIES);
+const ready = tiers.length > 0;
+
+// Most recent verification across the stacks it is built from.
+const updated = new Date(Math.max(...stacks.map((s) => +s.data.lastVerified)));
 const updatedLabel = formatLong(updated);
 
-// Until the operator populates the grid and flips ready:true, the page is noindex
-// (an empty benchmark is a thin page) and shows a "data being collected" banner.
-const cell = (v: unknown) => (v == null || v === '' ? '—' : String(v));
+function cell(tierSlug: string, categorySlug: string): string {
+  const line = bySlug.get(tierSlug)?.components.find((c) => c.category === categorySlug);
+  // No line at all means the stack deliberately leaves this category out.
+  if (!line) return '—';
+  return line.annualCost;
+}
 
 const site = Astro.site ?? new URL('https://nonprofitsoftwareguide.com');
 const datasetLd = {
@@ -38,10 +53,8 @@ const datasetLd = {
 
     {!ready && (
       <aside class="draft-banner" role="note">
-        <strong>Data being collected.</strong> This benchmark isn't published yet:
-        the grid below is a template awaiting real figures. It's hidden from search
-        until the numbers are filled in and verified (edit
-        <code>src/data/benchmarks.json</code>, then set <code>"ready": true</code>).
+        <strong>No published stacks yet.</strong> This table is built from the stack
+        pages, and none are published, so there is nothing to show.
       </aside>
     )}
 
@@ -50,10 +63,11 @@ const datasetLd = {
       <h1>What nonprofits spend on fundraising software</h1>
 
       <p class="lede">
-        Typical annual software spend by shop size and category. Most "how much
-        should we budget" answers are guesses; this is a benchmark you can point a
-        board at. Figures are per year and reflect typical spend, not the maximum a
-        vendor could sell you.
+        What a fundraising operation costs to run at each size, category by
+        category, on one page. Every figure is the line item from that shop
+        size's recommended stack, so you can take a column straight into a
+        budget conversation. A dash means that category is deliberately left out
+        at that size. Click a column heading for the reasoning behind each line.
       </p>
 
       <p class="benchmark-updated"><span class="verified">Updated {updatedLabel}</span></p>
@@ -63,37 +77,32 @@ const datasetLd = {
           <thead>
             <tr>
               <th scope="col">Category</th>
-              {b.tiers.map((t: any) => (
-                <th scope="col" class="num">{t.label}<br /><small>{t.revenue}</small></th>
+              {tiers.map((t) => (
+                <th scope="col" class="num">
+                  <a href={`/stacks/${t.slug}/`}>{t.tier}</a><br /><small>{t.revenue} raised</small>
+                </th>
               ))}
             </tr>
           </thead>
           <tbody>
-            {b.categories.map((c: any) => (
+            {categories.map((c) => (
               <tr>
-                <th scope="row">{c.label}</th>
-                {b.tiers.map((t: any) => <td class="num">{cell(b.data[c.slug]?.[t.slug])}</td>)}
+                <th scope="row">{c.path ? <a href={c.path}>{c.label}</a> : c.label}</th>
+                {tiers.map((t) => {
+                  const v = cell(t.slug, c.slug);
+                  return <td class:list={['num', { none: v === '—' }]}>{v}</td>;
+                })}
               </tr>
             ))}
           </tbody>
           <tfoot>
             <tr>
-              <th scope="row">Typical total stack</th>
-              {b.tiers.map((t: any) => <td class="num">{cell(b.totals?.[t.slug])}</td>)}
+              <th scope="row">Total per year</th>
+              {tiers.map((t) => <td class="num">{bySlug.get(t.slug)?.totalStackCost}</td>)}
             </tr>
           </tfoot>
         </table>
       </div>
-
-      <h2>Methodology</h2>
-      <p>{b.methodology}</p>
-
-      <h2>Cite this benchmark</h2>
-      <p>Free to cite with attribution. Suggested citation:</p>
-      <blockquote>
-        Nonprofit Software Guide, “What nonprofits spend on fundraising software”
-        (annual benchmark), {updatedLabel}. https://nonprofitsoftwareguide.com/benchmarks/
-      </blockquote>
 
       <p>
         To see the tools behind these numbers, read the
@@ -106,6 +115,11 @@ const datasetLd = {
 </BaseLayout>
 
 <style>
+  .benchmark td.none { color: var(--color-muted); font-weight: 500; }
+  .benchmark thead a, .benchmark tbody th a { color: inherit; text-decoration: none;
+    border-bottom: 1px solid var(--color-rule-strong); }
+  .benchmark thead a:hover, .benchmark tbody th a:hover { color: var(--color-green-deep); }
+
   .draft-banner { border: 2px dashed var(--color-red); color: var(--color-red);
     background: #fbeeee; padding: .7rem 1rem; margin: 1rem 0; font-size: .9rem;
     font-family: var(--font-mono); border-radius: 2px; }

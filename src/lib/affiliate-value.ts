@@ -22,7 +22,26 @@ export function potentialOf(slug: string | null | undefined): Potential {
 }
 
 export function valueOf(slug: string | null | undefined): number {
-  return SCORE[potentialOf(slug)];
+  return SCORE[potentialOf(slug)] + priorityOf(slug);
+}
+
+/**
+ * Editorial override. Some products lead their category for reasons the payout
+ * doesn't capture — a negotiated partnership in progress, or simply the name a
+ * reader came looking for. Set `priority` in affiliates.json and say why in
+ * `priorityNote`; delete it to fall back to payout order.
+ */
+export function priorityOf(slug: string | null | undefined): number {
+  if (!slug) return 0;
+  const a = (affiliates as Record<string, Affiliate & { priority?: number }>)[slug];
+  return typeof a?.priority === 'number' ? a.priority : 0;
+}
+
+/** Whose deal a readerOffer is: ours through the link, or the vendor's own public offer. */
+export function offerSourceOf(slug: string | null | undefined): 'guide' | 'vendor' | null {
+  if (!slug) return null;
+  const a = (affiliates as Record<string, Affiliate & { offerSource?: 'guide' | 'vendor' }>)[slug];
+  return a?.offerSource ?? null;
 }
 
 /** Highest-earning first; ties keep their original (editorial) order. */

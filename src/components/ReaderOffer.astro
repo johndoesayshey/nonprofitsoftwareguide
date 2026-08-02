@@ -1,0 +1,39 @@
+---
+// One place that decides how a reader offer is worded, so a discount never
+// reads as generic marketing copy.
+//
+// Two kinds, and the difference matters: a `guide` offer exists because the
+// reader used our link, and saying so is the whole point of showing it. A
+// `vendor` offer is the vendor's own public programme, open to anyone, and
+// claiming credit for it would be false.
+import { getAffiliate } from '../lib/affiliates';
+import { offerSourceOf } from '../lib/affiliate-value';
+
+interface Props {
+  slug?: string | null;
+  as?: 'span' | 'p';
+}
+const { slug, as = 'span' } = Astro.props;
+const affiliate = slug ? getAffiliate(slug) : undefined;
+const offer = affiliate?.readerOffer;
+const source = offerSourceOf(slug);
+
+const label =
+  source === 'vendor' ? `${affiliate?.name} nonprofit discount` : 'Reader deal through this site';
+const Tag = as;
+---
+{offer && (
+  <Tag class:list={['offer', source === 'vendor' ? 'offer-vendor' : 'offer-guide']}>
+    <span class="offer-label">{label}</span>
+    <span class="offer-sep" aria-hidden="true"> · </span>
+    <span class="offer-value">{offer}</span>
+  </Tag>
+)}
+
+<style>
+  .offer { display: block; font-size: .74rem; font-weight: 700; line-height: 1.35;
+    color: var(--color-green-deep); margin: .25rem 0 0; }
+  .offer-label { text-transform: uppercase; letter-spacing: .06em; font-size: .93em; }
+  .offer-vendor { color: var(--color-muted); }
+  .offer-vendor .offer-value { color: var(--color-ink); }
+</style>

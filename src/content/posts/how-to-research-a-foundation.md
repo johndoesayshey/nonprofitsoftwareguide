@@ -4,7 +4,7 @@ description: "A repeatable 20-minute check that tells you whether a foundation i
 publishDate: 2026-04-22
 stack: 250k-1m
 targetQuery: "how to research a foundation before applying"
-platformsMentioned: [instrumentl, candid, grantsgov]
+platformsMentioned: [instrumentl, candid]
 affiliateSlugs: [instrumentl]
 draft: false
 faq:
@@ -13,7 +13,7 @@ faq:
   - q: "What's the single biggest red flag?"
     a: "A foundation that doesn't accept unsolicited proposals. Many don't, and no proposal quality overcomes 'by invitation only.' Confirm they take applications before anything else."
   - q: "Do I need paid software to vet funders?"
-    a: "No. ProPublica's Nonprofit Explorer (free 990s), Grants.gov, and free Foundation Directory access at a Candid partner library cover the whole check. Paid tools save time once your volume grows."
+    a: "No. ProPublica's Nonprofit Explorer (free 990s) and free Foundation Directory access at a Candid partner library cover the whole check. Paid tools save time once your volume grows."
 ---
 
 Vetting a foundation before you apply takes about 20 minutes and saves a week of wasted writing. Check four things in order: do they accept unsolicited proposals, do they fund your issue and geography, what do they actually give (the 990, not the website), and can you find a warm connection. Most funders should fail the check.
@@ -24,7 +24,7 @@ Run the checks in sequence and stop the moment a funder fails one. The cheapest 
 
 **1. Do they accept unsolicited proposals?** Many foundations fund only invited or existing grantees, and the website or 990 usually says so. No amount of proposal quality overcomes invitation-only. A closed door is not a dead funder; it moves to the relationship track instead of the proposal track.
 
-**2. Do they fund your issue and your geography?** Most foundations restrict giving to specific fields and regions. [Instrumentl](/go/instrumentl) filters both at once, and its 14-day free trial is enough time to vet a season's worth of prospects ([our Instrumentl review](/platforms/instrumentl/) covers the full feature set). [Grants.gov](/go/grantsgov) covers the federal side. Rule out anyone outside your lane before reading a word of program language; geography kills more applications than quality does.
+**2. Do they fund your issue and your geography?** Most foundations restrict giving to specific fields and regions. [Instrumentl](/go/instrumentl) filters both at once, and its 14-day free trial is enough time to vet a season's worth of prospects ([our Instrumentl review](/platforms/instrumentl/) covers the full feature set). Rule out anyone outside your lane before reading a word of program language; geography kills more applications than quality does.
 
 **3. What do they actually fund?** Open the 990: free on ProPublica's Nonprofit Explorer, or in more depth through [Candid](/go/candid)'s Foundation Directory, free on-site at hundreds of partner libraries. Check three things against your ask.
 

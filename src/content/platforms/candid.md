@@ -21,9 +21,9 @@ otherOptions:
   - need: "Paying for an individual subscription?"
     platformSlug: null
     note: "Check your nearest Funding Information Network library first; the same database is free at the desk, and paying several hundred dollars a year for search alone rarely holds up."
-  - need: "Need federal opportunities?"
-    platformSlug: grantsgov
-    note: "Foundation coverage is the point here; federal is a different search entirely."
+  - need: "Managing deadlines across a team?"
+    platformSlug: instrumentl
+    note: "Foundation Directory has no pipeline, so the tracking spreadsheet stays yours to maintain."
 ---
 
 [Candid's Foundation Directory](/go/candid) is the reference standard for foundation research: the deepest 990 and grant-history data anywhere, showing who a funder actually gives to. The Essential tier runs about $449 a year. Hundreds of libraries in Candid's partner network offer it free on-site, and small nonprofits with a Candid transparency seal may qualify for free premium access.

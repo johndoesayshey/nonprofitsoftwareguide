@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import ReaderOffer from '../../components/ReaderOffer.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import AffiliateDisclosure from '../../components/AffiliateDisclosure.astro';
 import { comparePairs } from '../../lib/compare';
@@ -87,7 +88,7 @@ for (const p of pairs) {
                         <td class="cmp-best">{t.data.bestFor}</td>
                         <td class="cmp-cta">
                           <a class="btn-visit" href={`/go/${t.data.affiliateSlug}`} rel={relFor(t.data.affiliateSlug)}>Visit →</a>
-                          {aff?.readerOffer && <span class="offer">{aff.readerOffer}</span>}
+                          <ReaderOffer slug={t.data.affiliateSlug} />
                         </td>
                       </tr>
                     );

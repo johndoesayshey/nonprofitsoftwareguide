@@ -1,5 +1,6 @@
 ---
 import { getCollection, render } from 'astro:content';
+import ReaderOffer from '../../components/ReaderOffer.astro';
 import { relFor } from '../../lib/affiliate-value';
 import { existsSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
@@ -84,7 +85,7 @@ const productLd: Record<string, unknown> = {
             <a class="btn-primary" href={`/go/${p.affiliateSlug}`} rel={relFor(p.affiliateSlug)}>
               Visit {p.name} →
             </a>
-            {affiliate.readerOffer && <span class="offer">{affiliate.readerOffer}</span>}
+            <ReaderOffer slug={p.affiliateSlug} />
           </div>
         )}
       </div>

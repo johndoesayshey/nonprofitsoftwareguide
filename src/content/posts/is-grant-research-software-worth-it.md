@@ -20,7 +20,7 @@ Paid grant research software is worth it when prospecting is a recurring monthly
 
 ## The free path, and where it works
 
-[Candid](/go/candid)'s Foundation Directory carries the deepest 990 and grant-history data in the field, and it is free to use on-site at hundreds of partner libraries. ProPublica's Nonprofit Explorer posts 990s free from any desk. [Grants.gov](/go/grantsgov) is free for the federal side, though federal grants are highly competitive and rarely realistic for small grassroots shops. Add a few funder and sector newsletters and you have a complete research setup at zero dollars.
+[Candid](/go/candid)'s Foundation Directory carries the deepest 990 and grant-history data in the field, and it is free to use on-site at hundreds of partner libraries. ProPublica's Nonprofit Explorer posts 990s free from any desk. Add a few funder and sector newsletters and you have a complete research setup at zero dollars.
 
 The free path suits low volume. If you apply to a handful of funders a year and most are renewals, the library visit and the 990 reading fit inside the job.
 

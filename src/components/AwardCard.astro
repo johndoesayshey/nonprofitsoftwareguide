@@ -1,5 +1,6 @@
 ---
 import { getCollection } from 'astro:content';
+import ReaderOffer from './ReaderOffer.astro';
 import { relFor } from '../lib/affiliate-value';
 import { getAffiliate } from '../lib/affiliates';
 import award from '../data/featured-award.json';
@@ -48,7 +49,7 @@ const show = a.show !== false && !!platform;
         <a class="award-cta" href={`/platforms/${a.slug}/`}>{a.cta} →</a>
       )}
 
-      {affiliate?.readerOffer && <p class="award-offer">{affiliate.readerOffer}</p>}
+      <ReaderOffer slug={a.slug} as="p" />
 
       <p class="award-why">
         <a href={`/platforms/${a.slug}/`}>Why {platform.name} won →</a>

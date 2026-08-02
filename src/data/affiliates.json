@@ -19,7 +19,8 @@
       "url": "https://www.instrumentl.com/partners",
       "checked": "2026-07-31",
       "quote": "you earn $50 per referred customer you bring to Instrumentl and save your referral $50 off their first month"
-    }
+    },
+    "offerSource": "guide"
   },
   "grantstation": {
     "name": "GrantStation",
@@ -61,7 +62,8 @@
       "url": "https://www.donordock.com/partners",
       "checked": "2026-07-31",
       "quote": "You earn $500 cash from every new paid customer."
-    }
+    },
+    "offerSource": "guide"
   },
   "4agoodcause": {
     "name": "4aGoodCause",
@@ -132,7 +134,7 @@
     "status": "pending",
     "url": "https://www.jotform.com",
     "affiliateUrl": null,
-    "readerOffer": "50% nonprofit discount",
+    "readerOffer": "50% off, permanently",
     "terms": "30% of the first year only. Confirmed live. Approves in ~1 business day, but the referral must stay a paid client for 60 days before you are eligible, and commission stops after year one.",
     "signupUrl": "https://www.jotform.com/partnership/affiliate/",
     "appliedOn": null,
@@ -145,7 +147,8 @@
       "url": "https://www.jotform.com/partnership/affiliate/",
       "checked": "2026-07-31",
       "quote": "30% commission on every new paid user you refer... for the first year of each customer’s Jotform subscription."
-    }
+    },
+    "offerSource": "vendor"
   },
   "bloomerang": {
     "name": "Bloomerang",
@@ -203,7 +206,9 @@
     "payout": "No program yet — negotiated consulting partnership",
     "potential": "none",
     "badge": "negotiate",
-    "potentialNote": "Earns nothing today, but $4k-$6k contracts make it the best thing on the site to negotiate once you have real traffic."
+    "potentialNote": "Earns nothing today, but $4k-$6k contracts make it the best thing on the site to negotiate once you have real traffic.",
+    "priority": 60,
+    "priorityNote": "Editorial pin: leads prospect research. Tier B negotiated partner and the category's best-known name, so it heads the list even though no program is signed yet. Remove this to fall back to payout order."
   },
   "donorsearch": {
     "name": "DonorSearch",
@@ -493,7 +498,7 @@
     "status": "pending",
     "url": "https://www.greatergiving.com",
     "affiliateUrl": null,
-    "readerOffer": "$300 can be applied to their first invoice",
+    "readerOffer": null,
     "terms": "$300 per referred organization that becomes a customer. The page says \"referral credit\"/\"incentive\", never cash, so confirm the payout form when you apply.",
     "signupUrl": "https://www.greatergiving.com/en/partners/partner-referral",
     "appliedOn": null,
@@ -506,7 +511,8 @@
       "url": "https://www.greatergiving.com/en/partners/partner-referral",
       "checked": "2026-07-31",
       "quote": "Get a $300 incentive for every referral that becomes a client... you'll receive a $300 referral credit as a thank-you."
-    }
+    },
+    "offerNote": "The $300 is worded as a referral credit, not a confirmed customer discount. Do not advertise it to readers until the partnerships manager confirms it can be applied to their invoice."
   },
   "eleo": {
     "name": "Eleo",

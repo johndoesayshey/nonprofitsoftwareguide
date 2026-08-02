@@ -1,5 +1,7 @@
 ---
 import { getAffiliate } from '../lib/affiliates';
+import ReaderOffer from './ReaderOffer.astro';
+import { relFor } from '../lib/affiliate-value';
 
 interface Props {
   slug: string;
@@ -20,16 +22,16 @@ if (!affiliate) {
 }
 
 const label = text ?? affiliate.name;
-const offer = showOffer ? affiliate.readerOffer : null;
+
 ---
 
 <a
   href={`/go/${slug}`}
-  rel="sponsored nofollow noopener"
+  rel={relFor(slug)}
   class="aff-link font-medium underline underline-offset-2 decoration-2"
   data-affiliate={slug}>{label}</a
 >{
-  offer && (
-    <span class="aff-offer ml-1 whitespace-nowrap text-sm font-medium">— {offer}</span>
+  showOffer && (
+    <ReaderOffer slug={slug} />
   )
 }

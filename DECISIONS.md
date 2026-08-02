@@ -407,3 +407,34 @@ as the priced alternative with the arithmetic to decide it.
 
 **GiveWP mention dropped** from the donation-processing page: the program moved to LiquidWeb,
 there is no platform page behind the link, and it was the only unreviewed product on the page.
+
+## 2026-08-02 — Benchmark generated from the stacks; Grants.gov dropped
+
+**Benchmark is no longer a separate dataset.** `src/data/benchmarks.json` is deleted. Every cell
+in /benchmarks/ is now read off the four stack pages at build time. The two were maintained as
+independent lists and drifted apart inside a week, which is exactly the contradiction a reader
+checking our numbers would find first. One source, no drift. A dash means the stack leaves that
+category out on purpose. Methodology and citation blocks removed at the operator's direction;
+the figures now carry their provenance by linking to the stack page they came from.
+
+**Homepage headline stat** now derives from the $250k-$1M stack's total for the same reason.
+
+**Grants.gov removed sitewide.** Federal portal, no program, and a poor fit for the shops this
+site serves; every mention, the platform page and its comparison pages are gone, with a 301 to
+/grant-research/.
+
+**Editorial pin.** `priority` in affiliates.json adds to the ordering score, so a product can
+lead its category for a reason the payout doesn't capture. Kindsight is pinned to the top of
+prospect research: Tier B negotiated partner, and the name readers arrive searching for. Say why
+in `priorityNote`; delete the field to fall back to payout order.
+
+**Reader offers now say whose deal they are** (`ReaderOffer.astro`). `offerSource: "guide"` means
+the discount exists because the reader used our link, and the label says so. `offerSource:
+"vendor"` means it is the vendor's own public programme — Jotform's 50% nonprofit discount is
+open to anyone, and taking credit for it would be false. Greater Giving's readerOffer was removed
+entirely: the $300 is worded as a referral credit, not a confirmed customer discount, so it is
+not something we can promise a reader.
+
+**Open accuracy risk:** every program is still `status: "pending"`. The reader discounts are real
+offers but only take effect once each application is approved. Apply, or the offers should be
+hidden.

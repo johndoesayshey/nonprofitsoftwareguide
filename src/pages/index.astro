@@ -1,5 +1,4 @@
 ---
-import benchmarks from '../data/benchmarks.json';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
 import { STACK_TIERS } from '../lib/stacks';
@@ -12,12 +11,6 @@ import AwardCard from '../components/AwardCard.astro';
 const stacks = await getCollection('stacks', ({ data }) => data.draft === false);
 const bySlug = new Map(stacks.map((s) => [s.data.slug, s.data]));
 
-// Headline stat comes straight from the benchmark table, so the homepage can
-// never claim a number the benchmark page does not support.
-const growingTotal = (benchmarks as any).totals['250k-1m'] as string;
-const bounds = growingTotal.match(/[\d,]+/g)!.map((n) => Number(n.replace(/,/g, '')));
-const typicalSpend = '$' + Math.round((bounds[0] + bounds[bounds.length - 1]) / 2).toLocaleString('en-US');
-
 const rows = STACK_TIERS.map((t, i) => {
   const stack = bySlug.get(t.slug);
   return {
@@ -27,6 +20,15 @@ const rows = STACK_TIERS.map((t, i) => {
     verified: stack?.lastVerified ?? null,
   };
 });
+
+// Headline stat comes straight from the $250k-$1M stack page, the same source
+// the benchmark table reads, so the homepage can never claim a figure the rest
+// of the site does not support.
+const growingTotal = bySlug.get('250k-1m')?.totalStackCost ?? '';
+const bounds = (growingTotal.match(/[\d,]+/g) ?? []).map((n) => Number(n.replace(/,/g, '')));
+const typicalSpend = bounds.length
+  ? '$' + Math.round((bounds[0] + bounds[bounds.length - 1]) / 2).toLocaleString('en-US')
+  : '—';
 
 const dateFmt = formatMonthYear;
 
