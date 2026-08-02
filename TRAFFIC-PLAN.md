@@ -9,18 +9,60 @@ fundraising software, so readers arrive already deciding what to buy.
 
 ---
 
-## Existence proof
+## Who actually ranks for "best nonprofit CRM"
 
-`nonprofitpoint.com` currently ranks on page one for "best CRM for nonprofits"
-with an independent affiliate roundup. Not a vendor, not Capterra. A site doing
-exactly what this one does is already winning that SERP, which means the query
-is not owned by domain authority alone. It is winnable.
+Checked in the browser, not inferred from search-result titles.
 
-The rest of that page-one set — softwareconnect, softwareadvice, selecthub,
-Bloomerang's own blog, Givebutter's blog — tells you the shape of the
-competition: aggregators with thin per-product depth, and vendors reviewing
-their own category. Neither publishes real prices for the quote-only products.
-That is the gap.
+Three kinds of competitor, and no fourth:
+
+1. **Review aggregators** — softwareconnect, softwareadvice, selecthub. Broad,
+   shallow per product, no real pricing for anything quote-based.
+2. **Vendor blogs** — Bloomerang and Givebutter ranking for the category they
+   sell into.
+3. **General nonprofit content sites** — nonprofitpoint.com is the example.
+   Worth understanding properly, because it is not what it looks like from the
+   SERP.
+
+**What nonprofitpoint.com actually is:** a 73-page-deep general nonprofit
+content site whose nav categories are Fundraising Ideas, Fundraising
+Strategies, and For Volunteers. There is no software section. Its homepage and
+recent output are dominated by "Charities That Help With Rent in Texas,"
+"Charities That Help With Security Deposits," "Charities That Help With Car
+Insurance" — high-volume assistance-seeker content aimed at people in financial
+distress, which has nothing to do with software buyers.
+
+The CRM article is one page out of hundreds. It ranks on **site-wide authority
+bought with volume**, then spent on a commercial page. That is a real and
+replicable strategy, but it is not evidence that a focused, high-quality
+software guide can win the term. It is evidence that a large site with a lot of
+easy-to-rank informational pages can.
+
+**The honest read of this SERP:** nobody currently occupying it is a focused,
+independent nonprofit-software publication with real pricing depth. That is
+simultaneously the opportunity and the warning — the opportunity because the
+niche is unclaimed, the warning because nobody has yet proven you can rank there
+on depth alone rather than on domain size.
+
+The strategic question that follows is in "Two models" below.
+
+## Two models
+
+**Model A — depth.** Stay narrow. Own every buyer-intent software query in the
+nonprofit sector: alternatives pages, pricing pages, comparisons. Fewer pages,
+each genuinely better than anything on the SERP. Wins the long tail first, and
+the head term only much later if at all. This is what the site is currently
+built for.
+
+**Model B — volume, then spend it.** What nonprofitpoint does. Publish a large
+volume of easy, high-search-volume nonprofit content that has nothing to do with
+software, build domain authority off it, then rank the commercial pages on that
+authority. Faster to authority. Dilutes what the site is, and most of the
+traffic never buys anything.
+
+These are not exclusive — a middle path is broad *fundraising-operations*
+content (grant calendars, board reporting, year-end appeals) that a software
+buyer would plausibly also read, which builds authority without turning the site
+into a rent-assistance directory. That is the version worth considering.
 
 ---
 
