@@ -15,10 +15,18 @@ recommended stack: "here is what a $500k shop should run, here is what a $5M sho
 here is what changes when you cross $2M." Individual product comparisons exist to support
 those pages, not the other way around.
 
-The operator is a fundraising professional with 10+ years in institutional fundraising and
-grant work. He has personally used several of these platforms and has a real professional
-network in the nonprofit and K–12 education sectors. Those two facts are the entire
-competitive advantage; the spec is built around exploiting them.
+The operator is a fundraising professional with 15+ years in institutional fundraising and
+grant work, and has personally used several of these platforms. That experience is the
+competitive advantage, and it shows up as judgment on the page: which line item to skip at
+which size, what a quote actually includes, what breaks in year three.
+
+**The site is anonymous, and it stays that way.** *(Operator direction, 2026-08-02.)* No name,
+byline, photo, or identifying credential goes on the site. The operator's professional network
+is not a distribution channel: do not propose asking colleagues for links, shares, reshares or
+introductions, and do not plan tactics that require anyone in the sector to know who runs this.
+Everything has to work cold. This supersedes the original premise, which treated the network as
+the main asset — authority now has to come from demonstrated depth and original data instead of
+from a résumé.
 
 **The operator is not a developer.** Explain what you're doing in plain language. Never leave
 the project in a state where `npm run dev` fails. When you need a decision, ask one question
@@ -86,9 +94,11 @@ stack cost calculator, and an annual benchmark table of what nonprofits at each 
 spend on software. Original data attracts links; product roundups do not.
 
 **Backlinks outweigh post count.** Maintain `link-targets.md`: nonprofit sector publications,
-state association resource pages, grant-writing blogs, and podcasts accepting contributors,
-each with a pitch angle drawn from the operator's actual background. Ten placements beat fifty
-posts.
+state association resource pages, grant-writing blogs, and directories. Ten placements beat
+fifty posts. Every pitch angle must work as a cold approach from an unnamed publication, since
+the operator is not trading on relationships or a byline. In practice that means leading with
+the thing that needs no author: original cost data, a benchmark table, a tool comparison a
+resource page can link to as a reference.
 
 ## Software categories to cover
 
@@ -233,7 +243,8 @@ posts:     { title, description, publishDate, updatedDate, stack, targetQuery (u
   $5M+. Total cost, line-by-line rationale, upgrade triggers.
 - `/platforms/[slug]`, `/compare/[slug]`, `/blog/[slug]`
 - `/disclosure` — leave legal text as `[OPERATOR INPUT]`; do not write compliance language
-- `/about` — operator's real credentials, written by the operator
+- `/about` — what the guide is, how it is researched, and the depth of experience behind it,
+  stated without a name or identifying detail. Written by the operator.
 
 ## Design direction
 
@@ -299,8 +310,10 @@ products.
 | `donorsearch` | DonorSearch | Consulting partner program |
 | `neoncrm` | Neon One | CAP program relaunched Oct 2025 — 10% discount on referred sales, commissions "available" |
 
-Do not approach Tier B with an empty site. These are relationship deals; the operator's
-credentials plus real traffic get materially better terms than a cold email would.
+Do not approach Tier B with an empty site. These are relationship deals, and real traffic plus
+a substantial published site is the leverage — not personal introductions. Vendor partnerships
+are a private business conversation, so the anonymity rule does not block them; it only rules
+out publishing identity on the site or leaning on sector contacts.
 
 **Tier C — no program exists. Set `status: "none"` and leave it.**
 

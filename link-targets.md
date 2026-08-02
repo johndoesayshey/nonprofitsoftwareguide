@@ -1,16 +1,27 @@
 # Link targets — 25 backlink prospects
 
-Ten placements beat fifty posts. These are ranked prospects for earned links,
-each with a pitch angle built on the operator's actual leverage:
+Ten placements beat fifty posts.
 
-- **Grant work is the day job** — real, current practitioner authority in the
-  highest-value category.
-- **A K–12 education fundraising network** — warm relationships most software
-  bloggers don't have. CASE, education-sector outlets, and school-foundation
-  associations are unusually reachable.
-- **Hands-on use** of several platforms — first-hand, not affiliate-farmed.
-- **Original data** — the annual benchmark table is citation bait; lead pitches
-  to data-driven outlets with it, not with product roundups.
+**Every pitch here has to work cold, from an unnamed publication.** The operator
+is not using their professional network and is not putting a name on the site,
+so nothing below may assume a warm introduction, a personal reputation, or a
+byline. *(Operator direction, 2026-08-02 — this replaced an earlier version of
+this file that was built on network leverage.)*
+
+What we lead with instead:
+
+- **Original data** — the annual benchmark and the per-stack cost tables. A
+  resource page or a journalist can cite a table without knowing who compiled
+  it. This is the strongest cold asset on the site and should open most pitches.
+- **Reference utility** — 24 head-to-head comparisons and 19 priced tool pages.
+  Association resource lists link to references, not to personalities.
+- **Depth of judgment on the page** — which line to skip at which size, what a
+  quote actually includes. This earns the link once someone reads; it is not
+  what gets the email opened.
+
+Two consequences worth being honest about: contributed columns and podcast
+appearances mostly require a named author, so they are lower-probability here,
+and resource-page submissions and data citations move up accordingly.
 
 > **Verify before pitching.** Submission guidelines, editors, and whether a site
 > currently accepts contributors change often. Treat the contact/URL notes below
