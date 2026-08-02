@@ -32,14 +32,22 @@ Run it weekly. It reads the actual site data and tells you:
 npm run edit
 ```
 
-Then open **http://localhost:4400/**. Every paragraph and heading gets a dashed
-outline. Click one, type over it, and press **Save**. The change is written into
-the real source file and the page reloads.
+Then open **http://localhost:4400/**. It opens as a normal preview of the site:
+every link works and you can click around exactly as a visitor would.
 
+To change text, press **✏️ Edit: OFF** in the bar at the bottom to switch it on.
+Paragraphs and headings pick up a dashed outline. Click one, type over it, and
+press **Save**. The change is written into the real source file and the page
+reloads.
+
+- Editing switches itself back **off** every time you load a page, so browsing
+  never gets blocked. (While editing is on, clicks land in the text instead of
+  following links — that is why it defaults off.)
+- After a save the page reloads and stays in edit mode, so a run of edits isn't
+  interrupted.
 - **Enter** or clicking away finishes a field. **Escape** undoes it.
-- The button shows how many changes are pending, so nothing saves by surprise.
-- Works on every page, not just the homepage. Navigate normally while editing.
-- Toggle **Edit: OFF** to browse without the outlines.
+- The Save button shows how many changes are pending, so nothing saves by surprise.
+- Works on every page, not just the homepage.
 - **Ctrl+C** in the terminal when you're done.
 
 Saved edits are local only. Tell Claude to push them when you're happy, or they

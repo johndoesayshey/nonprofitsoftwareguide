@@ -219,11 +219,12 @@ function buildDeals() {
 const CLIENT = `
 <style id="nsg-edit-style">
   /* currentColor keeps the outline visible on both the paper and dark-teal bands */
-  .nsg-editable { outline: 1px dashed currentColor; outline-offset: 3px; opacity: .999;
-    cursor: text; border-radius: 2px; }
-  .nsg-editable:hover { outline: 2px dashed currentColor; background: rgba(127,127,127,.14); }
-  .nsg-editable:focus { outline: 2px solid #0e4f4a; background: #fff; color: #141514 !important;
-    box-shadow: 0 0 0 4px rgba(14,79,74,.18); }
+  body.nsg-editing .nsg-editable { outline: 1px dashed currentColor; outline-offset: 3px;
+    opacity: .999; cursor: text; border-radius: 2px; }
+  body.nsg-editing .nsg-editable:hover { outline: 2px dashed currentColor;
+    background: rgba(127,127,127,.14); }
+  body.nsg-editing .nsg-editable:focus { outline: 2px solid #0e4f4a; background: #fff;
+    color: #141514 !important; box-shadow: 0 0 0 4px rgba(14,79,74,.18); }
   .nsg-dirty { background: #fff8dc !important; outline-color: #b7791f !important; }
   #nsg-bar { position: fixed; z-index: 999999; bottom: 18px; left: 50%; transform: translateX(-50%);
     background: #141514; color: #fff; border-radius: 999px; padding: 10px 14px; display: flex; gap: 10px;
@@ -306,10 +307,10 @@ const CLIENT = `
 <div id="nsg-tip"></div>
 <div id="nsg-composer"></div>
 <div id="nsg-bar">
-  <button id="nsg-toggle" class="on">✏️ Edit: ON</button>
+  <button id="nsg-toggle">👁 Edit: OFF</button>
   <button id="nsg-deals">💰 Deals</button>
   <button id="nsg-notes">💬 Notes</button>
-  <span id="nsg-msg">Click any text to edit it.</span>
+  <span id="nsg-msg">Browsing. Links work normally. Turn on Edit to change text.</span>
   <button id="nsg-save" disabled>Save 0</button>
 </div>
 <script>
@@ -322,7 +323,10 @@ const CLIENT = `
   });
 
   var edits = new Map(); // element -> original text
-  var on = true;
+  // Editing starts OFF on every page load. Contenteditable swallows clicks on
+  // links, so a preview that opens in edit mode cannot be browsed; you turn
+  // editing on for the page you actually want to change.
+  var on = false;
 
   var SEL = 'p,h1,h2,h3,h4,li,td,th,figcaption,blockquote,span,small,dd,dt,div,summary,strong,em,label';
   // Text-only elements are simplest, but most real prose has links in it. Allow
@@ -381,16 +385,30 @@ const CLIENT = `
 
   function msg(html) { document.getElementById('nsg-msg').innerHTML = html; }
 
-  document.getElementById('nsg-toggle').addEventListener('click', function () {
-    on = !on;
-    this.textContent = on ? '✏️ Edit: ON' : '👁 Edit: OFF';
-    this.classList.toggle('on', on);
+  function setEditing(next) {
+    on = next;
+    var btn = document.getElementById('nsg-toggle');
+    btn.textContent = on ? '✏️ Edit: ON' : '👁 Edit: OFF';
+    btn.classList.toggle('on', on);
+    document.body.classList.toggle('nsg-editing', on);
     document.querySelectorAll('.nsg-editable').forEach(function (el) {
       el.setAttribute('contenteditable', on ? 'true' : 'false');
-      el.style.outline = on ? '' : 'none';
     });
-    msg(on ? 'Click any text to edit it.' : 'Editing paused. Browse normally.');
+    msg(on
+      ? 'Click any text to edit it. Links are not clickable while this is on.'
+      : 'Browsing. Links work normally. Turn on Edit to change text.');
+  }
+
+  document.getElementById('nsg-toggle').addEventListener('click', function () {
+    setEditing(!on);
   });
+
+  // Saving reloads the page; come back in edit mode so a run of edits isn't
+  // interrupted. Only survives that one reload.
+  if (sessionStorage.getItem('nsg-resume-editing') === '1') {
+    sessionStorage.removeItem('nsg-resume-editing');
+    setTimeout(function () { setEditing(true); }, 0);
+  }
 
   document.getElementById('nsg-save').addEventListener('click', function () {
     var payload = [];
@@ -413,7 +431,10 @@ const CLIENT = `
       var bad = res.results.filter(function (r) { return !r.ok; });
       edits.forEach(function (_, el) { el.classList.remove('nsg-dirty'); delete el.dataset.nsgOriginal; });
       edits.clear(); refresh();
-      if (bad.length === 0) msg('✅ Saved ' + ok + ' change' + (ok === 1 ? '' : 's') + '. Page will reload.');
+      if (bad.length === 0) {
+        sessionStorage.setItem('nsg-resume-editing', '1');
+        msg('✅ Saved ' + ok + ' change' + (ok === 1 ? '' : 's') + '. Page will reload.');
+      }
       else msg('Saved ' + ok + '. ' + bad.length + ' could not be matched: "' +
                bad[0].original.slice(0, 40) + '…" (' + bad[0].reason + ')');
     }).catch(function (e) { msg('Save failed: ' + e.message); });
