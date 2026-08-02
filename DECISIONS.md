@@ -438,3 +438,40 @@ not something we can promise a reader.
 **Open accuracy risk:** every program is still `status: "pending"`. The reader discounts are real
 offers but only take effect once each application is approved. Apply, or the offers should be
 hidden.
+
+## 2026-08-02 — /benchmarks/ becomes survey results
+
+**Real data replaced modelled data.** The operator supplied a July 2026 survey: 100 US
+fundraising professionals reporting annual spend per software category, segmented by revenue
+(n=55 / 28 / 12 / 5). The page previously showed figures derived from our own stack pages,
+which was a summary of our recommendations dressed as a benchmark. It now reports what the
+sector actually spends.
+
+`src/data/survey-2026.json` is the single source: means, medians, share reporting $0, and
+segment sizes. Every figure was recomputed from the 100 individual responses and matches the
+workbook's own summary tab.
+
+**The PDF is generated, not maintained.** `scripts/build-survey-pdf.mjs` writes a real
+two-page PDF from the same JSON and runs as the first step of `npm run build`, so the download
+can never disagree with the page. Written directly against the PDF spec rather than adding a
+library — the document is text and rules, and the site has no other runtime dependencies. Two
+gotchas worth remembering: base-14 Helvetica with WinAnsi silently drops en-dashes and curly
+quotes (they are folded to ASCII in `esc()`), and text width must be measured on the folded
+string or right-aligned columns drift.
+
+**Tables are fixed-layout and full-width.** The article sets `max-width: none` with the reading
+measure restored on the text elements, so all four segment columns fit without horizontal
+scroll and the columns hold their widths across all four tables. This was the operator's "the
+chart should not move around."
+
+**Methodology and citation restored**, per operator direction, along with a more formal opening.
+Both were removed on 2026-08-02 when the page was a derived table; with real survey data behind
+it they are what make the page citable.
+
+**The most valuable section is the comparison.** Mean reported spend against our recommended
+stack: $10,197 vs ~$3,700 at $250k-$1M. That contrast is the site's thesis stated in the
+sector's own numbers, and it is the reason this page can earn links.
+
+**Homepage headline stat** now reads $10,197 from the survey rather than a derived stack
+midpoint. Nav label changed from "Benchmark" to "Survey"; the URL stays /benchmarks/ because
+slugs do not change after publish.

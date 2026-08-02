@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "npm run guardrails:src && astro build && npm run guardrails:dist",
+    "build": "node scripts/build-survey-pdf.mjs && npm run guardrails:src && astro build && npm run guardrails:dist",
     "preview": "astro preview",
     "astro": "astro",
     "guardrails": "npm run guardrails:src && npm run guardrails:dist",
@@ -16,7 +16,8 @@
     "check-links": "node scripts/check-links.mjs",
     "owner": "node scripts/owner-dashboard.mjs",
     "edit": "node scripts/edit-server.mjs",
-    "notes": "node scripts/notes.mjs"
+    "notes": "node scripts/notes.mjs",
+    "build:pdf": "node scripts/build-survey-pdf.mjs"
   },
   "dependencies": {
     "@astrojs/mdx": "^4.2.0",

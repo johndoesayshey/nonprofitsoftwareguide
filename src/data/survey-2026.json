@@ -1,0 +1,50 @@
+{
+  "_comment": "2026 Nonprofit Fundraising Software Spend Survey. Source of truth for /benchmarks/ AND for the downloadable PDF (scripts/build-survey-pdf.mjs). Figures are computed from the 100 individual responses; do not hand-edit a cell without re-deriving it from the response file. Means and medians are rounded to whole dollars.",
+  "title": "2026 Nonprofit Fundraising Software Spend Survey",
+  "fielded": "July 2026",
+  "published": "2026-08-02",
+  "sampleSize": 100,
+  "population": "Fundraising professionals in the United States",
+  "method": "Online self-report survey. Respondents reported annual spend per software category for their organization.",
+  "segments": [
+    { "slug": "under-250k", "label": "Under $250K", "revenue": "under $250k raised", "n": 55, "stackSlug": "under-250k" },
+    { "slug": "250k-1m", "label": "$250K – $1M", "revenue": "$250k – $1M raised", "n": 28, "stackSlug": "250k-1m" },
+    { "slug": "1m-5m", "label": "$1M – $5M", "revenue": "$1M – $5M raised", "n": 12, "stackSlug": "1m-5m" },
+    { "slug": "5m-plus", "label": "$5M+", "revenue": "$5M+ raised", "n": 5, "stackSlug": "5m-plus" }
+  ],
+  "categories": [
+    { "slug": "grant-research", "label": "Grant research", "path": "/grant-research/" },
+    { "slug": "prospect-research", "label": "Prospect research / wealth screening", "path": "/wealth-screening/" },
+    { "slug": "donor-crm", "label": "Donor CRM", "path": "/donor-crm/" },
+    { "slug": "donation-processing", "label": "Donation processing", "path": "/donation-processing/" },
+    { "slug": "forms-ops", "label": "Forms & other operations", "path": "/forms-operations/" },
+    { "slug": "events-auctions", "label": "Events & auctions", "path": "/events/" }
+  ],
+  "mean": {
+    "grant-research":      { "under-250k": 250,  "250k-1m": 746,   "1m-5m": 2278,  "5m-plus": 5713 },
+    "prospect-research":   { "under-250k": 45,   "250k-1m": 1319,  "1m-5m": 4135,  "5m-plus": 17320 },
+    "donor-crm":           { "under-250k": 716,  "250k-1m": 2726,  "1m-5m": 7130,  "5m-plus": 18688 },
+    "donation-processing": { "under-250k": 1024, "250k-1m": 3493,  "1m-5m": 9906,  "5m-plus": 30824 },
+    "forms-ops":           { "under-250k": 175,  "250k-1m": 572,   "1m-5m": 2062,  "5m-plus": 13000 },
+    "events-auctions":     { "under-250k": 402,  "250k-1m": 1341,  "1m-5m": 4830,  "5m-plus": 11270 }
+  },
+  "meanTotal": { "under-250k": 2611, "250k-1m": 10197, "1m-5m": 30342, "5m-plus": 96815 },
+  "median": {
+    "grant-research":      { "under-250k": 0,   "250k-1m": 595,  "1m-5m": 2574, "5m-plus": 3900 },
+    "prospect-research":   { "under-250k": 0,   "250k-1m": 550,  "1m-5m": 4500, "5m-plus": 18000 },
+    "donor-crm":           { "under-250k": 682, "250k-1m": 2173, "1m-5m": 5585, "5m-plus": 17334 },
+    "donation-processing": { "under-250k": 846, "250k-1m": 3548, "1m-5m": 6925, "5m-plus": 29297 },
+    "forms-ops":           { "under-250k": 190, "250k-1m": 594,  "1m-5m": 1914, "5m-plus": 14100 },
+    "events-auctions":     { "under-250k": 0,   "250k-1m": 1225, "1m-5m": 4000, "5m-plus": 10000 }
+  },
+  "medianTotal": { "under-250k": 2411, "250k-1m": 9226, "1m-5m": 27603, "5m-plus": 92069 },
+  "pctZero": {
+    "grant-research":      { "under-250k": 55, "250k-1m": 39, "1m-5m": 17, "5m-plus": 0 },
+    "prospect-research":   { "under-250k": 95, "250k-1m": 50, "1m-5m": 25, "5m-plus": 0 },
+    "donor-crm":           { "under-250k": 36, "250k-1m": 11, "1m-5m": 0,  "5m-plus": 0 },
+    "donation-processing": { "under-250k": 24, "250k-1m": 14, "1m-5m": 0,  "5m-plus": 0 },
+    "forms-ops":           { "under-250k": 49, "250k-1m": 21, "1m-5m": 17, "5m-plus": 0 },
+    "events-auctions":     { "under-250k": 51, "250k-1m": 29, "1m-5m": 0,  "5m-plus": 0 }
+  },
+  "pdf": "/2026-nonprofit-software-spend-survey.pdf"
+}

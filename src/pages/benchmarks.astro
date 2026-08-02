@@ -3,110 +3,265 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import Breadcrumbs from '../components/Breadcrumbs.astro';
 import { getCollection } from 'astro:content';
 import { formatLong } from '../lib/dates';
-import { CATEGORIES } from '../lib/categories';
-import { STACK_TIERS } from '../lib/stacks';
+import survey from '../data/survey-2026.json';
 
-// Every figure on this page is read straight off the four stack pages at build
-// time. They were maintained as two separate lists and drifted apart within a
-// week; now there is one source and the table cannot contradict the pages it
-// summarises.
+// Survey results. Every figure comes from src/data/survey-2026.json, which is
+// derived from the 100 individual responses. The same file builds the PDF
+// (scripts/build-survey-pdf.mjs), so the download and the page cannot disagree.
+const s = survey as any;
+const published = new Date(s.published);
+const publishedLabel = formatLong(published);
+
+const money = (n: number) => (n === 0 ? '$0' : '$' + n.toLocaleString('en-US'));
+
+// The site's own recommended totals, shown against what shops actually spend.
+// This is the most interesting thing in the data and it is the site's thesis.
 const stacks = await getCollection('stacks', ({ data }) => data.draft === false);
-const bySlug = new Map(stacks.map((s) => [s.data.slug, s.data]));
-
-const tiers = STACK_TIERS.filter((t) => bySlug.has(t.slug));
-const categories = Object.values(CATEGORIES);
-const ready = tiers.length > 0;
-
-// Most recent verification across the stacks it is built from.
-const updated = new Date(Math.max(...stacks.map((s) => +s.data.lastVerified)));
-const updatedLabel = formatLong(updated);
-
-function cell(tierSlug: string, categorySlug: string): string {
-  const line = bySlug.get(tierSlug)?.components.find((c) => c.category === categorySlug);
-  // No line at all means the stack deliberately leaves this category out.
-  if (!line) return '—';
-  return line.annualCost;
-}
+const stackTotal = new Map(stacks.map((x) => [x.data.slug, x.data.totalStackCost]));
 
 const site = Astro.site ?? new URL('https://nonprofitsoftwareguide.com');
 const datasetLd = {
   '@context': 'https://schema.org',
   '@type': 'Dataset',
-  name: 'Nonprofit fundraising software spend benchmark',
+  name: s.title,
   description:
-    'What nonprofits at each shop size ($250k to $5M+) typically spend per year on fundraising software, by category.',
+    `Average annual spend on fundraising software by nonprofit organizations in the United States, ` +
+    `by category and by organization size. Survey of ${s.sampleSize} US fundraising professionals, ${s.fielded}.`,
   url: new URL('/benchmarks/', site).href,
   creator: { '@type': 'Organization', name: 'Nonprofit Software Guide' },
-  dateModified: updated.toISOString(),
+  datePublished: published.toISOString(),
+  dateModified: published.toISOString(),
   license: 'https://creativecommons.org/licenses/by/4.0/',
   isAccessibleForFree: true,
+  measurementTechnique: s.method,
+  variableMeasured: s.categories.map((c: any) => `${c.label} annual spend (USD)`),
+  distribution: {
+    '@type': 'DataDownload',
+    encodingFormat: 'application/pdf',
+    contentUrl: new URL(s.pdf, site).href,
+  },
 };
 ---
 
 <BaseLayout
-  title="Nonprofit fundraising software spend benchmark"
-  description="What nonprofits at each shop size actually spend per year on fundraising software, by category. An annual benchmark."
-  section="benchmark"
-  noindex={!ready}>
+  title="Nonprofit fundraising software spend survey 2026"
+  description={`Survey of ${s.sampleSize} US fundraising professionals on what nonprofits spend per year on fundraising software, by category and organization size. Free to cite; PDF download.`}
+  section="benchmark">
   <div class="wrap">
-    <Breadcrumbs crumbs={[{ label: 'Home', href: '/' }, { label: 'Benchmark' }]} />
+    <Breadcrumbs crumbs={[{ label: 'Home', href: '/' }, { label: 'Survey' }]} />
 
-    {!ready && (
-      <aside class="draft-banner" role="note">
-        <strong>No published stacks yet.</strong> This table is built from the stack
-        pages, and none are published, so there is nothing to show.
-      </aside>
-    )}
-
-    <article class="prose" style="margin-top: 1.2rem;">
-      <p class="kicker">Annual benchmark · original data</p>
-      <h1>What nonprofits spend on fundraising software</h1>
+    <article class="prose survey-page" style="margin-top: 1.2rem; max-width: none;">
+      <p class="kicker">Survey results · {s.fielded}</p>
+      <h1>{s.title}</h1>
 
       <p class="lede">
-        What a fundraising operation costs to run at each size, category by
-        category, on one page. Every figure is the line item from that shop
-        size's recommended stack, so you can take a column straight into a
-        budget conversation. A dash means that category is deliberately left out
-        at that size. Click a column heading for the reasoning behind each line.
+        In {s.fielded}, {s.sampleSize} fundraising professionals in the United States
+        completed an online survey reporting their organization's annual expenditure
+        on fundraising software across six categories. Responses were grouped by the
+        amount each organization raises annually. The figures below are the mean
+        reported spend per category within each group.
       </p>
 
-      <p class="benchmark-updated"><span class="verified">Updated {updatedLabel}</span></p>
+      <div class="meta-row">
+        <span class="verified">Published {publishedLabel}</span>
+        <span class="meta-sep" aria-hidden="true">·</span>
+        <span>n = {s.sampleSize}</span>
+        <span class="meta-sep" aria-hidden="true">·</span>
+        <span>Fielded {s.fielded}</span>
+      </div>
 
+      <p class="dl">
+        <a class="btn-dl" href={s.pdf} download>Download the full results (PDF)</a>
+        <span class="dl-note">2 pages · free to cite with attribution</span>
+      </p>
+
+      <h2>Mean annual spend by category</h2>
+      <p class="table-note">
+        Average across every respondent in the group, including those reporting no
+        spend at all.
+      </p>
       <div class="table-scroll">
-        <table class="benchmark">
+        <table class="survey">
+          <caption class="sr-only">Mean annual fundraising software spend by category and organization size</caption>
           <thead>
             <tr>
-              <th scope="col">Category</th>
-              {tiers.map((t) => (
+              <th scope="col" class="cat">Category</th>
+              {s.segments.map((seg: any) => (
                 <th scope="col" class="num">
-                  <a href={`/stacks/${t.slug}/`}>{t.tier}</a><br /><small>{t.revenue} raised</small>
+                  {seg.label}<br /><small>n={seg.n}</small>
                 </th>
               ))}
             </tr>
           </thead>
           <tbody>
-            {categories.map((c) => (
+            {s.categories.map((c: any) => (
               <tr>
-                <th scope="row">{c.path ? <a href={c.path}>{c.label}</a> : c.label}</th>
-                {tiers.map((t) => {
-                  const v = cell(t.slug, c.slug);
-                  return <td class:list={['num', { none: v === '—' }]}>{v}</td>;
-                })}
+                <th scope="row" class="cat"><a href={c.path}>{c.label}</a></th>
+                {s.segments.map((seg: any) => (
+                  <td class="num">{money(s.mean[c.slug][seg.slug])}</td>
+                ))}
               </tr>
             ))}
           </tbody>
           <tfoot>
             <tr>
-              <th scope="row">Total per year</th>
-              {tiers.map((t) => <td class="num">{bySlug.get(t.slug)?.totalStackCost}</td>)}
+              <th scope="row" class="cat">Total software spend</th>
+              {s.segments.map((seg: any) => <td class="num">{money(s.meanTotal[seg.slug])}</td>)}
             </tr>
           </tfoot>
         </table>
       </div>
 
+      <h2>Median annual spend by category</h2>
+      <p class="table-note">
+        The midpoint response. Lower than the mean wherever a small number of large
+        spenders pull the average upward.
+      </p>
+      <div class="table-scroll">
+        <table class="survey">
+          <caption class="sr-only">Median annual fundraising software spend by category and organization size</caption>
+          <thead>
+            <tr>
+              <th scope="col" class="cat">Category</th>
+              {s.segments.map((seg: any) => (
+                <th scope="col" class="num">{seg.label}<br /><small>n={seg.n}</small></th>
+              ))}
+            </tr>
+          </thead>
+          <tbody>
+            {s.categories.map((c: any) => (
+              <tr>
+                <th scope="row" class="cat">{c.label}</th>
+                {s.segments.map((seg: any) => (
+                  <td class="num">{money(s.median[c.slug][seg.slug])}</td>
+                ))}
+              </tr>
+            ))}
+          </tbody>
+          <tfoot>
+            <tr>
+              <th scope="row" class="cat">Total software spend</th>
+              {s.segments.map((seg: any) => <td class="num">{money(s.medianTotal[seg.slug])}</td>)}
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+
+      <h2>Share of each group reporting no spend</h2>
+      <p class="table-note">
+        The proportion of respondents in each group spending nothing at all in that
+        category. This is where the sector's actual priorities show most clearly.
+      </p>
+      <div class="table-scroll">
+        <table class="survey">
+          <caption class="sr-only">Percentage of respondents reporting zero spend, by category and organization size</caption>
+          <thead>
+            <tr>
+              <th scope="col" class="cat">Category</th>
+              {s.segments.map((seg: any) => (
+                <th scope="col" class="num">{seg.label}<br /><small>n={seg.n}</small></th>
+              ))}
+            </tr>
+          </thead>
+          <tbody>
+            {s.categories.map((c: any) => (
+              <tr>
+                <th scope="row" class="cat">{c.label}</th>
+                {s.segments.map((seg: any) => (
+                  <td class:list={['num', { none: s.pctZero[c.slug][seg.slug] === 0 }]}>
+                    {s.pctZero[c.slug][seg.slug]}%
+                  </td>
+                ))}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <h2>What the results show</h2>
       <p>
-        To see the tools behind these numbers, read the
-        <a href="/">recommended stack for your shop size</a>.
+        Three findings stand out, and each one bears on how a fundraising operation
+        should budget.
+      </p>
+      <p>
+        <strong>Wealth screening is almost entirely absent below $250k.</strong>
+        95% of organizations raising under $250k report spending nothing on prospect
+        research, and half of those in the $250k–$1M group report the same. Screening
+        enters the budget once major-gift work is somebody's defined responsibility,
+        not before.
+      </p>
+      <p>
+        <strong>Donation processing is the largest single line at every size.</strong>
+        It accounts for roughly a third of total software spend in all four groups.
+        Because most processing is billed as a percentage of funds raised, that line
+        grows with fundraising success rather than with organizational need, which is
+        the argument for examining it first.
+      </p>
+      <p>
+        <strong>Reported spend rises faster than revenue.</strong> Mean total spend
+        moves from $2,611 to $96,815 between the smallest and largest groups, a
+        multiple far steeper than the revenue bands themselves.
+      </p>
+
+      <h2>Reported spend against our recommendations</h2>
+      <p class="table-note">
+        Mean reported spend compared with the annual cost of the stack this guide
+        recommends at each size.
+      </p>
+      <div class="table-scroll">
+        <table class="survey compare-rec">
+          <thead>
+            <tr>
+              <th scope="col" class="cat">Organization size</th>
+              <th scope="col" class="num">Mean reported spend</th>
+              <th scope="col" class="num">Our recommended stack</th>
+            </tr>
+          </thead>
+          <tbody>
+            {s.segments.map((seg: any) => (
+              <tr>
+                <th scope="row" class="cat">
+                  <a href={`/stacks/${seg.stackSlug}/`}>{seg.label}</a>
+                </th>
+                <td class="num">{money(s.meanTotal[seg.slug])}</td>
+                <td class="num rec">{stackTotal.get(seg.stackSlug) ?? '—'}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      <p>
+        The gap is not evidence that respondents are overspending. Reported figures
+        include tools this guide does not cover, multi-year contracts, and
+        organizations whose circumstances differ from the recommended case. It does
+        suggest, though, that a credible operation can be assembled for considerably
+        less than the sector average at every size.
+        <a href="/">See the recommended stack for your size</a>.
+      </p>
+
+      <h2>Methodology</h2>
+      <p>
+        Fielded {s.fielded}. Population: {s.population}. {s.method} Sample size
+        {' '}{s.sampleSize}, distributed across four groups by annual revenue raised:
+        {' '}{s.segments.map((seg: any) => `${seg.label} (n=${seg.n})`).join(', ')}.
+      </p>
+      <p>
+        Figures are self-reported and unaudited. Dollar amounts are rounded to the
+        nearest dollar and percentages to the nearest whole percent. Group sizes at
+        the upper end are small, so the $1M–$5M and $5M+ figures should be read as
+        indicative rather than precise. No respondent identifying information was
+        collected, and no vendor participated in the design, fielding, or analysis of
+        this survey.
+      </p>
+
+      <h2>Citation</h2>
+      <p>This survey is free to cite and reproduce with attribution. Suggested citation:</p>
+      <blockquote class="citation">
+        Nonprofit Software Guide, “{s.title}” ({s.fielded}).
+        https://nonprofitsoftwareguide.com/benchmarks/
+      </blockquote>
+      <p>
+        <a class="btn-dl" href={s.pdf} download>Download the full results (PDF)</a>
       </p>
     </article>
   </div>
@@ -115,20 +270,58 @@ const datasetLd = {
 </BaseLayout>
 
 <style>
-  .benchmark td.none { color: var(--color-muted); font-weight: 500; }
-  .benchmark thead a, .benchmark tbody th a { color: inherit; text-decoration: none;
-    border-bottom: 1px solid var(--color-rule-strong); }
-  .benchmark thead a:hover, .benchmark tbody th a:hover { color: var(--color-green-deep); }
+  /* Article runs full width so all four survey columns fit without scrolling on
+     a normal screen; text keeps a readable measure. */
+  .survey-page > p,
+  .survey-page > h1,
+  .survey-page > h2,
+  .survey-page > .lede,
+  .survey-page > .citation,
+  .survey-page > blockquote { max-width: 44rem; }
 
-  .draft-banner { border: 2px dashed var(--color-red); color: var(--color-red);
-    background: #fbeeee; padding: .7rem 1rem; margin: 1rem 0; font-size: .9rem;
-    font-family: var(--font-mono); border-radius: 2px; }
-  .draft-banner strong { font-family: var(--font-serif); }
-  .draft-banner code { background: rgba(0,0,0,.06); padding: .05em .3em; border-radius: 2px; }
-  .benchmark-updated { margin: 0 0 1rem; }
-  .table-scroll { overflow-x: auto; margin: 1.2rem 0; }
-  table.benchmark { min-width: 40rem; }
-  table.benchmark th[scope="row"] { white-space: nowrap; }
-  table.benchmark tfoot th, table.benchmark tfoot td { border-top: 2px solid var(--color-ink); font-weight: 700; }
-  table.benchmark small { font-weight: 400; color: var(--color-muted); }
+  .meta-row { display: flex; flex-wrap: wrap; gap: .5rem .7rem; align-items: center;
+    font-family: var(--font-mono); font-size: .72rem; text-transform: uppercase;
+    letter-spacing: .06em; color: var(--color-muted); margin: 0 0 1.4rem; }
+  .meta-sep { opacity: .5; }
+
+  .dl { margin: 0 0 2rem; }
+  .btn-dl { display: inline-block; background: var(--color-green-deep); color: #fff;
+    font-weight: 700; text-decoration: none; padding: .6rem 1.1rem; border-radius: 3px;
+    font-size: .92rem; }
+  .btn-dl:hover { background: var(--color-green); color: #fff; }
+  .dl-note { display: block; margin-top: .45rem; font-size: .78rem; color: var(--color-muted); }
+
+  .table-note { color: var(--color-muted); font-size: .92rem; margin: -.4rem 0 .2rem; }
+
+  /* Fixed layout so the columns hold their widths across all four tables and
+     nothing reflows as figures change. The wrapper scrolls on narrow screens
+     rather than letting the table squeeze. */
+  .table-scroll { overflow-x: auto; margin: 1rem 0 2.2rem; }
+  table.survey { width: 100%; max-width: 58rem; min-width: 40rem; table-layout: fixed;
+    border-collapse: collapse; }
+  table.survey th, table.survey td { padding: .55rem .7rem; border-bottom: 1px solid var(--color-rule);
+    vertical-align: bottom; }
+  table.survey thead th { font-size: .74rem; letter-spacing: .04em; font-weight: 800;
+    color: var(--color-muted); border-bottom: 2px solid var(--color-ink); text-align: right;
+    white-space: nowrap; }
+  table.survey thead th.cat { text-align: left; }
+  table.survey thead small { display: inline-block; margin-top: .15rem; font-weight: 500;
+    font-size: .88em; opacity: .8; }
+  table.survey .cat { width: 30%; text-align: left; font-weight: 600; }
+  table.survey td.num, table.survey th.num { text-align: right; font-variant-numeric: tabular-nums;
+    white-space: nowrap; }
+  table.survey tbody th.cat a { color: var(--color-ink); text-decoration: none;
+    border-bottom: 1px solid var(--color-rule-strong); }
+  table.survey tbody th.cat a:hover { color: var(--color-green-deep); }
+  table.survey td.none { color: var(--color-muted); }
+  table.survey tfoot th, table.survey tfoot td { border-top: 2px solid var(--color-ink);
+    border-bottom: 0; font-weight: 800; }
+  table.compare-rec .rec { color: var(--color-green-deep); font-weight: 700; }
+
+  .citation { border-left: 3px solid var(--color-green-deep); background: var(--color-paper-2);
+    margin: 1rem 0; padding: .9rem 1.1rem; font-size: .95rem; color: var(--color-ink);
+    font-style: normal; }
+
+  .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+    overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
 </style>
