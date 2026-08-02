@@ -111,6 +111,186 @@ technical one.
 
 ---
 
+## The biggest idea: scale inside the niche, not outside it
+
+The volume model works. It does not require writing about rent assistance.
+
+There are hundreds of buyer-intent software queries in this sector and the site
+currently addresses maybe thirty. Filling that out is the same authority play
+nonprofitpoint runs, except every page is commercial and every page is on brand.
+
+**Four page types, all near-zero competition:**
+
+1. **Vertical pages.** "Best CRM for churches," "donor management for animal
+   rescues," "best CRM for schools," "fundraising software for food banks,"
+   "arts organizations," "animal shelters," "youth sports," "hospital
+   foundations." Checked the SERP: these are currently answered by generic
+   "best nonprofit CRM" roundups that mention a vertical in one line, plus
+   vendor blogs. Almost nobody has a dedicated page. Search intent is high and
+   commercial, and the operator's K-12 knowledge makes the schools one
+   genuinely authoritative. **Roughly 12-15 pages.**
+
+2. **Alternatives pages.** "Bloomerang alternatives," "DonorPerfect
+   alternatives," "Salesforce Nonprofit Cloud alternatives," "Blackbaud
+   alternatives," "Classy alternatives," "Kindful alternatives." The searcher is
+   unhappy with what they have and shopping today. Highest commercial intent
+   available. **8-12 pages.**
+
+3. **Pricing pages for quote-only products.** Kindsight, DonorSearch, Greater
+   Giving, OneCause, WealthEngine, Blackbaud publish nothing. Whoever collects
+   reported ranges owns those queries — and they are precisely the questions AI
+   assistants get asked and cannot currently answer. **6-8 pages.**
+
+4. **Integration pages.** "Bloomerang QuickBooks integration," "donor CRM that
+   syncs with Mailchimp," "Salesforce nonprofit accounting integration." Long,
+   specific, low competition, and a real purchase blocker for buyers.
+   **10+ pages.**
+
+That is 40-50 new pages, all commercial, all on brand, all defensible. It is
+the same volume strategy without becoming a different website.
+
+**Also: widen the product roster.** The site covers 19 products. The
+aggregators cover 25-40. Missing names that people actually search: Blackbaud
+/ Raiser's Edge, Virtuous, Kindful, CharityEngine, Aplos, Bonterra, Salsa,
+Network for Good, Donately, Funraise. Each addition multiplies the comparison
+matrix — 20 products in a category generate 190 possible pairings.
+
+---
+
+## Buy authority instead of earning it
+
+The operator is already browsing Flippa. Use it as a supply channel, not just
+as market research.
+
+- **Acquire a small nonprofit site or newsletter** with existing traffic and
+  backlinks, then merge or 301 it in. Buys years of domain age instantly.
+  Typical price for a small niche site is 30-40x monthly profit, so a site
+  doing $200/mo runs $6-8k.
+- **Expired domains** in the nonprofit space with real backlink profiles.
+  Cheaper, riskier, requires checking the backlink profile is clean and the
+  domain was never spammed.
+- **Buy a newsletter** rather than a site. A 5,000-subscriber nonprofit
+  newsletter is a distribution channel that does not depend on Google at all.
+
+This is the single fastest route to domain authority and nobody has to know who
+bought it.
+
+---
+
+## Paid traffic — the part that works this month
+
+Organic takes months. Paid tests the economics in a week and tells you whether
+the pages convert before you build fifty more.
+
+| Channel | Cost | Why |
+|---|---|---|
+| **Nonprofit newsletter sponsorships** | ~$100-500 per send | The fastest qualified traffic in this sector. Nonprofit Tech for Good sells them; so do most sector newsletters. Cheap, targeted, and no gatekeeper judging whether you are "promotional." |
+| **Reddit ads** | Low CPC | Can target r/nonprofit and r/fundraising directly. Sidesteps the self-promotion rules entirely — ads are allowed where posts are not. |
+| **Google Ads on product terms** | $5-15 CPC | Not for profit at first. For *data*: run $300 against "bloomerang alternatives" and "instrumentl pricing" and you learn real conversion rates before writing the organic pages. |
+| **Meta ads by job title** | Moderate | Development Director / Executive Director targeting is available and the audience is large. |
+
+The point of paid here is not to buy revenue. It is to learn which pages
+convert, so the organic effort goes where the money is.
+
+---
+
+## Make other people share it for you
+
+This is the answer to the Facebook problem. Groups punish self-promotion; they
+do not punish members posting a genuinely useful free thing they found.
+
+Build assets whose natural behaviour is being passed around:
+
+- **A CRM evaluation scorecard** (spreadsheet or PDF). Every ED running a
+  software search wants one and none exist that aren't vendor-branded.
+- **A vendor demo question checklist** — the twenty questions to ask, including
+  the ones vendors dislike.
+- **A data migration checklist** for leaving an old CRM.
+- **An RFP template** for nonprofit software.
+- **The annual pricing report** — package the benchmark as a dated, citable
+  PDF. "2026 Nonprofit Software Pricing Report" is a thing journalists and
+  newsletters link to; a comparison page is not.
+
+Post these once where allowed, and then other people carry them. That is how
+you get into 45,000-member groups without ever pitching.
+
+---
+
+## Get the vendors to link to you
+
+Underrated and almost free. Vendors want independent reviews to point at.
+
+- When an affiliate application is approved, ask the affiliate manager whether
+  they feature partner reviews. Many maintain a "what people say" or press page.
+- Vendor comparison pages ("Bloomerang vs X") routinely cite third-party
+  reviews. A well-argued, fair review is something a vendor marketing team will
+  happily link.
+- Tier B partners (Kindsight, DonorSearch, Neon) are relationship deals anyway
+  — a link is a smaller ask than a commission and a reasonable opener.
+
+These are high-authority, topically perfect links, and asking a vendor is not
+asking a favour of anyone in the operator's professional circle.
+
+---
+
+## Own an audience so Google isn't the only channel
+
+- **A newsletter.** "What changed in nonprofit software pricing this month" is
+  a genuinely useful five-minute read nobody publishes. Compounds, survives
+  algorithm changes, and can be pseudonymous.
+- **Substack specifically.** It has its own discovery and recommendation
+  network, which is a traffic source in itself, and it is the most
+  anonymity-friendly publishing platform there is.
+
+Note this contradicts CLAUDE.md's "no newsletter backend" scope line. Worth
+revisiting — that decision was made before traffic was the priority.
+
+---
+
+## Discovery engines that aren't social media
+
+- **YouTube** — see below. Still the biggest gap.
+- **Quora** — answers rank in Google for years and questions like "what CRM
+  should a small nonprofit use" already exist with weak answers. Pseudonymous,
+  no gatekeeper.
+- **Pinterest** — genuinely works for checklist and infographic content, and
+  nonprofit-admin content performs there. Nearly zero competition from software
+  publishers.
+- **Slideshare / carousel reposting** — the LinkedIn carousel already built can
+  be reposted here for a second life.
+
+---
+
+## Communities beyond Facebook
+
+Facebook groups are strict, but they are not the only rooms.
+
+- **LinkedIn groups** — Nonprofit Tech for Good alone administers groups
+  totalling 265,000+ members.
+- **NTEN community** — the nonprofit technology professional association. This
+  is the single most on-topic community that exists for this site.
+- **TechSoup forums** — where nonprofits already go to ask about software.
+- **Grant Professionals Association** — matches the strongest content category.
+- **Nonprofit Slack and Discord communities** — smaller, far more tolerant of
+  members sharing their own work.
+
+---
+
+## Optimise specifically for AI answers
+
+Distinct from Google SEO and currently much less contested.
+
+- Unblock the AI crawlers (above). Nothing else matters until that is done.
+- **Bing Webmaster Tools** — ChatGPT search runs on Bing.
+- **Add `/llms.txt`** — an emerging convention pointing AI systems at your
+  key pages in plain text. Cheap to add, no downside.
+- **Keep facts extractable** — prices in real HTML tables with dates attached,
+  never in images. The site already does this, which is a real advantage.
+- **Reddit and YouTube are weighted heavily** in AI answers, which is a second
+  reason to be present on both.
+
+---
+
 ## Verified link and traffic sources
 
 ### Tier 1 — start here
