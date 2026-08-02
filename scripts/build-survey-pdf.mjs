@@ -208,7 +208,7 @@ let y = header(p1, PAGE_H - MARGIN);
 
 p1.text(LABEL_X, y, survey.title, { size: 21, bold: true });
 y -= 24;
-p1.text(LABEL_X, y, 'What nonprofits actually spend on fundraising software, by shop size.', { size: 11, gray: 0.35 });
+p1.text(LABEL_X, y, 'Annual software spend by shop size. Built from a survey of ' + survey.sampleSize + ' US fundraising professionals.', { size: 11, gray: 0.35 });
 y -= 30;
 
 y = paragraph(p1, y,
@@ -258,7 +258,7 @@ y -= 10;
 p2.text(LABEL_X, y, 'Citation', { size: 12, bold: true });
 y -= 16;
 y = paragraph(p2, y,
-  'This survey is free to cite and reproduce with attribution. Suggested citation:');
+  'This benchmark is free to cite and reproduce with attribution. Suggested citation:');
 y -= 4;
 p2.rect(MARGIN - 4, y - 30, PAGE_W - 2 * MARGIN + 8, 40, 0.95);
 y = paragraph(p2, y - 4,

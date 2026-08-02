@@ -4,6 +4,7 @@ import Breadcrumbs from '../components/Breadcrumbs.astro';
 import { getCollection } from 'astro:content';
 import { formatLong } from '../lib/dates';
 import survey from '../data/survey-2026.json';
+import SurveyForm from '../components/SurveyForm.astro';
 
 // Survey results. Every figure comes from src/data/survey-2026.json, which is
 // derived from the 100 individual responses. The same file builds the PDF
@@ -44,22 +45,25 @@ const datasetLd = {
 ---
 
 <BaseLayout
-  title="Nonprofit fundraising software spend survey 2026"
+  title="Nonprofit fundraising software spend benchmark 2026"
   description={`Survey of ${s.sampleSize} US fundraising professionals on what nonprofits spend per year on fundraising software, by category and organization size. Free to cite; PDF download.`}
   section="benchmark">
   <div class="wrap">
-    <Breadcrumbs crumbs={[{ label: 'Home', href: '/' }, { label: 'Survey' }]} />
+    <Breadcrumbs crumbs={[{ label: 'Home', href: '/' }, { label: 'Benchmark' }]} />
 
     <article class="prose survey-page" style="margin-top: 1.2rem; max-width: none;">
-      <p class="kicker">Survey results · {s.fielded}</p>
-      <h1>{s.title}</h1>
+      <p class="kicker">Annual benchmark · {s.fielded}</p>
+      <h1>Nonprofit Fundraising Software Spend Benchmark</h1>
 
       <p class="lede">
-        In {s.fielded}, {s.sampleSize} fundraising professionals in the United States
-        completed an online survey reporting their organization's annual expenditure
-        on fundraising software across six categories. Responses were grouped by the
-        amount each organization raises annually. The figures below are the mean
-        reported spend per category within each group.
+        This benchmark reports what nonprofit organizations in the United States
+        spend each year on fundraising software. It is built from a survey fielded
+        in {s.fielded}, in which {s.sampleSize} fundraising professionals reported
+        their organization's annual expenditure across six categories. Responses
+        were grouped by the amount each organization raises annually, and the
+        figures below are the mean reported spend per category within each group.
+        The survey instrument is published <a href="#contribute">at the foot of
+        this page</a>.
       </p>
 
       <div class="meta-row">
@@ -255,7 +259,7 @@ const datasetLd = {
       </p>
 
       <h2>Citation</h2>
-      <p>This survey is free to cite and reproduce with attribution. Suggested citation:</p>
+      <p>This benchmark is free to cite and reproduce with attribution. Suggested citation:</p>
       <blockquote class="citation">
         Nonprofit Software Guide, “{s.title}” ({s.fielded}).
         https://nonprofitsoftwareguide.com/benchmarks/
@@ -263,6 +267,8 @@ const datasetLd = {
       <p>
         <a class="btn-dl" href={s.pdf} download>Download the full results (PDF)</a>
       </p>
+
+      <SurveyForm />
     </article>
   </div>
 

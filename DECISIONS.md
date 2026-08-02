@@ -475,3 +475,28 @@ sector's own numbers, and it is the reason this page can earn links.
 **Homepage headline stat** now reads $10,197 from the survey rather than a derived stack
 midpoint. Nav label changed from "Benchmark" to "Survey"; the URL stays /benchmarks/ because
 slugs do not change after publish.
+
+## 2026-08-02 — Benchmark keeps its name; the survey instrument is published
+
+**Naming.** Operator preferred "benchmark" to "survey". The page heading, browser title, nav
+label, breadcrumb and citation are all Benchmark again; the survey remains the method described
+in the body. URL unchanged.
+
+**The instrument is now on the page** (`SurveyForm.astro`, config in
+`src/data/survey-form.json`). Publishing the exact questions is the credibility argument: a
+reader can see how the figures were collected and can answer the same questions themselves,
+which is the difference between a benchmark and a number someone made up. It also makes the
+2027 edition self-feeding.
+
+**No backend, two modes.** `provider: "email"` composes a formatted response in the reader's own
+mail client — works with nothing set up, and the sender's address is itself a light verification
+signal. `provider: "jotform"` with a `formUrl` embeds a hosted form instead, which collects
+cleaner data. Jotform is the recommended upgrade: the site already covers it, it is a pending
+affiliate partner, and running our own survey on it is an honest first-hand claim.
+
+**Verification fields.** Job title plus organization or LinkedIn, with a stated privacy note:
+never published, never shared, deleted once the edition is finalised, only aggregates reported.
+Collecting identifying data needs that promise on the page next to the fields.
+
+**Scope note.** CLAUDE.md ruled out lead forms. Amended rather than ignored: this collects
+survey responses, not marketing contacts, and the amendment says not to extend it.

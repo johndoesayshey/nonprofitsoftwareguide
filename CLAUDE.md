@@ -333,5 +333,11 @@ research, DonorDock, 4aGoodCause, and Donorbox.
 
 ## Out of scope
 
-No user accounts, comments, newsletter backend, search index, database, lead forms, or vendor
-portal. Later, if the site works.
+No user accounts, comments, newsletter backend, search index, database, or vendor portal.
+Later, if the site works.
+
+*(Amended 2026-08-02: the benchmark page carries a survey form, which the original scope line
+ruled out. It is not a lead form — it collects survey responses to make the published data
+credible and repeatable, and it does not capture anyone for marketing. Implemented without a
+backend: `src/data/survey-form.json` switches between a `mailto:` composer and an embedded
+hosted form. Do not extend this into general lead capture.)*

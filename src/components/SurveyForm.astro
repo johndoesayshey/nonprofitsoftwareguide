@@ -1,0 +1,228 @@
+---
+// The survey instrument, published on the same page as the results.
+//
+// Showing the questions is the point. A reader who can see exactly what was
+// asked, and can answer it themselves, has a reason to believe the numbers.
+//
+// No backend: the site is static by design. Two delivery modes, set in
+// src/data/survey-form.json:
+//   provider "jotform" — embeds a hosted form (better data, needs an account)
+//   provider "email"   — composes a formatted message in the reader's mail client
+// The email path works with nothing set up and shows the sender's own address,
+// which is itself a light verification signal.
+import survey from '../data/survey-2026.json';
+import form from '../data/survey-form.json';
+
+const s = survey as any;
+const f = form as any;
+const useEmbed = f.provider === 'jotform' && f.formUrl;
+---
+
+<section class="contribute" id="contribute">
+  <p class="kicker">The instrument</p>
+  <h2>Contribute your numbers to the 2027 edition</h2>
+
+  <p class="intro">
+    These are the questions asked in {s.fielded}, reproduced exactly. If you work
+    in fundraising in the United States, answering takes about two minutes and
+    your figures join the next edition. {f.closesNote}
+  </p>
+
+  {useEmbed ? (
+    <div class="embed-wrap">
+      <iframe
+        src={f.formUrl}
+        title="Fundraising software spend survey"
+        loading="lazy"
+        allow="geolocation; microphone; camera; fullscreen"></iframe>
+    </div>
+  ) : (
+    <form id="spend-survey" novalidate>
+      <fieldset>
+        <legend>1. Your organization</legend>
+
+        <label for="sv-size">How much does your organization raise annually?</label>
+        <select id="sv-size" name="size" required>
+          <option value="">Select one…</option>
+          {s.segments.map((seg: any) => <option value={seg.label}>{seg.label}</option>)}
+        </select>
+      </fieldset>
+
+      <fieldset>
+        <legend>2. Annual software spend, by category</legend>
+        <p class="hint">
+          Whole US dollars per year. Enter <strong>0</strong> where you spend
+          nothing — those responses matter as much as the rest. Estimates are fine.
+        </p>
+
+        <div class="grid">
+          {s.categories.map((c: any) => (
+            <div class="field">
+              <label for={`sv-${c.slug}`}>{c.label}</label>
+              <div class="money">
+                <span class="prefix" aria-hidden="true">$</span>
+                <input
+                  type="number" id={`sv-${c.slug}`} name={c.slug}
+                  min="0" step="1" inputmode="numeric" placeholder="0"
+                  data-label={c.label} required />
+                <span class="suffix">/yr</span>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <p class="running" aria-live="polite">Total entered: <strong id="sv-total">$0</strong></p>
+      </fieldset>
+
+      <fieldset>
+        <legend>3. Verification</legend>
+        <p class="hint">
+          So we can confirm responses come from real fundraising professionals.
+        </p>
+
+        <div class="field">
+          <label for="sv-title">Your job title</label>
+          <input type="text" id="sv-title" name="title" required
+            placeholder="Development Director" autocomplete="organization-title" />
+        </div>
+
+        <div class="field">
+          <label for="sv-org">Organization name <span class="or">or</span> LinkedIn profile</label>
+          <input type="text" id="sv-org" name="verify" required
+            placeholder="Riverside Arts Foundation — or — linkedin.com/in/…" />
+        </div>
+
+        <p class="privacy">{f.privacyNote}</p>
+      </fieldset>
+
+      <p class="actions">
+        <button type="submit" class="btn-submit">Submit your response</button>
+        <span class="status" id="sv-status" role="status"></span>
+      </p>
+    </form>
+  )}
+</section>
+
+{!useEmbed && (
+  <script is:inline define:vars={{ to: f.email }}>
+    (function () {
+      var form = document.getElementById('spend-survey');
+      if (!form) return;
+      var statusEl = document.getElementById('sv-status');
+      var totalEl = document.getElementById('sv-total');
+      var money = function (n) { return '$' + (n || 0).toLocaleString('en-US'); };
+
+      function amounts() {
+        return Array.prototype.slice.call(form.querySelectorAll('input[type="number"]'));
+      }
+
+      function retotal() {
+        var sum = 0;
+        amounts().forEach(function (i) {
+          var v = parseFloat(i.value);
+          if (!isNaN(v) && v >= 0) sum += v;
+        });
+        totalEl.textContent = money(sum);
+        return sum;
+      }
+      form.addEventListener('input', retotal);
+      retotal();
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        statusEl.className = 'status';
+
+        var size = form.querySelector('#sv-size').value;
+        var title = form.querySelector('#sv-title').value.trim();
+        var verify = form.querySelector('#sv-org').value.trim();
+        var missing = [];
+        if (!size) missing.push('organization size');
+        if (!title) missing.push('job title');
+        if (!verify) missing.push('organization or LinkedIn');
+        var blank = amounts().filter(function (i) { return i.value === ''; });
+        if (blank.length) missing.push('every spend field (enter 0 if none)');
+
+        if (missing.length) {
+          statusEl.className = 'status error';
+          statusEl.textContent = 'Still needed: ' + missing.join(', ') + '.';
+          (blank[0] || form.querySelector('#sv-size')).focus();
+          return;
+        }
+
+        var lines = [
+          'Fundraising software spend survey response',
+          '',
+          'Organization size: ' + size,
+          '',
+          'Annual spend by category:',
+        ];
+        amounts().forEach(function (i) {
+          lines.push('  ' + i.dataset.label + ': $' + (parseFloat(i.value) || 0));
+        });
+        lines.push('', 'Total: ' + money(retotal()), '', 'Title: ' + title, 'Organization / LinkedIn: ' + verify);
+
+        var href = 'mailto:' + to +
+          '?subject=' + encodeURIComponent('Software spend survey response — ' + size) +
+          '&body=' + encodeURIComponent(lines.join('\n'));
+
+        statusEl.className = 'status ok';
+        statusEl.textContent = 'Opening your email app — press send to submit.';
+        window.location.href = href;
+      });
+    })();
+  </script>
+)}
+
+<style>
+  .contribute { border-top: 2px solid var(--color-ink); margin-top: 3rem; padding-top: 1.6rem;
+    max-width: 46rem; }
+  .contribute h2 { margin-top: .2rem; }
+  .intro { color: var(--color-muted); }
+
+  .embed-wrap { border: 1px solid var(--color-rule-strong); border-radius: 4px; overflow: hidden; }
+  .embed-wrap iframe { width: 100%; min-height: 900px; border: 0; display: block; }
+
+  fieldset { border: 0; padding: 0; margin: 0 0 1.8rem; }
+  legend { font-family: var(--font-mono); font-size: .7rem; letter-spacing: .1em;
+    text-transform: uppercase; color: var(--color-green-deep); font-weight: 700;
+    padding: 0; margin-bottom: .7rem; }
+  .hint { font-size: .88rem; color: var(--color-muted); margin: 0 0 .9rem; }
+
+  label { display: block; font-weight: 600; font-size: .92rem; margin-bottom: .3rem; }
+  .or { font-weight: 400; color: var(--color-muted); font-style: italic; }
+
+  input[type="text"], input[type="number"], select {
+    width: 100%; font: inherit; font-size: .95rem; padding: .5rem .6rem;
+    border: 1px solid var(--color-rule-strong); border-radius: 3px;
+    background: var(--color-paper); color: var(--color-ink); }
+  input:focus-visible, select:focus-visible { outline: 3px solid var(--color-green);
+    outline-offset: 1px; }
+
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr));
+    gap: .9rem 1.2rem; }
+  .field { min-width: 0; margin-bottom: .2rem; }
+
+  .money { display: flex; align-items: stretch; }
+  .money .prefix, .money .suffix { display: flex; align-items: center; padding: 0 .5rem;
+    background: var(--color-paper-2); border: 1px solid var(--color-rule-strong);
+    color: var(--color-muted); font-size: .88rem; }
+  .money .prefix { border-right: 0; border-radius: 3px 0 0 3px; }
+  .money .suffix { border-left: 0; border-radius: 0 3px 3px 0; white-space: nowrap; }
+  .money input { border-radius: 0; text-align: right; }
+
+  .running { margin: 1rem 0 0; font-family: var(--font-mono); font-size: .8rem;
+    text-transform: uppercase; letter-spacing: .06em; color: var(--color-muted); }
+  .running strong { color: var(--color-green-deep); font-size: 1rem; }
+
+  .privacy { font-size: .82rem; color: var(--color-muted); margin: .9rem 0 0;
+    padding-left: .8rem; border-left: 2px solid var(--color-rule); }
+
+  .actions { display: flex; flex-wrap: wrap; gap: .8rem; align-items: center; margin: 0; }
+  .btn-submit { font: inherit; font-weight: 700; font-size: .95rem; cursor: pointer;
+    background: var(--color-green-deep); color: #fff; border: 0; border-radius: 3px;
+    padding: .65rem 1.3rem; }
+  .btn-submit:hover { background: var(--color-green); }
+  .status { font-size: .86rem; }
+  .status.error { color: var(--color-red); font-weight: 600; }
+  .status.ok { color: var(--color-green-deep); font-weight: 600; }
+</style>
