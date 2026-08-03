@@ -7,7 +7,7 @@ import { readCollection, report } from './_lib.mjs';
 // Platform pages are deliberately concise (the operator's call): the rendered
 // page adds a pricing table, strengths/limitations, and CTAs from frontmatter,
 // so the markdown body floor is lower than it looks.
-const MIN_WORDS = { posts: 450, stacks: 350, platforms: 150 };
+const MIN_WORDS = { posts: 450, stacks: 350, platforms: 150, alternatives: 300 };
 
 function wordCount(markdown) {
   return markdown

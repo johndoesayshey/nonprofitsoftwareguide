@@ -121,4 +121,37 @@ const posts = defineCollection({
   }),
 });
 
-export const collections = { platforms, stacks, posts };
+// "[Product] alternatives" pages. The searcher already has a tool and is
+// shopping to replace it, which is the highest commercial intent in the sector
+// and almost unserved: the results are vendor blogs listing themselves first.
+// The target product does NOT need a platform page of its own — the page is
+// about what to move to.
+const alternatives = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: './src/content/alternatives' }),
+  schema: z.object({
+    product: z.string(),          // the tool they're leaving, e.g. "Blackbaud Raiser's Edge"
+    slug: z.string(),             // /alternatives/<slug>/
+    category,                     // what it competes in, drives the comparison table
+    targetQuery: z.string(),      // globally unique, enforced by check-queries
+    lastVerified: z.coerce.date(),
+    // Optional: set when we also review the product itself, so the page can
+    // link to our own write-up instead of dead-ending.
+    incumbentSlug: z.string().nullable().default(null),
+    // Why people actually leave. This is the part vendor lists never write, and
+    // the reason the page earns the click.
+    reasonsToLeave: z.array(z.object({ reason: z.string(), detail: z.string() })),
+    // Ordered recommendations. `forWhom` is the situation, not a superlative.
+    picks: z.array(
+      z.object({
+        platformSlug: z.string(),
+        forWhom: z.string(),
+        note: z.string(),
+      })
+    ),
+    // One honest line on when staying put is the right call.
+    stayIf: z.string(),
+    draft: z.boolean().default(true),
+  }),
+});
+
+export const collections = { platforms, stacks, posts, alternatives };

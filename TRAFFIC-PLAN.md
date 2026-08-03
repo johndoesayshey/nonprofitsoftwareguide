@@ -363,11 +363,23 @@ easy.
 The gap in the current 105 pages is buyer-intent commercial queries. Only one
 of 15 posts targets a pricing or alternatives query.
 
-1. **"[Product] alternatives" cluster** — 6–8 pages. Highest commercial intent
-   in the category: someone searching "Bloomerang alternatives" is unhappy and
-   shopping today. Near-zero competition. Target the products with the biggest
-   installed bases, not the ones that pay best — Bloomerang, DonorPerfect,
-   Salesforce NPSP, Neon, Little Green Light, Classy.
+1. ~~**"[Product] alternatives" cluster** — 6–8 pages.~~ **DONE 2026-08-03.**
+   Eleven pages shipped at `/alternatives/<slug>/`, plus an index at
+   `/alternatives/`, linked from the footer and the top of `/compare/`.
+   Own content collection with its own schema (`reasonsToLeave`, `picks`,
+   `stayIf`) so the shape is enforced rather than remembered. Covers Blackbaud
+   Raiser's Edge NXT, DonorPerfect, Salesforce for Nonprofits, Bloomerang,
+   Little Green Light, Classy, Givebutter, Donorbox, Instrumentl, Candid
+   Foundation Directory, iWave/Kindsight. Every page carries a real price ladder
+   for each recommendation, a survey-derived spend benchmark, and a migration
+   section (recurring-donor re-enrollment on the processing pages, soft-credit
+   and household-record fidelity on the CRM pages). `stayIf` is on every page
+   deliberately — a switching guide that never says "stay" reads as a sales page.
+
+   Still open in this workstream: pages for products we don't yet cover
+   (Kindful, Virtuous, CharityEngine, Funraise, Network for Good) are blocked on
+   workstream 5 below, since a switching guide needs somewhere credible to send
+   people.
 2. **Quote-only pricing pages** — nobody publishes what Kindsight, DonorSearch,
    Greater Giving or OneCause actually cost. Whoever collects reported ranges
    owns those queries, and they are exactly what an AI assistant needs an

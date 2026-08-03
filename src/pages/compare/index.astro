@@ -1,4 +1,5 @@
 ---
+import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import ReaderOffer from '../../components/ReaderOffer.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
@@ -29,6 +30,12 @@ const grouped = Object.values(CATEGORIES)
   .filter((g) => g.items.length > 0)
   .sort((a, b) => b.value - a.value);
 
+// Switching guides. Different intent from a head-to-head — the reader already
+// owns a system — so they get their own block above the comparison tables.
+const alternatives = (await getCollection('alternatives'))
+  .filter((e) => e.data.draft === false)
+  .sort((a, b) => a.data.product.localeCompare(b.data.product));
+
 // Every published product per category, for the at-a-glance tables.
 const byCategory = new Map<string, typeof pairs[number]['a'][]>();
 for (const p of pairs) {
@@ -54,6 +61,22 @@ for (const p of pairs) {
       </p>
 
       <AffiliateDisclosure />
+
+      {alternatives.length > 0 && (
+        <section class="switching">
+          <p class="switching-kicker">Already have a system?</p>
+          <p class="switching-lede">
+            Head-to-head pages are for choosing. If you're replacing something,
+            start with the <a href="/alternatives/">alternatives guides</a> —
+            why shops leave, what to move to, and what the migration costs.
+          </p>
+          <ul class="switching-list">
+            {alternatives.map((e) => (
+              <li><a href={`/alternatives/${e.data.slug}/`}>{e.data.product} alternatives</a></li>
+            ))}
+          </ul>
+        </section>
+      )}
 
       {grouped.length === 0 ? (
         <p class="empty">Comparisons appear here as platform write-ups are published.</p>
@@ -171,4 +194,19 @@ for (const p of pairs) {
     padding: .25rem .7rem; font-size: .85rem; text-decoration: none; color: var(--color-ink); }
   .pair-list a:hover { border-color: var(--color-green); color: var(--color-green-deep); }
   .empty { color: var(--color-muted); font-style: italic; }
+
+  .switching { border: 2px solid var(--color-ink); border-radius: 3px;
+    background: var(--color-paper-2); padding: 1.1rem 1.3rem; margin: 1.6rem 0 2.4rem;
+    max-width: 46rem; }
+  .switching-kicker { font-family: var(--font-mono); font-size: .62rem; letter-spacing: .12em;
+    text-transform: uppercase; color: var(--color-green-deep); font-weight: 700;
+    margin: 0 0 .4rem; }
+  .switching-lede { margin: 0 0 .8rem; }
+  .switching-list { list-style: none; padding: 0; margin: 0; display: flex;
+    flex-wrap: wrap; gap: .4rem .6rem; }
+  .switching-list li { margin: 0; }
+  .switching-list a { display: inline-block; border: 1px solid var(--color-rule-strong);
+    border-radius: 999px; padding: .25rem .7rem; font-size: .85rem; text-decoration: none;
+    color: var(--color-ink); background: var(--color-paper); }
+  .switching-list a:hover { border-color: var(--color-green); color: var(--color-green-deep); }
 </style>

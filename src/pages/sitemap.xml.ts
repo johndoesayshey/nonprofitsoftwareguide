@@ -14,7 +14,7 @@ export async function GET(context: APIContext) {
 
   // Static hubs that are always indexable — one per nav section.
   for (const p of [
-    '/', '/platforms/', '/compare/', '/blog/', '/consulting/', '/about/',
+    '/', '/platforms/', '/compare/', '/alternatives/', '/blog/', '/consulting/', '/about/',
     '/grant-research/', '/wealth-screening/', '/donor-crm/',
     '/donation-processing/', '/events/', '/forms-operations/',
   ]) {
@@ -35,6 +35,12 @@ export async function GET(context: APIContext) {
 
   const posts = await getCollection('posts', ({ data }) => data.draft === false);
   for (const p of posts) entries.push({ loc: url(`/blog/${p.id}/`), lastmod: iso(p.data.updatedDate ?? p.data.publishDate) });
+
+  // Switching guides ("[product] alternatives").
+  const alternatives = await getCollection('alternatives', ({ data }) => data.draft === false);
+  for (const a of alternatives) {
+    entries.push({ loc: url(`/alternatives/${a.data.slug}/`), lastmod: iso(a.data.lastVerified) });
+  }
 
   // Comparisons where both platforms are published.
   const pairs = (await comparePairs()).filter((p) => p.a.data.draft === false && p.b.data.draft === false);

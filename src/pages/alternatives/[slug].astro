@@ -1,0 +1,210 @@
+---
+import { getCollection, render } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import AffiliateDisclosure from '../../components/AffiliateDisclosure.astro';
+import ReaderOffer from '../../components/ReaderOffer.astro';
+import DraftBanner from '../../components/DraftBanner.astro';
+import { categoryLabel, CATEGORIES } from '../../lib/categories';
+import { relFor } from '../../lib/affiliate-value';
+import { formatMedium } from '../../lib/dates';
+
+export async function getStaticPaths() {
+  const entries = await getCollection('alternatives');
+  return entries.map((entry) => ({ params: { slug: entry.data.slug }, props: { entry } }));
+}
+
+const { entry } = Astro.props;
+const a = entry.data;
+const { Content } = await render(entry);
+const isDraft = a.draft !== false;
+
+const allPlatforms = await getCollection('platforms');
+const bySlug = new Map(allPlatforms.map((p) => [p.data.slug, p.data]));
+const cat = CATEGORIES[a.category];
+
+// Only recommend products we actually cover, so no pick dead-ends.
+const picks = a.picks.filter((p) => bySlug.has(p.platformSlug));
+
+const site = Astro.site ?? new URL('https://nonprofitsoftwareguide.com');
+const itemListLd = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: `Alternatives to ${a.product}`,
+  itemListElement: picks.map((p, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    name: bySlug.get(p.platformSlug)!.name,
+    url: new URL(`/platforms/${p.platformSlug}/`, site).href,
+  })),
+};
+---
+<BaseLayout
+  title={`${a.product} alternatives`}
+  description={`The best alternatives to ${a.product} for nonprofits, with real pricing and who each one actually fits. Independent, practitioner-written.`}
+  section="compare"
+  noindex={isDraft}>
+  <div class="wrap">
+    <Breadcrumbs crumbs={[
+      { label: 'Home', href: '/' },
+      { label: 'Alternatives', href: '/alternatives/' },
+      { label: a.product },
+    ]} />
+
+    {isDraft && <DraftBanner />}
+
+    <article class="prose alt-page" style="margin-top: 1.2rem; max-width: none;">
+      <p class="kicker">{cat?.label ?? categoryLabel(a.category)}</p>
+      <h1>{a.product} alternatives</h1>
+
+      <p class="lede">
+        If you are shopping to replace {a.product}, the shortlist below is ordered
+        by the situation you are in rather than by which vendor pays most. Every
+        price is real and dated, and where staying put is the right answer, we say so.
+      </p>
+
+      <p class="verified-row"><span class="verified">Checked {formatMedium(a.lastVerified)}</span></p>
+
+      <AffiliateDisclosure />
+
+      <h2>Why shops leave {a.product}</h2>
+      <ul class="reasons">
+        {a.reasonsToLeave.map((r) => (
+          <li><strong>{r.reason}</strong> {r.detail}</li>
+        ))}
+      </ul>
+
+      <h2>What to move to</h2>
+      <div class="table-scroll">
+        <table class="picks">
+          <colgroup>
+            <col class="c-rank" /><col class="c-tool" /><col class="c-price" />
+            <col class="c-for" /><col class="c-cta" />
+          </colgroup>
+          <thead>
+            <tr>
+              <th scope="col"></th>
+              <th scope="col">Tool</th>
+              <th scope="col">Pricing</th>
+              <th scope="col">Move here if</th>
+              <th scope="col"></th>
+            </tr>
+          </thead>
+          <tbody>
+            {picks.map((p, i) => {
+              const plat = bySlug.get(p.platformSlug)!;
+              return (
+                <tr>
+                  <td class="rank num">{i + 1}</td>
+                  <th scope="row">
+                    <a href={`/platforms/${p.platformSlug}/`}>{plat.name}</a>
+                  </th>
+                  <td class="price">
+                    {plat.pricingTiers.length > 0 ? (
+                      <ul class="ladder">
+                        {plat.pricingTiers.slice(0, 4).map((t) => (
+                          <li><span class="t-name">{t.tier}</span><span class="t-price">{t.price}</span></li>
+                        ))}
+                      </ul>
+                    ) : (
+                      <span class="num">{plat.entryPrice}</span>
+                    )}
+                  </td>
+                  <td class="for">{p.forWhom}</td>
+                  <td class="cta">
+                    <a class="btn-visit" href={`/go/${p.platformSlug}`} rel={relFor(p.platformSlug)}>Visit →</a>
+                    <ReaderOffer slug={plat.affiliateSlug} compact />
+                  </td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
+      </div>
+
+      {picks.map((p, i) => {
+        const plat = bySlug.get(p.platformSlug)!;
+        return (
+          <section class="pick-detail">
+            <h3>{i + 1}. {plat.name} <span class="pick-for">— {p.forWhom}</span></h3>
+            <p>{p.note}</p>
+            <p class="pick-links">
+              <a href={`/platforms/${p.platformSlug}/`}>Full {plat.name} write-up →</a>
+            </p>
+          </section>
+        );
+      })}
+
+      <!-- Body carries the operator's judgment: migration traps, what actually
+           changes, anything specific to leaving this particular product. -->
+      <Content />
+
+      <aside class="stay">
+        <p class="stay-kicker">Before you switch</p>
+        <p>{a.stayIf}</p>
+      </aside>
+
+      <p class="foot-links">
+        Compare every option in <a href={cat?.path ?? '/compare/'}>{(cat?.label ?? 'this category').toLowerCase()}</a>,
+        or see what a shop your size should be running in <a href="/">the recommended stacks</a>.
+      </p>
+    </article>
+  </div>
+
+  <script type="application/ld+json" slot="head" set:html={JSON.stringify(itemListLd)} is:inline />
+</BaseLayout>
+
+<style>
+  .alt-page > p, .alt-page > h1, .alt-page > h2, .alt-page > .lede,
+  .alt-page > ul, .alt-page > aside, .alt-page > section { max-width: 46rem; }
+  .verified-row { margin: -.4rem 0 1.2rem; }
+
+  .reasons { list-style: none; padding: 0; }
+  .reasons li { padding: .7rem 0 .7rem 1.5rem; border-bottom: 1px solid var(--color-rule);
+    position: relative; }
+  .reasons li:last-child { border-bottom: 0; }
+  .reasons li::before { content: '·'; position: absolute; left: .3rem; font-weight: 800;
+    color: var(--color-green-deep); font-size: 1.4em; line-height: 1; }
+  .reasons strong { color: var(--color-ink); }
+
+  .table-scroll { overflow-x: auto; margin: 1rem 0 2rem; max-width: 62rem; }
+  table.picks { width: 100%; min-width: 48rem; border-collapse: collapse; font-size: .92rem;
+    table-layout: fixed; }
+  table.picks col.c-rank { width: 4%; } table.picks col.c-tool { width: 16%; }
+  table.picks col.c-price { width: 26%; } table.picks col.c-for { width: 32%; }
+  table.picks col.c-cta { width: 22%; }
+  table.picks th, table.picks td { text-align: left; padding: .6rem .7rem;
+    border-bottom: 1px solid var(--color-rule); vertical-align: top; }
+  table.picks thead th { font-size: .68rem; letter-spacing: .08em; text-transform: uppercase;
+    font-weight: 800; color: var(--color-muted); border-bottom: 2px solid var(--color-ink); }
+  table.picks tbody th a { font-weight: 800; text-decoration: none; color: var(--color-ink); }
+  table.picks tbody th a:hover { color: var(--color-green-deep); text-decoration: underline; }
+  .rank { color: var(--color-muted); font-weight: 700; }
+  .for { color: var(--color-muted); }
+
+  .ladder { list-style: none; margin: 0; padding: 0; font-size: .84rem; line-height: 1.3; }
+  .ladder li { display: grid; grid-template-columns: 1fr auto; column-gap: .5rem;
+    padding: .12rem 0; border-bottom: 1px dotted var(--color-rule); }
+  .ladder li:last-child { border-bottom: 0; }
+  .t-name { color: var(--color-muted); min-width: 0; }
+  .t-price { font-weight: 700; color: var(--color-green-deep); white-space: nowrap; }
+
+  .btn-visit { display: inline-block; background: var(--color-green-deep); color: #fff;
+    font-weight: 700; text-decoration: none; padding: .35rem .7rem; border-radius: 3px;
+    font-size: .82rem; }
+  .btn-visit:hover { background: var(--color-green); }
+
+  .pick-detail { margin: 1.6rem 0; }
+  .pick-detail h3 { margin-bottom: .3rem; }
+  .pick-for { font-weight: 400; color: var(--color-muted); font-size: .9em; }
+  .pick-links { margin: .4rem 0 0; font-size: .9rem; }
+
+  .stay { border-left: 4px solid var(--color-green-deep); background: var(--color-paper-2);
+    border-radius: 3px; padding: 1rem 1.2rem; margin: 2rem 0; }
+  .stay-kicker { font-family: var(--font-mono); font-size: .62rem; letter-spacing: .12em;
+    text-transform: uppercase; color: var(--color-green-deep); font-weight: 700;
+    margin: 0 0 .35rem; }
+  .stay p:last-child { margin: 0; }
+
+  .foot-links { color: var(--color-muted); font-size: .93rem; }
+</style>

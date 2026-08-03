@@ -1,0 +1,88 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import { CATEGORIES } from '../../lib/categories';
+import { categoryValue } from '../../lib/affiliate-value';
+
+// Published alternatives pages, grouped by the category the incumbent competes
+// in, categories ordered the same way as everywhere else on the site.
+const entries = (await getCollection('alternatives')).filter((e) => e.data.draft === false);
+const platforms = await getCollection('platforms');
+const bySlug = new Map(platforms.map((p) => [p.data.slug, p.data]));
+
+const grouped = Object.values(CATEGORIES)
+  .map((cat) => {
+    const items = entries
+      .filter((e) => e.data.category === cat.slug)
+      .sort((a, b) => a.data.product.localeCompare(b.data.product));
+    const slugs = [
+      ...new Set(items.flatMap((e) => e.data.picks.map((p) => bySlug.get(p.platformSlug)?.affiliateSlug))),
+    ].filter(Boolean) as string[];
+    return { cat, items, value: categoryValue(slugs) };
+  })
+  .filter((g) => g.items.length > 0)
+  .sort((a, b) => b.value - a.value);
+---
+<BaseLayout
+  title="Switching fundraising software"
+  description="Already have a system and shopping to replace it? Independent alternatives guides for the platforms nonprofits leave most often, with real pricing and honest reasons to stay."
+  section="compare">
+  <div class="wrap">
+    <Breadcrumbs crumbs={[{ label: 'Home', href: '/' }, { label: 'Alternatives' }]} />
+
+    <section class="prose" style="max-width: none; margin-top: 1.2rem;">
+      <p class="kicker">Switching</p>
+      <h1>Alternatives guides</h1>
+      <p class="lede" style="max-width: 46ch;">
+        For shops that already have a system and are shopping to replace it. Each
+        page covers why organizations actually leave, what to move to at your
+        size, what the migration costs you, and when staying put is the right
+        call.
+      </p>
+
+      {grouped.length === 0 ? (
+        <p class="empty">Alternatives guides appear here as they're published.</p>
+      ) : grouped.map((g) => (
+        <section class="alt-block">
+          <h2>{g.cat.label}</h2>
+          <ul class="alt-list">
+            {g.items.map((e) => (
+              <li>
+                <a href={`/alternatives/${e.data.slug}/`}>{e.data.product} alternatives</a>
+                <span class="alt-picks">
+                  {e.data.picks
+                    .map((p) => bySlug.get(p.platformSlug)?.name)
+                    .filter(Boolean)
+                    .join(' · ')}
+                </span>
+              </li>
+            ))}
+          </ul>
+        </section>
+      ))}
+
+      <p class="foot-note">
+        Not switching — buying for the first time? Start with
+        <a href="/">the recommended stack for your size</a>, or go
+        <a href="/compare/">head to head between two tools</a>.
+      </p>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+  .alt-block { margin: 2rem 0; }
+  .alt-block h2 { font-size: 1.1rem; letter-spacing: .02em; padding-bottom: .4rem;
+    border-bottom: 2px solid var(--color-ink); }
+  .alt-list { list-style: none; padding: 0; margin: .6rem 0 0; max-width: 46rem; }
+  .alt-list li { display: flex; flex-wrap: wrap; align-items: baseline; gap: .3rem .9rem;
+    padding: .6rem 0; border-bottom: 1px solid var(--color-rule); }
+  .alt-list li:last-child { border-bottom: 0; }
+  .alt-list a { font-weight: 700; text-decoration: none; }
+  .alt-list a:hover { text-decoration: underline; }
+  .alt-picks { color: var(--color-muted); font-size: .82rem; }
+  .foot-note { color: var(--color-muted); font-size: .93rem; max-width: 46rem;
+    margin-top: 2.4rem; }
+  .empty { color: var(--color-muted); }
+</style>
