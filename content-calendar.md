@@ -1,96 +1,120 @@
-# Content calendar — 30 posts
+# Content calendar
 
-Every post here is planned to full quality; this list orders **writing effort**,
-not importance. Start where the operator's first-hand experience is the sharpest
-differentiator — concrete grant and prospect-research questions — then work
-outward to broader category and comparison pieces as each cluster fills in.
+Rewritten 2026-08-03. The original planned 30 posts; the site now carries 75
+pages with a unique `targetQuery` across five collections, so a list of unwritten
+post ideas had stopped describing the work. This is a status page plus the queue.
 
-Each post has a **unique `targetQuery`** (one page, one query — enforced by
-`scripts/check-queries.mjs`), a **parent stack** hub it links up to, and the
-**affiliate slugs** it routes through. Queries here are also distinct from the
-platform and stack `targetQuery` values already in the repo.
+## Where the content actually is
 
-## Category weighting
-
-Grant + prospect research is **19 of 30 posts (63%)**, clearing the 60% floor.
-
-| Category | Posts | Share |
+| Collection | Pages | What it does |
 |---|---|---|
-| Grant research | 12 | 40% |
-| Prospect research / wealth screening | 7 | 23% |
-| Donor CRM | 4 | 13% |
-| Donation processing | 4 | 13% |
-| Forms & ops | 1 | 3% |
-| Events & auctions | 1 | 3% |
-| Cross-cutting (stack) | 1 | 3% |
+| `platforms` | 26 | Product write-ups. The money pages. |
+| `posts` | 17 | Blog. Concrete how-to and comparison questions. |
+| `guides` | 15 | `/best/` — category head terms and vertical pages. |
+| `alternatives` | 13 | `/alternatives/` — switching guides. Highest commercial intent. |
+| `stacks` | 4 | The primary content unit. One per shop size. |
 
-The first three (▶) are the step-11 drafts — narrow, concrete, grant/prospect.
+Plus `/pricing/` and `/benchmarks/`, which exist to be cited rather than to
+convert. All 75 pages are published and every `targetQuery` is unique, enforced
+at build by `scripts/check-queries.mjs`.
 
-## Wave 1 — concrete questions, operator's edge strongest (write first)
+---
 
-| # | Title | `targetQuery` | Category | Stack | Affiliates | Operator's edge |
-|---|---|---|---|---|---|---|
-| ▶1 | What to do when a funder's stated priorities don't match their 990 giving history | `funder priorities vs 990 giving history` | grant | 1m-5m | instrumentl, candid | The exact vetting call the operator makes in grant work daily |
-| ▶2 | When to buy wealth screening (and when it's a waste) | `when to buy wealth screening` | prospect | 1m-5m | donorsearch, kindsight | First-hand read on the revenue level where screening pays off |
-| ▶3 | How to vet a foundation before you apply | `how to research a foundation before applying` | grant | 250k-1m | instrumentl, candid | A repeatable pre-application research workflow |
-| 4 | How to read a 990 to find your next funder | `how to read a 990 for prospecting` | grant | 1m-5m | candid | What the operator actually looks for in the filing |
-| 5 | Excel to CRM migration: soft credits and the history you can't afford to lose | `excel to crm migration soft credits` | donor-crm | 250k-1m | littlegreenlight, bloomerang | Migration scars — what breaks and how to protect gift history |
-| 6 | What a wealth screen actually tells you: capacity vs inclination | `wealth screening capacity vs inclination` | prospect | 1m-5m | kindsight | The distinction most shops get wrong |
+## ⚠️ The category weighting has drifted and needs correcting
 
-## Wave 2 — high-intent comparisons and decisions
+CLAUDE.md is explicit: **at least 60% grant research and prospect research**, and
+"do not let the calendar drift back toward CRM posts just because that category
+has more competitors writing about it."
 
-| # | Title | `targetQuery` | Category | Stack | Affiliates | Operator's edge |
-|---|---|---|---|---|---|---|
-| 7 | Instrumentl vs GrantStation for a one-person shop | `instrumentl vs grantstation small nonprofit` | grant | 250k-1m | instrumentl, grantstation | Used both; where each fits a solo fundraiser |
-| 8 | Is paid grant-research software worth it for a small nonprofit? | `is grant research software worth it` | grant | 250k-1m | instrumentl, grantstation | Honest cost/time math at the small-shop level |
-| 9 | DonorSearch vs Kindsight for a mid-size shop | `donorsearch vs kindsight mid-size` | prospect | 1m-5m | donorsearch, kindsight | Where their scores disagree and which to trust |
-| 10 | Bloomerang vs Little Green Light for a growing shop | `bloomerang vs little green light` | donor-crm | 250k-1m | bloomerang, littlegreenlight | Retention tooling vs price, from real use |
-| 11 | Zeffy vs Donorbox: the real cost of "free" processing | `zeffy vs donorbox fees` | donation-processing | under-250k | zeffy, donorbox | The fee stack modeled against real volume |
-| 12 | When does a small shop actually need a real CRM? | `when does a nonprofit need a crm` | donor-crm | 250k-1m | littlegreenlight, donordock | The specific pains that justify the first CRM spend |
+That is exactly what happened. Current split across every page carrying a category:
 
-## Wave 3 — workflow and how-to depth
+| Category | Pages | Share |
+|---|---|---|
+| Donor CRM | 27 | **50%** |
+| Donation processing | 10 | 19% |
+| Prospect research | 7 | 13% |
+| Grant research | 6 | 11% |
+| Events & auctions | 2 | 4% |
+| Forms & ops | 2 | 4% |
 
-| # | Title | `targetQuery` | Category | Stack | Affiliates | Operator's edge |
-|---|---|---|---|---|---|---|
-| 13 | How to build a grant calendar a two-person team can keep | `how to build a grant tracking calendar` | grant | 250k-1m | instrumentl | A tracking system that survives a busy quarter |
-| 14 | Grants.gov registration: the timeline nobody warns you about | `grants.gov registration timeline` | grant | under-250k | grantsgov | SAM.gov lead times from experience |
-| 15 | How to turn a wealth screen into a real major-gift portfolio | `wealth screen to major gift portfolio` | prospect | 5m-plus | kindsight | Who owns results and how scores become portfolios |
-| 16 | Wealth screening on a budget: what to do before you can afford it | `wealth screening alternatives small nonprofit` | prospect | 250k-1m | donorsearch | Hand-research substitutes that actually work |
-| 17 | How many grants should a shop your size actually pursue? | `how many grants to apply for nonprofit` | grant | 250k-1m | instrumentl | Capacity math tied to staff size |
-| 18 | How to actually compare donation-processing fees | `how to compare donation processing fees` | donation-processing | 250k-1m | donorbox, zeffy, givebutter | The full net-cost comparison most guides skip |
+**Grant + prospect research is 24%, against a 60% floor.**
 
-## Wave 4 — broadening the clusters
+How it happened: the alternatives cluster and the vertical pages are both
+inherently CRM-shaped. People search "[CRM] alternatives" and "best donor
+management software for churches"; nobody searches "Instrumentl alternatives for
+churches." Every individual page was the right page to build. The aggregate
+drifted anyway, which is the exact failure mode CLAUDE.md warned about.
 
-| # | Title | `targetQuery` | Category | Stack | Affiliates | Operator's edge |
-|---|---|---|---|---|---|---|
-| 19 | Free grant research: how far Grants.gov and public libraries get you | `free grant research tools nonprofit` | grant | under-250k | grantsgov, candid | The genuinely-free path, mapped |
-| 20 | GrantStation through TechSoup: is the discount worth it? | `grantstation techsoup discount worth it` | grant | under-250k | grantstation | The discounted-membership math |
-| 21 | Corporate vs foundation grants: where a growing shop spends research time | `corporate vs foundation grants nonprofit` | grant | 250k-1m | instrumentl | Where the hours actually pay off |
-| 22 | Reading wealth markers without over-trusting them | `wealth markers prospect research accuracy` | prospect | 1m-5m | wealthengine, donorsearch | Where capacity scores mislead |
-| 23 | How often should you re-screen your donor file? | `how often to re-screen donor database` | prospect | 5m-plus | kindsight | A re-screening cadence that isn't wasteful |
-| 24 | Neon vs Bloomerang for a membership organization | `neon vs bloomerang membership` | donor-crm | 1m-5m | neoncrm, bloomerang | Membership features that actually differ |
+It matters commercially, not only as spec compliance. Grant research is the only
+category where high ACV and a working public affiliate program overlap. Donor CRM
+has the most competitors writing about it and the worst economics in the sector.
 
-## Wave 5 — completeness and link-magnet support
+**Correction: everything in the next two waves is grant or prospect research
+until the ratio clears 40%, then alternate.** Nothing new in donor CRM until
+then, however good the query looks.
 
-| # | Title | `targetQuery` | Category | Stack | Affiliates | Operator's edge |
-|---|---|---|---|---|---|---|
-| 25 | The grant-pipeline metrics that actually predict revenue | `grant pipeline metrics nonprofit` | grant | 1m-5m | instrumentl | Which numbers forecast, which are vanity |
-| 26 | Is Zeffy really free? The donor-tip model, explained | `zeffy tip model explained` | donation-processing | under-250k | zeffy | Whether the tip prompt affects conversion |
-| 27 | Givebutter for your first gala: what to expect | `givebutter for nonprofit gala` | donation-processing | 1m-5m | givebutter | Real event-night experience |
-| 28 | Jotform for grant intake and program applications | `jotform for nonprofit grant applications` | forms-ops | 250k-1m | jotform | Intake forms that feed the grant workflow |
-| 29 | Dedicated auction software, or will Givebutter do? | `auction software vs givebutter` | events-auctions | 5m-plus | givebutter, onecause | When the upgrade is worth it |
-| 30 | The whole fundraising stack, costed: what each shop size really spends | `nonprofit fundraising software cost by size` | cross-cutting | 1m-5m | instrumentl, bloomerang, donorbox | Companion to the benchmark table; original cost data |
+---
 
-## Notes
+## Wave A — grant research (write next)
 
-- **Cluster balance:** every post names a parent stack so the four hubs stay
-  populated. Wave order favors the 1m-5m and 250k-1m hubs first (where buying
-  decisions and search intent concentrate), then fills under-250k and 5m-plus.
-- **Comparison posts vs `/compare` pages:** the auto-generated `/compare/[slug]`
-  pages cover the raw head-to-head query; these posts target a *narrower* framing
-  ("...for a one-person shop", "...for a membership org") so they don't cannibalize
-  the comparison pages.
-- **Affiliate reality:** grant posts route through Instrumentl and GrantStation
-  (real public programs); prospect posts build authority but route through Tier-B
-  negotiated deals, so expect traffic there, revenue from the grant + CRM +
-  processing posts.
+Each parents to a stack hub. None needs new product research.
+
+| # | Working title | `targetQuery` | Stack | Affiliates |
+|---|---|---|---|---|
+| A1 | What a grant budget actually has to show | `nonprofit grant budget what to include` | 250k-1m | instrumentl |
+| A2 | Writing a letter of inquiry that gets a proposal invited | `foundation letter of inquiry nonprofit` | under-250k | instrumentl, grantstation |
+| A3 | The grant reporting calendar that keeps renewals | `grant reporting deadlines nonprofit` | 1m-5m | instrumentl |
+| A4 | Why your grant was declined, and what the funder won't say | `why was our grant declined nonprofit` | 250k-1m | instrumentl |
+| A5 | Reading a 990-PF: the four numbers that matter | `how to read 990-pf foundation` | under-250k | candid |
+| A6 | Federal vs foundation grants: which to chase at your size | `federal grants vs foundation grants nonprofit` | 1m-5m | grantstation |
+| A7 | Building a grant pipeline when you are the only writer | `one person grant program nonprofit` | under-250k | grantstation, instrumentl |
+| A8 | What a grant writer costs and when to hire one | `nonprofit grant writer cost` | 250k-1m | — routes to /consulting/ |
+| A9 | Free grant research: how far Grants.gov and the library get you | `free grant research tools nonprofit` | under-250k | candid |
+| A10 | Corporate vs foundation grants: where research time pays | `corporate vs foundation grants nonprofit` | 250k-1m | instrumentl |
+
+## Wave B — prospect research (after A)
+
+This category earns traffic and topical authority rather than commission — every
+vendor in it is a negotiated deal. Cover it thoroughly; expect the revenue from
+Wave A.
+
+| # | Working title | `targetQuery` | Stack | Affiliates |
+|---|---|---|---|---|
+| B1 | Hand-researching your top 25 prospects for free | `free prospect research nonprofit` | under-250k | — |
+| B2 | Capacity vs inclination, and why a wealth score misleads | `wealth capacity vs inclination donor` | 1m-5m | kindsight, donorsearch |
+| B3 | What a prospect research consultant does that software can't | `prospect research consultant cost` | 1m-5m | — routes to /consulting/ |
+| B4 | Running a screening bake-off: the test-file method | `compare wealth screening vendors` | 1m-5m | kindsight, donorsearch |
+| B5 | Public records a fundraiser can legitimately use | `public records prospect research nonprofit` | 250k-1m | — |
+| B6 | When a donor-advised fund gift hides the real donor | `donor advised fund soft credit prospect` | 1m-5m | — |
+| B7 | How often should you re-screen your donor file? | `how often to re-screen donor database` | 5m-plus | kindsight |
+| B8 | Turning a wealth screen into a real major-gift portfolio | `wealth screen to major gift portfolio` | 5m-plus | kindsight |
+
+## Wave C — held until the ratio clears
+
+Do not start these while grant/prospect is under 40%.
+
+- Integration reference page (research in progress)
+- Remaining verticals: libraries and Friends groups, environmental, international
+  NGOs, professional associations
+- Head terms: best events and auction software, best nonprofit forms software
+- Alternatives pages for the newly added products, once each has traffic
+- Grants.gov / SAM.gov registration timeline (needs current process verification)
+
+---
+
+## Rules that apply to everything here
+
+- **One page, one query.** Unique `targetQuery` across all five collections,
+  enforced at build.
+- **Answer first.** 40–60 words, no preamble.
+- **Unique data on every page.** Original cost math, a structured tradeoff, or a
+  recommendation naming a real constraint. A page that restates the vendor blogs
+  will not rank on any timeline.
+- **Never invent a number.** Where a figure can't be sourced, say so on the page.
+  Several already do, and it reads as a differentiator rather than a gap.
+- **Never fabricate first-hand experience.** No "we tested," no "in our testing."
+- **Every post declares a `stack`** and links up; hubs link down. Enforced by
+  `check-clusters` and `check-cluster-links`.
+- **Posts vs `/compare/` pages.** The generated comparison pages own the raw
+  head-to-head query; posts take a narrower framing ("…for a one-person shop")
+  so the two don't cannibalize each other.
