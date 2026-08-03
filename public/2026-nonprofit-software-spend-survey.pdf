@@ -3,7 +3,7 @@
 << /Type /Catalog /Pages 2 0 R >>
 endobj
 2 0 obj
-<< /Type /Pages /Kids [6 0 R 8 0 R] /Count 2 >>
+<< /Type /Pages /Kids [6 0 R 8 0 R 10 0 R] /Count 3 >>
 endobj
 3 0 obj
 << /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
@@ -12,245 +12,395 @@ endobj
 << /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
 endobj
 5 0 obj
-<< /Length 8183 >>
+<< /Length 5870 >>
 stream
-BT 0.45 g /F2 8 Tf 1 0 0 1 54.00 738.00 Tm (NONPROFIT SOFTWARE GUIDE) Tj ET
-BT 0.45 g /F1 8 Tf 1 0 0 1 456.83 738.00 Tm (Fielded July 2026  -  n = 100) Tj ET
-0.8 G 0.5 w 54.00 730.00 m 558.00 730.00 l S
-q 0.55 G 1.61 w 1 J 1 j
-54.00 688.00 25.30 17.25 re S
-50.55 684.09 m 82.75 684.09 l
-80.45 688.00 l 52.85 688.00 l h S
-62.05 700.08 m 58.60 696.63 l 62.05 693.17 l S
-71.25 700.08 m 74.70 696.63 l 71.25 693.17 l S
-68.38 701.23 m 64.92 692.02 l S
-66.65 705.25 m 66.65 708.70 l S
-63.20 712.15 m
-63.20 714.06 64.74 715.60 66.65 715.60 c
-68.56 715.60 70.10 714.06 70.10 712.15 c
-70.10 710.24 68.56 708.70 66.65 708.70 c
-64.74 708.70 63.20 710.24 63.20 712.15 c S
+0.055 0.310 0.290 rg 0.00 542.00 612.00 250.00 re f
+q 1 G 1.82 w 1 J 1 j
+54.00 700.00 28.60 19.50 re S
+50.10 695.58 m 86.50 695.58 l
+83.90 700.00 l 52.70 700.00 l h S
+63.10 713.65 m 59.20 709.75 l 63.10 705.85 l S
+73.50 713.65 m 77.40 709.75 l 73.50 705.85 l S
+70.25 714.95 m 66.35 704.55 l S
+68.30 719.50 m 68.30 723.40 l S
+64.40 727.30 m
+64.40 729.45 66.15 731.20 68.30 731.20 c
+70.45 731.20 72.20 729.45 72.20 727.30 c
+72.20 725.15 70.45 723.40 68.30 723.40 c
+66.15 723.40 64.40 725.15 64.40 727.30 c S
 Q
-BT 0 g /F2 20.331598692968655 Tf 1 0 0 1 54.00 664.00 Tm (2026 Nonprofit Fundraising Software Spend Benchmark) Tj ET
-BT 0.35 g /F1 11 Tf 1 0 0 1 54.00 638.67 Tm (Annual software spend by shop size. Built from a survey of 100 US fundraising professionals.) Tj ET
-BT 0.15 g /F1 9.5 Tf 1 0 0 1 54.00 608.67 Tm (In July 2026, 100 fundraising professionals in the United States completed an online survey reporting their) Tj ET
-BT 0.15 g /F1 9.5 Tf 1 0 0 1 54.00 595.67 Tm (organization's annual spend on fundraising software across six categories. Respondents were grouped by the amount) Tj ET
-BT 0.15 g /F1 9.5 Tf 1 0 0 1 54.00 582.67 Tm (their organization raises each year. The figures below are the mean reported spend per category within each group, in) Tj ET
-BT 0.15 g /F1 9.5 Tf 1 0 0 1 54.00 569.67 Tm (US dollars.) Tj ET
-BT 0 g /F2 12 Tf 1 0 0 1 54.00 548.67 Tm (Mean annual spend by category) Tj ET
-BT 0.4 g /F1 8.5 Tf 1 0 0 1 54.00 533.67 Tm (Average across all respondents in each group, including those reporting $0.) Tj ET
-0.93 g 50.00 507.67 512.00 20.00 re f
-BT 0.25 g /F2 8 Tf 1 0 0 1 54.00 515.67 Tm (Category) Tj ET
-BT 0.25 g /F2 8 Tf 1 0 0 1 238.86 519.67 Tm (Under $250K) Tj ET
-BT 0.5 g /F1 7 Tf 1 0 0 1 270.24 511.67 Tm (n=55) Tj ET
-BT 0.25 g /F2 8 Tf 1 0 0 1 326.20 519.67 Tm ($250K - $1M) Tj ET
-BT 0.5 g /F1 7 Tf 1 0 0 1 356.24 511.67 Tm (n=28) Tj ET
-BT 0.25 g /F2 8 Tf 1 0 0 1 419.77 519.67 Tm ($1M - $5M) Tj ET
-BT 0.5 g /F1 7 Tf 1 0 0 1 442.24 511.67 Tm (n=12) Tj ET
-BT 0.25 g /F2 8 Tf 1 0 0 1 537.77 519.67 Tm ($5M+) Tj ET
-BT 0.5 g /F1 7 Tf 1 0 0 1 546.13 511.67 Tm (n=5) Tj ET
-0.35 G 1 w 54.00 497.67 m 558.00 497.67 l S
-BT 0 g /F1 9.5 Tf 1 0 0 1 54.00 482.67 Tm (Grant research) Tj ET
-BT 0 g /F1 9.5 Tf 1 0 0 1 264.87 482.67 Tm ($250) Tj ET
-BT 0 g /F1 9.5 Tf 1 0 0 1 350.87 482.67 Tm ($746) Tj ET
-BT 0 g /F1 9.5 Tf 1 0 0 1 428.95 482.67 Tm ($2,278) Tj ET
-BT 0 g /F1 9.5 Tf 1 0 0 1 528.95 482.67 Tm ($5,713) Tj ET
-0.9 G 0.5 w 54.00 474.67 m 558.00 474.67 l S
-BT 0 g /F1 9.5 Tf 1 0 0 1 54.00 463.67 Tm (Prospect research / wealth screening) Tj ET
-BT 0 g /F1 9.5 Tf 1 0 0 1 270.15 463.67 Tm ($45) Tj ET
-BT 0 g /F1 9.5 Tf 1 0 0 1 342.95 463.67 Tm ($1,319) Tj ET
-BT 0 g /F1 9.5 Tf 1 0 0 1 428.95 463.67 Tm ($4,135) Tj ET
-BT 0 g /F1 9.5 Tf 1 0 0 1 523.67 463.67 Tm ($17,320) Tj ET
-0.9 G 0.5 w 54.00 455.67 m 558.00 455.67 l S
-BT 0 g /F1 9.5 Tf 1 0 0 1 54.00 444.67 Tm (Donor CRM) Tj ET
-BT 0 g /F1 9.5 Tf 1 0 0 1 264.87 444.67 Tm ($716) Tj ET
-BT 0 g /F1 9.5 Tf 1 0 0 1 342.95 444.67 Tm ($2,726) Tj ET
-BT 0 g /F1 9.5 Tf 1 0 0 1 428.95 444.67 Tm ($7,130) Tj ET
-BT 0 g /F1 9.5 Tf 1 0 0 1 523.67 444.67 Tm ($18,688) Tj ET
-0.9 G 0.5 w 54.00 436.67 m 558.00 436.67 l S
-BT 0 g /F1 9.5 Tf 1 0 0 1 54.00 425.67 Tm (Donation processing) Tj ET
-BT 0 g /F1 9.5 Tf 1 0 0 1 256.95 425.67 Tm ($1,024) Tj ET
-BT 0 g /F1 9.5 Tf 1 0 0 1 342.95 425.67 Tm ($3,493) Tj ET
-BT 0 g /F1 9.5 Tf 1 0 0 1 428.95 425.67 Tm ($9,906) Tj ET
-BT 0 g /F1 9.5 Tf 1 0 0 1 523.67 425.67 Tm ($30,824) Tj ET
-0.9 G 0.5 w 54.00 417.67 m 558.00 417.67 l S
-BT 0 g /F1 9.5 Tf 1 0 0 1 54.00 406.67 Tm (Forms & other operations) Tj ET
-BT 0 g /F1 9.5 Tf 1 0 0 1 264.87 406.67 Tm ($175) Tj ET
-BT 0 g /F1 9.5 Tf 1 0 0 1 350.87 406.67 Tm ($572) Tj ET
-BT 0 g /F1 9.5 Tf 1 0 0 1 428.95 406.67 Tm ($2,062) Tj ET
-BT 0 g /F1 9.5 Tf 1 0 0 1 523.67 406.67 Tm ($13,000) Tj ET
-0.9 G 0.5 w 54.00 398.67 m 558.00 398.67 l S
-BT 0 g /F1 9.5 Tf 1 0 0 1 54.00 387.67 Tm (Events & auctions) Tj ET
-BT 0 g /F1 9.5 Tf 1 0 0 1 264.87 387.67 Tm ($402) Tj ET
-BT 0 g /F1 9.5 Tf 1 0 0 1 342.95 387.67 Tm ($1,341) Tj ET
-BT 0 g /F1 9.5 Tf 1 0 0 1 428.95 387.67 Tm ($4,830) Tj ET
-BT 0 g /F1 9.5 Tf 1 0 0 1 523.67 387.67 Tm ($11,270) Tj ET
-0.9 G 0.5 w 54.00 379.67 m 558.00 379.67 l S
-BT 0 g /F2 10 Tf 1 0 0 1 54.00 366.67 Tm (Total software spend) Tj ET
-BT 0 g /F2 10 Tf 1 0 0 1 255.42 366.67 Tm ($2,611) Tj ET
-BT 0 g /F2 10 Tf 1 0 0 1 335.86 366.67 Tm ($10,197) Tj ET
-BT 0 g /F2 10 Tf 1 0 0 1 421.86 366.67 Tm ($30,342) Tj ET
-BT 0 g /F2 10 Tf 1 0 0 1 521.86 366.67 Tm ($96,815) Tj ET
-0.35 G 1 w 54.00 357.67 m 558.00 357.67 l S
-BT 0 g /F2 12 Tf 1 0 0 1 54.00 337.67 Tm (Median annual spend by category) Tj ET
-BT 0.4 g /F1 8.5 Tf 1 0 0 1 54.00 322.67 Tm (The midpoint response. Lower than the mean wherever a few large spenders pull the average up.) Tj ET
-0.93 g 50.00 296.67 512.00 20.00 re f
-BT 0.25 g /F2 8 Tf 1 0 0 1 54.00 304.67 Tm (Category) Tj ET
-BT 0.25 g /F2 8 Tf 1 0 0 1 238.86 308.67 Tm (Under $250K) Tj ET
-BT 0.5 g /F1 7 Tf 1 0 0 1 270.24 300.67 Tm (n=55) Tj ET
-BT 0.25 g /F2 8 Tf 1 0 0 1 326.20 308.67 Tm ($250K - $1M) Tj ET
-BT 0.5 g /F1 7 Tf 1 0 0 1 356.24 300.67 Tm (n=28) Tj ET
-BT 0.25 g /F2 8 Tf 1 0 0 1 419.77 308.67 Tm ($1M - $5M) Tj ET
-BT 0.5 g /F1 7 Tf 1 0 0 1 442.24 300.67 Tm (n=12) Tj ET
-BT 0.25 g /F2 8 Tf 1 0 0 1 537.77 308.67 Tm ($5M+) Tj ET
-BT 0.5 g /F1 7 Tf 1 0 0 1 546.13 300.67 Tm (n=5) Tj ET
-0.35 G 1 w 54.00 286.67 m 558.00 286.67 l S
-BT 0 g /F1 9.5 Tf 1 0 0 1 54.00 271.67 Tm (Grant research) Tj ET
-BT 0 g /F1 9.5 Tf 1 0 0 1 275.44 271.67 Tm ($0) Tj ET
-BT 0 g /F1 9.5 Tf 1 0 0 1 350.87 271.67 Tm ($595) Tj ET
-BT 0 g /F1 9.5 Tf 1 0 0 1 428.95 271.67 Tm ($2,574) Tj ET
-BT 0 g /F1 9.5 Tf 1 0 0 1 528.95 271.67 Tm ($3,900) Tj ET
-0.9 G 0.5 w 54.00 263.67 m 558.00 263.67 l S
-BT 0 g /F1 9.5 Tf 1 0 0 1 54.00 252.67 Tm (Prospect research / wealth screening) Tj ET
-BT 0 g /F1 9.5 Tf 1 0 0 1 275.44 252.67 Tm ($0) Tj ET
-BT 0 g /F1 9.5 Tf 1 0 0 1 350.87 252.67 Tm ($550) Tj ET
-BT 0 g /F1 9.5 Tf 1 0 0 1 428.95 252.67 Tm ($4,500) Tj ET
-BT 0 g /F1 9.5 Tf 1 0 0 1 523.67 252.67 Tm ($18,000) Tj ET
-0.9 G 0.5 w 54.00 244.67 m 558.00 244.67 l S
-BT 0 g /F1 9.5 Tf 1 0 0 1 54.00 233.67 Tm (Donor CRM) Tj ET
-BT 0 g /F1 9.5 Tf 1 0 0 1 264.87 233.67 Tm ($682) Tj ET
-BT 0 g /F1 9.5 Tf 1 0 0 1 342.95 233.67 Tm ($2,173) Tj ET
-BT 0 g /F1 9.5 Tf 1 0 0 1 428.95 233.67 Tm ($5,585) Tj ET
-BT 0 g /F1 9.5 Tf 1 0 0 1 523.67 233.67 Tm ($17,334) Tj ET
-0.9 G 0.5 w 54.00 225.67 m 558.00 225.67 l S
-BT 0 g /F1 9.5 Tf 1 0 0 1 54.00 214.67 Tm (Donation processing) Tj ET
-BT 0 g /F1 9.5 Tf 1 0 0 1 264.87 214.67 Tm ($846) Tj ET
-BT 0 g /F1 9.5 Tf 1 0 0 1 342.95 214.67 Tm ($3,548) Tj ET
-BT 0 g /F1 9.5 Tf 1 0 0 1 428.95 214.67 Tm ($6,925) Tj ET
-BT 0 g /F1 9.5 Tf 1 0 0 1 523.67 214.67 Tm ($29,297) Tj ET
-0.9 G 0.5 w 54.00 206.67 m 558.00 206.67 l S
-BT 0 g /F1 9.5 Tf 1 0 0 1 54.00 195.67 Tm (Forms & other operations) Tj ET
-BT 0 g /F1 9.5 Tf 1 0 0 1 264.87 195.67 Tm ($190) Tj ET
-BT 0 g /F1 9.5 Tf 1 0 0 1 350.87 195.67 Tm ($594) Tj ET
-BT 0 g /F1 9.5 Tf 1 0 0 1 428.95 195.67 Tm ($1,914) Tj ET
-BT 0 g /F1 9.5 Tf 1 0 0 1 523.67 195.67 Tm ($14,100) Tj ET
-0.9 G 0.5 w 54.00 187.67 m 558.00 187.67 l S
-BT 0 g /F1 9.5 Tf 1 0 0 1 54.00 176.67 Tm (Events & auctions) Tj ET
-BT 0 g /F1 9.5 Tf 1 0 0 1 275.44 176.67 Tm ($0) Tj ET
-BT 0 g /F1 9.5 Tf 1 0 0 1 342.95 176.67 Tm ($1,225) Tj ET
-BT 0 g /F1 9.5 Tf 1 0 0 1 428.95 176.67 Tm ($4,000) Tj ET
-BT 0 g /F1 9.5 Tf 1 0 0 1 523.67 176.67 Tm ($10,000) Tj ET
-0.9 G 0.5 w 54.00 168.67 m 558.00 168.67 l S
-BT 0 g /F2 10 Tf 1 0 0 1 54.00 155.67 Tm (Total software spend) Tj ET
-BT 0 g /F2 10 Tf 1 0 0 1 255.42 155.67 Tm ($2,411) Tj ET
-BT 0 g /F2 10 Tf 1 0 0 1 341.42 155.67 Tm ($9,226) Tj ET
-BT 0 g /F2 10 Tf 1 0 0 1 421.86 155.67 Tm ($27,603) Tj ET
-BT 0 g /F2 10 Tf 1 0 0 1 521.86 155.67 Tm ($92,069) Tj ET
-0.35 G 1 w 54.00 146.67 m 558.00 146.67 l S
+BT 1 1 1 rg /F2 10 Tf 1 0 0 1 100.00 714.00 Tm (NONPROFIT) Tj ET
+BT 1 1 1 rg /F2 10 Tf 1 0 0 1 100.00 702.00 Tm (SOFTWARE GUIDE) Tj ET
+BT 1 1 1 rg /F2 20.331598692968655 Tf 1 0 0 1 54.00 642.00 Tm (2026 Nonprofit Fundraising Software Spend Benchmark) Tj ET
+BT 1 1 1 rg /F1 11.5 Tf 1 0 0 1 54.00 609.67 Tm (What 100 US fundraising professionals report spending, by shop size.) Tj ET
+BT 1 1 1 rg /F1 8.5 Tf 1 0 0 1 54.00 591.67 Tm (Fielded July 2026   |   n = 100   |   Six software categories   |   Free to cite) Tj ET
+BT 0.055 0.310 0.290 rg /F2 26 Tf 1 0 0 1 54.00 496.00 Tm ($2,611) Tj ET
+BT 0.078 0.082 0.078 rg /F2 9 Tf 1 0 0 1 54.00 482.00 Tm (Under $250K raised) Tj ET
+BT 0.45 g /F1 7.5 Tf 1 0 0 1 54.00 470.00 Tm (Mean total annual software spend) Tj ET
+0.85 G 0.5 w 210.00 462.00 m 210.00 510.00 l S
+BT 0.055 0.310 0.290 rg /F2 26 Tf 1 0 0 1 222.00 496.00 Tm (37x) Tj ET
+BT 0.078 0.082 0.078 rg /F2 9 Tf 1 0 0 1 222.00 482.00 Tm (spread across the sector) Tj ET
+BT 0.45 g /F1 7.5 Tf 1 0 0 1 222.00 470.00 Tm ($5M+ shops spend 37x the smallest group) Tj ET
+0.85 G 0.5 w 378.00 462.00 m 378.00 510.00 l S
+BT 0.055 0.310 0.290 rg /F2 26 Tf 1 0 0 1 390.00 496.00 Tm (95%) Tj ET
+BT 0.078 0.082 0.078 rg /F2 9 Tf 1 0 0 1 390.00 482.00 Tm (spend $0 on screening) Tj ET
+BT 0.45 g /F1 7.5 Tf 1 0 0 1 390.00 470.00 Tm (Share of Under $250K shops buying no wealth screening) Tj ET
+0.85 G 0.5 w 54.00 434.00 m 558.00 434.00 l S
+BT 0.039 0.416 0.384 rg /F2 9 Tf 1 0 0 1 54.00 408.00 Tm (01) Tj ET
+BT 0.078 0.082 0.078 rg /F2 13 Tf 1 0 0 1 74.00 408.00 Tm (Why this exists) Tj ET
+0.055 0.310 0.290 RG 1.6 w 54.00 401.00 m 88.00 401.00 l S
+BT 0.15 g /F1 10 Tf 1 0 0 1 54.00 384.00 Tm (Nonprofit software pricing is quoted, not published. Vendors negotiate per organization, roundup sites recycle) Tj ET
+BT 0.15 g /F1 10 Tf 1 0 0 1 54.00 370.00 Tm (each other's guesses, and a development director with a board meeting on Thursday has no way to tell whether a) Tj ET
+BT 0.15 g /F1 10 Tf 1 0 0 1 54.00 356.00 Tm (quote is reasonable. This benchmark exists so that question has an answer.) Tj ET
+BT 0.15 g /F1 10 Tf 1 0 0 1 54.00 336.00 Tm (In July 2026, 100 fundraising professionals in the United States completed an online survey reporting their) Tj ET
+BT 0.15 g /F1 10 Tf 1 0 0 1 54.00 322.00 Tm (organization's annual spend on fundraising software across six categories, grouped by the amount their) Tj ET
+BT 0.15 g /F1 10 Tf 1 0 0 1 54.00 308.00 Tm (organization raises each year. The figures that follow are the mean and median reported spend per category) Tj ET
+BT 0.15 g /F1 10 Tf 1 0 0 1 54.00 294.00 Tm (within each group, in US dollars.) Tj ET
+0.894 0.941 0.933 rg 48.00 240.00 516.00 40.00 re f
+BT 0.055 0.310 0.290 rg /F2 9.5 Tf 1 0 0 1 58.00 264.00 Tm (How to use it:) Tj ET
+BT 0.078 0.082 0.078 rg /F1 9.5 Tf 1 0 0 1 130.00 264.00 Tm (find your revenue band, read across. If a quote sits well above) Tj ET
+BT 0.078 0.082 0.078 rg /F1 9.5 Tf 1 0 0 1 58.00 251.00 Tm (the band for your size, the burden of proof is on the vendor.) Tj ET
+BT 0.039 0.416 0.384 rg /F2 9 Tf 1 0 0 1 54.00 214.00 Tm () Tj ET
+BT 0.078 0.082 0.078 rg /F2 13 Tf 1 0 0 1 74.00 214.00 Tm (What is inside) Tj ET
+0.055 0.310 0.290 RG 1.6 w 54.00 207.00 m 88.00 207.00 l S
+BT 0.039 0.416 0.384 rg /F2 8.5 Tf 1 0 0 1 54.00 190.00 Tm (01) Tj ET
+BT 0.078 0.082 0.078 rg /F1 10 Tf 1 0 0 1 76.00 190.00 Tm (Why this exists) Tj ET
+0.86 G 0.5 w 146.68 193.00 m 542.00 193.00 l S
+BT 0.4 g /F1 9 Tf 1 0 0 1 553.00 190.00 Tm (1) Tj ET
+0.972 g 48.00 171.00 516.00 15.00 re f
+BT 0.039 0.416 0.384 rg /F2 8.5 Tf 1 0 0 1 54.00 175.00 Tm (02) Tj ET
+BT 0.078 0.082 0.078 rg /F1 10 Tf 1 0 0 1 76.00 175.00 Tm (Mean annual spend by category) Tj ET
+0.86 G 0.5 w 222.30 178.00 m 542.00 178.00 l S
+BT 0.4 g /F1 9 Tf 1 0 0 1 553.00 175.00 Tm (2) Tj ET
+BT 0.039 0.416 0.384 rg /F2 8.5 Tf 1 0 0 1 54.00 160.00 Tm (03) Tj ET
+BT 0.078 0.082 0.078 rg /F1 10 Tf 1 0 0 1 76.00 160.00 Tm (Median annual spend by category) Tj ET
+0.86 G 0.5 w 230.08 163.00 m 542.00 163.00 l S
+BT 0.4 g /F1 9 Tf 1 0 0 1 553.00 160.00 Tm (2) Tj ET
+0.972 g 48.00 141.00 516.00 15.00 re f
+BT 0.039 0.416 0.384 rg /F2 8.5 Tf 1 0 0 1 54.00 145.00 Tm (04) Tj ET
+BT 0.078 0.082 0.078 rg /F1 10 Tf 1 0 0 1 76.00 145.00 Tm (Who spends nothing) Tj ET
+0.86 G 0.5 w 171.16 148.00 m 542.00 148.00 l S
+BT 0.4 g /F1 9 Tf 1 0 0 1 553.00 145.00 Tm (3) Tj ET
+BT 0.039 0.416 0.384 rg /F2 8.5 Tf 1 0 0 1 54.00 130.00 Tm (05) Tj ET
+BT 0.078 0.082 0.078 rg /F1 10 Tf 1 0 0 1 76.00 130.00 Tm (Methodology) Tj ET
+0.86 G 0.5 w 137.25 133.00 m 542.00 133.00 l S
+BT 0.4 g /F1 9 Tf 1 0 0 1 553.00 130.00 Tm (3) Tj ET
+0.972 g 48.00 111.00 516.00 15.00 re f
+BT 0.039 0.416 0.384 rg /F2 8.5 Tf 1 0 0 1 54.00 115.00 Tm (06) Tj ET
+BT 0.078 0.082 0.078 rg /F1 10 Tf 1 0 0 1 76.00 115.00 Tm (Citation) Tj ET
+0.86 G 0.5 w 113.90 118.00 m 542.00 118.00 l S
+BT 0.4 g /F1 9 Tf 1 0 0 1 553.00 115.00 Tm (3) Tj ET
+BT 0.039 0.416 0.384 rg /F2 8.5 Tf 1 0 0 1 54.00 100.00 Tm (07) Tj ET
+BT 0.078 0.082 0.078 rg /F1 10 Tf 1 0 0 1 76.00 100.00 Tm (About this guide) Tj ET
+0.86 G 0.5 w 151.71 103.00 m 542.00 103.00 l S
+BT 0.4 g /F1 9 Tf 1 0 0 1 553.00 100.00 Tm (3) Tj ET
 0.85 G 0.5 w 54.00 56.00 m 558.00 56.00 l S
 BT 0.45 g /F1 8 Tf 1 0 0 1 54.00 42.00 Tm (https://nonprofitsoftwareguide.com/benchmarks/) Tj ET
-BT 0.45 g /F1 8 Tf 1 0 0 1 517.08 42.00 Tm (Page 1 of 2) Tj ET
+BT 0.055 0.310 0.290 rg /F2 8 Tf 1 0 0 1 542.43 42.00 Tm (1 / 3) Tj ET
 endstream
 endobj
 6 0 obj
 << /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 5 0 R >>
 endobj
 7 0 obj
-<< /Length 5307 >>
+<< /Length 12319 >>
 stream
-BT 0.45 g /F2 8 Tf 1 0 0 1 54.00 738.00 Tm (NONPROFIT SOFTWARE GUIDE) Tj ET
-BT 0.45 g /F1 8 Tf 1 0 0 1 456.83 738.00 Tm (Fielded July 2026  -  n = 100) Tj ET
-0.8 G 0.5 w 54.00 730.00 m 558.00 730.00 l S
-BT 0 g /F2 12 Tf 1 0 0 1 54.00 708.00 Tm (Share of each group reporting $0 spend) Tj ET
-BT 0.4 g /F1 8.5 Tf 1 0 0 1 54.00 693.00 Tm (The proportion of respondents in each group who spend nothing at all in that category.) Tj ET
-0.93 g 50.00 667.00 512.00 20.00 re f
-BT 0.25 g /F2 8 Tf 1 0 0 1 54.00 675.00 Tm (Category) Tj ET
-BT 0.25 g /F2 8 Tf 1 0 0 1 238.86 679.00 Tm (Under $250K) Tj ET
-BT 0.5 g /F1 7 Tf 1 0 0 1 270.24 671.00 Tm (n=55) Tj ET
-BT 0.25 g /F2 8 Tf 1 0 0 1 326.20 679.00 Tm ($250K - $1M) Tj ET
-BT 0.5 g /F1 7 Tf 1 0 0 1 356.24 671.00 Tm (n=28) Tj ET
-BT 0.25 g /F2 8 Tf 1 0 0 1 419.77 679.00 Tm ($1M - $5M) Tj ET
-BT 0.5 g /F1 7 Tf 1 0 0 1 442.24 671.00 Tm (n=12) Tj ET
-BT 0.25 g /F2 8 Tf 1 0 0 1 537.77 679.00 Tm ($5M+) Tj ET
-BT 0.5 g /F1 7 Tf 1 0 0 1 546.13 671.00 Tm (n=5) Tj ET
-0.35 G 1 w 54.00 657.00 m 558.00 657.00 l S
-BT 0 g /F1 9.5 Tf 1 0 0 1 54.00 642.00 Tm (Grant research) Tj ET
-BT 0 g /F1 9.5 Tf 1 0 0 1 266.99 642.00 Tm (55%) Tj ET
-BT 0 g /F1 9.5 Tf 1 0 0 1 352.99 642.00 Tm (39%) Tj ET
-BT 0 g /F1 9.5 Tf 1 0 0 1 438.99 642.00 Tm (17%) Tj ET
-BT 0 g /F1 9.5 Tf 1 0 0 1 544.27 642.00 Tm (0%) Tj ET
-0.9 G 0.5 w 54.00 634.00 m 558.00 634.00 l S
-BT 0 g /F1 9.5 Tf 1 0 0 1 54.00 623.00 Tm (Prospect research / wealth screening) Tj ET
-BT 0 g /F1 9.5 Tf 1 0 0 1 266.99 623.00 Tm (95%) Tj ET
-BT 0 g /F1 9.5 Tf 1 0 0 1 352.99 623.00 Tm (50%) Tj ET
-BT 0 g /F1 9.5 Tf 1 0 0 1 438.99 623.00 Tm (25%) Tj ET
-BT 0 g /F1 9.5 Tf 1 0 0 1 544.27 623.00 Tm (0%) Tj ET
-0.9 G 0.5 w 54.00 615.00 m 558.00 615.00 l S
-BT 0 g /F1 9.5 Tf 1 0 0 1 54.00 604.00 Tm (Donor CRM) Tj ET
-BT 0 g /F1 9.5 Tf 1 0 0 1 266.99 604.00 Tm (36%) Tj ET
-BT 0 g /F1 9.5 Tf 1 0 0 1 352.99 604.00 Tm (11%) Tj ET
-BT 0 g /F1 9.5 Tf 1 0 0 1 444.27 604.00 Tm (0%) Tj ET
-BT 0 g /F1 9.5 Tf 1 0 0 1 544.27 604.00 Tm (0%) Tj ET
-0.9 G 0.5 w 54.00 596.00 m 558.00 596.00 l S
-BT 0 g /F1 9.5 Tf 1 0 0 1 54.00 585.00 Tm (Donation processing) Tj ET
-BT 0 g /F1 9.5 Tf 1 0 0 1 266.99 585.00 Tm (24%) Tj ET
-BT 0 g /F1 9.5 Tf 1 0 0 1 352.99 585.00 Tm (14%) Tj ET
-BT 0 g /F1 9.5 Tf 1 0 0 1 444.27 585.00 Tm (0%) Tj ET
-BT 0 g /F1 9.5 Tf 1 0 0 1 544.27 585.00 Tm (0%) Tj ET
-0.9 G 0.5 w 54.00 577.00 m 558.00 577.00 l S
-BT 0 g /F1 9.5 Tf 1 0 0 1 54.00 566.00 Tm (Forms & other operations) Tj ET
-BT 0 g /F1 9.5 Tf 1 0 0 1 266.99 566.00 Tm (49%) Tj ET
-BT 0 g /F1 9.5 Tf 1 0 0 1 352.99 566.00 Tm (21%) Tj ET
-BT 0 g /F1 9.5 Tf 1 0 0 1 438.99 566.00 Tm (17%) Tj ET
-BT 0 g /F1 9.5 Tf 1 0 0 1 544.27 566.00 Tm (0%) Tj ET
-0.9 G 0.5 w 54.00 558.00 m 558.00 558.00 l S
-BT 0 g /F1 9.5 Tf 1 0 0 1 54.00 547.00 Tm (Events & auctions) Tj ET
-BT 0 g /F1 9.5 Tf 1 0 0 1 266.99 547.00 Tm (51%) Tj ET
-BT 0 g /F1 9.5 Tf 1 0 0 1 352.99 547.00 Tm (29%) Tj ET
-BT 0 g /F1 9.5 Tf 1 0 0 1 444.27 547.00 Tm (0%) Tj ET
-BT 0 g /F1 9.5 Tf 1 0 0 1 544.27 547.00 Tm (0%) Tj ET
-0.9 G 0.5 w 54.00 539.00 m 558.00 539.00 l S
-BT 0 g /F2 12 Tf 1 0 0 1 54.00 522.00 Tm (Methodology) Tj ET
-BT 0.15 g /F1 9.5 Tf 1 0 0 1 54.00 506.00 Tm (Fielded July 2026. Population: Fundraising professionals in the United States. Online self-report survey. Respondents) Tj ET
-BT 0.15 g /F1 9.5 Tf 1 0 0 1 54.00 493.00 Tm (reported annual spend per software category for their organization. Sample size 100, distributed across four groups by) Tj ET
-BT 0.15 g /F1 9.5 Tf 1 0 0 1 54.00 480.00 Tm (annual revenue raised: Under $250K \(n=55\), $250K - $1M \(n=28\), $1M - $5M \(n=12\), $5M+ \(n=5\). Figures are) Tj ET
-BT 0.15 g /F1 9.5 Tf 1 0 0 1 54.00 467.00 Tm (self-reported and unaudited, and are rounded to the nearest dollar. Percentages are rounded to the nearest whole) Tj ET
-BT 0.15 g /F1 9.5 Tf 1 0 0 1 54.00 454.00 Tm (percent. Group sizes at the upper end are small, so the $1M-$5M and $5M+ figures should be read as indicative rather) Tj ET
-BT 0.15 g /F1 9.5 Tf 1 0 0 1 54.00 441.00 Tm (than precise. No respondent identifying information was collected.) Tj ET
-BT 0 g /F2 12 Tf 1 0 0 1 54.00 418.00 Tm (Citation) Tj ET
-BT 0.15 g /F1 9.5 Tf 1 0 0 1 54.00 402.00 Tm (This benchmark is free to cite and reproduce with attribution. Suggested citation:) Tj ET
-0.95 g 50.00 355.00 512.00 40.00 re f
-BT 0.2 g /F1 9 Tf 1 0 0 1 54.00 381.00 Tm (Nonprofit Software Guide, "2026 Nonprofit Fundraising Software Spend Benchmark" \(July 2026\).) Tj ET
-BT 0.2 g /F1 9 Tf 1 0 0 1 54.00 368.00 Tm (https://nonprofitsoftwareguide.com/benchmarks/) Tj ET
-BT 0 g /F2 12 Tf 1 0 0 1 54.00 333.00 Tm (About this guide) Tj ET
-BT 0.15 g /F1 9.5 Tf 1 0 0 1 54.00 317.00 Tm (Nonprofit Software Guide is an independent publication that reviews fundraising software and publishes recommended) Tj ET
-BT 0.15 g /F1 9.5 Tf 1 0 0 1 54.00 304.00 Tm (technology stacks by organization size. It carries affiliate links; no vendor pays for placement, and no vendor reviews) Tj ET
-BT 0.15 g /F1 9.5 Tf 1 0 0 1 54.00 291.00 Tm (content before it publishes. Full disclosure at https://nonprofitsoftwareguide.com/disclosure/.) Tj ET
+BT 0.055 0.310 0.290 rg /F2 7.5 Tf 1 0 0 1 54.00 738.00 Tm (NONPROFIT SOFTWARE GUIDE) Tj ET
+BT 0.5 g /F1 7.5 Tf 1 0 0 1 372.08 738.00 Tm (2026 Nonprofit Fundraising Software Spend Benchmark) Tj ET
+0.055 0.310 0.290 RG 1.2 w 54.00 730.00 m 558.00 730.00 l S
+BT 0.039 0.416 0.384 rg /F2 9 Tf 1 0 0 1 54.00 706.00 Tm (02) Tj ET
+BT 0.078 0.082 0.078 rg /F2 13 Tf 1 0 0 1 74.00 706.00 Tm (Mean annual spend) Tj ET
+0.055 0.310 0.290 RG 1.6 w 54.00 699.00 m 88.00 699.00 l S
+BT 0.078 0.082 0.078 rg /F2 11.5 Tf 1 0 0 1 54.00 682.00 Tm (Mean annual spend by category) Tj ET
+BT 0.4 g /F1 8.5 Tf 1 0 0 1 54.00 668.00 Tm (Average across all respondents in each group, including those reporting $0. Bars are scaled within each column.) Tj ET
+0.055 0.310 0.290 rg 50.00 642.00 512.00 21.00 re f
+BT 1 1 1 rg /F2 7.5 Tf 1 0 0 1 54.00 651.00 Tm (CATEGORY) Tj ET
+BT 1 1 1 rg /F2 7.5 Tf 1 0 0 1 241.81 655.00 Tm (Under $250K) Tj ET
+BT 1 1 1 rg /F1 6.5 Tf 1 0 0 1 271.36 646.50 Tm (n=55) Tj ET
+BT 1 1 1 rg /F2 7.5 Tf 1 0 0 1 329.06 655.00 Tm ($250K - $1M) Tj ET
+BT 1 1 1 rg /F1 6.5 Tf 1 0 0 1 357.36 646.50 Tm (n=28) Tj ET
+BT 1 1 1 rg /F2 7.5 Tf 1 0 0 1 422.16 655.00 Tm ($1M - $5M) Tj ET
+BT 1 1 1 rg /F1 6.5 Tf 1 0 0 1 443.36 646.50 Tm (n=12) Tj ET
+BT 1 1 1 rg /F2 7.5 Tf 1 0 0 1 539.03 655.00 Tm ($5M+) Tj ET
+BT 1 1 1 rg /F1 6.5 Tf 1 0 0 1 546.98 646.50 Tm (n=5) Tj ET
+0.561 0.749 0.729 rg 269.89 623.00 16.11 3.00 re f
+0.561 0.749 0.729 rg 357.90 623.00 14.10 3.00 re f
+0.561 0.749 0.729 rg 442.82 623.00 15.18 3.00 re f
+0.561 0.749 0.729 rg 545.77 623.00 12.23 3.00 re f
+BT 0.078 0.082 0.078 rg /F1 9.5 Tf 1 0 0 1 54.00 627.00 Tm (Grant research) Tj ET
+BT 0.078 0.082 0.078 rg /F1 9.5 Tf 1 0 0 1 264.87 627.00 Tm ($250) Tj ET
+BT 0.078 0.082 0.078 rg /F1 9.5 Tf 1 0 0 1 350.87 627.00 Tm ($746) Tj ET
+BT 0.078 0.082 0.078 rg /F1 9.5 Tf 1 0 0 1 428.95 627.00 Tm ($2,278) Tj ET
+BT 0.078 0.082 0.078 rg /F1 9.5 Tf 1 0 0 1 528.95 627.00 Tm ($5,713) Tj ET
+0.972 g 50.00 606.50 512.00 15.00 re f
+0.561 0.749 0.729 rg 283.10 607.00 2.90 3.00 re f
+0.561 0.749 0.729 rg 347.08 607.00 24.92 3.00 re f
+0.561 0.749 0.729 rg 430.45 607.00 27.55 3.00 re f
+0.561 0.749 0.729 rg 520.91 607.00 37.09 3.00 re f
+BT 0.078 0.082 0.078 rg /F1 9.5 Tf 1 0 0 1 54.00 611.00 Tm (Prospect research / wealth screening) Tj ET
+BT 0.078 0.082 0.078 rg /F1 9.5 Tf 1 0 0 1 270.15 611.00 Tm ($45) Tj ET
+BT 0.078 0.082 0.078 rg /F1 9.5 Tf 1 0 0 1 342.95 611.00 Tm ($1,319) Tj ET
+BT 0.078 0.082 0.078 rg /F1 9.5 Tf 1 0 0 1 428.95 611.00 Tm ($4,135) Tj ET
+BT 0.078 0.082 0.078 rg /F1 9.5 Tf 1 0 0 1 523.67 611.00 Tm ($17,320) Tj ET
+0.561 0.749 0.729 rg 239.85 591.00 46.15 3.00 re f
+0.561 0.749 0.729 rg 320.49 591.00 51.51 3.00 re f
+0.561 0.749 0.729 rg 410.50 591.00 47.50 3.00 re f
+0.561 0.749 0.729 rg 517.99 591.00 40.01 3.00 re f
+BT 0.078 0.082 0.078 rg /F1 9.5 Tf 1 0 0 1 54.00 595.00 Tm (Donor CRM) Tj ET
+BT 0.078 0.082 0.078 rg /F1 9.5 Tf 1 0 0 1 264.87 595.00 Tm ($716) Tj ET
+BT 0.078 0.082 0.078 rg /F1 9.5 Tf 1 0 0 1 342.95 595.00 Tm ($2,726) Tj ET
+BT 0.078 0.082 0.078 rg /F1 9.5 Tf 1 0 0 1 428.95 595.00 Tm ($7,130) Tj ET
+BT 0.078 0.082 0.078 rg /F1 9.5 Tf 1 0 0 1 523.67 595.00 Tm ($18,688) Tj ET
+0.972 g 50.00 574.50 512.00 15.00 re f
+0.561 0.749 0.729 rg 220.00 575.00 66.00 3.00 re f
+0.561 0.749 0.729 rg 306.00 575.00 66.00 3.00 re f
+0.561 0.749 0.729 rg 392.00 575.00 66.00 3.00 re f
+0.561 0.749 0.729 rg 492.00 575.00 66.00 3.00 re f
+BT 0.078 0.082 0.078 rg /F1 9.5 Tf 1 0 0 1 54.00 579.00 Tm (Donation processing) Tj ET
+BT 0.078 0.082 0.078 rg /F1 9.5 Tf 1 0 0 1 256.95 579.00 Tm ($1,024) Tj ET
+BT 0.078 0.082 0.078 rg /F1 9.5 Tf 1 0 0 1 342.95 579.00 Tm ($3,493) Tj ET
+BT 0.078 0.082 0.078 rg /F1 9.5 Tf 1 0 0 1 428.95 579.00 Tm ($9,906) Tj ET
+BT 0.078 0.082 0.078 rg /F1 9.5 Tf 1 0 0 1 523.67 579.00 Tm ($30,824) Tj ET
+0.561 0.749 0.729 rg 274.72 559.00 11.28 3.00 re f
+0.561 0.749 0.729 rg 361.19 559.00 10.81 3.00 re f
+0.561 0.749 0.729 rg 444.26 559.00 13.74 3.00 re f
+0.561 0.749 0.729 rg 530.16 559.00 27.84 3.00 re f
+BT 0.078 0.082 0.078 rg /F1 9.5 Tf 1 0 0 1 54.00 563.00 Tm (Forms & other operations) Tj ET
+BT 0.078 0.082 0.078 rg /F1 9.5 Tf 1 0 0 1 264.87 563.00 Tm ($175) Tj ET
+BT 0.078 0.082 0.078 rg /F1 9.5 Tf 1 0 0 1 350.87 563.00 Tm ($572) Tj ET
+BT 0.078 0.082 0.078 rg /F1 9.5 Tf 1 0 0 1 428.95 563.00 Tm ($2,062) Tj ET
+BT 0.078 0.082 0.078 rg /F1 9.5 Tf 1 0 0 1 523.67 563.00 Tm ($13,000) Tj ET
+0.972 g 50.00 542.50 512.00 15.00 re f
+0.561 0.749 0.729 rg 260.09 543.00 25.91 3.00 re f
+0.561 0.749 0.729 rg 346.66 543.00 25.34 3.00 re f
+0.561 0.749 0.729 rg 425.82 543.00 32.18 3.00 re f
+0.561 0.749 0.729 rg 533.87 543.00 24.13 3.00 re f
+BT 0.078 0.082 0.078 rg /F1 9.5 Tf 1 0 0 1 54.00 547.00 Tm (Events & auctions) Tj ET
+BT 0.078 0.082 0.078 rg /F1 9.5 Tf 1 0 0 1 264.87 547.00 Tm ($402) Tj ET
+BT 0.078 0.082 0.078 rg /F1 9.5 Tf 1 0 0 1 342.95 547.00 Tm ($1,341) Tj ET
+BT 0.078 0.082 0.078 rg /F1 9.5 Tf 1 0 0 1 428.95 547.00 Tm ($4,830) Tj ET
+BT 0.078 0.082 0.078 rg /F1 9.5 Tf 1 0 0 1 523.67 547.00 Tm ($11,270) Tj ET
+0.055 0.310 0.290 RG 1 w 54.00 539.00 m 558.00 539.00 l S
+BT 0.055 0.310 0.290 rg /F2 9 Tf 1 0 0 1 54.00 530.00 Tm (TOTAL SOFTWARE SPEND) Tj ET
+BT 0.055 0.310 0.290 rg /F2 10.5 Tf 1 0 0 1 253.89 530.00 Tm ($2,611) Tj ET
+BT 0.055 0.310 0.290 rg /F2 10.5 Tf 1 0 0 1 334.05 530.00 Tm ($10,197) Tj ET
+BT 0.055 0.310 0.290 rg /F2 10.5 Tf 1 0 0 1 420.05 530.00 Tm ($30,342) Tj ET
+BT 0.055 0.310 0.290 rg /F2 10.5 Tf 1 0 0 1 520.05 530.00 Tm ($96,815) Tj ET
+0.055 0.310 0.290 RG 1 w 54.00 522.00 m 558.00 522.00 l S
+BT 0.039 0.416 0.384 rg /F2 9 Tf 1 0 0 1 54.00 492.00 Tm (03) Tj ET
+BT 0.078 0.082 0.078 rg /F2 13 Tf 1 0 0 1 74.00 492.00 Tm (Median annual spend) Tj ET
+0.055 0.310 0.290 RG 1.6 w 54.00 485.00 m 88.00 485.00 l S
+BT 0.078 0.082 0.078 rg /F2 11.5 Tf 1 0 0 1 54.00 468.00 Tm (Median annual spend by category) Tj ET
+BT 0.4 g /F1 8.5 Tf 1 0 0 1 54.00 454.00 Tm (The midpoint response. Lower than the mean wherever a few large spenders pull the average up.) Tj ET
+0.055 0.310 0.290 rg 50.00 428.00 512.00 21.00 re f
+BT 1 1 1 rg /F2 7.5 Tf 1 0 0 1 54.00 437.00 Tm (CATEGORY) Tj ET
+BT 1 1 1 rg /F2 7.5 Tf 1 0 0 1 241.81 441.00 Tm (Under $250K) Tj ET
+BT 1 1 1 rg /F1 6.5 Tf 1 0 0 1 271.36 432.50 Tm (n=55) Tj ET
+BT 1 1 1 rg /F2 7.5 Tf 1 0 0 1 329.06 441.00 Tm ($250K - $1M) Tj ET
+BT 1 1 1 rg /F1 6.5 Tf 1 0 0 1 357.36 432.50 Tm (n=28) Tj ET
+BT 1 1 1 rg /F2 7.5 Tf 1 0 0 1 422.16 441.00 Tm ($1M - $5M) Tj ET
+BT 1 1 1 rg /F1 6.5 Tf 1 0 0 1 443.36 432.50 Tm (n=12) Tj ET
+BT 1 1 1 rg /F2 7.5 Tf 1 0 0 1 539.03 441.00 Tm ($5M+) Tj ET
+BT 1 1 1 rg /F1 6.5 Tf 1 0 0 1 546.98 432.50 Tm (n=5) Tj ET
+0.561 0.749 0.729 rg 360.93 409.00 11.07 3.00 re f
+0.561 0.749 0.729 rg 433.47 409.00 24.53 3.00 re f
+0.561 0.749 0.729 rg 549.21 409.00 8.79 3.00 re f
+BT 0.078 0.082 0.078 rg /F1 9.5 Tf 1 0 0 1 54.00 413.00 Tm (Grant research) Tj ET
+BT 0.078 0.082 0.078 rg /F1 9.5 Tf 1 0 0 1 275.44 413.00 Tm ($0) Tj ET
+BT 0.078 0.082 0.078 rg /F1 9.5 Tf 1 0 0 1 350.87 413.00 Tm ($595) Tj ET
+BT 0.078 0.082 0.078 rg /F1 9.5 Tf 1 0 0 1 428.95 413.00 Tm ($2,574) Tj ET
+BT 0.078 0.082 0.078 rg /F1 9.5 Tf 1 0 0 1 528.95 413.00 Tm ($3,900) Tj ET
+0.972 g 50.00 392.50 512.00 15.00 re f
+0.561 0.749 0.729 rg 361.77 393.00 10.23 3.00 re f
+0.561 0.749 0.729 rg 415.11 393.00 42.89 3.00 re f
+0.561 0.749 0.729 rg 517.45 393.00 40.55 3.00 re f
+BT 0.078 0.082 0.078 rg /F1 9.5 Tf 1 0 0 1 54.00 397.00 Tm (Prospect research / wealth screening) Tj ET
+BT 0.078 0.082 0.078 rg /F1 9.5 Tf 1 0 0 1 275.44 397.00 Tm ($0) Tj ET
+BT 0.078 0.082 0.078 rg /F1 9.5 Tf 1 0 0 1 350.87 397.00 Tm ($550) Tj ET
+BT 0.078 0.082 0.078 rg /F1 9.5 Tf 1 0 0 1 428.95 397.00 Tm ($4,500) Tj ET
+BT 0.078 0.082 0.078 rg /F1 9.5 Tf 1 0 0 1 523.67 397.00 Tm ($18,000) Tj ET
+0.561 0.749 0.729 rg 232.79 377.00 53.21 3.00 re f
+0.561 0.749 0.729 rg 331.58 377.00 40.42 3.00 re f
+0.561 0.749 0.729 rg 404.77 377.00 53.23 3.00 re f
+0.561 0.749 0.729 rg 518.95 377.00 39.05 3.00 re f
+BT 0.078 0.082 0.078 rg /F1 9.5 Tf 1 0 0 1 54.00 381.00 Tm (Donor CRM) Tj ET
+BT 0.078 0.082 0.078 rg /F1 9.5 Tf 1 0 0 1 264.87 381.00 Tm ($682) Tj ET
+BT 0.078 0.082 0.078 rg /F1 9.5 Tf 1 0 0 1 342.95 381.00 Tm ($2,173) Tj ET
+BT 0.078 0.082 0.078 rg /F1 9.5 Tf 1 0 0 1 428.95 381.00 Tm ($5,585) Tj ET
+BT 0.078 0.082 0.078 rg /F1 9.5 Tf 1 0 0 1 523.67 381.00 Tm ($17,334) Tj ET
+0.972 g 50.00 360.50 512.00 15.00 re f
+0.561 0.749 0.729 rg 220.00 361.00 66.00 3.00 re f
+0.561 0.749 0.729 rg 306.00 361.00 66.00 3.00 re f
+0.561 0.749 0.729 rg 392.00 361.00 66.00 3.00 re f
+0.561 0.749 0.729 rg 492.00 361.00 66.00 3.00 re f
+BT 0.078 0.082 0.078 rg /F1 9.5 Tf 1 0 0 1 54.00 365.00 Tm (Donation processing) Tj ET
+BT 0.078 0.082 0.078 rg /F1 9.5 Tf 1 0 0 1 264.87 365.00 Tm ($846) Tj ET
+BT 0.078 0.082 0.078 rg /F1 9.5 Tf 1 0 0 1 342.95 365.00 Tm ($3,548) Tj ET
+BT 0.078 0.082 0.078 rg /F1 9.5 Tf 1 0 0 1 428.95 365.00 Tm ($6,925) Tj ET
+BT 0.078 0.082 0.078 rg /F1 9.5 Tf 1 0 0 1 523.67 365.00 Tm ($29,297) Tj ET
+0.561 0.749 0.729 rg 271.18 345.00 14.82 3.00 re f
+0.561 0.749 0.729 rg 360.95 345.00 11.05 3.00 re f
+0.561 0.749 0.729 rg 439.76 345.00 18.24 3.00 re f
+0.561 0.749 0.729 rg 526.24 345.00 31.76 3.00 re f
+BT 0.078 0.082 0.078 rg /F1 9.5 Tf 1 0 0 1 54.00 349.00 Tm (Forms & other operations) Tj ET
+BT 0.078 0.082 0.078 rg /F1 9.5 Tf 1 0 0 1 264.87 349.00 Tm ($190) Tj ET
+BT 0.078 0.082 0.078 rg /F1 9.5 Tf 1 0 0 1 350.87 349.00 Tm ($594) Tj ET
+BT 0.078 0.082 0.078 rg /F1 9.5 Tf 1 0 0 1 428.95 349.00 Tm ($1,914) Tj ET
+BT 0.078 0.082 0.078 rg /F1 9.5 Tf 1 0 0 1 523.67 349.00 Tm ($14,100) Tj ET
+0.972 g 50.00 328.50 512.00 15.00 re f
+0.561 0.749 0.729 rg 349.21 329.00 22.79 3.00 re f
+0.561 0.749 0.729 rg 419.88 329.00 38.12 3.00 re f
+0.561 0.749 0.729 rg 535.47 329.00 22.53 3.00 re f
+BT 0.078 0.082 0.078 rg /F1 9.5 Tf 1 0 0 1 54.00 333.00 Tm (Events & auctions) Tj ET
+BT 0.078 0.082 0.078 rg /F1 9.5 Tf 1 0 0 1 275.44 333.00 Tm ($0) Tj ET
+BT 0.078 0.082 0.078 rg /F1 9.5 Tf 1 0 0 1 342.95 333.00 Tm ($1,225) Tj ET
+BT 0.078 0.082 0.078 rg /F1 9.5 Tf 1 0 0 1 428.95 333.00 Tm ($4,000) Tj ET
+BT 0.078 0.082 0.078 rg /F1 9.5 Tf 1 0 0 1 523.67 333.00 Tm ($10,000) Tj ET
+0.055 0.310 0.290 RG 1 w 54.00 325.00 m 558.00 325.00 l S
+BT 0.055 0.310 0.290 rg /F2 9 Tf 1 0 0 1 54.00 316.00 Tm (TOTAL SOFTWARE SPEND) Tj ET
+BT 0.055 0.310 0.290 rg /F2 10.5 Tf 1 0 0 1 253.89 316.00 Tm ($2,411) Tj ET
+BT 0.055 0.310 0.290 rg /F2 10.5 Tf 1 0 0 1 339.89 316.00 Tm ($9,226) Tj ET
+BT 0.055 0.310 0.290 rg /F2 10.5 Tf 1 0 0 1 420.05 316.00 Tm ($27,603) Tj ET
+BT 0.055 0.310 0.290 rg /F2 10.5 Tf 1 0 0 1 520.05 316.00 Tm ($92,069) Tj ET
+0.055 0.310 0.290 RG 1 w 54.00 308.00 m 558.00 308.00 l S
+0.85 G 0.5 w 54.00 280.00 m 558.00 280.00 l S
+BT 0.055 0.310 0.290 rg /F2 7.5 Tf 1 0 0 1 54.00 266.00 Tm (READING THESE TABLES) Tj ET
+BT 0.15 g /F1 9.5 Tf 1 0 0 1 54.00 250.00 Tm (Where the median is far below the mean, a small number of large spenders is pulling the average up and most) Tj ET
+BT 0.15 g /F1 9.5 Tf 1 0 0 1 54.00 237.00 Tm (organizations in that group spend less than the mean suggests. The gap is widest in prospect research and grant) Tj ET
+BT 0.15 g /F1 9.5 Tf 1 0 0 1 54.00 224.00 Tm (research at the smaller sizes, where the median is $0 and the mean is not: most organizations that size buy nothing,) Tj ET
+BT 0.15 g /F1 9.5 Tf 1 0 0 1 54.00 211.00 Tm (and the average is produced entirely by the few that do. Read the median, not the mean, if you are deciding whether) Tj ET
+BT 0.15 g /F1 9.5 Tf 1 0 0 1 54.00 198.00 Tm (you are behind.) Tj ET
+BT 0.15 g /F1 9.5 Tf 1 0 0 1 54.00 181.00 Tm (At the larger sizes the two measures converge, and in a few cases the median sits slightly above the mean - which) Tj ET
+BT 0.15 g /F1 9.5 Tf 1 0 0 1 54.00 168.00 Tm (means spending in that category is broadly shared rather than concentrated. Bars are scaled within each column, not) Tj ET
+BT 0.15 g /F1 9.5 Tf 1 0 0 1 54.00 155.00 Tm (across the table: spend rises so steeply with shop size that a shared scale would flatten every small-shop row to) Tj ET
+BT 0.15 g /F1 9.5 Tf 1 0 0 1 54.00 142.00 Tm (nothing and show only that larger organizations spend more, which needs no chart.) Tj ET
 0.85 G 0.5 w 54.00 56.00 m 558.00 56.00 l S
 BT 0.45 g /F1 8 Tf 1 0 0 1 54.00 42.00 Tm (https://nonprofitsoftwareguide.com/benchmarks/) Tj ET
-BT 0.45 g /F1 8 Tf 1 0 0 1 517.08 42.00 Tm (Page 2 of 2) Tj ET
+BT 0.055 0.310 0.290 rg /F2 8 Tf 1 0 0 1 542.43 42.00 Tm (2 / 3) Tj ET
 endstream
 endobj
 8 0 obj
 << /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 7 0 R >>
 endobj
 9 0 obj
+<< /Length 7209 >>
+stream
+BT 0.055 0.310 0.290 rg /F2 7.5 Tf 1 0 0 1 54.00 738.00 Tm (NONPROFIT SOFTWARE GUIDE) Tj ET
+BT 0.5 g /F1 7.5 Tf 1 0 0 1 372.08 738.00 Tm (2026 Nonprofit Fundraising Software Spend Benchmark) Tj ET
+0.055 0.310 0.290 RG 1.2 w 54.00 730.00 m 558.00 730.00 l S
+BT 0.039 0.416 0.384 rg /F2 9 Tf 1 0 0 1 54.00 706.00 Tm (04) Tj ET
+BT 0.078 0.082 0.078 rg /F2 13 Tf 1 0 0 1 74.00 706.00 Tm (Who spends nothing) Tj ET
+0.055 0.310 0.290 RG 1.6 w 54.00 699.00 m 88.00 699.00 l S
+BT 0.078 0.082 0.078 rg /F2 11.5 Tf 1 0 0 1 54.00 682.00 Tm (Share of each group reporting $0 spend) Tj ET
+BT 0.4 g /F1 8.5 Tf 1 0 0 1 54.00 668.00 Tm (The proportion of respondents in each group who spend nothing at all in that category.) Tj ET
+0.055 0.310 0.290 rg 50.00 642.00 512.00 21.00 re f
+BT 1 1 1 rg /F2 7.5 Tf 1 0 0 1 54.00 651.00 Tm (CATEGORY) Tj ET
+BT 1 1 1 rg /F2 7.5 Tf 1 0 0 1 241.81 655.00 Tm (Under $250K) Tj ET
+BT 1 1 1 rg /F1 6.5 Tf 1 0 0 1 271.36 646.50 Tm (n=55) Tj ET
+BT 1 1 1 rg /F2 7.5 Tf 1 0 0 1 329.06 655.00 Tm ($250K - $1M) Tj ET
+BT 1 1 1 rg /F1 6.5 Tf 1 0 0 1 357.36 646.50 Tm (n=28) Tj ET
+BT 1 1 1 rg /F2 7.5 Tf 1 0 0 1 422.16 655.00 Tm ($1M - $5M) Tj ET
+BT 1 1 1 rg /F1 6.5 Tf 1 0 0 1 443.36 646.50 Tm (n=12) Tj ET
+BT 1 1 1 rg /F2 7.5 Tf 1 0 0 1 539.03 655.00 Tm ($5M+) Tj ET
+BT 1 1 1 rg /F1 6.5 Tf 1 0 0 1 546.98 646.50 Tm (n=5) Tj ET
+0.561 0.749 0.729 rg 247.79 623.00 38.21 3.00 re f
+0.561 0.749 0.729 rg 320.52 623.00 51.48 3.00 re f
+0.561 0.749 0.729 rg 413.12 623.00 44.88 3.00 re f
+BT 0.078 0.082 0.078 rg /F1 9.5 Tf 1 0 0 1 54.00 627.00 Tm (Grant research) Tj ET
+BT 0.078 0.082 0.078 rg /F1 9.5 Tf 1 0 0 1 266.99 627.00 Tm (55%) Tj ET
+BT 0.078 0.082 0.078 rg /F1 9.5 Tf 1 0 0 1 352.99 627.00 Tm (39%) Tj ET
+BT 0.078 0.082 0.078 rg /F1 9.5 Tf 1 0 0 1 438.99 627.00 Tm (17%) Tj ET
+BT 0.078 0.082 0.078 rg /F1 9.5 Tf 1 0 0 1 544.27 627.00 Tm (0%) Tj ET
+0.972 g 50.00 606.50 512.00 15.00 re f
+0.561 0.749 0.729 rg 220.00 607.00 66.00 3.00 re f
+0.561 0.749 0.729 rg 306.00 607.00 66.00 3.00 re f
+0.561 0.749 0.729 rg 392.00 607.00 66.00 3.00 re f
+BT 0.078 0.082 0.078 rg /F1 9.5 Tf 1 0 0 1 54.00 611.00 Tm (Prospect research / wealth screening) Tj ET
+BT 0.078 0.082 0.078 rg /F1 9.5 Tf 1 0 0 1 266.99 611.00 Tm (95%) Tj ET
+BT 0.078 0.082 0.078 rg /F1 9.5 Tf 1 0 0 1 352.99 611.00 Tm (50%) Tj ET
+BT 0.078 0.082 0.078 rg /F1 9.5 Tf 1 0 0 1 438.99 611.00 Tm (25%) Tj ET
+BT 0.078 0.082 0.078 rg /F1 9.5 Tf 1 0 0 1 544.27 611.00 Tm (0%) Tj ET
+0.561 0.749 0.729 rg 260.99 591.00 25.01 3.00 re f
+0.561 0.749 0.729 rg 357.48 591.00 14.52 3.00 re f
+BT 0.078 0.082 0.078 rg /F1 9.5 Tf 1 0 0 1 54.00 595.00 Tm (Donor CRM) Tj ET
+BT 0.078 0.082 0.078 rg /F1 9.5 Tf 1 0 0 1 266.99 595.00 Tm (36%) Tj ET
+BT 0.078 0.082 0.078 rg /F1 9.5 Tf 1 0 0 1 352.99 595.00 Tm (11%) Tj ET
+BT 0.078 0.082 0.078 rg /F1 9.5 Tf 1 0 0 1 444.27 595.00 Tm (0%) Tj ET
+BT 0.078 0.082 0.078 rg /F1 9.5 Tf 1 0 0 1 544.27 595.00 Tm (0%) Tj ET
+0.972 g 50.00 574.50 512.00 15.00 re f
+0.561 0.749 0.729 rg 269.33 575.00 16.67 3.00 re f
+0.561 0.749 0.729 rg 353.52 575.00 18.48 3.00 re f
+BT 0.078 0.082 0.078 rg /F1 9.5 Tf 1 0 0 1 54.00 579.00 Tm (Donation processing) Tj ET
+BT 0.078 0.082 0.078 rg /F1 9.5 Tf 1 0 0 1 266.99 579.00 Tm (24%) Tj ET
+BT 0.078 0.082 0.078 rg /F1 9.5 Tf 1 0 0 1 352.99 579.00 Tm (14%) Tj ET
+BT 0.078 0.082 0.078 rg /F1 9.5 Tf 1 0 0 1 444.27 579.00 Tm (0%) Tj ET
+BT 0.078 0.082 0.078 rg /F1 9.5 Tf 1 0 0 1 544.27 579.00 Tm (0%) Tj ET
+0.561 0.749 0.729 rg 251.96 559.00 34.04 3.00 re f
+0.561 0.749 0.729 rg 344.28 559.00 27.72 3.00 re f
+0.561 0.749 0.729 rg 413.12 559.00 44.88 3.00 re f
+BT 0.078 0.082 0.078 rg /F1 9.5 Tf 1 0 0 1 54.00 563.00 Tm (Forms & other operations) Tj ET
+BT 0.078 0.082 0.078 rg /F1 9.5 Tf 1 0 0 1 266.99 563.00 Tm (49%) Tj ET
+BT 0.078 0.082 0.078 rg /F1 9.5 Tf 1 0 0 1 352.99 563.00 Tm (21%) Tj ET
+BT 0.078 0.082 0.078 rg /F1 9.5 Tf 1 0 0 1 438.99 563.00 Tm (17%) Tj ET
+BT 0.078 0.082 0.078 rg /F1 9.5 Tf 1 0 0 1 544.27 563.00 Tm (0%) Tj ET
+0.972 g 50.00 542.50 512.00 15.00 re f
+0.561 0.749 0.729 rg 250.57 543.00 35.43 3.00 re f
+0.561 0.749 0.729 rg 333.72 543.00 38.28 3.00 re f
+BT 0.078 0.082 0.078 rg /F1 9.5 Tf 1 0 0 1 54.00 547.00 Tm (Events & auctions) Tj ET
+BT 0.078 0.082 0.078 rg /F1 9.5 Tf 1 0 0 1 266.99 547.00 Tm (51%) Tj ET
+BT 0.078 0.082 0.078 rg /F1 9.5 Tf 1 0 0 1 352.99 547.00 Tm (29%) Tj ET
+BT 0.078 0.082 0.078 rg /F1 9.5 Tf 1 0 0 1 444.27 547.00 Tm (0%) Tj ET
+BT 0.078 0.082 0.078 rg /F1 9.5 Tf 1 0 0 1 544.27 547.00 Tm (0%) Tj ET
+0.8 G 0.5 w 54.00 540.00 m 558.00 540.00 l S
+BT 0.039 0.416 0.384 rg /F2 9 Tf 1 0 0 1 54.00 509.00 Tm (05) Tj ET
+BT 0.078 0.082 0.078 rg /F2 13 Tf 1 0 0 1 74.00 509.00 Tm (Methodology) Tj ET
+0.055 0.310 0.290 RG 1.6 w 54.00 502.00 m 88.00 502.00 l S
+BT 0.15 g /F1 9.5 Tf 1 0 0 1 54.00 485.00 Tm (Fielded July 2026. Population: Fundraising professionals in the United States. Online self-report survey. Respondents) Tj ET
+BT 0.15 g /F1 9.5 Tf 1 0 0 1 54.00 472.00 Tm (reported annual spend per software category for their organization. Sample size 100, distributed across four groups by) Tj ET
+BT 0.15 g /F1 9.5 Tf 1 0 0 1 54.00 459.00 Tm (annual revenue raised: Under $250K \(n=55\), $250K - $1M \(n=28\), $1M - $5M \(n=12\), $5M+ \(n=5\). Figures are) Tj ET
+BT 0.15 g /F1 9.5 Tf 1 0 0 1 54.00 446.00 Tm (self-reported and unaudited, and are rounded to the nearest dollar. Percentages are rounded to the nearest whole) Tj ET
+BT 0.15 g /F1 9.5 Tf 1 0 0 1 54.00 433.00 Tm (percent. Group sizes at the upper end are small, so the $1M-$5M and $5M+ figures should be read as indicative rather) Tj ET
+BT 0.15 g /F1 9.5 Tf 1 0 0 1 54.00 420.00 Tm (than precise. No respondent identifying information was collected.) Tj ET
+BT 0.039 0.416 0.384 rg /F2 9 Tf 1 0 0 1 54.00 397.00 Tm (06) Tj ET
+BT 0.078 0.082 0.078 rg /F2 13 Tf 1 0 0 1 74.00 397.00 Tm (Citation) Tj ET
+0.055 0.310 0.290 RG 1.6 w 54.00 390.00 m 88.00 390.00 l S
+BT 0.15 g /F1 9.5 Tf 1 0 0 1 54.00 373.00 Tm (This benchmark is free to cite and reproduce with attribution. Suggested citation:) Tj ET
+0.95 g 50.00 326.00 512.00 40.00 re f
+BT 0.2 g /F1 9 Tf 1 0 0 1 54.00 352.00 Tm (Nonprofit Software Guide, "2026 Nonprofit Fundraising Software Spend Benchmark" \(July 2026\).) Tj ET
+BT 0.2 g /F1 9 Tf 1 0 0 1 54.00 339.00 Tm (https://nonprofitsoftwareguide.com/benchmarks/) Tj ET
+BT 0.039 0.416 0.384 rg /F2 9 Tf 1 0 0 1 54.00 304.00 Tm (07) Tj ET
+BT 0.078 0.082 0.078 rg /F2 13 Tf 1 0 0 1 74.00 304.00 Tm (About this guide) Tj ET
+0.055 0.310 0.290 RG 1.6 w 54.00 297.00 m 88.00 297.00 l S
+BT 0.15 g /F1 9.5 Tf 1 0 0 1 54.00 280.00 Tm (Nonprofit Software Guide is an independent publication that reviews fundraising software and publishes recommended) Tj ET
+BT 0.15 g /F1 9.5 Tf 1 0 0 1 54.00 267.00 Tm (technology stacks by organization size. It carries affiliate links; no vendor pays for placement, and no vendor reviews) Tj ET
+BT 0.15 g /F1 9.5 Tf 1 0 0 1 54.00 254.00 Tm (content before it publishes. Full disclosure at https://nonprofitsoftwareguide.com/disclosure/.) Tj ET
+0.85 G 0.5 w 54.00 56.00 m 558.00 56.00 l S
+BT 0.45 g /F1 8 Tf 1 0 0 1 54.00 42.00 Tm (https://nonprofitsoftwareguide.com/benchmarks/) Tj ET
+BT 0.055 0.310 0.290 rg /F2 8 Tf 1 0 0 1 542.43 42.00 Tm (3 / 3) Tj ET
+endstream
+endobj
+10 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 9 0 R >>
+endobj
+11 0 obj
 << /Title (2026 Nonprofit Fundraising Software Spend Benchmark) /Author (Nonprofit Software Guide) /Subject (Annual fundraising software spend by nonprofit shop size, n=100, July 2026) /Creator (Nonprofit Software Guide) /Producer (Nonprofit Software Guide) >>
 endobj
 xref
-0 10
+0 12
 0000000000 65535 f 
 0000000009 00000 n 
 0000000058 00000 n 
-0000000121 00000 n 
-0000000218 00000 n 
-0000000320 00000 n 
-0000008555 00000 n 
-0000008691 00000 n 
-0000014050 00000 n 
-0000014186 00000 n 
+0000000128 00000 n 
+0000000225 00000 n 
+0000000327 00000 n 
+0000006249 00000 n 
+0000006385 00000 n 
+0000018757 00000 n 
+0000018893 00000 n 
+0000026154 00000 n 
+0000026291 00000 n 
 trailer
-<< /Size 10 /Root 1 0 R /Info 9 0 R >>
+<< /Size 12 /Root 1 0 R /Info 11 0 R >>
 startxref
-14462
+26568
 %%EOF
