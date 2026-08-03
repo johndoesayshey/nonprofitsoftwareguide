@@ -1,0 +1,73 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+
+// Written by the operator. Deliberately short: the page exists to be linked from
+// every "hire someone instead of buying software" recommendation on the site, so
+// it should answer "can you help me" and give the address, not sell.
+const EMAIL = 'consulting@nonprofitsoftwareguide.com';
+---
+<BaseLayout
+  title="Nonprofit software consulting"
+  description="Onboarding, adoption, training and workflow automation for nonprofit fundraising software. Fifteen years across almost every platform in the sector.">
+  <div class="wrap">
+    <Breadcrumbs crumbs={[{ label: 'Home', href: '/' }, { label: 'Consulting' }]} />
+
+    <article class="prose" style="margin-top: 1.2rem;">
+      <p class="kicker">Consulting</p>
+      <h1>Get more out of the software you have</h1>
+
+      <p class="lede">
+        Buying the tool is the easy part. Getting a team to use it, and getting
+        real value back, is where most fundraising software goes wrong.
+      </p>
+
+      <ul class="needs">
+        <li>You need to onboard new software.</li>
+        <li>You need to get true value out of the software you are already using.</li>
+        <li>You need to train people on how to use it.</li>
+        <li>You need to automate workflows to save time.</li>
+      </ul>
+
+      <p>
+        With fifteen years using almost every fundraising software out there, we
+        are here to help.
+      </p>
+
+      <div class="cta">
+        <p class="cta-line">
+          Email <a href={`mailto:${EMAIL}`}>{EMAIL}</a> and tell us a little
+          about your project.
+        </p>
+        <p class="cta-btn">
+          <a class="btn-primary" href={`mailto:${EMAIL}?subject=${encodeURIComponent('Consulting enquiry')}`}>
+            Start the conversation
+          </a>
+        </p>
+      </div>
+
+      <p class="note">
+        Consulting is separate from the guide. Recommendations on this site are
+        not influenced by consulting work, and we do not resell, implement on
+        commission, or take a fee from any vendor for a referral.
+      </p>
+    </article>
+  </div>
+</BaseLayout>
+
+<style>
+  .needs { list-style: none; padding: 0; margin: 1.6rem 0; max-width: 40rem; }
+  .needs li { position: relative; padding: .7rem 0 .7rem 1.6rem; font-size: 1.05rem;
+    border-bottom: 1px solid var(--color-rule); }
+  .needs li:last-child { border-bottom: 0; }
+  .needs li::before { content: '→'; position: absolute; left: 0; color: var(--color-green-deep);
+    font-weight: 700; }
+
+  .cta { border: 2px solid var(--color-ink); border-radius: 3px; background: var(--color-paper-2);
+    padding: 1.3rem 1.4rem; margin: 2rem 0 1.4rem; max-width: 40rem; }
+  .cta-line { margin: 0 0 1rem; font-size: 1.05rem; }
+  .cta-btn { margin: 0; }
+
+  .note { font-size: .86rem; color: var(--color-muted); max-width: 40rem;
+    padding-left: .9rem; border-left: 2px solid var(--color-rule); }
+</style>

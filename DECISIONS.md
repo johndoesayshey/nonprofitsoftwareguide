@@ -505,3 +505,25 @@ Collecting identifying data needs that promise on the page next to the fields.
 
 **Scope note.** CLAUDE.md ruled out lead forms. Amended rather than ignored: this collects
 survey responses, not marketing contacts, and the amendment says not to extend it.
+
+## 2026-08-03 — Consulting page; researched pricing for quote-only products
+
+**Every quote-only product now carries a price ladder.** DonorSearch, WealthEngine, Greater
+Giving, OneCause and Neon CRM previously showed "quote-based" or a bare entry price. Ranges are
+researched from buyer guides and aggregator reports and are labelled "reported" in the note
+column, matching the convention already used for Kindsight. Neon was verified directly on its
+live pricing page and had genuinely changed: revenue-based, not record-count, unlimited
+contacts and users, from $99/mo, with modules adding 10-20% of the CRM fee. Body copy corrected.
+
+**`/consulting/` exists and is the destination for every "hire someone instead" recommendation.**
+The operator does this work directly, so the advisory lines in the stack ledgers, the
+ConsultantSlot card, the wealth-screening category page and the About page all link to it. The
+"introductions open later this year" holding text is gone.
+
+Deliberately short — it exists to answer "can you help me" and give an address, not to sell.
+Contact is consulting@nonprofitsoftwareguide.com.
+
+**One line added that the operator did not ask for**, because the site's credibility depends on
+it: consulting is stated as separate from the guide, with no vendor referral fees and no
+influence on recommendations. A review site whose author also sells implementation needs that
+said out loud, and saying it plainly costs nothing.

@@ -78,7 +78,7 @@ const verified = formatMedium(s.lastVerified);
               <td>{categoryLabel(c.category)}</td>
               <td>
                 {c.advisory || !c.platformSlug ? (
-                  <span class="line-name">{c.label ?? 'No software yet'}</span>
+                  <a class="line-name" href="/consulting/">{c.label ?? 'No software yet'}</a>
                 ) : (
                   <a href={`/platforms/${c.platformSlug}/`}>{c.label ?? platformName.get(c.platformSlug) ?? c.platformSlug}</a>
                 )}
@@ -134,4 +134,5 @@ const verified = formatMedium(s.lastVerified);
   /* A line with no product still belongs in the ledger, but it should not read
      like a recommendation to buy something. */
   .advisory .line-name { font-weight: 700; color: var(--color-muted); }
+  .advisory a.line-name:hover { color: var(--color-green-deep); }
 </style>
