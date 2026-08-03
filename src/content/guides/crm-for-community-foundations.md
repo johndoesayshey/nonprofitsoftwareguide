@@ -5,7 +5,7 @@ category: donor-crm
 audience: community foundations
 targetQuery: "donor management software for community foundations"
 lastVerified: 2026-08-03
-answer: "Community foundations need fund accounting before they need a donor CRM — donor-advised funds, restricted funds and grantmaking all require a general ledger a donor database does not have. Aplos handles real fund accounting from $79/mo; a donor CRM sits alongside it for the fundraising half."
+answer: "Community foundations need two systems, and the order matters: fund accounting first, because donor-advised and restricted funds need a general ledger no donor CRM has, then a CRM for the fundraising half. Below, Aplos covers the accounting from $79/mo and DonorDock the relationships from about $98/mo."
 picks:
   - platformSlug: aplos
     award: "Best for the accounting half"

@@ -54,6 +54,9 @@ const after = [
           Software<span class="caret" aria-hidden="true">▾</span>
         </summary>
         <ul>
+          <li class="nav-menu-top">
+            <a href="/best/" aria-current={section === 'best' ? 'page' : undefined}>Best of</a>
+          </li>
           {categories.map((c) => (
             <li>
               <a href={c.href} aria-current={section === c.key ? 'page' : undefined}>{c.label}</a>

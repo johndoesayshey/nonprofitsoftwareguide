@@ -56,7 +56,7 @@ That is not a reason to rule Bonterra out. Fundraising and Engagement is a stron
 
 Two pricing mechanics worth knowing before you negotiate, both documented rather than rumoured. Pricing improves with renewal length, which means a one-year term is priced as a penalty. And Guided Fundraising prices on contact count with a break that arrives early — a reviewer in December 2025 described the increase at **501 contacts** as too low a threshold. Price your own list against that before the call.
 
-Nothing else is published. Figures circulating elsewhere — "$109 per feature monthly," "$3,588 a year over a 15-month contract" — trace back to no primary source, so we are not repeating them. Our [Bonterra write-up](/platforms/bonterra/) has the detail, and [what nonprofit software actually costs](/pricing/) has every price we hold across the sector.
+Nothing else is published. Figures circulating elsewhere — "$109 per feature monthly," "$3,588 a year over a 15-month contract" — trace back to no primary source, so we are not repeating them. Our [Bonterra write-up](/platforms/bonterra/) has the detail, and [what nonprofit software actually costs](/compare/) has every price we hold across the sector.
 
 ## What this means if you are a Salsa refugee
 

@@ -23,10 +23,6 @@ picks:
     award: "Best screening for a campaign"
     forWhom: "A foundation preparing a capital campaign with a defined prospect list"
     note: "Reported from around $4,150/yr for one user and roughly 1,500 screens, with a Professional tier reported near $5,350/yr. Hospital foundations are one of the few verticals where screening genuinely pays, because capacity varies enormously across a community donor base. The constraint is legal rather than technical — be certain which lists you are permitted to screen before you buy any volume."
-  - platformSlug: blackbaud
-    award: "Best at enterprise scale"
-    forWhom: "A foundation past roughly $10M raised with a database administrator"
-    note: "Quote-only; Vendr's dataset puts the median Blackbaud contract at about $20,417/yr. The depth on planned giving and complex constituent relationships is real, and above $10M with a dedicated administrator it earns its price. Two things to know before signing: contracts auto-renew on a standard three-year term with a 45-day notice window, and the legacy database view is being retired with support ending in the first half of 2027."
 decidingFactors:
   - factor: "HIPAA governs the referral, not the software."
     detail: "Patient information cannot move freely into fundraising, and the rules on what a foundation may receive, from whom, and with what opt-out are the binding constraint. Settle the compliance process with your privacy officer before you evaluate any system — the software question is downstream and much easier."
@@ -73,6 +69,21 @@ A school knows its families. A membership organization knows its members. A hosp
 Our 2026 survey puts mean prospect research spend at $1,319 for organizations raising $250K–$1M and $4,135 at $1M–$5M. The test is the same as everywhere: does someone own major gifts, and is that person's calendar going to hold the visits? If not, the scores are decoration.
 
 And check first which lists you are permitted to screen. Screening a patient-derived list you were not entitled to use is a compliance failure, not a data project.
+
+## The enterprise question
+
+Past roughly $10M raised with a dedicated database administrator, [Blackbaud
+Raiser's Edge NXT](/platforms/blackbaud/) is genuinely hard to replace — the depth
+on planned giving and complex constituent relationships is real, and at that size
+it earns its price. We don't shortlist it above, because it publishes no pricing
+and its typical contract sits far outside what this guide's readers are budgeting.
+
+Two things to know before signing one, if you are at that size. Contracts
+auto-renew on a standard three-year term with a 45-day notice window, so diarize
+that date the day you sign. And the legacy database view is being retired, with
+support ending in the first half of 2027 — meaning anyone buying now is buying
+into a mid-migration product. Vendr's dataset puts the median Blackbaud contract
+at about $20,417 a year.
 
 ## Employee giving distorts your numbers
 
