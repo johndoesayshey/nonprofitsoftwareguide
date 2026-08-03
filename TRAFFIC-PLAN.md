@@ -364,17 +364,35 @@ The gap in the current 105 pages is buyer-intent commercial queries. Only one
 of 15 posts targets a pricing or alternatives query.
 
 1. ~~**"[Product] alternatives" cluster** — 6–8 pages.~~ **DONE 2026-08-03.**
-   Eleven pages shipped at `/alternatives/<slug>/`, plus an index at
+   Thirteen pages shipped at `/alternatives/<slug>/`, plus an index at
    `/alternatives/`, linked from the footer and the top of `/compare/`.
    Own content collection with its own schema (`reasonsToLeave`, `picks`,
-   `stayIf`) so the shape is enforced rather than remembered. Covers Blackbaud
-   Raiser's Edge NXT, DonorPerfect, Salesforce for Nonprofits, Bloomerang,
-   Little Green Light, Classy, Givebutter, Donorbox, Instrumentl, Candid
-   Foundation Directory, iWave/Kindsight. Every page carries a real price ladder
-   for each recommendation, a survey-derived spend benchmark, and a migration
-   section (recurring-donor re-enrollment on the processing pages, soft-credit
-   and household-record fidelity on the CRM pages). `stayIf` is on every page
-   deliberately — a switching guide that never says "stay" reads as a sales page.
+   `stayIf`) so the shape is enforced rather than remembered.
+
+   - **Donor CRM** — Blackbaud Raiser's Edge NXT, DonorPerfect, Salesforce for
+     Nonprofits, Bloomerang, Little Green Light
+   - **Donation processing** — Classy, Givebutter, Donorbox
+   - **Prospect research** — iWave/Kindsight, DonorSearch, WealthEngine (all
+     three; the category earns no commission and is covered for topical
+     authority and search traffic, per the CLAUDE.md weighting)
+   - **Grant research** — Candid Foundation Directory, GrantStation
+
+   Deliberately **no Instrumentl alternatives page.** It is the only grant
+   research product with a live program, so it is the destination in that
+   category, not the thing readers get routed away from. Candid and GrantStation
+   both recommend it first.
+
+   Pick order is sorted at render time by `valueOf()` from `affiliate-value.ts` —
+   the same rule the Software menu, category hubs and comparison index use.
+   Hand-ordered frontmatter drifts; this can't. Ties keep authored order so
+   editorial judgment still decides between two products worth the same.
+
+   Every page carries a real price ladder for each recommendation, a
+   survey-derived spend benchmark, and a migration section (recurring-donor
+   re-enrollment on the processing pages, soft-credit and household-record
+   fidelity on the CRM pages, "screen a file you can verify" on the prospect
+   pages). `stayIf` is on every page deliberately — a switching guide that never
+   says "stay" reads as a sales page.
 
    Still open in this workstream: pages for products we don't yet cover
    (Kindful, Virtuous, CharityEngine, Funraise, Network for Good) are blocked on

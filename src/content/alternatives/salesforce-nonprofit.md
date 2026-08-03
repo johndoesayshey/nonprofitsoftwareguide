@@ -15,12 +15,12 @@ reasonsToLeave:
   - reason: "Platform changes land on your calendar, not yours."
     detail: "Migrations between Salesforce's own nonprofit data models are real projects. Shops that don't have a partner on retainer feel these as unplanned expense."
 picks:
-  - platformSlug: bloomerang
-    forWhom: "You want a fundraising system, not a platform"
-    note: "Bloomerang does out of the box what a Salesforce nonprofit build takes a partner engagement to produce: donor records, gift history, retention reporting and email in one place. $79/mo at roughly 1,000 contacts, about $125/mo at Standard, unlimited users. You lose extensibility — if you have custom program-delivery data, case management or grant-outcome tracking living in Salesforce, that does not have a home here. For a shop whose Salesforce org only holds donors and gifts, that loss is theoretical."
   - platformSlug: donordock
     forWhom: "Nobody on staff wants to be a system administrator"
     note: "Flat tiers with unlimited contacts — about $98/mo Entry, $300/mo Grow, $585/mo Amplify — and no configuration project standing between you and a working database. The ActionBoard is the daily-use surface: who to thank, who to call, what's overdue. Ninety-day money-back guarantee, and a reader discount through this site."
+  - platformSlug: bloomerang
+    forWhom: "You want a fundraising system, not a platform"
+    note: "Bloomerang does out of the box what a Salesforce nonprofit build takes a partner engagement to produce: donor records, gift history, retention reporting and email in one place. $79/mo at roughly 1,000 contacts, about $125/mo at Standard, unlimited users. You lose extensibility — if you have custom program-delivery data, case management or grant-outcome tracking living in Salesforce, that does not have a home here. For a shop whose Salesforce org only holds donors and gifts, that loss is theoretical."
   - platformSlug: neoncrm
     forWhom: "You need breadth without an integration project"
     note: "From $99/mo, priced by organizational revenue and reported to about $409/mo at the top of the published band, with unlimited users and records. Memberships add roughly 10% of the CRM fee, volunteers 10%, events 20%. If your Salesforce org exists mainly because you needed memberships plus events plus donations in one system, Neon carries all three natively and you can stop maintaining connectors."

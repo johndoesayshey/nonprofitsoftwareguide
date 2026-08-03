@@ -6,7 +6,7 @@ import AffiliateDisclosure from '../../components/AffiliateDisclosure.astro';
 import ReaderOffer from '../../components/ReaderOffer.astro';
 import DraftBanner from '../../components/DraftBanner.astro';
 import { categoryLabel, CATEGORIES } from '../../lib/categories';
-import { relFor } from '../../lib/affiliate-value';
+import { relFor, valueOf } from '../../lib/affiliate-value';
 import { formatMedium } from '../../lib/dates';
 
 export async function getStaticPaths() {
@@ -24,7 +24,16 @@ const bySlug = new Map(allPlatforms.map((p) => [p.data.slug, p.data]));
 const cat = CATEGORIES[a.category];
 
 // Only recommend products we actually cover, so no pick dead-ends.
-const picks = a.picks.filter((p) => bySlug.has(p.platformSlug));
+// Ordering is by affiliate value, the same rule the Software menu, the category
+// hubs and the comparison index use — enforced here rather than left to whatever
+// order the frontmatter happens to be in, because hand-ordering drifts. Ties
+// keep the authored order, so editorial judgment still decides between two
+// products worth the same.
+const picks = a.picks
+  .filter((p) => bySlug.has(p.platformSlug))
+  .map((p, i) => ({ p, i, v: valueOf(bySlug.get(p.platformSlug)!.affiliateSlug) }))
+  .sort((x, y) => y.v - x.v || x.i - y.i)
+  .map((x) => x.p);
 
 const site = Astro.site ?? new URL('https://nonprofitsoftwareguide.com');
 const itemListLd = {

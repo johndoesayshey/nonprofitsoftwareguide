@@ -15,12 +15,12 @@ reasonsToLeave:
   - reason: "Add-ons are priced separately."
     detail: "Online giving, email, events and analytics arrive as their own line items. The subscription is rarely the whole invoice."
 picks:
-  - platformSlug: bloomerang
-    forWhom: "You raise $1M–$5M and want reporting your board understands"
-    note: "Bloomerang is the closest honest peer for a shop leaving Raiser's Edge with a real major-gifts program. Pricing is by contact-record count with unlimited users — $79/mo at roughly 1,000 contacts, about $125/mo at Standard, scaling from there — so adding staff, board members or volunteers costs nothing. The retention dashboards are the part that changes behaviour: they put lapsing donors on the home screen instead of behind a query. You lose Raiser's Edge's depth on planned giving and complex constituent relationships. Most shops under $5M never used that depth."
   - platformSlug: donordock
     forWhom: "You have no database administrator and never will"
     note: "DonorDock prices in flat tiers — about $98/mo Entry, $300/mo Grow, $585/mo Amplify — with unlimited contacts at every tier, which is the direct answer to record-count bill creep. The ActionBoard turns the database into a daily follow-up list rather than a reporting tool, which matters when the person running the CRM is also writing the appeal and staffing the gala. There is a 90-day money-back guarantee, so the migration decision is reversible."
+  - platformSlug: bloomerang
+    forWhom: "You raise $1M–$5M and want reporting your board understands"
+    note: "Bloomerang is the closest honest peer for a shop leaving Raiser's Edge with a real major-gifts program. Pricing is by contact-record count with unlimited users — $79/mo at roughly 1,000 contacts, about $125/mo at Standard, scaling from there — so adding staff, board members or volunteers costs nothing. The retention dashboards are the part that changes behaviour: they put lapsing donors on the home screen instead of behind a query. You lose Raiser's Edge's depth on planned giving and complex constituent relationships. Most shops under $5M never used that depth."
   - platformSlug: neoncrm
     forWhom: "Memberships or events are a real part of your model"
     note: "Neon CRM prices by organizational revenue — from $99/mo, reported to roughly $409/mo at the top of the published band — with unlimited users and records. Memberships add about 10% of the CRM fee, volunteers another 10%, events about 20%. That module structure will feel familiar coming from Blackbaud, but the base is materially cheaper and the add-on percentages are published."

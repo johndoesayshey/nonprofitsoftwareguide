@@ -18,15 +18,15 @@ picks:
   - platformSlug: 4agoodcause
     forWhom: "You want a fee that doesn't depend on donor behaviour"
     note: "Flat subscription, no percentage taken from donations: $99/mo Grassroots ($1,188/yr), $249/mo Growth ($2,988/yr), $429/mo Scale ($5,148/yr). Every tier published. You know the number in January and it's still the number in December. Built around monthly giving, with recurring pages, donor records and a campaign builder in one tool, and the first month is free. Past roughly $40,000 a year in online giving it also beats a ~3% fee outright."
+  - platformSlug: donordock
+    forWhom: "The real gap is that you have no donor database"
+    note: "If what you're missing is relationship history rather than a cheaper checkout, the answer isn't another giving platform. DonorDock runs about $98/mo Entry, $300/mo Grow, $585/mo Amplify with unlimited contacts, and holds soft credits, household records and follow-up tasks. Plenty of shops keep Givebutter for checkout and add a CRM behind it — that's a legitimate stack, not a failure."
   - platformSlug: donorbox
     forWhom: "Monthly giving is where your growth is"
     note: "Free to start at roughly 2.95%, no subscription; Pro at about $150/mo drops the rate to roughly 1.75% and pays for itself past around $150k. The recurring-gift management is the strongest in its price class — donor portals, failed-card recovery, upgrade prompts — which is precisely the gap in a free platform. Attribution is link-only, so use the link here if you go this route."
   - platformSlug: zeffy
     forWhom: "You want the free model without the 3% fallback"
     note: "Free at any volume, and unlike Givebutter it absorbs processing fees too — a $100 gift deposits $100. Covers donations, ticketing, raffles and memberships. It runs the same donor-tip economics, so the same caveat applies; the difference is there's no 3% tier to fall back to, and no processing cut either."
-  - platformSlug: donordock
-    forWhom: "The real gap is that you have no donor database"
-    note: "If what you're missing is relationship history rather than a cheaper checkout, the answer isn't another giving platform. DonorDock runs about $98/mo Entry, $300/mo Grow, $585/mo Amplify with unlimited contacts, and holds soft credits, household records and follow-up tasks. Plenty of shops keep Givebutter for checkout and add a CRM behind it — that's a legitimate stack, not a failure."
 stayIf: "Events and peer-to-peer are core to how you raise money, and your donors leave the tips on. Givebutter's ticketing, auctions and campaign pages are the most capable free package in the sector, and no paid platform on this page replaces that combination without costing you more. Check your actual tip rate in the dashboard before you shop — if it's high, you're getting a genuinely free platform and there's nothing to fix."
 draft: false
 ---
