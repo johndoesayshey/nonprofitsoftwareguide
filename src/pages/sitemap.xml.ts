@@ -14,7 +14,7 @@ export async function GET(context: APIContext) {
 
   // Static hubs that are always indexable — one per nav section.
   for (const p of [
-    '/', '/platforms/', '/compare/', '/alternatives/', '/best/', '/blog/', '/consulting/', '/about/',
+    '/', '/platforms/', '/compare/', '/alternatives/', '/best/', '/pricing/', '/blog/', '/consulting/', '/about/',
     '/grant-research/', '/wealth-screening/', '/donor-crm/',
     '/donation-processing/', '/events/', '/forms-operations/',
   ]) {

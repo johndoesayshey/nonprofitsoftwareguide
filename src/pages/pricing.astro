@@ -1,0 +1,253 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import AffiliateDisclosure from '../components/AffiliateDisclosure.astro';
+import { CATEGORIES } from '../lib/categories';
+import { valueOf, categoryValue, relFor } from '../lib/affiliate-value';
+import { formatMedium } from '../lib/dates';
+import survey from '../data/survey-2026.json';
+
+// The link-magnet asset CLAUDE.md asks for: every price we have, in one place,
+// dated, with the quote-only products carrying real reported ranges rather than
+// "contact us". Everything is derived from the platform collection, so this page
+// can never drift out of sync with the product pages.
+const platforms = (await getCollection('platforms'))
+  .filter((p) => p.data.draft === false)
+  .map((p) => p.data);
+
+const grouped = Object.values(CATEGORIES)
+  .map((cat) => {
+    const items = platforms
+      .filter((p) => p.category === cat.slug || p.alsoIn?.includes(cat.slug as any))
+      .sort((a, b) => valueOf(b.affiliateSlug) - valueOf(a.affiliateSlug) || a.name.localeCompare(b.name));
+    const slugs = items.map((p) => p.affiliateSlug).filter(Boolean) as string[];
+    return { cat, items, value: categoryValue(slugs) };
+  })
+  .filter((g) => g.items.length > 0)
+  .sort((a, b) => b.value - a.value);
+
+// Most recent price check across the whole table — the honest "as of" date.
+const newest = platforms.reduce(
+  (acc, p) => (p.lastVerified > acc ? p.lastVerified : acc),
+  platforms[0].lastVerified
+);
+// "Publishes a rate card" is not the same as "we have tiers for it" — several
+// quote-only products carry tiers here because we researched reported ranges.
+// pricingBasis is the honest signal.
+const quoteOnly = platforms.filter((p) => /quot|reported/i.test(p.pricingBasis ?? ''));
+const published = platforms.length - quoteOnly.length;
+
+const site = Astro.site ?? new URL('https://nonprofitsoftwareguide.com');
+const datasetLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Dataset',
+  name: 'Nonprofit fundraising software pricing reference, 2026',
+  description:
+    `Published price ladders and reported price ranges for ${platforms.length} nonprofit fundraising ` +
+    `software products across ${grouped.length} categories, with the date each was last verified.`,
+  url: new URL('/pricing/', site).href,
+  dateModified: newest.toISOString(),
+  isAccessibleForFree: true,
+  license: 'https://creativecommons.org/licenses/by/4.0/',
+  creator: { '@type': 'Organization', name: 'Nonprofit Software Guide' },
+};
+---
+<BaseLayout
+  title="What nonprofit fundraising software actually costs"
+  description={`Published price ladders and researched price ranges for ${platforms.length} nonprofit fundraising products — including the quote-only vendors that publish nothing. Every figure dated.`}
+  section="pricing">
+  <div class="wrap">
+    <Breadcrumbs crumbs={[{ label: 'Home', href: '/' }, { label: 'Pricing' }]} />
+
+    <article class="prose pricing-page" style="margin-top: 1.2rem; max-width: none;">
+      <p class="kicker">Reference</p>
+      <h1>What nonprofit fundraising software actually costs</h1>
+
+      <p class="answer">
+        Every price we have for {platforms.length} products, in one table. {published} publish
+        a rate card. The other {quoteOnly.length} publish nothing, and for those we
+        carry researched ranges from what buyers report paying rather than the word
+        "custom." Each figure is dated. Free to cite with a link.
+      </p>
+
+      <p class="verified-row">
+        <span class="verified">Last price check {formatMedium(newest)}</span>
+      </p>
+
+      <AffiliateDisclosure />
+
+      <section class="context">
+        <h2>What your peers actually spend</h2>
+        <p>
+          List prices are one thing, budgets another. These are means from our
+          <a href="/benchmarks/">2026 survey of {survey.sampleSize} U.S. fundraising
+          professionals</a> — total annual software spend across every category:
+        </p>
+        <div class="table-scroll">
+          <table class="spend">
+            <thead>
+              <tr>
+                <th scope="col">Category</th>
+                {survey.segments.map((s) => <th scope="col" class="num-head">{s.label}</th>)}
+              </tr>
+            </thead>
+            <tbody>
+              {survey.categories.map((c) => (
+                <tr>
+                  <th scope="row"><a href={c.path}>{c.label}</a></th>
+                  {survey.segments.map((s) => (
+                    <td class="num">${(survey as any).mean[c.slug][s.slug].toLocaleString()}</td>
+                  ))}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <p class="table-note">
+          Sample sizes: {survey.segments.map((s) => `${s.label} n=${s.n}`).join(', ')}.
+          If a quote lands well above the band for your size, the burden of proof
+          is on the vendor.
+        </p>
+      </section>
+
+      <h2>Every price, by category</h2>
+
+      {grouped.map((g) => (
+        <section class="cat-block">
+          <h3>{g.cat.path ? <a href={g.cat.path}>{g.cat.label}</a> : g.cat.label}</h3>
+          <div class="table-scroll">
+            <table class="prices">
+              <colgroup>
+                <col class="c-tool" /><col class="c-ladder" /><col class="c-basis" /><col class="c-date" />
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col">Product</th>
+                  <th scope="col">Price ladder</th>
+                  <th scope="col">Priced on</th>
+                  <th scope="col">Checked</th>
+                </tr>
+              </thead>
+              <tbody>
+                {g.items.map((p) => (
+                  <tr>
+                    <th scope="row">
+                      <a href={`/platforms/${p.slug}/`}>{p.name}</a>
+                      {p.freeTier && <span class="free">free tier</span>}
+                    </th>
+                    <td>
+                      {p.pricingTiers.length > 0 ? (
+                        <ul class="ladder">
+                          {p.pricingTiers.map((t) => (
+                            <li>
+                              <span class="t-name">{t.tier}</span>
+                              <span class="t-price">{t.price}</span>
+                              {t.note && <span class="t-note">{t.note}</span>}
+                            </li>
+                          ))}
+                        </ul>
+                      ) : (
+                        <span class="t-price">{p.entryPrice}</span>
+                      )}
+                    </td>
+                    <td class="basis">{p.pricingBasis ?? p.pricingModel}</td>
+                    <td class="date">{formatMedium(p.lastVerified)}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </section>
+      ))}
+
+      <section class="method">
+        <h2>How these figures were gathered</h2>
+        <p>
+          Where a vendor publishes a rate card, we use it and link to the product
+          page. {quoteOnly.length} of the {platforms.length} products here publish
+          nothing at all. For those we carry ranges assembled from what buyers and
+          reviewers reported paying in the last three years, and we say on the
+          product page which figures are vendor-published and which are reported.
+        </p>
+        <p>
+          Where we could not source a defensible figure, the product page says so
+          instead of printing a range. Several widely circulated numbers in this
+          category trace back only to roundup posts citing each other, and a made-up
+          range is worse than an honest gap because a buyer budgets against it.
+        </p>
+        <p>
+          Prices move. Every row carries the date it was last checked, and anything
+          over 90 days old is flagged for re-verification on our side.
+        </p>
+      </section>
+
+      <section class="cite">
+        <h2>Citing this page</h2>
+        <p>
+          Free to use with attribution and a link. Suggested citation:
+        </p>
+        <p class="cite-block">
+          Nonprofit Software Guide, <em>What nonprofit fundraising software actually
+          costs</em>, {formatMedium(newest)}. https://nonprofitsoftwareguide.com/pricing/
+        </p>
+        <p>
+          The underlying spend benchmark, including medians and the share of
+          organizations reporting $0 per category, is on the
+          <a href="/benchmarks/">benchmark page</a> and in a
+          <a href="/2026-nonprofit-software-spend-survey.pdf">downloadable PDF</a>.
+        </p>
+      </section>
+    </article>
+  </div>
+
+  <script type="application/ld+json" slot="head" set:html={JSON.stringify(datasetLd)} is:inline />
+</BaseLayout>
+
+<style>
+  .pricing-page > p, .pricing-page > h1, .pricing-page > h2 { max-width: 46rem; }
+  .answer { font-size: 1.12rem; line-height: 1.55; border-left: 4px solid var(--color-green-deep);
+    padding-left: 1rem; margin: 1rem 0 1.1rem; }
+  .verified-row { margin: 0 0 1.2rem; }
+  .context > p, .method > p, .cite > p { max-width: 46rem; }
+
+  .table-scroll { overflow-x: auto; margin: .9rem 0 1.4rem; }
+  table { width: 100%; border-collapse: collapse; font-size: .9rem; }
+  table th, table td { text-align: left; padding: .55rem .7rem; vertical-align: top;
+    border-bottom: 1px solid var(--color-rule); }
+  thead th { font-size: .66rem; letter-spacing: .08em; text-transform: uppercase;
+    font-weight: 800; color: var(--color-muted); border-bottom: 2px solid var(--color-ink); }
+  tbody th a { font-weight: 800; text-decoration: none; color: var(--color-ink); }
+  tbody th a:hover { color: var(--color-green-deep); text-decoration: underline; }
+
+  table.spend { min-width: 40rem; }
+  .num-head, .num { text-align: right; font-variant-numeric: tabular-nums; }
+  .num { font-weight: 700; color: var(--color-green-deep); }
+
+  table.prices { min-width: 46rem; table-layout: fixed; }
+  table.prices col.c-tool { width: 20%; } table.prices col.c-ladder { width: 42%; }
+  table.prices col.c-basis { width: 24%; } table.prices col.c-date { width: 14%; }
+  .free { display: block; font-family: var(--font-mono); font-size: .6rem; letter-spacing: .08em;
+    text-transform: uppercase; color: var(--color-green-deep); font-weight: 700; margin-top: .15rem; }
+  .basis { color: var(--color-muted); font-size: .85rem; }
+  .date { color: var(--color-muted); font-size: .8rem; white-space: nowrap; }
+
+  .ladder { list-style: none; margin: 0; padding: 0; font-size: .85rem; line-height: 1.35; }
+  .ladder li { display: grid; grid-template-columns: 1fr auto; column-gap: .6rem;
+    padding: .15rem 0; border-bottom: 1px dotted var(--color-rule); }
+  .ladder li:last-child { border-bottom: 0; }
+  .t-name { color: var(--color-muted); }
+  .t-price { font-weight: 700; color: var(--color-green-deep); white-space: nowrap; }
+  .t-note { grid-column: 1 / -1; font-size: .92em; color: var(--color-muted); opacity: .85; }
+
+  .cat-block { margin: 1.8rem 0; }
+  .cat-block h3 { font-size: 1.05rem; padding-bottom: .35rem;
+    border-bottom: 2px solid var(--color-ink); max-width: none; }
+  .cat-block h3 a { text-decoration: none; color: var(--color-ink); }
+  .cat-block h3 a:hover { color: var(--color-green-deep); }
+
+  .table-note { color: var(--color-muted); font-size: .85rem; max-width: 46rem; }
+  .method, .cite { margin-top: 2.4rem; padding-top: 1.2rem; border-top: 2px solid var(--color-ink); }
+  .cite-block { font-family: var(--font-mono); font-size: .82rem; background: var(--color-paper-2);
+    border-left: 3px solid var(--color-green); padding: .8rem 1rem; border-radius: 3px; }
+</style>
