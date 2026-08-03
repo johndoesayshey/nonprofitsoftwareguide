@@ -42,6 +42,29 @@ for a mailbox on the domain or configure Gmail "Send mail as" with an SMTP
 relay. Managed under Cloudflare → Email Routing, in the johndoesayshey@gmail.com
 account.
 
+## Search, analytics and crawler settings
+
+**Google Search Console** — verified 2026-08-03 as a *Domain* property (covers
+www and non-www, http and https) under **nonprofitsoftwareguide@gmail.com**.
+Sitemap submitted; 75 pages discovered.
+
+> **Do not delete the TXT record starting `google-site-verification=EE5b3lDD_`**
+> on the root of the domain in Cloudflare DNS. Removing it un-verifies the
+> property and you lose all Search Console data and access.
+
+**AI crawlers** — Cloudflare → AI Crawl Control. The master "Block AI Bots"
+setting is *Do not block*, so the per-crawler list is what governs.
+Allowed: GPTBot, ClaudeBot, Claude-User, CCBot, Google-CloudVertexBot, plus every
+live search bot (ChatGPT-User, OAI-SearchBot, Claude-SearchBot, PerplexityBot,
+BingBot, Googlebot).
+Blocked: Amazonbot, Anchor Browser, Arquivo, Bytespider, FacebookBot,
+Meta-ExternalAgent, Novellum, PetalBot, TikTok Spider, Timpibot.
+Cloudflare's Managed robots.txt is **off**, so `public/robots.txt` in this repo
+is what actually serves.
+
+**Still to set up:** Bing Webmaster Tools and GA4. Both require creating an
+account and accepting terms, which has to be done by a person.
+
 ## Editing text visually (no typing file names)
 
 ```bash
