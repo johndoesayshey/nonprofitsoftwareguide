@@ -4,6 +4,7 @@ description: "Zeffy charges nothing and runs on donor tips. Donorbox charges abo
 publishDate: 2026-04-08
 updatedDate: 2026-08-03
 stack: under-250k
+category: donation-processing
 targetQuery: "zeffy vs donorbox fees"
 platformsMentioned: [zeffy, donorbox]
 affiliateSlugs: [donorbox, zeffy]

@@ -4,6 +4,7 @@ description: "A repeatable 20-minute check that tells you whether a foundation i
 publishDate: 2026-04-22
 updatedDate: 2026-08-03
 stack: 250k-1m
+category: grant-research
 targetQuery: "how to research a foundation before applying"
 platformsMentioned: [instrumentl, candid]
 affiliateSlugs: [instrumentl]

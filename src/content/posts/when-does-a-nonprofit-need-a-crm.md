@@ -4,6 +4,7 @@ description: "The real triggers: more than about 200 active donors, a second sta
 publishDate: 2026-04-29
 updatedDate: 2026-08-03
 stack: 250k-1m
+category: donor-crm
 targetQuery: "when does a nonprofit need a crm"
 platformsMentioned: [littlegreenlight, donordock, givebutter]
 affiliateSlugs: [donordock]

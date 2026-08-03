@@ -4,6 +4,7 @@ description: "Which parts of a foundation's 990-PF matter for prospect research,
 publishDate: 2026-02-24
 updatedDate: 2026-08-03
 stack: 1m-5m
+category: grant-research
 targetQuery: "how to read a 990 for prospecting"
 platformsMentioned: [candid, instrumentl]
 affiliateSlugs: [instrumentl]

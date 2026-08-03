@@ -3,6 +3,7 @@ title: "Wealth screening on a budget: what to do before you can afford it"
 description: "Hand research substitutes for a screening platform longer than vendors admit: giving lists, 990s, property records, and a top-25 prospect routine that works."
 publishDate: 2026-06-24
 stack: 250k-1m
+category: prospect-research
 targetQuery: "wealth screening alternatives small nonprofit"
 platformsMentioned: [donorsearch, kindsight]
 affiliateSlugs: [donorsearch]

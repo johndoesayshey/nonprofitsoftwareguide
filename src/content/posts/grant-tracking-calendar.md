@@ -3,6 +3,7 @@ title: "How to build a grant calendar a two-person team can keep"
 description: "How to build a grant tracking calendar a two-person team can actually keep: six columns, a weekly review, and the signals that you need software."
 publishDate: 2026-07-01
 stack: 250k-1m
+category: grant-research
 targetQuery: "how to build a grant tracking calendar"
 platformsMentioned: [instrumentl, jotform]
 affiliateSlugs: [instrumentl, jotform]

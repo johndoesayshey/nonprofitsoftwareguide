@@ -4,6 +4,7 @@ description: "Decline letters say the same thing every time. The real reasons ar
 publishDate: 2026-08-03
 updatedDate: 2026-08-03
 stack: 250k-1m
+category: grant-research
 targetQuery: "why was our grant declined nonprofit"
 platformsMentioned: [candid, instrumentl, grantstation]
 affiliateSlugs: [candid, instrumentl]

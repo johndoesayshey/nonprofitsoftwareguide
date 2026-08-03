@@ -3,6 +3,7 @@ title: "How to compare donation processing fees the right way"
 description: "Add platform fee, processing fee, and subscription into one effective rate on your own volume. Then weigh donor experience, which moves more money than fees."
 publishDate: 2026-05-20
 stack: 250k-1m
+category: donation-processing
 targetQuery: "how to compare donation processing fees"
 platformsMentioned: [donorbox, zeffy, givebutter]
 affiliateSlugs: [donorbox]

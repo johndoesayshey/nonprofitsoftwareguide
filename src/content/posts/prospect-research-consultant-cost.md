@@ -4,6 +4,7 @@ description: "A screening subscription gives you scores. A consultant gives you 
 publishDate: 2026-08-03
 updatedDate: 2026-08-03
 stack: 1m-5m
+category: prospect-research
 targetQuery: "prospect research consultant cost"
 platformsMentioned: [kindsight, donorsearch, wealthengine]
 affiliateSlugs: [kindsight, donorsearch]

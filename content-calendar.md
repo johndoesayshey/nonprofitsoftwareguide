@@ -20,40 +20,55 @@ at build by `scripts/check-queries.mjs`.
 
 ---
 
-## ⚠️ The category weighting has drifted and needs correcting
+## Category weighting — measured, and short of the floor
 
-CLAUDE.md is explicit: **at least 60% grant research and prospect research**, and
-"do not let the calendar drift back toward CRM posts just because that category
-has more competitors writing about it."
+CLAUDE.md requires **at least 60% grant research and prospect research**, and warns
+against drifting back toward CRM content because that category has more competitors
+and worse economics.
 
-That is exactly what happened. Current split across every page carrying a category:
+Run `npm run check-weighting` for the live number. As of 2026-08-03:
 
 | Category | Pages | Share |
 |---|---|---|
-| Donor CRM | 27 | **50%** |
-| Donation processing | 10 | 19% |
-| Prospect research | 7 | 13% |
-| Grant research | 6 | 11% |
-| Events & auctions | 2 | 4% |
-| Forms & ops | 2 | 4% |
+| Donor CRM | 32 | 39% |
+| **Grant research** | 22 | **27%** |
+| Donation processing | 13 | 16% |
+| **Prospect research** | 12 | **14%** |
+| Events & auctions | 2 | 2% |
+| Forms & other operations | 2 | 2% |
 
-**Grant + prospect research is 24%, against a 60% floor.**
+**Grant + prospect: 41%, against a 60% floor.**
 
-How it happened: the alternatives cluster and the vertical pages are both
-inherently CRM-shaped. People search "[CRM] alternatives" and "best donor
-management software for churches"; nobody searches "Instrumentl alternatives for
-churches." Every individual page was the right page to build. The aggregate
-drifted anyway, which is the exact failure mode CLAUDE.md warned about.
+### A correction to an earlier version of this file
 
-It matters commercially, not only as spec compliance. Grant research is the only
-category where high ACV and a working public affiliate program overlap. Donor CRM
-has the most competitors writing about it and the worst economics in the sector.
+An earlier revision put this at 24% and called it a serious drift. That figure was
+wrong. It counted only platforms, alternatives and guides, because **posts carried
+no `category` field at all** — so the entire blog, which is where most grant and
+prospect content lives, was invisible to the tally. Writing ten grant posts moved
+the number by zero, which is what exposed the bug.
 
-**Correction: everything in the next two waves is grant or prospect research
-until the ratio clears 40%, then alternate.** Nothing new in donor CRM until
-then, however good the query looks.
+Posts now declare a category, and `scripts/check-weighting.mjs` measures all four
+collections. A requirement nobody can measure is a requirement that drifts, and this
+one drifted precisely because nothing measured it.
 
----
+### How the gap opened, and whether 60% is reachable
+
+The alternatives cluster and the vertical pages are both inherently CRM-shaped.
+People search "[CRM] alternatives" and "best donor management software for
+churches"; nobody searches "Instrumentl alternatives for churches." Each page was
+the right page to build, and the aggregate leaned CRM anyway.
+
+Being straight about the arithmetic: at 81 categorized pages, clearing 60% needs
+about **40 more** grant/prospect pages if nothing else is published. Waves A and B
+below are 18. That gets to roughly 53%, not 60%.
+
+So either the remaining waves grow, or some CRM-side pages get consolidated, or the
+floor is treated as a direction rather than a gate. The first is the honest answer
+while the categories still have unwritten queries worth owning — grant research is
+the only category where high ACV and a working public affiliate program overlap.
+
+**Rule for now: grant or prospect research only, until `check-weighting` clears
+50%.** Nothing new in donor CRM before then, however good the query looks.
 
 ## Wave A — grant research (write next)
 
@@ -130,6 +145,8 @@ Do not start these while grant/prospect is under 40%.
 
 - **One page, one query.** Unique `targetQuery` across all five collections,
   enforced at build.
+- **Every page declares a `category`.** Not for routing — so the weighting above
+  stays measurable. Run `npm run check-weighting` before planning a wave.
 - **Answer first.** 40–60 words, no preamble.
 - **Unique data on every page.** Original cost math, a structured tradeoff, or a
   recommendation naming a real constraint. A page that restates the vendor blogs

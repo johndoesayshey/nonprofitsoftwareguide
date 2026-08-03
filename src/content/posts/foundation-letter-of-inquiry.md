@@ -4,6 +4,7 @@ description: "An LOI is a screening document, not a short proposal. What the pro
 publishDate: 2026-08-03
 updatedDate: 2026-08-03
 stack: under-250k
+category: grant-research
 targetQuery: "foundation letter of inquiry nonprofit"
 platformsMentioned: [candid, instrumentl, grantstation]
 affiliateSlugs: [candid, instrumentl]

@@ -3,6 +3,7 @@ title: "How many grants should a shop your size actually pursue?"
 description: "Capacity math for grant pipelines: what a solo fundraiser versus a team can realistically submit, why renewals come first, and when a tracker earns its cost."
 publishDate: 2026-07-14
 stack: 250k-1m
+category: grant-research
 targetQuery: "how many grants to apply for nonprofit"
 platformsMentioned: [instrumentl, grantstation]
 affiliateSlugs: [instrumentl]

@@ -4,6 +4,7 @@ description: "Wealth screening earns its cost only when you have major-gift work
 publishDate: 2026-03-18
 updatedDate: 2026-08-03
 stack: 1m-5m
+category: prospect-research
 targetQuery: "when to buy wealth screening"
 platformsMentioned: [donorsearch, kindsight, wealthengine]
 affiliateSlugs: [donorsearch]

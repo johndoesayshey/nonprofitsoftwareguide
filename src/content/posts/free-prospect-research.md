@@ -4,6 +4,7 @@ description: "Before you spend $4,000 on wealth screening, do this. The public s
 publishDate: 2026-08-03
 updatedDate: 2026-08-03
 stack: under-250k
+category: prospect-research
 targetQuery: "free prospect research nonprofit"
 platformsMentioned: [kindsight, donorsearch, candid]
 affiliateSlugs: [kindsight, donorsearch]

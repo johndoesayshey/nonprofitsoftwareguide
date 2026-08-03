@@ -4,6 +4,7 @@ description: "A missed reporting deadline costs the renewal, not just the report
 publishDate: 2026-08-03
 updatedDate: 2026-08-03
 stack: 1m-5m
+category: grant-research
 targetQuery: "grant reporting deadlines nonprofit"
 platformsMentioned: [instrumentl, grantstation]
 affiliateSlugs: [instrumentl]

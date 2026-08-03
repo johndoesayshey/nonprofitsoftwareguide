@@ -4,6 +4,7 @@ description: "A one-person grant program fails on deadlines, not on writing. The
 publishDate: 2026-08-03
 updatedDate: 2026-08-03
 stack: under-250k
+category: grant-research
 targetQuery: "one person grant program nonprofit"
 platformsMentioned: [grantstation, instrumentl, candid]
 affiliateSlugs: [grantstation, instrumentl]

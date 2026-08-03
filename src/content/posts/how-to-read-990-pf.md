@@ -4,6 +4,7 @@ description: "A private foundation's tax return tells you whether to apply, how 
 publishDate: 2026-08-03
 updatedDate: 2026-08-03
 stack: under-250k
+category: grant-research
 targetQuery: "how to read 990-pf foundation"
 platformsMentioned: [candid, instrumentl, grantstation]
 affiliateSlugs: [candid, instrumentl]

@@ -112,6 +112,11 @@ const posts = defineCollection({
     publishDate: z.coerce.date(),
     updatedDate: z.coerce.date().optional(),
     stack: z.string(), // slug of the parent stack hub (cluster integrity)
+    // Which category this post builds authority in. Not used for routing — it
+    // exists so `npm run check-weighting` can measure the grant/prospect share
+    // CLAUDE.md requires. A requirement nobody can measure is a requirement
+    // that drifts, which is exactly what happened before this field existed.
+    category,
     targetQuery: z.string(),
     platformsMentioned: z.array(z.string()).default([]),
     affiliateSlugs: z.array(z.string()).default([]),

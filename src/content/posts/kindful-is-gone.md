@@ -3,6 +3,7 @@ title: "Kindful is gone: what your options actually are"
 description: "Bloomerang acquired Kindful and stopped selling it to new customers. What that means if you are still on it, and what migrating actually costs."
 publishDate: 2026-08-03
 stack: 250k-1m
+category: donor-crm
 targetQuery: "kindful discontinued alternatives"
 platformsMentioned: [bloomerang, donordock, eleo, littlegreenlight, aplos]
 affiliateSlugs: [bloomerang, donordock, eleo]

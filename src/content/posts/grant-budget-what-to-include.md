@@ -4,6 +4,7 @@ description: "Program officers read the budget before the narrative. What belong
 publishDate: 2026-08-03
 updatedDate: 2026-08-03
 stack: 250k-1m
+category: grant-research
 targetQuery: "nonprofit grant budget what to include"
 platformsMentioned: [instrumentl, candid]
 affiliateSlugs: [instrumentl]

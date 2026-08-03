@@ -4,6 +4,7 @@ description: "LGL wins on price and flexibility. Bloomerang wins on ease of use 
 publishDate: 2026-03-05
 updatedDate: 2026-08-03
 stack: 250k-1m
+category: donor-crm
 targetQuery: "bloomerang vs little green light"
 platformsMentioned: [bloomerang, littlegreenlight]
 affiliateSlugs: [bloomerang]

@@ -3,6 +3,7 @@ title: "Is Zeffy really free? The tip model, explained"
 description: "Yes. Zeffy charges no platform or processing fees and is funded by optional donor tips at checkout. What that means in practice and which shops it fits best."
 publishDate: 2026-06-17
 stack: under-250k
+category: donation-processing
 targetQuery: "zeffy tip model explained"
 platformsMentioned: [zeffy, givebutter]
 affiliateSlugs: [zeffy]

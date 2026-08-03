@@ -4,6 +4,7 @@ description: "Foundation websites say one thing and their 990 giving history say
 publishDate: 2026-02-10
 updatedDate: 2026-08-03
 stack: 1m-5m
+category: grant-research
 targetQuery: "funder priorities vs 990 giving history"
 platformsMentioned: [instrumentl, candid]
 affiliateSlugs: [instrumentl]

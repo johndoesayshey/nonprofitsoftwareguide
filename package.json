@@ -17,7 +17,8 @@
     "owner": "node scripts/owner-dashboard.mjs",
     "edit": "node scripts/edit-server.mjs",
     "notes": "node scripts/notes.mjs",
-    "build:pdf": "node scripts/build-survey-pdf.mjs"
+    "build:pdf": "node scripts/build-survey-pdf.mjs",
+    "check-weighting": "node scripts/check-weighting.mjs"
   },
   "dependencies": {
     "@astrojs/mdx": "^4.2.0",

@@ -4,6 +4,7 @@ description: "Soft credits, households, and gift history are what break when you
 publishDate: 2026-02-03
 updatedDate: 2026-08-03
 stack: 250k-1m
+category: donor-crm
 targetQuery: "excel to crm migration soft credits"
 platformsMentioned: [littlegreenlight, bloomerang, donorsnap]
 affiliateSlugs: [bloomerang, donorsnap]

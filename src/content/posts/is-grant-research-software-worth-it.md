@@ -3,6 +3,7 @@ title: "Is paid grant research software worth it for a small nonprofit?"
 description: "When paid grant research software is worth it for a small nonprofit, and when the free path of 990s and library Candid access covers the job instead."
 publishDate: 2026-06-09
 stack: 250k-1m
+category: grant-research
 targetQuery: "is grant research software worth it"
 platformsMentioned: [instrumentl, grantstation, candid]
 affiliateSlugs: [instrumentl, grantstation]

@@ -3,6 +3,7 @@ title: "Instrumentl vs GrantStation for a one-person shop"
 description: "Instrumentl and GrantStation compared for a solo fundraiser: what the tenfold price gap buys and a decision rule based on your application volume."
 publishDate: 2026-05-12
 stack: 250k-1m
+category: grant-research
 targetQuery: "instrumentl vs grantstation small nonprofit"
 platformsMentioned: [instrumentl, grantstation]
 affiliateSlugs: [instrumentl, grantstation]

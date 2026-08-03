@@ -3,6 +3,7 @@ title: "Every Bonterra product name, and what it used to be called"
 description: "EveryAction, Network for Good, Salsa, CyberGrants: what each is called in 2026, which ones still exist, and two corrections everyone gets wrong."
 publishDate: 2026-08-03
 stack: 1m-5m
+category: donor-crm
 targetQuery: "bonterra everyaction network for good salsa renamed"
 platformsMentioned: [bonterra, bloomerang, donordock, eleo]
 affiliateSlugs: [bonterra, donordock]
