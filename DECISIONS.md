@@ -523,7 +523,23 @@ ConsultantSlot card, the wealth-screening category page and the About page all l
 Deliberately short — it exists to answer "can you help me" and give an address, not to sell.
 Contact is consulting@nonprofitsoftwareguide.com.
 
-**One line added that the operator did not ask for**, because the site's credibility depends on
-it: consulting is stated as separate from the guide, with no vendor referral fees and no
-influence on recommendations. A review site whose author also sells implementation needs that
-said out loud, and saying it plainly costs nothing.
+*(The separation-from-the-guide paragraph was added unasked and removed on operator
+instruction. Do not reinstate it.)*
+
+## 2026-08-03 — Logo, used in three places only
+
+The operator supplied a square mark (laptop + gear over the wordmark, on #18514A). Design C is
+deliberately typographic, so the mark does **not** go in the site header, and the text wordmark
+stays as-is.
+
+Three uses, all places where a logo is expected and where none existed before:
+
+1. **`/og-image.png`** — 1200x630 social card, mark centred on its own green. The site had
+   `twitter:card: summary_large_image` declared with no image behind it, so every shared link
+   rendered blank. This is the one that matters given the LinkedIn plan.
+2. **`/apple-touch-icon.png`** — 180x180 home-screen icon. The 16px favicon stays as the
+   existing SVG, since three lines of text are illegible at that size.
+3. **PDF cover** — drawn as vector strokes rather than an embedded bitmap, so the download
+   stays 14KB with no image dependency.
+
+Source art kept at `public/logo-512.png`.

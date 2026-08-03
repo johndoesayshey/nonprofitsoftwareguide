@@ -63,6 +63,32 @@ function textWidth(str, size, bold = false) {
 
 class Page {
   constructor() { this.ops = []; }
+  /** Brand mark, drawn as strokes. Scale 1 ≈ 26pt wide. */
+  mark(x, y, scale = 1, gray = 0.35) {
+    const s = scale, o = [];
+    o.push(`q ${gray} G ${(1.4 * s).toFixed(2)} w 1 J 1 j`);
+    // screen
+    o.push(`${(x).toFixed(2)} ${(y).toFixed(2)} ${(22 * s).toFixed(2)} ${(15 * s).toFixed(2)} re S`);
+    // base
+    o.push(`${(x - 3 * s).toFixed(2)} ${(y - 3.4 * s).toFixed(2)} m ${(x + 25 * s).toFixed(2)} ${(y - 3.4 * s).toFixed(2)} l`);
+    o.push(`${(x + 23 * s).toFixed(2)} ${(y).toFixed(2)} l ${(x - 1 * s).toFixed(2)} ${(y).toFixed(2)} l h S`);
+    // </>
+    const cy = y + 7.5 * s;
+    o.push(`${(x + 7 * s).toFixed(2)} ${(cy + 3 * s).toFixed(2)} m ${(x + 4 * s).toFixed(2)} ${cy.toFixed(2)} l ${(x + 7 * s).toFixed(2)} ${(cy - 3 * s).toFixed(2)} l S`);
+    o.push(`${(x + 15 * s).toFixed(2)} ${(cy + 3 * s).toFixed(2)} m ${(x + 18 * s).toFixed(2)} ${cy.toFixed(2)} l ${(x + 15 * s).toFixed(2)} ${(cy - 3 * s).toFixed(2)} l S`);
+    o.push(`${(x + 12.5 * s).toFixed(2)} ${(cy + 4 * s).toFixed(2)} m ${(x + 9.5 * s).toFixed(2)} ${(cy - 4 * s).toFixed(2)} l S`);
+    // gear
+    o.push(`${(x + 11 * s).toFixed(2)} ${(y + 15 * s).toFixed(2)} m ${(x + 11 * s).toFixed(2)} ${(y + 18 * s).toFixed(2)} l S`);
+    const gx = x + 11 * s, gy = y + 21 * s, r = 3 * s, k = 0.5523 * r;
+    o.push(`${(gx - r).toFixed(2)} ${gy.toFixed(2)} m`);
+    o.push(`${(gx - r).toFixed(2)} ${(gy + k).toFixed(2)} ${(gx - k).toFixed(2)} ${(gy + r).toFixed(2)} ${gx.toFixed(2)} ${(gy + r).toFixed(2)} c`);
+    o.push(`${(gx + k).toFixed(2)} ${(gy + r).toFixed(2)} ${(gx + r).toFixed(2)} ${(gy + k).toFixed(2)} ${(gx + r).toFixed(2)} ${gy.toFixed(2)} c`);
+    o.push(`${(gx + r).toFixed(2)} ${(gy - k).toFixed(2)} ${(gx + k).toFixed(2)} ${(gy - r).toFixed(2)} ${gx.toFixed(2)} ${(gy - r).toFixed(2)} c`);
+    o.push(`${(gx - k).toFixed(2)} ${(gy - r).toFixed(2)} ${(gx - r).toFixed(2)} ${(gy - k).toFixed(2)} ${(gx - r).toFixed(2)} ${gy.toFixed(2)} c S`);
+    o.push('Q');
+    this.ops.push(o.join('\n'));
+    return this;
+  }
   text(x, y, str, { size = 10, bold = false, gray = 0, align = 'left' } = {}) {
     const font = bold ? '/F2' : '/F1';
     let tx = x;
@@ -206,8 +232,11 @@ function paragraph(p, y, str, { size = 9.5, gray = 0.15, leading = 13, width = P
 const p1 = new Page();
 let y = header(p1, PAGE_H - MARGIN);
 
-p1.text(LABEL_X, y, survey.title, { size: 21, bold: true });
-y -= 24;
+p1.mark(LABEL_X, y - 20, 1.15, 0.55);
+y -= 44;
+const titleSize = Math.min(21, ((PAGE_W - 2 * MARGIN) / textWidth(survey.title, 1, true)));
+p1.text(LABEL_X, y, survey.title, { size: titleSize, bold: true });
+y -= titleSize + 5;
 p1.text(LABEL_X, y, 'Annual software spend by shop size. Built from a survey of ' + survey.sampleSize + ' US fundraising professionals.', { size: 11, gray: 0.35 });
 y -= 30;
 
