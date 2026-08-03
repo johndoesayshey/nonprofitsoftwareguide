@@ -2,6 +2,7 @@
 title: "How to read a 990 to find your next funder"
 description: "Which parts of a foundation's 990-PF matter for prospect research, what each section tells you, and a simple reading order that takes 20 minutes."
 publishDate: 2026-02-24
+updatedDate: 2026-08-03
 stack: 1m-5m
 targetQuery: "how to read a 990 for prospecting"
 platformsMentioned: [candid, instrumentl]

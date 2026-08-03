@@ -2,6 +2,7 @@
 title: "When to buy wealth screening (and when it's a waste)"
 description: "Wealth screening earns its cost only when you have major-gift work to point it at. The revenue level and two conditions that make it worth buying."
 publishDate: 2026-03-18
+updatedDate: 2026-08-03
 stack: 1m-5m
 targetQuery: "when to buy wealth screening"
 platformsMentioned: [donorsearch, kindsight, wealthengine]

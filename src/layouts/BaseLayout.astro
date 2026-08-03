@@ -23,7 +23,15 @@ const {
 const site = Astro.site ?? new URL(Astro.url.origin);
 const canonical = new URL(Astro.url.pathname, site).href;
 const siteName = 'Nonprofit Software Guide';
-const fullTitle = title === siteName ? title : `${title} | ${siteName}`;
+// Google truncates the title around 60 characters, and the brand suffix costs
+// 26 of them. Append it only when the result still fits — on a long page title
+// the suffix is what gets cut anyway, so dropping it keeps the words that carry
+// the query instead of a truncated brand name. og:title keeps the brand always,
+// since social cards have room and benefit from the attribution.
+const TITLE_MAX = 60;
+const suffixed = `${title} | ${siteName}`;
+const fullTitle =
+  title === siteName ? title : suffixed.length <= TITLE_MAX ? suffixed : title;
 
 // GA4 / Search Console pulled from env; left empty until the operator fills them (see .env.example / DEPLOY.md).
 const GA4_ID = import.meta.env.PUBLIC_GA4_ID ?? '';
@@ -46,7 +54,7 @@ const GSC_VERIFICATION = import.meta.env.PUBLIC_GSC_VERIFICATION ?? '';
     <!-- Open Graph / Twitter -->
     <meta property="og:site_name" content={siteName} />
     <meta property="og:type" content={ogType} />
-    <meta property="og:title" content={fullTitle} />
+    <meta property="og:title" content={title === siteName ? title : suffixed} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical} />
     <meta property="og:image" content={new URL('/og-image.png', site).href} />

@@ -2,6 +2,7 @@
 title: "When does a small nonprofit actually need a CRM?"
 description: "The real triggers: more than about 200 active donors, a second staffer touching donor data, slipping thank-yous, or lost history. Before that, free tools hold."
 publishDate: 2026-04-29
+updatedDate: 2026-08-03
 stack: 250k-1m
 targetQuery: "when does a nonprofit need a crm"
 platformsMentioned: [littlegreenlight, donordock, givebutter]

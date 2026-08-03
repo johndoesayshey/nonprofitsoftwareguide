@@ -2,6 +2,7 @@
 title: "Moving from Excel to a donor CRM without losing your gift history"
 description: "Soft credits, households, and gift history are what break when you move from Excel to a CRM. How to clean the sheet, test the import, and go live safely."
 publishDate: 2026-02-03
+updatedDate: 2026-08-03
 stack: 250k-1m
 targetQuery: "excel to crm migration soft credits"
 platformsMentioned: [littlegreenlight, bloomerang, donorsnap]

@@ -2,6 +2,7 @@
 title: "How to vet a foundation before you apply"
 description: "A repeatable 20-minute check that tells you whether a foundation is worth a full proposal, run before you spend a week writing for the wrong funder."
 publishDate: 2026-04-22
+updatedDate: 2026-08-03
 stack: 250k-1m
 targetQuery: "how to research a foundation before applying"
 platformsMentioned: [instrumentl, candid]

@@ -2,6 +2,7 @@
 title: "When a funder's stated priorities don't match their 990 giving history"
 description: "Foundation websites say one thing and their 990 giving history says another. How to read the gap and decide whether a funder is a real prospect."
 publishDate: 2026-02-10
+updatedDate: 2026-08-03
 stack: 1m-5m
 targetQuery: "funder priorities vs 990 giving history"
 platformsMentioned: [instrumentl, candid]

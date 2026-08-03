@@ -2,6 +2,7 @@
 title: "Zeffy vs Donorbox: comparing the real cost of processing"
 description: "Zeffy charges nothing and runs on donor tips. Donorbox charges about 2.95% plus processing and delivers stronger recurring-gift tools. Which fits your shop."
 publishDate: 2026-04-08
+updatedDate: 2026-08-03
 stack: under-250k
 targetQuery: "zeffy vs donorbox fees"
 platformsMentioned: [zeffy, donorbox]
