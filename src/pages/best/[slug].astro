@@ -21,13 +21,16 @@ const isDraft = g.draft !== false;
 
 const allPlatforms = await getCollection('platforms');
 const bySlug = new Map(allPlatforms.map((p) => [p.data.slug, p.data]));
+// A roundup is a recommendation, so it only carries featured products. Dropping
+// a pick here is silent by design: unfeaturing a product should quietly remove
+// it from every list rather than leaving a hole someone has to notice.
 const cat = CATEGORIES[g.category];
 
 // Same ordering rule as the rest of the site — affiliate value first, authored
 // order breaking ties. The `award` on each pick is what carries the editorial
 // distinction, so the list stays honest without being hand-sorted.
 const picks = g.picks
-  .filter((p) => bySlug.has(p.platformSlug))
+  .filter((p) => bySlug.get(p.platformSlug)?.featured)
   .map((p, i) => ({ p, i, v: valueOf(bySlug.get(p.platformSlug)!.affiliateSlug) }))
   .sort((x, y) => y.v - x.v || x.i - y.i)
   .map((x) => x.p);

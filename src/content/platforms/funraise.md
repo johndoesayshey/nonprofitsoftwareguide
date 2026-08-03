@@ -23,6 +23,7 @@ bestFor: "Digital-first shops that want modern donation forms, peer-to-peer and 
 targetQuery: "funraise pricing"
 affiliateSlug: funraise
 freeTier: true
+featured: false
 draft: false
 strengths:
   - "The donor-facing experience is among the best in the category — branded, modern, and it converts"

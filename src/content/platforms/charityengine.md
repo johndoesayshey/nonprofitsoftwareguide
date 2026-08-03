@@ -20,6 +20,7 @@ bestFor: "Mid-to-large shops leaving Blackbaud or Salesforce that want fundraisi
 targetQuery: "charityengine pricing"
 affiliateSlug: charityengine
 freeTier: false
+featured: false
 draft: false
 strengths:
   - "Genuinely all-in-one: CRM, email automation, events, membership and in-house payment processing without a middleman gateway"

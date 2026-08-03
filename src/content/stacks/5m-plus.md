@@ -2,7 +2,7 @@
 shopSize: "$5M+"
 annualRevenue: "$5M+"
 staffSize: "8+ development staff, often with a researcher"
-totalStackCost: "~$17,900-$20,300/yr"
+totalStackCost: "~$21,200-$23,700/yr"
 slug: 5m-plus
 targetQuery: "enterprise nonprofit fundraising software stack"
 lastVerified: 2026-07-31
@@ -26,9 +26,9 @@ components:
     annualCost: "$0 additional"
     rationale: "Ticketing, check-in and auctions are native to the CRM, so event data lands on the donor record without an import."
   - category: donation-processing
-    platformSlug: donorbox
-    annualCost: "~$1,800/yr (Pro) + fees"
-    rationale: "High-volume online giving with recurring support and failed-card recovery."
+    platformSlug: 4agoodcause
+    annualCost: "$5,148/yr (Scale, $429/mo)"
+    rationale: "Flat pricing at high volume: the fee stops tracking revenue entirely, and at this size the saving against any percentage model is larger than the subscription."
   - category: forms-ops
     platformSlug: monday
     annualCost: "~$720-$1,200/yr"
@@ -45,7 +45,7 @@ At $5M+ the stack is a full operation: continuous wealth screening, a system-of-
 
 **Grant research: Instrumentl Pro ($499/mo).** Twenty-plus active projects across a team is Pro-tier volume. [Instrumentl](/go/instrumentl) runs the pipeline; pair it with desk access to [Candid](/go/candid) when a single funder deserves a deep workup.
 
-**Money in: Donorbox Pro ($150/mo plus fees).** A large recurring file is an asset, and failed cards are the leak. [Donorbox](/go/donorbox) Pro's recovery tooling and donor portals protect revenue you already earned.
+**Money in: 4aGoodCause Scale ($429/mo, $5,148/yr).** At this size the arithmetic is one-sided: a percentage fee on eight-figure-adjacent online giving dwarfs any subscription. [4aGoodCause](/go/4agoodcause) takes none, so the fee stops tracking revenue entirely and the only variable left is processing.
 
 **Operations: monday.com (~$720-$1,200/yr).** Eight or more seats. Campaign calendars, grant deliverables, and the cross-department coordination that email cannot hold.
 

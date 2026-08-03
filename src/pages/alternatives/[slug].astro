@@ -23,14 +23,16 @@ const allPlatforms = await getCollection('platforms');
 const bySlug = new Map(allPlatforms.map((p) => [p.data.slug, p.data]));
 const cat = CATEGORIES[a.category];
 
-// Only recommend products we actually cover, so no pick dead-ends.
+// Only recommend products we actually cover AND shortlist. A switching guide
+// telling someone to move to a product we don't otherwise recommend is the same
+// inconsistency in a different place.
 // Ordering is by affiliate value, the same rule the Software menu, the category
 // hubs and the comparison index use — enforced here rather than left to whatever
 // order the frontmatter happens to be in, because hand-ordering drifts. Ties
 // keep the authored order, so editorial judgment still decides between two
 // products worth the same.
 const picks = a.picks
-  .filter((p) => bySlug.has(p.platformSlug))
+  .filter((p) => bySlug.get(p.platformSlug)?.featured)
   .map((p, i) => ({ p, i, v: valueOf(bySlug.get(p.platformSlug)!.affiliateSlug) }))
   .sort((x, y) => y.v - x.v || x.i - y.i)
   .map((x) => x.p);

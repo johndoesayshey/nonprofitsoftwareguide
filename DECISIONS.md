@@ -543,3 +543,70 @@ Three uses, all places where a logo is expected and where none existed before:
    stays 14KB with no image dependency.
 
 Source art kept at `public/logo-512.png`.
+
+
+## D-2026-08-03. `featured` — a shortlist, not a directory
+
+**Operator direction.** The site had grown to 26 products across the software,
+pricing and comparison pages and read as bloated. Direction: 4–5 products per
+category, weighted to the ones that can actually earn — and SEO pages that don't
+need to be reachable from navigation.
+
+**What was built.** `featured: boolean` on the platform schema, default true.
+`featured: false` means the product is absent from every curated, reader-facing
+list: category hubs, the compare/pricing tables, `/best/` roundups, switching-guide
+picks. It does **not** mean unpublished. The product page stays live and indexable,
+its comparison pages are still generated, it stays in the sitemap, and it keeps
+inbound links (each unfeatured product currently has 6–19).
+
+That split is the point. A page can earn search traffic without appearing in a
+list we ask a reader to act on.
+
+**Unfeatured, and why:**
+
+| Product | Reason |
+|---|---|
+| Donorbox | Operator call. Trimming donation processing to a real shortlist. |
+| Donately | 20% revenue share, but of a 2–4% platform fee — a small absolute number. |
+| Funraise | Gift cards rather than commission; free-tier referrals excluded. |
+| Bonterra (EveryAction) | No affiliate program and no sourceable price anywhere. |
+| CharityEngine | No commission of any kind, and $550/mo sits outside our readers' band. |
+| Virtuous | No affiliate program and no reliable reported price. |
+| Blackbaud Raiser's Edge NXT | No publisher program; quote-only enterprise pricing. |
+
+**One concern worth recording, since it is the operator's call to reverse.**
+Removing Donorbox leaves donation processing with 4aGoodCause as the only product
+carrying a working affiliate program — Givebutter and Zeffy are Tier C by
+definition, since both are free to nonprofits and have no margin to share. Donorbox
+was the category's one medium-potential earner (15% of fees for three years). It
+stays fully covered — platform page, switching guide, comparison pages — and
+re-featuring it is one line in its frontmatter.
+
+**Consequences applied at the same time.**
+
+- Aplos moved from `donor-crm` to `forms-ops`. It is fund accounting with donor
+  management attached, not a donor CRM, and it was distorting the CRM matrix.
+  `alsoIn: [donor-crm]` keeps it visible to a CRM shopper with a qualifier.
+- Bonterra renamed to "Bonterra Fundraising and Engagement (EveryAction)" — the
+  product people search for is EveryAction; Bonterra is the holding brand.
+- The compare tables show **primary category only**. `alsoIn` still surfaces a
+  product on a category hub, where the `alsoInNote` qualifier gives it context; a
+  bare row in a price table carries no such nuance and made donor CRM look like
+  eight products.
+- The stacks recommended Donorbox at three of four sizes. Swapped to 4aGoodCause,
+  with rationale rewritten and every stack total recomputed from its line items.
+
+## D-2026-08-03b. /pricing/ merged into /compare/
+
+`/pricing/` was the same table twice. A comparison of these products *is* a
+comparison of their prices, so two pages competed for one intent while neither
+carried the whole answer.
+
+`/compare/` now does both jobs: the survey spend bands, per-category price ladders,
+head-to-head links, methodology, and the citation block with `Dataset` schema.
+`/pricing/` 301s to it (`public/_redirects`), and the nav item is one entry —
+"Compare & pricing" — rather than two.
+
+Comparison pages for unfeatured products still generate and are still linked, from
+a quieter "Also compared" line beneath each category's shortlist chips. They keep
+their crawl paths without reading as recommendations.

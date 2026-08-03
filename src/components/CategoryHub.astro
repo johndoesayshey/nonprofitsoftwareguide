@@ -15,7 +15,10 @@ const meta = CATEGORIES[category];
 // Tools are listed highest-earning first. Products with no working affiliate
 // program still appear (a guide that hides the free options is not credible)
 // but they sink to the bottom rather than leading the page.
-const inCategory = (await getCollection('platforms', ({ data }) => data.draft === false))
+// featured: false products are deliberately absent here. Their pages stay live
+// and indexable — see the note on the field in content/config.ts — they just do
+// not compete for space in a shortlist a reader is meant to act on.
+const inCategory = (await getCollection('platforms', ({ data }) => data.draft === false && data.featured))
   .filter((p) => p.data.category === category || (p.data.alsoIn ?? []).includes(category as any))
   .sort((a, b) => a.data.name.localeCompare(b.data.name));
 

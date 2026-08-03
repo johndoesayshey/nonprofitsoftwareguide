@@ -20,6 +20,7 @@ bestFor: "Shops raising roughly $2M-$20M that are actually staffed to run donor 
 targetQuery: "virtuous crm pricing"
 affiliateSlug: virtuous
 freeTier: false
+featured: false
 draft: false
 strengths:
   - "Marketing automation and donor journeys are native to the CRM rather than bolted on through an integration"

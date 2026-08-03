@@ -8,205 +8,323 @@ import { comparePairs } from '../../lib/compare';
 import { CATEGORIES } from '../../lib/categories';
 import { getAffiliate } from '../../lib/affiliates';
 import { valueOf, categoryValue, relFor } from '../../lib/affiliate-value';
+import { formatMedium } from '../../lib/dates';
+import survey from '../../data/survey-2026.json';
 
-// List only comparisons where BOTH sides are published.
+// This page absorbed the old standalone /pricing/ page (301 in public/_redirects).
+// The two were nearly the same table twice: a comparison of these products IS a
+// comparison of their prices, and splitting them meant two pages competing for
+// one intent while neither carried the whole answer. One page, both jobs.
+
+const allPlatforms = (await getCollection('platforms')).filter((p) => p.data.draft === false);
+// Curated tables carry the shortlist. Unfeatured products keep their own pages
+// and their comparison pages — they just don't crowd a list meant to be acted on.
+const featured = allPlatforms.filter((p) => p.data.featured);
+
 const pairs = (await comparePairs()).filter((p) => p.a.data.draft === false && p.b.data.draft === false);
+const isFeatured = (slug: string) => featured.some((p) => p.data.slug === slug);
 
-// Categories first by what they can earn, then pairs within each category by the
-// combined value of the two products. Same ordering as the Software menu.
 const grouped = Object.values(CATEGORIES)
   .map((cat) => {
-    const items = pairs
-      .filter((p) => p.category === cat.slug)
-      .map((p) => ({
-        ...p,
-        value: valueOf(p.a.data.affiliateSlug) + valueOf(p.b.data.affiliateSlug),
-      }))
-      .sort((x, y) => y.value - x.value || x.slug.localeCompare(y.slug));
-    const slugs = [...new Set(items.flatMap((p) => [p.a.data.affiliateSlug, p.b.data.affiliateSlug]))]
-      .filter(Boolean) as string[];
-    return { cat, items, value: categoryValue(slugs) };
+    // Primary category only. `alsoIn` exists so a category hub can say "a
+    // structured list in monday.com is many small shops' first donor database"
+    // WITH that qualifier attached; a bare row in a price table carries no such
+    // nuance and just makes the shortlist look like eight CRMs.
+    const tools = featured
+      .filter((p) => p.data.category === cat.slug)
+      .map((p) => p.data)
+      .sort((a, b) => valueOf(b.affiliateSlug) - valueOf(a.affiliateSlug) || a.name.localeCompare(b.name));
+
+    const inCat = pairs.filter((p) => p.category === cat.slug);
+    const shortlist = inCat
+      .filter((p) => isFeatured(p.a.data.slug) && isFeatured(p.b.data.slug))
+      .sort((x, y) =>
+        valueOf(y.a.data.affiliateSlug) + valueOf(y.b.data.affiliateSlug) -
+        (valueOf(x.a.data.affiliateSlug) + valueOf(x.b.data.affiliateSlug)) || x.slug.localeCompare(y.slug)
+      );
+    // Pairs involving a product we don't shortlist. Kept as links so the pages
+    // aren't orphaned, set quietly so they don't read as recommendations.
+    const rest = inCat.filter((p) => !shortlist.includes(p)).sort((x, y) => x.slug.localeCompare(y.slug));
+
+    const slugs = tools.map((t) => t.affiliateSlug).filter(Boolean) as string[];
+    return { cat, tools, shortlist, rest, value: categoryValue(slugs) };
   })
-  .filter((g) => g.items.length > 0)
+  .filter((g) => g.tools.length > 0)
   .sort((a, b) => b.value - a.value);
 
-// Switching guides. Different intent from a head-to-head — the reader already
-// owns a system — so they get their own block above the comparison tables.
 const alternatives = (await getCollection('alternatives'))
   .filter((e) => e.data.draft === false)
   .sort((a, b) => a.data.product.localeCompare(b.data.product));
 
-// Every published product per category, for the at-a-glance tables.
-const byCategory = new Map<string, typeof pairs[number]['a'][]>();
-for (const p of pairs) {
-  for (const side of [p.a, p.b]) {
-    const list = byCategory.get(p.category) ?? [];
-    if (!list.find((x) => x.data.slug === side.data.slug)) list.push(side);
-    byCategory.set(p.category, list);
-  }
-}
+const newest = allPlatforms.reduce((acc, p) => (p.data.lastVerified > acc ? p.data.lastVerified : acc),
+  allPlatforms[0].data.lastVerified);
+const quoteOnly = featured.filter((p) => /quot|reported/i.test(p.data.pricingBasis ?? ''));
+const published = featured.length - quoteOnly.length;
+
+const site = Astro.site ?? new URL('https://nonprofitsoftwareguide.com');
+const datasetLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Dataset',
+  name: 'Nonprofit fundraising software pricing, compared',
+  description:
+    `Published price ladders and researched price ranges for nonprofit fundraising software across ` +
+    `${grouped.length} categories, with the date each figure was last verified.`,
+  url: new URL('/compare/', site).href,
+  dateModified: newest.toISOString(),
+  isAccessibleForFree: true,
+  license: 'https://creativecommons.org/licenses/by/4.0/',
+  creator: { '@type': 'Organization', name: 'Nonprofit Software Guide' },
+};
 ---
 <BaseLayout
-  title="Compare nonprofit fundraising software"
-  description="Side-by-side comparisons of nonprofit fundraising tools: price, free tier, and fit, for every meaningful pair we cover."
+  title="Nonprofit fundraising software: prices compared"
+  description={`What every nonprofit fundraising tool we recommend actually costs, side by side, with the quote-only vendors' researched ranges. Every figure dated. Free to cite.`}
   section="compare">
   <div class="wrap">
-    <Breadcrumbs crumbs={[{ label: 'Home', href: '/' }, { label: 'Compare' }]} />
-    <section class="prose" style="max-width: none;">
-      <p class="kicker">Head to head</p>
-      <h1>Software comparisons</h1>
-      <p class="lede" style="max-width: 46ch;">
-        Every tool we cover, lined up by category, plus a head-to-head page for
-        each meaningful pairing.
+    <Breadcrumbs crumbs={[{ label: 'Home', href: '/' }, { label: 'Compare & pricing' }]} />
+    <article class="prose cmp-page" style="max-width: none; margin-top: 1.2rem;">
+      <p class="kicker">Compare &amp; pricing</p>
+      <h1>What nonprofit fundraising software costs</h1>
+
+      <p class="answer">
+        Every tool we recommend, with its full price ladder, side by side.
+        {published} of the {featured.length} publish a rate card; the rest are
+        quote-only, and for those we carry researched ranges from what buyers
+        report paying rather than the word "custom." Each figure is dated.
       </p>
 
+      <p class="verified-row"><span class="verified">Last price check {formatMedium(newest)}</span></p>
+
       <AffiliateDisclosure />
+
+      <section class="context">
+        <h2>What your peers actually spend</h2>
+        <p>
+          List prices are one thing, budgets another. These are means from our
+          <a href="/benchmarks/">2026 survey of {survey.sampleSize} U.S. fundraising
+          professionals</a> — annual spend per category, by how much the
+          organization raises:
+        </p>
+        <div class="table-scroll">
+          <table class="spend">
+            <thead>
+              <tr>
+                <th scope="col">Category</th>
+                {survey.segments.map((s) => <th scope="col" class="num-head">{s.label}</th>)}
+              </tr>
+            </thead>
+            <tbody>
+              {survey.categories.map((c) => (
+                <tr>
+                  <th scope="row"><a href={c.path}>{c.label}</a></th>
+                  {survey.segments.map((s) => (
+                    <td class="num">${(survey as any).mean[c.slug][s.slug].toLocaleString()}</td>
+                  ))}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <p class="table-note">
+          Sample sizes: {survey.segments.map((s) => `${s.label} n=${s.n}`).join(', ')}.
+          If a quote lands well above the band for your size, the burden of proof
+          is on the vendor.
+        </p>
+      </section>
 
       {alternatives.length > 0 && (
         <section class="switching">
           <p class="switching-kicker">Already have a system?</p>
           <p class="switching-lede">
-            Head-to-head pages are for choosing. If you're replacing something,
-            start with the <a href="/alternatives/">alternatives guides</a> —
-            why shops leave, what to move to, and what the migration costs.
+            This page is for choosing. If you're replacing something, start with the
+            <a href="/alternatives/">switching guides</a> — why shops leave, what to
+            move to, and what the migration costs.
           </p>
-          <ul class="switching-list">
-            {alternatives.map((e) => (
-              <li><a href={`/alternatives/${e.data.slug}/`}>{e.data.product} alternatives</a></li>
-            ))}
-          </ul>
         </section>
       )}
 
-      {grouped.length === 0 ? (
-        <p class="empty">Comparisons appear here as platform write-ups are published.</p>
-      ) : grouped.map((g) => {
-        const tools = (byCategory.get(g.cat.slug) ?? [])
-          .map((t) => ({ t, v: valueOf(t.data.affiliateSlug) }))
-          .sort((a, b) => b.v - a.v || a.t.data.name.localeCompare(b.t.data.name))
-          .map((x) => x.t);
-        return (
-          <section class="cmp-block">
-            <h2>{g.cat.label}</h2>
+      {grouped.map((g) => (
+        <section class="cmp-block">
+          <h2>{g.cat.path ? <a href={g.cat.path}>{g.cat.label}</a> : g.cat.label}</h2>
 
-            <div class="cmp-scroll">
-              <table class="cmp">
-                <colgroup>
-                  <col class="c-tool" /><col class="c-price" /><col class="c-free" />
-                  <col class="c-best" /><col class="c-cta" />
-                </colgroup>
-                <thead>
+          <div class="table-scroll">
+            <table class="cmp">
+              <colgroup>
+                <col class="c-tool" /><col class="c-price" /><col class="c-free" />
+                <col class="c-best" /><col class="c-cta" />
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col">Tool</th>
+                  <th scope="col">Pricing</th>
+                  <th scope="col">Free tier</th>
+                  <th scope="col">Best for</th>
+                  <th scope="col"></th>
+                </tr>
+              </thead>
+              <tbody>
+                {g.tools.map((t) => (
                   <tr>
-                    <th scope="col">Tool</th>
-                    <th scope="col">Pricing</th>
-                    <th scope="col">Free tier</th>
-                    <th scope="col">Best for</th>
-                    <th scope="col"></th>
+                    <th scope="row"><a href={`/platforms/${t.slug}/`}>{t.name}</a></th>
+                    <td class="price">
+                      {t.pricingTiers.length > 0 ? (
+                        <>
+                          <ul class="ladder">
+                            {t.pricingTiers.map((tier) => (
+                              <li>
+                                <span class="t-name">{tier.tier}</span>
+                                <span class="t-price">{tier.price}</span>
+                                {tier.note && <span class="t-note">{tier.note}</span>}
+                              </li>
+                            ))}
+                          </ul>
+                          {t.pricingBasis && <span class="basis">{t.pricingBasis}</span>}
+                        </>
+                      ) : (
+                        <span class="num">{t.entryPrice}</span>
+                      )}
+                    </td>
+                    <td>{t.freeTier ? 'Yes' : 'No'}</td>
+                    <td class="cmp-best">{t.bestFor}</td>
+                    <td class="cmp-cta">
+                      <a class="btn-visit" href={`/go/${t.affiliateSlug}`} rel={relFor(t.affiliateSlug)}>Visit →</a>
+                      <ReaderOffer slug={t.affiliateSlug} compact />
+                    </td>
                   </tr>
-                </thead>
-                <tbody>
-                  {tools.map((t) => {
-                    const aff = t.data.affiliateSlug ? getAffiliate(t.data.affiliateSlug) : undefined;
-                    return (
-                      <tr>
-                        <th scope="row"><a href={`/platforms/${t.data.slug}/`}>{t.data.name}</a></th>
-                <td class="price">
-                  {t.data.pricingTiers.length > 0 ? (
-                    <>
-                      <ul class="ladder">
-                        {t.data.pricingTiers.map((t) => (
-                          <li>
-                            <span class="t-name">{t.tier}</span>
-                            <span class="t-price">{t.price}</span>
-                            {t.note && <span class="t-note">{t.note}</span>}
-                          </li>
-                        ))}
-                      </ul>
-                      {t.data.pricingBasis && <span class="basis">{t.data.pricingBasis}</span>}
-                    </>
-                  ) : (
-                    <span class="num">{t.data.entryPrice}</span>
-                  )}
-                </td>
-                        <td>{t.data.freeTier ? 'Yes' : 'No'}</td>
-                        <td class="cmp-best">{t.data.bestFor}</td>
-                        <td class="cmp-cta">
-                          <a class="btn-visit" href={`/go/${t.data.affiliateSlug}`} rel={relFor(t.data.affiliateSlug)}>Visit →</a>
-                          <ReaderOffer slug={t.data.affiliateSlug} compact />
-                        </td>
-                      </tr>
-                    );
-                  })}
-                </tbody>
-              </table>
-            </div>
+                ))}
+              </tbody>
+            </table>
+          </div>
 
+          {g.shortlist.length > 0 && (
             <ul class="pair-list">
-              {g.items.map((p) => (
+              {g.shortlist.map((p) => (
                 <li><a href={`/compare/${p.slug}/`}>{p.a.data.name} vs {p.b.data.name}</a></li>
               ))}
             </ul>
-          </section>
-        );
-      })}
-    </section>
+          )}
+
+          {g.rest.length > 0 && (
+            <p class="pair-rest">
+              Also compared:
+              {g.rest.map((p, i) => (
+                <>
+                  {i > 0 && ', '}
+                  <a href={`/compare/${p.slug}/`}>{p.a.data.name} vs {p.b.data.name}</a>
+                </>
+              ))}
+            </p>
+          )}
+        </section>
+      ))}
+
+      <section class="method">
+        <h2>How these figures were gathered</h2>
+        <p>
+          Where a vendor publishes a rate card, we use it. {quoteOnly.length} of the
+          products above publish nothing at all; for those we carry ranges assembled
+          from what buyers and reviewers reported paying in the last three years, and
+          the product page says which figures are vendor-published and which are
+          reported.
+        </p>
+        <p>
+          Where we could not source a defensible figure, the product page says so
+          rather than printing a range. Several widely circulated numbers in this
+          sector trace back only to roundup posts citing each other, and an invented
+          range is worse than an honest gap because a buyer budgets against it.
+        </p>
+        <p>
+          This table is a shortlist, not a directory. We cover more products than
+          appear here — every one has a full write-up and head-to-head pages, and
+          they're reachable from <a href="/platforms/">the platform index</a>. A
+          roundup that lists everything has stopped being a recommendation.
+        </p>
+      </section>
+
+      <section class="cite">
+        <h2>Citing this page</h2>
+        <p>Free to use with attribution and a link. Suggested citation:</p>
+        <p class="cite-block">
+          Nonprofit Software Guide, <em>What nonprofit fundraising software costs</em>,
+          {' '}{formatMedium(newest)}. https://nonprofitsoftwareguide.com/compare/
+        </p>
+        <p>
+          The underlying spend benchmark, with medians and the share of organizations
+          reporting $0 per category, is on the <a href="/benchmarks/">benchmark page</a>
+          and in a <a href="/2026-nonprofit-software-spend-survey.pdf">downloadable PDF</a>.
+        </p>
+      </section>
+    </article>
   </div>
+
+  <script type="application/ld+json" slot="head" set:html={JSON.stringify(datasetLd)} is:inline />
 </BaseLayout>
 
 <style>
+  .cmp-page > p, .cmp-page > h1, .cmp-page > h2 { max-width: 46rem; }
+  .answer { font-size: 1.12rem; line-height: 1.55; border-left: 4px solid var(--color-green-deep);
+    padding-left: 1rem; margin: 1rem 0 1.1rem; }
+  .verified-row { margin: 0 0 1.2rem; }
+  .context > p, .method > p, .cite > p { max-width: 46rem; }
+
   .cmp-block { margin: 2rem 0 2.4rem; }
-  .cmp-scroll { overflow-x: auto; margin: .8rem 0 1rem; }
-  table.cmp { width: 100%; min-width: 48rem; border-collapse: collapse; font-size: .92rem;
-    table-layout: fixed; }
+  .cmp-block h2 a { text-decoration: none; color: var(--color-ink); }
+  .cmp-block h2 a:hover { color: var(--color-green-deep); }
+  .table-scroll { overflow-x: auto; margin: .8rem 0 1rem; }
+
+  table { width: 100%; border-collapse: collapse; font-size: .92rem; }
+  table th, table td { text-align: left; padding: .6rem .7rem; vertical-align: top;
+    border-bottom: 1px solid var(--color-rule); }
+  thead th { font-size: .68rem; letter-spacing: .08em; text-transform: uppercase;
+    font-weight: 800; color: var(--color-muted); border-bottom: 2px solid var(--color-ink); }
+  tbody th a { font-weight: 800; text-decoration: none; color: var(--color-ink); }
+  tbody th a:hover { color: var(--color-green-deep); text-decoration: underline; }
+
+  table.spend { min-width: 40rem; }
+  .num-head, .num { text-align: right; font-variant-numeric: tabular-nums; }
+  .num { font-weight: 700; color: var(--color-green-deep); }
+
+  table.cmp { min-width: 48rem; table-layout: fixed; }
   table.cmp col.c-tool { width: 15%; } table.cmp col.c-price { width: 26%; }
   table.cmp col.c-free { width: 7%; }  table.cmp col.c-best { width: 30%; }
   table.cmp col.c-cta { width: 22%; }
-  table.cmp th, table.cmp td { text-align: left; padding: .6rem .7rem;
-    border-bottom: 1px solid var(--color-rule); vertical-align: top; }
-  table.cmp thead th { font-size: .68rem; letter-spacing: .08em; text-transform: uppercase;
-    font-weight: 800; color: var(--color-muted); border-bottom: 2px solid var(--color-ink); }
-  table.cmp tbody th a { font-weight: 800; text-decoration: none; color: var(--color-ink); }
-  table.cmp tbody th a:hover { color: var(--color-green-deep); text-decoration: underline; }
-  table.cmp .num { font-weight: 700; color: var(--color-green-deep); }
   .cmp-best { color: var(--color-muted); }
-  /* Full price ladder in the chart. "From $39" tells a buyer nothing about year
-     two, so every published tier is listed and the basis is named underneath. */
-  .ladder { list-style: none; margin: 0; padding: 0; font-size: .84rem; line-height: 1.3; }
-  .ladder li { display: grid; grid-template-columns: 1fr auto; column-gap: .5rem;
-    padding: .12rem 0; border-bottom: 1px dotted var(--color-rule); }
+
+  .ladder { list-style: none; margin: 0; padding: 0; font-size: .85rem; line-height: 1.35; }
+  .ladder li { display: grid; grid-template-columns: 1fr auto; column-gap: .6rem;
+    padding: .15rem 0; border-bottom: 1px dotted var(--color-rule); }
   .ladder li:last-child { border-bottom: 0; }
-  .t-name { color: var(--color-muted); min-width: 0; }
+  .t-name { color: var(--color-muted); }
   .t-price { font-weight: 700; color: var(--color-green-deep); white-space: nowrap;
     font-variant-numeric: tabular-nums; }
   .t-note { grid-column: 1 / -1; font-size: .92em; color: var(--color-muted); opacity: .85; }
   .basis { display: block; margin-top: .35rem; font-size: .72rem; color: var(--color-muted);
     font-style: italic; }
+
   .cmp-cta { white-space: normal; }
   .cmp-cta :global(.offer) { white-space: normal; line-height: 1.3; }
-  .btn-visit { display: inline-block; background: var(--color-green-deep); color: #fff; font-weight: 700;
-    text-decoration: none; padding: .35rem .7rem; border-radius: 3px; font-size: .82rem; }
+  .btn-visit { display: inline-block; background: var(--color-green-deep); color: #fff;
+    font-weight: 700; text-decoration: none; padding: .35rem .7rem; border-radius: 3px;
+    font-size: .82rem; }
   .btn-visit:hover { background: var(--color-green); }
-  .link-review { font-size: .84rem; font-weight: 600; }
-  .offer { display: block; margin-top: .25rem; font-size: .72rem; font-weight: 700; color: var(--color-green-deep); }
+
   .pair-list { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: .4rem .6rem; }
   .pair-list li { margin: 0; }
-  .pair-list a { display: inline-block; border: 1px solid var(--color-rule-strong); border-radius: 999px;
-    padding: .25rem .7rem; font-size: .85rem; text-decoration: none; color: var(--color-ink); }
+  .pair-list a { display: inline-block; border: 1px solid var(--color-rule-strong);
+    border-radius: 999px; padding: .25rem .7rem; font-size: .85rem; text-decoration: none;
+    color: var(--color-ink); }
   .pair-list a:hover { border-color: var(--color-green); color: var(--color-green-deep); }
-  .empty { color: var(--color-muted); font-style: italic; }
+  .pair-rest { font-size: .82rem; color: var(--color-muted); max-width: 46rem; margin-top: .5rem; }
 
   .switching { border: 2px solid var(--color-ink); border-radius: 3px;
-    background: var(--color-paper-2); padding: 1.1rem 1.3rem; margin: 1.6rem 0 2.4rem;
+    background: var(--color-paper-2); padding: 1rem 1.2rem; margin: 1.6rem 0 2.4rem;
     max-width: 46rem; }
   .switching-kicker { font-family: var(--font-mono); font-size: .62rem; letter-spacing: .12em;
-    text-transform: uppercase; color: var(--color-green-deep); font-weight: 700;
-    margin: 0 0 .4rem; }
-  .switching-lede { margin: 0 0 .8rem; }
-  .switching-list { list-style: none; padding: 0; margin: 0; display: flex;
-    flex-wrap: wrap; gap: .4rem .6rem; }
-  .switching-list li { margin: 0; }
-  .switching-list a { display: inline-block; border: 1px solid var(--color-rule-strong);
-    border-radius: 999px; padding: .25rem .7rem; font-size: .85rem; text-decoration: none;
-    color: var(--color-ink); background: var(--color-paper); }
-  .switching-list a:hover { border-color: var(--color-green); color: var(--color-green-deep); }
+    text-transform: uppercase; color: var(--color-green-deep); font-weight: 700; margin: 0 0 .4rem; }
+  .switching-lede { margin: 0; }
+
+  .table-note { color: var(--color-muted); font-size: .85rem; max-width: 46rem; }
+  .method, .cite { margin-top: 2.4rem; padding-top: 1.2rem; border-top: 2px solid var(--color-ink); }
+  .cite-block { font-family: var(--font-mono); font-size: .82rem; background: var(--color-paper-2);
+    border-left: 3px solid var(--color-green); padding: .8rem 1rem; border-radius: 3px; }
 </style>

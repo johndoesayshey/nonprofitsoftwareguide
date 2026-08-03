@@ -20,6 +20,7 @@ bestFor: "Large shops with a dedicated database administrator and genuinely comp
 targetQuery: "raiser's edge nxt pricing"
 affiliateSlug: blackbaud
 freeTier: false
+featured: false
 draft: false
 strengths:
   - "Depth on planned giving, complex constituent relationships and gift structures that smaller systems cannot match"

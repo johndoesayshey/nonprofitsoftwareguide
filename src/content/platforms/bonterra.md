@@ -1,5 +1,5 @@
 ---
-name: Bonterra
+name: Bonterra Fundraising and Engagement (EveryAction)
 slug: bonterra
 category: donor-crm
 entryPrice: "Quote-only; Guided Fundraising prices by contact count with a break at 501"
@@ -20,6 +20,7 @@ bestFor: "Advocacy and political-adjacent organizations that need CRM, email and
 targetQuery: "bonterra pricing everyaction network for good"
 affiliateSlug: bonterra
 freeTier: false
+featured: false
 draft: false
 strengths:
   - "Fundraising and Engagement genuinely unifies CRM, email and advocacy actions for organizations that run all three"

@@ -7,3 +7,8 @@
 /platforms/grantable/  /grant-research/  301
 # Grants.gov dropped: federal portal, no program, and a poor fit for the shops we serve.
 /platforms/grantsgov/  /grant-research/  301
+
+# /pricing/ merged into /compare/ 2026-08-03. The two were the same table twice —
+# comparing these products IS comparing their prices — so they competed for one
+# intent while neither carried the whole answer.
+/pricing/  /compare/  301

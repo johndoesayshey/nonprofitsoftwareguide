@@ -1,7 +1,7 @@
 ---
 name: Aplos
 slug: aplos
-category: donor-crm
+category: forms-ops
 entryPrice: "From $79/mo (fund accounting + donor management)"
 pricingModel: "Published tiers by feature depth and organization size; month-to-month"
 pricingBasis: "by accounting complexity and revenue band"
@@ -22,8 +22,10 @@ pricingTiers:
     price: "2.9% + $0.30"
     note: "ACH 1% + $0.30, uncapped; +1% on Amex and international"
 lastVerified: 2026-08-03
-bestFor: "Small and midsize nonprofits and churches that need real fund accounting, with donation tracking attached."
+bestFor: "Nonprofits and churches that need real fund accounting — a general ledger by fund — with donation tracking attached."
 targetQuery: "aplos pricing"
+alsoIn: [donor-crm]
+alsoInNote: "fund accounting first; donor management is the smaller half"
 affiliateSlug: aplos
 freeTier: false
 draft: false

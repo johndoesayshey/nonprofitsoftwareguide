@@ -23,6 +23,7 @@ bestFor: "Shops that want embeddable donation forms on their own site and take l
 targetQuery: "donately pricing"
 affiliateSlug: donately
 freeTier: true
+featured: false
 draft: false
 strengths:
   - "ACH at 0.8% capped at $5 — a $10,000 bank transfer costs five dollars to process"

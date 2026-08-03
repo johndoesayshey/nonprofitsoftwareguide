@@ -61,6 +61,19 @@ const platforms = defineCollection({
     alsoInNote: z.string().optional(),
     affiliateSlug: z.string().nullable().default(null),
     freeTier: z.boolean().default(false),
+    // Does this product appear in curated, reader-facing lists — category hubs,
+    // the comparison index, "best of" roundups, the Software menu?
+    //
+    // false does NOT mean unpublished. The product page stays live and
+    // indexable, its comparison pages are still generated, and switching guides
+    // still link to it. It just stops competing for space in a shortlist.
+    //
+    // The rule (operator direction, 2026-08-03): 4-5 products per category,
+    // weighted to the ones that can actually earn, plus the free options a
+    // credible list cannot omit. Beyond that a roundup stops being a
+    // recommendation and becomes a directory, which is the bloat this prevents.
+    // See DECISIONS.md for why each unfeatured product is unfeatured.
+    featured: z.boolean().default(true),
     // Not in the original spec schema; added so the [FACT-CHECK] guardrail can
     // skip in-progress content. Ship generated files as draft: true.
     draft: z.boolean().default(true),
