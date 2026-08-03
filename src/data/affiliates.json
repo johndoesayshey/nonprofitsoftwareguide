@@ -8,17 +8,17 @@
     "affiliateUrl": null,
     "readerOffer": "$50 off first month",
     "terms": "$50 per referred customer (flat). CORRECTED: this was rated high on an assumption that it paid a share of Instrumentl’s $2.1k-$6k plans. It does not. It is a flat $50, and the reader gets $50 off their first month. Still worth linking (your strongest category, and the reader discount helps conversion) but it is not a high-value payout.",
-    "signupUrl": "https://www.instrumentl.com/partners",
+    "signupUrl": "https://beinstrumentl.typeform.com/to/UVUTeuFk",
     "appliedOn": null,
     "approvedOn": null,
     "payout": "$50 per referred customer (flat)",
     "potential": "low",
     "badge": "$50",
-    "potentialNote": "CORRECTED: this was rated high on an assumption that it paid a share of Instrumentl’s $2.1k-$6k plans. It does not. It is a flat $50, and the reader gets $50 off their first month. Still worth linking (your strongest category, and the reader discount helps conversion) but it is not a high-value payout.",
+    "potentialNote": "Confirmed live 2026-08-03. The form is titled \"Affiliate Partner Application\" and is the right one of the several routes on their partners page. Commissions are real: they pay monthly via Gusto. You do NOT need to be an Instrumentl customer to join. Rate still not published.",
     "evidence": {
-      "url": "https://www.instrumentl.com/partners",
-      "checked": "2026-07-31",
-      "quote": "you earn $50 per referred customer you bring to Instrumentl and save your referral $50 off their first month"
+      "url": "https://beinstrumentl.typeform.com/to/UVUTeuFk",
+      "checked": "2026-08-03",
+      "quote": "Affiliate Partner Application. Looking to refer nonprofits or grant writing consultants to Instrumentl?"
     },
     "offerSource": "guide"
   },
@@ -30,17 +30,17 @@
     "affiliateUrl": null,
     "readerOffer": null,
     "terms": "No live program page found. grantstation.com/partner-programs/prp now returns 404, and no replacement partner page was found. Treat as no program until they confirm otherwise.",
-    "signupUrl": null,
+    "signupUrl": "https://grantstation.com/partner-programs/product-referral-program-old",
     "appliedOn": null,
     "approvedOn": null,
     "payout": "No live program page found",
     "potential": "none",
     "badge": "—",
-    "potentialNote": "grantstation.com/partner-programs/prp now returns 404, and no replacement partner page was found. Treat as no program until they confirm otherwise.",
+    "potentialNote": "Checked 2026-08-03. The /partner-programs/prp URL in the original spec is dead. The only live PRP page has an \"-old\" slug, is absent from their Partner Programs nav, and appears in no sitemap section — orphaned, which usually means wound down or invite-only. Two further problems: the commission is on Online Education (webinar) sales only, NOT the ~$199 membership we actually recommend, and eligibility is written for alliances and associations with members. Low priority; ask by email if you want, but do not plan around it.",
     "evidence": {
-      "url": "https://grantstation.com/partner-programs/prp",
-      "checked": "2026-07-31",
-      "quote": "HTTP 404 (checked 2026-07-31)"
+      "url": "https://grantstation.com/partner-programs/product-referral-program-old",
+      "checked": "2026-08-03",
+      "quote": "Earn a percentage of Online Education product sales when your members use a custom referral link to make purchases."
     }
   },
   "donordock": {
@@ -57,10 +57,10 @@
     "payout": "$500 per new paid customer",
     "potential": "high",
     "badge": "$500",
-    "potentialNote": "Confirmed on their live partner page. Largest flat payout on the site and a self-serve application.",
+    "potentialNote": "Confirmed live 2026-08-03. Application form embedded on the partners page, seven steps. Free to join, no contract, $500 per new paid customer paid monthly, no minimums or tiers. Vendor FAQ last updated 2026-03-25.",
     "evidence": {
       "url": "https://www.donordock.com/partners",
-      "checked": "2026-07-31",
+      "checked": "2026-08-03",
       "quote": "You earn $500 cash from every new paid customer."
     },
     "offerSource": "guide"
@@ -73,16 +73,16 @@
     "affiliateUrl": null,
     "readerOffer": null,
     "terms": "25% of every sale, recurring on renewals. Confirmed live. Recurring on each renewal, which compounds. Runs on FirstPromoter.",
-    "signupUrl": "https://4agoodcause.com/referral-program/",
+    "signupUrl": "https://4agoodcause.firstpromoter.com/",
     "appliedOn": null,
     "approvedOn": null,
     "payout": "25% of every sale, recurring on renewals",
     "potential": "high",
     "badge": "25%",
-    "potentialNote": "Confirmed live. Recurring on each renewal, which compounds. Runs on FirstPromoter.",
+    "potentialNote": "Confirmed live 2026-08-03. Self-serve instant signup on FirstPromoter; the referral-program page just links to it. 25% recurring on every renewal, which compounds.",
     "evidence": {
       "url": "https://4agoodcause.com/referral-program/",
-      "checked": "2026-07-31",
+      "checked": "2026-08-03",
       "quote": "When your visitors purchase a subscription, you get a 25% commission! You get paid again every time the client’s subscription is renewed."
     }
   },
@@ -94,38 +94,38 @@
     "affiliateUrl": null,
     "readerOffer": null,
     "terms": "15% of fees for 3 years. Confirmed live. $50 minimum payout, paid via PayPal. Attribution is link-only, so never mention Donorbox without the /go/ link.",
-    "signupUrl": "https://donorbox.org/affiliate-partner-program",
+    "signupUrl": "mailto:partner@donorbox.org",
     "appliedOn": null,
     "approvedOn": null,
     "payout": "15% of fees for 3 years",
     "potential": "medium",
     "badge": "15%",
-    "potentialNote": "Confirmed live. $50 minimum payout, paid via PayPal. Attribution is link-only, so never mention Donorbox without the /go/ link.",
+    "potentialNote": "Program is live but the published application link is BROKEN as of 2026-08-03: donorbox.tapfiliate.com 301s to Tapfiliate's own marketing site, and the current portal (partners.donorbox.org, powered by Kiflo) redirects every /signup, /register and /apply path to a sign-in screen with no self-serve registration. They migrated platforms and did not update the page. Apply by emailing partner@donorbox.org. Attribution is link-only and never retroactive.",
     "evidence": {
       "url": "https://donorbox.org/affiliate-partner-program",
-      "checked": "2026-07-31",
-      "quote": "Earn a 15% commission on your referral’s Donorbox fees for their first three years on Donorbox."
+      "checked": "2026-08-03",
+      "quote": "You can sign up via the application form at this link - https://donorbox.tapfiliate.com/. [That URL 301s to tapfiliate.com. Portal is now partners.donorbox.org / Kiflo, sign-in only.]"
     }
   },
   "givewp": {
     "name": "GiveWP",
     "category": "donation-processing",
-    "status": "none",
-    "url": "https://givewp.com",
+    "status": "pending",
+    "url": "https://www.liquidweb.com/software/give/",
     "affiliateUrl": null,
     "readerOffer": null,
-    "terms": "Program moved; GiveWP-specific terms gone. givewp.com/affiliates 404s and givewp.com/become-an-affiliate now 301s to LiquidWeb’s hosting affiliate program (GiveWP is part of StellarWP/LiquidWeb). The old \"30% then 40%\" terms are not on any live GiveWP page. Recheck under LiquidWeb if WordPress shops matter to you.",
-    "signupUrl": null,
+    "terms": "[FACT-CHECK: the 30%-then-40% figure predates the Liquid Web consolidation and is not published anywhere current. Confirm inside Impact.]",
+    "signupUrl": "https://app.impact.com/campaign-promo-signup/StellarWP.brand",
     "appliedOn": null,
     "approvedOn": null,
-    "payout": "Program moved; GiveWP-specific terms gone",
-    "potential": "none",
-    "badge": "—",
-    "potentialNote": "givewp.com/affiliates 404s and givewp.com/become-an-affiliate now 301s to LiquidWeb’s hosting affiliate program (GiveWP is part of StellarWP/LiquidWeb). The old \"30% then 40%\" terms are not on any live GiveWP page. Recheck under LiquidWeb if WordPress shops matter to you.",
+    "payout": "[FACT-CHECK: rate is behind the Impact terms]",
+    "potential": "unknown",
+    "badge": null,
+    "potentialNote": "Found live 2026-08-03. givewp.com and stellarwp.com now 301 wholesale to liquidweb.com, and their old affiliate pages redirect to a HOSTING affiliate program that never mentions GiveWP — following that redirect lands you in the wrong program. The real one is StellarWP on Impact, self-serve, one application covering GiveWP, LearnDash, The Events Calendar and five other brands. Rate not verifiable until you are inside.",
     "evidence": {
-      "url": "https://givewp.com/become-an-affiliate/",
-      "checked": "2026-07-31",
-      "quote": "301 redirect to liquidweb.com/partner-programs/hosting-affiliate-program/ (checked 2026-07-31)"
+      "url": "https://app.impact.com/campaign-promo-signup/StellarWP.brand",
+      "checked": "2026-08-03",
+      "quote": "Join StellarWP's Affiliate Program powered by impact.com — GiveWP shown among the eight brand logos."
     }
   },
   "jotform": {
@@ -136,17 +136,17 @@
     "affiliateUrl": null,
     "readerOffer": "50% off, permanently",
     "terms": "30% of the first year only. Confirmed live. Approves in ~1 business day, but the referral must stay a paid client for 60 days before you are eligible, and commission stops after year one.",
-    "signupUrl": "https://www.jotform.com/partnership/affiliate/",
+    "signupUrl": "https://www.jotform.com/partnership/affiliate/application/",
     "appliedOn": null,
     "approvedOn": null,
     "payout": "30% of the first year only",
     "potential": "medium",
     "badge": "30%",
-    "potentialNote": "Confirmed live. Approves in ~1 business day, but the referral must stay a paid client for 60 days before you are eligible, and commission stops after year one.",
+    "potentialNote": "Confirmed live 2026-08-03. 30% commission, application reviewed within 1 business day. The \"first year only\" duration in the original spec is not stated on the current page — confirm in the terms at signup.",
     "evidence": {
       "url": "https://www.jotform.com/partnership/affiliate/",
-      "checked": "2026-07-31",
-      "quote": "30% commission on every new paid user you refer... for the first year of each customer’s Jotform subscription."
+      "checked": "2026-08-03",
+      "quote": "Earn a 30% commission on every new paid user you refer... your application will be reviewed within 1 business day."
     },
     "offerSource": "vendor"
   },
@@ -164,10 +164,10 @@
     "payout": "$250 min or 10% of ARR, paid as a donation to your organization",
     "potential": "unknown",
     "badge": "250/10%",
-    "potentialNote": "Bloomerang does publish a rate, but on the nonprofit-to-nonprofit track: the reward is a DONATION to your organization, not cash to a publisher. Likely unusable without a 501(c)(3) entity. Their separate PartnerStack agency program publishes no rate before login. Ask which track a publisher qualifies for.",
+    "potentialNote": "Confirmed live 2026-08-03. Self-serve join on PartnerStack, 90-day cookie, one-time commission paid the month after the referred client signs. The dollar amount is not on the public page — it sits behind the referral agreement PDF and the signup.",
     "evidence": {
       "url": "https://bloomerang.com/company/referral",
-      "checked": "2026-07-31",
+      "checked": "2026-08-03",
       "quote": "we'll make a donation to your organization worth either: $250 minimum guaranteed / 10% of the referred organization's annual recurring contract (whichever is higher)"
     }
   },
@@ -178,18 +178,18 @@
     "url": "https://www.donorsnap.com",
     "affiliateUrl": null,
     "readerOffer": null,
-    "terms": "No live program page found. donorsnap.com/affiliate-program 404s and /referral/ now serves a stray image file, not a page. The $200 figure is unverifiable. Email them if DonorSnap matters to your CRM coverage.",
+    "terms": "No program found. The $200-per-customer figure in the original spec has no live source.",
     "signupUrl": null,
     "appliedOn": null,
     "approvedOn": null,
-    "payout": "No live program page found",
+    "payout": null,
     "potential": "none",
-    "badge": "—",
-    "potentialNote": "donorsnap.com/affiliate-program 404s and /referral/ now serves a stray image file, not a page. The $200 figure is unverifiable. Email them if DonorSnap matters to your CRM coverage.",
+    "badge": null,
+    "potentialNote": "Confirmed gone 2026-08-03. Every plausible path 404s (/affiliates/, /affiliate-program/, /referral-program/, /partner-program/, /partners/). Their full 99-page sitemap dated 2026-07-31 contains no affiliate, referral, partner or reseller page, and on-site search returns only CRM feature docs. Wayback shows /affiliates/ was live in 2022. The only source still describing it is a vendor blog roundup whose \"sign up\" link points at the bare homepage.",
     "evidence": {
-      "url": "https://www.donorsnap.com/referral/",
-      "checked": "2026-07-31",
-      "quote": "URL serves an image asset, no program content (checked 2026-07-31)"
+      "url": "https://donorsnap.com/affiliates/",
+      "checked": "2026-08-03",
+      "quote": "404 Not Found"
     }
   },
   "kindsight": {
@@ -469,10 +469,10 @@
     "payout": "Up to 100% of first-year sales (tiered)",
     "potential": "high",
     "badge": "up to 100%",
-    "potentialNote": "Confirmed live on their affiliate page. Tiered via PartnerStack; the base rate is not published, so treat \"up to\" literally.",
+    "potentialNote": "Confirmed live 2026-08-03. Self-serve join on PartnerStack, 90-day cookie. Public page advertises up to 20% per closed deal for partners, or a CPL deal per signup for online affiliates.",
     "evidence": {
       "url": "https://monday.com/affiliate-program/",
-      "checked": "2026-07-31",
+      "checked": "2026-08-03",
       "quote": "you can earn up to 100% commission on the first year’s sales of each customer you refer."
     }
   },
@@ -499,18 +499,18 @@
     "url": "https://www.greatergiving.com",
     "affiliateUrl": null,
     "readerOffer": null,
-    "terms": "$300 per referred organization that becomes a customer. The page says \"referral credit\"/\"incentive\", never cash, so confirm the payout form when you apply.",
+    "terms": "Not an affiliate program. You submit a specific nonprofit's name, email and address on a form; if they become a customer you get a $300 credit. There is no tracking link and no way for a reader to self-identify as your referral.",
     "signupUrl": "https://www.greatergiving.com/en/partners/partner-referral",
     "appliedOn": null,
     "approvedOn": null,
-    "payout": "$300 per referred organization that becomes a customer",
-    "potential": "high",
-    "badge": "$300",
-    "potentialNote": "The only real earner in events. Worded as a \"referral credit\" you may keep or gift to the client, so confirm whether it pays as cash. A stale 2016 page still advertises $150; $300 is current.",
+    "payout": "$300 credit per named organization you personally refer — no tracking link",
+    "potential": "none",
+    "badge": null,
+    "potentialNote": "DOWNGRADED 2026-08-03 from \"high\" after opening the form. This is a manual referral form, not an affiliate program: it asks for the referred organization's name, email, phone and address. A content site cannot use it — we do not know our readers' details, and submitting a reader's contact information to a vendor without their consent is not something we will do. Revisit only if they add a tracking link.",
     "evidence": {
-      "url": "https://www.greatergiving.com/en/partners/partner-referral",
-      "checked": "2026-07-31",
-      "quote": "Get a $300 incentive for every referral that becomes a client... you'll receive a $300 referral credit as a thank-you."
+      "url": "https://go.greatergiving.com",
+      "checked": "2026-08-03",
+      "quote": "Refer a nonprofit — get $300. Organization information: First name, Last name, Organization, Email, Phone, Country, State, Zip. Your name, Your company, Your email."
     },
     "offerNote": "The $300 is worded as a referral credit, not a confirmed customer discount. Do not advertise it to readers until the partnerships manager confirms it can be applied to their invoice."
   },
@@ -521,18 +521,18 @@
     "url": "https://eleoonline.com",
     "affiliateUrl": null,
     "readerOffer": null,
-    "terms": "$100 Partner Share per referred client, paid after the client has been active 90 days. No quotas, no exclusivity.",
-    "signupUrl": "https://eleoonline.com/become-eleo-nonprofit-consultant-community-partner/",
+    "terms": "$100 partner share for every client referred, paid once after 90 days of client status. No quotas, no exclusivity requirements.",
+    "signupUrl": "https://eleoonline.com/consultant-partner-interest/",
     "appliedOn": null,
     "approvedOn": null,
-    "payout": "$100 per referred client (after 90 days)",
+    "payout": "$100 per referred client, one-time, after 90 days of client status",
     "potential": "medium",
     "badge": "$100",
-    "potentialNote": "Small but clean and self-serve, on one of the cheapest real CRMs ($39/mo). Note the domain is eleoonline.com; eleo.com does not resolve.",
+    "potentialNote": "Confirmed live 2026-08-03. $100 partner share per referred client, paid once, after the client has been active 90 days. No quotas, no exclusivity. Interest form, not instant approval.",
     "evidence": {
       "url": "https://eleoonline.com/become-eleo-nonprofit-consultant-community-partner/",
-      "checked": "2026-07-31",
-      "quote": "$100 Partner Share for every client referred to Eleo (after 90 days of client status)"
+      "checked": "2026-08-03",
+      "quote": "$100 Partner Share for every client referred to Eleo (after 90 days of client status). No quotas. No exclusivity requirements."
     }
   }
 }
