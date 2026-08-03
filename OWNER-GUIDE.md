@@ -26,6 +26,22 @@ Run it weekly. It reads the actual site data and tells you:
 | SEO & setup | GA4, Search Console, About page still hidden | `.env`, `src/pages/about.astro` |
 | Your to-dos | Every unchecked box in this file | this file |
 
+## Your email addresses
+
+All three site addresses forward to **nonprofitsoftwareguide@gmail.com** via
+Cloudflare Email Routing (free, no mailbox to pay for):
+
+| Address | Used on |
+|---|---|
+| hello@nonprofitsoftwareguide.com | About page, disclosure page |
+| consulting@nonprofitsoftwareguide.com | Consulting page |
+| survey@nonprofitsoftwareguide.com | Benchmark survey (reserved) |
+
+Receiving only — you cannot *send* from these yet. To add that later, either pay
+for a mailbox on the domain or configure Gmail "Send mail as" with an SMTP
+relay. Managed under Cloudflare → Email Routing, in the johndoesayshey@gmail.com
+account.
+
 ## Editing text visually (no typing file names)
 
 ```bash
