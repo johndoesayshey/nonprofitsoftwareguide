@@ -50,6 +50,18 @@ Organizations whose fundraising has a public face: giving days, galas, walk-a-th
 
 The tips-off option is a fair, known cost if the tip prompt isn't for you.
 
+## One thing the integrations page buries
+
+Givebutter's integrations directory lists around fifty integrations, including
+QuickBooks Online, Mailchimp, Constant Contact, Salesforce, Zapier and WordPress.
+Scanning that page, QuickBooks Online looks like one free integration among many.
+
+It is not. The QuickBooks Online entry is annotated as available with **Givebutter
+Plus**, the paid tier from around $29/mo. If accounting sync is the reason you are
+choosing Givebutter, that is a subscription rather than a free platform feature,
+and it is the easiest thing on the page to miss. Verified against their own
+integrations directory on 3 August 2026.
+
 ## How it compares
 
 [Zeffy](/go/zeffy) is the purer free deal, with no processing fees at all, and fits simple forms-and-tickets needs. [Donorbox](/go/donorbox) is deeper on recurring-gift management. [OneCause](/go/onecause) takes over when a signature gala needs live-auction machinery. Givebutter owns the middle: real events and campaigns, zero platform cost, modern donor experience.

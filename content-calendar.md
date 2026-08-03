@@ -93,7 +93,21 @@ Wave A.
 
 Do not start these while grant/prospect is under 40%.
 
-- Integration reference page (research in progress)
+- **Integration reference page — BLOCKED, not just queued.** A verification pass
+  on 2026-08-03 came back almost entirely unconfirmed: Intuit's QuickBooks App
+  Store refused every connection, and Zapier's search API ignores its own query
+  parameter, so a 404 at a canonical slug proves nothing. Only Givebutter could
+  be verified across all eight integrations. Publishing a matrix that is 90%
+  "unconfirmed" is worse than no page. What it needs is a browser-driven pass
+  through the Intuit listings and each vendor's own help centre — specifically
+  the question that decides purchases and that nobody publishes clearly: whether
+  QuickBooks sync is two-way, and whether it posts individual transactions or
+  only summary journal entries.
+
+  Salvaged from that pass and already published: Givebutter gates QuickBooks
+  Online behind Givebutter Plus while listing it among fifty integrations (now on
+  its platform page), and the official Donorbox and Funraise WordPress plugins
+  are both around a year without an update.
 - Remaining verticals: libraries and Friends groups, environmental, international
   NGOs, professional associations
 - Head terms: best events and auction software, best nonprofit forms software
