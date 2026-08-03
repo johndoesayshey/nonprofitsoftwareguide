@@ -1,9 +1,11 @@
 {
-  "_comment": "Controls the 'contribute your numbers' form on /benchmarks/. Showing how the data is collected is the point: a reader can see the instrument, which is what separates a real benchmark from an invented one. To switch from the email fallback to a hosted form, set provider to 'jotform' and paste the form URL into formUrl — the page will embed it instead.",
+  "_comment": "Controls the 'contribute your numbers' form on /benchmarks/. Showing how the data is collected is the point: a reader can see the instrument, which is what separates a real benchmark from an invented one. provider: 'placeholder' validates and shows a confirmation but STORES NOTHING — it is a stand-in until a backend exists. 'jotform' embeds a hosted form (set formUrl) and is the quickest way to start actually capturing responses.",
   "open": true,
-  "provider": "email",
+  "provider": "placeholder",
   "formUrl": null,
   "email": "survey@nonprofitsoftwareguide.com",
   "closesNote": "Responses collected on a rolling basis. The next edition publishes in July 2027.",
-  "privacyNote": "We ask for either your role and organization or a LinkedIn profile so we can confirm responses come from real fundraising professionals rather than automated submissions. Verification details are never published, never shared, and are deleted once the edition is finalized. Only aggregate figures appear in the results."
+  "privacyNote": "We ask for either your role and organization or a LinkedIn profile so we can confirm responses come from real fundraising professionals rather than automated submissions. Verification details are never published, never shared, and are deleted once the edition is finalized. Only aggregate figures appear in the results.",
+  "confirmTitle": "Thanks — your response has been recorded.",
+  "confirmBody": "Your figures will be included in the 2027 edition. If we need to confirm anything, we'll be in touch through the details you provided."
 }

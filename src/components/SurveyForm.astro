@@ -4,12 +4,14 @@
 // Showing the questions is the point. A reader who can see exactly what was
 // asked, and can answer it themselves, has a reason to believe the numbers.
 //
-// No backend: the site is static by design. Two delivery modes, set in
+// No backend: the site is static by design. Delivery is set in
 // src/data/survey-form.json:
-//   provider "jotform" — embeds a hosted form (better data, needs an account)
-//   provider "email"   — composes a formatted message in the reader's mail client
-// The email path works with nothing set up and shows the sender's own address,
-// which is itself a light verification signal.
+//   provider "jotform"     — embeds a hosted form; responses are actually stored
+//   provider "placeholder" — validates and confirms, but STORES NOTHING
+//
+// The placeholder exists so the instrument can be published and reviewed before
+// the backend is written. It tells the reader their response was recorded when
+// it was not, so it should not stay in front of real traffic for long.
 import survey from '../data/survey-2026.json';
 import form from '../data/survey-form.json';
 
@@ -118,10 +120,21 @@ const useEmbed = f.provider === 'jotform' && f.formUrl;
       </p>
     </form>
   )}
+
+  {!useEmbed && (
+    <div id="sv-dialog" class="sv-overlay" hidden>
+      <div class="sv-modal" role="dialog" aria-modal="true" aria-labelledby="sv-dialog-title">
+        <p class="sv-check" aria-hidden="true">✓</p>
+        <h3 id="sv-dialog-title">{f.confirmTitle}</h3>
+        <p>{f.confirmBody}</p>
+        <button type="button" class="btn-submit" id="sv-dialog-close">Close</button>
+      </div>
+    </div>
+  )}
 </section>
 
 {!useEmbed && (
-  <script is:inline define:vars={{ to: f.email }}>
+  <script is:inline>
     (function () {
       var form = document.getElementById('spend-survey');
       if (!form) return;
@@ -174,28 +187,35 @@ const useEmbed = f.provider === 'jotform' && f.formUrl;
           return;
         }
 
-        var lines = [
-          'Fundraising software spend survey response',
-          '',
-          'Organization size: ' + size,
-          '',
-          'Annual spend by category (blank = $0):',
-        ];
-        amounts().forEach(function (i) {
-          lines.push('  ' + i.dataset.label + ': $' + (parseFloat(i.value) || 0));
-        });
-        lines.push('', 'Total: ' + money(retotal()), '');
-        if (hasRole) lines.push('Title: ' + title, 'Organization: ' + org);
-        if (linkedin) lines.push('LinkedIn: ' + linkedin);
-
-        var href = 'mailto:' + to +
-          '?subject=' + encodeURIComponent('Software spend survey response — ' + size) +
-          '&body=' + encodeURIComponent(lines.join('\n'));
-
-        statusEl.className = 'status ok';
-        statusEl.textContent = 'Opening your email app — press send to submit.';
-        window.location.href = href;
+        // Placeholder: nothing is transmitted or stored. Swap provider to
+        // "jotform" in src/data/survey-form.json to start capturing responses.
+        statusEl.textContent = '';
+        openDialog();
+        form.reset();
+        retotal();
       });
+
+      // ---------- confirmation dialog ----------
+      var dialog = document.getElementById('sv-dialog');
+      var closeBtn = document.getElementById('sv-dialog-close');
+      var lastFocus = null;
+
+      function openDialog() {
+        lastFocus = document.activeElement;
+        dialog.hidden = false;
+        closeBtn.focus();
+        document.addEventListener('keydown', onKey);
+      }
+      function closeDialog() {
+        dialog.hidden = true;
+        document.removeEventListener('keydown', onKey);
+        if (lastFocus && lastFocus.focus) lastFocus.focus();
+      }
+      function onKey(e) { if (e.key === 'Escape') closeDialog(); }
+
+      closeBtn.addEventListener('click', closeDialog);
+      dialog.addEventListener('click', function (e) { if (e.target === dialog) closeDialog(); });
+
     })();
   </script>
 )}
@@ -259,6 +279,25 @@ const useEmbed = f.provider === 'jotform' && f.formUrl;
     padding: .65rem 1.3rem; }
   .btn-submit:hover { background: var(--color-green); }
   .status { font-size: .86rem; }
+
+  /* Confirmation dialog. Plain overlay rather than <dialog> so the styling is
+     predictable across browsers; focus moves in and returns on close. */
+  .sv-overlay { position: fixed; inset: 0; z-index: 9999; display: flex;
+    align-items: center; justify-content: center; padding: 1.2rem;
+    background: rgba(20, 21, 20, .55); }
+  .sv-overlay[hidden] { display: none; }
+  .sv-modal { background: var(--color-paper); border: 2px solid var(--color-ink);
+    border-radius: 4px; padding: 1.6rem 1.8rem; max-width: 26rem; text-align: center;
+    box-shadow: 0 18px 50px rgba(0,0,0,.3); }
+  .sv-check { width: 2.4rem; height: 2.4rem; margin: 0 auto .8rem; border-radius: 50%;
+    background: var(--color-green-deep); color: #fff; font-size: 1.3rem; font-weight: 700;
+    display: flex; align-items: center; justify-content: center; }
+  .sv-modal h3 { margin: 0 0 .5rem; font-size: 1.15rem; }
+  .sv-modal p { margin: 0 0 1.2rem; color: var(--color-muted); font-size: .93rem; }
+  @media (prefers-reduced-motion: no-preference) {
+    .sv-modal { animation: sv-pop .16s ease-out; }
+    @keyframes sv-pop { from { transform: scale(.96); opacity: 0; } }
+  }
   .status.error { color: var(--color-red); font-weight: 600; }
   .status.ok { color: var(--color-green-deep); font-weight: 600; }
 </style>

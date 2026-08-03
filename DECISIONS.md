@@ -488,11 +488,16 @@ reader can see how the figures were collected and can answer the same questions 
 which is the difference between a benchmark and a number someone made up. It also makes the
 2027 edition self-feeding.
 
-**No backend, two modes.** `provider: "email"` composes a formatted response in the reader's own
-mail client — works with nothing set up, and the sender's address is itself a light verification
-signal. `provider: "jotform"` with a `formUrl` embeds a hosted form instead, which collects
-cleaner data. Jotform is the recommended upgrade: the site already covers it, it is a pending
+**No backend.** `provider: "jotform"` with a `formUrl` embeds a hosted form and actually stores
+responses. Jotform is the recommended route: the site already covers it, it is a pending
 affiliate partner, and running our own survey on it is an honest first-hand claim.
+
+*(Amended later the same day: the mailto composer was removed at the operator's direction in
+favour of `provider: "placeholder"`, which validates and shows a confirmation dialog but stores
+nothing, pending a backend. **The dialog tells the reader their response was recorded when it
+was not.** That is fine while nobody is being sent to the page and is flagged in the component
+header; it should not sit in front of real traffic. Switching to jotform is a two-field change
+in `src/data/survey-form.json`.)*
 
 **Verification fields.** Job title plus organization or LinkedIn, with a stated privacy note:
 never published, never shared, deleted once the edition is finalised, only aggregates reported.
