@@ -10,6 +10,8 @@ import AffiliateDisclosure from '../../components/AffiliateDisclosure.astro';
 import DraftBanner from '../../components/DraftBanner.astro';
 import { CATEGORIES } from '../../lib/categories';
 import { getAffiliate } from '../../lib/affiliates';
+import { comparePairs } from '../../lib/compare';
+import { valueOf } from '../../lib/affiliate-value';
 
 export async function getStaticPaths() {
   const platforms = await getCollection('platforms');
@@ -27,6 +29,39 @@ const { Content } = await render(entry);
 const cat = CATEGORIES[p.category];
 const affiliate = p.affiliateSlug ? getAffiliate(p.affiliateSlug) : undefined;
 const isDraft = p.draft !== false;
+
+// Cluster links. Every comparison and switching guide that names this product,
+// linked from the product page itself. Without this the 25 comparison pages and
+// 13 alternatives pages each carry a single inbound link from an index — which
+// is the same as being orphaned as far as internal PageRank is concerned.
+// Ordered by the other product's affiliate value, same rule as everywhere else.
+const pairs = (await comparePairs()).filter(
+  (x) =>
+    (x.a.data.slug === p.slug || x.b.data.slug === p.slug) &&
+    x.a.data.draft === false &&
+    x.b.data.draft === false
+);
+const comparisons = pairs
+  .map((x) => {
+    const other = x.a.data.slug === p.slug ? x.b.data : x.a.data;
+    return { slug: x.slug, other, v: valueOf(other.affiliateSlug) };
+  })
+  .sort((x, y) => y.v - x.v || x.other.name.localeCompare(y.other.name));
+
+const allAlternatives = await getCollection('alternatives');
+// The switching guide for leaving THIS product...
+const leaving = allAlternatives.find(
+  (x) => x.data.draft === false && x.data.incumbentSlug === p.slug
+);
+// ...and the guides that recommend it, which is where the buying intent is.
+const recommendedIn = allAlternatives
+  .filter(
+    (x) =>
+      x.data.draft === false &&
+      x.data.incumbentSlug !== p.slug &&
+      x.data.picks.some((pick) => pick.platformSlug === p.slug)
+  )
+  .sort((x, y) => x.data.product.localeCompare(y.data.product));
 
 // Screenshot slot: drop a product screenshot at public/images/platforms/<slug>.png
 // (or .webp / .jpg) and it renders automatically with SEO-friendly alt text.
@@ -114,6 +149,46 @@ const productLd: Record<string, unknown> = {
         ))}
       </ul>
 
+      {(comparisons.length > 0 || leaving || recommendedIn.length > 0) && (
+        <section class="cluster">
+          <h2>Keep comparing</h2>
+
+          {comparisons.length > 0 && (
+            <>
+              <p class="cluster-label">{p.name} head to head</p>
+              <ul class="chips">
+                {comparisons.map((c) => (
+                  <li><a href={`/compare/${c.slug}/`}>vs {c.other.name}</a></li>
+                ))}
+              </ul>
+            </>
+          )}
+
+          {leaving && (
+            <p class="cluster-line">
+              Already on {p.name} and shopping to replace it?
+              <a href={`/alternatives/${leaving.data.slug}/`}>{p.name} alternatives</a> covers
+              why shops leave, what to move to, and when staying put is the right call.
+            </p>
+          )}
+
+          {recommendedIn.length > 0 && (
+            <p class="cluster-line">
+              {/* Built as one flat array so no JSX whitespace lands before a
+                  comma — "Bloomerang , Donorbox" is the failure mode here. */}
+              <Fragment set:html={
+                `We recommend ${p.name} to shops leaving ` +
+                recommendedIn
+                  .map((x) => `<a href="/alternatives/${x.data.slug}/">${x.data.product}</a>`)
+                  .reduce((acc, link, i, arr) =>
+                    i === 0 ? link : acc + (i === arr.length - 1 ? ' and ' : ', ') + link, '') +
+                '.'
+              } />
+            </p>
+          )}
+        </section>
+      )}
+
       {affiliate && p.affiliateSlug && (
         <p class="cta">
           <a class="btn-primary" href={`/go/${p.affiliateSlug}`} rel={relFor(p.affiliateSlug)}>
@@ -128,6 +203,21 @@ const productLd: Record<string, unknown> = {
 </BaseLayout>
 
 <style>
+  .cluster { margin: 2.4rem 0 1.4rem; padding-top: 1.2rem;
+    border-top: 2px solid var(--color-ink); }
+  .cluster h2 { margin-top: 0; }
+  .cluster-label { font-family: var(--font-mono); font-size: .62rem; letter-spacing: .12em;
+    text-transform: uppercase; color: var(--color-muted); font-weight: 700;
+    margin: .8rem 0 .4rem; }
+  .cluster-line { color: var(--color-muted); font-size: .95rem; }
+  .chips { list-style: none; padding: 0; margin: 0 0 1rem; display: flex;
+    flex-wrap: wrap; gap: .4rem .5rem; }
+  .chips li { margin: 0; }
+  .chips a { display: inline-block; border: 1px solid var(--color-rule-strong);
+    border-radius: 999px; padding: .22rem .7rem; font-size: .84rem;
+    text-decoration: none; color: var(--color-ink); }
+  .chips a:hover { border-color: var(--color-green); color: var(--color-green-deep); }
+
   .alts li { margin-bottom: .6rem; }
   .alts strong { color: var(--color-ink); }
 

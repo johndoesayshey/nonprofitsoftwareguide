@@ -26,12 +26,19 @@ export function getAffiliate(slug: string): Affiliate | undefined {
   return affiliates[slug];
 }
 
+// Keys beginning with "_" are documentation in affiliates.json, not products.
+// Without this filter they generate a /go/_comment/ page that redirects to
+// "undefined".
+const isProduct = (slug: string) => !slug.startsWith('_');
+
 export function allAffiliateSlugs(): string[] {
-  return Object.keys(affiliates);
+  return Object.keys(affiliates).filter(isProduct);
 }
 
 export function allAffiliates(): Array<{ slug: string } & Affiliate> {
-  return Object.entries(affiliates).map(([slug, a]) => ({ slug, ...a }));
+  return Object.entries(affiliates)
+    .filter(([slug]) => isProduct(slug))
+    .map(([slug, a]) => ({ slug, ...a }));
 }
 
 /**
