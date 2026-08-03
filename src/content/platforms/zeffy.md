@@ -4,6 +4,11 @@ slug: zeffy
 category: donation-processing
 entryPrice: "Free (no platform or processing fees)"
 pricingModel: "100% free to nonprofits; funded by optional donor tips"
+pricingBasis: "free at any volume"
+pricingTiers:
+  - tier: "All features"
+    price: "$0"
+    note: "funded by optional donor tips"
 lastVerified: 2026-07-29
 bestFor: "Fee-sensitive shops that want to keep every dollar of every gift"
 targetQuery: "is zeffy really free"

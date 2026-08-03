@@ -40,7 +40,7 @@ const posts = (await getCollection('posts', ({ data }) => data.draft === false))
         <thead>
           <tr>
             <th scope="col">Tool</th>
-            <th scope="col">Starting price</th>
+            <th scope="col">Pricing</th>
             <th scope="col">Free tier</th>
             <th scope="col">Best for</th>
             <th scope="col"></th>
@@ -57,7 +57,24 @@ const posts = (await getCollection('posts', ({ data }) => data.draft === false))
                     <span class="alt-tag">{p.data.alsoInNote}</span>
                   )}
                 </th>
-                <td class="num">{p.data.entryPrice}</td>
+                <td class="price">
+                  {p.data.pricingTiers.length > 0 ? (
+                    <>
+                      <ul class="ladder">
+                        {p.data.pricingTiers.map((t) => (
+                          <li>
+                            <span class="t-name">{t.tier}</span>
+                            <span class="t-price">{t.price}</span>
+                            {t.note && <span class="t-note">{t.note}</span>}
+                          </li>
+                        ))}
+                      </ul>
+                      {p.data.pricingBasis && <span class="basis">{p.data.pricingBasis}</span>}
+                    </>
+                  ) : (
+                    <span class="num">{p.data.entryPrice}</span>
+                  )}
+                </td>
                 <td>{p.data.freeTier ? 'Yes' : 'No'}</td>
                 <td class="cmp-best">{p.data.bestFor}</td>
                 <td class="cmp-cta">
@@ -93,7 +110,15 @@ const posts = (await getCollection('posts', ({ data }) => data.draft === false))
             {isSecondary(p) && p.data.alsoInNote && <span class="tag alt">{p.data.alsoInNote}</span>}
             {p.data.freeTier && <span class="tag">free tier</span>}
           </div>
-          <p class="tool-price num">{p.data.entryPrice}</p>
+          {p.data.pricingTiers.length > 0 ? (
+            <ul class="ladder">
+              {p.data.pricingTiers.map((t) => (
+                <li><span class="t-name">{t.tier}</span><span class="t-price">{t.price}</span></li>
+              ))}
+            </ul>
+          ) : (
+            <p class="tool-price num">{p.data.entryPrice}</p>
+          )}
           <p class="tool-best">{p.data.bestFor}</p>
           <div class="tool-actions">
             <a class="btn-visit" href={`/go/${p.data.affiliateSlug}`} rel={relFor(p.data.affiliateSlug)}>Visit site →</a>
@@ -123,9 +148,9 @@ const posts = (await getCollection('posts', ({ data }) => data.draft === false))
   table.cmp { width: 100%; min-width: 48rem; border-collapse: collapse; font-size: .92rem;
     table-layout: fixed; }
   table.cmp col.c-tool  { width: 15%; }
-  table.cmp col.c-price { width: 20%; }
+  table.cmp col.c-price { width: 26%; }
   table.cmp col.c-free  { width: 7%; }
-  table.cmp col.c-best  { width: 36%; }
+  table.cmp col.c-best  { width: 30%; }
   table.cmp col.c-cta   { width: 22%; }
   table.cmp th, table.cmp td { text-align: left; padding: .6rem .7rem; border-bottom: 1px solid var(--color-rule);
     vertical-align: top; }
@@ -135,6 +160,18 @@ const posts = (await getCollection('posts', ({ data }) => data.draft === false))
   table.cmp tbody th a:hover { color: var(--color-green-deep); text-decoration: underline; }
   table.cmp .num { font-weight: 700; color: var(--color-green-deep); }
   .cmp-best { color: var(--color-muted); }
+  /* Full price ladder in the chart. "From $39" tells a buyer nothing about year
+     two, so every published tier is listed and the basis is named underneath. */
+  .ladder { list-style: none; margin: 0; padding: 0; font-size: .84rem; line-height: 1.3; }
+  .ladder li { display: grid; grid-template-columns: 1fr auto; column-gap: .5rem;
+    padding: .12rem 0; border-bottom: 1px dotted var(--color-rule); }
+  .ladder li:last-child { border-bottom: 0; }
+  .t-name { color: var(--color-muted); min-width: 0; }
+  .t-price { font-weight: 700; color: var(--color-green-deep); white-space: nowrap;
+    font-variant-numeric: tabular-nums; }
+  .t-note { grid-column: 1 / -1; font-size: .92em; color: var(--color-muted); opacity: .85; }
+  .basis { display: block; margin-top: .35rem; font-size: .72rem; color: var(--color-muted);
+    font-style: italic; }
   /* The CTA column holds a button and a short offer line. Cap its width and let
      the offer wrap, or a long offer stretches the column wider than the price
      and drags every row taller. */

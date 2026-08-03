@@ -4,6 +4,11 @@ slug: grantstation
 category: grant-research
 entryPrice: "~$199/yr"
 pricingModel: "Flat annual membership; TechSoup and seasonal discounts"
+pricingBasis: "flat annual membership"
+pricingTiers:
+  - tier: "Membership"
+    price: "~$199/yr"
+    note: "purchased through TechSoup"
 lastVerified: 2026-07-29
 bestFor: "Budget-conscious shops that want a broad funder database and will run their own searches"
 targetQuery: "grantstation review"

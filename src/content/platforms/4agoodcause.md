@@ -4,6 +4,17 @@ slug: 4agoodcause
 category: donation-processing
 entryPrice: "From $99/mo ($1,188/yr, billed annually)"
 pricingModel: "Flat subscription; no percentage taken from donations"
+pricingBasis: "flat subscription, no % of donations"
+pricingTiers:
+  - tier: "Grassroots"
+    price: "$99/mo"
+    note: "$1,188/yr"
+  - tier: "Growth"
+    price: "$249/mo"
+    note: "$2,988/yr"
+  - tier: "Scale"
+    price: "$429/mo"
+    note: "$5,148/yr"
 lastVerified: 2026-08-02
 bestFor: "Shops past roughly $40k of online giving that want a fee that stops growing with them"
 targetQuery: "4agoodcause review pricing"

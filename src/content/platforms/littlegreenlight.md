@@ -4,6 +4,16 @@ slug: littlegreenlight
 category: donor-crm
 entryPrice: "From $45/mo (up to 2,500 constituents)"
 pricingModel: "By constituent count; unlimited users; no contracts"
+pricingBasis: "by constituent count"
+pricingTiers:
+  - tier: "Up to 2,500"
+    price: "$45/mo"
+  - tier: "Up to 5,000"
+    price: "$60/mo"
+  - tier: "Up to 50,000"
+    price: "up to $135/mo"
+  - tier: "Each +10,000 above"
+    price: "+$15/mo"
 lastVerified: 2026-07-29
 bestFor: "Aging interface that takes some time to learn. All the features you need to keep track of donors with none of the frills."
 targetQuery: "little green light review"

@@ -4,6 +4,15 @@ slug: monday
 category: forms-ops
 entryPrice: "Free plan (2 seats); paid from $9/seat/mo (billed annually)"
 pricingModel: "Per-seat subscription; nonprofit program with discounted plans"
+pricingBasis: "per seat"
+pricingTiers:
+  - tier: "Free"
+    price: "$0"
+    note: "2 seats"
+  - tier: "Basic"
+    price: "~$9/seat/mo"
+  - tier: "Standard"
+    price: "~$12/seat/mo"
 lastVerified: 2026-07-29
 bestFor: "Program tracking, campaign planning, and the operational work that isn't donor data"
 targetQuery: "monday.com for nonprofits"

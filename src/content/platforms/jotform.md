@@ -4,6 +4,20 @@ slug: jotform
 category: forms-ops
 entryPrice: "Free tier; paid from ~$17/mo with the nonprofit discount"
 pricingModel: "Tiered by forms and submissions; permanent 50% nonprofit discount"
+pricingBasis: "by forms and submissions; 50% nonprofit discount applied"
+pricingTiers:
+  - tier: "Starter"
+    price: "$0"
+    note: "5 forms, 100 submissions/mo"
+  - tier: "Bronze"
+    price: "~$17/mo"
+    note: "list ~$34"
+  - tier: "Silver"
+    price: "~$19.50/mo"
+    note: "list ~$39"
+  - tier: "Gold"
+    price: "~$24.50/mo"
+    note: "list ~$49"
 lastVerified: 2026-07-29
 bestFor: "Program applications, volunteer intake, and every form that outgrows email"
 targetQuery: "jotform for nonprofits"

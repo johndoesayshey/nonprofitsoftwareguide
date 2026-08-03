@@ -4,6 +4,13 @@ slug: candid
 category: grant-research
 entryPrice: "From ~$449/yr; free at partner libraries"
 pricingModel: "Tiered subscription; free on-site access via Candid partner libraries"
+pricingBasis: "per subscription; free at partner libraries"
+pricingTiers:
+  - tier: "Partner library"
+    price: "$0"
+    note: "on-site access"
+  - tier: "Individual"
+    price: "from ~$449/yr"
 lastVerified: 2026-07-29
 bestFor: "Deep due diligence on specific foundations and their 990 giving history"
 targetQuery: "candid foundation directory worth it"

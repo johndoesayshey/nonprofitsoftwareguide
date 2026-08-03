@@ -4,6 +4,17 @@ slug: instrumentl
 category: grant-research
 entryPrice: "From $179/mo (billed annually)"
 pricingModel: "Tiered by active grant projects; 14-day free trial"
+pricingBasis: "by active grant projects"
+pricingTiers:
+  - tier: "Basic"
+    price: "$179/mo"
+    note: "~5 active projects"
+  - tier: "Standard"
+    price: "$299/mo"
+    note: "~10 active projects"
+  - tier: "Pro"
+    price: "$499/mo"
+    note: "~20 active projects"
 lastVerified: 2026-07-29
 bestFor: "Shops managing 10+ grant applications that want matching and deadline tracking in one place"
 targetQuery: "is instrumentl worth it"

@@ -75,7 +75,7 @@ for (const p of pairs) {
                 <thead>
                   <tr>
                     <th scope="col">Tool</th>
-                    <th scope="col">Starting price</th>
+                    <th scope="col">Pricing</th>
                     <th scope="col">Free tier</th>
                     <th scope="col">Best for</th>
                     <th scope="col"></th>
@@ -87,7 +87,24 @@ for (const p of pairs) {
                     return (
                       <tr>
                         <th scope="row"><a href={`/platforms/${t.data.slug}/`}>{t.data.name}</a></th>
-                        <td class="num">{t.data.entryPrice}</td>
+                <td class="price">
+                  {t.data.pricingTiers.length > 0 ? (
+                    <>
+                      <ul class="ladder">
+                        {t.data.pricingTiers.map((t) => (
+                          <li>
+                            <span class="t-name">{t.tier}</span>
+                            <span class="t-price">{t.price}</span>
+                            {t.note && <span class="t-note">{t.note}</span>}
+                          </li>
+                        ))}
+                      </ul>
+                      {t.data.pricingBasis && <span class="basis">{t.data.pricingBasis}</span>}
+                    </>
+                  ) : (
+                    <span class="num">{t.data.entryPrice}</span>
+                  )}
+                </td>
                         <td>{t.data.freeTier ? 'Yes' : 'No'}</td>
                         <td class="cmp-best">{t.data.bestFor}</td>
                         <td class="cmp-cta">
@@ -118,8 +135,8 @@ for (const p of pairs) {
   .cmp-scroll { overflow-x: auto; margin: .8rem 0 1rem; }
   table.cmp { width: 100%; min-width: 48rem; border-collapse: collapse; font-size: .92rem;
     table-layout: fixed; }
-  table.cmp col.c-tool { width: 15%; } table.cmp col.c-price { width: 20%; }
-  table.cmp col.c-free { width: 7%; }  table.cmp col.c-best { width: 36%; }
+  table.cmp col.c-tool { width: 15%; } table.cmp col.c-price { width: 26%; }
+  table.cmp col.c-free { width: 7%; }  table.cmp col.c-best { width: 30%; }
   table.cmp col.c-cta { width: 22%; }
   table.cmp th, table.cmp td { text-align: left; padding: .6rem .7rem;
     border-bottom: 1px solid var(--color-rule); vertical-align: top; }
@@ -129,6 +146,18 @@ for (const p of pairs) {
   table.cmp tbody th a:hover { color: var(--color-green-deep); text-decoration: underline; }
   table.cmp .num { font-weight: 700; color: var(--color-green-deep); }
   .cmp-best { color: var(--color-muted); }
+  /* Full price ladder in the chart. "From $39" tells a buyer nothing about year
+     two, so every published tier is listed and the basis is named underneath. */
+  .ladder { list-style: none; margin: 0; padding: 0; font-size: .84rem; line-height: 1.3; }
+  .ladder li { display: grid; grid-template-columns: 1fr auto; column-gap: .5rem;
+    padding: .12rem 0; border-bottom: 1px dotted var(--color-rule); }
+  .ladder li:last-child { border-bottom: 0; }
+  .t-name { color: var(--color-muted); min-width: 0; }
+  .t-price { font-weight: 700; color: var(--color-green-deep); white-space: nowrap;
+    font-variant-numeric: tabular-nums; }
+  .t-note { grid-column: 1 / -1; font-size: .92em; color: var(--color-muted); opacity: .85; }
+  .basis { display: block; margin-top: .35rem; font-size: .72rem; color: var(--color-muted);
+    font-style: italic; }
   .cmp-cta { white-space: normal; }
   .cmp-cta :global(.offer) { white-space: normal; line-height: 1.3; }
   .btn-visit { display: inline-block; background: var(--color-green-deep); color: #fff; font-weight: 700;

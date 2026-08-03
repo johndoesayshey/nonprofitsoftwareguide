@@ -4,6 +4,14 @@ slug: donordock
 category: donor-crm
 entryPrice: "From ~$98/mo (billed annually)"
 pricingModel: "Flat tiers with unlimited contacts"
+pricingBasis: "flat tiers, unlimited contacts"
+pricingTiers:
+  - tier: "Entry"
+    price: "~$98/mo"
+  - tier: "Grow"
+    price: "~$300/mo"
+  - tier: "Amplify"
+    price: "~$585/mo"
 lastVerified: 2026-07-29
 bestFor: "Easy to onboard CRM to help drive fundraising followups. Excellent choice for all, but shines with small and mid-size fundraising shops."
 targetQuery: "donordock review"

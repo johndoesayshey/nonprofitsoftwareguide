@@ -4,6 +4,13 @@ slug: givebutter
 category: donation-processing
 entryPrice: "Free with donor tips on (0% platform fee)"
 pricingModel: "Tips-on free or flat 3%; processing fees apply; optional Plus tier"
+pricingBasis: "free with donor tips on"
+pricingTiers:
+  - tier: "Tips on"
+    price: "0% platform fee"
+    note: "donor covers costs at checkout"
+  - tier: "Tips off"
+    price: "~3% platform fee"
 lastVerified: 2026-07-29
 bestFor: "Shops running campaigns, events, and peer-to-peer on one modern platform"
 targetQuery: "givebutter review"

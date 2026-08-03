@@ -4,6 +4,14 @@ slug: bloomerang
 category: donor-crm
 entryPrice: "From $79/mo (up to ~1,000 contacts)"
 pricingModel: "By contact-record count; unlimited users"
+pricingBasis: "by contact-record count"
+pricingTiers:
+  - tier: "Starter"
+    price: "~$79/mo"
+    note: "up to ~1,000 contacts"
+  - tier: "Standard"
+    price: "~$125/mo"
+    note: "scales up from there"
 lastVerified: 2026-07-29
 bestFor: "Trusted name in the space with retention-focused features. Loved by all shop sizes, but works especially well for mid- to large organizations."
 targetQuery: "bloomerang review"

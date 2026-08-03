@@ -4,6 +4,16 @@ slug: kindsight
 category: prospect-research
 entryPrice: "Reported from ~$4,150/yr (quoted per organization)"
 pricingModel: "Annual subscription by seats and screening volume"
+pricingBasis: "quoted; reported ranges"
+pricingTiers:
+  - tier: "Starter"
+    price: "~$4,150/yr"
+    note: "1 user, ~1,500 screens"
+  - tier: "Professional"
+    price: "~$5,350/yr"
+    note: "3 users, ~5,000 screens"
+  - tier: "Premium"
+    price: "Custom"
 lastVerified: 2026-07-29
 bestFor: "Shops that want repeatable wealth screening and prospect scoring at scale"
 targetQuery: "kindsight iwave review"

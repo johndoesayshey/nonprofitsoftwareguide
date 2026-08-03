@@ -21,6 +21,21 @@ const platforms = defineCollection({
     category,
     entryPrice: z.string(), // human-readable, may carry [FACT-CHECK] while draft
     pricingModel: z.string(),
+    // The full published price ladder, where the vendor publishes one. Charts
+    // show every tier rather than only the entry price, because "from $39" tells
+    // a buyer nothing about what they will actually pay in year two. Leave empty
+    // for quote-only products; the chart falls back to entryPrice.
+    pricingTiers: z
+      .array(
+        z.object({
+          tier: z.string(),            // "Standard", "Up to 5,000 records"
+          price: z.string(),           // "$299/mo", "~2.95% + fees"
+          note: z.string().optional(), // what the tier buys you
+        })
+      )
+      .default([]),
+    // What the ladder is priced on: "per seat", "by record count", "by volume".
+    pricingBasis: z.string().optional(),
     lastVerified: z.coerce.date(),
     bestFor: z.string(),
     strengths: z.array(z.string()),

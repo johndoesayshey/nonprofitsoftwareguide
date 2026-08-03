@@ -4,6 +4,14 @@ slug: donorbox
 category: donation-processing
 entryPrice: "Free to start; ~2.95% platform fee"
 pricingModel: "Percentage platform fee + processing; Pro plan lowers the percentage"
+pricingBasis: "percentage of funds raised"
+pricingTiers:
+  - tier: "Standard"
+    price: "~2.95%"
+    note: "no subscription"
+  - tier: "Pro"
+    price: "~$150/mo + ~1.75%"
+    note: "fee drop pays for itself past ~$150k"
 lastVerified: 2026-07-29
 bestFor: "Shops that want serious recurring-gift tooling without building anything"
 targetQuery: "donorbox review"
