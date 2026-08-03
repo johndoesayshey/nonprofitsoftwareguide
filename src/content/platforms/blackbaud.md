@@ -1,5 +1,6 @@
 ---
 name: Blackbaud Raiser's Edge NXT
+shortName: "Raiser's Edge NXT"
 slug: blackbaud
 category: donor-crm
 entryPrice: "Quote-only; Vendr puts the median Blackbaud contract at ~$20,417/yr"

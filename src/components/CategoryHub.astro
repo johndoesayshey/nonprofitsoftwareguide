@@ -1,9 +1,10 @@
 ---
 import { getCollection } from 'astro:content';
+import { comparePairs } from '../lib/compare';
 import ReaderOffer from './ReaderOffer.astro';
 import { CATEGORIES } from '../lib/categories';
 import { getAffiliate } from '../lib/affiliates';
-import { byValue, potentialOf, relFor } from '../lib/affiliate-value';
+import { byValue, valueOf, potentialOf, relFor } from '../lib/affiliate-value';
 
 interface Props {
   category: string;              // category slug
@@ -26,6 +27,21 @@ const inCategory = (await getCollection('platforms', ({ data }) => data.draft ==
 const isSecondary = (p: (typeof inCategory)[number]) => p.data.category !== category;
 
 const platforms = byValue(inCategory, (p) => p.data.affiliateSlug);
+
+// Head-to-heads for each product, attached to its own row rather than pooled.
+// Reads name-first for the row it sits under, even though the slug is
+// alphabetical, and orders by the other product's affiliate value.
+const allPairs = (await comparePairs()).filter(
+  (x) => x.a.data.draft === false && x.b.data.draft === false
+);
+const versusFor = (slug: string) =>
+  allPairs
+    .filter((x) => x.category === category && (x.a.data.slug === slug || x.b.data.slug === slug))
+    .map((x) => {
+      const other = x.a.data.slug === slug ? x.b.data : x.a.data;
+      return { slug: x.slug, other, v: valueOf(other.affiliateSlug) };
+    })
+    .sort((a, b) => b.v - a.v || a.other.name.localeCompare(b.other.name));
 
 const posts = (await getCollection('posts', ({ data }) => data.draft === false))
   .filter((p) => p.data.platformsMentioned.some((s) => platforms.find((pl) => pl.data.slug === s)))
@@ -52,8 +68,10 @@ const posts = (await getCollection('posts', ({ data }) => data.draft === false))
         <tbody>
           {platforms.map((p) => {
             const aff = p.data.affiliateSlug ? getAffiliate(p.data.affiliateSlug) : undefined;
+            const versus = versusFor(p.data.slug);
             return (
-              <tr>
+              <>
+              <tr class="tool-row">
                 <th scope="row">
                   <a href={`/platforms/${p.data.slug}/`}>{p.data.name}</a>
                   {isSecondary(p) && p.data.alsoInNote && (
@@ -85,6 +103,19 @@ const posts = (await getCollection('posts', ({ data }) => data.draft === false))
                   <ReaderOffer slug={p.data.affiliateSlug} compact />
                 </td>
               </tr>
+              {versus.length > 0 && (
+                <tr class="versus-row">
+                  <td colspan="5">
+                    <div class="versus-inner">
+                      <span class="versus-label">Compare {p.data.shortName ?? p.data.name}:</span>
+                      {versus.map((v) => (
+                        <a class="versus-link" href={`/compare/${v.slug}/`}>vs {v.other.shortName ?? v.other.name}</a>
+                      ))}
+                    </div>
+                  </td>
+                </tr>
+              )}
+              </>
             );
           })}
         </tbody>
@@ -178,6 +209,17 @@ const posts = (await getCollection('posts', ({ data }) => data.draft === false))
   /* The CTA column holds a button and a short offer line. Cap its width and let
      the offer wrap, or a long offer stretches the column wider than the price
      and drags every row taller. */
+  tr.tool-row > * { border-bottom: 0; padding-bottom: .35rem; }
+  tr.versus-row td { border-bottom: 1px solid var(--color-rule); padding: 0 .7rem .7rem; }
+  .versus-inner { position: sticky; left: .7rem; width: min(100%, calc(100vw - 3.4rem)); }
+  .versus-label { font-family: var(--font-mono); font-size: .62rem; letter-spacing: .1em;
+    text-transform: uppercase; color: var(--color-muted); font-weight: 700;
+    margin-right: .5rem; white-space: nowrap; }
+  .versus-link { display: inline-block; font-size: .8rem; text-decoration: none;
+    color: var(--color-green-deep); border-bottom: 1px solid var(--color-rule-strong);
+    margin: 0 .7rem .15rem 0; white-space: nowrap; }
+  .versus-link:hover { border-bottom-color: var(--color-green); }
+
   .cmp-cta { white-space: normal; }
   .cmp-cta .offer { display: block; margin-top: .35rem; white-space: normal; line-height: 1.3; }
   .alt-tag { display: block; margin-top: .15rem; font-size: .68rem; font-weight: 600;

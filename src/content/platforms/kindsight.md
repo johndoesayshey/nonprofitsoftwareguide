@@ -1,5 +1,6 @@
 ---
 name: Kindsight (iWave)
+shortName: "Kindsight"
 slug: kindsight
 category: prospect-research
 entryPrice: "Reported from ~$4,150/yr (quoted per organization)"

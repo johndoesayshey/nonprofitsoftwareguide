@@ -1,5 +1,6 @@
 ---
 name: Candid Foundation Directory
+shortName: "Foundation Directory"
 slug: candid
 category: grant-research
 entryPrice: "From ~$449/yr; free at partner libraries"

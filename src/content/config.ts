@@ -17,6 +17,9 @@ const platforms = defineCollection({
   loader: glob({ pattern: '**/*.md', base: './src/content/platforms' }),
   schema: z.object({
     name: z.string(),
+    // Short form for dense inline contexts — comparison links, chips — where the
+    // full legal-ish name would dominate the line. Falls back to `name`.
+    shortName: z.string().optional(),
     slug: z.string(),
     category,
     entryPrice: z.string(), // human-readable, may carry [FACT-CHECK] while draft

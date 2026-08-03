@@ -35,19 +35,28 @@ const grouped = Object.values(CATEGORIES)
       .map((p) => p.data)
       .sort((a, b) => valueOf(b.affiliateSlug) - valueOf(a.affiliateSlug) || a.name.localeCompare(b.name));
 
+    // Every comparison a product appears in, attached to that product's own row
+    // rather than pooled at the foot of the category. A single list of 36 pairs
+    // is unreadable and tells you nothing about where to start; "DonorDock vs …"
+    // sitting under DonorDock is scannable and matches the intent — someone
+    // looking at a row is deciding about that product.
+    //
+    // The comparison always reads name-first for the row it sits under, even
+    // though the URL slug is alphabetical.
     const inCat = pairs.filter((p) => p.category === cat.slug);
-    const shortlist = inCat
-      .filter((p) => isFeatured(p.a.data.slug) && isFeatured(p.b.data.slug))
-      .sort((x, y) =>
-        valueOf(y.a.data.affiliateSlug) + valueOf(y.b.data.affiliateSlug) -
-        (valueOf(x.a.data.affiliateSlug) + valueOf(x.b.data.affiliateSlug)) || x.slug.localeCompare(y.slug)
-      );
-    // Pairs involving a product we don't shortlist. Kept as links so the pages
-    // aren't orphaned, set quietly so they don't read as recommendations.
-    const rest = inCat.filter((p) => !shortlist.includes(p)).sort((x, y) => x.slug.localeCompare(y.slug));
+    const rows = tools.map((t) => ({
+      tool: t,
+      versus: inCat
+        .filter((p) => p.a.data.slug === t.slug || p.b.data.slug === t.slug)
+        .map((p) => {
+          const other = p.a.data.slug === t.slug ? p.b.data : p.a.data;
+          return { slug: p.slug, other, v: valueOf(other.affiliateSlug) };
+        })
+        .sort((x, y) => y.v - x.v || x.other.name.localeCompare(y.other.name)),
+    }));
 
     const slugs = tools.map((t) => t.affiliateSlug).filter(Boolean) as string[];
-    return { cat, tools, shortlist, rest, value: categoryValue(slugs) };
+    return { cat, tools, rows, value: categoryValue(slugs) };
   })
   .filter((g) => g.tools.length > 0)
   .sort((a, b) => b.value - a.value);
@@ -163,8 +172,9 @@ const datasetLd = {
                 </tr>
               </thead>
               <tbody>
-                {g.tools.map((t) => (
-                  <tr>
+                {g.rows.map(({ tool: t, versus }) => (
+                  <>
+                  <tr class="tool-row">
                     <th scope="row"><a href={`/platforms/${t.slug}/`}>{t.name}</a></th>
                     <td class="price">
                       {t.pricingTiers.length > 0 ? (
@@ -191,30 +201,23 @@ const datasetLd = {
                       <ReaderOffer slug={t.affiliateSlug} compact />
                     </td>
                   </tr>
+                  {versus.length > 0 && (
+                    <tr class="versus-row">
+                      <td colspan="5">
+                        <div class="versus-inner">
+                          <span class="versus-label">Compare {t.shortName ?? t.name}:</span>
+                          {versus.map((v) => (
+                            <a class="versus-link" href={`/compare/${v.slug}/`}>vs {v.other.shortName ?? v.other.name}</a>
+                          ))}
+                        </div>
+                      </td>
+                    </tr>
+                  )}
+                  </>
                 ))}
               </tbody>
             </table>
           </div>
-
-          {g.shortlist.length > 0 && (
-            <ul class="pair-list">
-              {g.shortlist.map((p) => (
-                <li><a href={`/compare/${p.slug}/`}>{p.a.data.name} vs {p.b.data.name}</a></li>
-              ))}
-            </ul>
-          )}
-
-          {g.rest.length > 0 && (
-            <p class="pair-rest">
-              Also compared:
-              {g.rest.map((p, i) => (
-                <>
-                  {i > 0 && ', '}
-                  <a href={`/compare/${p.slug}/`}>{p.a.data.name} vs {p.b.data.name}</a>
-                </>
-              ))}
-            </p>
-          )}
         </section>
       ))}
 
@@ -308,13 +311,23 @@ const datasetLd = {
     font-size: .82rem; }
   .btn-visit:hover { background: var(--color-green); }
 
-  .pair-list { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: .4rem .6rem; }
-  .pair-list li { margin: 0; }
-  .pair-list a { display: inline-block; border: 1px solid var(--color-rule-strong);
-    border-radius: 999px; padding: .25rem .7rem; font-size: .85rem; text-decoration: none;
-    color: var(--color-ink); }
-  .pair-list a:hover { border-color: var(--color-green); color: var(--color-green-deep); }
-  .pair-rest { font-size: .82rem; color: var(--color-muted); max-width: 46rem; margin-top: .5rem; }
+  /* Comparison links belong to the product above them, so the row reads as a
+     continuation rather than a new record: no top border, tighter padding. */
+  tr.tool-row > * { border-bottom: 0; padding-bottom: .35rem; }
+  tr.versus-row td { border-bottom: 1px solid var(--color-rule); padding: 0 .7rem .7rem;
+    background: transparent; }
+  /* The cell spans the table's full min-width, so on a narrow screen these links
+     would sit off to the right until you scrolled the table sideways. Pinning
+     the content to the scroller's left edge keeps the densest, most useful set
+     of links on this page readable without any horizontal scrolling. */
+  .versus-inner { position: sticky; left: .7rem; width: min(100%, calc(100vw - 3.4rem)); }
+  .versus-label { font-family: var(--font-mono); font-size: .62rem; letter-spacing: .1em;
+    text-transform: uppercase; color: var(--color-muted); font-weight: 700;
+    margin-right: .5rem; white-space: nowrap; }
+  .versus-link { display: inline-block; font-size: .8rem; text-decoration: none;
+    color: var(--color-green-deep); border-bottom: 1px solid var(--color-rule-strong);
+    margin: 0 .7rem .15rem 0; white-space: nowrap; }
+  .versus-link:hover { border-bottom-color: var(--color-green); }
 
   .switching { border: 2px solid var(--color-ink); border-radius: 3px;
     background: var(--color-paper-2); padding: 1rem 1.2rem; margin: 1.6rem 0 2.4rem;

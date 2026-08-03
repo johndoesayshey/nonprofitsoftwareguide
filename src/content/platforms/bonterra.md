@@ -1,5 +1,6 @@
 ---
 name: Bonterra Fundraising and Engagement (EveryAction)
+shortName: "EveryAction"
 slug: bonterra
 category: donor-crm
 entryPrice: "Quote-only; Guided Fundraising prices by contact count with a break at 501"
