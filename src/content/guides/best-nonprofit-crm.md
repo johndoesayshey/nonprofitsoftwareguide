@@ -1,0 +1,81 @@
+---
+title: "The best nonprofit CRM in 2026"
+slug: nonprofit-crm
+category: donor-crm
+targetQuery: "best nonprofit crm"
+lastVerified: 2026-08-03
+answer: "There is no single best nonprofit CRM — the right one depends on who updates your database and how fast your list grows. DonorDock suits teams that need prompting, Eleo is the cheapest real CRM at $39/mo, Bloomerang wins on ease of use, and Little Green Light gives the most capability per dollar."
+picks:
+  - platformSlug: donordock
+    award: "Best overall"
+    forWhom: "Small and mid-size shops where the follow-up keeps getting dropped"
+    note: "Flat tiers with unlimited contacts — about $98/mo Entry, $300/mo Grow, $585/mo Amplify — which is the only pricing model here that doesn't re-price you for growing. The ActionBoard is what separates it: instead of a dashboard you have to go look at, the database hands you a daily list of who to thank, who to call and what's overdue. That matters because the failure mode of a small-shop CRM is not missing features, it's nobody opening it. There's a 90-day money-back guarantee, so the decision is reversible, and readers here get 10% off the first payment."
+  - platformSlug: eleo
+    award: "Best value"
+    forWhom: "First-time CRM buyers counting every dollar"
+    note: "$39/mo up to 2,500 donor records, and the whole ladder is published: $59 at 5,000, $99 at 10,000, $159 at 15,000, $199 at 20,000, then $10/mo per additional 2,500. Donors, gifts, events, volunteers and mailings are included rather than sold as modules. Our 2026 survey put mean annual CRM spend at $716 for shops under $250K raised — Eleo at $468/yr is comfortably inside that, which very little else in this category is."
+  - platformSlug: bloomerang
+    award: "Best for adoption"
+    forWhom: "Teams where several people enter gifts"
+    note: "$79/mo at roughly 1,000 contacts, about $125/mo at Standard, unlimited users at every tier. Consistently rated the easiest system in the category to learn, and the retention dashboards put lapsing donors on the home screen rather than behind a report build. The premium over cheaper systems is roughly the cost of the database actually getting used — which is a good trade right up until the contact-record bill outruns it."
+  - platformSlug: neoncrm
+    award: "Best for memberships"
+    forWhom: "Organizations running renewals or ticketed events"
+    note: "From $99/mo, priced by organizational revenue and reported to about $409/mo at the top of the published band, with unlimited users and records. Memberships add roughly 10% of the CRM fee, volunteers another 10%, events about 20%. If you're maintaining a membership spreadsheet next to your donor database, this is the system that ends that."
+  - platformSlug: littlegreenlight
+    award: "Best for a single power user"
+    forWhom: "One detail-oriented person who owns the database"
+    note: "$45/mo up to 2,500 constituents, rising to about $135/mo at 50,000, no contracts, no setup fees, 10% off annual prepay. More configurability per dollar than anything else in the category — custom fields, custom categories, real reporting. The interface is dated, which is exactly why it's wrong for shared data entry and right for an admin who enjoys building things."
+decidingFactors:
+  - factor: "Who updates the database."
+    detail: "This decides more than any feature list. One capable admin can run Little Green Light and get more per dollar than anywhere else. Shared entry across a development director, an ED and a part-time processor needs software people will actually open, which is what Bloomerang and DonorDock sell."
+  - factor: "How your bill grows."
+    detail: "Most CRMs price by contact or constituent count, so a good acquisition year arrives as a renewal increase. DonorDock's flat tiers with unlimited contacts are the exception. Before you shop, count your file — organically grown lists are routinely 30-40% duplicates, deceased records and one-time event attendees, and cleaning that can drop you a whole tier."
+  - factor: "Whether you have a second system already."
+    detail: "Memberships, event registration and volunteer tracking are the three things that push shops into a second database. If you're running one, price a CRM that absorbs it before you price a cheaper one that doesn't."
+  - factor: "What migration actually costs."
+    detail: "Gift records and names move cleanly everywhere. Soft credits, household records, pledge schedules and custom constituent codes are where migrations lose the history a major-gift program runs on. Make any vendor import your real export before you sign, not a sample file."
+faq:
+  - q: "What does a nonprofit CRM cost?"
+    a: "Our 2026 survey of 100 U.S. fundraising professionals put mean annual donor CRM spend at $716 for shops under $250K raised, $2,726 at $250K-$1M, $7,130 at $1M-$5M, and $18,688 at $5M+. Entry-level systems start around $39-$45/mo; most small shops land between $500 and $1,500 a year."
+  - q: "Do we need a CRM, or is a spreadsheet enough?"
+    a: "A spreadsheet holds up until you need three things it can't do: gift history tied to a person over years, soft credits on joint and donor-advised gifts, and a record of what was said and promised. Most shops hit that between 200 and 500 donors, or the first time two people need to update it at once."
+  - q: "Is Salesforce free for nonprofits?"
+    a: "The licenses are donated; the CRM is not free. Implementation, the fundraising package, integrations, storage and either staff time or a partner retainer are the real cost, and none of those are donated. It's the right choice when you have an administrator and non-fundraising data to hold, and an expensive one otherwise."
+  - q: "Which nonprofit CRM is easiest to use?"
+    a: "Bloomerang, consistently, on the major review sites and in practice — a board member or program staffer can look up a donor without training. DonorDock is comparable and adds daily task prompting. Little Green Light is the most capable of the low-cost options and the least forgiving to a casual user."
+draft: false
+---
+
+Every roundup that answers this question with a single product is selling something. The category doesn't work that way: the systems here are separated less by features than by who is going to sit in front of them, and that's a fact about your organization, not about the software.
+
+## Start with the question nobody asks
+
+In the last month, did anyone besides your primary database person log in and do something useful — look up a donor before a meeting, enter a gift, pull a list?
+
+If yes, buy on price and capability. Little Green Light and Eleo will give you more per dollar than anything else here.
+
+If no, you have a data-quality problem that will compound, and it isn't fixed by more training or a cheaper subscription. Software that people avoid opening produces stale data, and stale data is more expensive than any subscription. That's the case for paying Bloomerang's or DonorDock's premium.
+
+## What the money actually looks like
+
+Our 2026 survey of 100 U.S. fundraising professionals gives the honest bands, which are lower than most vendor content implies:
+
+- **Under $250K raised** — mean $716/yr on donor CRM
+- **$250K–$1M** — mean $2,726/yr
+- **$1M–$5M** — mean $7,130/yr
+- **$5M+** — mean $18,688/yr
+
+If a quote lands well above the band for your size, the burden of proof is on the vendor. If it lands below and the system works, you're doing fine and a migration is discretionary.
+
+## The three traps
+
+**Buying for the org you want to be.** Enterprise systems get sold to $800K shops on the theory that they'll grow into them. They mostly don't, and the cost of the mismatch is paid every year in a renewal nobody can defend.
+
+**Ignoring record-count pricing.** "From $45/mo" tells you nothing about year three. Price the two tiers above the one you're buying before you sign. A system that's cheap at 2,500 constituents and painful at 15,000 is a bad fit if you plan to grow.
+
+**Underestimating the migration.** Budget the export before the subscription. The fields that break are always the same ones — soft credits, households, pledge schedules — and they're exactly the fields a major-gifts program depends on. Run both systems through one full gift cycle and reconcile against your bank deposits before you close the old one.
+
+## If you already have a system
+
+The decision is different when you're replacing rather than buying. Start with the switching guide for what you're on: [Bloomerang](/alternatives/bloomerang/), [DonorPerfect](/alternatives/donorperfect/), [Little Green Light](/alternatives/little-green-light/), [Raiser's Edge](/alternatives/blackbaud-raisers-edge/) or [Salesforce](/alternatives/salesforce-nonprofit/). Each covers why shops leave, what to move to, and — the part that matters — when staying put is the right answer.

@@ -21,7 +21,7 @@ for (const post of readCollection('posts')) {
 }
 
 // Uniqueness across every published page that declares one.
-for (const name of ['posts', 'platforms', 'stacks', 'alternatives']) {
+for (const name of ['posts', 'platforms', 'stacks', 'alternatives', 'guides']) {
   for (const entry of readCollection(name)) {
     if (entry.data.draft !== false) continue;
     const q = entry.data.targetQuery;

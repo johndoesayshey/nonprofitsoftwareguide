@@ -154,4 +154,39 @@ const alternatives = defineCollection({
   }),
 });
 
-export const collections = { platforms, stacks, posts, alternatives };
+// "Best X" roundups, rendered at /best/<slug>/. Two jobs, one shape:
+// the category head terms ("best nonprofit CRM") and the vertical pages
+// ("best donor management software for churches"). A vertical page is just a
+// roundup with an `audience` and different picks, so they share a template
+// rather than drifting into two near-identical ones.
+const guides = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: './src/content/guides' }),
+  schema: z.object({
+    title: z.string(),
+    slug: z.string(),
+    category,
+    targetQuery: z.string(),      // globally unique, enforced by check-queries
+    lastVerified: z.coerce.date(),
+    // Set on vertical pages ("churches", "animal rescues"). Empty on head terms.
+    audience: z.string().optional(),
+    // The answer-first paragraph. 40-60 words, no preamble — this is what a
+    // featured snippet and an AI assistant lift, so it has to stand alone.
+    answer: z.string(),
+    picks: z.array(
+      z.object({
+        platformSlug: z.string(),
+        award: z.string(),        // "Best overall", "Best value", "Best free option"
+        forWhom: z.string(),
+        note: z.string(),
+      })
+    ),
+    // What actually decides the choice at this size or in this vertical. The
+    // part a vendor roundup never writes.
+    decidingFactors: z.array(z.object({ factor: z.string(), detail: z.string() })),
+    // Optional Q&A -> renders an FAQ block and FAQPage structured data.
+    faq: z.array(z.object({ q: z.string(), a: z.string() })).optional(),
+    draft: z.boolean().default(true),
+  }),
+});
+
+export const collections = { platforms, stacks, posts, alternatives, guides };

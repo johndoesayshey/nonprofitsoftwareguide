@@ -14,7 +14,7 @@ export async function GET(context: APIContext) {
 
   // Static hubs that are always indexable — one per nav section.
   for (const p of [
-    '/', '/platforms/', '/compare/', '/alternatives/', '/blog/', '/consulting/', '/about/',
+    '/', '/platforms/', '/compare/', '/alternatives/', '/best/', '/blog/', '/consulting/', '/about/',
     '/grant-research/', '/wealth-screening/', '/donor-crm/',
     '/donation-processing/', '/events/', '/forms-operations/',
   ]) {
@@ -40,6 +40,12 @@ export async function GET(context: APIContext) {
   const alternatives = await getCollection('alternatives', ({ data }) => data.draft === false);
   for (const a of alternatives) {
     entries.push({ loc: url(`/alternatives/${a.data.slug}/`), lastmod: iso(a.data.lastVerified) });
+  }
+
+  // "Best X" roundups: category head terms and vertical pages.
+  const guides = await getCollection('guides', ({ data }) => data.draft === false);
+  for (const g of guides) {
+    entries.push({ loc: url(`/best/${g.data.slug}/`), lastmod: iso(g.data.lastVerified) });
   }
 
   // Comparisons where both platforms are published.

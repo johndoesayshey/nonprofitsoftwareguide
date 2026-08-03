@@ -1,0 +1,78 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import { CATEGORIES } from '../../lib/categories';
+
+const guides = (await getCollection('guides')).filter((g) => g.data.draft === false);
+
+// Head terms first (no audience), then the vertical pages alphabetically.
+const heads = guides.filter((g) => !g.data.audience)
+  .sort((a, b) => a.data.title.localeCompare(b.data.title));
+const verticals = guides.filter((g) => g.data.audience)
+  .sort((a, b) => a.data.audience!.localeCompare(b.data.audience!));
+---
+<BaseLayout
+  title="Best-of guides by category and organization type"
+  description="Independent picks for nonprofit fundraising software, by category and by the kind of organization you run — with real pricing and what actually decides the choice."
+  section="compare">
+  <div class="wrap">
+    <Breadcrumbs crumbs={[{ label: 'Home', href: '/' }, { label: 'Best of' }]} />
+
+    <section class="prose" style="max-width: none; margin-top: 1.2rem;">
+      <p class="kicker">Best of</p>
+      <h1>Guides by category and organization type</h1>
+      <p class="lede" style="max-width: 46ch;">
+        Shortlists with real prices, an award for what each tool is actually best
+        at, and the factors that decide the choice at your kind of organization.
+      </p>
+
+      {heads.length > 0 && (
+        <section class="g-block">
+          <h2>By category</h2>
+          <ul class="g-list">
+            {heads.map((g) => (
+              <li>
+                <a href={`/best/${g.data.slug}/`}>{g.data.title}</a>
+                <span class="g-meta">{CATEGORIES[g.data.category]?.label}</span>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
+
+      {verticals.length > 0 && (
+        <section class="g-block">
+          <h2>By organization type</h2>
+          <ul class="g-list">
+            {verticals.map((g) => (
+              <li>
+                <a href={`/best/${g.data.slug}/`}>{g.data.title}</a>
+                <span class="g-meta">{CATEGORIES[g.data.category]?.label}</span>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
+
+      <p class="foot-note">
+        Replacing something you already have? Start with the
+        <a href="/alternatives/">switching guides</a>. Buying your first stack?
+        Start with <a href="/">the recommended stack for your size</a>.
+      </p>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+  .g-block { margin: 2rem 0; }
+  .g-block h2 { font-size: 1.1rem; padding-bottom: .4rem; border-bottom: 2px solid var(--color-ink); }
+  .g-list { list-style: none; padding: 0; margin: .6rem 0 0; max-width: 46rem; }
+  .g-list li { display: flex; flex-wrap: wrap; align-items: baseline; gap: .3rem .9rem;
+    padding: .6rem 0; border-bottom: 1px solid var(--color-rule); }
+  .g-list li:last-child { border-bottom: 0; }
+  .g-list a { font-weight: 700; text-decoration: none; }
+  .g-list a:hover { text-decoration: underline; }
+  .g-meta { color: var(--color-muted); font-size: .82rem; }
+  .foot-note { color: var(--color-muted); font-size: .93rem; max-width: 46rem; margin-top: 2.4rem; }
+</style>
