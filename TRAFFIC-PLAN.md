@@ -414,3 +414,55 @@ the commissions are large. It does not take much traffic:
 That is the difference between this niche and, say, kitchen gadgets. A handful
 of conversions a month is a real number, not a rounding error — and recurring
 commissions mean year two starts from a base rather than from zero.
+
+---
+
+## Press releases and wire services — researched 2026-08-02
+
+**Short version: skip the paid wire, pitch the data directly.**
+
+### Why the wire itself does nothing for rankings
+
+Google's guidance is explicit and long-standing: links in press releases should
+carry `rel="nofollow"`, and press releases are to be treated like
+advertisements. Wire services apply nofollow consistently, which means a
+syndicated release passes **no link equity at all**. A release that lands on 400
+sites produces 400 links that count for nothing.
+
+The value of a wire release is indirect — brand signal, entity recognition, and
+the chance a real journalist notices. One editorial link from someone who read
+it and wrote their own piece is worth more than the entire syndication.
+
+### The survey PDF is genuinely pitchable, though
+
+Original data is the one thing outlets in this sector will cover from an unknown
+publisher. "100 US fundraisers reported what they spend on software" is a real
+story with real numbers, and the PDF makes it citable. Strong angles:
+
+- Nonprofits raising under $250k spend a mean of **$2,611/yr** on software.
+- **95%** of them spend nothing at all on wealth screening.
+- Donation processing is the biggest line at **every** size, ~a third of spend.
+- Mean spend runs from **$2,611 to $96,815** across the four size bands.
+
+### Where to send it, cheapest first
+
+| Target | What it is | Cost | Note |
+|---|---|---|---|
+| **Philanthropy News Digest** (Candid) | Sector news digest | Free | Does **not** republish releases — writes summaries from them. Being summarised by Candid is a strong, genuinely authoritative mention. |
+| **NonProfit Times**, **NonProfit PRO** | Trade press | Free to pitch | Cover sector research. Direct editor pitch, not a wire blast. |
+| **Sector newsletters and blogs** | Small lists, engaged readers | Free | Highest hit rate of anything here. Offer the data, not a product. |
+| **eReleases "CauseWire"** | Wire with a nonprofit discount | ~$300-400+ | Discount is aimed at 501(c)(3)s; this site is a commercial publisher, so expect list price. |
+| **Send2Press** | Wire, has nonprofit PR grants | Varies | Same eligibility caveat. |
+| **PR Newswire / Business Wire** | Full wire, philanthropy category | ~$800-8,000 | Buys reach and "as seen in" logos. Not links. Hard to justify here. |
+
+### The move
+
+Write the release once. Send it as a personal email to a named editor at ten to
+fifteen outlets, with the PDF attached and the headline finding in the subject
+line. Consider giving one outlet a 48-hour exclusive — that is often what turns
+a summary into a real article. Total cost: nothing.
+
+**One practical constraint:** press outreach usually wants an attributable
+quote, and most outlets will ask who conducted the survey. That is the same
+fork as the guest-post section above — a consistent editor persona resolves it;
+full anonymity makes press coverage considerably harder.
