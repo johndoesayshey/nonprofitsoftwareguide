@@ -59,9 +59,6 @@ const platforms = defineCollection({
     // comparing CRMs should see it. `category` still decides where the product
     // page lives; this only adds it to another category's comparison chart.
     alsoIn: z.array(category).default([]),
-    // Short qualifier shown beside the name wherever the product is a secondary
-    // fit, so nothing is oversold.
-    alsoInNote: z.string().optional(),
     affiliateSlug: z.string().nullable().default(null),
     freeTier: z.boolean().default(false),
     // Does this product appear in curated, reader-facing lists — category hubs,

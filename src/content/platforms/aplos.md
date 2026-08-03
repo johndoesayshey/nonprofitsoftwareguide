@@ -25,7 +25,6 @@ lastVerified: 2026-08-03
 bestFor: "Nonprofits and churches that need real fund accounting — a general ledger by fund — with donation tracking attached."
 targetQuery: "aplos pricing"
 alsoIn: [donor-crm]
-alsoInNote: "fund accounting first; donor management is the smaller half"
 affiliateSlug: aplos
 freeTier: false
 draft: false
