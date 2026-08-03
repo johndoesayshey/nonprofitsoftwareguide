@@ -62,8 +62,20 @@ Meta-ExternalAgent, Novellum, PetalBot, TikTok Spider, Timpibot.
 Cloudflare's Managed robots.txt is **off**, so `public/robots.txt` in this repo
 is what actually serves.
 
-**Still to set up:** Bing Webmaster Tools and GA4. Both require creating an
-account and accepting terms, which has to be done by a person.
+**Google Analytics 4** — property `nonprofitsoftwareguide.com`, measurement ID
+`G-PX225BYE29`, under **nonprofitsoftwareguide@gmail.com**. The tag is built into
+every page by `src/layouts/BaseLayout.astro`; it only renders when the ID is
+present, so the ID lives in configuration rather than in the code.
+
+> The ID is set in **two** places and both matter. `.env` in this repo (not
+> committed) is for local development. **Cloudflare Pages → Settings → Variables
+> and secrets → `PUBLIC_GA4_ID`** is the one that affects the live site, because
+> Cloudflare runs the production build. Changing one does not change the other,
+> and a Pages variable only takes effect on the *next* deployment.
+
+**Still to set up:** Bing Webmaster Tools. Sign in with Google, then choose
+"Import from Google Search Console" — it carries the verification and sitemap
+across, so nothing needs resubmitting.
 
 ## Editing text visually (no typing file names)
 
