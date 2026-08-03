@@ -16,8 +16,11 @@ const meta = CATEGORIES[category];
 // program still appear (a guide that hides the free options is not credible)
 // but they sink to the bottom rather than leading the page.
 const inCategory = (await getCollection('platforms', ({ data }) => data.draft === false))
-  .filter((p) => p.data.category === category)
+  .filter((p) => p.data.category === category || (p.data.alsoIn ?? []).includes(category as any))
   .sort((a, b) => a.data.name.localeCompare(b.data.name));
+
+// True where the product is filling a role it isn't primarily built for.
+const isSecondary = (p: (typeof inCategory)[number]) => p.data.category !== category;
 
 const platforms = byValue(inCategory, (p) => p.data.affiliateSlug);
 
@@ -30,6 +33,10 @@ const posts = (await getCollection('posts', ({ data }) => data.draft === false))
     <h2>Compare at a glance</h2>
     <div class="cmp-scroll">
       <table class="cmp">
+        <colgroup>
+          <col class="c-tool" /><col class="c-price" /><col class="c-free" />
+          <col class="c-best" /><col class="c-cta" />
+        </colgroup>
         <thead>
           <tr>
             <th scope="col">Tool</th>
@@ -44,13 +51,18 @@ const posts = (await getCollection('posts', ({ data }) => data.draft === false))
             const aff = p.data.affiliateSlug ? getAffiliate(p.data.affiliateSlug) : undefined;
             return (
               <tr>
-                <th scope="row"><a href={`/platforms/${p.data.slug}/`}>{p.data.name}</a></th>
+                <th scope="row">
+                  <a href={`/platforms/${p.data.slug}/`}>{p.data.name}</a>
+                  {isSecondary(p) && p.data.alsoInNote && (
+                    <span class="alt-tag">{p.data.alsoInNote}</span>
+                  )}
+                </th>
                 <td class="num">{p.data.entryPrice}</td>
                 <td>{p.data.freeTier ? 'Yes' : 'No'}</td>
                 <td class="cmp-best">{p.data.bestFor}</td>
                 <td class="cmp-cta">
                   <a class="btn-visit" href={`/go/${p.data.affiliateSlug}`} rel={relFor(p.data.affiliateSlug)}>Visit →</a>
-                  <ReaderOffer slug={p.data.affiliateSlug} />
+                  <ReaderOffer slug={p.data.affiliateSlug} compact />
                 </td>
               </tr>
             );
@@ -78,6 +90,7 @@ const posts = (await getCollection('posts', ({ data }) => data.draft === false))
         <div class="tool-card">
           <div class="tool-head">
             <a class="tool-name" href={`/platforms/${p.data.slug}/`}>{p.data.name}</a>
+            {isSecondary(p) && p.data.alsoInNote && <span class="tag alt">{p.data.alsoInNote}</span>}
             {p.data.freeTier && <span class="tag">free tier</span>}
           </div>
           <p class="tool-price num">{p.data.entryPrice}</p>
@@ -104,17 +117,32 @@ const posts = (await getCollection('posts', ({ data }) => data.draft === false))
 
 <style>
   .cmp-scroll { overflow-x: auto; margin: 1rem 0 1.6rem; }
-  table.cmp { width: 100%; min-width: 44rem; border-collapse: collapse; font-size: .92rem; }
+  /* Fixed widths, or the browser hands most of the row to whichever cell has the
+     longest unbroken string and squeezes "Best for" into a column of single
+     words. The proportions below keep every row two or three lines tall. */
+  table.cmp { width: 100%; min-width: 48rem; border-collapse: collapse; font-size: .92rem;
+    table-layout: fixed; }
+  table.cmp col.c-tool  { width: 15%; }
+  table.cmp col.c-price { width: 20%; }
+  table.cmp col.c-free  { width: 7%; }
+  table.cmp col.c-best  { width: 36%; }
+  table.cmp col.c-cta   { width: 22%; }
   table.cmp th, table.cmp td { text-align: left; padding: .6rem .7rem; border-bottom: 1px solid var(--color-rule);
     vertical-align: top; }
   table.cmp thead th { font-size: .68rem; letter-spacing: .08em; text-transform: uppercase; font-weight: 800;
     color: var(--color-muted); border-bottom: 2px solid var(--color-ink); }
   table.cmp tbody th a { font-weight: 800; text-decoration: none; color: var(--color-ink); }
   table.cmp tbody th a:hover { color: var(--color-green-deep); text-decoration: underline; }
-  table.cmp .num { font-weight: 700; color: var(--color-green-deep); white-space: nowrap; }
+  table.cmp .num { font-weight: 700; color: var(--color-green-deep); }
   .cmp-best { color: var(--color-muted); }
-  .cmp-cta { white-space: nowrap; }
-  .cmp-cta .offer { display: block; margin-top: .25rem; }
+  /* The CTA column holds a button and a short offer line. Cap its width and let
+     the offer wrap, or a long offer stretches the column wider than the price
+     and drags every row taller. */
+  .cmp-cta { white-space: normal; }
+  .cmp-cta .offer { display: block; margin-top: .35rem; white-space: normal; line-height: 1.3; }
+  .alt-tag { display: block; margin-top: .15rem; font-size: .68rem; font-weight: 600;
+    letter-spacing: .04em; text-transform: uppercase; color: var(--color-muted); }
+  .tag.alt { color: var(--color-muted); }
 
   .tool-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 17rem), 1fr));
     gap: 1rem; margin: 1rem 0; }

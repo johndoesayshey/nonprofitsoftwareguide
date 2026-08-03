@@ -12,14 +12,17 @@ import { offerSourceOf } from '../lib/affiliate-value';
 interface Props {
   slug?: string | null;
   as?: 'span' | 'p';
+  /** Table cells get a shorter label so the column doesn't stretch the row. */
+  compact?: boolean;
 }
-const { slug, as = 'span' } = Astro.props;
+const { slug, as = 'span', compact = false } = Astro.props;
 const affiliate = slug ? getAffiliate(slug) : undefined;
 const offer = affiliate?.readerOffer;
 const source = offerSourceOf(slug);
 
-const label =
-  source === 'vendor' ? `${affiliate?.name} nonprofit discount` : 'Reader deal through this site';
+const label = compact
+  ? (source === 'vendor' ? 'Nonprofit discount' : 'Our reader deal')
+  : (source === 'vendor' ? `${affiliate?.name} nonprofit discount` : 'Reader deal through this site');
 const Tag = as;
 ---
 {offer && (

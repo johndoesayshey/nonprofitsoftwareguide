@@ -5,7 +5,7 @@ category: donor-crm
 entryPrice: "From $39/mo (up to 2,500 donor records)"
 pricingModel: "Monthly subscription, tiered by donor record count"
 lastVerified: 2026-07-31
-bestFor: "Small shops that want a cheap, straightforward donor database with published pricing"
+bestFor: "Intuitive, straightforward platform to keep better track of donors. Small and mid-size shops love this as their first CRM."
 targetQuery: "eleo crm review"
 affiliateSlug: eleo
 freeTier: false

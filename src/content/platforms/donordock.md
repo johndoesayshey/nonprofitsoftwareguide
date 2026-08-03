@@ -5,7 +5,7 @@ category: donor-crm
 entryPrice: "From ~$98/mo (billed annually)"
 pricingModel: "Flat tiers with unlimited contacts"
 lastVerified: 2026-07-29
-bestFor: "Shops that want the CRM to drive daily follow-up, from a team of one to a team of eight"
+bestFor: "Easy to onboard CRM to help drive fundraising followups. Excellent choice for all, but shines with small and mid-size fundraising shops."
 targetQuery: "donordock review"
 affiliateSlug: donordock
 freeTier: false

@@ -7,6 +7,8 @@ pricingModel: "Per-seat subscription; nonprofit program with discounted plans"
 lastVerified: 2026-07-29
 bestFor: "Program tracking, campaign planning, and the operational work that isn't donor data"
 targetQuery: "monday.com for nonprofits"
+alsoIn: [donor-crm]
+alsoInNote: "spreadsheet-style"
 affiliateSlug: monday
 freeTier: true
 draft: false

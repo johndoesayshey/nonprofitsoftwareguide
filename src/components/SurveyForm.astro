@@ -51,8 +51,9 @@ const useEmbed = f.provider === 'jotform' && f.formUrl;
       <fieldset>
         <legend>2. Annual software spend, by category</legend>
         <p class="hint">
-          Whole US dollars per year. Enter <strong>0</strong> where you spend
-          nothing — those responses matter as much as the rest. Estimates are fine.
+          Whole US dollars per year. Estimates are fine, and anything you leave
+          blank is recorded as <strong>$0</strong> — spending nothing in a
+          category is a real answer and counts the same as any other.
         </p>
 
         <div class="grid">
@@ -64,7 +65,7 @@ const useEmbed = f.provider === 'jotform' && f.formUrl;
                 <input
                   type="number" id={`sv-${c.slug}`} name={c.slug}
                   min="0" step="1" inputmode="numeric" placeholder="0"
-                  data-label={c.label} required />
+                  data-label={c.label} />
                 <span class="suffix">/yr</span>
               </div>
             </div>
@@ -78,18 +79,34 @@ const useEmbed = f.provider === 'jotform' && f.formUrl;
         <legend>3. Verification</legend>
         <p class="hint">
           So we can confirm responses come from real fundraising professionals.
+          <strong>Complete either option.</strong>
         </p>
 
-        <div class="field">
-          <label for="sv-title">Your job title</label>
-          <input type="text" id="sv-title" name="title" required
-            placeholder="Development Director" autocomplete="organization-title" />
+        <div class="verify-opt">
+          <p class="opt-head">Option A — your role</p>
+          <div class="grid">
+            <div class="field">
+              <label for="sv-title">Job title</label>
+              <input type="text" id="sv-title" name="title"
+                placeholder="Development Director" autocomplete="organization-title" />
+            </div>
+            <div class="field">
+              <label for="sv-org">Organization name</label>
+              <input type="text" id="sv-org" name="org"
+                placeholder="Riverside Arts Foundation" autocomplete="organization" />
+            </div>
+          </div>
         </div>
 
-        <div class="field">
-          <label for="sv-org">Organization name <span class="or">or</span> LinkedIn profile</label>
-          <input type="text" id="sv-org" name="verify" required
-            placeholder="Riverside Arts Foundation — or — linkedin.com/in/…" />
+        <p class="or-rule"><span>or</span></p>
+
+        <div class="verify-opt">
+          <p class="opt-head">Option B — your LinkedIn</p>
+          <div class="field">
+            <label for="sv-li">LinkedIn profile</label>
+            <input type="text" id="sv-li" name="linkedin"
+              placeholder="linkedin.com/in/yourname" inputmode="url" />
+          </div>
         </div>
 
         <p class="privacy">{f.privacyNote}</p>
@@ -134,18 +151,26 @@ const useEmbed = f.provider === 'jotform' && f.formUrl;
 
         var size = form.querySelector('#sv-size').value;
         var title = form.querySelector('#sv-title').value.trim();
-        var verify = form.querySelector('#sv-org').value.trim();
+        var org = form.querySelector('#sv-org').value.trim();
+        var linkedin = form.querySelector('#sv-li').value.trim();
+
+        // Two ways to verify: role (title AND organization) or a LinkedIn
+        // profile. Either one complete is enough. Spend fields are optional —
+        // a blank is a real answer and is recorded as zero.
+        var hasRole = title && org;
         var missing = [];
-        if (!size) missing.push('organization size');
-        if (!title) missing.push('job title');
-        if (!verify) missing.push('organization or LinkedIn');
-        var blank = amounts().filter(function (i) { return i.value === ''; });
-        if (blank.length) missing.push('every spend field (enter 0 if none)');
+        if (!size) missing.push('how much your organization raises');
+        if (!hasRole && !linkedin) {
+          missing.push(title || org
+            ? 'both job title and organization, or a LinkedIn profile instead'
+            : 'either job title and organization, or a LinkedIn profile');
+        }
 
         if (missing.length) {
           statusEl.className = 'status error';
-          statusEl.textContent = 'Still needed: ' + missing.join(', ') + '.';
-          (blank[0] || form.querySelector('#sv-size')).focus();
+          statusEl.textContent = 'Still needed: ' + missing.join('; ') + '.';
+          (!size ? form.querySelector('#sv-size')
+                 : (!title ? form.querySelector('#sv-title') : form.querySelector('#sv-org'))).focus();
           return;
         }
 
@@ -154,12 +179,14 @@ const useEmbed = f.provider === 'jotform' && f.formUrl;
           '',
           'Organization size: ' + size,
           '',
-          'Annual spend by category:',
+          'Annual spend by category (blank = $0):',
         ];
         amounts().forEach(function (i) {
           lines.push('  ' + i.dataset.label + ': $' + (parseFloat(i.value) || 0));
         });
-        lines.push('', 'Total: ' + money(retotal()), '', 'Title: ' + title, 'Organization / LinkedIn: ' + verify);
+        lines.push('', 'Total: ' + money(retotal()), '');
+        if (hasRole) lines.push('Title: ' + title, 'Organization: ' + org);
+        if (linkedin) lines.push('LinkedIn: ' + linkedin);
 
         var href = 'mailto:' + to +
           '?subject=' + encodeURIComponent('Software spend survey response — ' + size) +
@@ -213,6 +240,15 @@ const useEmbed = f.provider === 'jotform' && f.formUrl;
   .running { margin: 1rem 0 0; font-family: var(--font-mono); font-size: .8rem;
     text-transform: uppercase; letter-spacing: .06em; color: var(--color-muted); }
   .running strong { color: var(--color-green-deep); font-size: 1rem; }
+
+  .verify-opt { border: 1px solid var(--color-rule); border-radius: 3px;
+    padding: .9rem 1rem .5rem; background: var(--color-paper-2); }
+  .opt-head { margin: 0 0 .6rem; font-size: .78rem; font-weight: 800; letter-spacing: .06em;
+    text-transform: uppercase; color: var(--color-green-deep); }
+  .or-rule { display: flex; align-items: center; gap: .8rem; margin: .9rem 0;
+    color: var(--color-muted); font-size: .8rem; text-transform: uppercase;
+    letter-spacing: .1em; font-weight: 700; }
+  .or-rule::before, .or-rule::after { content: ''; flex: 1; height: 1px; background: var(--color-rule); }
 
   .privacy { font-size: .82rem; color: var(--color-muted); margin: .9rem 0 0;
     padding-left: .8rem; border-left: 2px solid var(--color-rule); }

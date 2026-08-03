@@ -7,6 +7,8 @@ pricingModel: "Tiered by forms and submissions; permanent 50% nonprofit discount
 lastVerified: 2026-07-29
 bestFor: "Program applications, volunteer intake, and every form that outgrows email"
 targetQuery: "jotform for nonprofits"
+alsoIn: [donor-crm]
+alsoInNote: "forms-based"
 affiliateSlug: jotform
 freeTier: true
 draft: false

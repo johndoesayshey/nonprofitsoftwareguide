@@ -5,7 +5,7 @@ category: donor-crm
 entryPrice: "From ~$99/mo"
 pricingModel: "Scales with organizational revenue; unlimited users; optional add-on modules"
 lastVerified: 2026-07-29
-bestFor: "Midsize shops and membership organizations that want CRM, events, and memberships in one system"
+bestFor: "Best for orgs that need a memberships feature."
 targetQuery: "neon crm review"
 affiliateSlug: neoncrm
 freeTier: false

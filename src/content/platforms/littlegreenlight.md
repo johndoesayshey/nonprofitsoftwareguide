@@ -5,7 +5,7 @@ category: donor-crm
 entryPrice: "From $45/mo (up to 2,500 constituents)"
 pricingModel: "By constituent count; unlimited users; no contracts"
 lastVerified: 2026-07-29
-bestFor: "Small shops that want the most capable CRM per dollar"
+bestFor: "Aging interface that takes some time to learn. All the features you need to keep track of donors with none of the frills."
 targetQuery: "little green light review"
 affiliateSlug: littlegreenlight
 freeTier: false

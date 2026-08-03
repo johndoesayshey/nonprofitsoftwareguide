@@ -5,7 +5,7 @@ category: donor-crm
 entryPrice: "From $79/mo (up to ~1,000 contacts)"
 pricingModel: "By contact-record count; unlimited users"
 lastVerified: 2026-07-29
-bestFor: "Small-to-midsize teams that want retention-focused donor management everyone can run"
+bestFor: "Trusted name in the space with retention-focused features. Loved by all shop sizes, but works especially well for mid- to large organizations."
 targetQuery: "bloomerang review"
 affiliateSlug: bloomerang
 freeTier: false

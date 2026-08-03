@@ -35,6 +35,15 @@ const platforms = defineCollection({
         note: z.string(),           // one sentence: why that one instead
       })
     ),
+    // Extra categories this product should appear in. A general-purpose tool can
+    // legitimately fill a role it isn't built for — a structured list in
+    // monday.com is many small shops' first donor database — and the buyer
+    // comparing CRMs should see it. `category` still decides where the product
+    // page lives; this only adds it to another category's comparison chart.
+    alsoIn: z.array(category).default([]),
+    // Short qualifier shown beside the name wherever the product is a secondary
+    // fit, so nothing is oversold.
+    alsoInNote: z.string().optional(),
     affiliateSlug: z.string().nullable().default(null),
     freeTier: z.boolean().default(false),
     // Not in the original spec schema; added so the [FACT-CHECK] guardrail can
