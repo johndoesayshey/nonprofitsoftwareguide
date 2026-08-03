@@ -17,7 +17,6 @@ bestFor: "Shops that want serious recurring-gift tooling without building anythi
 targetQuery: "donorbox review"
 affiliateSlug: donorbox
 freeTier: true
-featured: false
 draft: false
 strengths:
   - "Donation forms live in minutes and embed anywhere"

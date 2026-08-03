@@ -19,6 +19,10 @@ picks:
     award: "Best free option"
     forWhom: "A rescue where every dollar is vet bills"
     note: "Free at any volume with no platform fee and no processing fee — a $50 donation deposits $50. Covers donations, ticketing, raffles and memberships, which happens to cover most of what a rescue runs. Funded by an optional tip donors are asked for at checkout. The trade-off is that your net per gift depends on donor behaviour rather than a fixed rate, and it isn't a donor database — it holds transactions, not relationship history."
+  - platformSlug: donorbox
+    award: "Best for monthly giving"
+    forWhom: "A rescue building a sponsor-a-pet recurring program"
+    note: "Free to start at roughly 2.95%, no subscription; Pro at about $150/mo drops the rate to roughly 1.75% past around $150k. The recurring-gift tooling is the reason to consider it \u2014 donor portals, failed-card recovery, upgrade prompts. Sponsorship programs live or die on card failures nobody chases, and that's exactly what this handles."
   - platformSlug: littlegreenlight
     award: "Best for custom tracking"
     forWhom: "A rescue that wants adoption and donor history in one record"
@@ -64,7 +68,7 @@ That is the entire argument for a task-driven system over a reporting-driven one
 
 Monthly sponsorship is the highest-value program most rescues can run, and the thing that silently kills it is expired cards. A donor's card expires, the charge fails, nobody notices, and a $20/month supporter disappears without ever deciding to leave.
 
-Ask any platform you're considering exactly what happens on a failed payment. You want three things: automatic retries, an email to the donor, and a self-service portal where they can update the card themselves without emailing you. This is the single most valuable feature in the category for a rescue, and it is worth paying for — a platform that silently drops failed recurring gifts will cost you more in lapsed sponsors than any fee difference saves.
+Ask any platform you're considering exactly what happens on a failed payment. You want automatic retries, an email to the donor, and a self-service portal where they can update the card themselves without emailing you. [Donorbox](/go/donorbox) is the strongest in its price class on this specific point, and it's the reason a percentage fee can be worth paying — a platform that silently drops failed recurring gifts costs more in lapsed sponsors than any fee difference saves.
 
 ## In-kind gifts
 

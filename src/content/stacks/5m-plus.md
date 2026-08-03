@@ -45,7 +45,9 @@ At $5M+ the stack is a full operation: continuous wealth screening, a system-of-
 
 **Grant research: Instrumentl Pro ($499/mo).** Twenty-plus active projects across a team is Pro-tier volume. [Instrumentl](/go/instrumentl) runs the pipeline; pair it with desk access to [Candid](/go/candid) when a single funder deserves a deep workup.
 
-**Money in: 4aGoodCause Scale ($429/mo, $5,148/yr).** At this size the arithmetic is one-sided: a percentage fee on eight-figure-adjacent online giving dwarfs any subscription. [4aGoodCause](/go/4agoodcause) takes none, so the fee stops tracking revenue entirely and the only variable left is processing.
+**Money in: 4aGoodCause Scale ($429/mo, $5,148/yr).** At this size the arithmetic is one-sided: a percentage fee on this much online giving dwarfs any subscription. [4aGoodCause](/go/4agoodcause) takes none, so the fee stops tracking revenue entirely and the only variable left is processing.
+
+The one thing to protect on the way across is recurring-gift tooling. A large monthly file leaks through expired cards, and [Donorbox](/go/donorbox) Pro's recovery machinery is the benchmark to hold any replacement against. Saving on fees while losing monthly donors to failed payments is a bad trade that shows up two quarters later.
 
 **Operations: monday.com (~$720-$1,200/yr).** Eight or more seats. Campaign calendars, grant deliverables, and the cross-department coordination that email cannot hold.
 

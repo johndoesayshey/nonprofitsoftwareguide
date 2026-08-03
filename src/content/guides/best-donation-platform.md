@@ -10,6 +10,10 @@ picks:
     award: "Best overall past $40k online"
     forWhom: "Shops where online giving is growing and the fee is becoming a line item"
     note: "$99/mo Grassroots ($1,188/yr), $249/mo Growth ($2,988/yr), $429/mo Scale ($5,148/yr), with no percentage taken from donations. This is the structural answer to a percentage fee: the cost stops scaling with your success. Above roughly $40,000 a year online the entry tier beats a ~2.95% fee, and the advantage compounds. Built around monthly giving, with recurring pages, donor records and a campaign builder in one tool. First month free."
+  - platformSlug: donorbox
+    award: "Best for recurring giving"
+    forWhom: "Shops where monthly donors are the growth engine"
+    note: "Free to start at roughly 2.95%, no subscription; Pro at about $150/mo drops the rate to roughly 1.75% and pays for itself past around $150k. The recurring-gift management is the strongest in its price class \u2014 donor portals, automatic retries on failed cards, upgrade prompts \u2014 and that machinery produces revenue. Card failure silently kills monthly donors at platforms that do not chase them. Attribution is link-only and never retroactive."
   - platformSlug: givebutter
     award: "Best for events and peer-to-peer"
     forWhom: "Shops whose fundraising centres on campaigns and events"
@@ -33,7 +37,7 @@ faq:
   - q: "Is Zeffy really free?"
     a: "Yes, to the nonprofit — a $100 gift deposits $100. The model is that donors are asked to add an optional tip at checkout, which funds the company. When donors decline, your net per gift is unchanged but Zeffy earns nothing on it. The trade-off is the ask appearing on your giving page, not a hidden fee."
   - q: "At what point should we switch from a percentage fee to a subscription?"
-    a: "Around $40,000 a year in online giving, where a $1,188 flat subscription crosses a roughly 3% percentage fee. Above that the subscription wins and the gap widens every year you grow. Run it with your own number rather than the rule of thumb."
+    a: "Around $40,000 a year in online giving, where a $1,188 flat subscription crosses a ~2.95% percentage fee. Above that the subscription wins and the gap widens every year you grow. Run it with your own number rather than the rule of thumb."
   - q: "What do nonprofits spend on donation processing?"
     a: "Our 2026 survey put mean annual donation processing spend at $1,024 for shops under $250K raised, $3,493 at $250K-$1M, $9,906 at $1M-$5M, and $30,824 at $5M+. Those totals include processing fees, which is why the number climbs so steeply with revenue."
 draft: false
@@ -45,7 +49,7 @@ There is no best donation platform, only a best pricing structure for your volum
 
 Take last year's online giving total and compare all four structures.
 
-**Percentage-only** — Givebutter at about 3% with tips off, and most of the wider market between roughly 2.5% and 5%. At $25,000 online a 3% fee is about $750 a year. At $250,000 it's about $7,500. Same rate, no floor, no ceiling.
+**Percentage-only** — [Donorbox](/go/donorbox) at roughly 2.95%, Givebutter at about 3% with tips off. At $25,000 online that's around $740 a year. At $250,000 it's roughly $7,400. Same rate, no floor, no ceiling.
 
 **Flat subscription** — [4aGoodCause](/go/4agoodcause) at $1,188 / $2,988 / $5,148 a year, no percentage at all. Costs the same whether you raise $40,000 or $400,000. Worse than a percentage at low volume, better past roughly $40,000, and the advantage widens every year.
 

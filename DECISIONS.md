@@ -574,13 +574,13 @@ list we ask a reader to act on.
 | Virtuous | No affiliate program and no reliable reported price. |
 | Blackbaud Raiser's Edge NXT | No publisher program; quote-only enterprise pricing. |
 
-**One concern worth recording, since it is the operator's call to reverse.**
-Removing Donorbox leaves donation processing with 4aGoodCause as the only product
-carrying a working affiliate program — Givebutter and Zeffy are Tier C by
-definition, since both are free to nonprofits and have no margin to share. Donorbox
-was the category's one medium-potential earner (15% of fees for three years). It
-stays fully covered — platform page, switching guide, comparison pages — and
-re-featuring it is one line in its frontmatter.
+**Donorbox was unfeatured and then restored the same day**, on operator
+correction. The concern that prompted the correction: removing it left donation
+processing with 4aGoodCause as the only product carrying a working affiliate
+program, since Givebutter and Zeffy are Tier C by definition — both free to
+nonprofits, no margin to share. Donorbox is the category's other real earner (15%
+of fees for three years). Donation processing is therefore a four-product
+shortlist rather than three.
 
 **Consequences applied at the same time.**
 
@@ -593,8 +593,17 @@ re-featuring it is one line in its frontmatter.
   product on a category hub, where the `alsoInNote` qualifier gives it context; a
   bare row in a price table carries no such nuance and made donor CRM look like
   eight products.
-- The stacks recommended Donorbox at three of four sizes. Swapped to 4aGoodCause,
-  with rationale rewritten and every stack total recomputed from its line items.
+- **The stacks now split by break-even rather than picking one processor.** At
+  $250k–$1M, online giving is often under the ~$40,000 point where a flat
+  subscription overtakes a percentage, so Donorbox stays the ledger line there
+  with 4aGoodCause named as the upgrade. At $1M–$5M and $5M+ the break-even is
+  comfortably cleared, so 4aGoodCause carries the line and Donorbox is named as
+  the recurring-tooling benchmark any replacement has to be held against. Totals
+  recomputed from the line items in each case, not adjusted by eye.
+
+  This is a better answer than the blanket swap that preceded it. The honest fact
+  is that the cheapest processor genuinely flips with volume, and a stack page
+  that says so is more useful than one that names a single winner at every size.
 
 ## D-2026-08-03b. /pricing/ merged into /compare/
 
