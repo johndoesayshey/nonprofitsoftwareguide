@@ -2,9 +2,20 @@
 name: OneCause
 slug: onecause
 category: events-auctions
-entryPrice: "Pay-as-you-go from ~$200; annual packages from ~$2,995/yr"
+entryPrice: "From ~$200 pay-as-you-go, or ~$2,995/yr as a package"
 pricingModel: "Annual package or per-event, plus platform fee and processing"
-lastVerified: 2026-07-29
+pricingBasis: "pay-as-you-go or annual package"
+pricingTiers:
+  - tier: "Pay-as-you-go"
+    price: "from ~$200"
+    note: "plus 5% of funds raised"
+  - tier: "Professional Auction & Event"
+    price: "from ~$2,995/yr"
+    note: "for organizations raising $50k+"
+  - tier: "Larger packages"
+    price: "quoted"
+    note: "scales with event size and features"
+lastVerified: 2026-08-03
 bestFor: "Signature galas and auctions where a smooth night is worth real money"
 targetQuery: "onecause pricing review"
 affiliateSlug: onecause

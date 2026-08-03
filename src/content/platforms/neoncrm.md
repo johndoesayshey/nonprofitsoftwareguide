@@ -2,9 +2,23 @@
 name: Neon CRM
 slug: neoncrm
 category: donor-crm
-entryPrice: "From ~$99/mo"
+entryPrice: "From $99/mo; reported to ~$409/mo by revenue"
 pricingModel: "Scales with organizational revenue; unlimited users; optional add-on modules"
-lastVerified: 2026-07-29
+pricingBasis: "by annual revenue; unlimited records and users"
+pricingTiers:
+  - tier: "Neon CRM"
+    price: "from $99/mo"
+    note: "unlimited contacts, users and workflows"
+  - tier: "Typical reported range"
+    price: "~$99-$409/mo"
+    note: "depending on revenue band"
+  - tier: "+ Memberships"
+    price: "+10% of CRM fee"
+  - tier: "+ Volunteers"
+    price: "+10% of CRM fee"
+  - tier: "+ Events"
+    price: "+20% of CRM fee"
+lastVerified: 2026-08-03
 bestFor: "Best for orgs that need a memberships feature."
 targetQuery: "neon crm review"
 affiliateSlug: neoncrm

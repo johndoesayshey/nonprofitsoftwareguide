@@ -2,9 +2,23 @@
 name: DonorSearch
 slug: donorsearch
 category: prospect-research
-entryPrice: "Quoted per organization (reported ~$4,000-$6,000/yr entry)"
+entryPrice: "Quoted; reported ~$4,000-$12,000/yr, or ~$1-$2 per record"
 pricingModel: "Annual subscription; per-record screening options available"
-lastVerified: 2026-07-29
+pricingBasis: "quoted per organization; scales with file size"
+pricingTiers:
+  - tier: "Pay-per-record screen"
+    price: "~$1-$2 / record"
+    note: "one-off project, no subscription"
+  - tier: "Small file (~5,000 records)"
+    price: "~$4,000/yr"
+    note: "reported entry subscription"
+  - tier: "10,000-50,000 records"
+    price: "~$6,000-$12,000/yr"
+    note: "typical with a major-gifts program"
+  - tier: "Enterprise"
+    price: "~$15,000-$22,000/yr"
+    note: "reported"
+lastVerified: 2026-08-03
 bestFor: "Shops that weight proven giving history and want screening inside their CRM"
 targetQuery: "donorsearch review"
 affiliateSlug: donorsearch
@@ -41,6 +55,19 @@ Development teams that already run cultivation and want to prioritize by proven 
 | Per-record screening | ~$1-$2 per record |
 
 Plans are quoted; the sales conversation will price your seat count and screening volume.
+
+## What it costs
+
+DonorSearch quotes per organization, and the figure tracks the size of the file you screen.
+
+| Engagement | Reported |
+|---|---|
+| Pay-per-record screen | ~$1-$2 per record |
+| Small file, ~5,000 records | ~$4,000/yr |
+| 10,000-50,000 records | ~$6,000-$12,000/yr |
+| Enterprise | ~$15,000-$22,000/yr |
+
+A one-off per-record screen is the cheaper way to test the data before committing to a year. Clean the file first, since you are paying by the record either way.
 
 ## How it compares
 

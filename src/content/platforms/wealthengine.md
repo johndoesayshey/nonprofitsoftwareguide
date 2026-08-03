@@ -2,9 +2,23 @@
 name: WealthEngine
 slug: wealthengine
 category: prospect-research
-entryPrice: "Quoted per organization (reported from ~$5,000/yr)"
+entryPrice: "Quoted; reported from ~$5,000/yr for a single user"
 pricingModel: "Annual subscription by seats, plus implementation"
-lastVerified: 2026-07-29
+pricingBasis: "quoted per organization; scales with seats"
+pricingTiers:
+  - tier: "1 user"
+    price: "from ~$5,000/yr"
+    note: "reported entry subscription"
+  - tier: "~10 users"
+    price: "~$15,000/yr"
+    note: "reported"
+  - tier: "~100 users"
+    price: "~$50,000/yr"
+    note: "reported"
+  - tier: "Implementation"
+    price: "~$2,000-$20,000"
+    note: "one-time, varies with setup"
+lastVerified: 2026-08-03
 bestFor: "Wealth-indicator modeling and fast capacity estimates across large lists"
 targetQuery: "wealthengine review"
 affiliateSlug: wealthengine
@@ -41,6 +55,19 @@ Organizations with large donor files and a segmentation problem: tens of thousan
 | Implementation | ~$2,000-$20,000 one-time |
 
 Plans are quoted; the demo conversation will price your file size and seat count. Budget for implementation, not just the subscription.
+
+## What it costs
+
+Pricing is quoted and scales with seats rather than records.
+
+| Seats | Reported |
+|---|---|
+| 1 user | from ~$5,000/yr |
+| ~10 users | ~$15,000/yr |
+| ~100 users | ~$50,000/yr |
+| Implementation | ~$2,000-$20,000 one-time |
+
+Budget the implementation line separately. It varies more than the subscription does, and it is the part that surprises people.
 
 ## How it compares
 

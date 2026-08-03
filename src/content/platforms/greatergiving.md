@@ -2,9 +2,20 @@
 name: Greater Giving
 slug: greatergiving
 category: events-auctions
-entryPrice: "Quote-based; no public pricing"
+entryPrice: "Quoted; reported ~$2,500-$15,000/yr plus processing"
 pricingModel: "Packages quoted per organization by a regional manager"
-lastVerified: 2026-07-31
+pricingBasis: "quoted per organization; scales with event size"
+pricingTiers:
+  - tier: "Platform fee"
+    price: "~$2,500-$15,000/yr"
+    note: "reported; scales with event size"
+  - tier: "Card processing"
+    price: "~2.9%-3.5% + $0.30"
+    note: "per transaction"
+  - tier: "Implementation"
+    price: "~$500-$5,000"
+    note: "one-time, varies with customization"
+lastVerified: 2026-08-03
 bestFor: "Auction-led galas that want hardware, check-in and bidding handled as one package"
 targetQuery: "greater giving review pricing"
 affiliateSlug: greatergiving
@@ -34,7 +45,15 @@ School foundations, hospital foundations, and anyone whose signature event is ge
 
 ## What it costs
 
-Greater Giving publishes no pricing. Their Express and Event packages are quoted per organization through a regional manager, so budget a conversation rather than a checkout. Ask what is included as hardware versus rented, and what event-night support actually covers, since that is where package differences show up.
+Every package is quoted per organization through a regional manager, so budget a conversation rather than a checkout. Organizations report platform fees running roughly $2,500 to $15,000 a year depending on event size, with card processing on top at about 2.9% to 3.5% plus $0.30 per transaction, and one-time implementation somewhere between $500 and $5,000.
+
+| Line | Reported |
+|---|---|
+| Platform fee | ~$2,500-$15,000/yr |
+| Card processing | ~2.9%-3.5% + $0.30 |
+| Implementation | ~$500-$5,000 one-time |
+
+Ask what is included as hardware versus rented, and what event-night support actually covers, since that is where package differences show up.
 
 ## How it compares
 
