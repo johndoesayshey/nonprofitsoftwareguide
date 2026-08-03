@@ -135,18 +135,18 @@
     "url": "https://www.jotform.com",
     "affiliateUrl": null,
     "readerOffer": "50% off, permanently",
-    "terms": "30% of the first year only. Confirmed live. Approves in ~1 business day, but the referral must stay a paid client for 60 days before you are eligible, and commission stops after year one.",
+    "terms": "30% commission, paid monthly for the first year of each referred customer's subscription. Confirmed verbatim in their own FAQ. Applications reviewed within 1 business day.",
     "signupUrl": "https://www.jotform.com/partnership/affiliate/application/",
     "appliedOn": null,
     "approvedOn": null,
-    "payout": "30% of the first year only",
+    "payout": "30% for the first 12 months of each referred subscription",
     "potential": "medium",
     "badge": "30%",
-    "potentialNote": "Confirmed live 2026-08-03. 30% commission, application reviewed within 1 business day. The \"first year only\" duration in the original spec is not stated on the current page — confirm in the terms at signup.",
+    "potentialNote": "Verified in a browser 2026-08-03, including the duration question that was open: their FAQ states \"One-year commission: A one-year commission means that you will receive a monthly commission payout for the first year of each customer's Jotform subscription.\" So 30% x 12 months, then it stops. Against their nonprofit-discounted ladder ($17-$24.50/mo) that is roughly $61-$88 per referred customer — real money, and small. Rated medium on the rate; the absolute number is Eleo-sized.",
     "evidence": {
       "url": "https://www.jotform.com/partnership/affiliate/",
       "checked": "2026-08-03",
-      "quote": "Earn a 30% commission on every new paid user you refer... your application will be reviewed within 1 business day."
+      "quote": "One-year commission: A one-year commission means that you will receive a monthly commission payout for the first year of each customer's Jotform subscription."
     },
     "offerSource": "vendor"
   },
@@ -462,18 +462,18 @@
     "url": "https://monday.com",
     "affiliateUrl": null,
     "readerOffer": null,
-    "terms": "Up to 100% of first-year sales (tiered). Confirmed live on their affiliate page. Tiered via PartnerStack; the base rate is not published, so treat \"up to\" literally.",
+    "terms": "CORRECTED 2026-08-03. The \"up to 100% of first-year sales\" figure previously recorded here appears NOWHERE on any monday.com or PartnerStack property and was wrong. Two tracks exist: \"Partners\" (resell and implement) earn up to 20% per closed deal; \"Online Affiliates\" — which is what a publisher is — earn a CPL per sign-up at an unpublished rate.",
     "signupUrl": "https://mondaycom.partnerstack.com/?group=mbmarketplace",
     "appliedOn": null,
     "approvedOn": null,
-    "payout": "Up to 100% of first-year sales (tiered)",
-    "potential": "high",
-    "badge": "up to 100%",
-    "potentialNote": "Confirmed live 2026-08-03. Self-serve join on PartnerStack, 90-day cookie. Public page advertises up to 20% per closed deal for partners, or a CPL deal per signup for online affiliates.",
+    "payout": "Online affiliates: a CPL per sign-up, rate not published. Solution partners: up to 20% per closed deal.",
+    "potential": "unknown",
+    "badge": null,
+    "potentialNote": "Opened in a browser 2026-08-03, three sources. (1) The PartnerStack program page states only \"Partners: Earn up to 20% commission on each closed deal\" and \"Online Affiliates: Earn a CPL deal per sign-up\". (2) Its linked Terms of Service is a Google Doc titled \"RP- TOS December 2021\" which defines \"Partner Fee Plan\" as a SEPARATE document and publishes no rate at all — and is five years stale. (3) monday.com/w/partnership publishes no rate either, only \"generous commissions\". Downgraded high -> unknown: as a publisher we would be on the CPL track, which is a flat per-signup fee rather than a revenue share, and nobody publishes what it pays. Even the best case — solution partner at 20% of a 15-seat Standard deal — is about $432 one-time against DonorDock at $500.",
     "evidence": {
-      "url": "https://monday.com/affiliate-program/",
+      "url": "https://mondaycom.partnerstack.com/?group=mbmarketplace",
       "checked": "2026-08-03",
-      "quote": "you can earn up to 100% commission on the first year’s sales of each customer you refer."
+      "quote": "Partners: Earn up to 20% commission on each closed deal. Online Affiliates: Earn a CPL deal per sign-up."
     }
   },
   "salesforcenpsp": {
