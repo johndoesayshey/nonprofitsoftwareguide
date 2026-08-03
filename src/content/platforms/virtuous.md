@@ -66,6 +66,51 @@ Virtuous's argument is that donor journeys and marketing automation belong insid
 
 If nobody owns marketing automation at your organization, you'll pay for the differentiator and use the parts every cheaper system also has.
 
+## How the QuickBooks sync actually works
+
+One-way, Virtuous to QuickBooks Online. Both granularities are supported and it is a
+single checkbox. By default each gift posts as a **sales receipt**, syncing roughly
+every three hours; tick "roll up gifts by project/fund" and it summarizes and syncs
+overnight instead.
+
+Six things worth knowing before your finance team relies on it, all verified against
+Virtuous's own documentation on 3 August 2026:
+
+- **No historical backfill.** Only gifts entered after the integration is switched on
+  are sent. Anything imported during your migration never reaches QuickBooks.
+- **One failure halts everything.** If any transaction fails to sync, the integration
+  pauses all transaction syncs until the error is resolved — and you cannot re-sync a
+  single failed record, you fix the cause and re-sync the batch.
+- The connection **token expires after 100 days with no gifts synced** and needs
+  re-authorizing.
+- **Contact and individual custom fields cannot be mapped.**
+- Only **donor-covered** processing fees sync. Fees your organization absorbs never
+  reach QuickBooks and have to be reconciled separately.
+- It requires a dedicated admin service account **without SSO or two-factor**, which
+  is a security trade-off worth raising with whoever owns your IT policy.
+
+If your finance team wants journal entries rather than sales receipts, a paid
+third-party connector in the Virtuous marketplace produces them — implementation fee
+plus an annual subscription that scales with donation volume. That is a real cost to
+factor in if sales receipts do not suit your books.
+
+## Two things the integration chart gets wrong
+
+**Constant Contact.** Virtuous documents the direction two different ways. Their
+integration chart says it is a one-way sync *into* Virtuous with historical data
+included. Their configuration article says the opposite on both counts — the sync
+pushes *from* Virtuous *to* Constant Contact, creating a list called "Virtuous"
+there, and there is no mechanism to bulk-sync existing contacts once activated.
+Email opens and clicks do not flow back. Trust the configuration article.
+
+**Salesforce is not an integration.** Virtuous publishes a Salesforce-to-Virtuous
+mapping document, but it is filed under migration resources. A live connection would
+need the open API or a consultancy engagement.
+
+One gating detail that is easy to misread: **PayPal as a donation gateway requires
+Virtuous Raise**, a separately priced add-on. It is not available through the CRM's
+own Stripe-powered giving.
+
 ## What reviewers consistently flag
 
 Reporting and filtering get clunky outside the prebuilt criteria. Moves management for major-gift officer portfolios is described as difficult to do natively — worth testing hard if portfolios are your core work. Several reviewers describe the product as still maturing, with the development team working on fundamentals. And at least one reports migration fidelity problems, where conversion logic didn't map incoming data as expected.

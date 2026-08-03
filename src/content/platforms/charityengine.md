@@ -61,6 +61,49 @@ Our 2026 survey put mean annual donor CRM spend at $716 for shops under $250K ra
 
 That's the honest read: this is a system for shops past about $1M, and the argument for it is consolidation. If it genuinely replaces your CRM, your email platform, your event tool and your prospect research subscription, the total can come out ahead. If it replaces only the CRM, it won't.
 
+## The integrations logo wall is not an integrations list
+
+CharityEngine's developer page shows about thirty-two logos under "Popular
+Integrations." It is worth knowing what that wall actually mixes together, because
+nothing on it is labelled. Verified 3 August 2026:
+
+- **Native connectors** — QuickBooks Online, PayPal, Authorize.net, WealthEngine
+- **Zapier-mediated** — Mailchimp, which has no native documentation at all
+- **Competitor and migration-source systems** — Blackbaud, Luminate, Donor Direct
+- **Shipping and telephony vendors** — FedEx, UPS, USPS, Twilio
+
+Salesforce appears on that wall and has zero documentation anywhere in
+CharityEngine's help centre. Given that Blackbaud and Luminate are plainly migration
+sources rather than integrations, Salesforce most likely is too — but we could not
+confirm it either way, so treat it as unestablished rather than as a feature.
+
+**Stripe is absent, and that is a real constraint.** CharityEngine processes payments
+itself; its published gateways are Authorize.net, BluePay, First Data, PayGate,
+Razorpay and DPO Group. If you are currently on Stripe, moving to CharityEngine
+means changing payment processors, which means re-enrolling recurring donors.
+
+## How the QuickBooks sync actually works
+
+One-way, CharityEngine to QuickBooks Online, run as a scheduled job. Both
+granularities are offered as a setting, and the vendor pushes you toward summary —
+their own documentation recommends a daily summary and notes that detail mode, which
+creates line-item transactions, is for organizations that require individual
+transactions for reconciliation.
+
+Four operational details a bookkeeper will want before signing:
+
+- GL code names in CharityEngine must **match QuickBooks account names exactly**.
+  A transaction with a null or unmatched GL code **silently does not sync** — it does
+  not error, it just isn't there.
+- A misconfigured "sync from" date **creates duplicates**.
+- The QuickBooks OAuth token expires periodically and has to be reconnected by hand.
+- QuickBooks Enterprise (desktop) is not part of this at all — that path is an IIF
+  file export.
+
+Also worth knowing: PayPal **cannot be configured self-serve**. Their documentation
+states you cannot add PayPal to your forms until support or professional services has
+configured it in your account. Whether that carries a fee is not published.
+
 ## What reviewers consistently flag
 
 **Implementations run long.** The vendor says about three months; reviewers describe go-live dates slipping, and one described being in sandbox after four months with no training available.

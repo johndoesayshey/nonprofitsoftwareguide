@@ -59,6 +59,34 @@ From the Aplos terms, in their own words: card payments run **2.9% + $0.30**, AC
 
 The ACH rate has **no cap**. That is the number to check against your gift profile. A $10,000 bank transfer costs $100.30 to process here. On a platform that caps ACH — [Donately](/go/donately) caps it at $5 — the same gift costs five dollars. If you receive several five-figure ACH gifts a year, that difference is larger than the Lite subscription.
 
+## There is no QuickBooks integration, and roundups say otherwise
+
+This is the correction most worth making on this page. Review sites and comparison
+posts routinely list an "Aplos + QuickBooks integration." There isn't one — no API
+connection, no sync, in either direction.
+
+What exists is a one-time, file-based **migration path away from QuickBooks**. You
+export an account listing from QuickBooks to Excel, send it to Aplos support, and
+they load it, typically in two to five business days at no charge. Note that this
+**deletes and replaces** whatever is already in your Aplos account, so it is a
+first-week operation rather than something to try later.
+
+Aplos steers you away from bringing historic transactions across at all — their own
+guidance is that most organizations export historic reports to keep on file and
+start clean. Converting historic activity into true fund accounting is a separately
+quoted implementation project.
+
+That is the correct architecture, and it is worth understanding rather than treating
+as a gap: Aplos is not a system that reports into your accounting software. It *is*
+the accounting software, and it publishes a competitive comparison page against
+QuickBooks for nonprofits. If your bookkeeper wants to keep QuickBooks, Aplos is not
+an addition to that setup — it is a replacement for it.
+
+One related detail, verified 3 August 2026: **third-party integrations are not
+included in the Lite plan.** They start at Core ($129/mo). An Aplos Lite customer
+gets no partner integrations at all — no Bloomerang, no Keela, no PayPal import.
+Aplos has no Zapier app of any kind, so there is no workaround.
+
 ## Who owns it now
 
 Aplos acquired Raisely in 2023 and **Keela** in 2024, and in August 2025 the three relaunched as a combined suite under a new brand, **Velora**. All three are still sold separately.

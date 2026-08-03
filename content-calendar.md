@@ -104,10 +104,20 @@ Do not start these while grant/prospect is under 40%.
   QuickBooks sync is two-way, and whether it posts individual transactions or
   only summary journal entries.
 
-  Salvaged from that pass and already published: Givebutter gates QuickBooks
-  Online behind Givebutter Plus while listing it among fifty integrations (now on
-  its platform page), and the official Donorbox and Funraise WordPress plugins
-  are both around a year without an update.
+  **Four of fourteen products are now fully verified** — Givebutter, Aplos,
+  CharityEngine and Virtuous — and their findings are published on their own
+  platform pages rather than held for a matrix. Highlights, all sourced and dated:
+  Aplos has **no QuickBooks integration at all** despite roundups listing one (it is
+  a QuickBooks replacement, and third-party integrations are not in the Lite plan);
+  CharityEngine's QuickBooks sync silently drops any transaction whose GL code does
+  not exactly match a QuickBooks account name; Virtuous does no historical backfill
+  and pauses **all** syncing when a single transaction fails; Givebutter gates
+  QuickBooks Online behind Givebutter Plus while listing it among fifty
+  integrations. Also: the official Donorbox and Funraise WordPress plugins are both
+  around a year without an update.
+
+  Ten products still need the same pass: Bloomerang, DonorDock, Little Green Light,
+  Neon CRM, Donorbox, Donately, Zeffy, Funraise, Eleo, 4aGoodCause.
 - Remaining verticals: libraries and Friends groups, environmental, international
   NGOs, professional associations
 - Head terms: best events and auction software, best nonprofit forms software
