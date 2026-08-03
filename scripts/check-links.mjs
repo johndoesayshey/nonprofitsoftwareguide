@@ -3,6 +3,7 @@
 // schedule via `npm run check-links`, not wired into the build. Exits non-zero
 // if any link is unreachable so it is useful in CI/cron.
 import { loadAffiliates, red, green, yellow } from './_lib.mjs';
+import { lookup } from 'node:dns/promises';
 
 const affiliates = loadAffiliates();
 const TIMEOUT_MS = 15_000;
@@ -23,6 +24,18 @@ async function check(url) {
     });
     return res.status;
   } catch (err) {
+    // Some edges (bonterratech.com, aplos.com) reject an automated client at the
+    // connection layer rather than returning 403, so a throw does not prove the
+    // link is dead. If DNS still resolves, treat it as a bot block and warn;
+    // a genuinely dead domain fails the lookup and still fails the check.
+    if (err.name !== 'AbortError') {
+      try {
+        await lookup(new URL(url).hostname);
+        return `BLOCKED ${err.message}`;
+      } catch {
+        /* DNS failed too — fall through and report the original error */
+      }
+    }
     return `ERR ${err.name === 'AbortError' ? 'timeout' : err.message}`;
   } finally {
     clearTimeout(timer);
@@ -49,7 +62,7 @@ let failed = 0;
 for (const r of results) {
   const ok = r.status === 200;
   const reachable = typeof r.status === 'number' && r.status >= 200 && r.status < 400;
-  const blocked = BLOCKED.has(r.status);
+  const blocked = BLOCKED.has(r.status) || String(r.status).startsWith('BLOCKED');
   if (ok) {
     console.log(green(`  ✓ ${r.slug} (${r.kind}) ${r.status} ${r.url}`));
   } else if (reachable) {

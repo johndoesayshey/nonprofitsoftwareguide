@@ -373,7 +373,7 @@
     "payout": "No program",
     "potential": "none",
     "badge": "—",
-    "potentialNote": "No affiliate program exists. Covered for credibility, and it will never earn. Do not build a page around it expecting revenue."
+    "potentialNote": "No public program. Note for content: Keela was acquired by Aplos in June 2024 and now sits alongside Aplos and Raisely under the Velora brand (launched August 2025). Any Aplos-vs-Keela framing must reflect common ownership — they are not independent competitors."
   },
   "grantsgov": {
     "name": "Grants.gov",
@@ -533,6 +533,148 @@
       "url": "https://eleoonline.com/become-eleo-nonprofit-consultant-community-partner/",
       "checked": "2026-08-03",
       "quote": "$100 Partner Share for every client referred to Eleo (after 90 days of client status). No quotas. No exclusivity requirements."
+    }
+  },
+  "donately": {
+    "name": "Donately",
+    "category": "donation-processing",
+    "status": "pending",
+    "url": "https://www.donately.com",
+    "affiliateUrl": null,
+    "readerOffer": null,
+    "terms": "20% revenue share for agency and consultant referrals, no cap on earnings, with real-time tracking and monthly reports.",
+    "signupUrl": "https://get.donately.com/partnership-request",
+    "appliedOn": null,
+    "approvedOn": null,
+    "payout": "20% revenue share on referred accounts, uncapped",
+    "potential": "medium",
+    "badge": "20%",
+    "potentialNote": "Best commission STRUCTURE found in this batch, but model the absolute number before weighting content toward it: 20% of a 2-4% platform fee is small. An org doing $250k online on the Standard tier pays roughly $10,000/yr in platform fees, so about $2,000/yr to us. Rated medium rather than high for that reason.",
+    "evidence": {
+      "url": "https://www.donately.com/for/agencies",
+      "checked": "2026-08-03",
+      "quote": "20% revenue share for agency and consultant referrals. No cap on earnings."
+    }
+  },
+  "aplos": {
+    "name": "Aplos",
+    "category": "donor-crm",
+    "status": "pending",
+    "url": "https://www.aplos.com",
+    "affiliateUrl": null,
+    "readerOffer": null,
+    "terms": "[FACT-CHECK: the referral terms state at 6.3 \"Intentionally Omitted - Pricing available to approved Affiliates\". Rate is unknowable until approved.] 90-day conversion window; payouts quarterly by check.",
+    "signupUrl": "https://www.aplos.com/referral-program",
+    "appliedOn": null,
+    "approvedOn": null,
+    "payout": "[FACT-CHECK: rate not published]",
+    "potential": "unknown",
+    "badge": null,
+    "potentialNote": "Real publisher-style link program with a documented terms page, but the commission rate is deliberately withheld until approval. Payouts are quarterly, by paper check, with a $25 reissue fee on a returned check and a 5-business-day window to dispute. Earnings stop after a year with no click activity. Worth applying to find out the rate; do not plan around it.",
+    "evidence": {
+      "url": "https://www.aplos.com/terms/referral-program",
+      "checked": "2026-08-03",
+      "quote": "Intentionally Omitted - Pricing available to approved Affiliates."
+    }
+  },
+  "funraise": {
+    "name": "Funraise",
+    "category": "donation-processing",
+    "status": "none",
+    "url": "https://www.funraise.org",
+    "affiliateUrl": null,
+    "readerOffer": null,
+    "terms": "Not a commission program. A $250 gift card 60 days after a referral becomes a paying customer; free-tier referrals do not qualify. Separate partner program with no disclosed terms.",
+    "signupUrl": "https://www.funraise.org/partners",
+    "appliedOn": null,
+    "approvedOn": null,
+    "payout": "$250 gift card per referred paying customer",
+    "potential": "none",
+    "badge": null,
+    "potentialNote": "Gift cards, not revenue share, and free-tier signups are excluded. No recurring value. The partner track (partners@funraise.org) publishes no commission at all. Treat as Tier B at best. Note their live domain is funraise.ORG — funraise.io fails its TLS handshake.",
+    "evidence": {
+      "url": "https://www.funraise.org/refer-a-friend",
+      "checked": "2026-08-03",
+      "quote": "Gift cards will be rewarded 60 days after your referral becomes a customer and makes their first payment."
+    }
+  },
+  "charityengine": {
+    "name": "CharityEngine",
+    "category": "donor-crm",
+    "status": "none",
+    "url": "https://www.charityengine.net",
+    "affiliateUrl": null,
+    "readerOffer": null,
+    "terms": "No commission of any kind. The partner program offers co-marketing and inbound referrals only.",
+    "signupUrl": null,
+    "appliedOn": null,
+    "approvedOn": null,
+    "payout": null,
+    "potential": "none",
+    "badge": null,
+    "potentialNote": "Checked 2026-08-03. Unusual even among no-program vendors: the partner page offers no revenue share even in principle, only co-branded marketing and a free sandbox.",
+    "evidence": {
+      "url": "https://charityengine.net/partner-program/",
+      "checked": "2026-08-03",
+      "quote": "Service Partner / Integration Partner program with no commission or revenue share stated."
+    }
+  },
+  "blackbaud": {
+    "name": "Blackbaud Raiser's Edge NXT",
+    "category": "donor-crm",
+    "status": "none",
+    "url": "https://www.blackbaud.com/products/blackbaud-raisers-edge-nxt",
+    "affiliateUrl": null,
+    "readerOffer": null,
+    "terms": "No public affiliate program. A channel/reseller Partner Network and a separate accountant referral program exist; neither is open to a publisher.",
+    "signupUrl": null,
+    "appliedOn": null,
+    "approvedOn": null,
+    "payout": null,
+    "potential": "none",
+    "badge": null,
+    "potentialNote": "Checked 2026-08-03. Reseller and accountant programs only."
+  },
+  "virtuous": {
+    "name": "Virtuous",
+    "category": "donor-crm",
+    "status": "none",
+    "url": "https://www.virtuous.org",
+    "affiliateUrl": null,
+    "readerOffer": null,
+    "terms": "No public affiliate program. The partner program is built for consultants and implementation agencies, with no published commission.",
+    "signupUrl": null,
+    "appliedOn": null,
+    "approvedOn": null,
+    "payout": null,
+    "potential": "none",
+    "badge": null,
+    "potentialNote": "Checked 2026-08-03. Tier B conversation at best, not an application.",
+    "evidence": {
+      "url": "https://virtuous.org/partner-program/",
+      "checked": "2026-08-03",
+      "quote": "Consultant and implementation-agency partner program; no published commission or revenue-share terms."
+    }
+  },
+  "bonterra": {
+    "name": "Bonterra",
+    "category": "donor-crm",
+    "status": "none",
+    "url": "https://www.bonterratech.com",
+    "affiliateUrl": null,
+    "readerOffer": null,
+    "terms": "No public affiliate or referral program. The partnerships page is an implementation/consulting network with no published commission.",
+    "signupUrl": null,
+    "appliedOn": null,
+    "approvedOn": null,
+    "payout": null,
+    "potential": "none",
+    "badge": null,
+    "potentialNote": "Checked 2026-08-03. Holding brand rather than a single product — see the platform page for which former brands still exist.",
+    "evidence": {
+      "url": "https://www.bonterratech.com/partnerships",
+      "checked": "2026-08-03",
+      "quote": "Implementation and consulting partner network; no published commission terms."
     }
   }
 }
