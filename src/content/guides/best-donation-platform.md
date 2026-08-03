@@ -1,0 +1,92 @@
+---
+title: "The best nonprofit donation platform in 2026"
+slug: nonprofit-donation-platform
+category: donation-processing
+targetQuery: "best nonprofit donation platform"
+lastVerified: 2026-08-03
+answer: "Donation platforms are priced four different ways, and the cheapest one flips as you grow. Under about $40,000 online, free platforms win outright. Past it, a flat subscription with no percentage beats a percentage fee — and the gap widens every year you succeed."
+picks:
+  - platformSlug: 4agoodcause
+    award: "Best overall past $40k online"
+    forWhom: "Shops where online giving is growing and the fee is becoming a line item"
+    note: "$99/mo Grassroots ($1,188/yr), $249/mo Growth ($2,988/yr), $429/mo Scale ($5,148/yr), with no percentage taken from donations. This is the structural answer to a percentage fee: the cost stops scaling with your success. Above roughly $40,000 a year online the entry tier beats a ~2.95% fee, and the advantage compounds. Built around monthly giving, with recurring pages, donor records and a campaign builder in one tool. First month free."
+  - platformSlug: donorbox
+    award: "Best for recurring giving"
+    forWhom: "Shops where monthly donors are the growth engine"
+    note: "Free to start at roughly 2.95%, no subscription; Pro at about $150/mo drops the rate to roughly 1.75% and pays for itself past around $150k. The recurring-gift management is the strongest in its price class — donor portals, automatic retries on failed cards, upgrade prompts — and that machinery produces revenue. Card failure silently kills monthly donors at platforms that do not chase them. Attribution is link-only and never retroactive."
+  - platformSlug: donately
+    award: "Best for large ACH gifts"
+    forWhom: "Shops receiving major gifts by bank transfer"
+    note: "$0 + 4%, or $99/mo + 2%, or $5,000 prepaid for 0% up to $1M raised. The reason it is here is one number: ACH at 0.8% capped at $5. A $10,000 bank transfer costs five dollars to process. Platforms charging an uncapped 1% cost $100.30 on the same gift. If you take five-figure gifts by transfer, that line alone can exceed the subscription difference."
+  - platformSlug: givebutter
+    award: "Best for events and peer-to-peer"
+    forWhom: "Shops whose fundraising centres on campaigns and events"
+    note: "0% platform fee with donor tips on, roughly 3% with tips off, processing fees either way. Ticketing, auctions, campaign pages and peer-to-peer in one modern package, with the best donor-facing experience among the free options. The catch is that the 0% headline holds only while donors keep leaving tips on."
+  - platformSlug: zeffy
+    award: "Best free option"
+    forWhom: "Shops under about $40k online, or anyone who wants to keep every dollar"
+    note: "Free at any volume including processing fees — a $100 gift deposits $100. Covers donations, ticketing, raffles and memberships, running on Stripe underneath. Funded by an optional tip donors are asked for at checkout, so your net per gift depends on donor behaviour rather than a fixed rate. Below roughly $40,000 online, nothing beats it on cost."
+decidingFactors:
+  - factor: "Four pricing models, and the winner changes with volume."
+    detail: "Percentage-only costs the same rate forever with no floor — cheap when small, expensive when big. Flat subscription costs the same whether you raise $40,000 or $400,000, so it is worse at low volume and better at high. Free-with-donor-tips shifts the cost to your donors and makes your effective rate unpredictable. Subscription-plus-percentage charges you both ways. Multiply last year's online total by each and compare."
+  - factor: "Processing fees are separate, and almost everyone forgets."
+    detail: "Card processing of roughly 2.2-2.9% plus a fixed amount per transaction applies on top of the platform fee on nearly every option. Compare total effective rate, not headline platform rate. Zeffy is the exception in absorbing processing too."
+  - factor: "Recurring donors do not transfer between platforms."
+    detail: "Cards on file live with the payment processor, so switching means every monthly donor re-enrolls. Expect attrition. Ask in writing whether token migration is possible before you assume a clean handoff, run a real re-enrollment campaign with a deadline, and do it in a quiet month — never in December."
+  - factor: "A giving platform is not a donor database."
+    detail: "These hold transactions and contact details. They do not hold soft credits on donor-advised-fund gifts, household records, or the retention history a second ask is built on. If your gap is donor history rather than checkout, a CRM behind your existing platform is the cheaper fix."
+faq:
+  - q: "What is the cheapest donation platform for nonprofits?"
+    a: "Zeffy, which charges nothing at any volume including processing fees, funded by an optional tip donors are asked for at checkout. Givebutter is also free with tips on. Both make your effective cost depend on donor behaviour rather than a fixed rate."
+  - q: "Is Zeffy really free?"
+    a: "Yes, to the nonprofit — a $100 gift deposits $100. The model is that donors are asked to add an optional tip at checkout, which funds the company. When donors decline, your net per gift is unchanged but Zeffy earns nothing on it. The trade-off is the ask appearing on your giving page, not a hidden fee."
+  - q: "At what point should we switch from a percentage fee to a subscription?"
+    a: "Around $40,000 a year in online giving, where a $1,188 flat subscription crosses a ~2.95% percentage fee. Above that the subscription wins and the gap widens every year you grow. Run it with your own number rather than the rule of thumb."
+  - q: "What do nonprofits spend on donation processing?"
+    a: "Our 2026 survey put mean annual donation processing spend at $1,024 for shops under $250K raised, $3,493 at $250K-$1M, $9,906 at $1M-$5M, and $30,824 at $5M+. Those totals include processing fees, which is why the number climbs so steeply with revenue."
+draft: false
+---
+
+There is no best donation platform, only a best pricing structure for your volume — and it changes as you grow. This is the one software category where the right answer this year can be the wrong answer in two.
+
+## Run your own numbers
+
+Take last year's online giving total and compare all four structures.
+
+**Percentage-only** — Donorbox at roughly 2.95%, Givebutter at about 3% with tips off. At $25,000 online that's around $740 a year. At $250,000 it's roughly $7,400. Same rate, no floor, no ceiling.
+
+**Flat subscription** — [4aGoodCause](/go/4agoodcause) at $1,188 / $2,988 / $5,148 a year, no percentage at all. Costs the same whether you raise $40,000 or $400,000. Worse than a percentage at low volume, better past roughly $40,000, and the advantage widens every year.
+
+**Free with donor tips** — [Zeffy](/go/zeffy) at any volume, [Givebutter](/go/givebutter) with tips on. Costs you nothing directly and shifts it to donors as an optional checkout tip. Your effective rate depends on how many donors leave it on, which you cannot forecast.
+
+**Subscription plus percentage** — Classy and several enterprise platforms. The only structure charging you both ways.
+
+Card processing of roughly 2.2–2.9% plus a per-transaction amount sits on top of all of these. Zeffy is the exception.
+
+## The number almost nobody compares
+
+ACH. If you receive major gifts by bank transfer, the ACH rate can matter more than every other line combined.
+
+| Platform | Cost on a $10,000 ACH gift |
+|---|---|
+| [Donately](/go/donately) — 0.8%, capped at $5 | **$5.00** |
+| An uncapped 1% ACH rate | $100.30 |
+| A typical 2.9% card rate | $290.30 |
+
+Two five-figure transfers a year is a $190 difference on that line alone. Ask every platform for its ACH rate and, specifically, whether it is capped.
+
+## The migration cost nobody quotes
+
+This applies to any platform switch and it is the reason not to change casually.
+
+**Recurring donors do not transfer.** Cards on file live with the payment processor, so monthly donors have to re-enroll. Some won't. Ask your current provider in writing whether they will migrate tokens; assume the answer is no.
+
+If you're switching anyway: run a real re-enrollment campaign with a deadline, call anyone giving more than $50 a month personally, and do it in a quiet month. Never during a campaign, never in December.
+
+## What these platforms are not
+
+They hold transactions and contact details. They do not hold soft credits on donor-advised-fund gifts, household records, or the giving history a second ask is built on.
+
+A large share of platform searches are really from shops that have outgrown having no donor database. If that's the actual gap, changing checkout won't fix it — you need a [donor CRM](/best/nonprofit-crm/) behind whatever platform you keep, and keeping a free platform for the forms is often exactly right.
+
+Already on one of these? [Donorbox](/alternatives/donorbox/), [Givebutter](/alternatives/givebutter/) and [Classy](/alternatives/classy/) each have a switching guide covering what the move actually costs.
