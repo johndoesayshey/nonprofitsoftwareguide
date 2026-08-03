@@ -2,7 +2,8 @@
 
 Rewritten 2026-08-03. The original planned 30 posts; the site now carries 75
 pages with a unique `targetQuery` across five collections, so a list of unwritten
-post ideas had stopped describing the work. This is a status page plus the queue.
+post ideas had stopped describing the work. This is a status page plus the queue,
+ordered by what earns rather than by category.
 
 ## Where the content actually is
 
@@ -14,65 +15,74 @@ post ideas had stopped describing the work. This is a status page plus the queue
 | `alternatives` | 13 | `/alternatives/` — switching guides. Highest commercial intent. |
 | `stacks` | 4 | The primary content unit. One per shop size. |
 
-Plus `/pricing/` and `/benchmarks/`, which exist to be cited rather than to
-convert. All 75 pages are published and every `targetQuery` is unique, enforced
+Plus `/compare/` (which absorbed the old `/pricing/` page) and `/benchmarks/`,
+both built to be cited rather than to convert. All 75 pages are published and every `targetQuery` is unique, enforced
 at build by `scripts/check-queries.mjs`.
 
 ---
 
-## Category weighting — measured, and short of the floor
+## What to build next: whatever earns
 
-CLAUDE.md requires **at least 60% grant research and prospect research**, and warns
-against drifting back toward CRM content because that category has more competitors
-and worse economics.
+**Rule changed 2026-08-03.** This file previously tracked a 60% grant + prospect
+research quota from CLAUDE.md and reported the site as failing it. That quota is
+superseded. Verifying every affiliate program disproved the assumption it rested on.
 
-Run `npm run check-weighting` for the live number. As of 2026-08-03:
+### What each program actually pays, per referred customer
 
-| Category | Pages | Share |
-|---|---|---|
-| Donor CRM | 32 | 39% |
-| **Grant research** | 22 | **27%** |
-| Donation processing | 13 | 16% |
-| **Prospect research** | 12 | **14%** |
-| Events & auctions | 2 | 2% |
-| Forms & other operations | 2 | 2% |
+| Program | Terms | Yr 1 | Yr 3 | Category |
+|---|---|---|---|---|
+| **DonorDock** | $500 flat | $500 | $500 | Donor CRM |
+| **4aGoodCause** (Growth) | 25% recurring | $747 | $2,241 | Donation processing |
+| **Donorbox** (@ $100k online) | 15% of fees, 3 yrs | $442 | $1,327 | Donation processing |
+| **monday.com** | up to 100% of yr 1 | varies | — | Forms & ops |
+| **Jotform** | 30% of yr 1 | ~$100 | ~$100 | Forms & ops |
+| Eleo | $100 flat, after 90 days | $100 | $100 | Donor CRM |
+| Instrumentl | $50 flat | $50 | $50 | Grant research |
+| Bloomerang | a donation to a 501(c)(3), which we are not | $0 | $0 | Donor CRM |
+| Everything in prospect research | negotiated consulting deals only | $0 | $0 | — |
 
-**Grant + prospect: 41%, against a 60% floor.**
+The revenue is in **donor CRM, donation processing and forms/ops** — the categories
+the original spec told us to de-prioritize. Grant research, the designated priority,
+pays $50. Prospect research pays nothing at all.
 
-### A correction to an earlier version of this file
+Grant and prospect research stay on the site. They earn traffic, they carry the
+operator's actual expertise, and a fundraising guide that is thin on grants is not
+credible. They just do not get a quota, and they do not get the best real estate.
 
-An earlier revision put this at 24% and called it a serious drift. That figure was
-wrong. It counted only platforms, alternatives and guides, because **posts carried
-no `category` field at all** — so the entire blog, which is where most grant and
-prospect content lives, was invisible to the tally. Writing ten grant posts moved
-the number by zero, which is what exposed the bug.
+### The measure that replaced it
 
-Posts now declare a category, and `scripts/check-weighting.mjs` measures all four
-collections. A requirement nobody can measure is a requirement that drifts, and this
-one drifted precisely because nothing measured it.
+```
+npm run check-monetization
+```
 
-### How the gap opened, and whether 60% is reachable
+Reports placement against earning potential for every program, and flags both
+mismatches: heavy placement on something that cannot pay, and thin placement on
+something that can. As of 2026-08-03 it reports **78 pages routing to a program
+that can pay and 78 carrying only non-earning links** — a 50/50 split, and the
+number to move.
 
-The alternatives cluster and the vertical pages are both inherently CRM-shaped.
-People search "[CRM] alternatives" and "best donor management software for
-churches"; nobody searches "Instrumentl alternatives for churches." Each page was
-the right page to build, and the aggregate leaned CRM anyway.
+Some non-earning placement is correct and should stay. A donation-processing list
+without Zeffy and Givebutter is obviously compromised; Candid's Foundation
+Directory being free at libraries is one of the most useful facts on the site.
+Honesty is the product. The target is not zero — it is not spending the best
+positions on products that return nothing when an equally honest alternative pays.
 
-Being straight about the arithmetic: at 81 categorized pages, clearing 60% needs
-about **40 more** grant/prospect pages if nothing else is published. Waves A and B
-below are 18. That gets to roughly 53%, not 60%.
+### Priorities in that light
 
-So either the remaining waves grow, or some CRM-side pages get consolidated, or the
-floor is treated as a direction rather than a gate. The first is the honest answer
-while the categories still have unwritten queries worth owning — grant research is
-the only category where high ACV and a working public affiliate program overlap.
+1. **Anything routing to DonorDock, 4aGoodCause, Donorbox, monday.com or Jotform.**
+   Comparison and "best of" pages in those categories convert; head-to-heads have
+   the highest intent of anything on the site.
+2. **Grant and prospect research** for traffic and authority — Waves A and B below,
+   which are already written or queued. Worth finishing, not worth expanding.
+3. **Get a reader offer for 4aGoodCause.** It is the only recurring program and the
+   only high-potential one with no offer attached. DonorDock's 10% discount is
+   doing measurable work; this is the cheapest available lift.
 
-**Rule for now: grant or prospect research only, until `check-weighting` clears
-50%.** Nothing new in donor CRM before then, however good the query looks.
+## Wave A — grant research (mostly written)
 
-## Wave A — grant research (write next)
-
-Each parents to a stack hub. None needs new product research.
+Six of the ten below are published. Finish the rest at a comfortable pace: these
+earn traffic and authority rather than commission, so they are no longer the
+front of the queue. Each parents to a stack hub.
 
 | # | Working title | `targetQuery` | Stack | Affiliates |
 |---|---|---|---|---|
@@ -87,11 +97,12 @@ Each parents to a stack hub. None needs new product research.
 | A9 | Free grant research: how far Grants.gov and the library get you | `free grant research tools nonprofit` | under-250k | candid |
 | A10 | Corporate vs foundation grants: where research time pays | `corporate vs foundation grants nonprofit` | 250k-1m | instrumentl |
 
-## Wave B — prospect research (after A)
+## Wave B — prospect research (background)
 
-This category earns traffic and topical authority rather than commission — every
-vendor in it is a negotiated deal. Cover it thoroughly; expect the revenue from
-Wave A.
+Every vendor here is a negotiated consulting deal, so this category earns exactly
+zero in commission. It is still worth covering — it is where the operator's
+expertise is deepest and it draws serious readers — but it is background work, not
+a priority.
 
 | # | Working title | `targetQuery` | Stack | Affiliates |
 |---|---|---|---|---|
@@ -104,9 +115,10 @@ Wave A.
 | B7 | How often should you re-screen your donor file? | `how often to re-screen donor database` | 5m-plus | kindsight |
 | B8 | Turning a wealth screen into a real major-gift portfolio | `wealth screen to major gift portfolio` | 5m-plus | kindsight |
 
-## Wave C — held until the ratio clears
+## Wave C — unblocked
 
-Do not start these while grant/prospect is under 40%.
+The "hold until the category ratio clears" gate is gone with the quota. These are
+now ordered on the same basis as everything else: what they route to.
 
 - **Integration reference page — BLOCKED, not just queued.** A verification pass
   on 2026-08-03 came back almost entirely unconfirmed: Intuit's QuickBooks App
@@ -145,8 +157,10 @@ Do not start these while grant/prospect is under 40%.
 
 - **One page, one query.** Unique `targetQuery` across all five collections,
   enforced at build.
-- **Every page declares a `category`.** Not for routing — so the weighting above
-  stays measurable. Run `npm run check-weighting` before planning a wave.
+- **Check what a page will route to before writing it.** Run
+  `npm run check-monetization` after a build. A page that only links products
+  which cannot pay is fine when that is the honest answer, and a wasted slot when
+  an equally honest alternative earns.
 - **Answer first.** 40–60 words, no preamble.
 - **Unique data on every page.** Original cost math, a structured tradeoff, or a
   recommendation naming a real constraint. A page that restates the vendor blogs

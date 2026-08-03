@@ -111,9 +111,14 @@ resource page can link to as a reference.
 | Forms & ops | Jotform, Airtable | Low value each, but converts fast and approves instantly |
 | Events & auctions | OneCause, Givebutter | Low |
 
-Weight the content calendar toward grant and prospect research. That is where the money is and
-where the operator's authority is strongest — do not let the calendar drift back toward CRM
-posts just because that category has more competitors writing about it.
+*(Superseded 2026-08-03. The original rule was: "Weight the content calendar toward grant and
+prospect research. That is where the money is… do not let the calendar drift back toward CRM
+posts just because that category has more competitors writing about it." It rested on an
+assumption about affiliate economics that verification disproved — see the amendment under
+"Affiliate programs to seed". The replacement: **build and promote whatever earns the most,
+measured rather than assumed.** Run `npm run check-monetization`. Grant and prospect research
+are still worth covering for traffic, topical authority and the operator's expertise. They just
+are not the revenue thesis any more, so they no longer carry a quota.)*
 
 ## Stack
 
@@ -269,7 +274,8 @@ focus, respects `prefers-reduced-motion`.
    affiliate slugs. Every page in the plan gets built to full quality. The calendar orders
    *writing effort* only — start with specific, concrete questions where the operator's
    first-hand experience is the differentiator, and work outward to broader category pages as
-   the cluster fills in. At least 60% grant research and prospect research.
+   the cluster fills in. *(The "at least 60% grant research and prospect research" quota that
+   was here is superseded — see 2026-08-03 above. Weight by what earns.)*
 9. `link-targets.md` — 25 backlink targets with pitch angles.
 10. Sitemap, RSS, meta, JSON-LD (`Product`, `FAQPage`, `BreadcrumbList`). GA4 + Search Console
     from env vars, values left empty.
@@ -325,11 +331,32 @@ Cover Tier C products honestly anyway. A comparison that omits the free options 
 compromised, and readers notice. Recommending Zeffy where it genuinely fits is what makes the
 Tier A recommendations credible.
 
-**Consequence for the content plan:** wealth screening and prospect research earn traffic and
-topical authority, not commissions — every vendor in that category routes through negotiated
-deals. Grant research is where high ACV and a real public program overlap. Weight accordingly:
-cover prospect research thoroughly for authority, but expect the revenue to come from grant
-research, DonorDock, 4aGoodCause, and Donorbox.
+**Consequence for the content plan** *(rewritten 2026-08-03, after every program was opened and
+verified rather than inferred from published summaries):*
+
+The original claim that "grant research is where high ACV and a real public program overlap" is
+false. **Instrumentl pays $50 flat** on a $2,148/yr product — 2.3%. Grant research earns traffic,
+authority and the operator's credibility; it does not earn money.
+
+What actually pays, per referred customer, computed from our own published prices:
+
+| Program | Terms | Yr 1 | Yr 3 |
+|---|---|---|---|
+| DonorDock | $500 flat | $500 | $500 |
+| 4aGoodCause (Growth) | 25% recurring | $747 | $2,241 |
+| Donorbox (@ $100k online) | 15% of fees, 3 yrs | $442 | $1,327 |
+| Instrumentl | $50 flat | $50 | $50 |
+| Bloomerang | a donation to a 501(c)(3), which we are not | $0 | $0 |
+
+So the revenue sits in **donor CRM, donation processing and forms/ops** — the categories this
+spec originally told us to de-prioritize. Prospect research earns nothing at all: every vendor is
+a negotiated consulting deal.
+
+**The rule now: promote what earns, and measure it.** `npm run check-monetization` reports
+placement against earning potential per program and flags both mismatches — heavy placement on a
+program that cannot pay, and thin placement on one that can. Cover the rest honestly because a
+guide that omits the free options is obviously compromised, but stop spending the best real
+estate on products that return nothing.
 
 ## Out of scope
 

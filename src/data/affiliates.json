@@ -153,7 +153,7 @@
   "bloomerang": {
     "name": "Bloomerang",
     "category": "donor-crm",
-    "status": "pending",
+    "status": "none",
     "url": "https://bloomerang.co",
     "affiliateUrl": null,
     "readerOffer": null,
@@ -161,10 +161,10 @@
     "signupUrl": "https://bloomerang.partnerstack.com/?group=agencies",
     "appliedOn": null,
     "approvedOn": null,
-    "payout": "$250 min or 10% of ARR, paid as a donation to your organization",
-    "potential": "unknown",
-    "badge": "250/10%",
-    "potentialNote": "Confirmed live 2026-08-03. Self-serve join on PartnerStack, 90-day cookie, one-time commission paid the month after the referred client signs. The dollar amount is not on the public page — it sits behind the referral agreement PDF and the signup.",
+    "payout": "Nothing in cash. The published reward is a donation to a 501(c)(3), which we are not.",
+    "potential": "none",
+    "badge": null,
+    "potentialNote": "DOWNGRADED 2026-08-03 to none. The rate Bloomerang publishes is on its nonprofit-to-nonprofit track and pays a DONATION to your organization, not cash to a publisher — unusable without a 501(c)(3) entity, which this site does not have. Their separate PartnerStack agency track exists and publishes no rate before login, so it may pay cash; until that is confirmed in writing, assume zero. Bloomerang stays covered and stays in the CRM shortlist because it is a genuinely good product readers expect to see — it just stops outranking products that can actually pay.",
     "evidence": {
       "url": "https://bloomerang.com/company/referral",
       "checked": "2026-08-03",
