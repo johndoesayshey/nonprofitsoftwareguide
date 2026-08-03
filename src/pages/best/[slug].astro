@@ -68,7 +68,7 @@ const faqLd = g.faq?.length
     <Breadcrumbs crumbs={[
       { label: 'Home', href: '/' },
       ...(cat?.path ? [{ label: cat.label, href: cat.path }] : []),
-      { label: g.audience ? `For ${g.audience}` : 'Best of' },
+      { label: g.audience ? `For ${g.audience}` : "Editor's picks" },
     ]} />
 
     {isDraft && <DraftBanner />}

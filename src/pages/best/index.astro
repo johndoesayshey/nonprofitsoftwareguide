@@ -13,15 +13,15 @@ const verticals = guides.filter((g) => g.data.audience)
   .sort((a, b) => a.data.audience!.localeCompare(b.data.audience!));
 ---
 <BaseLayout
-  title="Best-of guides by category and organization type"
+  title="Editor's picks: best nonprofit fundraising software by category"
   description="Independent picks for nonprofit fundraising software, by category and by the kind of organization you run — with real pricing and what actually decides the choice."
   section="best">
   <div class="wrap">
-    <Breadcrumbs crumbs={[{ label: 'Home', href: '/' }, { label: 'Best of' }]} />
+    <Breadcrumbs crumbs={[{ label: 'Home', href: '/' }, { label: "Best Of — Editor's Picks" }]} />
 
     <section class="prose" style="max-width: none; margin-top: 1.2rem;">
-      <p class="kicker">Best of</p>
-      <h1>Guides by category and organization type</h1>
+      <p class="kicker">Best Of — Editor's Picks</p>
+      <h1>Editor's picks, by category and organization type</h1>
       <p class="lede" style="max-width: 46ch;">
         Shortlists with real prices, an award for what each tool is actually best
         at, and the factors that decide the choice at your kind of organization.
