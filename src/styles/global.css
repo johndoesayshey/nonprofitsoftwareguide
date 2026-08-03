@@ -99,12 +99,27 @@ a { color: var(--color-green); }
 .nav-menu > ul a:hover { background: var(--color-paper-2); color: var(--color-green-deep); }
 .nav-menu > ul a[aria-current="page"] { color: var(--color-green-deep); background: var(--color-paper-2);
   box-shadow: none; }
+/* "Best of" is the one entry in this menu that is a destination rather than a
+   filter, so it gets the site's kicker treatment — mono, uppercase, teal — plus
+   the award seal used on the homepage pick. Reads as featured, not decorated. */
+.nav-menu-top { border-bottom: 1px solid var(--color-rule); margin-bottom: .3rem !important;
+  padding-bottom: .3rem; }
+.nav-menu-top a { display: flex !important; align-items: center; gap: .4rem;
+  font-family: var(--font-mono); font-size: .7rem !important; font-weight: 700;
+  letter-spacing: .1em; text-transform: uppercase;
+  color: var(--color-green-deep) !important; background: var(--color-paper-2); }
+.nav-menu-top a:hover { background: var(--color-green-deep); color: #fff !important; }
+.nav-seal { width: 15px; height: 15px; flex: none; }
+
 .nav-menu-all { border-top: 1px solid var(--color-rule); margin-top: .3rem !important; padding-top: .3rem; }
 .nav-menu-all a { color: var(--color-muted) !important; font-weight: 600; }
 @media (max-width: 640px) {
   /* The menu drops in place rather than floating, so it stacks under the label
      instead of sitting beside it in the flex row. */
-  .nav-menu { flex-direction: column; align-items: flex-start; }
+  /* Also take the whole row. The nav is a wrapping flex row, so without this an
+     open menu stretches its row and strands the sibling links (Stacks) beside
+     the tall expanded panel instead of above it. */
+  .nav-menu { flex-direction: column; align-items: flex-start; width: 100%; }
   .nav-menu > ul { position: static; box-shadow: none; border: 0; padding: .2rem 0 .2rem .6rem;
     min-width: 0; border-left: 2px solid var(--color-rule); border-radius: 0; margin: .3rem 0; }
 }
