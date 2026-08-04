@@ -15,8 +15,11 @@ multiply it by what the product actually costs. See `npm run check-monetization`
 
 ## Tier 1 — do these today
 
-### 1. DonorDock — $500 per customer
+### 1. DonorDock — $500 per customer ✅ SUBMITTED 2026-08-03
 **https://www.donordock.com/partners** — form embedded on the page, seven steps
+
+*Awaiting response. When approved: paste the tracking link into `affiliateUrl`,
+set `status` to `"active"`, fill in `approvedOn`.*
 
 Largest flat payout on the list, in our highest-traffic category, on the product
 we recommend most. Free to join, no contract, paid monthly, no minimums. Readers

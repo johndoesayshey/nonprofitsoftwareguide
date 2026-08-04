@@ -17,7 +17,7 @@ or pitching data to editors — data is citable without an author.
 ### Affiliate applications — 45 minutes, do these first
 Approval takes days to weeks, so start the clock before anything else.
 
-- [ ] **DonorDock** — https://www.donordock.com/partners *(~$500/referral)*
+- [x] **DonorDock** — https://www.donordock.com/partners *(~$500/referral)* — **submitted 2026-08-03**
 - [ ] **4aGoodCause** — https://4agoodcause.firstpromoter.com/ *(25% recurring)*
       → while you are in, **ask for a reader discount**
 - [ ] **Donorbox** — email `partner@donorbox.org` *(their form is broken; say so)*
