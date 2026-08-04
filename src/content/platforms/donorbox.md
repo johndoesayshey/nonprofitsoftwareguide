@@ -15,6 +15,7 @@ pricingTiers:
 lastVerified: 2026-07-29
 bestFor: "Shops that want serious recurring-gift tooling without building anything"
 targetQuery: "donorbox review"
+alsoIn: [donor-crm]
 affiliateSlug: donorbox
 freeTier: true
 draft: false

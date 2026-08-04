@@ -10,8 +10,8 @@ reasonsToLeave:
     detail: "A percentage of everything raised means a good year costs you more. At roughly 2.95%, doubling online giving doubles the platform fee, for a product that isn't doing twice the work."
   - reason: "Pro is a real jump."
     detail: "About $150/mo plus roughly 1.75% only makes sense past around $150k in online giving. Between roughly $40k and $150k there's a band where neither Donorbox tier is the cheapest option available."
-  - reason: "It isn't a donor database."
-    detail: "Donation records aren't relationship history. No soft credits, no household records, no retention reporting — a major-gifts program needs a CRM behind it."
+  - reason: "You have outgrown it as a donor record."
+    detail: "It holds donors and gift history well enough to run on for a while, which is why it gets recommended as a first database. What it never adds is soft credits, household records or contact history — so the ceiling arrives with your first major-gift program."
   - reason: "Free competitors exist and are legitimate."
     detail: "Zeffy and Givebutter cost nothing on the tip model. If your online volume is small, a percentage fee is money spent on a problem you don't have yet."
 picks:

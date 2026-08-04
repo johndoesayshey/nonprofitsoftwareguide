@@ -4,7 +4,7 @@ slug: nonprofit-crm
 category: donor-crm
 targetQuery: "best nonprofit crm"
 lastVerified: 2026-08-03
-answer: "There is no single best nonprofit CRM — the right one depends on who updates your database and how fast your list grows. DonorDock suits teams that need prompting, Eleo is the cheapest real CRM at $39/mo, Bloomerang wins on ease of use, and Little Green Light gives the most capability per dollar."
+answer: "There is no single best nonprofit CRM — the right one depends on who updates your database and how fast your list grows. DonorDock suits teams that need prompting, Eleo is the cheapest real CRM at $39/mo, and Little Green Light gives the most capability per dollar. If you are still on a spreadsheet, your donation platform may already be enough."
 picks:
   - platformSlug: donordock
     award: "Best overall"
@@ -22,6 +22,10 @@ picks:
     award: "Best for memberships"
     forWhom: "Organizations running renewals or ticketed events"
     note: "From $99/mo, priced by organizational revenue and reported to about $409/mo at the top of the published band, with unlimited users and records. Memberships add roughly 10% of the CRM fee, volunteers another 10%, events about 20%. If you're maintaining a membership spreadsheet next to your donor database, this is the system that ends that."
+  - platformSlug: donorbox
+    award: "Best before you buy a CRM"
+    forWhom: "A shop keeping donors in a spreadsheet right now"
+    note: "Free to start at roughly 2.95% per donation, no subscription. This is the answer nobody in a vendor roundup gives, and it comes up constantly in real conversations: if donations already arrive through Donorbox, donor records and gift history accumulate there on their own \u2014 no migration, no second subscription, nothing to configure. For an organization running a spreadsheet, that is a real step up on day one and it costs nothing to start. The ceiling is specific rather than vague: no soft credits on donor-advised-fund or joint gifts, no household records, no contact history, thin retention reporting. You hit it at the first major-gift conversation. Until then it is a legitimate place to keep donor records."
   - platformSlug: littlegreenlight
     award: "Best for a single power user"
     forWhom: "One detail-oriented person who owns the database"
@@ -49,7 +53,22 @@ draft: false
 
 Every roundup that answers this question with a single product is selling something. The category doesn't work that way: the systems here are separated less by features than by who is going to sit in front of them, and that's a fact about your organization, not about the software.
 
-## Start with the question nobody asks
+## First: do you need one yet?
+
+Our 2026 survey found **36% of nonprofits raising under $250K have no donor database at all.** That is not negligence — for a lot of them it is the right call, and the reason is that their donation platform is already doing the job.
+
+If donations arrive through [Donorbox](/go/donorbox), Zeffy or a similar tool, donor records and gift history are accumulating there with no effort from anyone. That is genuinely better than a spreadsheet: it is one place, it updates itself, and it costs nothing extra.
+
+The moment to buy a real CRM is not a donor count. It is one of these:
+
+- Someone asks **who lapsed last year** and you cannot answer
+- You are preparing a **major-gift ask** and need the history of what was said
+- A **donor-advised fund or joint gift** arrives and you need to credit the people behind it, not the fund
+- **Two people** need to update donor records without overwriting each other
+
+Until one of those is true, the money is better spent elsewhere. Once one is true, the rest of this page applies.
+
+## Then: the question nobody asks
 
 In the last month, did anyone besides your primary database person log in and do something useful — look up a donor before a meeting, enter a gift, pull a list?
 
