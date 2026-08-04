@@ -35,6 +35,7 @@ const EARNS = new Set(['high', 'medium']);
 // see DECISIONS.md. null means genuinely unknown, not zero.
 const LTV3 = {
   donordock: 500,      // $500 flat, one-time
+  zeffy: 500,          // 30% of tips for 12 months; vendor-stated average per signup
   '4agoodcause': 891,  // 25% recurring, Grassroots $1,188/yr x 3
   donorbox: 1327,      // 15% of a 2.95% fee on $100k online, 3 years
   donately: 600,       // 20% of a 2-4% fee, modest online volume

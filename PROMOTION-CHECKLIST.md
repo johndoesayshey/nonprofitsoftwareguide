@@ -22,7 +22,8 @@ Approval takes days to weeks, so start the clock before anything else.
       → still to do: **ask for a reader discount**
 - [x] **Donorbox** — https://donorbox.org/affiliate-partner-program → "Become a Partner" — **submitted 2026-08-03**
 - [ ] **PartnerStack account** — https://dash.partnerstack.com/signup
-      → then apply inside it to **Ticket Tailor**, **Xero**, **Brevo**
+      → **Zeffy first** (~$500/signup, already on 25 of our pages), then
+        **Ticket Tailor**, **Xero**, **Brevo**
 - [ ] **Jotform** — https://www.jotform.com/partnership/affiliate/application/
 
 Full detail and the rest of the list: `AFFILIATE-APPLICATIONS.md`.

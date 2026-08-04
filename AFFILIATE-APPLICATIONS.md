@@ -62,9 +62,27 @@ account is live.
 
 ---
 
+### 4. Zeffy — 30% of donor tips, ~$500 per signup
+**https://dash.partnerstack.com/marketplace/all/details/zeffyinc** (inside PartnerStack)
+
+**Found 2026-08-03, and it overturns an assumption that was wrong for months.**
+Zeffy was rated `none` here on the reasoning that it is free to nonprofits and
+funded by donor tips, so there is no margin to share. The tips *are* the margin,
+and Zeffy shares 30% of them for a referred organization's first 12 months.
+PartnerStack's public directory states an average of **$500 per signup** — level
+with DonorDock's bounty.
+
+This is the best-placed opportunity on the list: Zeffy is already on 25 pages,
+and it is the product we can recommend most freely because it costs the reader
+nothing. Requires a PartnerStack account first.
+
+**~$500 per referral.**
+
+---
+
 ## Tier 2 — worth the twenty minutes
 
-### 4. PartnerStack account — one signup, many programs
+### 5. PartnerStack account — one signup, many programs
 **https://dash.partnerstack.com/signup**
 
 Not a program, a network. **357 programs** in the public directory at
@@ -72,7 +90,7 @@ Not a program, a network. **357 programs** in the public directory at
 reaches all of them, including several genuinely relevant to this site that we
 were not previously aware of — see the next section.
 
-### 5. Jotform — 30% for 12 months
+### 6. Jotform — 30% for 12 months
 **https://www.jotform.com/partnership/affiliate/application/**
 
 Fastest approval on the list, reviewed in about a business day. Their FAQ
@@ -82,7 +100,7 @@ customer's Jotform subscription."*
 **~$88 per referral.** Small, but it is fifteen minutes and Jotform prices per
 account rather than per seat, which makes it an easy honest recommendation.
 
-### 6. Instrumentl — $50 flat
+### 7. Instrumentl — $50 flat
 **https://beinstrumentl.typeform.com/to/UVUTeuFk**
 
 The form titled "Affiliate Partner Application" — their partners page has several
@@ -163,6 +181,16 @@ inside a PartnerStack account you want anyway.
 organization's* name, email, phone and address — you refer a specific nonprofit
 you personally know, and there is no tracking link. A content site cannot use it,
 and we will not submit readers' contact details to a vendor.
+
+**Givebutter** — moved to *unknown*, not "do not apply". A partner program exists
+with a referral track, but publishes no commission. Submit the form at
+`givebutter.com/partner#become-partner` to find out. The reasoning that ruled it
+out is the same reasoning that was wrong about Zeffy.
+
+**Little Green Light.** Confirmed no affiliate program — the Consultant Network is
+a directory listing, not a commission. Worth a separate look for the *consulting*
+business, though: being listed there puts you in front of LGL customers who need
+migration and training help.
 
 **Bloomerang.** The rate it publishes pays a **donation to a 501(c)(3)**, which
 this site is not. Its separate PartnerStack agency track publishes no rate before
