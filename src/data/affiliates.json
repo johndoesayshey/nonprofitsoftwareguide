@@ -462,18 +462,18 @@
     "url": "https://monday.com",
     "affiliateUrl": null,
     "readerOffer": null,
-    "terms": "CORRECTED 2026-08-03. The \"up to 100% of first-year sales\" figure previously recorded here appears NOWHERE on any monday.com or PartnerStack property and was wrong. Two tracks exist: \"Partners\" (resell and implement) earn up to 20% per closed deal; \"Online Affiliates\" — which is what a publisher is — earn a CPL per sign-up at an unpublished rate.",
-    "signupUrl": "https://mondaycom.partnerstack.com/?group=mbmarketplace",
+    "terms": "25% of the first sale for each customer, stated on monday.com's own affiliate page. Note the ambiguity in \"first sale\": on an annual plan that is a year of seats, on monthly billing it is one month. Confirm which at signup — it is the difference between roughly $180 and roughly $15 on a five-seat deal.",
+    "signupUrl": "https://monday.com/affiliate-mb-mobile",
     "appliedOn": null,
     "approvedOn": null,
-    "payout": "Online affiliates: a CPL per sign-up, rate not published. Solution partners: up to 20% per closed deal.",
-    "potential": "unknown",
-    "badge": null,
-    "potentialNote": "Opened in a browser 2026-08-03, three sources. (1) The PartnerStack program page states only \"Partners: Earn up to 20% commission on each closed deal\" and \"Online Affiliates: Earn a CPL deal per sign-up\". (2) Its linked Terms of Service is a Google Doc titled \"RP- TOS December 2021\" which defines \"Partner Fee Plan\" as a SEPARATE document and publishes no rate at all — and is five years stale. (3) monday.com/w/partnership publishes no rate either, only \"generous commissions\". Downgraded high -> unknown: as a publisher we would be on the CPL track, which is a flat per-signup fee rather than a revenue share, and nobody publishes what it pays. Even the best case — solution partner at 20% of a 15-seat Standard deal — is about $432 one-time against DonorDock at $500.",
+    "payout": "25% of the first sale for each referred customer",
+    "potential": "medium",
+    "badge": "25%",
+    "potentialNote": "Corrected again 2026-08-03, and this time from monday's own page rather than PartnerStack's. monday.com/affiliate-mb-mobile states: \"Earn 25% on the first sale for each customer.\" That page is live — an earlier note here called it dead, which was wrong. We also had the wrong PartnerStack group: the affiliate entry is group=mbaffiliatesentryofficial, not mbmarketplace. The generic PartnerStack program page still shows only \"up to 20% per closed deal\" for partners and \"a CPL per sign-up\" for online affiliates, and its FAQ says the commission period \"will be stated in your specific partner's group\" — so the real terms are only visible after joining. Rated medium, not high: 25% of a first sale on monday's $9-$12/seat pricing is roughly $180-$360 for a small team on an annual plan, which beats Jotform but sits under DonorDock at $500, and it is one-time rather than recurring.",
     "evidence": {
-      "url": "https://mondaycom.partnerstack.com/?group=mbmarketplace",
+      "url": "https://monday.com/affiliate-mb-mobile",
       "checked": "2026-08-03",
-      "quote": "Partners: Earn up to 20% commission on each closed deal. Online Affiliates: Earn a CPL deal per sign-up."
+      "quote": "Earn 25% on the first sale for each customer. Together we'll build a compensation model best suited to your needs."
     }
   },
   "salesforcenpsp": {
