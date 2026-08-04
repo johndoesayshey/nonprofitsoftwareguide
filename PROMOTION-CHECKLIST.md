@@ -168,6 +168,44 @@ Anything routing to DonorDock, Donorbox or 4aGoodCause first.
 
 ---
 
+## Activity log
+
+Keep this. The only way to know which channel works is to have written down what
+was tried and when — and to be able to spot a pattern before a moderator does.
+
+| Date | Channel | What | Result |
+|---|---|---|---|
+| 2026-08-03 | Affiliate | DonorDock, Donorbox, 4aGoodCause, PartnerStack, Jotform, Instrumentl applied | All pending |
+| 2026-08-03 | Reddit | 7 comments including a site link | **6 survived, 1 removed** |
+
+### On the Reddit result
+
+Six of seven is a normal rate and not worth changing anything over. A single
+removal is almost always the site-wide spam filter reacting to account age and
+link history rather than a human objecting to the comment.
+
+Two things worth knowing, though, because they have different fixes:
+
+- **Removed within seconds** — automod or the site-wide filter. It is about the
+  account, not the content. It resolves as the account builds karma and age.
+- **Removed hours later** — a human moderator. That is a signal about the comment
+  itself, and it is worth reading that subreddit's rules on self-promotion before
+  posting there again.
+
+**Do not repost the removed one.** Reposting after a removal is the single fastest
+way to get an account flagged, and it converts one lost comment into a lost
+channel.
+
+**Watch the pattern, not the individual comment.** Moderators notice a link
+appearing across many comments far more readily than any one comment. Keep the
+ratio well past 9:1 — most comments answering a question with no link at all —
+and vary which page gets linked rather than pointing everything at the homepage.
+
+**These comments are worth more than the clicks.** Reddit is weighted unusually
+heavily in AI search results, so answers there feed ChatGPT and Perplexity as
+well as humans. A comment that ranks for "best nonprofit CRM small budget" keeps
+working long after the thread stops being read.
+
 ## What to measure
 
 Check monthly, in this order:
