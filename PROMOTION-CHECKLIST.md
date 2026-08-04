@@ -26,7 +26,7 @@ Approval takes days to weeks, so start the clock before anything else.
       clears: **Zeffy first** (~$500/signup, already on 25 of our pages), then
       **Ticket Tailor**, **Xero**, **Brevo**, **monday.com**, and check whether
       **Bloomerang**'s agency track pays cash.
-- [ ] **Jotform** — https://www.jotform.com/partnership/affiliate/application/
+- [x] **Jotform** — https://www.jotform.com/partnership/affiliate/application/ — **submitted 2026-08-03**
 
 Full detail and the rest of the list: `AFFILIATE-APPLICATIONS.md`.
 

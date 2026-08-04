@@ -102,8 +102,12 @@ but wait — the moment it clears, work the list in this order:
 6. **Bloomerang** — check whether the agency track pays cash rather than a
    donation. Five minutes settles a question we could not answer from outside.
 
-### 6. Jotform — 30% for 12 months
+### 6. Jotform — 30% for 12 months ✅ SUBMITTED 2026-08-03
 **https://www.jotform.com/partnership/affiliate/application/**
+
+*Reviewed within about one business day, so this should be the first approval to
+land. When it does: paste the link into `affiliateUrl`, set `status` to
+`"active"`, fill in `approvedOn`.*
 
 Fastest approval on the list, reviewed in about a business day. Their FAQ
 confirms the duration: *"a monthly commission payout for the first year of each
