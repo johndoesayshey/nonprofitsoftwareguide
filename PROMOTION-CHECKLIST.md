@@ -28,7 +28,14 @@ Approval takes days to weeks, so start the clock before anything else.
       **Bloomerang**'s agency track pays cash.
 - [x] **Jotform** — https://www.jotform.com/partnership/affiliate/application/ — **submitted 2026-08-03**
 
+- [x] **Instrumentl** — https://beinstrumentl.typeform.com/to/UVUTeuFk — **submitted 2026-08-03**
+      ⏳ up to a month for review; the slowest of the batch
+
 Full detail and the rest of the list: `AFFILIATE-APPLICATIONS.md`.
+
+**Expected response times**, so nothing gets chased too early:
+Jotform ~1 business day · DonorDock, 4aGoodCause, Donorbox, PartnerStack — days
+to a couple of weeks · Instrumentl up to a month.
 
 ### LinkedIn Page — 30 minutes
 A **Page**, not your personal profile. Pages post as the publication, which keeps

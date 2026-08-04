@@ -116,8 +116,11 @@ customer's Jotform subscription."*
 **~$88 per referral.** Small, but it is fifteen minutes and Jotform prices per
 account rather than per seat, which makes it an easy honest recommendation.
 
-### 7. Instrumentl — $50 flat
+### 7. Instrumentl — $50 flat ✅ SUBMITTED 2026-08-03
 **https://beinstrumentl.typeform.com/to/UVUTeuFk**
+
+*⏳ Their form warns review can take **up to a month** — the slowest of the batch.
+Do not chase before September, and do not read silence as a no.*
 
 The form titled "Affiliate Partner Application" — their partners page has several
 routes and the rest go to foundations, accountants and implementation partners.
