@@ -3,8 +3,7 @@ import { getCollection } from 'astro:content';
 import { comparePairs } from '../lib/compare';
 
 // A hand-built sitemap listing only indexable URLs: published content plus the
-// static hubs. Excludes drafts (noindex), /go/ redirects, and the noindex
-// /disclosure and /about pages.
+// static hubs. Excludes drafts (noindex) and the noindex /go/ redirects.
 export async function GET(context: APIContext) {
   const site = context.site ?? new URL('https://nonprofitsoftwareguide.com');
   const url = (path: string) => new URL(path, site).href;
@@ -15,6 +14,7 @@ export async function GET(context: APIContext) {
   // Static hubs that are always indexable — one per nav section.
   for (const p of [
     '/', '/platforms/', '/compare/', '/alternatives/', '/best/', '/blog/', '/consulting/', '/about/',
+    '/disclosure/',
     '/grant-research/', '/wealth-screening/', '/donor-crm/',
     '/donation-processing/', '/events/', '/forms-operations/',
   ]) {
