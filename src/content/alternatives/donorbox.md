@@ -20,7 +20,7 @@ picks:
     note: "This is the crossover. A flat subscription — $99/mo Grassroots ($1,188/yr), $249/mo Growth ($2,988/yr), $429/mo Scale ($5,148/yr), no percentage taken from donations — costs less than a ~2.95% fee above about $40k online, and the gap widens every year you grow. Built around monthly giving with recurring pages, donor records and a campaign builder in one tool. Every tier published; first month free."
   - platformSlug: donordock
     forWhom: "What you actually need is the database, not the checkout"
-    note: "About $98/mo Entry, $300/mo Grow, $585/mo Amplify, unlimited contacts on every tier. Soft credits, household records, follow-up tasks and an ActionBoard that tells you who to contact today. If you're shopping because donor data is scattered, keeping your checkout and adding a CRM is the cheaper, better move. Ninety-day money-back guarantee and a reader discount through this site."
+    note: "$500/mo billed annually, unlimited contacts. Soft credits, household records, follow-up tasks and an ActionBoard that tells you who to contact today. If you're shopping because donor data is scattered, keeping your checkout and adding a CRM is the cheaper, better move. Ninety-day money-back guarantee and a reader discount through this site."
   - platformSlug: givebutter
     forWhom: "Events and peer-to-peer matter as much as the donate button"
     note: "0% platform fee with donor tips on, roughly 3% with tips off, processing fees either way. Ticketing, auctions, campaign pages and peer-to-peer in one modern package — considerably more event machinery than Donorbox carries, at no subscription cost. Same tip-dependence caveat as Zeffy."

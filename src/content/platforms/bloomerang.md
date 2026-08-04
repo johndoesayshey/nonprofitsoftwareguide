@@ -2,17 +2,23 @@
 name: Bloomerang
 slug: bloomerang
 category: donor-crm
-entryPrice: "From $79/mo (up to ~1,000 contacts)"
-pricingModel: "By contact-record count; unlimited users"
-pricingBasis: "by contact-record count"
+entryPrice: "From $125/mo, billed annually ($1,500/yr) — CRM only"
+pricingModel: "Three products priced separately; scales with record count above the entry price, quoted rather than published. Unlimited users."
+pricingBasis: "by contact-record count, ladder not published"
 pricingTiers:
-  - tier: "Starter"
-    price: "~$79/mo"
-    note: "up to ~1,000 contacts"
-  - tier: "Standard"
-    price: "~$125/mo"
-    note: "scales up from there"
-lastVerified: 2026-07-29
+  - tier: "Bloomerang CRM"
+    price: "From $125/mo"
+    note: "billed annually — $1,500/yr; donor management, reporting, marketing"
+  - tier: "Bloomerang Fundraising"
+    price: "From $40/mo"
+    note: "billed annually; must be bought bundled with CRM — forms, events, text fundraising"
+  - tier: "Bloomerang Volunteer"
+    price: "From $119/mo"
+    note: "billed annually"
+  - tier: "Auctions, peer-to-peer"
+    price: "Quoted"
+    note: "listed as additional features on Fundraising, not included"
+lastVerified: 2026-08-03
 bestFor: "Trusted name in the space with retention-focused features. Loved by all shop sizes, but works especially well for mid- to large organizations."
 targetQuery: "bloomerang review"
 affiliateSlug: bloomerang
@@ -38,7 +44,7 @@ otherOptions:
     note: "Neon CRM handles renewals and member benefits natively."
 ---
 
-[Bloomerang](/go/bloomerang) is a donor CRM built around retention. Its dashboards put lapsing donors in front of you before they're gone. Pricing starts at $79 a month for about 1,000 contact records, with unlimited users at every tier. It's the ease-of-use pick for small and midsize teams.
+[Bloomerang](/go/bloomerang) is a donor CRM built around retention. Its dashboards put lapsing donors in front of you before they're gone. The CRM starts at $125 a month billed annually — $1,500 a year — with unlimited users. It's the ease-of-use pick for small and midsize teams.
 
 ## Who it fits
 
@@ -46,16 +52,22 @@ Shops where the whole team touches the database and nobody is a data specialist.
 
 ## Pricing
 
-| Tier | Monthly | Records |
-|---|---|---|
-| Starter | ~$79 | ~1,000 contacts |
-| Standard | ~$125 | scales up from there |
+Bloomerang sells three products and prices them separately. Verified on their pricing page 3 August 2026.
 
-Pricing follows your record count, so clean your list before migrating and count it honestly when you get a quote.
+| Product | Monthly, billed annually | Notes |
+|---|---|---|
+| Bloomerang CRM | From $125 | Donor management, reporting, marketing, mobile app |
+| Bloomerang Fundraising | From $40 | **Must be bought bundled with CRM** — forms, events, text fundraising |
+| Bloomerang Volunteer | From $119 | Scheduling, screening, volunteer/donor sync |
+| Auctions, peer-to-peer | Quoted | Listed as additional features on Fundraising |
+
+Two things to take from that table. The $40 Fundraising price is the one that shows up in comparisons against Donorbox and Givebutter, and it is not a standalone product — the footnote on their own page says it must be purchased with the CRM, so the real floor for forms plus database is $165 a month, or $1,980 a year.
+
+And the ladder above $125 is not published. Bloomerang prices on record count, so clean your list before you migrate and count it honestly when you take the quote. Compare that with [Little Green Light](/go/littlegreenlight) and [Eleo](/go/eleo), which publish every step of theirs.
 
 ## How it compares
 
-[Little Green Light](/go/littlegreenlight) is about half the entry price and very flexible; Bloomerang is friendlier and stronger on retention analytics. [DonorDock](/go/donordock) turns the database into a daily to-do list for solo fundraisers. [Neon CRM](/go/neoncrm) adds memberships and events for organizations that need the breadth. Teams choose Bloomerang when adoption matters most, because the CRM your staff actually updates beats the more powerful one they don't.
+[Little Green Light](/go/littlegreenlight) is about a third of the entry price and very flexible; Bloomerang is friendlier and stronger on retention analytics. [Eleo](/go/eleo) undercuts both and publishes its whole ladder. [DonorDock](/go/donordock) turns the database into a daily to-do list, though at $500/mo flat it now competes as a consolidation rather than on price. [Neon CRM](/go/neoncrm) adds memberships and events for organizations that need the breadth. Teams choose Bloomerang when adoption matters most, because the CRM your staff actually updates beats the more powerful one they don't.
 
 ## Bottom line
 

@@ -5,20 +5,20 @@ category: donor-crm
 audience: human services organizations
 targetQuery: "donor management software for human services nonprofits"
 lastVerified: 2026-08-03
-answer: "Human services organizations have two databases to worry about, and only one of them is fundraising. Client and case data must stay separate from donor data for confidentiality reasons, which means the donor CRM's job is narrower than vendors suggest — and cheaper. DonorDock, Bloomerang and Eleo all do it well."
+answer: "Human services organizations have two databases to worry about, and only one of them is fundraising. Client and case data must stay separate from donor data for confidentiality reasons, which means the donor CRM's job is narrower than vendors suggest — and cheaper. Eleo, Bloomerang and Neon CRM all do it well."
 picks:
-  - platformSlug: donordock
+  - platformSlug: eleo
     award: "Best overall"
-    forWhom: "An agency with a small development team and a large contact file"
-    note: "Flat tiers with unlimited contacts — about $98/mo Entry, $300/mo Grow, $585/mo Amplify. Human services agencies accumulate contacts from every direction: event attendees, in-kind donors, volunteers, board alumni, corporate partners. Flat pricing keeps that affordable. The ActionBoard matters because development in this sector is usually one person doing five jobs, and the follow-up is what slips."
+    forWhom: "An agency where the software line has to stay under $600"
+    note: "$39/mo up to 2,500 donor records, published to 20,000. Includes volunteers and events rather than selling them as modules. Human services agencies typically run lean on administration because funders scrutinize overhead, and a published price ladder is easier to defend in that environment than a negotiated quote nobody else can verify."
   - platformSlug: bloomerang
     award: "Best for shared entry"
     forWhom: "An agency where the ED and program staff also touch the database"
-    note: "$79/mo at roughly 1,000 contacts, about $125/mo at Standard, unlimited users at every tier. Unlimited users fits an agency where the executive director does major gifts, a program director knows the corporate partner, and a part-time person enters gifts. Retention reporting answers the board's question about whether the annual fund is actually growing."
-  - platformSlug: eleo
-    award: "Best value"
-    forWhom: "An agency where the software line has to stay under $600"
-    note: "$39/mo up to 2,500 donor records, published to 20,000. Includes volunteers and events rather than selling them as modules. Human services agencies typically run lean on administration because funders scrutinize overhead, and a published price ladder is easier to defend in that environment than a negotiated quote nobody else can verify."
+    note: "From $125/mo billed annually ($1,500/yr), unlimited users. Unlimited users fits an agency where the executive director does major gifts, a program director knows the corporate partner, and a part-time person enters gifts. Retention reporting answers the board's question about whether the annual fund is actually growing."
+  - platformSlug: donordock
+    award: "Best for consolidating your stack"
+    forWhom: "An agency with a large contact file and several separate fundraising subscriptions"
+    note: "One plan at $500/mo billed annually — $6,000/yr, all features, unlimited contacts. Human services agencies accumulate contacts from every direction: event attendees, in-kind donors, volunteers, board alumni, corporate partners. Flat pricing means none of that re-prices the contract. But $6,000 is above our survey's $2,726 mean at $250K–$1M, so this belongs on the list at $1M and up, or wherever the combined bill for CRM, email and giving pages is already close to it."
   - platformSlug: neoncrm
     award: "Best for volunteer programs"
     forWhom: "An agency running a substantial volunteer operation"

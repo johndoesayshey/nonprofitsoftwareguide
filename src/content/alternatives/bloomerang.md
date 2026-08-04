@@ -17,7 +17,7 @@ reasonsToLeave:
 picks:
   - platformSlug: donordock
     forWhom: "Your list is growing faster than your revenue"
-    note: "Flat tiers with unlimited contacts — about $98/mo Entry, $300/mo Grow, $585/mo Amplify — which removes record-count pricing from the equation entirely. Coming from Bloomerang you keep the modern, low-training-cost feel; the ActionBoard is a to-do list where Bloomerang gives you a dashboard. If your complaint is that the dashboard tells you who is lapsing but nobody acts on it, that difference is the whole point. Ninety-day money-back guarantee, plus a reader discount through this site."
+    note: "One plan at $500/mo billed annually ($6,000/yr) with unlimited contacts — which removes record-count pricing from the equation entirely. Coming from Bloomerang you keep the modern, low-training-cost feel; the ActionBoard is a to-do list where Bloomerang gives you a dashboard. If your complaint is that the dashboard tells you who is lapsing but nobody acts on it, that difference is the whole point. Ninety-day money-back guarantee, plus a reader discount through this site."
   - platformSlug: eleo
     forWhom: "You want the same job done for a third of the price"
     note: "$39/mo up to 2,500 donor records, $59 at 5,000, $99 at 10,000, $159 at 15,000, $199 at 20,000, then $10/mo per additional 2,500 — the whole ladder published. Donors, gifts, events, volunteers and mailings are included rather than modular. You give up Bloomerang's retention analytics and some polish. For a shop under $250K raised, where our survey puts mean CRM spend at $716 a year, Eleo is inside the band and Bloomerang generally isn't."

@@ -17,13 +17,13 @@ reasonsToLeave:
 picks:
   - platformSlug: donordock
     forWhom: "The database needs to drive daily work, not store it"
-    note: "The ActionBoard is the reason to make this move: it turns the CRM into a follow-up list — who to thank, who's lapsing, what's overdue — instead of a place you go when you already know what you're looking for. That is the specific gap LGL leaves. Flat tiers at about $98/mo Entry, $300/mo Grow, $585/mo Amplify, with unlimited contacts, so constituent-count steps stop applying. Ninety-day money-back guarantee and a reader discount through this site."
+    note: "The ActionBoard is the reason to make this move: it turns the CRM into a follow-up list — who to thank, who's lapsing, what's overdue — instead of a place you go when you already know what you're looking for. That is the specific gap LGL leaves. One plan at $500/mo billed annually — $6,000/yr — with unlimited contacts, so constituent-count steps stop applying. Be clear-eyed about the jump: that is roughly ten times what you are paying LGL, so this only makes sense if it also replaces your email tool and your giving pages. Ninety-day money-back guarantee and a reader discount through this site."
   - platformSlug: eleo
     forWhom: "You like LGL's price and want a cleaner system at it"
     note: "$39/mo up to 2,500 donor records, $59 at 5,000, $99 at 10,000, $159 at 15,000, $199 at 20,000, then $10/mo per additional 2,500 — the whole ladder published, same as LGL's. Donors, gifts, events, volunteers and mailings without add-on modules, in a more straightforward interface. This is the lateral move: same budget, less friction, less configurability."
   - platformSlug: bloomerang
     forWhom: "Data entry is shared across several people"
-    note: "$79/mo at roughly 1,000 contacts, about $125/mo at Standard, unlimited users at every tier. Bloomerang is consistently rated the easiest system in the category to learn, and the retention dashboards put lapsing donors on the home screen. If your real problem is that only one person can operate LGL, this is the fix — you'll pay more, and the premium is roughly the cost of the database actually getting used."
+    note: "From $125/mo billed annually ($1,500/yr), unlimited users. Bloomerang is consistently rated the easiest system in the category to learn, and the retention dashboards put lapsing donors on the home screen. If your real problem is that only one person can operate LGL, this is the fix — you'll pay more, and the premium is roughly the cost of the database actually getting used."
   - platformSlug: neoncrm
     forWhom: "Memberships or ticketed events are part of the model"
     note: "From $99/mo, priced by organizational revenue and reported to roughly $409/mo at the top of the published band, unlimited users and records. Memberships add about 10% of the CRM fee, volunteers 10%, events 20%. It's the answer when the second system you're maintaining alongside LGL is a membership list."

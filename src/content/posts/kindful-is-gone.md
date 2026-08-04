@@ -35,13 +35,13 @@ Bloomerang owns Kindful, which means Bloomerang has every incentive to make the 
 
 But convenience is not fit. Before you take the path of least resistance, check the two things that would actually make you unhappy in year two:
 
-**Contact-record pricing.** [Bloomerang](/go/bloomerang) bills on contact-record count — $79/mo at roughly 1,000 contacts, about $125/mo at Standard. If your file is large relative to your donor count, that structure will cost you. Count your actual file before you accept a quote, because organically grown lists are routinely 30–40% duplicates, deceased records and one-time event attendees. Cleaning that first can drop a whole tier.
+**Contact-record pricing.** [Bloomerang](/go/bloomerang) bills on contact-record count — from $125/mo billed annually ($1,500/yr), on a ladder they quote rather than publish. If your file is large relative to your donor count, that structure will cost you. Count your actual file before you accept a quote, because organically grown lists are routinely 30–40% duplicates, deceased records and one-time event attendees. Cleaning that first can drop a whole tier.
 
 **Reporting shape.** Bloomerang leads with retention — who is lapsing, on the home screen. That is genuinely valuable and it is not what everyone needs. If your work is grant-heavy or event-heavy, you may be paying for analytics you will not open.
 
 ## The alternatives worth pricing against it
 
-**[DonorDock](/go/donordock)** if your list grows faster than your revenue. Flat tiers with unlimited contacts — about $98/mo Entry, $300/mo Grow, $585/mo Amplify — so the bill stops moving when the file does. There is a 90-day money-back guarantee, which makes a migration reversible in a way most are not.
+**[DonorDock](/go/donordock)** if your list grows faster than your revenue. One plan at $500/mo billed annually ($6,000/yr) with unlimited contacts — so the bill stops moving when the file does. There is a 90-day money-back guarantee, which makes a migration reversible in a way most are not.
 
 **[Eleo](/platforms/eleo/)** if the priority is cost. $39/mo up to 2,500 donor records with the entire ladder published to 20,000. Our 2026 survey puts mean annual CRM spend at $716 for shops under $250K raised, and Eleo at $468 a year is one of the few real CRMs inside that band.
 

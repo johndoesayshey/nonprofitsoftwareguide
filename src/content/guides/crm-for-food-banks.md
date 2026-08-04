@@ -5,20 +5,20 @@ category: donor-crm
 audience: food banks
 targetQuery: "donor management software for food banks"
 lastVerified: 2026-08-03
-answer: "Food banks run on three revenue streams a generic CRM handles unevenly: in-kind food donations, corporate and foundation grants, and a large base of small individual donors. DonorDock keeps the bill flat as the list grows, Eleo holds volunteers and donors together from $39/mo, and Neon CRM carries food drives as events."
+answer: "Food banks run on three revenue streams a generic CRM handles unevenly: in-kind food donations, corporate and foundation grants, and a large base of small individual donors. Eleo holds volunteers and donors together from $39/mo, Bloomerang answers the board's retention question, and Neon CRM carries food drives as events."
 picks:
-  - platformSlug: donordock
-    award: "Best overall"
-    forWhom: "A food bank with a large donor list and a small development team"
-    note: "Flat tiers with unlimited contacts — about $98/mo Entry, $300/mo Grow, $585/mo Amplify. Food banks acquire donors in waves around the holidays and after any local news coverage of need, and record-count pricing turns that into a renewal increase. The ActionBoard matters because holiday giving is where the thank-you backlog builds: a food bank can take a third of its annual individual revenue in six weeks, and the acknowledgements that convert those donors into year-round supporters are exactly what gets postponed to January."
   - platformSlug: eleo
-    award: "Best value"
+    award: "Best overall"
     forWhom: "A pantry tracking donors and volunteers with one part-time staffer"
     note: "$39/mo up to 2,500 donor records, published all the way to 20,000. Volunteers, events and mailings are included rather than modular, which fits an operation where the volunteer roster is larger than the donor list and heavily overlapping. For a church-based or community pantry running on under $250K, this is the realistic database — our 2026 survey puts mean CRM spend at that size at $716 a year."
   - platformSlug: bloomerang
     award: "Best for board reporting"
     forWhom: "A regional food bank with a real development office"
-    note: "$79/mo at roughly 1,000 contacts, about $125/mo at Standard, unlimited users. The retention dashboards answer the question a food bank board actually asks after a big holiday season — did the December donors come back — without anyone building a report. Unlimited users means the warehouse manager can look up a corporate food-drive contact without buying a seat."
+    note: "From $125/mo billed annually ($1,500/yr), unlimited users. The retention dashboards answer the question a food bank board actually asks after a big holiday season — did the December donors come back — without anyone building a report. Unlimited users means the warehouse manager can look up a corporate food-drive contact without buying a seat."
+  - platformSlug: donordock
+    award: "Best for consolidating your stack"
+    forWhom: "A food bank already running a CRM, an email platform and giving pages separately"
+    note: "One plan at $500/mo billed annually — $6,000/yr, all features, unlimited contacts. Food banks acquire donors in waves around the holidays and after any local coverage of need, and record-count pricing turns that into a renewal increase. The ActionBoard earns its place here specifically: a food bank can take a third of annual individual revenue in six weeks, and the acknowledgements that convert those donors are exactly what gets postponed to January. Price it against your combined stack, not against a standalone CRM — at $6,000 it only makes sense as a replacement for several lines."
   - platformSlug: neoncrm
     award: "Best for food drives and events"
     forWhom: "A food bank running corporate and school food drives at scale"

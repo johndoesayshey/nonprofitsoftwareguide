@@ -2,18 +2,21 @@
 name: DonorDock
 slug: donordock
 category: donor-crm
-entryPrice: "From ~$98/mo (billed annually)"
-pricingModel: "Flat tiers with unlimited contacts"
-pricingBasis: "flat tiers, unlimited contacts"
+entryPrice: "$500/mo, billed annually ($6,000/yr) — one plan, no tiers"
+pricingModel: "Single plan, all features, unlimited contacts; 2% platform fee on online gifts"
+pricingBasis: "one flat plan, unlimited contacts"
 pricingTiers:
-  - tier: "Entry"
-    price: "~$98/mo"
-  - tier: "Grow"
-    price: "~$300/mo"
-  - tier: "Amplify"
-    price: "~$585/mo"
-lastVerified: 2026-07-29
-bestFor: "Easy to onboard CRM to help drive fundraising followups. Excellent choice for all, but shines with small and mid-size fundraising shops."
+  - tier: "ONE (the only plan)"
+    price: "$500/mo"
+    note: "billed annually — $6,000/yr; all features, unlimited contacts"
+  - tier: "Platform fee on online gifts"
+    price: "2%"
+    note: "plus Stripe/PayPal, typically 2.2% + $0.30"
+  - tier: "Premium onboarding"
+    price: "Quoted"
+    note: "optional; white-glove migration is included without it"
+lastVerified: 2026-08-03
+bestFor: "Shops consolidating several tools into one, where the combined bill already approaches $6,000 a year."
 targetQuery: "donordock review"
 affiliateSlug: donordock
 freeTier: false
@@ -23,9 +26,9 @@ featureNotes:
   emailMarketing: "10,000/mo; +10,000 for $45"
 draft: false
 strengths:
-  - "The ActionBoard turns the database into a daily to-do list"
-  - "Unlimited contacts on flat tiers; no record-count bill creep"
-  - "90-day money-back guarantee, and 10% off through this site"
+  - "One plan with everything in it — no tier to outgrow and no module to bolt on later"
+  - "Unlimited contacts, so a growing list never re-prices the contract"
+  - "90-day money-back guarantee and white-glove migration included, not sold as onboarding"
 otherOptions:
   - need: "Want deeper retention and segmentation reporting?"
     platformSlug: bloomerang
@@ -38,27 +41,69 @@ otherOptions:
     note: "Neon CRM carries memberships and events inside the database of record."
 ---
 
-[DonorDock](/go/donordock) is a donor CRM built around doing the work rather than storing it. Its signature ActionBoard is a guided daily feed: which donor to thank, call, or follow up with today. Pricing starts around $98 a month billed annually, every tier includes unlimited contacts, and there's a 90-day money-back guarantee.
+**DonorDock's pricing changed, and it changed a lot.** It used to run tiers from
+about $98 a month. It is now a **single plan at $500 a month billed annually —
+$6,000 a year** — with every feature included and no tiers at all. Their own FAQ
+is blunt about it: *"Because DonorDock is a single plan with no tiers, there's
+nothing to upgrade or downgrade."* Verified 3 August 2026.
 
-## Who it fits
+That makes it a different product from the one most write-ups describe, including
+this one until today. It is no longer the budget pick, and we have repositioned it
+across the site accordingly.
 
-It starts with the one-person development office, where the database isn't the hard part and remembering to work it is. But the Grow and Amplify tiers are why it stays in the stack as you grow: unlimited contacts on every tier means a file that doubles doesn't re-price your contract, which is exactly what happens on record-count pricing between $1M and $5M. A team of five gets the same guided follow-up, with the work divided among them.
+## What it does well
 
-Where it stops fitting is analytics. If your team's most common ask is deeper retention and segmentation reporting, [Bloomerang](/go/bloomerang) is the better home, and it prices by record count.
+The ActionBoard is still the reason to look at it. Instead of a dashboard you have
+to remember to open, the database hands you a daily list: who to thank, who to
+call, what is overdue. The failure mode of a small-shop CRM is not missing
+features, it is nobody opening it, and this is the clearest answer to that problem
+in the category.
+
+Unlimited contacts on the single plan means a growing file never re-prices the
+contract — no record-count creep, ever. There is a 90-day money-back guarantee,
+and white-glove data migration is included rather than sold as an onboarding
+package.
+
+## Who it is for now
+
+At $6,000 a year, DonorDock has repositioned as a consolidation play, and its own
+pricing page makes the argument directly — you select the apps you currently pay
+for and it estimates the saving.
+
+That is the right way to judge it. Our 2026 survey puts mean annual donor CRM
+spend at **$716** for shops under $250K raised and **$2,726** at $250K–$1M.
+DonorDock is well above both. It only makes sense if it replaces several line
+items rather than one: a CRM, an email platform, a donation processor and a forms
+tool, together.
+
+Add up what those cost you today. If the total is near $6,000, the single plan is
+genuinely simpler and the price stops moving. If your CRM is the only thing you
+would be replacing, this is roughly four times the market rate for your size and
+the answer is [elsewhere in this category](/donor-crm/).
+
+## The fee that is easy to miss
+
+**2% of every gift processed through DonorDock Online Giving pages**, on top of
+Stripe or PayPal's own cut of roughly 2.2% + $0.30.
+
+That is a real line. At $150,000 of online giving it is $3,000 a year — half the
+subscription again. Keep a separate donation platform and the fee does not apply,
+but then you are not consolidating, and the case for the price weakens.
 
 ## Pricing
 
-| Tier | Monthly (annual billing) |
+| | |
 |---|---|
-| Entry | ~$98 |
-| Grow | ~$300 |
-| Amplify | ~$585 |
+| ONE — the only plan | **$500/mo**, billed annually ($6,000/yr) |
+| Platform fee on online gifts | 2% + Stripe/PayPal (~2.2% + $0.30) |
+| Contacts | Unlimited |
+| Guarantee | 90 days, money back |
 
-All tiers include unlimited contacts. Organizations under $300k in revenue can ask about reduced pricing, and readers get 10% off through [this site's referral link](/go/donordock).
+Readers get 10% off the first payment through [this site's link](/go/donordock).
 
 ## How it compares
 
-[Little Green Light](/go/littlegreenlight) is cheaper for small lists and more flexible; DonorDock is more guided and more modern. [Bloomerang](/go/bloomerang) has deeper retention analytics and is where we point shops past about $5M. [Eleo](/go/eleo) is the budget option with published pricing. The dividing line is temperament: pick DonorDock if you want the software to drive the habit, and price out record-count pricing over three years before choosing on entry price alone.
+[Little Green Light](/go/littlegreenlight) is far cheaper at any list size and more flexible; DonorDock is more guided and more modern. [Bloomerang](/go/bloomerang) has deeper retention analytics and is where we point shops past about $5M. [Eleo](/go/eleo) is the budget option with published pricing. The dividing line is temperament: pick DonorDock if you want the software to drive the habit, and price out record-count pricing over three years before choosing on entry price alone.
 
 ## Bottom line
 

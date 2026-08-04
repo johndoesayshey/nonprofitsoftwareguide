@@ -17,13 +17,13 @@ reasonsToLeave:
 picks:
   - platformSlug: donordock
     forWhom: "Your list is growing and you want the price to stop moving"
-    note: "Flat tiers with unlimited contacts — roughly $98/mo Entry, $300/mo Grow, $585/mo Amplify — so growing from 3,000 to 30,000 records changes nothing about your invoice. That single structural difference is the reason most DonorPerfect switchers land here. The ActionBoard is the other reason: it surfaces who to contact today rather than waiting for someone to build a report. A 90-day money-back guarantee makes the switch low-risk, and there's a reader discount through this site."
+    note: "One plan at $500/mo billed annually — $6,000/yr — with unlimited contacts, so growing from 3,000 to 30,000 records changes nothing about your invoice. Check that against your current DonorPerfect total before you move: if you are paying under about $4,000 all-in, this is a step up in price, not a saving. That single structural difference is the reason most DonorPerfect switchers land here. The ActionBoard is the other reason: it surfaces who to contact today rather than waiting for someone to build a report. A 90-day money-back guarantee makes the switch low-risk, and there's a reader discount through this site."
   - platformSlug: eleo
     forWhom: "You want the lowest real price with the ladder published"
     note: "Eleo starts at $39/mo up to 2,500 donor records and publishes every step above it — $59 at 5,000, $99 at 10,000, $159 at 15,000, $199 at 20,000, then $10/mo per additional 2,500. It covers donors, gifts, events, volunteers and mailings without add-on modules, which is the specific complaint most DonorPerfect shops have. You can budget three years out without a sales call."
   - platformSlug: bloomerang
     forWhom: "Adoption is the problem, not the price"
-    note: "If the real issue is that nobody except you opens the database, Bloomerang is worth the premium. $79/mo at roughly 1,000 contacts, about $125/mo at Standard, unlimited users at every tier. It is consistently rated the easiest system in the category to learn, and the retention dashboards answer the board's question — are donors coming back — without a report build."
+    note: "If the real issue is that nobody except you opens the database, Bloomerang is worth the premium. From $125/mo billed annually ($1,500/yr), unlimited users. It is consistently rated the easiest system in the category to learn, and the retention dashboards answer the board's question — are donors coming back — without a report build."
   - platformSlug: littlegreenlight
     forWhom: "You need to cut the line item now"
     note: "$45/mo up to 2,500 constituents, up to about $135/mo at 50,000, no contracts and no setup fees. LGL is the value floor for a system that still does real CRM work: custom fields, real reporting, mailing tools. The interface is dated in the same way DonorPerfect's is, so this is a price move, not an experience upgrade."

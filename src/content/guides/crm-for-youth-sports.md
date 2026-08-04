@@ -7,18 +7,18 @@ targetQuery: "donor management software for youth sports nonprofits"
 lastVerified: 2026-08-03
 answer: "Youth sports nonprofits raise money three ways at once — registration fees, sponsorships and family fundraising — and most of it happens in a ten-week season. Zeffy costs nothing at any volume, Givebutter runs team fundraising and events free, and Eleo holds sponsors and families in one database from $39/mo."
 picks:
-  - platformSlug: donordock
-    award: "Best overall"
-    forWhom: "A league large enough to have real sponsor relationships"
-    note: "Flat tiers with unlimited contacts — about $98/mo Entry, $300/mo Grow, $585/mo Amplify. Youth sports organizations accumulate families relentlessly and lose them just as fast as kids age out, so a record-count contract prices you for a file that churns. The ActionBoard is the right tool for sponsorship renewal, which is the highest-value and most-forgotten task in this vertical — a local business that sponsored last season will usually sponsor again if someone asks in time."
   - platformSlug: eleo
-    award: "Best value"
+    award: "Best overall"
     forWhom: "A league adding real donor tracking for the first time"
     note: "$39/mo up to 2,500 donor records, published all the way to 20,000. Volunteers and events are included rather than modular, which matters when your board, your coaches and your sponsors overlap. For an organization whose entire administrative budget is a few hundred dollars, this is the realistic database — and our 2026 survey puts mean CRM spend under $250K raised at $716 a year."
   - platformSlug: givebutter
     award: "Best for team fundraising"
     forWhom: "A league where teams and families raise money individually"
     note: "0% platform fee with donor tips on, roughly 3% with tips off, processing fees either way. Peer-to-peer is the feature that matters: each team gets a page, families share it, and the totals roll up. That is exactly how youth sports fundraising actually works, and it is free."
+  - platformSlug: donordock
+    award: "Best for consolidating your stack"
+    forWhom: "A large league already paying for a database, email and registration separately"
+    note: "One plan at $500/mo billed annually — $6,000/yr, all features, unlimited contacts. Leagues accumulate families relentlessly and lose them as kids age out, so a record-count contract prices you for a list that is half inactive. Flat pricing fixes that. Whether it is worth $6,000 depends entirely on what you are replacing — for most volunteer-run leagues it isn't, and Eleo above is the honest answer. For a large league with paid staff and real sponsor relationships, run the comparison."
   - platformSlug: zeffy
     award: "Best free option"
     forWhom: "A volunteer-run league with no budget at all"

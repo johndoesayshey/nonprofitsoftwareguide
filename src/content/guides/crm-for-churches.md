@@ -10,7 +10,7 @@ picks:
   - platformSlug: donordock
     award: "Best for a capital campaign"
     forWhom: "A church running a building or endowment campaign alongside regular giving"
-    note: "Flat tiers with unlimited contacts — about $98/mo Entry, $300/mo Grow, $585/mo Amplify — which suits a congregation where the household list is large but the number of active campaign donors is small. The ActionBoard is genuinely useful for campaign work: pledge follow-up is the thing that quietly fails in a church office, because nobody owns it between Sundays. Ninety-day money-back guarantee, and a reader discount here."
+    note: "One plan at $500/mo billed annually ($6,000/yr) with unlimited contacts — which suits a congregation where the household list is large but the number of active campaign donors is small. The ActionBoard is genuinely useful for campaign work: pledge follow-up is the thing that quietly fails in a church office, because nobody owns it between Sundays. Ninety-day money-back guarantee, and a reader discount here."
   - platformSlug: eleo
     award: "Best value"
     forWhom: "A congregation adding real gift tracking for the first time"

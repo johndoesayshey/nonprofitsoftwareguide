@@ -15,7 +15,7 @@ faq:
   - q: "Can a small nonprofit just use Excel instead of a CRM?"
     a: "For a while, yes. But spreadsheets have no gift history integrity, no soft credits, and no household records, so the data degrades as it grows. The sheet fails slowly, then becomes expensive to clean up at migration time."
   - q: "What is the cheapest way to try a donor CRM?"
-    a: "DonorDock runs about $98/mo billed annually with unlimited contacts and a 90-day money-back guarantee, so a full trial costs nothing if it doesn't stick. Little Green Light starts at $45/mo with no contracts."
+    a: "Eleo at $39/mo up to 2,500 donor records is the cheapest real database, and Little Green Light starts at $45/mo with no contracts and no setup fee. Both are month-to-month, so a genuine three-month trial costs well under $150. If you want zero risk rather than a low price, DonorDock carries a 90-day money-back guarantee — but it is $500/mo billed annually, so that is a different kind of decision."
 ---
 
 A small nonprofit needs a CRM when any of four things happens: donor history starts getting lost, active donors pass roughly 200, a second person begins touching donor data, or thank-you letters slip past a week. Before those triggers, a well-kept spreadsheet and a free donation platform carry you fine.
@@ -44,9 +44,13 @@ The one thing to do while waiting: keep the sheet clean. One row per person, con
 
 ## The low-risk first step
 
-When the triggers hit, the objection is always the same: what if we buy it and nobody uses it? That risk is real, and it is why [DonorDock](/go/donordock) is a strong first CRM. It runs about $98/mo billed annually with unlimited contacts, and it comes with a 90-day money-back guarantee. Three full months to run it against real donors, with your money back if it doesn't stick, removes most of the downside from the decision.
+When the triggers hit, the objection is always the same: what if we buy it and nobody uses it? That risk is real, and there are two ways to answer it.
 
-The feature that fits first-time CRM buyers is the ActionBoard, a daily feed of follow-ups: who to thank, who is about to lapse, who gave for the first time. New CRM owners rarely fail at data entry; they fail at knowing what to do with the data. A daily to-do list solves the actual problem. Readers get 10% off through this site's link, and [our DonorDock review](/platforms/donordock/) covers the details.
+The cheap way is to keep the stakes low. [Eleo](/go/eleo) at $39 a month up to 2,500 donor records, or [Little Green Light](/go/littlegreenlight) at $45, are month-to-month with no setup fee. A serious three-month trial costs you less than a board dinner, and if it fails you have lost almost nothing.
+
+The other way is a guarantee. [DonorDock](/go/donordock) runs a single plan at $500/mo billed annually — $6,000 a year — with a 90-day money-back guarantee behind it. That removes the risk rather than the cost, and it is the right shape of decision only if you are consolidating several subscriptions into one.
+
+What DonorDock has that the cheaper systems don't is the ActionBoard, a daily feed of follow-ups: who to thank, who is about to lapse, who gave for the first time. New CRM owners rarely fail at data entry; they fail at knowing what to do with the data. Whether that is worth roughly ten times Eleo's price is a real question, and the answer depends on how much else it replaces — [our DonorDock review](/platforms/donordock/) works through it.
 
 If budget is the binding constraint, [Little Green Light](/go/littlegreenlight) starts at $45/mo for up to 2,500 constituents with no contracts and no setup fees. It asks more of the user and charges less for it.
 

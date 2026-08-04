@@ -5,7 +5,7 @@ category: donor-crm
 audience: arts organizations
 targetQuery: "donor management software for arts organizations"
 lastVerified: 2026-08-03
-answer: "Arts fundraising is subscription, membership and single-ticket revenue sitting next to contributed income, and the deciding question is whether your box office owns the patron record. Neon CRM carries memberships natively, DonorDock keeps a large patron file affordable, and Bloomerang wins when several staff share entry."
+answer: "Arts fundraising is subscription, membership and single-ticket revenue sitting next to contributed income, and the deciding question is whether your box office owns the patron record. Neon CRM carries memberships natively, Bloomerang wins when several staff share entry, and DonorDock's flat $500/mo stops a large patron file from re-pricing your contract every year."
 picks:
   - platformSlug: neoncrm
     award: "Best overall"
@@ -14,11 +14,11 @@ picks:
   - platformSlug: donordock
     award: "Best for a large patron file"
     forWhom: "A theatre or ensemble with thousands of ticket buyers and few donors"
-    note: "Flat tiers with unlimited contacts — about $98/mo Entry, $300/mo Grow, $585/mo Amplify. Arts organizations carry enormous contact files relative to their donor counts, because everyone who ever bought a ticket is in there. Under record-count pricing you pay for all of them. The ActionBoard is also the right shape for converting single-ticket buyers into donors, which is a follow-up problem rather than a reporting one."
+    note: "One plan at $500/mo billed annually — $6,000/yr, all features, unlimited contacts. Arts organizations carry enormous contact files relative to their donor counts, because everyone who ever bought a ticket is in there. Under record-count pricing you pay for all of them. The ActionBoard is also the right shape for converting single-ticket buyers into donors, which is a follow-up problem rather than a reporting one."
   - platformSlug: bloomerang
     award: "Best for shared data entry"
     forWhom: "A development office where the box office and marketing also need access"
-    note: "$79/mo at roughly 1,000 contacts, about $125/mo at Standard, unlimited users at every tier. Unlimited users matters here because the people who need to look up a patron — front of house, marketing, the development director — outnumber the people entering gifts. The retention dashboards answer the subscriber-renewal question in the same shape as the donor-retention question."
+    note: "From $125/mo billed annually ($1,500/yr), unlimited users. Unlimited users matters here because the people who need to look up a patron — front of house, marketing, the development director — outnumber the people entering gifts. The retention dashboards answer the subscriber-renewal question in the same shape as the donor-retention question."
   - platformSlug: littlegreenlight
     award: "Best value"
     forWhom: "A small company with one administrator"

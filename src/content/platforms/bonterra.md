@@ -37,7 +37,7 @@ otherOptions:
     note: "Guided Fundraising's tier break at 501 contacts arrives early; Eleo publishes its whole ladder to 20,000 records."
   - need: "Want published pricing you can budget against?"
     platformSlug: donordock
-    note: "Flat tiers, unlimited contacts, no quote and no renewal-term negotiation."
+    note: "One published plan, unlimited contacts, no quote and no renewal-term negotiation."
   - need: "Worried about another forced migration?"
     platformSlug: bloomerang
     note: "Salsa customers were migrated out within three years of acquisition; if that durability risk matters to you, weigh an independent vendor."

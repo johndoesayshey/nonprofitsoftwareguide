@@ -10,11 +10,11 @@ picks:
   - platformSlug: bloomerang
     award: "Best overall under $5M"
     forWhom: "A foundation with a small team and a grateful-patient referral program"
-    note: "$79/mo at roughly 1,000 contacts, about $125/mo at Standard, unlimited users. The unlimited-user model fits a foundation where physicians and service-line leaders occasionally need to look something up but aren't daily users. Retention reporting maps directly onto the annual giving program that funds most foundation operations. What you don't get is the electronic-health-record integration the enterprise systems sell — which most foundations under $5M aren't permitted to use anyway."
+    note: "From $125/mo billed annually ($1,500/yr), unlimited users. The unlimited-user model fits a foundation where physicians and service-line leaders occasionally need to look something up but aren't daily users. Retention reporting maps directly onto the annual giving program that funds most foundation operations. What you don't get is the electronic-health-record integration the enterprise systems sell — which most foundations under $5M aren't permitted to use anyway."
   - platformSlug: donordock
     award: "Best for a growing file"
     forWhom: "A foundation whose constituent list grows with every event and campaign"
-    note: "Flat tiers with unlimited contacts — about $98/mo Entry, $300/mo Grow, $585/mo Amplify. Hospital foundations accumulate records relentlessly: event attendees, employee campaigns, memorial gifts, community donors. The ActionBoard suits a grateful-patient program specifically, because the value is entirely in acting on a referral within days rather than in reporting on it later."
+    note: "One plan at $500/mo billed annually — $6,000/yr, all features, unlimited contacts. Hospital foundations accumulate records relentlessly: event attendees, employee campaigns, memorial gifts, community donors. The ActionBoard suits a grateful-patient program specifically, because the value is entirely in acting on a referral within days rather than in reporting on it later."
   - platformSlug: neoncrm
     award: "Best for events and employee giving"
     forWhom: "A foundation running a gala, a golf tournament and an employee campaign"

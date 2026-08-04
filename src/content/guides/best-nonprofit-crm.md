@@ -4,20 +4,20 @@ slug: nonprofit-crm
 category: donor-crm
 targetQuery: "best nonprofit crm"
 lastVerified: 2026-08-03
-answer: "There is no single best nonprofit CRM — the right one depends on who updates your database and how fast your list grows. DonorDock suits teams that need prompting, Eleo is the cheapest real CRM at $39/mo, and Little Green Light gives the most capability per dollar. If you are still on a spreadsheet, your donation platform may already be enough."
+answer: "There is no single best nonprofit CRM — the right one depends on who updates your database and how fast your list grows. Eleo is the cheapest real CRM at $39/mo with the whole price ladder published, Bloomerang wins when several people share entry, and DonorDock is the consolidation play at $500/mo flat. Still on a spreadsheet? Your donation platform may already be enough."
 picks:
-  - platformSlug: donordock
-    award: "Best overall"
-    forWhom: "Small and mid-size shops where the follow-up keeps getting dropped"
-    note: "Flat tiers with unlimited contacts — about $98/mo Entry, $300/mo Grow, $585/mo Amplify — which is the only pricing model here that doesn't re-price you for growing. The ActionBoard is what separates it: instead of a dashboard you have to go look at, the database hands you a daily list of who to thank, who to call and what's overdue. That matters because the failure mode of a small-shop CRM is not missing features, it's nobody opening it. There's a 90-day money-back guarantee, so the decision is reversible, and readers here get 10% off the first payment."
   - platformSlug: eleo
-    award: "Best value"
+    award: "Best overall"
     forWhom: "First-time CRM buyers counting every dollar"
     note: "$39/mo up to 2,500 donor records, and the whole ladder is published: $59 at 5,000, $99 at 10,000, $159 at 15,000, $199 at 20,000, then $10/mo per additional 2,500. Donors, gifts, events, volunteers and mailings are included rather than sold as modules. Our 2026 survey put mean annual CRM spend at $716 for shops under $250K raised — Eleo at $468/yr is comfortably inside that, which very little else in this category is."
   - platformSlug: bloomerang
     award: "Best for adoption"
     forWhom: "Teams where several people enter gifts"
-    note: "$79/mo at roughly 1,000 contacts, about $125/mo at Standard, unlimited users at every tier. Consistently rated the easiest system in the category to learn, and the retention dashboards put lapsing donors on the home screen rather than behind a report build. The premium over cheaper systems is roughly the cost of the database actually getting used — which is a good trade right up until the contact-record bill outruns it."
+    note: "From $125/mo billed annually ($1,500/yr), unlimited users. Consistently rated the easiest system in the category to learn, and the retention dashboards put lapsing donors on the home screen rather than behind a report build. The premium over cheaper systems is roughly the cost of the database actually getting used — which is a good trade right up until the contact-record bill outruns it."
+  - platformSlug: donordock
+    award: "Best for consolidating your stack"
+    forWhom: "A shop whose CRM, email tool and giving pages already total near $6,000"
+    note: "One plan at $500/mo billed annually — $6,000/yr, every feature included, unlimited contacts. Judge this as a consolidation, not as a CRM line: against a record-count CRM at $1,500 and an email tool and a giving platform bought separately, it is a real comparison. Against a $540 CRM alone it is not, and we are not going to pretend otherwise. The ActionBoard is the reason to run the comparison at all — instead of a dashboard you have to remember to open, the database hands you a daily list of who to thank and what is overdue. Ninety-day money-back guarantee, migration included."
   - platformSlug: neoncrm
     award: "Best for memberships"
     forWhom: "Organizations running renewals or ticketed events"
@@ -34,7 +34,7 @@ decidingFactors:
   - factor: "Who updates the database."
     detail: "This decides more than any feature list. One capable admin can run Little Green Light and get more per dollar than anywhere else. Shared entry across a development director, an ED and a part-time processor needs software people will actually open, which is what Bloomerang and DonorDock sell."
   - factor: "How your bill grows."
-    detail: "Most CRMs price by contact or constituent count, so a good acquisition year arrives as a renewal increase. DonorDock's flat tiers with unlimited contacts are the exception. Before you shop, count your file — organically grown lists are routinely 30-40% duplicates, deceased records and one-time event attendees, and cleaning that can drop you a whole tier."
+    detail: "Most CRMs price by contact or constituent count, so a good acquisition year arrives as a renewal increase. DonorDock's single plan with unlimited contacts is the exception, though at $6,000 a year you are paying for that certainty up front. Before you shop, count your file — organically grown lists are routinely 30-40% duplicates, deceased records and one-time event attendees, and cleaning that can drop you a whole tier."
   - factor: "Whether you have a second system already."
     detail: "Memberships, event registration and volunteer tracking are the three things that push shops into a second database. If you're running one, price a CRM that absorbs it before you price a cheaper one that doesn't."
   - factor: "What migration actually costs."

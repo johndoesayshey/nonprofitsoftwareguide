@@ -2,8 +2,8 @@
   "_comment": "The homepage award spotlight. To feature a different product, change `slug` to any platform slug (donordock, 4agoodcause, instrumentl, eleo, monday, jotform...) — pick a featured one and rewrite award/verdict. Everything else on the card (price, link, reader offer) is pulled automatically from the platform page and affiliates.json. Set `show` to false to hide the card. Keep the verdict honest and specific: it is our own editorial pick, not a third-party accreditation.",
   "show": true,
   "slug": "donordock",
-  "award": "Best CRM for a One-Person Shop",
+  "award": "Best CRM for Consolidating Your Stack",
   "year": 2026,
-  "verdict": "The ActionBoard turns the database into a daily follow-up list, which is the actual problem when fundraising is one person's third job. Unlimited contacts, and a 90-day money-back guarantee if it doesn't stick.",
+  "verdict": "One plan, every feature, unlimited contacts — which is the whole argument. It stops being expensive the moment it replaces the CRM, the email tool and the giving pages you're paying for separately. The ActionBoard turns the database into a daily follow-up list, and there's a 90-day money-back guarantee if it doesn't stick.",
   "cta": "See DonorDock pricing"
 }

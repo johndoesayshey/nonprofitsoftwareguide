@@ -5,20 +5,20 @@ category: donor-crm
 audience: animal rescues
 targetQuery: "donor management software for animal rescues"
 lastVerified: 2026-08-03
-answer: "Animal rescues need software built for high volume and low average gift, not for major-gift cultivation. DonorDock's flat pricing with unlimited contacts fits a list that grows fast through adoption events, Zeffy costs nothing at any volume, and Eleo holds volunteers and donors in one place from $39/mo."
+answer: "Animal rescues need software built for high volume and low average gift, not for major-gift cultivation. Eleo holds volunteers and donors in one place from $39/mo, Zeffy costs nothing at any volume, and DonorDock's flat $500/mo replaces several subscriptions once your adoption-event list has outgrown record-count pricing."
 picks:
-  - platformSlug: donordock
-    award: "Best overall"
-    forWhom: "A rescue whose donor list grows faster than its revenue"
-    note: "This is the vertical where flat pricing with unlimited contacts matters most. Rescues acquire names constantly — adoption events, microchip clinics, viral posts about one dog — and a record-count CRM re-prices you every time a rescue story does well. About $98/mo Entry, $300/mo Grow, $585/mo Amplify, and the number doesn't move when the list does. The ActionBoard also fits how rescues actually work: the thank-you to a first-time $25 donor is what turns them into a monthly donor, and it's the thing that gets dropped when everyone is doing transport runs."
   - platformSlug: eleo
-    award: "Best value"
+    award: "Best overall"
     forWhom: "A volunteer-run rescue tracking donors and volunteers together"
     note: "$39/mo up to 2,500 donor records, published all the way up to 20,000. Volunteers and events are included rather than sold as modules, which matters when your foster network, your transport drivers and your donors overlap heavily — often they're the same people. For a rescue whose whole software budget is under $1,000, this is the realistic database."
   - platformSlug: zeffy
     award: "Best free option"
     forWhom: "A rescue where every dollar is vet bills"
     note: "Free at any volume with no platform fee and no processing fee — a $50 donation deposits $50. Covers donations, ticketing, raffles and memberships, which happens to cover most of what a rescue runs. Funded by an optional tip donors are asked for at checkout. The trade-off is that your net per gift depends on donor behaviour rather than a fixed rate, and it isn't a donor database — it holds transactions, not relationship history."
+  - platformSlug: donordock
+    award: "Best for consolidating your stack"
+    forWhom: "A rescue with a large list already paying for a CRM, email and giving pages separately"
+    note: "One plan at $500/mo billed annually — $6,000/yr, unlimited contacts. Rescues acquire names constantly — adoption events, microchip clinics, one viral post about one dog — and a record-count CRM re-prices you every time. Flat pricing removes that, but at $6,000 the structure alone doesn't justify it. Add up your CRM, email tool and giving pages first; if that total is under about $4,000, stay where you are. If it's near $6,000 and you'd rather run one system, this is the trade."
   - platformSlug: donorbox
     award: "Best for monthly giving"
     forWhom: "A rescue building a sponsor-a-pet recurring program"

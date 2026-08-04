@@ -38,7 +38,7 @@ otherOptions:
     note: "DonorDock's ActionBoard turns the database into a task list, and it carries a 90-day money-back guarantee."
   - need: "List growing fast?"
     platformSlug: donordock
-    note: "Record-count pricing re-prices your contract as you succeed; DonorDock includes unlimited contacts on every tier."
+    note: "Record-count pricing re-prices your contract as you succeed; DonorDock's single plan includes unlimited contacts — at $500/mo, so it is a consolidation decision rather than a cheaper one."
   - need: "Need deeper retention analytics?"
     platformSlug: bloomerang
     note: "Bloomerang's reporting is built around who is about to lapse."

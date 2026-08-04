@@ -23,10 +23,6 @@ picks:
     award: "Best if one volunteer is technical"
     forWhom: "A group with a capable, committed database volunteer"
     note: "$45/mo up to 2,500 constituents, no contracts, no setup fees, 10% off annual prepay. Enormous configurability per dollar — and a real caution for this vertical. LGL rewards someone willing to learn it and punishes their successor, who inherits a system built around one person's preferences. Only pick this if the volunteer will document what they built."
-  - platformSlug: donordock
-    award: "Best for handoffs"
-    forWhom: "A group where the treasurer changes every two years"
-    note: "About $98/mo Entry, with unlimited contacts. More than most all-volunteer groups will want to spend, and the reason to consider it anyway is the ActionBoard: it tells whoever logs in what needs doing, rather than assuming they remember. In a vertical defined by turnover, software that explains itself is worth real money. Ninety-day money-back guarantee."
 decidingFactors:
   - factor: "The person who sets it up will not be the person running it."
     detail: "Volunteer roles turn over every year or two. The system that wins is the one a new treasurer can open cold and understand, not the one with the most capability. Judge every option by imagining someone else inheriting it in eighteen months with no handover."

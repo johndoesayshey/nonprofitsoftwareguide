@@ -51,7 +51,7 @@ If step 3 or 4 fails, fix the sheet, not the imported records.
 
 ## Where each platform helps
 
-[Little Green Light](/go/littlegreenlight) starts at $45/mo for up to 2,500 constituents with no contracts and no setup fees, which makes it easy to trial an import at low cost. [Bloomerang](/go/bloomerang) starts around $79/mo for roughly 1,000 contacts and is known for ease of use, which matters when the person doing the import is also the person writing the appeal letters.
+[Little Green Light](/go/littlegreenlight) starts at $45/mo for up to 2,500 constituents with no contracts and no setup fees, which makes it easy to trial an import at low cost. [Bloomerang](/go/bloomerang) starts at $125/mo billed annually ($1,500/yr) and is known for ease of use, which matters when the person doing the import is also the person writing the appeal letters.
 
 For the smallest teams, [DonorSnap](/go/donorsnap) is the shortcut. It runs from $39/mo for 1,000 contacts, and its one-time $200 setup fee includes data conversion and training. Someone on their side does the import work with you. For a solo development shop staring at a decade of messy tabs, paying $200 to hand that problem to a professional is a fair trade. See [our DonorSnap review](/platforms/donorsnap/) for the details.
 

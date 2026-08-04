@@ -5,7 +5,7 @@ category: donor-crm
 audience: community foundations
 targetQuery: "donor management software for community foundations"
 lastVerified: 2026-08-03
-answer: "Community foundations need two systems, and the order matters: fund accounting first, because donor-advised and restricted funds need a general ledger no donor CRM has, then a CRM for the fundraising half. Below, Aplos covers the accounting from $79/mo and DonorDock the relationships from about $98/mo."
+answer: "Community foundations need two systems, and the order matters: fund accounting first, because donor-advised and restricted funds need a general ledger no donor CRM has, then a CRM for the fundraising half. Below, Aplos covers the accounting from $79/mo and Eleo the relationships from $39/mo."
 picks:
   - platformSlug: aplos
     award: "Best for the accounting half"
@@ -14,11 +14,11 @@ picks:
   - platformSlug: donordock
     award: "Best CRM alongside it"
     forWhom: "A foundation with a growing donor and fundholder list"
-    note: "Flat tiers with unlimited contacts — about $98/mo Entry, $300/mo Grow, $585/mo Amplify. Community foundations carry unusually large contact files relative to staff: fundholders, their advisors, grantees, community donors and every professional advisor in the county. Flat pricing means that file can grow. The ActionBoard fits the actual work, which is relationship management with a small number of high-value people."
+    note: "One plan at $500/mo billed annually — $6,000/yr, all features, unlimited contacts. Community foundations carry unusually large contact files relative to staff: fundholders, their advisors, grantees, community donors and every professional advisor in the county. Flat pricing means that file can grow. The ActionBoard fits the actual work, which is relationship management with a small number of high-value people."
   - platformSlug: bloomerang
     award: "Best for shared access"
     forWhom: "A foundation where program staff and development share the database"
-    note: "$79/mo at roughly 1,000 contacts, about $125/mo at Standard, unlimited users at every tier. Community foundations have more people needing occasional access than most organizations their size — program officers, the president, the finance director — and per-seat pricing taxes exactly that. Retention reporting reads naturally against annual unrestricted giving."
+    note: "From $125/mo billed annually ($1,500/yr), unlimited users. Community foundations have more people needing occasional access than most organizations their size — program officers, the president, the finance director — and per-seat pricing taxes exactly that. Retention reporting reads naturally against annual unrestricted giving."
   - platformSlug: littlegreenlight
     award: "Best value"
     forWhom: "A small foundation with one administrator"

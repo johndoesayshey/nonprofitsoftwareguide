@@ -5,16 +5,16 @@ category: donor-crm
 audience: schools
 targetQuery: "donor management software for schools"
 lastVerified: 2026-08-03
-answer: "School advancement has four constituencies — parents, alumni, grandparents and trustees — and the software has to keep them straight without a five-figure system. Bloomerang handles shared data entry across a small advancement office, DonorDock keeps the bill flat as each class graduates, and Neon CRM carries the auction."
+answer: "School advancement has four constituencies — parents, alumni, grandparents and trustees — and the software has to keep them straight without a five-figure system. Bloomerang handles shared data entry across a small advancement office, Little Green Light models class year cheaply, and DonorDock's flat $500/mo absorbs a file that grows by a class every June."
 picks:
   - platformSlug: bloomerang
     award: "Best overall"
     forWhom: "An advancement office where two or three people touch the database"
-    note: "$79/mo at roughly 1,000 contacts, about $125/mo at Standard, unlimited users at every tier. Unlimited users is the specific reason it fits schools: the advancement director, the head of school, the annual fund coordinator and the business office all need to look things up, and a per-seat system taxes exactly the access you want. The retention dashboards also map cleanly onto the number every board asks about — parent participation rate — because it is a retention question wearing a different hat."
+    note: "From $125/mo billed annually ($1,500/yr), unlimited users. Unlimited users is the specific reason it fits schools: the advancement director, the head of school, the annual fund coordinator and the business office all need to look things up, and a per-seat system taxes exactly the access you want. The retention dashboards also map cleanly onto the number every board asks about — parent participation rate — because it is a retention question wearing a different hat."
   - platformSlug: donordock
     award: "Best for a growing alumni file"
     forWhom: "A school whose constituent list grows by a full class every year"
-    note: "Flat tiers with unlimited contacts — about $98/mo Entry, $300/mo Grow, $585/mo Amplify. Schools are structurally guaranteed to add records every June whether or not revenue grows with them, which is the worst possible fit for record-count pricing. Twenty years of graduates is a permanent, compounding list you can never delete. The ActionBoard suits an office of one or two where the follow-up on a pledged gift is what actually slips."
+    note: "One plan at $500/mo billed annually — $6,000/yr, all features, unlimited contacts. Schools are structurally guaranteed to add records every June whether or not revenue grows with them, which is the worst possible fit for record-count pricing. Twenty years of graduates is a permanent, compounding list you can never delete. The ActionBoard suits an office of one or two where the follow-up on a pledged gift is what actually slips."
   - platformSlug: neoncrm
     award: "Best for auctions and events"
     forWhom: "A school where the gala and auction are a big share of revenue"

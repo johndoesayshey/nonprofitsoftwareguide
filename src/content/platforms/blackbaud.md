@@ -34,7 +34,7 @@ strengths:
 otherOptions:
   - need: "Under $5M raised with no database administrator?"
     platformSlug: donordock
-    note: "Flat tiers with unlimited contacts and no configuration project; the depth you are paying for here is depth most shops that size never use."
+    note: "One published plan with unlimited contacts and no configuration project; the depth you are paying for here is depth most shops that size never use."
   - need: "Want the same job done with published pricing?"
     platformSlug: bloomerang
     note: "Rate card published, unlimited users, and the retention reporting most shops actually open."

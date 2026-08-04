@@ -11,14 +11,14 @@ affiliateSlugs: [bloomerang]
 draft: false
 faq:
   - q: "Is Little Green Light cheaper than Bloomerang?"
-    a: "Yes, at every size. LGL runs $45/mo up to 2,500 constituents and tops out at $135/mo at 50,000, with no contracts or setup fees. Bloomerang starts at $79/mo for about 1,000 contacts, with Standard around $125/mo."
+    a: "Yes, at every size. LGL runs $45/mo up to 2,500 constituents and tops out at $135/mo at 50,000, with no contracts or setup fees. Bloomerang starts at $125/mo billed annually ($1,500/yr)."
   - q: "Which is easier to use, Bloomerang or LGL?"
     a: "Bloomerang. Its interface is modern and its retention dashboards surface what needs attention without report-building. LGL is flexible and capable but its interface is dated, and it rewards a user willing to learn it."
   - q: "Do either Bloomerang or LGL charge per user?"
     a: "No. Both price by constituent or contact count, not seats. Bloomerang includes unlimited users, and LGL's tiers are based purely on record count, so adding staff or volunteers costs nothing on either platform."
 ---
 
-Little Green Light wins on price: $45/mo up to 2,500 constituents against Bloomerang's $79/mo start for roughly 1,000 contacts. Bloomerang wins on ease of use and retention dashboards. The decision comes down to who updates the database. A detail-oriented admin thrives in LGL; everyone else does better in Bloomerang.
+Little Green Light wins on price: $45/mo up to 2,500 constituents against Bloomerang's $125/mo start. Bloomerang wins on ease of use and retention dashboards. The decision comes down to who updates the database. A detail-oriented admin thrives in LGL; everyone else does better in Bloomerang.
 
 ## Where LGL wins
 
@@ -28,7 +28,7 @@ It is also flexible. Custom fields, custom categories, and configurable everythi
 
 ## Where Bloomerang wins
 
-[Bloomerang](/go/bloomerang) starts around $79/mo for about 1,000 contacts, with the Standard tier around $125/mo, priced by contact-record count with unlimited users. It costs more than LGL at comparable sizes, and what the difference buys is adoption.
+[Bloomerang](/go/bloomerang) starts at $125/mo billed annually ($1,500/yr), priced by contact-record count above that with unlimited users. It costs more than LGL at comparable sizes, and what the difference buys is adoption.
 
 The interface is clean enough that a board member or program staffer can look up a donor without training. The retention dashboards are the signature feature: they show, on the home screen, whether donors are coming back, which is the number that actually moves annual fund revenue. Bloomerang is lighter on advanced automation, but shops at this size rarely miss it.
 

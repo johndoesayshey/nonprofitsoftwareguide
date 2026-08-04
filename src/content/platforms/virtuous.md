@@ -36,7 +36,7 @@ otherOptions:
     note: "Journeys you never build are the most expensive feature in fundraising software. Buy the reporting you will open instead."
   - need: "Need published pricing to get board approval?"
     platformSlug: donordock
-    note: "Flat tiers, published, no quote — you can budget three years out without a sales call."
+    note: "One published plan at $500/mo, no quote — you can budget three years out without a sales call."
   - need: "Running major-gift portfolios?"
     platformSlug: kindsight
     note: "Reviewers consistently name moves management as Virtuous's weakest area; if portfolios are your core work, test it hard."

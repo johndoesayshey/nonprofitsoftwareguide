@@ -5,7 +5,7 @@ category: donor-crm
 audience: museums
 targetQuery: "donor management software for museums"
 lastVerified: 2026-08-03
-answer: "Museums run memberships, admissions and contributed income together, and the deciding question is whether membership renewals live in your CRM or in a separate admissions system. Neon CRM carries memberships natively from $99/mo, DonorDock keeps a large visitor file affordable, and Little Green Light models odd constituent structures cheaply."
+answer: "Museums run memberships, admissions and contributed income together, and the deciding question is whether membership renewals live in your CRM or in a separate admissions system. Neon CRM carries memberships natively from $99/mo, Little Green Light models odd constituent structures cheaply, and DonorDock's flat $500/mo keeps a large visitor file from re-pricing your contract."
 picks:
   - platformSlug: neoncrm
     award: "Best overall"
@@ -14,11 +14,11 @@ picks:
   - platformSlug: donordock
     award: "Best for a large visitor file"
     forWhom: "A museum with tens of thousands of contacts and a small development team"
-    note: "Flat tiers with unlimited contacts — about $98/mo Entry, $300/mo Grow, $585/mo Amplify. Admissions, school groups, event rentals and members all generate records, most of which never give beyond the ticket price. Flat pricing means that file can grow without a renewal conversation. The ActionBoard fits the actual gap: converting a member into a donor is a follow-up problem nobody owns."
+    note: "One plan at $500/mo billed annually — $6,000/yr, all features, unlimited contacts. Admissions, school groups, event rentals and members all generate records, most of which never give beyond the ticket price. Flat pricing means that file can grow without a renewal conversation. The ActionBoard fits the actual gap: converting a member into a donor is a follow-up problem nobody owns."
   - platformSlug: bloomerang
     award: "Best for shared access"
     forWhom: "A museum where visitor services and development both need the record"
-    note: "$79/mo at roughly 1,000 contacts, about $125/mo at Standard, unlimited users at every tier. The front desk renewing a membership and the development director preparing for a major-gift visit need the same record, and per-seat pricing quietly discourages exactly that. Retention dashboards read naturally as member-retention dashboards."
+    note: "From $125/mo billed annually ($1,500/yr), unlimited users. The front desk renewing a membership and the development director preparing for a major-gift visit need the same record, and per-seat pricing quietly discourages exactly that. Retention dashboards read naturally as member-retention dashboards."
   - platformSlug: littlegreenlight
     award: "Best value"
     forWhom: "A small or volunteer-run museum or historical society"
