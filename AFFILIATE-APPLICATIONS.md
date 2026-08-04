@@ -1,166 +1,169 @@
-# Affiliate applications — verified working list
+# Affiliate applications — the working list
 
-Every URL below was opened in a browser on **2026-08-03** and confirmed to load a
-real application. Where the vendor's own published link is broken, that is stated.
-Nothing here is copied from a roundup post.
+Rewritten 2026-08-03. Every URL below was opened in a browser on that date. Where
+a program's own page and a directory disagree, both are quoted and the more
+specific one is used. Nothing here is copied from a roundup post.
 
-Work top to bottom. The first four are where the money is.
+Use `nonprofitsoftwareguide@gmail.com` and `https://nonprofitsoftwareguide.com`
+on every form.
 
-Use `nonprofitsoftwareguide@gmail.com` and the site URL
-`https://nonprofitsoftwareguide.com` on every form.
-
----
-
-## Apply now — self-serve, no gatekeeper
-
-### 1. DonorDock — $500 per new paid customer
-
-**https://www.donordock.com/partners** → application form is embedded on the page (7 steps)
-
-The best economics on the list by a wide margin, and the product we recommend most
-often. Free to join, no contract, no minimums or tiers, paid monthly. Referrals get
-10% off their first payment, which is a real reader offer we already advertise.
-
-Their FAQ was last updated 2026-03-25, so the terms are current.
+**Per-referral value is computed from our own published product prices.** That
+is the column that decides the order — a percentage tells you nothing until you
+multiply it by what the product actually costs. See `npm run check-monetization`.
 
 ---
 
-### 2. 4aGoodCause — 25%, recurring on every renewal
+## Tier 1 — do these today
 
-**https://4agoodcause.firstpromoter.com/** → instant self-serve signup
+### 1. DonorDock — $500 per customer
+**https://www.donordock.com/partners** — form embedded on the page, seven steps
 
-This is the direct link. Their `/referral-program/` page just points here, so skip it.
-Runs on FirstPromoter: fill in the form, agree to terms, account created.
+Largest flat payout on the list, in our highest-traffic category, on the product
+we recommend most. Free to join, no contract, paid monthly, no minimums. Readers
+get 10% off, which we already advertise. Their FAQ was last updated 2026-03-25.
 
-The only recurring commission on the list. A client who stays three years pays three
-years of commission, so this compounds in a way the flat bounties don't.
+**~$500 per referral.**
 
----
-
-### 3. Jotform — 30%, approved in ~1 business day
-
-**https://www.jotform.com/partnership/affiliate/application/**
-
-Fastest approval on the list. The public page says 30% on every new paid user;
-it does **not** state the "first year only" limit the original research assumed —
-read the terms at signup and tell me what it actually says so I can correct the site.
-
----
-
-### 4. Instrumentl — rate not public, commissions confirmed
-
-**https://beinstrumentl.typeform.com/to/UVUTeuFk**
-
-Their partners page has several routes and most are the wrong one. This is the form
-titled **"Affiliate Partner Application"** — that's the one you want. The others go to
-foundations, accounting firms, and implementation partners.
-
-Two useful confirmations from their FAQ: they pay monthly via Gusto, and **you do not
-need to be an Instrumentl customer to join**. Rate is disclosed after acceptance.
-
-Grant research is our priority category and Instrumentl is the only product in it with
-a working program, so this one matters more than its current `low` rating suggests.
-
----
-
-### 5. Bloomerang — PartnerStack, 90-day cookie
-
-**https://bloomerang.partnerstack.com/?group=agencies** → "Join now"
-
-Self-serve. Commission is one-time, paid the month after the referred client signs
-their contract. The dollar amount is not on the public page — it's behind the referral
-agreement PDF. Tell me what it says once you're in.
-
----
-
-### 6. monday.com — up to 20% per closed deal
-
-**https://mondaycom.partnerstack.com/?group=mbmarketplace** → "Join now"
-
-Self-serve, 90-day cookie. Two structures: partners earn up to 20% per closed deal,
-online affiliates get a cost-per-lead deal per signup. Lower relevance to our audience
-than the others, but it's five minutes and it's the highest-volume product we mention.
-
----
-
-### 7. GiveWP — via StellarWP on Impact
-
-**https://app.impact.com/campaign-promo-signup/StellarWP.brand**
-
-⚠️ **Do not use givewp.com.** That domain now 301s wholesale to Liquid Web, and its old
-affiliate page redirects to Liquid Web's *hosting* affiliate program, which has nothing
-to do with GiveWP. Following the vendor's own links puts you in the wrong program.
-
-The real program survived the consolidation on Impact. One application covers GiveWP,
-LearnDash, The Events Calendar, SolidWP, KadenceWP, Restrict Content Pro, IconicWP and
-Orderable. The commission rate is behind the terms — the "30% then 40%" figure we had
-predates the consolidation and is now marked `[FACT-CHECK]` on our side.
-
----
-
-## Apply by email — no working form
-
-### 8. Donorbox — 15% of fees for 3 years
-
+### 2. Donorbox — 15% of fees for three years
 **Email `partner@donorbox.org`**
 
-The program is live and the terms are good, but **their published application link is
-broken**. `donorbox.tapfiliate.com` 301s to Tapfiliate's own marketing site, and their
-current portal (`partners.donorbox.org`, now on Kiflo) redirects `/signup`, `/register`
-and `/apply` to a sign-in screen with no self-serve registration. They migrated
-platforms and never updated the page. Their own FAQ still tells you to use the dead link.
+Their published application link is broken — `donorbox.tapfiliate.com` 301s to
+Tapfiliate's own marketing site, and the current portal (`partners.donorbox.org`,
+now on Kiflo) redirects `/signup`, `/register` and `/apply` to a sign-in screen
+with no self-serve registration. They migrated platforms and never updated the
+page; their own FAQ still points at the dead link. Mention that in the email — it
+is a genuine favour and it opens the conversation.
 
-Worth saying in the email that you found the link broken — it's a real favour and it
-opens the conversation.
+Attribution is link-only and never retroactive, so every mention must route
+through `/go/donorbox`.
 
-Remember: Donorbox attribution is link-only and never retroactive. Every mention has to
-route through `/go/donorbox` or the commission is lost.
+**~$1,327 per referral over three years** at $100k of online giving — the highest
+on this list.
+
+### 3. 4aGoodCause — 25%, recurring on every renewal
+**https://4agoodcause.firstpromoter.com/** — instant self-serve signup
+
+The direct link; their `/referral-program/` page just points here. The only
+recurring commission on the roster, so it compounds — and recurring revenue is
+worth more per dollar if you ever sell the site.
+
+**~$891 per referral over three years**, and it keeps going.
+
+**While you are in there: ask for a reader discount.** It is the only
+high-potential program without one, and DonorDock's 10% is doing measurable work.
 
 ---
 
-## Low priority — apply only if you have spare time
+## Tier 2 — worth the twenty minutes
 
-### 9. GrantStation
+### 4. PartnerStack account — one signup, many programs
+**https://dash.partnerstack.com/signup**
 
+Not a program, a network. **357 programs** in the public directory at
+`market.partnerstack.com`, with rates stated before you join. One account
+reaches all of them, including several genuinely relevant to this site that we
+were not previously aware of — see the next section.
+
+### 5. Jotform — 30% for 12 months
+**https://www.jotform.com/partnership/affiliate/application/**
+
+Fastest approval on the list, reviewed in about a business day. Their FAQ
+confirms the duration: *"a monthly commission payout for the first year of each
+customer's Jotform subscription."*
+
+**~$88 per referral.** Small, but it is fifteen minutes and Jotform prices per
+account rather than per seat, which makes it an easy honest recommendation.
+
+### 6. Instrumentl — $50 flat
+**https://beinstrumentl.typeform.com/to/UVUTeuFk**
+
+The form titled "Affiliate Partner Application" — their partners page has several
+routes and the rest go to foundations, accountants and implementation partners.
+
+$50 on a $2,148/yr product is 2.3%, so this is not a revenue play. Join it
+anyway: grant research is the category with the most authority-building content
+on the site, readers get $50 off, and a link that pays something beats one that
+pays nothing.
+
+**~$50 per referral.**
+
+---
+
+## Tier 3 — new opportunities found in the PartnerStack directory
+
+All rates below were read directly from `market.partnerstack.com` on 2026-08-03.
+Each is reachable from one PartnerStack account. None has been applied to yet.
+
+| Program | Stated offer | Why it fits this site |
+|---|---|---|
+| **Ticket Tailor** | 20% of all fees generated by your referral, **forever** | Event ticketing. Nonprofits run galas, auctions and fundraisers constantly, and this is recurring with no end date — structurally the best terms on the whole list. |
+| **Xero** | $200 per qualified purchase | Nonprofit bookkeeping. Sits directly beside our Aplos coverage and the QuickBooks integration questions readers actually ask. |
+| **BILL** | $250 per AP/AR customer | Accounts payable for nonprofits with real finance operations. |
+| **Brevo** | $100 per paying customer | Email marketing — a genuine gap in our coverage, and every nonprofit needs it. |
+| **Kit (ConvertKit)** | 50% recurring for the customer's first year | Email, creator-shaped but widely used by small nonprofits. |
+| **Dext** | 50–70% of first six months (£70–£500 per referral) | Expense and receipt capture, adjacent to the accounting cluster. |
+| **SurveySparrow** | 25% of every sale, recurring for the customer's lifetime | We publish an annual survey. This is the tool that runs it, and the content writes itself. |
+| **QuickBooks** | Customer gets 30% off; partner rate not shown publicly | Highest relevance of anything here. Check the rate inside the dashboard. |
+
+**The three worth acting on first: Ticket Tailor, Xero and Brevo.** Each opens a
+category we cover thinly or not at all, and each pays more per referral than
+Jotform and Instrumentl combined.
+
+---
+
+## Low priority
+
+### GrantStation
 **https://grantstation.com/partner-programs/product-referral-program-old**
-Contact: Juliet Vile, VP Operations — `juliet.vile@grantstation.com`
+Contact: Juliet Vile — `juliet.vile@grantstation.com`
 
-Three problems, in order of severity:
+Three problems: the commission is on Online Education (webinar) sales only, not
+the ~$199 membership we actually recommend; the only live page has an `-old` slug
+and appears in no sitemap section; and eligibility is written for associations
+with members. Send the email if you like. Do not plan around it.
 
-1. The commission is on **Online Education (webinar) sales only** — not the ~$199
-   membership, which is the product we actually recommend. The economics we assumed
-   don't exist.
-2. The only live page has an `-old` slug, is missing from their Partner Programs nav,
-   and doesn't appear in any sitemap section. Orphaned pages usually mean a program
-   being quietly wound down or made invite-only.
-3. Eligibility is written for "alliances and associations" with members, chapters or
-   subscribers. We have readers, not members.
+### GiveWP — via StellarWP on Impact
+**https://app.impact.com/campaign-promo-signup/StellarWP.brand**
 
-Send the email if you want. Don't plan around it.
+⚠️ **Do not use givewp.com.** It 301s wholesale to Liquid Web, and its old
+affiliate page redirects to Liquid Web's *hosting* affiliate program, which has
+nothing to do with GiveWP. Following the vendor's own links puts you in the wrong
+program. One application covers eight StellarWP brands.
+
+### Aplos
+**https://www.aplos.com/referral-program**
+
+A real terms page, but §6.3 reads *"Intentionally Omitted - Pricing available to
+approved Affiliates"* — the rate is withheld until you are in. Quarterly payouts
+by cheque, $25 reissue fee on a returned cheque, five business days to dispute.
+Worth applying to find out the number.
+
+### monday.com
+**https://monday.com/affiliate-mb-mobile**
+
+Three sources disagree. PartnerStack's directory — the most specific about the
+affiliate track — says **"$10+ per signup"**. monday's own page says *"Earn 25%
+on the first sale for each customer."* The PartnerStack program page says "a CPL
+per sign-up." Assume $10 until the dashboard proves otherwise. It is one form
+inside a PartnerStack account you want anyway.
 
 ---
 
 ## Do not apply
 
-### Greater Giving — **not an affiliate program**
+**Greater Giving.** Not an affiliate program. The form asks for the *referred
+organization's* name, email, phone and address — you refer a specific nonprofit
+you personally know, and there is no tracking link. A content site cannot use it,
+and we will not submit readers' contact details to a vendor.
 
-I had this rated `high` on a $300-per-referral figure. Opening the actual form changed
-that: it asks for the **referred organization's** name, email, phone, address and zip.
-There is no tracking link. You refer a specific nonprofit you personally know, by name.
+**Bloomerang.** The rate it publishes pays a **donation to a 501(c)(3)**, which
+this site is not. Its separate PartnerStack agency track publishes no rate before
+login and may pay cash — if you are in PartnerStack anyway, five minutes will
+tell you. Until then, assume zero.
 
-A content site can't use that. We don't know our readers' details, and submitting a
-reader's contact information to a vendor without their consent isn't something we'll do.
-Downgraded to `none`. Revisit only if they add a tracking link.
-
-### DonorSnap — program appears discontinued
-
-Every plausible path 404s. Their full 99-page sitemap dated 2026-07-31 contains no
-affiliate, referral, partner or reseller page, and on-site search returns only CRM
-feature docs. Wayback shows `/affiliates/` was live in 2022. The only source still
-describing the program is a vendor blog roundup whose "sign up" link points at the bare
-homepage — which is what those roundups do when the real target has rotted.
-
-The `$200 per paying customer` figure has no live source. Set to `status: "none"`.
+**DonorSnap.** Program appears discontinued. Every plausible path 404s, and their
+full 99-page sitemap dated 2026-07-31 contains no affiliate, referral or partner
+page. The `$200 per customer` figure in the original spec has no live source.
 
 ---
 
@@ -168,15 +171,16 @@ The `$200 per paying customer` figure has no live source. Set to `status: "none"
 
 1. Paste the tracking link into `affiliateUrl` in `src/data/affiliates.json`.
 2. Set `status` to `"active"` and fill in `approvedOn`.
-3. Fill in `appliedOn` when you apply, so we can chase anything that goes quiet.
+3. Fill in `appliedOn` when you apply, so anything that goes quiet can be chased.
 4. If the program supplies a reader discount, put it in `readerOffer` — it renders
    beside every link to that product and materially raises click-through.
+5. Correct `payout` and `potential` if the real rate differs from what is recorded.
+   Then run `npm run check-monetization` — placement re-sorts automatically.
 
-Nothing else needs touching. `/go/<slug>` starts using the tracking link automatically,
-and every mention across the site routes through it.
+`/go/<slug>` starts using the tracking link the moment `status` is `active`.
 
-## Tier B — negotiated, not now
+## Tier B — negotiated, not yet
 
-Kindsight, DonorSearch and Neon One are consulting-partner deals with no signup form.
-Per CLAUDE.md these need real traffic behind them before you open the conversation.
-Revisit when Search Console shows meaningful impressions.
+Kindsight, DonorSearch and Neon One are consulting-partner deals with no signup
+form. Per CLAUDE.md these need real traffic behind them first. Revisit when
+Search Console shows meaningful impressions.

@@ -41,7 +41,7 @@ const LTV3 = {
   jotform: 88,         // 30% x 12 months of ~$24.50/mo
   eleo: 100,           // $100 flat, after 90 days
   instrumentl: 50,     // $50 flat
-  monday: 270,         // 25% of first sale; ~5-10 seats annual at $9-$12/seat
+  monday: 20,          // $10+ per signup (PartnerStack directory, affiliate track)
   aplos: null,         // rate withheld until approval
   givewp: null,        // behind Impact terms
 };

@@ -462,18 +462,18 @@
     "url": "https://monday.com",
     "affiliateUrl": null,
     "readerOffer": null,
-    "terms": "25% of the first sale for each customer, stated on monday.com's own affiliate page. Note the ambiguity in \"first sale\": on an annual plan that is a year of seats, on monthly billing it is one month. Confirm which at signup — it is the difference between roughly $180 and roughly $15 on a five-seat deal.",
+    "terms": "THREE sources, and they disagree. PartnerStack's public program directory is the most specific about the track a publisher would be on: \"Partners: Earn up to 20% commission on every closed deal. Affiliates: Earn $10+ per signup.\" monday's own affiliate landing page says \"Earn 25% on the first sale for each customer.\" The PartnerStack program page says \"up to 20% per closed deal\" and \"a CPL per sign-up\". Assume $10+ per signup until the dashboard says otherwise.",
     "signupUrl": "https://monday.com/affiliate-mb-mobile",
     "appliedOn": null,
     "approvedOn": null,
-    "payout": "25% of the first sale for each referred customer",
-    "potential": "medium",
-    "badge": "25%",
-    "potentialNote": "Corrected again 2026-08-03, and this time from monday's own page rather than PartnerStack's. monday.com/affiliate-mb-mobile states: \"Earn 25% on the first sale for each customer.\" That page is live — an earlier note here called it dead, which was wrong. We also had the wrong PartnerStack group: the affiliate entry is group=mbaffiliatesentryofficial, not mbmarketplace. The generic PartnerStack program page still shows only \"up to 20% per closed deal\" for partners and \"a CPL per sign-up\" for online affiliates, and its FAQ says the commission period \"will be stated in your specific partner's group\" — so the real terms are only visible after joining. Rated medium, not high: 25% of a first sale on monday's $9-$12/seat pricing is roughly $180-$360 for a small team on an annual plan, which beats Jotform but sits under DonorDock at $500, and it is one-time rather than recurring.",
+    "payout": "Affiliates: $10+ per signup. Partners (resell/implement): up to 20% per closed deal.",
+    "potential": "low",
+    "badge": null,
+    "potentialNote": "Rated low 2026-08-03 after a third source. I had raised this to medium on monday's own marketing page (\"Earn 25% on the first sale\"), which was the wrong source to trust: PartnerStack's public program directory names the affiliate track explicitly at \"$10+ per signup\", and a directory entry maintained alongside the live program beats a landing page. The 25% figure may be a different track, stale, or aspirational. Worth joining anyway — it is one form inside a PartnerStack account you want for other reasons — but do not build placement around it, and check the real rate in the dashboard once you are in.",
     "evidence": {
-      "url": "https://monday.com/affiliate-mb-mobile",
+      "url": "https://market.partnerstack.com/",
       "checked": "2026-08-03",
-      "quote": "Earn 25% on the first sale for each customer. Together we'll build a compensation model best suited to your needs."
+      "quote": "monday.com — Partners: Earn up to 20% commission on every closed deal. Affiliates: Earn $10+ per signup"
     }
   },
   "salesforcenpsp": {
