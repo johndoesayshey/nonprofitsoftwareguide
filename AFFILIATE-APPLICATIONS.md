@@ -46,9 +46,9 @@ on this list.
 ### 3. 4aGoodCause — 25%, recurring on every renewal ✅ SUBMITTED 2026-08-03
 **https://4agoodcause.firstpromoter.com/** — instant self-serve signup
 
-*FirstPromoter creates the account immediately, so the tracking link may already
-be waiting. Check for it, then paste into `affiliateUrl`, set `status` to
-`"active"` and fill in `approvedOn`.*
+*Awaiting approval. Creating the FirstPromoter account does NOT hand you a live
+tracking link — 4aGoodCause approves first. When they do: paste the link into
+`affiliateUrl`, set `status` to `"active"`, fill in `approvedOn`.*
 
 The direct link; their `/referral-program/` page just points here. The only
 recurring commission on the roster, so it compounds — and recurring revenue is
