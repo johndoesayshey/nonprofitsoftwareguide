@@ -9,7 +9,6 @@ import { CATEGORIES } from '../../lib/categories';
 import { getAffiliate } from '../../lib/affiliates';
 import { valueOf, categoryValue, relFor } from '../../lib/affiliate-value';
 import { formatMedium } from '../../lib/dates';
-import survey from '../../data/survey-2026.json';
 
 // This page absorbed the old standalone /pricing/ page (301 in public/_redirects).
 // The two were nearly the same table twice: a comparison of these products IS a
@@ -105,41 +104,6 @@ const datasetLd = {
       <p class="verified-row"><span class="verified">Last price check {formatMedium(newest)}</span></p>
 
       <AffiliateDisclosure />
-
-      <section class="context">
-        <h2>What your peers actually spend</h2>
-        <p>
-          List prices are one thing, budgets another. These are means from our
-          <a href="/benchmarks/">2026 survey of {survey.sampleSize} U.S. fundraising
-          professionals</a> — annual spend per category, by how much the
-          organization raises:
-        </p>
-        <div class="table-scroll">
-          <table class="spend">
-            <thead>
-              <tr>
-                <th scope="col">Category</th>
-                {survey.segments.map((s) => <th scope="col" class="num-head">{s.label}</th>)}
-              </tr>
-            </thead>
-            <tbody>
-              {survey.categories.map((c) => (
-                <tr>
-                  <th scope="row"><a href={c.path}>{c.label}</a></th>
-                  {survey.segments.map((s) => (
-                    <td class="num">${(survey as any).mean[c.slug][s.slug].toLocaleString()}</td>
-                  ))}
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-        <p class="table-note">
-          Sample sizes: {survey.segments.map((s) => `${s.label} n=${s.n}`).join(', ')}.
-          If a quote lands well above the band for your size, the burden of proof
-          is on the vendor.
-        </p>
-      </section>
 
       {alternatives.length > 0 && (
         <section class="switching">
@@ -268,7 +232,7 @@ const datasetLd = {
   .answer { font-size: 1.12rem; line-height: 1.55; border-left: 4px solid var(--color-green-deep);
     padding-left: 1rem; margin: 1rem 0 1.1rem; }
   .verified-row { margin: 0 0 1.2rem; }
-  .context > p, .method > p, .cite > p { max-width: 46rem; }
+  .method > p, .cite > p { max-width: 46rem; }
 
   .cmp-block { margin: 2rem 0 2.4rem; }
   .cmp-block h2 a { text-decoration: none; color: var(--color-ink); }
@@ -283,9 +247,6 @@ const datasetLd = {
   tbody th a { font-weight: 800; text-decoration: none; color: var(--color-ink); }
   tbody th a:hover { color: var(--color-green-deep); text-decoration: underline; }
 
-  table.spend { min-width: 40rem; }
-  .num-head, .num { text-align: right; font-variant-numeric: tabular-nums; }
-  .num { font-weight: 700; color: var(--color-green-deep); }
 
   table.cmp { min-width: 48rem; table-layout: fixed; }
   table.cmp col.c-tool { width: 15%; } table.cmp col.c-price { width: 26%; }
@@ -336,7 +297,6 @@ const datasetLd = {
     text-transform: uppercase; color: var(--color-green-deep); font-weight: 700; margin: 0 0 .4rem; }
   .switching-lede { margin: 0; }
 
-  .table-note { color: var(--color-muted); font-size: .85rem; max-width: 46rem; }
   .method, .cite { margin-top: 2.4rem; padding-top: 1.2rem; border-top: 2px solid var(--color-ink); }
   .cite-block { font-family: var(--font-mono); font-size: .82rem; background: var(--color-paper-2);
     border-left: 3px solid var(--color-green); padding: .8rem 1rem; border-radius: 3px; }
