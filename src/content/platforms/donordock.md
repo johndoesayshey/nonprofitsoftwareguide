@@ -12,10 +12,10 @@ pricingTiers:
   - tier: "Platform fee on online gifts"
     price: "2%"
     note: "plus Stripe/PayPal, typically 2.2% + $0.30"
-  - tier: "Premium onboarding"
+  - tier: "Onboarding & data migration"
     price: "$3,800 one-time"
-    note: "optional; white-glove migration is included without it"
-lastVerified: 2026-08-03
+    note: "paid service, not included in the plan — put it in your year-one math"
+lastVerified: 2026-08-04
 bestFor: "Shops consolidating several tools into one, where the combined bill already approaches $6,000 a year."
 targetQuery: "donordock review"
 affiliateSlug: donordock
@@ -36,7 +36,7 @@ draft: false
 strengths:
   - "One plan with everything in it — no tier to outgrow and no module to bolt on later"
   - "Unlimited contacts, so a growing list never re-prices the contract"
-  - "90-day money-back guarantee and white-glove migration included, not sold as onboarding"
+  - "90-day money-back guarantee, the longest in the category"
 otherOptions:
   - need: "Want deeper retention and segmentation reporting?"
     platformSlug: bloomerang
@@ -69,8 +69,10 @@ in the category.
 
 Unlimited contacts on the single plan means a growing file never re-prices the
 contract — no record-count creep, ever. There is a 90-day money-back guarantee,
-and white-glove data migration is included rather than sold as an onboarding
-package.
+the longest in the category. Onboarding and data migration are a paid service —
+$3,800 one-time — not included in the plan. That puts the real first-year total
+at $9,800, and it belongs in the board memo next to the subscription, not as a
+surprise after signing.
 
 ## Who it is for now
 
@@ -103,9 +105,11 @@ but then you are not consolidating, and the case for the price weakens.
 | | |
 |---|---|
 | ONE — the only plan | **$500/mo**, billed annually ($6,000/yr) |
+| Onboarding & data migration | **$3,800 one-time** — paid, not included |
 | Platform fee on online gifts | 2% + Stripe/PayPal (~2.2% + $0.30) |
 | Contacts | Unlimited |
 | Guarantee | 90 days, money back |
+| Real year-one total | **$9,800** plus processing |
 
 Readers get 10% off the first payment through [this site's link](/go/donordock).
 

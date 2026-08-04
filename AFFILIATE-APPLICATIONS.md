@@ -15,7 +15,7 @@ multiply it by what the product actually costs. See `npm run check-monetization`
 
 ## Tier 1 — do these today
 
-### 1. DonorDock — $500 per customer ✅ SUBMITTED 2026-08-03
+### 1. DonorDock — $500 per customer ✅ APPROVED 2026-08-04 — link live
 **https://www.donordock.com/partners** — form embedded on the page, seven steps
 
 *Awaiting response. When approved: paste the tracking link into `affiliateUrl`,
@@ -27,7 +27,7 @@ get 10% off, which we already advertise. Their FAQ was last updated 2026-03-25.
 
 **~$500 per referral.**
 
-### 2. Donorbox — 15% of fees for three years ✅ SUBMITTED 2026-08-03
+### 2. Donorbox — 15% of fees for three years ✅ APPROVED 2026-08-04 — link live
 **https://donorbox.org/affiliate-partner-program** → click **"Become a Partner"**
 
 The form is a modal on that page, not a separate URL — the button is
@@ -43,7 +43,7 @@ set `status` to `"active"`, fill in `approvedOn`.*
 **~$1,327 per referral over three years** at $100k of online giving — the highest
 on this list.
 
-### 3. 4aGoodCause — 25%, recurring on every renewal ✅ SUBMITTED 2026-08-03
+### 3. 4aGoodCause — 25%, recurring on every renewal ✅ APPROVED 2026-08-04 — link live
 **https://4agoodcause.firstpromoter.com/** — instant self-serve signup
 
 *Awaiting approval. Creating the FirstPromoter account does NOT hand you a live
@@ -102,7 +102,7 @@ but wait — the moment it clears, work the list in this order:
 6. **Bloomerang** — check whether the agency track pays cash rather than a
    donation. Five minutes settles a question we could not answer from outside.
 
-### 6. Jotform — 30% for 12 months ✅ SUBMITTED 2026-08-03
+### 6. Jotform — 30% for 12 months ✅ APPROVED 2026-08-04 — link live
 **https://www.jotform.com/partnership/affiliate/application/**
 
 *Reviewed within about one business day, so this should be the first approval to

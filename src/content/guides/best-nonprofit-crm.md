@@ -17,7 +17,7 @@ picks:
   - platformSlug: donordock
     award: "Best for consolidating your stack"
     forWhom: "A shop whose CRM, email tool and giving pages already total near $6,000"
-    note: "One plan at $500/mo billed annually — $6,000/yr, every feature included, unlimited contacts. Judge this as a consolidation, not as a CRM line: against a record-count CRM at $1,500 and an email tool and a giving platform bought separately, it is a real comparison. Against a $540 CRM alone it is not, and we are not going to pretend otherwise. The ActionBoard is the reason to run the comparison at all — instead of a dashboard you have to remember to open, the database hands you a daily list of who to thank and what is overdue. Ninety-day money-back guarantee, migration included."
+    note: "One plan at $500/mo billed annually — $6,000/yr, every feature included, unlimited contacts. Judge this as a consolidation, not as a CRM line: against a record-count CRM at $1,500 and an email tool and a giving platform bought separately, it is a real comparison. Against a $540 CRM alone it is not, and we are not going to pretend otherwise. The ActionBoard is the reason to run the comparison at all — instead of a dashboard you have to remember to open, the database hands you a daily list of who to thank and what is overdue. Ninety-day money-back guarantee; onboarding and data migration are quoted separately, so get that number into your first-year math."
   - platformSlug: neoncrm
     award: "Best for memberships"
     forWhom: "Organizations running renewals or ticketed events"
