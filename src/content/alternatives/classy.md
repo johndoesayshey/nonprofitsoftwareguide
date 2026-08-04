@@ -31,6 +31,8 @@ stayIf: "You run multi-channel campaigns with a marketing team, or peer-to-peer 
 draft: false
 ---
 
+**First, a change worth knowing about:** classy.org now redirects wholesale to GoFundMe Pro. The Classy brand has been absorbed, and if you are evaluating or renewing, you are dealing with GoFundMe rather than the company you originally signed with. Checked 3 August 2026.
+
 The question that decides this is not which platform has better features. It is which fee structure fits your volume, because online giving platforms are priced three different ways and the cheapest one flips as you grow.
 
 ## Run your own break-even

@@ -346,7 +346,7 @@
     "name": "Classy",
     "category": "donation-processing",
     "status": "none",
-    "url": "https://www.classy.org",
+    "url": "https://pro.gofundme.com/",
     "affiliateUrl": null,
     "readerOffer": null,
     "terms": "Tier C: nothing public found.",
@@ -356,7 +356,7 @@
     "payout": "No program",
     "potential": "none",
     "badge": "—",
-    "potentialNote": "No affiliate program exists. Covered for credibility, and it will never earn. Do not build a page around it expecting revenue."
+    "potentialNote": "No program. Note for content: classy.org now 301s wholesale to pro.gofundme.com — the Classy brand has been absorbed into GoFundMe Pro, and its State of Modern Philanthropy research went with it. Checked 2026-08-03. Our Classy switching guide should say so."
   },
   "donorperfect": {
     "name": "DonorPerfect",
