@@ -117,7 +117,22 @@ if (underplaced.length) {
   }
 }
 
-if (!wasted.length && !underplaced.length) {
+// Completeness: a program that can pay is worthless if nobody applies to it, and
+// the applications doc is the only place that gets worked from. Eleo and Donately
+// were both missing from it for a week without anything noticing.
+const doc = existsSync(join(ROOT, 'AFFILIATE-APPLICATIONS.md'))
+  ? readFileSync(join(ROOT, 'AFFILIATE-APPLICATIONS.md'), 'utf8').toLowerCase()
+  : '';
+const undocumented = Object.entries(affiliates)
+  .filter(([slug, a]) => !slug.startsWith('_') && a.potential && a.potential !== 'none')
+  .filter(([slug]) => !doc.includes(slug))
+  .map(([slug]) => slug);
+if (undocumented.length) {
+  console.log(red(`\n✗ Can pay but missing from AFFILIATE-APPLICATIONS.md: ${undocumented.join(', ')}`));
+  console.log(red('  Add them, or downgrade potential to none with a reason.'));
+}
+
+if (!wasted.length && !underplaced.length && !undocumented.length) {
   console.log(green('\n✓ placement broadly tracks earning potential.'));
 }
 console.log('');

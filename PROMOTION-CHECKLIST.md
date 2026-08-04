@@ -31,6 +31,9 @@ Approval takes days to weeks, so start the clock before anything else.
 - [x] **Instrumentl** — https://beinstrumentl.typeform.com/to/UVUTeuFk — **submitted 2026-08-03**
       ⏳ up to a month for review; the slowest of the batch
 
+- [ ] **Eleo** — https://eleoonline.com/consultant-partner-interest/ *($100/referral)*
+      → it is the *Consultant* Community form, so lead with the consulting work
+
 Full detail and the rest of the list: `AFFILIATE-APPLICATIONS.md`.
 
 **Expected response times**, so nothing gets chased too early:

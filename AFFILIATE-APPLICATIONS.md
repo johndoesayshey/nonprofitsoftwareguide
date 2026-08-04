@@ -116,7 +116,32 @@ customer's Jotform subscription."*
 **~$88 per referral.** Small, but it is fifteen minutes and Jotform prices per
 account rather than per seat, which makes it an easy honest recommendation.
 
-### 7. Instrumentl — $50 flat ✅ SUBMITTED 2026-08-03
+### 7. Eleo — $100 per referred client
+**https://eleoonline.com/consultant-partner-interest/**
+
+An interest form rather than instant approval — "fill out the form below and an
+Eleo Team Member will be in touch." Note the framing: it is the **Nonprofit
+Consultant Community**, which fits you better than a pure publisher, so lead with
+the consulting work.
+
+$100 paid once, and only after the referred client has been active 90 days. No
+quotas, no exclusivity. Eleo is on 22 of our pages as the value pick in donor CRM
+— the product we send budget-constrained shops to — so the volume could be
+reasonable even though the unit is small.
+
+**~$100 per referral.**
+
+### 8. Donately — 20% revenue share, uncapped
+**https://get.donately.com/partnership-request**
+
+Lower priority than its rate suggests, because Donately is unfeatured on the site
+— it appears on 7 pages rather than in any shortlist. The program itself is
+genuinely good (20% of platform fees, no cap), so the link is worth activating on
+the pages that do exist. Do it after the Tier 1 and PartnerStack work.
+
+**~$600 per referral over three years**, on modest online volume.
+
+### 9. Instrumentl — $50 flat ✅ SUBMITTED 2026-08-03
 **https://beinstrumentl.typeform.com/to/UVUTeuFk**
 
 *⏳ Their form warns review can take **up to a month** — the slowest of the batch.
