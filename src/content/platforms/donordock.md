@@ -17,6 +17,10 @@ bestFor: "Easy to onboard CRM to help drive fundraising followups. Excellent cho
 targetQuery: "donordock review"
 affiliateSlug: donordock
 freeTier: false
+features:
+  emailMarketing: included
+featureNotes:
+  emailMarketing: "10,000/mo; +10,000 for $45"
 draft: false
 strengths:
   - "The ActionBoard turns the database into a daily to-do list"

@@ -18,6 +18,10 @@ targetQuery: "donorbox review"
 alsoIn: [donor-crm]
 affiliateSlug: donorbox
 freeTier: true
+features:
+  emailMarketing: add-on
+featureNotes:
+  emailMarketing: "requires Donorbox CRM — price unpublished, waitlist only"
 draft: false
 strengths:
   - "Donation forms live in minutes and embed anywhere"

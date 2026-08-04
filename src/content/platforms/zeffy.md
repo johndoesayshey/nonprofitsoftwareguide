@@ -14,6 +14,10 @@ bestFor: "Fee-sensitive shops that want to keep every dollar of every gift"
 targetQuery: "is zeffy really free"
 affiliateSlug: zeffy
 freeTier: true
+features:
+  emailMarketing: included
+featureNotes:
+  emailMarketing: "free; up to 100,000 per blast"
 draft: false
 strengths:
   - "Zero fees to the nonprofit: a $100 gift deposits $100"

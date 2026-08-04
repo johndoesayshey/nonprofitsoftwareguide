@@ -1,0 +1,137 @@
+---
+import { getCollection } from 'astro:content';
+import { valueOf, relFor } from '../lib/affiliate-value';
+import {
+  FEATURE_ORDER, FEATURE_LABEL, LEVEL_LABEL, LEVEL_MEANING, consolidationScore,
+  type FeatureLevel,
+} from '../lib/features';
+
+interface Props {
+  category: string;
+  /** Set when the page already explains the chart, to skip the standfirst. */
+  bare?: boolean;
+}
+const { category, bare = false } = Astro.props;
+
+// Featured products only — this is a shortlist, same rule as everywhere else.
+const platforms = (await getCollection('platforms', ({ data }) => data.draft === false && data.featured))
+  .filter((p) => p.data.category === category || (p.data.alsoIn ?? []).includes(category as any))
+  .map((p) => p.data)
+  .sort((a, b) => valueOf(b.affiliateSlug) - valueOf(a.affiliateSlug) || a.name.localeCompare(b.name));
+
+// Drop rows nothing in this category has, so the chart never carries dead weight.
+const rows = FEATURE_ORDER.filter((k) =>
+  platforms.some((p) => (p.features as any)?.[k] && (p.features as any)[k] !== 'unknown')
+);
+
+const scored = platforms.map((p) => ({ p, score: consolidationScore(p.features as any) }));
+const best = Math.max(0, ...scored.map((s) => s.score));
+---
+{platforms.length > 1 && rows.length > 0 && (
+  <div class="prose fm-wrap" style="max-width: none;">
+    <h2>Which one replaces the most other subscriptions?</h2>
+    {!bare && (
+      <p class="fm-lede">
+        The usual reason for changing systems is not a missing feature — it is
+        paying for four or five tools that half-overlap. This chart is built around
+        that: <strong>Yes</strong> means good enough to cancel the separate
+        subscription, <strong>Basic</strong> means it technically does it and you
+        will probably keep paying for the other thing anyway.
+      </p>
+    )}
+
+    <div class="fm-scroll">
+      <table class="fm">
+        <thead>
+          <tr>
+            <th scope="col" class="fm-feature">Feature</th>
+            {scored.map(({ p }) => (
+              <th scope="col" class="fm-tool">
+                <a href={`/platforms/${p.slug}/`}>{p.shortName ?? p.name}</a>
+              </th>
+            ))}
+          </tr>
+        </thead>
+        <tbody>
+          {rows.map((key) => (
+            <tr>
+              <th scope="row">{FEATURE_LABEL[key]}</th>
+              {scored.map(({ p }) => {
+                const lvl = ((p.features as any)?.[key] ?? 'unknown') as FeatureLevel;
+                const note = (p.featureNotes as any)?.[key];
+                return (
+                  <td class={`lvl lvl-${lvl}`} title={LEVEL_MEANING[lvl]}>
+                    <span class="lvl-mark">{LEVEL_LABEL[lvl]}</span>
+                    <span class="sr-only"> — {LEVEL_MEANING[lvl]}</span>
+                    {note && <span class="lvl-note">{note}</span>}
+                  </td>
+                );
+              })}
+            </tr>
+          ))}
+          {/* "1 of 1" tells nobody anything. The consolidation count only means
+              something once there are several features to consolidate. */}
+          {rows.length >= 3 && (
+          <tr class="fm-total">
+            <th scope="row">Subscriptions it can replace</th>
+            {scored.map(({ p, score }) => (
+              <td class={score === best && best > 0 ? 'fm-win' : ''}>
+                {score} of {rows.length}
+              </td>
+            ))}
+          </tr>
+          )}
+        </tbody>
+      </table>
+    </div>
+
+    <p class="fm-foot">
+      <strong>?</strong> means we could not confirm it from the vendor's own pages.
+      We would rather leave a gap than guess — check it in a demo and
+      <a href="/about/">tell us</a> if we are wrong.
+    </p>
+  </div>
+)}
+
+<style>
+  .fm-wrap { margin: 2.4rem 0; }
+  .fm-lede { max-width: 46rem; }
+  /* position: relative matters. The .sr-only spans inside are absolutely
+     positioned, and overflow:auto alone does not contain absolute descendants —
+     without a positioned ancestor they anchor to the initial containing block,
+     land at the table's full scrolled width, and stretch the whole document
+     sideways. Cost me a page-level horizontal scrollbar to find. */
+  .fm-scroll { overflow-x: auto; margin: 1rem 0 .8rem; position: relative; }
+
+  table.fm { width: 100%; min-width: 44rem; border-collapse: collapse; font-size: .9rem; }
+  table.fm th, table.fm td { padding: .55rem .7rem; text-align: left;
+    border-bottom: 1px solid var(--color-rule); }
+  table.fm thead th { font-size: .72rem; letter-spacing: .05em; text-transform: uppercase;
+    font-weight: 800; color: var(--color-muted); border-bottom: 2px solid var(--color-ink);
+    vertical-align: bottom; }
+  .fm-feature { width: 22%; }
+  .fm-tool a { color: var(--color-ink); text-decoration: none; font-size: .92rem;
+    text-transform: none; letter-spacing: 0; }
+  .fm-tool a:hover { color: var(--color-green-deep); text-decoration: underline; }
+  table.fm tbody th { font-weight: 600; color: var(--color-ink); }
+
+  .lvl { text-align: center; }
+  .lvl-mark { font-weight: 700; font-size: .84rem; }
+  .lvl-included .lvl-mark { color: var(--color-green-deep); }
+  .lvl-basic .lvl-mark { color: var(--color-muted); font-weight: 600; }
+  .lvl-add-on .lvl-mark { color: var(--color-ink); font-weight: 600; }
+  .lvl-none .lvl-mark { color: var(--color-muted); font-weight: 400; }
+  .lvl-unknown .lvl-mark { color: var(--color-rule-strong); }
+  .lvl-note { display: block; font-size: .72rem; color: var(--color-muted);
+    font-weight: 400; margin-top: .1rem; line-height: 1.3; }
+
+  .fm-total th, .fm-total td { border-top: 2px solid var(--color-ink); border-bottom: 0;
+    padding-top: .7rem; font-weight: 700; }
+  .fm-total td { text-align: center; color: var(--color-muted); }
+  .fm-total td.fm-win { color: var(--color-green-deep); }
+
+  .fm-foot { font-size: .85rem; color: var(--color-muted); max-width: 46rem; }
+
+  .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+    overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+</style>

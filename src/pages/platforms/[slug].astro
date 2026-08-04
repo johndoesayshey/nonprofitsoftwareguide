@@ -11,7 +11,6 @@ import DraftBanner from '../../components/DraftBanner.astro';
 import { CATEGORIES } from '../../lib/categories';
 import { getAffiliate } from '../../lib/affiliates';
 import { comparePairs } from '../../lib/compare';
-import { EMAIL_LABEL, EMAIL_MEANING } from '../../lib/email-marketing';
 import { valueOf } from '../../lib/affiliate-value';
 
 export async function getStaticPaths() {
@@ -115,15 +114,6 @@ const productLd: Record<string, unknown> = {
         <div>
           <span class="pricebox-label">Free tier</span>
           <span class="pricebox-value">{p.freeTier ? 'Yes' : 'No'}</span>
-        </div>
-        <div>
-          <span class="pricebox-label">Email marketing</span>
-          <span class={`pricebox-value email-${p.emailMarketing}`}>
-            {EMAIL_LABEL[p.emailMarketing]}
-          </span>
-          <span class="pricebox-sub">
-            {p.emailMarketingNote ?? EMAIL_MEANING[p.emailMarketing]}
-          </span>
         </div>
         {affiliate && p.affiliateSlug && (
           <div class="pricebox-cta">

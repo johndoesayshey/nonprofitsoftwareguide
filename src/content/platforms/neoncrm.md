@@ -23,6 +23,10 @@ bestFor: "Best for orgs that need a memberships feature."
 targetQuery: "neon crm review"
 affiliateSlug: neoncrm
 freeTier: false
+features:
+  emailMarketing: included
+featureNotes:
+  emailMarketing: "in the base $99/mo plan"
 draft: false
 strengths:
   - "Genuine breadth: donations, memberships, events, and email in one connected system"

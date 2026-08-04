@@ -21,6 +21,10 @@ bestFor: "Advocacy and political-adjacent organizations that need CRM, email and
 targetQuery: "bonterra pricing everyaction network for good"
 affiliateSlug: bonterra
 freeTier: false
+features:
+  emailMarketing: included
+featureNotes:
+  emailMarketing: "unlimited; AI authoring costs extra"
 featured: false
 draft: false
 strengths:

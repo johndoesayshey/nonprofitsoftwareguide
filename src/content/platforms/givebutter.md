@@ -16,6 +16,10 @@ bestFor: "Shops running campaigns, events, and peer-to-peer on one modern platfo
 targetQuery: "givebutter review"
 affiliateSlug: givebutter
 freeTier: true
+features:
+  emailMarketing: included
+featureNotes:
+  emailMarketing: "free; advanced editor is Plus, from $29/mo"
 draft: false
 strengths:
   - "Free platform spanning donations, ticketing, auctions, and peer-to-peer"

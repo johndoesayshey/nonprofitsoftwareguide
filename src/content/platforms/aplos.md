@@ -27,6 +27,10 @@ targetQuery: "aplos pricing"
 alsoIn: [donor-crm]
 affiliateSlug: aplos
 freeTier: false
+features:
+  emailMarketing: included
+featureNotes:
+  emailMarketing: "capability confirmed; which plan carries it is not published"
 draft: false
 strengths:
   - "Genuine fund accounting — balance sheet and income statement by fund, not a QuickBooks workaround"

@@ -9,7 +9,6 @@ import { CATEGORIES } from '../../lib/categories';
 import { getAffiliate } from '../../lib/affiliates';
 import { valueOf, categoryValue, relFor } from '../../lib/affiliate-value';
 import { formatMedium } from '../../lib/dates';
-import { EMAIL_LABEL } from '../../lib/email-marketing';
 
 // This page absorbed the old standalone /pricing/ page (301 in public/_redirects).
 // The two were nearly the same table twice: a comparison of these products IS a
@@ -124,15 +123,13 @@ const datasetLd = {
           <div class="table-scroll">
             <table class="cmp">
               <colgroup>
-                <col class="c-tool" /><col class="c-price" /><col class="c-free" />
-                <col class="c-email" /><col class="c-best" /><col class="c-cta" />
+                <col class="c-tool" /><col class="c-price" /><col class="c-free" /><col class="c-best" /><col class="c-cta" />
               </colgroup>
               <thead>
                 <tr>
                   <th scope="col">Tool</th>
                   <th scope="col">Pricing</th>
                   <th scope="col">Free tier</th>
-                  <th scope="col">Email marketing</th>
                   <th scope="col">Best for</th>
                   <th scope="col"></th>
                 </tr>
@@ -161,10 +158,6 @@ const datasetLd = {
                       )}
                     </td>
                     <td>{t.freeTier ? 'Yes' : 'No'}</td>
-                    <td class={`email email-${t.emailMarketing}`}>
-                      {EMAIL_LABEL[t.emailMarketing]}
-                      {t.emailMarketingNote && <span class="email-note">{t.emailMarketingNote}</span>}
-                    </td>
                     <td class="cmp-best">{t.bestFor}</td>
                     <td class="cmp-cta">
                       <a class="btn-visit" href={`/go/${t.affiliateSlug}`} rel={relFor(t.affiliateSlug)}>Visit →</a>
@@ -173,7 +166,7 @@ const datasetLd = {
                   </tr>
                   {versus.length > 0 && (
                     <tr class="versus-row">
-                      <td colspan="6">
+                      <td colspan="5">
                         <div class="versus-inner">
                           <span class="versus-label">Compare {t.shortName ?? t.name}:</span>
                           {versus.map((v) => (
@@ -254,19 +247,14 @@ const datasetLd = {
   tbody th a:hover { color: var(--color-green-deep); text-decoration: underline; }
 
 
-  table.cmp { min-width: 54rem; table-layout: fixed; }
-  table.cmp col.c-tool { width: 14%; } table.cmp col.c-price { width: 23%; }
+  table.cmp { min-width: 48rem; table-layout: fixed; }
+  table.cmp col.c-tool { width: 14%; } table.cmp col.c-price { width: 26%; }
   table.cmp col.c-free { width: 6%; }  table.cmp col.c-email { width: 12%; }
   table.cmp col.c-best { width: 25%; } table.cmp col.c-cta { width: 20%; }
 
   /* Only "included" answers the question a buyer is actually asking — can I
      cancel Mailchimp? Everything else is a qualified no, so only that one gets
      emphasis. */
-  .email { font-size: .85rem; }
-  .email-included { color: var(--color-green-deep); font-weight: 700; }
-  .email-unknown { color: var(--color-muted); font-style: italic; }
-  .email-note { display: block; font-size: .92em; color: var(--color-muted);
-    font-weight: 400; font-style: normal; margin-top: .15rem; }
   .cmp-best { color: var(--color-muted); }
 
   .ladder { list-style: none; margin: 0; padding: 0; font-size: .85rem; line-height: 1.35; }

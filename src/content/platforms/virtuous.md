@@ -20,6 +20,10 @@ bestFor: "Shops raising roughly $2M-$20M that are actually staffed to run donor 
 targetQuery: "virtuous crm pricing"
 affiliateSlug: virtuous
 freeTier: false
+features:
+  emailMarketing: included
+featureNotes:
+  emailMarketing: "part of CRM+"
 featured: false
 draft: false
 strengths:

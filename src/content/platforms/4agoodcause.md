@@ -20,6 +20,10 @@ bestFor: "Shops past roughly $40k of online giving that want a fee that stops gr
 targetQuery: "4agoodcause review pricing"
 affiliateSlug: 4agoodcause
 freeTier: false
+features:
+  emailMarketing: basic
+featureNotes:
+  emailMarketing: "receipts only; no email marketing on the pricing matrix"
 draft: false
 strengths:
   - "Flat subscription with no platform percentage, so the fee stops scaling with your success"

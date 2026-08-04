@@ -17,6 +17,10 @@ bestFor: "Trusted name in the space with retention-focused features. Loved by al
 targetQuery: "bloomerang review"
 affiliateSlug: bloomerang
 freeTier: false
+features:
+  emailMarketing: included
+featureNotes:
+  emailMarketing: "send caps not published"
 draft: false
 strengths:
   - "Retention dashboards show who is lapsing before they're gone"

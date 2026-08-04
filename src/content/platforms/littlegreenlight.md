@@ -19,6 +19,10 @@ bestFor: "Aging interface that takes some time to learn. All the features you ne
 targetQuery: "little green light review"
 affiliateSlug: littlegreenlight
 freeTier: false
+features:
+  emailMarketing: basic
+featureNotes:
+  emailMarketing: "LGL says to use Mailchimp for marketing email"
 draft: false
 strengths:
   - "The small-shop value pick; switchers often report paying far less than at bigger systems"

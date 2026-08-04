@@ -3,6 +3,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import { relFor } from '../../lib/affiliate-value';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import CategoryHub from '../../components/CategoryHub.astro';
+import FeatureMatrix from '../../components/FeatureMatrix.astro';
 import AffiliateDisclosure from '../../components/AffiliateDisclosure.astro';
 ---
 <BaseLayout
@@ -26,6 +27,8 @@ import AffiliateDisclosure from '../../components/AffiliateDisclosure.astro';
     </section>
 
     <CategoryHub category="donor-crm" part="table" />
+
+    <FeatureMatrix category="donor-crm" />
 
     <section class="prose" style="max-width: none;">
 

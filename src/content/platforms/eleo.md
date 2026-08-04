@@ -23,6 +23,10 @@ bestFor: "Intuitive, straightforward platform to keep better track of donors. Sm
 targetQuery: "eleo crm review"
 affiliateSlug: eleo
 freeTier: false
+features:
+  emailMarketing: basic
+featureNotes:
+  emailMarketing: "vendor FAQ contradicts itself; no click tracking documented"
 draft: false
 strengths:
   - "Among the cheapest real donor CRMs, and the full price ladder is published"

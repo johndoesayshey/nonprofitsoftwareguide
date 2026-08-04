@@ -20,6 +20,10 @@ bestFor: "Mid-to-large shops leaving Blackbaud or Salesforce that want fundraisi
 targetQuery: "charityengine pricing"
 affiliateSlug: charityengine
 freeTier: false
+features:
+  emailMarketing: included
+featureNotes:
+  emailMarketing: "limits not published"
 featured: false
 draft: false
 strengths:
