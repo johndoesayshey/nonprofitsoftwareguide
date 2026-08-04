@@ -63,7 +63,8 @@ account is live.
 ---
 
 ### 4. Zeffy — 30% of donor tips, ~$500 per signup
-**https://dash.partnerstack.com/marketplace/all/details/zeffyinc** (inside PartnerStack)
+⏳ **BLOCKED on PartnerStack approval** (applied 2026-08-03)
+**https://dash.partnerstack.com/marketplace/all/details/zeffyinc**
 
 **Found 2026-08-03, and it overturns an assumption that was wrong for months.**
 Zeffy was rated `none` here on the reasoning that it is free to nonprofits and
@@ -74,7 +75,8 @@ with DonorDock's bounty.
 
 This is the best-placed opportunity on the list: Zeffy is already on 25 pages,
 and it is the product we can recommend most freely because it costs the reader
-nothing. Requires a PartnerStack account first.
+nothing. **Apply to it the moment the PartnerStack account clears** — it is the
+first thing to do inside the dashboard.
 
 **~$500 per referral.**
 
@@ -82,13 +84,23 @@ nothing. Requires a PartnerStack account first.
 
 ## Tier 2 — worth the twenty minutes
 
-### 5. PartnerStack account — one signup, many programs
-**https://dash.partnerstack.com/signup**
+### 5. PartnerStack account — the gate for everything below ✅ SUBMITTED 2026-08-03
+**https://dash.partnerstack.com/signup** — ⏳ awaiting approval
 
 Not a program, a network. **357 programs** in the public directory at
-`market.partnerstack.com`, with rates stated before you join. One account
-reaches all of them, including several genuinely relevant to this site that we
-were not previously aware of — see the next section.
+`market.partnerstack.com`, with rates stated before you join.
+
+**Individual programs cannot be applied to until this account is approved.**
+That gates Zeffy, monday.com, and all of Tier 3 below. Nothing else to do here
+but wait — the moment it clears, work the list in this order:
+
+1. **Zeffy** — ~$500/signup, already on 25 of our pages
+2. **Ticket Tailor** — 20% of fees, forever
+3. **Xero** — $200 per qualified purchase
+4. **Brevo** — $100 per paying customer
+5. **monday.com** — assume $10/signup; five minutes while you are in there
+6. **Bloomerang** — check whether the agency track pays cash rather than a
+   donation. Five minutes settles a question we could not answer from outside.
 
 ### 6. Jotform — 30% for 12 months
 **https://www.jotform.com/partnership/affiliate/application/**
@@ -118,7 +130,8 @@ pays nothing.
 ## Tier 3 — new opportunities found in the PartnerStack directory
 
 All rates below were read directly from `market.partnerstack.com` on 2026-08-03.
-Each is reachable from one PartnerStack account. None has been applied to yet.
+Each is reachable from one PartnerStack account — **all blocked until that
+account is approved.**
 
 | Program | Stated offer | Why it fits this site |
 |---|---|---|

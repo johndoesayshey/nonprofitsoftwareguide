@@ -21,9 +21,11 @@ Approval takes days to weeks, so start the clock before anything else.
 - [x] **4aGoodCause** — https://4agoodcause.firstpromoter.com/ *(25% recurring)* — **submitted 2026-08-03**
       → still to do: **ask for a reader discount**
 - [x] **Donorbox** — https://donorbox.org/affiliate-partner-program → "Become a Partner" — **submitted 2026-08-03**
-- [ ] **PartnerStack account** — https://dash.partnerstack.com/signup
-      → **Zeffy first** (~$500/signup, already on 25 of our pages), then
-        **Ticket Tailor**, **Xero**, **Brevo**
+- [x] **PartnerStack account** — https://dash.partnerstack.com/signup — **submitted 2026-08-03**
+      ⏳ awaiting approval. Individual programs are gated behind it. When it
+      clears: **Zeffy first** (~$500/signup, already on 25 of our pages), then
+      **Ticket Tailor**, **Xero**, **Brevo**, **monday.com**, and check whether
+      **Bloomerang**'s agency track pays cash.
 - [ ] **Jotform** — https://www.jotform.com/partnership/affiliate/application/
 
 Full detail and the rest of the list: `AFFILIATE-APPLICATIONS.md`.
