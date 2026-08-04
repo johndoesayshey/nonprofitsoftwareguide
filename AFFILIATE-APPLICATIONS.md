@@ -27,18 +27,18 @@ get 10% off, which we already advertise. Their FAQ was last updated 2026-03-25.
 
 **~$500 per referral.**
 
-### 2. Donorbox — 15% of fees for three years
-**Email `partner@donorbox.org`**
+### 2. Donorbox — 15% of fees for three years ✅ SUBMITTED 2026-08-03
+**https://donorbox.org/affiliate-partner-program** → click **"Become a Partner"**
 
-Their published application link is broken — `donorbox.tapfiliate.com` 301s to
-Tapfiliate's own marketing site, and the current portal (`partners.donorbox.org`,
-now on Kiflo) redirects `/signup`, `/register` and `/apply` to a sign-in screen
-with no self-serve registration. They migrated platforms and never updated the
-page; their own FAQ still points at the dead link. Mention that in the email — it
-is a genuine favour and it opens the conversation.
+The form is a modal on that page, not a separate URL — the button is
+`href="javascript:void(0)"`, so checking the link target tells you nothing. Click it.
+(The dead `donorbox.tapfiliate.com` link in their FAQ is real and irrelevant.)
 
 Attribution is link-only and never retroactive, so every mention must route
 through `/go/donorbox`.
+
+*Awaiting response. When approved: paste the tracking link into `affiliateUrl`,
+set `status` to `"active"`, fill in `approvedOn`.*
 
 **~$1,327 per referral over three years** at $100k of online giving — the highest
 on this list.
