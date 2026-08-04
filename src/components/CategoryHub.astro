@@ -1,6 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 import { comparePairs } from '../lib/compare';
+import { EMAIL_LABEL } from '../lib/email-marketing';
 import ReaderOffer from './ReaderOffer.astro';
 import { CATEGORIES } from '../lib/categories';
 import { getAffiliate } from '../lib/affiliates';
@@ -56,13 +57,14 @@ const posts = (await getCollection('posts', ({ data }) => data.draft === false))
       <table class="cmp">
         <colgroup>
           <col class="c-tool" /><col class="c-price" /><col class="c-free" />
-          <col class="c-best" /><col class="c-cta" />
+          <col class="c-email" /><col class="c-best" /><col class="c-cta" />
         </colgroup>
         <thead>
           <tr>
             <th scope="col">Tool</th>
             <th scope="col">Pricing</th>
             <th scope="col">Free tier</th>
+            <th scope="col">Email marketing</th>
             <th scope="col">Best for</th>
             <th scope="col"></th>
           </tr>
@@ -96,6 +98,10 @@ const posts = (await getCollection('posts', ({ data }) => data.draft === false))
                   )}
                 </td>
                 <td>{p.data.freeTier ? 'Yes' : 'No'}</td>
+                <td class={`email email-${p.data.emailMarketing}`}>
+                  {EMAIL_LABEL[p.data.emailMarketing]}
+                  {p.data.emailMarketingNote && <span class="email-note">{p.data.emailMarketingNote}</span>}
+                </td>
                 <td class="cmp-best">{p.data.bestFor}</td>
                 <td class="cmp-cta">
                   <a class="btn-visit" href={`/go/${p.data.affiliateSlug}`} rel={relFor(p.data.affiliateSlug)}>Visit →</a>
@@ -104,7 +110,7 @@ const posts = (await getCollection('posts', ({ data }) => data.draft === false))
               </tr>
               {versus.length > 0 && (
                 <tr class="versus-row">
-                  <td colspan="5">
+                  <td colspan="6">
                     <div class="versus-inner">
                       <span class="versus-label">Compare {p.data.shortName ?? p.data.name}:</span>
                       {versus.map((v) => (
@@ -189,13 +195,14 @@ const posts = (await getCollection('posts', ({ data }) => data.draft === false))
   /* Fixed widths, or the browser hands most of the row to whichever cell has the
      longest unbroken string and squeezes "Best for" into a column of single
      words. The proportions below keep every row two or three lines tall. */
-  table.cmp { width: 100%; min-width: 48rem; border-collapse: collapse; font-size: .92rem;
+  table.cmp { width: 100%; min-width: 54rem; border-collapse: collapse; font-size: .92rem;
     table-layout: fixed; }
-  table.cmp col.c-tool  { width: 15%; }
-  table.cmp col.c-price { width: 26%; }
-  table.cmp col.c-free  { width: 7%; }
-  table.cmp col.c-best  { width: 30%; }
-  table.cmp col.c-cta   { width: 22%; }
+  table.cmp col.c-tool  { width: 14%; }
+  table.cmp col.c-price { width: 23%; }
+  table.cmp col.c-free  { width: 6%; }
+  table.cmp col.c-email { width: 12%; }
+  table.cmp col.c-best  { width: 25%; }
+  table.cmp col.c-cta   { width: 20%; }
   table.cmp th, table.cmp td { text-align: left; padding: .6rem .7rem; border-bottom: 1px solid var(--color-rule);
     vertical-align: top; }
   table.cmp thead th { font-size: .68rem; letter-spacing: .08em; text-transform: uppercase; font-weight: 800;
@@ -239,6 +246,12 @@ const posts = (await getCollection('posts', ({ data }) => data.draft === false))
     color: var(--color-ink); }
   .guide-list a:hover { border-color: var(--color-green); color: var(--color-green-deep); }
   .guide-more { font-size: .9rem; margin: 0; }
+
+  .email { font-size: .85rem; }
+  .email-included { color: var(--color-green-deep); font-weight: 700; }
+  .email-unknown { color: var(--color-muted); font-style: italic; }
+  .email-note { display: block; font-size: .92em; color: var(--color-muted);
+    font-weight: 400; font-style: normal; margin-top: .15rem; }
 
   .cmp-cta { white-space: normal; }
   .cmp-cta .offer { display: block; margin-top: .35rem; white-space: normal; line-height: 1.3; }

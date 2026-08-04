@@ -11,6 +11,7 @@ import DraftBanner from '../../components/DraftBanner.astro';
 import { CATEGORIES } from '../../lib/categories';
 import { getAffiliate } from '../../lib/affiliates';
 import { comparePairs } from '../../lib/compare';
+import { EMAIL_LABEL, EMAIL_MEANING } from '../../lib/email-marketing';
 import { valueOf } from '../../lib/affiliate-value';
 
 export async function getStaticPaths() {
@@ -115,6 +116,15 @@ const productLd: Record<string, unknown> = {
           <span class="pricebox-label">Free tier</span>
           <span class="pricebox-value">{p.freeTier ? 'Yes' : 'No'}</span>
         </div>
+        <div>
+          <span class="pricebox-label">Email marketing</span>
+          <span class={`pricebox-value email-${p.emailMarketing}`}>
+            {EMAIL_LABEL[p.emailMarketing]}
+          </span>
+          <span class="pricebox-sub">
+            {p.emailMarketingNote ?? EMAIL_MEANING[p.emailMarketing]}
+          </span>
+        </div>
         {affiliate && p.affiliateSlug && (
           <div class="pricebox-cta">
             <a class="btn-primary" href={`/go/${p.affiliateSlug}`} rel={relFor(p.affiliateSlug)}>
@@ -217,6 +227,11 @@ const productLd: Record<string, unknown> = {
     border-radius: 999px; padding: .22rem .7rem; font-size: .84rem;
     text-decoration: none; color: var(--color-ink); }
   .chips a:hover { border-color: var(--color-green); color: var(--color-green-deep); }
+
+  .pricebox-sub { display: block; font-size: .74rem; line-height: 1.35; color: var(--color-muted);
+    margin-top: .2rem; }
+  .email-included { color: var(--color-green-deep); }
+  .email-unknown { font-style: italic; color: var(--color-muted); }
 
   .alts li { margin-bottom: .6rem; }
   .alts strong { color: var(--color-ink); }

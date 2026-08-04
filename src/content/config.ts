@@ -59,6 +59,20 @@ const platforms = defineCollection({
     // comparing CRMs should see it. `category` still decides where the product
     // page lives; this only adds it to another category's comparison chart.
     alsoIn: z.array(category).default([]),
+    // "Do I still have to pay for Mailchimp?" is one of the first questions a
+    // buyer asks and almost no comparison answers it. The distinction that
+    // matters is between sending a receipt and running a campaign to a segment —
+    // vendors blur those two deliberately.
+    //   included  — real campaigns: segmentation, templates, open/click tracking
+    //   basic     — receipts and simple blasts, no campaign tooling
+    //   add-on    — exists but costs extra or is a separate product
+    //   none      — no sending at all; budget for a separate tool
+    //   unknown   — not established from a vendor source. Say so rather than guess.
+    emailMarketing: z
+      .enum(['included', 'basic', 'add-on', 'none', 'unknown'])
+      .default('unknown'),
+    // One short clause shown beside the verdict. Where it is add-on, put the price.
+    emailMarketingNote: z.string().optional(),
     affiliateSlug: z.string().nullable().default(null),
     freeTier: z.boolean().default(false),
     // Does this product appear in curated, reader-facing lists — category hubs,
