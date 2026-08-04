@@ -18,8 +18,8 @@ or pitching data to editors — data is citable without an author.
 Approval takes days to weeks, so start the clock before anything else.
 
 - [x] **DonorDock** — https://www.donordock.com/partners *(~$500/referral)* — **submitted 2026-08-03**
-- [ ] **4aGoodCause** — https://4agoodcause.firstpromoter.com/ *(25% recurring)*
-      → while you are in, **ask for a reader discount**
+- [x] **4aGoodCause** — https://4agoodcause.firstpromoter.com/ *(25% recurring)* — **submitted 2026-08-03**
+      → still to do: **ask for a reader discount**
 - [x] **Donorbox** — https://donorbox.org/affiliate-partner-program → "Become a Partner" — **submitted 2026-08-03**
 - [ ] **PartnerStack account** — https://dash.partnerstack.com/signup
       → then apply inside it to **Ticket Tailor**, **Xero**, **Brevo**

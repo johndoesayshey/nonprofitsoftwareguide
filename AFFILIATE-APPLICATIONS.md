@@ -43,8 +43,12 @@ set `status` to `"active"`, fill in `approvedOn`.*
 **~$1,327 per referral over three years** at $100k of online giving — the highest
 on this list.
 
-### 3. 4aGoodCause — 25%, recurring on every renewal
+### 3. 4aGoodCause — 25%, recurring on every renewal ✅ SUBMITTED 2026-08-03
 **https://4agoodcause.firstpromoter.com/** — instant self-serve signup
+
+*FirstPromoter creates the account immediately, so the tracking link may already
+be waiting. Check for it, then paste into `affiliateUrl`, set `status` to
+`"active"` and fill in `approvedOn`.*
 
 The direct link; their `/referral-program/` page just points here. The only
 recurring commission on the roster, so it compounds — and recurring revenue is
@@ -52,8 +56,9 @@ worth more per dollar if you ever sell the site.
 
 **~$891 per referral over three years**, and it keeps going.
 
-**While you are in there: ask for a reader discount.** It is the only
-high-potential program without one, and DonorDock's 10% is doing measurable work.
+**Still to do: ask for a reader discount.** It is the only high-potential program
+without one, and DonorDock's 10% is doing measurable work. Email them once the
+account is live.
 
 ---
 
