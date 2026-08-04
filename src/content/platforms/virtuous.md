@@ -22,8 +22,16 @@ affiliateSlug: virtuous
 freeTier: false
 features:
   emailMarketing: included
+  donationForms: included
+  paymentProcessing: included
+  events: included
+  peerToPeer: basic
 featureNotes:
   emailMarketing: "part of CRM+"
+  donationForms: "in Virtuous Raise — a module with its own request-pricing button"
+  paymentProcessing: "Virtuous Payments, powered by Stripe"
+  events: "ticketed events on the primary gateway"
+  peerToPeer: "fundraisers get a tracking URL, not their own page — most charts overstate this"
 featured: false
 draft: false
 strengths:

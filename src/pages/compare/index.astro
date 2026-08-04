@@ -2,6 +2,7 @@
 import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import ReaderOffer from '../../components/ReaderOffer.astro';
+import FeatureMatrix from '../../components/FeatureMatrix.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import AffiliateDisclosure from '../../components/AffiliateDisclosure.astro';
 import { comparePairs } from '../../lib/compare';
@@ -184,6 +185,25 @@ const datasetLd = {
         </section>
       ))}
 
+      <section class="features">
+        <h2>Feature comparison: what each tool actually covers</h2>
+        <p class="features-lede">
+          Price only means something next to what it buys, so these charts sit
+          apart from the price tables above rather than crammed into them. Five
+          features, each one a subscription many shops pay for separately —
+          email marketing, donation forms, payment processing, events, and
+          peer-to-peer. <strong>Yes</strong> means good enough to cancel the
+          separate tool. <strong>Basic</strong> means it technically does it and
+          you will probably keep paying for the other thing anyway. Every
+          verdict comes from the vendor's own pages, and where we could not
+          confirm something the cell says so.
+        </p>
+
+        <FeatureMatrix category="donor-crm" title="Donor CRMs" sub bare />
+        <FeatureMatrix category="donation-processing" title="Donation platforms" sub bare />
+        <FeatureMatrix category="forms-ops" title="Forms & operations tools" sub bare />
+      </section>
+
       <section class="method">
         <h2>How these figures were gathered</h2>
         <p>
@@ -300,7 +320,8 @@ const datasetLd = {
     text-transform: uppercase; color: var(--color-green-deep); font-weight: 700; margin: 0 0 .4rem; }
   .switching-lede { margin: 0; }
 
-  .method, .cite { margin-top: 2.4rem; padding-top: 1.2rem; border-top: 2px solid var(--color-ink); }
+  .features, .method, .cite { margin-top: 2.4rem; padding-top: 1.2rem; border-top: 2px solid var(--color-ink); }
+  .features-lede { max-width: 46rem; color: var(--color-muted); }
   .cite-block { font-family: var(--font-mono); font-size: .82rem; background: var(--color-paper-2);
     border-left: 3px solid var(--color-green); padding: .8rem 1rem; border-radius: 3px; }
 </style>

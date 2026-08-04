@@ -16,8 +16,16 @@ affiliateSlug: zeffy
 freeTier: true
 features:
   emailMarketing: included
+  donationForms: included
+  paymentProcessing: included
+  events: included
+  peerToPeer: included
 featureNotes:
   emailMarketing: "free; up to 100,000 per blast"
+  donationForms: "embedded forms drop your logo, name and images — full branding needs their hosted page"
+  paymentProcessing: "0% — Zeffy covers processing fees"
+  events: "ticketing free, no fees"
+  peerToPeer: "supporters create their own pages from your campaign"
 draft: false
 strengths:
   - "Zero fees to the nonprofit: a $100 gift deposits $100"

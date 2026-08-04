@@ -23,8 +23,16 @@ affiliateSlug: bonterra
 freeTier: false
 features:
   emailMarketing: included
+  donationForms: included
+  paymentProcessing: included
+  events: included
+  peerToPeer: add-on
 featureNotes:
   emailMarketing: "unlimited; AI authoring costs extra"
+  donationForms: "included for EveryAction; costs extra on Bonterra Que"
+  paymentProcessing: "2.9% + $0.30 — but 5.9% + $0.30 on auctions"
+  events: "ticketed events included"
+  peerToPeer: "no P2P in EveryAction — it lives in DonorDrive, sold separately"
 featured: false
 draft: false
 strengths:

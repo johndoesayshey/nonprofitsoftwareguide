@@ -25,8 +25,16 @@ affiliateSlug: eleo
 freeTier: false
 features:
   emailMarketing: basic
+  donationForms: included
+  paymentProcessing: included
+  events: included
+  peerToPeer: none
 featureNotes:
   emailMarketing: "vendor FAQ contradicts itself; no click tracking documented"
+  donationForms: "unlimited forms, every plan"
+  paymentProcessing: "EleoPay, powered by Stripe"
+  events: "registration forms confirmed; paid-ticket collection via EleoPay"
+  peerToPeer: "their FAQ says so plainly — the only vendor that does"
 draft: false
 strengths:
   - "Among the cheapest real donor CRMs, and the full price ladder is published"

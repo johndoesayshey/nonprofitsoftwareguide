@@ -24,6 +24,18 @@ targetQuery: "airtable for nonprofits"
 affiliateSlug: airtable
 freeTier: true
 featured: false
+features:
+  emailMarketing: none
+  donationForms: basic
+  paymentProcessing: none
+  events: none
+  peerToPeer: none
+featureNotes:
+  emailMarketing: "no sending; it stores the list, your email tool sends"
+  donationForms: "forms feed records; your logo on one requires a paid plan"
+  paymentProcessing: "only via a third-party Stripe integration"
+  events: "nothing on any vendor page — deduced from the payments gap"
+  peerToPeer: "nothing on any vendor page"
 draft: false
 strengths:
   - "A real relational database — linked records and lookups that a spreadsheet cannot do"

@@ -11,15 +11,26 @@ pricingTiers:
     note: "donor covers costs at checkout"
   - tier: "Tips off"
     price: "~3% platform fee"
-lastVerified: 2026-07-29
+  - tier: "Givebutter Plus"
+    price: "$29-$129/mo"
+    note: "by contact count; adds texting, automations, deeper CRM"
+lastVerified: 2026-08-03
 bestFor: "Shops running campaigns, events, and peer-to-peer on one modern platform"
 targetQuery: "givebutter review"
 affiliateSlug: givebutter
 freeTier: true
 features:
   emailMarketing: included
+  donationForms: included
+  paymentProcessing: included
+  events: included
+  peerToPeer: included
 featureNotes:
   emailMarketing: "free; advanced editor is Plus, from $29/mo"
+  donationForms: "embeddable, free"
+  paymentProcessing: "tips on: 0% platform fee; tips off: flat 3%"
+  events: "unlimited ticket types"
+  peerToPeer: "free"
 draft: false
 strengths:
   - "Free platform spanning donations, ticketing, auctions, and peer-to-peer"

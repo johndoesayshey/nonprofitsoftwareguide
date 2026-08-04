@@ -22,8 +22,16 @@ affiliateSlug: charityengine
 freeTier: false
 features:
   emailMarketing: included
+  donationForms: included
+  paymentProcessing: included
+  events: add-on
+  peerToPeer: add-on
 featureNotes:
   emailMarketing: "limits not published"
+  donationForms: "in all plans"
+  paymentProcessing: "genuinely in-house — the only one in this set not riding Stripe"
+  events: "plain event management is base; ticketed events sit in a separately sold package, price unpublished"
+  peerToPeer: "in the Digital Fundraising package, price unpublished"
 featured: false
 draft: false
 strengths:

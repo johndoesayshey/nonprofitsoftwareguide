@@ -20,8 +20,16 @@ affiliateSlug: donorbox
 freeTier: true
 features:
   emailMarketing: add-on
+  donationForms: included
+  paymentProcessing: included
+  events: included
+  peerToPeer: included
 featureNotes:
   emailMarketing: "requires Donorbox CRM — price unpublished, waitlist only"
+  donationForms: "2.95% platform fee (1.75-2% on Pro)"
+  paymentProcessing: "built in, on the platform fee"
+  events: "ticketing runs 3.95% — a third more per gift than the headline rate"
+  peerToPeer: "org-led 2.95%; supporter-led 3.95%"
 draft: false
 strengths:
   - "Donation forms live in minutes and embed anywhere"

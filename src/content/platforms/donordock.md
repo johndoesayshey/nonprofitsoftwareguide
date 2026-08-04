@@ -13,7 +13,7 @@ pricingTiers:
     price: "2%"
     note: "plus Stripe/PayPal, typically 2.2% + $0.30"
   - tier: "Premium onboarding"
-    price: "Quoted"
+    price: "$3,800 one-time"
     note: "optional; white-glove migration is included without it"
 lastVerified: 2026-08-03
 bestFor: "Shops consolidating several tools into one, where the combined bill already approaches $6,000 a year."
@@ -22,8 +22,16 @@ affiliateSlug: donordock
 freeTier: false
 features:
   emailMarketing: included
+  donationForms: included
+  paymentProcessing: included
+  events: basic
+  peerToPeer: none
 featureNotes:
   emailMarketing: "10,000/mo; +10,000 for $45"
+  donationForms: "embeddable in-page forms"
+  paymentProcessing: "2% platform fee + Stripe/PayPal fees"
+  events: "their own word is basic — ticket purchases, no event suite; they point to OneCause"
+  peerToPeer: "absent from their 100+ feature list; routed to partners"
 draft: false
 strengths:
   - "One plan with everything in it — no tier to outgrow and no module to bolt on later"

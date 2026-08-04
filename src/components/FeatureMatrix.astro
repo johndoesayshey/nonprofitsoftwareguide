@@ -10,8 +10,13 @@ interface Props {
   category: string;
   /** Set when the page already explains the chart, to skip the standfirst. */
   bare?: boolean;
+  /** Override the heading — needed when several charts share a page. */
+  title?: string;
+  /** Render the heading one level down (h3) under a page-supplied h2. */
+  sub?: boolean;
 }
-const { category, bare = false } = Astro.props;
+const { category, bare = false, title = 'Which one replaces the most other subscriptions?', sub = false } = Astro.props;
+const Heading = sub ? 'h3' : 'h2';
 
 // Featured products only — this is a shortlist, same rule as everywhere else.
 const platforms = (await getCollection('platforms', ({ data }) => data.draft === false && data.featured))
@@ -29,7 +34,7 @@ const best = Math.max(0, ...scored.map((s) => s.score));
 ---
 {platforms.length > 1 && rows.length > 0 && (
   <div class="prose fm-wrap" style="max-width: none;">
-    <h2>Which one replaces the most other subscriptions?</h2>
+    <Heading>{title}</Heading>
     {!bare && (
       <p class="fm-lede">
         The usual reason for changing systems is not a missing feature — it is

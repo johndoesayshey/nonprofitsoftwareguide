@@ -7,14 +7,14 @@ pricingModel: "Flat subscription; no percentage taken from donations"
 pricingBasis: "flat subscription, no % of donations"
 pricingTiers:
   - tier: "Grassroots"
-    price: "$99/mo"
-    note: "$1,188/yr"
+    price: "$99/mo billed annually"
+    note: "$1,188/yr; $129 month-to-month"
   - tier: "Growth"
-    price: "$249/mo"
-    note: "$2,988/yr"
+    price: "$249/mo billed annually"
+    note: "$2,988/yr; $289 month-to-month"
   - tier: "Scale"
-    price: "$429/mo"
-    note: "$5,148/yr"
+    price: "$429/mo billed annually"
+    note: "$5,148/yr; $499 month-to-month"
 lastVerified: 2026-08-02
 bestFor: "Shops past roughly $40k of online giving that want a fee that stops growing with them"
 targetQuery: "4agoodcause review pricing"
@@ -22,8 +22,16 @@ affiliateSlug: 4agoodcause
 freeTier: false
 features:
   emailMarketing: basic
+  donationForms: included
+  paymentProcessing: included
+  events: included
+  peerToPeer: add-on
 featureNotes:
   emailMarketing: "receipts only; no email marketing on the pricing matrix"
+  donationForms: "all plans, no platform percentage"
+  paymentProcessing: "bring Stripe/Authorize.net or use theirs; no added %"
+  events: "registration and ticketing on all plans"
+  peerToPeer: "Growth plan and up — $249/mo billed annually"
 draft: false
 strengths:
   - "Flat subscription with no platform percentage, so the fee stops scaling with your success"

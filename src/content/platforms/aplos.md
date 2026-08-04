@@ -29,8 +29,16 @@ affiliateSlug: aplos
 freeTier: false
 features:
   emailMarketing: included
+  donationForms: included
+  paymentProcessing: included
+  events: included
+  peerToPeer: none
 featureNotes:
   emailMarketing: "capability confirmed; which plan carries it is not published"
+  donationForms: "unlimited forms"
+  paymentProcessing: "AplosPay — card, debit, ACH; ACH is 1% with no cap"
+  events: "registration and ticket sales; Advanced Event Registration is a separate unpriced upgrade"
+  peerToPeer: "they point you to Raisely, a separate product"
 draft: false
 strengths:
   - "Genuine fund accounting — balance sheet and income statement by fund, not a QuickBooks workaround"

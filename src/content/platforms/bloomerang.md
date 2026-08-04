@@ -25,8 +25,16 @@ affiliateSlug: bloomerang
 freeTier: false
 features:
   emailMarketing: included
+  donationForms: included
+  paymentProcessing: included
+  events: included
+  peerToPeer: add-on
 featureNotes:
   emailMarketing: "send caps not published"
+  donationForms: "in Fundraising, $40/mo — must be bundled with the $125/mo CRM"
+  paymentProcessing: "Bloomerang Payments, built in"
+  events: "in Fundraising — QR check-in, table seating"
+  peerToPeer: "separately activated package, price unpublished"
 draft: false
 strengths:
   - "Retention dashboards show who is lapsing before they're gone"

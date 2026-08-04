@@ -23,8 +23,16 @@ affiliateSlug: blackbaud
 freeTier: false
 features:
   emailMarketing: included
+  donationForms: included
+  paymentProcessing: included
+  events: included
+  peerToPeer: none
 featureNotes:
   emailMarketing: "native; Blackbaud Marketing sold on top"
+  donationForms: "no extra cost per a 2024 release — US organizations only"
+  paymentProcessing: "Blackbaud Merchant Services"
+  events: "registration with paid fees in RE NXT"
+  peerToPeer: "JustGiving is a separate Blackbaud product"
 featured: false
 draft: false
 strengths:

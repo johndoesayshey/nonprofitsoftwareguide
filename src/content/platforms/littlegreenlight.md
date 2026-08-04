@@ -21,8 +21,16 @@ affiliateSlug: littlegreenlight
 freeTier: false
 features:
   emailMarketing: basic
+  donationForms: included
+  paymentProcessing: included
+  events: included
+  peerToPeer: none
 featureNotes:
   emailMarketing: "LGL says to use Mailchimp for marketing email"
+  donationForms: "no added cost, embeddable"
+  paymentProcessing: "from 2.2% + $0.30 to the processor; no fee to LGL"
+  events: "ticket sales and registrations via LGL forms"
+  peerToPeer: "LGL says it cannot be used for P2P or crowdfunding"
 draft: false
 strengths:
   - "The small-shop value pick; switchers often report paying far less than at bigger systems"
