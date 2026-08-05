@@ -33,10 +33,9 @@ const softwareActive = categories.some((c) => c.key === section);
 const before = [{ href: '/', label: 'Stacks', key: 'stacks' }];
 const after = [
   { href: '/compare/', label: 'Pricing & Compare', key: 'compare' },
-  // Switching is the highest commercial intent on the site — someone already
-  // owns a system and is shopping today. It was reachable only from the footer
-  // and a block inside /compare/, which buried it.
-  { href: '/alternatives/', label: 'Switching', key: 'switching' },
+  // Switching guides are a pure SEO play (operator note n67, 2026-08-04): the
+  // pages stay live, indexed and internally linked from /compare/ and platform
+  // pages, but they no longer take a public navigation slot.
   { href: '/benchmarks/', label: 'Benchmark', key: 'benchmark' },
   { href: '/blog/', label: 'Blog', key: 'blog' },
   { href: '/consulting/', label: 'Consulting', key: 'consulting' },

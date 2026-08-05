@@ -4,12 +4,12 @@ slug: nonprofit-donation-platform
 category: donation-processing
 targetQuery: "best nonprofit donation platform"
 lastVerified: 2026-08-03
-answer: "Donation platforms are priced four different ways, and the cheapest one flips as you grow. Under about $40,000 online, free platforms win outright. Past it, a flat subscription with no percentage beats a percentage fee — and the gap widens every year you succeed."
+answer: "Donation platforms are priced four different ways, and the cheapest one flips as you grow. Under about $40,000 online, free platforms win outright. Past it, a flat subscription with no percentage beats a percentage fee — which is why 4aGoodCause is our editor's choice for donation processing: the fee stops growing with you."
 picks:
   - platformSlug: 4agoodcause
-    award: "Best overall past $40k online"
-    forWhom: "Shops where online giving is growing and the fee is becoming a line item"
-    note: "$99/mo Grassroots ($1,188/yr), $249/mo Growth ($2,988/yr), $429/mo Scale ($5,148/yr), with no percentage taken from donations. This is the structural answer to a percentage fee: the cost stops scaling with your success. Above roughly $40,000 a year online the entry tier beats a ~2.95% fee, and the advantage compounds. Built around monthly giving, with recurring pages, donor records and a campaign builder in one tool. First month free."
+    award: "Best overall — Editor's choice"
+    forWhom: "Shops that want a processor whose fee stops growing with them"
+    note: "$99/mo Grassroots ($1,188/yr), $249/mo Growth ($2,988/yr), $429/mo Scale ($5,148/yr), with no percentage taken from donations — the fee stops growing with you, which can save thousands a year and is why it is our top pick for a donation processor. Above roughly $40,000 a year online the entry tier beats a ~2.95% fee, and the advantage compounds. Built around monthly giving, with recurring pages, a built-in donor CRM, and integrations like Mailchimp and QuickBooks covering what isn't built in. First month free."
   - platformSlug: donorbox
     award: "Best for recurring giving"
     forWhom: "Shops where monthly donors are the growth engine"

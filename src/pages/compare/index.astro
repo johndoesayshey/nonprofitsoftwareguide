@@ -97,7 +97,7 @@ const datasetLd = {
       <h1>What nonprofit fundraising software costs</h1>
 
       <p class="answer">
-        Every tool we recommend, with its full price ladder, side by side.
+        Every tool we recommend, with its full price ladder, side by side. Comparison chart of fundraising CRM features.
         {published} of the {featured.length} publish a rate card; the rest are
         quote-only, and for those we carry researched ranges from what buyers
         report paying rather than the word "custom." Each figure is dated.
@@ -117,6 +117,8 @@ const datasetLd = {
           </p>
         </section>
       )}
+
+      <FeatureMatrix category="donor-crm" title="Feature comparison: what each tool actually covers" />
 
       {grouped.map((g) => (
         <section class="cmp-block">
@@ -185,61 +187,8 @@ const datasetLd = {
         </section>
       ))}
 
-      <section class="features">
-        <h2>Feature comparison: what each tool actually covers</h2>
-        <p class="features-lede">
-          Price only means something next to what it buys, so these charts sit
-          apart from the price tables above rather than crammed into them. Five
-          features, each one a subscription many shops pay for separately —
-          email marketing, donation forms, payment processing, events, and
-          peer-to-peer. <strong>Yes</strong> means good enough to cancel the
-          separate tool. <strong>Basic</strong> means it technically does it and
-          you will probably keep paying for the other thing anyway. Every
-          verdict comes from the vendor's own pages, and where we could not
-          confirm something the cell says so.
-        </p>
 
-        <FeatureMatrix category="donor-crm" title="Donor CRMs" sub bare />
-        <FeatureMatrix category="donation-processing" title="Donation platforms" sub bare />
-        <FeatureMatrix category="forms-ops" title="Forms & operations tools" sub bare />
-      </section>
 
-      <section class="method">
-        <h2>How these figures were gathered</h2>
-        <p>
-          Where a vendor publishes a rate card, we use it. {quoteOnly.length} of the
-          products above publish nothing at all; for those we carry ranges assembled
-          from what buyers and reviewers reported paying in the last three years, and
-          the product page says which figures are vendor-published and which are
-          reported.
-        </p>
-        <p>
-          Where we could not source a defensible figure, the product page says so
-          rather than printing a range. Several widely circulated numbers in this
-          sector trace back only to roundup posts citing each other, and an invented
-          range is worse than an honest gap because a buyer budgets against it.
-        </p>
-        <p>
-          This table is a shortlist, not a directory. We cover more products than
-          appear here — every one has a full write-up and head-to-head pages, and
-          they're reachable from <a href="/platforms/">the platform index</a>. A
-          roundup that lists everything has stopped being a recommendation.
-        </p>
-      </section>
-
-      <section class="cite">
-        <h2>Citing this page</h2>
-        <p>Free to use with attribution and a link. Suggested citation:</p>
-        <p class="cite-block">
-          Nonprofit Software Guide, <em>What nonprofit fundraising software costs</em>,
-          {' '}{formatMedium(newest)}. https://nonprofitsoftwareguide.com/compare/
-        </p>
-        <p>
-          The underlying spend benchmark, with medians and the share of organizations
-          reporting $0 per category, is on the <a href="/benchmarks/">benchmark page</a>
-          and in a <a href="/2026-nonprofit-software-spend-survey.pdf">downloadable PDF</a>.
-        </p>
-      </section>
     </article>
   </div>
 

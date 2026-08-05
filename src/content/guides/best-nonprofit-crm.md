@@ -98,3 +98,7 @@ If a quote lands well above the band for your size, the burden of proof is on th
 ## If you already have a system
 
 The decision is different when you're replacing rather than buying. Start with the switching guide for what you're on: [Bloomerang](/alternatives/bloomerang/), [DonorPerfect](/alternatives/donorperfect/), [Little Green Light](/alternatives/little-green-light/), [Raiser's Edge](/alternatives/blackbaud-raisers-edge/) or [Salesforce](/alternatives/salesforce-nonprofit/). Each covers why shops leave, what to move to, and — the part that matters — when staying put is the right answer.
+  - platformSlug: 4agoodcause
+    award: "Best CRM bundled with giving pages"
+    forWhom: "Shops that want records and fundraising on one bill"
+    note: "The donor CRM comes bundled with the giving platform at $99/mo Grassroots ($1,188/yr) — profiles, giving history, notes, tagging, custom fields and acknowledgement letters, verified on their own feature page. It is simpler than a standalone database, and there is no built-in email marketing; the Mailchimp integration carries that. The case for it is the combination: no percentage taken from donations, and the CRM rides along at no extra line item."

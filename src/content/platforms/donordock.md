@@ -19,6 +19,7 @@ lastVerified: 2026-08-04
 bestFor: "Shops consolidating several tools into one, where the combined bill already approaches $6,000 a year."
 targetQuery: "donordock review"
 affiliateSlug: donordock
+editorsChoice: true
 freeTier: false
 features:
   emailMarketing: included
