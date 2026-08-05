@@ -2,7 +2,7 @@
 shopSize: "$5M+"
 annualRevenue: "$5M+"
 staffSize: "8+ development staff, often with a researcher"
-totalStackCost: "~$20,100+/yr"
+totalStackCost: "~$20,900+/yr"
 slug: 5m-plus
 targetQuery: "enterprise nonprofit fundraising software stack"
 lastVerified: 2026-08-04
@@ -10,9 +10,9 @@ draft: false
 components:
   - category: donor-crm
     categoryLabel: "Donor CRM + donation processing"
-    platformSlug: 4agoodcause
-    annualCost: "$5,148/yr (Scale, $429/mo)"
-    rationale: "One line for both jobs at full scale: unlimited online revenue, no percentage taken from donations — at this volume the saving against any percentage model dwarfs the subscription — and the built-in donor CRM carries profiles, giving history, tags and acknowledgements. Scale adds premium CRM integrations (Blackbaud and others) for shops running a heavier database alongside."
+    platformSlug: donordock
+    annualCost: "$6,000/yr ($500/mo, billed annually)"
+    rationale: "One plan carries the department: system of record for eight-plus staff, unlimited contacts, email marketing built in, and giving pages on the same bill. The 2% platform fee on online gifts is the number to weigh at this volume — the prose below does that math."
   - category: forms-ops
     platformSlug: jotform
     annualCost: "~$594-$1,188/yr (Gold)"
@@ -31,11 +31,13 @@ components:
     rationale: "Continuous screening, now that a named researcher owns the output and gift officers work the portfolios."
 ---
 
-At $5M+ the stack is a full operation: continuous wealth screening, team-scale grant research, high-volume processing with the CRM riding on the same bill, and an event platform built for a production-scale gala. Budget from roughly $20,100 a year plus the larger event package if your gala warrants one — modest against the $96,815 mean our benchmark reports from $5M+ organizations, and small against the salaries it makes productive.
+At $5M+ the stack is a full operation: continuous wealth screening, team-scale grant research, high-volume processing with the CRM riding on the same bill, and an event platform built for a production-scale gala. Budget from roughly $20,900 a year plus the larger event package if your gala warrants one — modest against the $96,815 mean our benchmark reports from $5M+ organizations, and small against the salaries it makes productive.
 
 ## Why these picks
 
-**Donor CRM + donation processing: 4aGoodCause Scale ($429/mo, $5,148/yr).** At this size the processing arithmetic is one-sided: a percentage fee on this much online giving dwarfs any subscription, and [4aGoodCause](/go/4agoodcause) takes none — unlimited online revenue on Scale, so the fee stops tracking your success entirely. The built-in donor CRM carries the fundraising record: profiles, giving history, tags, custom fields, acknowledgements, and on Scale the premium integrations (Blackbaud and others) that let it sit alongside a heavier institutional database where one exists. Be honest about the fit: a shop this size with complex major-gift moves management may want deeper reporting — [Bloomerang](/go/bloomerang) is the retention-reporting alternative and prices by record count, and a Salesforce build is excellent when a named admin and an implementation budget come with it, and a liability without them.
+**Donor CRM + donation processing: DonorDock ($500/mo, $6,000/yr).** One line carries the department. The database is the system of record for eight-plus people, and [DonorDock's](/go/donordock) single plan means neither a growing file nor another module ever re-prices the contract — unlimited contacts, email marketing built in, and the ActionBoard keeping daily follow-up alive across a big team. Onboarding is a separate $3,800 one-time line; put it in year one.
+
+Do the processing math with open eyes, because at this size it is the biggest number on the page: DonorDock's giving pages carry a **2% platform fee** on top of card processing, which is $10,000 a year at $500,000 of online giving. If your online program is that large, [4aGoodCause](/go/4agoodcause) Scale ($5,148/yr, unlimited online revenue, no percentage) is the flat-fee alternative for the giving side — running it alongside DonorDock splits the line back in two, and past roughly $250,000 online the split usually costs less in total. For deeper retention reporting, [Bloomerang](/go/bloomerang) remains the alternative on the database side, and a Salesforce build is excellent when a named admin and an implementation budget come with it, and a liability without them.
 
 The one thing to protect on the way across is recurring-gift tooling. A large monthly file leaks through expired cards, and [Donorbox](/go/donorbox) Pro's recovery machinery is the benchmark to hold any replacement against. Saving on fees while losing monthly donors to failed payments is a bad trade that shows up two quarters later.
 
