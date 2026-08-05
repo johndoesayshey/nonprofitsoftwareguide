@@ -63,8 +63,12 @@ account is live.
 ---
 
 ### 4. Zeffy — 30% of donor tips, ~$500 per signup
-⏳ **BLOCKED on PartnerStack approval** (applied 2026-08-03)
-**https://dash.partnerstack.com/marketplace/all/details/zeffyinc**
+🔀 **ROUTE CHANGED 2026-08-04: applying directly, outside PartnerStack.**
+The operator found a direct application on Zeffy's side and is submitting it —
+answers drafted in the operator's voice (org description, site, audience, leads).
+When it clears, compare the direct terms against PartnerStack's published
+30%-of-tips/12-months before accepting, then flip affiliates.json to active.
+Old route for reference: **https://dash.partnerstack.com/marketplace/all/details/zeffyinc**
 
 **Found 2026-08-03, and it overturns an assumption that was wrong for months.**
 Zeffy was rated `none` here on the reasoning that it is free to nonprofits and
@@ -84,8 +88,18 @@ first thing to do inside the dashboard.
 
 ## Tier 2 — worth the twenty minutes
 
-### 5. PartnerStack account — the gate for everything below ✅ SUBMITTED 2026-08-03
-**https://dash.partnerstack.com/signup** — ⏳ awaiting approval
+### 5. PartnerStack account — the gate for everything below ❌ DENIED, APPEALED
+**https://dash.partnerstack.com/signup** — applied 2026-08-03; **denied** (their
+stated reason questioned the fit/depth of nonprofit content). The operator wrote
+back 2026-08-04 arguing monday.com and Zeffy are genuinely strong nonprofit
+tools — appeal pending. Consequences while it stands:
+- **Zeffy: unblocked anyway** — direct application found (see #4 above).
+- **monday.com: still gated.** This is why monday has been deprioritized across
+  the site (out of all stacks, out of donor-crm) — no reachable program, low
+  payout ($10+/signup) even if the appeal lands. If the appeal succeeds, its
+  natural home is the operations guide, where it still holds Best overall.
+- Tier 3 directory programs (Ticket Tailor, Xero, Brevo, Bloomerang agency
+  track) stay blocked on the same appeal.
 
 Not a program, a network. **357 programs** in the public directory at
 `market.partnerstack.com`, with rates stated before you join.
