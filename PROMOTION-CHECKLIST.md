@@ -101,13 +101,16 @@ list** — Nonprofit Quarterly and Blue Avocado were both checked and ruled out
 (bylined-essay and first-person requirements, incompatible with staying
 anonymous).
 
-**Three are done and sitting in Gmail Drafts** (nonprofitsoftwareguide@gmail.com),
-written, filled and verified 2026-08-05 — nothing sent, just open Drafts,
-attach the PDF, proofread, and hit send:
+**Status as of 2026-08-05, see `OUTREACH-DRAFTS.md` for the full story:**
 
-- [ ] **Nonprofit Tech for Good** — heather@nptechforgood.com — draft ready
-- [ ] **NonProfit PRO** — acole@columbiabooks.com (Amanda Cole) — draft ready
-- [ ] **Whole Whale / Nonprofit News Feed** — NPNewsFeed@wholewhale.com — draft ready
+- [x] **Nonprofit Tech for Good** — heather@nptechforgood.com — **sent** (the
+      operator's own version, PDF attached)
+- ~~NonProfit PRO~~ — verified as a real contact, but ruled out on editorial
+      fit; not pursuing
+- ~~Whole Whale / Nonprofit News Feed~~ — turned out to be the agency's own
+      content marketing, not an outlet; dropped
+- [ ] **Jeff Brooks, Future Fundraising Now** — jeff@jeff-brooks.com — draft
+      ready in Gmail, needs the PDF attached and a send
 - [ ] **National Council of Nonprofits** — via site contact form, not email;
       text is in `OUTREACH-DRAFTS.md` ready to paste, has to be submitted
       by hand since their site blocks automated form submission

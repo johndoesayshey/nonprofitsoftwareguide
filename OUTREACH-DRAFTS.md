@@ -1,121 +1,78 @@
-# Survey outreach — final, ready-to-send drafts
+# Survey outreach — status as of 2026-08-05
 
-Written 2026-08-05, revised same day: GivingTuesday Data Commons swapped out
-for Whole Whale / Nonprofit News Feed (stronger reach — a newsletter that
-also feeds a podcast, one pitch, two placements). These four are complete,
-final copy, nothing left to assemble. Three were saved as actual drafts in
-nonprofitsoftwareguide@gmail.com; the fourth is a web form, not email, so its
-text is here ready to paste.
+Revised twice today. First swap (GivingTuesday out, Whole Whale in) turned
+out wrong too — Whole Whale's "News Feed" is the agency's own content
+marketing, last podcast episode December 2025, not an editorial outlet, and
+the operator caught it. Whole Whale's draft was deleted. NonProfit PRO /
+Columbia Books was independently verified as a real, current, on-the-record
+contact (Amanda Cole, Editor-in-Chief, listed on NonProfit PRO's own staff
+page) — verification isn't the issue, editorial fit is, and the operator
+made the call that it's not the right kind of publication for this site.
+That draft was deleted too, not recreated.
 
-**Identity answer, used consistently in all four:** "Nonprofit Software
-Guide is an independent publication covering nonprofit fundraising software,
-run by a fundraising professional with 15+ years in the field." Matches the
-`/about/` page. Change it if you want something different, but keep it the
-same across every pitch you send.
+**Identity answer, updated 2026-08-05:** first name only is fine — "Charles,
+Nonprofit Software Guide." No last name, no photo, no credential beyond
+"fundraising professional." This is now the default sign-off.
 
 ---
 
 ## 1. Nonprofit Tech for Good — heather@nptechforgood.com
-**Status: saved as a Gmail draft.**
-
-**Subject:** 36% of small nonprofits have no donor database — new survey data
-
-**Body:**
-
-Hi Heather,
-
-I went through your digital marketing and fundraising research roundup, and noticed software spend isn't one of the categories covered yet, everything from email and social to AI adoption and monthly giving, but nothing on what nonprofits actually pay for the tools themselves.
-
-We just ran a survey that fills that gap: 100 U.S. fundraising professionals reporting actual dollars spent on fundraising software, broken out by organization size and category. A few findings that might be useful for your audience:
-
-36% of nonprofits raising under $250,000 a year have no donor database of any kind, not a bad CRM, no CRM at all.
-
-Total software spend scales 37x between the smallest and largest organizations surveyed: a mean of $2,611/yr under $250K raised, up to $96,815/yr at $5M+.
-
-Donation processing, not the CRM, is the single largest software line at every size, 39% of the total budget for the smallest nonprofits, and $30,824/yr on its own for the largest.
-
-Prospect research and wealth screening spend is close to zero below $250K and rises sharply above $1M, tracking almost exactly with when organizations hire a dedicated researcher.
-
-Full methodology and the category-by-category breakdown are at nonprofitsoftwareguide.com/benchmarks, and I've attached the PDF. Free to use with attribution, happy to answer questions or pull a different cut of the data if something else would be more useful for your roundup.
-
-Nonprofit Software Guide is an independent publication covering nonprofit fundraising software, run by a fundraising professional with 15+ years in the field.
-
-Best,
-Nonprofit Software Guide
-nonprofitsoftwareguide.com
-
-**Before sending:** attach `public/2026-nonprofit-software-spend-survey.pdf`. Timing note from the shortlist: send now, well ahead of next June, since that's when this roundup typically refreshes.
+**Status: SENT** (not by this draft — the operator took over the compose and
+sent their own version directly, 2026-08-05, subject "Intro and Nonprofit
+Software Spend Survey," PDF attached). No further action.
 
 ---
 
-## 2. NonProfit PRO — acole@columbiabooks.com (Amanda Cole, Editor-in-Chief)
-**Status: saved as a Gmail draft.**
-
-**Subject:** New data: nonprofit software spend grows 37x between a $200K and $10M shop
-
-**Body:**
-
-Hi Amanda,
-
-I saw your piece on the M+R Benchmarks 2026 release back in April. We just published a similar kind of finding: a fresh survey of 100 U.S. fundraising professionals on what nonprofits actually spend on fundraising software, broken out by organization size.
-
-The headline number: 36% of nonprofits raising under $250,000 a year have no donor database of any kind. A few more from the same dataset:
-
-Total software spend scales 37x between the smallest and largest organizations surveyed: a mean of $2,611/yr under $250K raised, up to $96,815/yr at $5M+.
-
-Donation processing, not the CRM, is the single largest software line at every size, 39% of the total budget for the smallest nonprofits, and $30,824/yr on its own for the largest.
-
-Prospect research and wealth screening spend is close to zero below $250K and rises sharply above $1M, tracking almost exactly with when organizations hire a dedicated researcher.
-
-Full methodology and the category-by-category breakdown are at nonprofitsoftwareguide.com/benchmarks, and I've attached the PDF. Free to use with attribution, happy to answer questions or pull a different cut of the data if useful.
-
-Nonprofit Software Guide is an independent publication covering nonprofit fundraising software, run by a fundraising professional with 15+ years in the field.
-
-Best,
-Nonprofit Software Guide
-nonprofitsoftwareguide.com
-
-**Before sending:** attach the PDF.
+## 2. NonProfit PRO — acole@columbiabooks.com
+**Status: dropped.** Contact verified correct; operator ruled it out as the
+wrong kind of publication for this site regardless. Not pursuing.
 
 ---
 
 ## 3. Whole Whale / Nonprofit News Feed — NPNewsFeed@wholewhale.com
-**Status: saved as a Gmail draft.**
-
-Their agency contact page says they don't accept guest posts or link exchanges and won't reply to those — this address is different, it's the newsletter desk, and 5,000+ subscribers feed into a podcast too, so one pitch can land two placements.
-
-**Subject:** New survey: 36% of small nonprofits have no donor database at all
-
-**Body:**
-
-Hi,
-
-We just published a survey of 100 U.S. fundraising professionals on what nonprofits actually spend on fundraising software, broken out by organization size and category. Thought it might be a good fit for the News Feed, and possibly the podcast.
-
-The finding I'd lead with: 36% of nonprofits raising under $250,000 a year have no donor database of any kind, not a bad CRM, no CRM at all. A few more from the same dataset:
-
-Total software spend scales 37x between the smallest and largest organizations surveyed: a mean of $2,611/yr under $250K raised, up to $96,815/yr at $5M+.
-
-Donation processing, not the CRM, is the single largest software line at every size, 39% of the total budget for the smallest nonprofits, and $30,824/yr on its own for the largest.
-
-Prospect research and wealth screening spend is close to zero below $250K and rises sharply above $1M, tracking almost exactly with when organizations hire a dedicated researcher.
-
-Full methodology and the category-by-category breakdown are at nonprofitsoftwareguide.com/benchmarks, and I've attached the PDF. Free to use with attribution, happy to answer questions or pull a different cut of the data if useful.
-
-Nonprofit Software Guide is an independent publication covering nonprofit fundraising software, run by a fundraising professional with 15+ years in the field.
-
-Best,
-Nonprofit Software Guide
-nonprofitsoftwareguide.com
-
-**Before sending:** attach the PDF.
+**Status: dropped.** Verified after the fact to be the agency's own content
+marketing (nav: Who We Are / What We Do / Work With Us / Contact — no
+masthead, no subscribe), last podcast episode December 2025. Should have
+been checked before drafting, not after. Not pursuing.
 
 ---
 
-## 4. National Council of Nonprofits — via their site contact form
-**Status: not an email, so no Gmail draft. Text below is final and paste-ready.**
+## 4. Jeff Brooks, Future Fundraising Now — jeff@jeff-brooks.com
+**Status: saved as a Gmail draft**, still needs the PDF attached and a send.
 
-Their fundraising resources page currently links a donor-management software buyer's guide from 2020. This is a resource-page update pitch, shorter than the others on purpose. Their site blocks automated form submission, so this has to be submitted by hand in a real browser session, not something I can complete for you.
+Operator-sourced lead. Verified before drafting: an individually-authored
+practitioner blog (Jeff Brooks, 35+ years in nonprofit fundraising, blogging
+since 2005), posting nearly daily — most recent post the day this was
+written. His own blog-policies page states most pitches don't land because
+they're irrelevant, explicitly discourages "new product" and "new blog"
+announcements, but says data and "innovative approaches" are welcome. The
+pitch below is written to that brief: short, leads entirely with the number,
+references his post from the day before (which was literally about survey
+research) as the honest reason for writing, and says plainly "no pitch
+beyond that."
+
+**Subject:** A data point on donor databases (not a pitch, re: your survey research post)
+
+**Body:**
+
+Hi Jeff,
+
+Your post yesterday on getting the most out of survey research made me think you might want this rather than file it under pitches.
+
+We just ran a survey of 100 U.S. fundraising professionals on what nonprofits actually spend on software, broken out by size. The number that stuck with me: 36% of nonprofits raising under $250,000 a year have no donor database at all. Not a bad one, none.
+
+Full data and the methodology are at nonprofitsoftwareguide.com/benchmarks if it's useful for anything you're working on. No pitch beyond that, happy to send the underlying numbers if you want a different cut.
+
+Charles
+Nonprofit Software Guide
+
+**Before sending:** attach `public/2026-nonprofit-software-spend-survey.pdf` — I still can't attach files through the browser (see below), so this is a manual step.
+
+---
+
+## National Council of Nonprofits — via their site contact form
+**Status: unchanged, still just text, nothing submitted.** Not an email, so
+no Gmail draft. Their site blocks automated form submission.
 
 **Message:**
 
@@ -129,12 +86,26 @@ Nonprofit Software Guide is an independent publication covering nonprofit fundra
 
 ---
 
-## Send order
+## On attaching the PDF
 
-1. **Nonprofit Tech for Good** and **NonProfit PRO** — both personal editorial addresses; a reply from one doesn't affect the other, safe to send same day.
-2. **Whole Whale / Nonprofit News Feed** — same day is fine, different contact entirely.
-3. **National Council of Nonprofits** — submit through the form yourself when you have a few minutes at the keyboard.
-4. Once replies start coming in, consider offering **one** outlet a 48-hour exclusive on anything not yet covered. That's often what turns a summary into a full article.
+Gmail's file upload only accepts files the browser extension considers
+"shared with this session" — reading a file's contents (even via an explicit
+`@`-mention) doesn't satisfy that, and neither does a scratchpad copy. Every
+attempt today was refused. The Jeff Brooks draft needs the PDF attached by
+hand: open Drafts, click the paperclip, pick
+`public/2026-nonprofit-software-spend-survey.pdf` (the current one, rebuilt
+tonight after the pricing corrections — not the older copy at the repo
+root), then send.
+
+## What's left
+
+Two live leads right now: Nonprofit Tech for Good (sent) and Jeff Brooks
+(drafted, needs attachment + send). National Council of Nonprofits needs the
+form submitted by hand. Everything else from the original Tier 1 (DH
+Leonard, RKD Group, Missions to Movements) is still in `OUTREACH-SHORTLIST.md`
+and unpitched — say the word and I'll verify and draft the next one properly
+before writing anything, rather than reusing the earlier research at face
+value.
 
 Log every send in `PROMOTION-CHECKLIST.md`'s activity table, same as the
 Reddit comments — the pattern matters more than any single result.
