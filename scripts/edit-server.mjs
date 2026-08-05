@@ -359,9 +359,22 @@ const CLIENT = `
     }
     return true;
   }
+  function ownText(el) {
+    var t = '';
+    for (var i = 0; i < el.childNodes.length; i++) {
+      var n = el.childNodes[i];
+      if (n.nodeType === 3) t += n.textContent;
+    }
+    return t.trim();
+  }
   function eligible(el) {
     if (el.closest('#nsg-bar') || el.closest('#nsg-composer')) return false;
     if (!inlineOnly(el)) return false;
+    // A container whose text lives entirely in child elements (a pricing-ladder
+    // row of generated spans, a cell of links) must not take the edit itself:
+    // its combined markup exists in no source file, so the save cannot match.
+    // Leave it alone and the leaf spans become editable individually.
+    if (el.children.length >= 1 && !ownText(el)) return false;
     var t = (el.textContent || '').trim();
     return t.length >= 1 && t.length < 3000;
   }
