@@ -214,6 +214,11 @@ Draft with marked slots for real input:
 2–4 slots per post, placed where first-hand detail carries the most weight. These slots are
 what makes the content rank.
 
+**"Best for" is single-sourced** *(operator rule, 2026-08-04)*: the `bestFor` field in
+the platform's frontmatter is the only place that copy lives. Every surface with a
+"Best for" label renders that field; never hand-write a variant in a template or
+content body. Enforced by `scripts/check-bestfor.mjs` as a build failure.
+
 **Voice:** practitioner to practitioner. The reader is a development director with a board
 meeting Thursday. Short sentences. Name the tradeoff. Never "game-changing," "robust," or
 "seamless."
