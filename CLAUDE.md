@@ -224,6 +224,16 @@ consistent everywhere it renders in that context. Templates render via
 template or content body. Enforced by `scripts/check-bestfor.mjs` as a build
 failure, including keys for categories the product is not listed under.
 
+**Every pricing update triggers a full-site price sweep** *(operator rule,
+2026-08-04)*: when the operator changes any price — through the visual editor or
+otherwise — do not stop at the edited field. Sweep the entire site for every
+other place that product's pricing appears: pricingTiers and entryPrice, prose
+in the platform write-up, stack annualCost lines and stack totals, guide pick
+notes, alternatives notes, compare pages, posts, and cost math that derives from
+the number (break-evens, year-one totals, "half the subscription again" style
+lines). Update lastVerified on the platform file in the same pass. The DonorDock
+correction of 2026-08-03 is the cautionary tale: the price appeared on 39 pages.
+
 **Every "Best for" update triggers a full-site sweep** *(operator rule,
 2026-08-04)*: when the operator changes any bestFor text, do not stop at the
 field. Sweep the entire site's content — guide pick notes, alternatives picks,

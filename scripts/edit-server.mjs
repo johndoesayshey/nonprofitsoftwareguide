@@ -599,6 +599,43 @@ const CLIENT = `
   }
   function snippet(el) { return (el.textContent || '').trim().replace(/\\s+/g, ' ').slice(0, 90); }
 
+  // A selector path that survives a reload, so a note can be found again even
+  // if the text changes. Stops at an id when one exists.
+  function cssPath(el) {
+    var path = [], n = el;
+    while (n && n.nodeType === 1 && n !== document.body) {
+      var seg = n.tagName.toLowerCase();
+      if (n.id) { path.unshift(seg + '#' + n.id); break; }
+      var p = n.parentElement, idx = 0, count = 0;
+      if (p) {
+        for (var i = 0; i < p.children.length; i++) {
+          if (p.children[i].tagName === n.tagName) { count++; if (p.children[i] === n) idx = count; }
+        }
+      }
+      path.unshift(count > 1 ? seg + ':nth-of-type(' + idx + ')' : seg);
+      n = n.parentElement;
+    }
+    return path.join(' > ');
+  }
+  // The last heading before the element in document order — "under 'Pricing'"
+  // is how a human locates a spot, so record it with the note.
+  function nearestHeading(el) {
+    var hs = document.querySelectorAll('h1,h2,h3,h4,h5,h6'), best = '';
+    for (var i = 0; i < hs.length; i++) {
+      if (hs[i].compareDocumentPosition(el) & Node.DOCUMENT_POSITION_FOLLOWING)
+        best = (hs[i].textContent || '').trim().replace(/\\s+/g, ' ').slice(0, 80);
+    }
+    return best;
+  }
+  // Where the element sits on the page, in page pixels — enough for Claude to
+  // reload this URL and screenshot exactly the region that was clicked.
+  function boxOf(el) {
+    var r = el.getBoundingClientRect();
+    return { x: Math.round(r.left + window.scrollX), y: Math.round(r.top + window.scrollY),
+             w: Math.round(r.width), h: Math.round(r.height),
+             viewport: window.innerWidth || document.documentElement.clientWidth || 0 };
+  }
+
   function noteFor(el) {
     var src = srcOf(el), snip = snippet(el);
     for (var i = 0; i < NOTES.length; i++) {
@@ -684,7 +721,8 @@ const CLIENT = `
       if (!text) { ta.focus(); return; }
       fetch('/__nsg/note', { method: 'POST', headers: { 'content-type': 'application/json' },
         body: JSON.stringify({ page: PAGE, file: src.file, line: src.line,
-                               element: describe(el), snippet: snippet(el), note: text }) })
+                               element: describe(el), snippet: snippet(el), note: text,
+                               selector: cssPath(el), heading: nearestHeading(el), box: boxOf(el) }) })
         .then(function (r) { return r.json(); })
         .then(function (res) { NOTES = res.notes; closeComposer(); paintPins(); refreshNotesMsg(); });
     });
@@ -799,6 +837,7 @@ createServer(async (req, res) => {
         status: 'open',
         page: n.page, file: (n.file || '').replace(ROOT, ''), line: n.line,
         element: n.element, snippet: n.snippet, note: n.note,
+        selector: n.selector || '', heading: n.heading || '', box: n.box || null,
       };
       notes.push(note);
       saveNotes(notes);

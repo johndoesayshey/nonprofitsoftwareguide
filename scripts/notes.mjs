@@ -30,7 +30,10 @@ for (const [page, list] of byPage) {
   for (const n of list) {
     console.log(yellow(`    • ${n.note}`));
     console.log(`        ${n.element}${n.file ? `  ${n.file}:${n.line}` : ''}  [${n.id}]`);
+    if (n.heading) console.log(`        under heading: "${n.heading}"`);
     if (n.snippet) console.log(`        "${n.snippet.slice(0, 70)}"`);
+    if (n.selector) console.log(`        selector: ${n.selector}`);
+    if (n.box) console.log(`        spot: http://localhost:4400${n.page} → zoom region x=${n.box.x} y=${n.box.y} w=${n.box.w} h=${n.box.h} (page px at ${n.box.viewport}w)`);
   }
   console.log('');
 }
