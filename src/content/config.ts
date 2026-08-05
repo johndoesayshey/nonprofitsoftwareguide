@@ -52,6 +52,10 @@ const platforms = defineCollection({
     // renders it in that category's context, this overrides bestFor. Keys must
     // be categories the product is actually listed in (check-bestfor enforces).
     bestForByCategory: z.record(z.string()).default({}),
+    // Renders an "Editor's choice" chip beside the name in its PRIMARY
+    // category's tables (hub + compare). One per category at most — editorial
+    // call, not computed.
+    editorsChoice: z.boolean().default(false),
     strengths: z.array(z.string()),
     // Replaces the old `limitations` list. A bare list of faults reads as a
     // verdict against the product and gives the reader nowhere to go; this says

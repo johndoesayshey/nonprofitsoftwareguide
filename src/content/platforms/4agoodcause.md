@@ -19,6 +19,7 @@ lastVerified: 2026-08-02
 bestFor: "Shops that want a payment processor that does not charge per transaction, potentially saving thousands each year. Lighter CRM integration, but great for small shops just taking the next step and looking to cap costs on fees. Plentiful integrations (like Mailchimp and Quickbooks) to make up for fewer built-ins on the CRM. However, the price point justifies this and makes it our top pick for a donor processor."
 targetQuery: "4agoodcause review pricing"
 affiliateSlug: 4agoodcause
+editorsChoice: true
 freeTier: false
 features:
   emailMarketing: basic

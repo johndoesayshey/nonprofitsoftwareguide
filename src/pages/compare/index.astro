@@ -139,7 +139,9 @@ const datasetLd = {
                 {g.rows.map(({ tool: t, versus }) => (
                   <>
                   <tr class="tool-row">
-                    <th scope="row"><a href={`/platforms/${t.slug}/`}>{t.name}</a></th>
+                    <th scope="row"><a href={`/platforms/${t.slug}/`}>{t.name}</a>{t.editorsChoice && (
+                      <span class="choice-chip">★ Editor's choice</span>
+                    )}</th>
                     <td class="price">
                       {t.pricingTiers.length > 0 ? (
                         <>
@@ -269,6 +271,10 @@ const datasetLd = {
   table.cmp { min-width: 48rem; table-layout: fixed; }
   table.cmp col.c-tool { width: 14%; } table.cmp col.c-price { width: 26%; }
   table.cmp col.c-email { width: 12%; }
+  .choice-chip { display: inline-block; margin-left: .5rem; padding: .14rem .5rem; border-radius: 3px;
+    background: var(--color-ink); color: var(--color-paper, #fff); font-family: var(--font-mono);
+    font-size: .6rem; font-weight: 700; letter-spacing: .09em; text-transform: uppercase;
+    vertical-align: middle; white-space: nowrap; }
   table.cmp col.c-best { width: 25%; } table.cmp col.c-cta { width: 20%; }
 
   /* Only "included" answers the question a buyer is actually asking — can I
