@@ -5,7 +5,7 @@ import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import AffiliateDisclosure from '../../components/AffiliateDisclosure.astro';
 import ConsultantSlot from '../../components/ConsultantSlot.astro';
 import DraftBanner from '../../components/DraftBanner.astro';
-import { categoryLabel } from '../../lib/categories';
+import { categoryLabel, bestForIn } from '../../lib/categories';
 import { tierBySlug } from '../../lib/stacks';
 import { formatMedium } from '../../lib/dates';
 
@@ -25,7 +25,7 @@ const tier = tierBySlug(s.slug);
 // for every "Best for" line on the site, so an edit there follows through here.
 const allPlatforms = await getCollection('platforms');
 const platformName = new Map(allPlatforms.map((p) => [p.data.slug, p.data.name]));
-const platformBestFor = new Map(allPlatforms.map((p) => [p.data.slug, p.data.bestFor]));
+const platformData = new Map(allPlatforms.map((p) => [p.data.slug, p.data]));
 
 // Supporting posts that name this hub (cluster down-links). Only published ones.
 const allPosts = await getCollection('posts', ({ data }) => data.draft === false);
@@ -85,8 +85,8 @@ const verified = formatMedium(s.lastVerified);
                 ) : (
                   <a href={`/platforms/${c.platformSlug}/`}>{c.label ?? platformName.get(c.platformSlug) ?? c.platformSlug}</a>
                 )}
-                {!c.advisory && c.platformSlug && platformBestFor.get(c.platformSlug) && (
-                  <><br /><small class="line-bestfor"><strong>Best for:</strong> {platformBestFor.get(c.platformSlug)}</small></>
+                {!c.advisory && c.platformSlug && platformData.get(c.platformSlug) && (
+                  <><br /><small class="line-bestfor"><strong>Best for:</strong> {bestForIn(platformData.get(c.platformSlug)!, c.category)}</small></>
                 )}
                 <br /><small style="color:var(--color-muted)">{c.rationale}</small>
               </td>

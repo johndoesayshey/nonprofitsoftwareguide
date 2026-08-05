@@ -9,6 +9,7 @@ import { comparePairs } from '../../lib/compare';
 import { CATEGORIES } from '../../lib/categories';
 import { getAffiliate } from '../../lib/affiliates';
 import { valueOf, categoryValue, relFor } from '../../lib/affiliate-value';
+import { bestForIn } from '../../lib/categories';
 import { formatMedium } from '../../lib/dates';
 
 // This page absorbed the old standalone /pricing/ page (301 in public/_redirects).
@@ -157,7 +158,7 @@ const datasetLd = {
                         <span class="num">{t.entryPrice}</span>
                       )}
                     </td>
-                    <td class="cmp-best">{t.bestFor}</td>
+                    <td class="cmp-best">{bestForIn(t, g.cat.slug)}</td>
                     <td class="cmp-cta">
                       <a class="btn-visit" href={`/go/${t.affiliateSlug}`} rel={relFor(t.affiliateSlug)}>Visit →</a>
                       <ReaderOffer slug={t.affiliateSlug} compact />

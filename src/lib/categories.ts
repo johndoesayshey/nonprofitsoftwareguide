@@ -60,3 +60,13 @@ export const CATEGORIES: Record<string, CategoryMeta> = {
 export function categoryLabel(slug: string): string {
   return CATEGORIES[slug]?.label ?? slug;
 }
+
+// The canonical "Best for" line for a platform *in a given category context*.
+// Single source: platform frontmatter. Cross-listed products override per
+// category via bestForByCategory; everything else falls back to bestFor.
+export function bestForIn(
+  data: { bestFor: string; bestForByCategory?: Record<string, string> },
+  category?: string,
+): string {
+  return (category && data.bestForByCategory?.[category]) || data.bestFor;
+}

@@ -15,6 +15,8 @@ pricingTiers:
     price: "~$12/seat/mo"
 lastVerified: 2026-07-29
 bestFor: "Program tracking, campaign planning, and the operational work that isn't donor data"
+bestForByCategory:
+  donor-crm: "Board-style donor tracking for teams that already run on monday.com — enough structure before your first real CRM, with program work in the same place."
 targetQuery: "monday.com for nonprofits"
 alsoIn: [donor-crm]
 affiliateSlug: monday

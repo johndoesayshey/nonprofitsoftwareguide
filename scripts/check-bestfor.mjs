@@ -30,7 +30,7 @@ function astroFiles(dir, out = []) {
 for (const file of astroFiles(join(ROOT, 'src'))) {
   const src = readFileSync(file, 'utf8');
   const hasLabel = /Best for\s*[<:]/i.test(src);
-  const readsField = /\bbestFor\b/.test(src);
+  const readsField = /\bbestFor(?:In|ByCategory)?\b/.test(src);
   if (hasLabel && !readsField) {
     failures.push(
       `${relative(ROOT, file)} shows a "Best for" label but never reads a bestFor field — render platform bestFor instead of hardcoding text`,
@@ -38,7 +38,21 @@ for (const file of astroFiles(join(ROOT, 'src'))) {
   }
 }
 
-// --- 2. Content bodies: no hand-written "Best for" blocks. -------------------
+// --- 2. Cross-listing integrity: per-category text only where the product
+// actually appears. A bestForByCategory key for a category the platform is not
+// listed under is dead copy that will silently never render. -----------------
+for (const entry of readCollection('platforms')) {
+  const cats = new Set([entry.data.category, ...(entry.data.alsoIn ?? [])]);
+  for (const key of Object.keys(entry.data.bestForByCategory ?? {})) {
+    if (!cats.has(key)) {
+      failures.push(
+        `${entry.file} has bestForByCategory["${key}"] but is not listed in that category (category/alsoIn) — the text would never render`,
+      );
+    }
+  }
+}
+
+// --- 3. Content bodies: no hand-written "Best for" blocks. -------------------
 for (const name of ['platforms', 'stacks', 'posts', 'alternatives', 'guides']) {
   for (const entry of readCollection(name)) {
     const raw = readFileSync(entry.path, 'utf8');

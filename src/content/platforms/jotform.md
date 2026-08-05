@@ -23,6 +23,8 @@ pricingTiers:
     note: "Bronze, Silver and Gold"
 lastVerified: 2026-08-03
 bestFor: "Program applications, volunteer intake, and every form that outgrows email"
+bestForByCategory:
+  donor-crm: "Not a CRM — a form-first way to collect donor, volunteer and gift data cleanly before you buy a real database. The tidy version of the spreadsheet stage."
 targetQuery: "jotform for nonprofits"
 alsoIn: [donor-crm]
 affiliateSlug: jotform

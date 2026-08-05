@@ -47,6 +47,11 @@ const platforms = defineCollection({
     pricingBasis: z.string().optional(),
     lastVerified: z.coerce.date(),
     bestFor: z.string(),
+    // Per-category "Best for". A cross-listed product (alsoIn) carries distinct
+    // canonical text for each software type it appears under; anywhere the site
+    // renders it in that category's context, this overrides bestFor. Keys must
+    // be categories the product is actually listed in (check-bestfor enforces).
+    bestForByCategory: z.record(z.string()).default({}),
     strengths: z.array(z.string()),
     // Replaces the old `limitations` list. A bare list of faults reads as a
     // verdict against the product and gives the reader nowhere to go; this says

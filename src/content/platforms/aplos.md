@@ -23,6 +23,8 @@ pricingTiers:
     note: "ACH 1% + $0.30, uncapped; +1% on Amex and international"
 lastVerified: 2026-08-03
 bestFor: "Nonprofits and churches that need real fund accounting — a general ledger by fund — with donation tracking attached."
+bestForByCategory:
+  donor-crm: "Shops where the books are the bigger problem: real fund accounting with donor management attached, one system for both."
 targetQuery: "aplos pricing"
 alsoIn: [donor-crm]
 affiliateSlug: aplos

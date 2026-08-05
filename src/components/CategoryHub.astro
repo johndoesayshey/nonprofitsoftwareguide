@@ -2,7 +2,7 @@
 import { getCollection } from 'astro:content';
 import { comparePairs } from '../lib/compare';
 import ReaderOffer from './ReaderOffer.astro';
-import { CATEGORIES } from '../lib/categories';
+import { CATEGORIES, bestForIn } from '../lib/categories';
 import { getAffiliate } from '../lib/affiliates';
 import { byValue, valueOf, potentialOf, relFor } from '../lib/affiliate-value';
 
@@ -93,7 +93,7 @@ const posts = (await getCollection('posts', ({ data }) => data.draft === false))
                     <span class="num">{p.data.entryPrice}</span>
                   )}
                 </td>
-                <td class="cmp-best">{p.data.bestFor}</td>
+                <td class="cmp-best">{bestForIn(p.data, category)}</td>
                 <td class="cmp-cta">
                   <a class="btn-visit" href={`/go/${p.data.affiliateSlug}`} rel={relFor(p.data.affiliateSlug)}>Visit →</a>
                   <ReaderOffer slug={p.data.affiliateSlug} compact />
@@ -148,7 +148,7 @@ const posts = (await getCollection('posts', ({ data }) => data.draft === false))
           ) : (
             <p class="tool-price num">{p.data.entryPrice}</p>
           )}
-          <p class="tool-best">{p.data.bestFor}</p>
+          <p class="tool-best">{bestForIn(p.data, category)}</p>
           <div class="tool-actions">
             <a class="btn-visit" href={`/go/${p.data.affiliateSlug}`} rel={relFor(p.data.affiliateSlug)}>Visit site →</a>
             <a class="link-review" href={`/platforms/${p.data.slug}/`}>Review</a>

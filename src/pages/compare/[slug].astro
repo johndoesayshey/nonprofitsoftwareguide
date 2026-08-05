@@ -6,7 +6,7 @@ import AffiliateLink from '../../components/AffiliateLink.astro';
 import AffiliateDisclosure from '../../components/AffiliateDisclosure.astro';
 import DraftBanner from '../../components/DraftBanner.astro';
 import { comparePairs } from '../../lib/compare';
-import { categoryLabel } from '../../lib/categories';
+import { categoryLabel, bestForIn } from '../../lib/categories';
 import { getAffiliate } from '../../lib/affiliates';
 import { formatMonthYear } from '../../lib/dates';
 
@@ -48,7 +48,7 @@ const itemListLd = {
 const rows: Array<[string, string, string]> = [
   ['Entry price', a.entryPrice, b.entryPrice],
   ['Pricing model', a.pricingModel, b.pricingModel],
-  ['Best for', a.bestFor, b.bestFor],
+  ['Best for', bestForIn(a, pair.category), bestForIn(b, pair.category)],
   ['Last verified', fmt(a.lastVerified), fmt(b.lastVerified)],
 ];
 ---
@@ -74,7 +74,7 @@ const rows: Array<[string, string, string]> = [
       <!-- Answer first: assembled from real fields, not invented. -->
       <p class="lead">
         {a.name} and {b.name} are both {catLabel.toLowerCase()} tools.
-        {a.name} fits {a.bestFor.toLowerCase()}; {b.name} fits {b.bestFor.toLowerCase()}.
+        {a.name} fits {bestForIn(a, pair.category).toLowerCase()}; {b.name} fits {bestForIn(b, pair.category).toLowerCase()}.
         The table below lines up price and fit so you can see which one
         matches your shop.
       </p>
