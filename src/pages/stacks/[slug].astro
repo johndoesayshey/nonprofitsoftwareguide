@@ -95,9 +95,12 @@ const ledger = s.components.map((c, i) => {
         <tbody>
           {ledger.map(({ c, label, first, span }) => (
             <tr class:list={{ advisory: c.advisory, optional: c.optional }}>
-              {first && <td rowspan={span}>{label}</td>}
+              {first ? (
+                <td>{label}</td>
+              ) : (
+                <td class="or-cell"><span class="or-chip" aria-label="or, alternatively">or</span></td>
+              )}
               <td>
-                {!first && <span class="or-chip" aria-label="or, alternatively">or</span>}
                 {c.optional && <span class="opt-tag">Optional at this size</span>}
                 {c.advisory || !c.platformSlug ? (
                   <a class="line-name" href="/consulting/">{c.label ?? 'No software yet'}</a>
@@ -159,10 +162,14 @@ const ledger = s.components.map((c, i) => {
   /* Canonical "Best for" line, pulled from the platform file. Distinct from the
      muted stack rationale below it so the two read as label vs. commentary. */
   .line-bestfor { color: var(--color-ink); }
-  /* Alternatives inside one category slot: chip marks the "or" row. */
-  .or-chip { display: inline-block; margin-right: .45rem; padding: .05rem .45rem; border: 1px solid var(--color-rule-strong);
-    border-radius: 999px; font-family: var(--font-mono); font-size: .6rem; letter-spacing: .08em;
-    text-transform: uppercase; color: var(--color-muted); vertical-align: middle; }
+  /* Alternatives inside one category slot: the label shows once; the second
+     row's category cell carries only an "or" chip, pulled up to sit on the
+     grey rule separating the two options. */
+  .or-cell { position: relative; }
+  .or-chip { position: absolute; top: -0.72em; left: .7rem; padding: .05rem .5rem;
+    border: 1px solid var(--color-rule-strong); border-radius: 999px; background: var(--color-paper, #fff);
+    font-family: var(--font-mono); font-size: .6rem; letter-spacing: .08em;
+    text-transform: uppercase; color: var(--color-muted); }
   /* Optional lines stay legible but visibly secondary. */
   tr.optional td, tr.optional a, tr.optional small { color: var(--color-muted); }
   tr.optional a:hover { color: var(--color-green-deep); }
