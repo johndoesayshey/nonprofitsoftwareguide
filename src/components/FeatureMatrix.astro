@@ -41,8 +41,8 @@ const best = Math.max(0, ...scored.map((s) => s.score));
         email marketing, donation forms, payment processing, events, and
         peer-to-peer. <strong>Yes</strong> means good enough to cancel the
         separate tool. <strong>Basic</strong> means it technically does it and
-        you will probably keep paying for the other thing anyway. Every verdict
-        comes from the vendor's own pages.
+        you will probably keep paying for the other thing anyway. Verdicts come from
+        the vendors' own pages and our own product research.
       </p>
     )}
 
@@ -80,7 +80,7 @@ const best = Math.max(0, ...scored.map((s) => s.score));
               something once there are several features to consolidate. */}
           {rows.length >= 3 && (
           <tr class="fm-total">
-            <th scope="row">Subscriptions it can replace<br /><small class="fm-count-note">counts full Yes cells only</small></th>
+            <th scope="row">Subscriptions it can replace</th>
             {scored.map(({ p, score }) => (
               <td class={score === best && best > 0 ? 'fm-win' : ''}>
                 {score} of {rows.length}
@@ -104,8 +104,6 @@ const best = Math.max(0, ...scored.map((s) => s.score));
      land at the table's full scrolled width, and stretch the whole document
      sideways. Cost me a page-level horizontal scrollbar to find. */
   .fm-scroll { overflow-x: auto; margin: 1rem 0 .8rem; position: relative; }
-  .fm-count-note { display: block; font-family: var(--font-mono); font-size: .6rem;
-    letter-spacing: .06em; text-transform: uppercase; color: var(--color-muted); font-weight: 400; }
 
   /* table-layout: fixed compresses columns to the container instead of
      overflowing it (operator note n55: no horizontal scroll). The wrapper's

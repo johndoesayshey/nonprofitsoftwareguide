@@ -29,13 +29,13 @@ features:
   donationForms: included
   paymentProcessing: included
   events: included
-  peerToPeer: add-on
+  peerToPeer: included
 featureNotes:
   emailMarketing: "Integrations for Mailchimp and Constant Contact"
   donationForms: "all plans, no platform percentage"
   paymentProcessing: "bring Stripe/Authorize.net or use theirs; no added %"
   events: "registration and ticketing on all plans"
-  peerToPeer: "Growing plan and up, $249/mo billed annually"
+  peerToPeer: "Growing plan and up"
 draft: false
 strengths:
   - "Flat subscription with no platform percentage, so the fee stops scaling with your success"

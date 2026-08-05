@@ -33,13 +33,11 @@ features:
   emailMarketing: none
   donationForms: included
   paymentProcessing: none
-  events: basic
+  events: none
   peerToPeer: none
 featureNotes:
-  donationForms: "free plan caps payment submissions at 10/mo, separate from the regular cap"
   paymentProcessing: "passthrough to your own Stripe/PayPal; Jotform never holds the money"
-  events: "registration forms only, no check-in or ticket scanning"
-  peerToPeer: "their own content points to third-party platforms"
+  events: "registration forms only"
 draft: false
 strengths:
   - "Permanent 50% nonprofit discount brings Bronze to about $17/mo"

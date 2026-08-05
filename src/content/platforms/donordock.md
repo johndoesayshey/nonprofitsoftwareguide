@@ -25,13 +25,12 @@ features:
   emailMarketing: included
   donationForms: included
   paymentProcessing: included
-  events: basic
+  events: included
   peerToPeer: none
 featureNotes:
   donationForms: "embeddable in-page forms"
   paymentProcessing: "2% platform fee + Stripe/PayPal fees"
-  events: "their own word is basic, ticket purchases, no event suite; they point to OneCause"
-  peerToPeer: "absent from their 100+ feature list; routed to partners"
+  events: "ticket purchases, no event suite"
 draft: false
 strengths:
   - "One plan with everything in it, no tier to outgrow and no module to bolt on later"
