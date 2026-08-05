@@ -156,6 +156,63 @@ function applyByFile(original, updated, file) {
   return null;
 }
 
+// Structured write for feature-chart cells: the page shows "Yes" but the file
+// stores "included", so these bypass text matching and edit the YAML directly.
+const F_KEYS = new Set(['emailMarketing', 'donationForms', 'paymentProcessing', 'events', 'peerToPeer']);
+const F_LEVELS = new Set(['included', 'basic', 'add-on', 'none', 'unknown']);
+function applyFeature({ slug, key, level, note }) {
+  if (!/^[a-z0-9-]+$/.test(String(slug || ''))) return { ok: false, reason: 'bad slug' };
+  if (!F_KEYS.has(key)) return { ok: false, reason: 'unknown feature key' };
+  if (level !== undefined && !F_LEVELS.has(level)) return { ok: false, reason: 'unknown level' };
+  const file = join(SRC, 'content', 'platforms', slug + '.md');
+  if (!existsSync(file)) return { ok: false, reason: 'no platform file for ' + slug };
+  let raw = readFileSync(file, 'utf8');
+
+  if (level !== undefined) {
+    const blockRe = /(^features:\n)((?:  \w+: [\w-]+\n)*)/m;
+    const m = raw.match(blockRe);
+    if (m) {
+      const lineRe = new RegExp('^(  ' + key + ': )[\\w-]+$', 'm');
+      if (lineRe.test(m[2])) {
+        const block = m[2].replace(lineRe, '$1' + level);
+        raw = raw.replace(blockRe, (_, h) => h + block);
+      } else {
+        raw = raw.replace(blockRe, (_, h, b) => h + b + '  ' + key + ': ' + level + '\n');
+      }
+    } else {
+      raw = raw.replace(/^draft:/m, 'features:\n  ' + key + ': ' + level + '\ndraft:');
+      if (!raw.includes('features:')) return { ok: false, reason: 'could not place features block' };
+    }
+  }
+
+  if (note !== undefined) {
+    const clean = String(note).trim();
+    const nblockRe = /(^featureNotes:\n)((?:  \w+: .*\n)*)/m;
+    const nm = raw.match(nblockRe);
+    const lineRe = new RegExp('^  ' + key + ': .*$', 'm');
+    const newLine = '  ' + key + ': ' + JSON.stringify(clean);
+    if (nm) {
+      let block = nm[2];
+      if (lineRe.test(block)) {
+        block = clean ? block.replace(lineRe, newLine) : block.replace(new RegExp('^  ' + key + ': .*\\n', 'm'), '');
+      } else if (clean) {
+        block = block + newLine + '\n';
+      }
+      raw = raw.replace(nblockRe, (_, h) => h + block);
+    } else if (clean) {
+      if (/^features:/m.test(raw)) {
+        raw = raw.replace(/(^features:\n(?:  \w+: [\w-]+\n)*)/m, '$1featureNotes:\n' + newLine + '\n');
+      } else {
+        raw = raw.replace(/^draft:/m, 'featureNotes:\n' + newLine + '\ndraft:');
+      }
+    }
+  }
+
+  writeFileSync(file, raw);
+  const what = [level !== undefined ? 'level=' + level : '', note !== undefined ? 'note' : ''].filter(Boolean).join(', ');
+  return { ok: true, file: file.replace(ROOT, ''), original: slug + '.' + key + ' (' + what + ')' };
+}
+
 function applyEdit(original, updated, file, line, page, isHtml) {
   if (isHtml) { original = cleanHtml(original); updated = cleanHtml(updated); }
   const result = applyByLocation(original, updated, file, line)
@@ -259,6 +316,8 @@ const CLIENT = `
   #nsg-deals.on { background: #7a5c12; }
 
   #nsg-notes { background: #2b2b2b; color: #fff; }
+  body.nsg-editing [data-nsg-fkey] .lvl-note:empty { display: block; min-height: 1.1em; }
+  body.nsg-editing [data-nsg-fkey] .lvl-note:empty::before { content: 'add note…'; color: #a9a9a9; font-style: italic; }
   #nsg-notes.on { background: #6d3fbf; }
 
   /* ---- notes mode ---- */
@@ -342,6 +401,11 @@ const CLIENT = `
   });
 
   var edits = new Map(); // element -> original text
+  // Feature-chart cells: td -> { slug, key, level, orig }. These save through a
+  // structured path because "Yes" on the page is "included" in the file.
+  var featureEdits = new Map();
+  var F_LEVELS = ['included', 'basic', 'add-on', 'none', 'unknown'];
+  var F_LABELS = { 'included': 'Yes', 'basic': 'Basic', 'add-on': 'Add-on', 'none': 'No', 'unknown': '?' };
   // Editing starts OFF on every page load. Contenteditable swallows clicks on
   // links, so a preview that opens in edit mode cannot be browsed; you turn
   // editing on for the page you actually want to change.
@@ -369,6 +433,9 @@ const CLIENT = `
   }
   function eligible(el) {
     if (el.closest('#nsg-bar') || el.closest('#nsg-composer')) return false;
+    // Feature-chart cells cycle by click instead of taking typed text; only
+    // their note line remains a normal text edit.
+    if (el.closest('[data-nsg-fkey]') && !el.classList.contains('lvl-note')) return false;
     if (!inlineOnly(el)) return false;
     // A container whose text lives entirely in child elements (a pricing-ladder
     // row of generated spans, a cell of links) must not take the edit itself:
@@ -376,6 +443,8 @@ const CLIENT = `
     // Leave it alone and the leaf spans become editable individually.
     if (el.children.length >= 1 && !ownText(el)) return false;
     var t = (el.textContent || '').trim();
+    // Empty note slots in feature cells are editable so a caveat can be added.
+    if (el.classList.contains('lvl-note') && el.closest('[data-nsg-fkey]')) return t.length < 3000;
     return t.length >= 1 && t.length < 3000;
   }
   function isHtmlEl(el) { return el.children.length > 0; }
@@ -408,8 +477,30 @@ const CLIENT = `
     });
   }
 
+  function cycleFeature(td) {
+    var slug = td.getAttribute('data-nsg-fslug');
+    var key = td.getAttribute('data-nsg-fkey');
+    var orig = td.getAttribute('data-nsg-flevel');
+    var cur = featureEdits.has(td) ? featureEdits.get(td).level : orig;
+    // A click answers the only question that matters: Yes or No.
+    var next = cur === 'included' ? 'none' : 'included';
+    td.className = td.className.replace(/lvl-[a-z-]+/, 'lvl-' + next);
+    var mark = td.querySelector('.lvl-mark');
+    if (mark) mark.textContent = F_LABELS[next];
+    if (next === orig) { featureEdits.delete(td); td.classList.remove('nsg-dirty'); }
+    else { featureEdits.set(td, { slug: slug, key: key, level: next }); td.classList.add('nsg-dirty'); }
+    refresh();
+  }
+  document.addEventListener('click', function (e) {
+    if (!on) return;
+    var td = e.target.closest && e.target.closest('[data-nsg-fkey]');
+    if (!td || e.target.closest('.lvl-note')) return;
+    e.preventDefault();
+    cycleFeature(td);
+  });
+
   function refresh() {
-    var n = edits.size;
+    var n = edits.size + featureEdits.size;
     var save = document.getElementById('nsg-save');
     save.textContent = 'Save ' + n;
     save.disabled = n === 0;
@@ -427,7 +518,7 @@ const CLIENT = `
       el.setAttribute('contenteditable', on ? 'true' : 'false');
     });
     msg(on
-      ? 'Click any text to edit it. Links are not clickable while this is on.'
+      ? 'Click any text to edit it. Feature-chart cells toggle Yes/No on click.'
       : 'Browsing. Links work normally. Turn on Edit to change text.');
   }
 
@@ -444,7 +535,15 @@ const CLIENT = `
 
   document.getElementById('nsg-save').addEventListener('click', function () {
     var payload = [];
+    var notePayload = [];
     edits.forEach(function (orig, el) {
+      var cell = el.closest && el.closest('[data-nsg-fkey]');
+      if (cell && el.classList.contains('lvl-note')) {
+        notePayload.push({ slug: cell.getAttribute('data-nsg-fslug'),
+                           key: cell.getAttribute('data-nsg-fkey'),
+                           note: el.textContent.trim() });
+        return;
+      }
       payload.push({
         original: orig,
         updated: valueOf(el),
@@ -454,15 +553,20 @@ const CLIENT = `
         page: location.pathname
       });
     });
+    var fpayload = [];
+    featureEdits.forEach(function (f) { fpayload.push(f); });
+    fpayload = fpayload.concat(notePayload);
     msg('Saving…');
     fetch('/__nsg/save', {
       method: 'POST', headers: { 'content-type': 'application/json' },
-      body: JSON.stringify({ edits: payload })
+      body: JSON.stringify({ edits: payload, features: fpayload })
     }).then(function (r) { return r.json(); }).then(function (res) {
       var ok = res.results.filter(function (r) { return r.ok; }).length;
       var bad = res.results.filter(function (r) { return !r.ok; });
       edits.forEach(function (_, el) { el.classList.remove('nsg-dirty'); delete el.dataset.nsgOriginal; });
-      edits.clear(); refresh();
+      edits.clear();
+      featureEdits.forEach(function (_, td) { td.classList.remove('nsg-dirty'); });
+      featureEdits.clear(); refresh();
       if (bad.length === 0) {
         sessionStorage.setItem('nsg-resume-editing', '1');
         msg('✅ Saved ' + ok + ' change' + (ok === 1 ? '' : 's') + '. Page will reload.');
@@ -823,14 +927,20 @@ createServer(async (req, res) => {
     for await (const chunk of req) body += chunk;
     let results = [];
     try {
-      const { edits } = JSON.parse(body);
-      results = edits.map((e) => {
+      const { edits, features } = JSON.parse(body);
+      results = (edits || []).map((e) => {
         const r = applyEdit(e.original, e.updated, e.file, e.line, e.page, e.isHtml);
         const label = e.original.slice(0, 55).replace(/\s+/g, ' ');
         if (r.ok) console.log(green(`  ✓ ${r.file}  "${label}…"`));
         else console.log(yellow(`  ! skipped (${r.reason}): "${label}…"`));
         return { ...r, original: e.original };
       });
+      for (const f of features || []) {
+        const r = applyFeature(f);
+        if (r.ok) console.log(green(`  ✓ ${r.file}  ${f.slug}.${f.key} = ${f.level}`));
+        else console.log(yellow(`  ! feature skipped (${r.reason}): ${f.slug}.${f.key}`));
+        results.push({ ...r, original: r.original || `${f.slug}.${f.key}` });
+      }
     } catch (err) {
       console.log(red('  save error: ' + err.message));
     }

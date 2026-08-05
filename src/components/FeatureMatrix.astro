@@ -66,10 +66,11 @@ const best = Math.max(0, ...scored.map((s) => s.score));
                 const lvl = ((p.features as any)?.[key] ?? 'unknown') as FeatureLevel;
                 const note = (p.featureNotes as any)?.[key];
                 return (
-                  <td class={`lvl lvl-${lvl}`} title={LEVEL_MEANING[lvl]}>
+                  <td class={`lvl lvl-${lvl}`} title={LEVEL_MEANING[lvl]}
+                      data-nsg-fslug={p.slug} data-nsg-fkey={key} data-nsg-flevel={lvl}>
                     <span class="lvl-mark">{LEVEL_LABEL[lvl]}</span>
                     <span class="sr-only"> — {LEVEL_MEANING[lvl]}</span>
-                    {note && <span class="lvl-note">{note}</span>}
+                    <span class="lvl-note">{note}</span>
                   </td>
                 );
               })}
