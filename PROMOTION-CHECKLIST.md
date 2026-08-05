@@ -17,20 +17,18 @@ or pitching data to editors — data is citable without an author.
 ### Affiliate applications — 45 minutes, do these first
 Approval takes days to weeks, so start the clock before anything else.
 
-- [x] **DonorDock** — https://www.donordock.com/partners *(~$500/referral)* — **submitted 2026-08-03**
-- [x] **4aGoodCause** — https://4agoodcause.firstpromoter.com/ *(25% recurring)* — **submitted 2026-08-03**
+- [x] **DonorDock** — ✅ **approved, link live** 2026-08-04
+- [x] **Donorbox** — ✅ **approved, link live** 2026-08-04
+- [x] **4aGoodCause** — ✅ **approved, link live** 2026-08-04
       → still to do: **ask for a reader discount**
-- [x] **Donorbox** — https://donorbox.org/affiliate-partner-program → "Become a Partner" — **submitted 2026-08-03**
-- [x] **PartnerStack account** — https://dash.partnerstack.com/signup — **submitted 2026-08-03**
-      ⏳ awaiting approval. Individual programs are gated behind it. When it
-      clears: **Zeffy first** (~$500/signup, already on 25 of our pages), then
-      **Ticket Tailor**, **Xero**, **Brevo**, **monday.com**, and check whether
-      **Bloomerang**'s agency track pays cash.
-- [x] **Jotform** — https://www.jotform.com/partnership/affiliate/application/ — **submitted 2026-08-03**
-
-- [x] **Instrumentl** — https://beinstrumentl.typeform.com/to/UVUTeuFk — **submitted 2026-08-03**
-      ⏳ up to a month for review; the slowest of the batch
-
+- [x] **Jotform** — ✅ **approved, link live** 2026-08-04
+- [x] **PartnerStack account** — ❌ **denied** (stated reason: not enough
+      nonprofit-specific content). **Appealed 2026-08-04**, pending. Gated
+      behind it while denied: Ticket Tailor, Xero, Brevo, monday.com,
+      Bloomerang's agency track. **Zeffy no longer waits on this** — see below.
+- [x] **Zeffy** — 🔀 found a **direct application outside PartnerStack**;
+      submitted. Compare the terms against PartnerStack's published 30% of
+      tips / ~$500 per signup before accepting.
 - [ ] **Eleo** — https://eleoonline.com/consultant-partner-interest/ *($100/referral)*
       → it is the *Consultant* Community form, so lead with the consulting work
 
@@ -74,35 +72,47 @@ ChatGPT and Perplexity results as well as humans.
 This is the highest-value single thing available, because original data is the
 one asset an unknown publisher can get covered on.
 
-### The four findings that carry the story
-All verified against `src/data/survey-2026.json`:
+### The three findings that carry the story
+Corrected 2026-08-05 — the original four leaned on "95% spend nothing on
+wealth screening," which reads as a non-event rather than a finding. Verified
+fresh against `src/data/survey-2026.json`; ready-to-send copy using these is
+in `OUTREACH-DRAFTS.md`.
 
-- Nonprofits raising **under $250k spend a mean of $2,611/yr** on all software
-- **95% of them spend nothing at all** on wealth screening
-- **Donation processing is the largest line at every size** — around a third of spend
-- Total spend runs **$2,611 → $96,815** across the four size bands
+- **36% of nonprofits raising under $250K have no donor database at all** —
+  the sharpest, most "ouch, that's my sector" number in the dataset
+- **Software spend scales 37x between the smallest and largest nonprofits
+  surveyed** — $2,611/yr mean at the bottom, $96,815/yr at the top
+- **Donation processing, not the CRM, is the single largest software line at
+  every size** — 39% of the total budget for the smallest shops, $30,824/yr
+  alone at the top
 
-### Write it once — 90 minutes
-- [ ] One page. Headline finding in the first sentence, method in the second
-      paragraph, the four bullets above, link to `/benchmarks/`, PDF attached.
-- [ ] Subject line that is the finding, not the announcement:
-      *"New survey: 95% of small nonprofits spend nothing on wealth screening"*
+### Write it once — done
+- [x] One-pager written, see `OUTREACH-DRAFTS.md` — the master template plus
+      subject-line options, PDF attached, links `/benchmarks/`.
 
-### Send as individual emails — 2 hours
+### Send as individual emails
 Not a wire. Named editor, personal email, PDF attached. Google treats press
 release links as advertisements and wire services nofollow them, so a syndicated
 blast produces zero link equity. One editor who writes their own piece is worth
 the entire wire.
 
-- [ ] **Philanthropy News Digest** (Candid) — writes summaries from releases.
-      A Candid mention is the single most authoritative outcome available here.
-- [ ] **The NonProfit Times** — trade press, covers sector research
-- [ ] **NonProfit PRO** — same
-- [ ] **Nonprofit Quarterly** — research-friendly
-- [ ] **Blue Avocado** — practitioner audience, small and engaged
-- [ ] Five to ten sector newsletters — highest hit rate of anything on this list
-- [ ] Consider offering **one** outlet a 48-hour exclusive. That is often what
-      turns a summary into a real article.
+**Use the verified Tier 1 from `OUTREACH-SHORTLIST.md`, not a generic press
+list** — Nonprofit Quarterly and Blue Avocado were both checked and ruled out
+(bylined-essay and first-person requirements, incompatible with staying
+anonymous). Personalized, ready-to-send drafts for the first four are in
+`OUTREACH-DRAFTS.md`.
+
+- [ ] **GivingTuesday Data Commons** — send first, zero conflict, good dry run
+- [ ] **Nonprofit Tech for Good** — heather@nptechforgood.com
+- [ ] **NonProfit PRO** — acole@columbiabooks.com (Amanda Cole)
+- [ ] **National Council of Nonprofits** — via site contact form (browser only)
+- [ ] **DH Leonard** — Megan@dhleonardconsulting.com
+- [ ] **RKD Group / Rossi's Roundup** — connect@rkdgroup.com
+- [ ] **Missions to Movements** — kat@positiveequation.com
+- [ ] **Philanthropy News Digest** (Candid) — pnd@candid.org, Tier 2 but the
+      single most authoritative outcome available if it lands
+- [ ] Consider offering **one** outlet a 48-hour exclusive once the first
+      replies come in. That is often what turns a summary into a real article.
 
 **Cost: $0.** Skip the paid wire (~$300–$8,000) — see TRAFFIC-PLAN for why.
 
