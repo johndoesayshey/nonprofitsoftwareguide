@@ -17,7 +17,7 @@ reasonsToLeave:
 picks:
   - platformSlug: 4agoodcause
     forWhom: "You want a fee that doesn't depend on donor behaviour"
-    note: "Flat subscription, no percentage taken from donations: $99/mo Grassroots ($1,188/yr), $249/mo Growth ($2,988/yr), $429/mo Scale ($5,148/yr). Every tier published. You know the number in January and it's still the number in December. Built around monthly giving, with recurring pages, donor records and a campaign builder in one tool, and the first month is free. Past roughly $40,000 a year in online giving it also beats a ~3% fee outright."
+    note: "Flat subscription, no percentage taken from donations: $99/mo Grassroots ($1,188/yr), $249/mo Growing ($2,988/yr), $429/mo Scale ($5,148/yr). Every tier published. You know the number in January and it's still the number in December. Built around monthly giving, with recurring pages, donor records and a campaign builder in one tool, and the first month is free. Past roughly $40,000 a year in online giving it also beats a ~3% fee outright."
   - platformSlug: donordock
     forWhom: "The real gap is that you have no donor database"
     note: "If what you're missing is relationship history rather than a cheaper checkout, the answer isn't another giving platform. DonorDock runs $500/mo billed annually with unlimited contacts, and holds soft credits, household records and follow-up tasks. Plenty of shops keep Givebutter for checkout and add a CRM behind it — that's a legitimate stack, not a failure."

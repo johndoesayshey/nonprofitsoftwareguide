@@ -17,7 +17,7 @@ reasonsToLeave:
 picks:
   - platformSlug: 4agoodcause
     forWhom: "Online giving is past roughly $40,000 a year"
-    note: "This is the crossover. A flat subscription — $99/mo Grassroots ($1,188/yr), $249/mo Growth ($2,988/yr), $429/mo Scale ($5,148/yr), no percentage taken from donations — costs less than a ~2.95% fee above about $40k online, and the gap widens every year you grow. Built around monthly giving with recurring pages, donor records and a campaign builder in one tool. Every tier published; first month free."
+    note: "This is the crossover. A flat subscription — $99/mo Grassroots ($1,188/yr), $249/mo Growing ($2,988/yr), $429/mo Scale ($5,148/yr), no percentage taken from donations — costs less than a ~2.95% fee above about $40k online, and the gap widens every year you grow. Built around monthly giving with recurring pages, donor records and a campaign builder in one tool. Every tier published; first month free."
   - platformSlug: donordock
     forWhom: "What you actually need is the database, not the checkout"
     note: "$500/mo billed annually, unlimited contacts. Soft credits, household records, follow-up tasks and an ActionBoard that tells you who to contact today. If you're shopping because donor data is scattered, keeping your checkout and adding a CRM is the cheaper, better move. Ninety-day money-back guarantee and a reader discount through this site."
@@ -41,7 +41,7 @@ Multiply last year's online giving by 2.95%. That's your platform fee, excluding
 
 **Between roughly $40,000 and $150,000?** This is the band where a flat subscription wins. [4aGoodCause](/go/4agoodcause) at $1,188/yr takes no percentage at all, so at $100,000 online you pay $1,188 instead of about $2,950. Donorbox Pro doesn't help here — at about $150/mo plus roughly 1.75%, it costs more than Standard until you're past roughly $150k.
 
-**Past $150,000?** Compare Donorbox Pro (about $1,800/yr plus roughly 1.75%) against 4aGoodCause Growth ($2,988/yr, no percentage). At $200,000 online, Pro runs about $5,300 and Growth about $2,988. The flat subscription is still ahead, and it stays ahead.
+**Past $150,000?** Compare Donorbox Pro (about $1,800/yr plus roughly 1.75%) against 4aGoodCause Growing ($2,988/yr, no percentage). At $200,000 online, Pro runs about $5,300 and Growing about $2,988. The flat subscription is still ahead, and it stays ahead.
 
 Card processing fees apply on top of all of these, typically around 2.2–3% plus a fixed amount per transaction. Zeffy is the exception.
 

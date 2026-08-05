@@ -2,40 +2,37 @@
 shopSize: "under-$250k"
 annualRevenue: "under $250k"
 staffSize: "0-1 development staff (often the ED)"
-totalStackCost: "$0-$2,600/yr"
+totalStackCost: "$0-$250/yr"
 slug: under-250k
 targetQuery: "nonprofit software stack under 250k"
-lastVerified: 2026-07-31
+lastVerified: 2026-08-04
 draft: false
 components:
+  - category: donor-crm
+    categoryLabel: "Donor CRM + donation processing"
+    platformSlug: zeffy
+    annualCost: "$0"
+    rationale: "One line, two jobs. Zeffy processes gifts free at any volume — no platform fee, no processing fee — and keeps donor records of its own, which at this size is the donor database. Funded by an optional tip donors are asked for at checkout."
   - category: forms-ops
-    platformSlug: monday
-    annualCost: "$0-$216/yr"
-    rationale: "The first system you actually need: grant deadlines, program tracking, and a contact list that beats a spreadsheet. Free for two seats."
-  - category: donation-processing
     platformSlug: jotform
     annualCost: "$0-$204/yr"
-    rationale: "Donation, registration and intake forms in one place. Free to start; about $17/mo with the nonprofit discount."
+    rationale: "Event registration, volunteer intake and program applications in one place. Free to start; about $17/mo with the nonprofit discount."
   - category: grant-research
-    platformSlug: instrumentl
-    annualCost: "$0-$2,148/yr"
-    rationale: "The one line worth real money, and only once grant applications are a monthly job rather than an annual scramble."
-  - category: donor-crm
-    advisory: true
-    label: "Not yet"
+    platformSlug: candid
+    label: "Foundation Directory (free at your library)"
     annualCost: "$0"
-    rationale: "Deliberately absent. Your monday.com list is the donor record until receipting, soft credits or lapsed-donor reporting become real problems."
+    rationale: "Candid's Foundation Directory is the standard funder database, and most public libraries in the Funding Information Network offer it free on-site. Pay for a grant tool only when applications become a monthly job."
 ---
 
-At under $250k raised, almost your whole stack should be free. Run operations and your contact list in one place, collect money through forms you already need, and skip everything else. Budget $0 to start, up to about $2,600 a year at the top end. There is no CRM line here on purpose, and the only line that reaches four figures is grant research.
+At under $250k raised, your whole stack should be free. Collect gifts on a platform that costs nothing and keeps the donor record for you, run forms in one place, and do funder research at the library. Budget $0 to start, and about $250 a year at the top end if the forms outgrow the free tier.
 
 ## Why these picks
 
-**Operations and your first contact list: monday.com ($0 for two seats).** Start here, before anything donor-facing. A shop this size does not lose donors because the database is weak. It loses them because nobody remembered to follow up. [monday.com](/go/monday) gives you a grant-deadline board with owners and due dates, a program tracker, and a contact list with columns you control. It is not a donor CRM and will not pretend to be one, but as a shared, sortable list with reminders attached it beats the spreadsheet you are using now. There is a nonprofit program with discounted paid plans for when two seats stops being enough.
+**Money in and your donor record: Zeffy ($0).** At this size the donation platform *is* the database. [Zeffy](/go/zeffy) processes every gift free — no platform fee, no processing fee, a $100 gift deposits $100 — and holds the donor list, gift history and receipts that a shop this size would otherwise buy a CRM for. The trade to understand before your first campaign: it is funded by an optional tip donors are asked for at checkout, and some boards care about that. Decide once, on purpose. When receipting, soft credits or lapsed-donor reporting become real problems, that is the sign you have outgrown this stack, not that this pick was wrong.
 
-**Money in: Jotform ($0 to about $17/mo).** [Jotform](/go/jotform) covers the donate form, event registration, volunteer intake and the program application, all with payment collection through Stripe, PayPal or Square. One tool, one place submissions land. The honest tradeoff: a dedicated giving platform handles recurring gifts and automatic receipting better, so if monthly donors become a real program, add one. Until then, paying a giving platform to process a few dozen gifts a year is money spent ahead of the need. If you would rather no fee came out of any gift, [Zeffy](/go/zeffy) is genuinely free and worth a look.
+**Forms and operations: Jotform ($0 to about $17/mo).** [Jotform](/go/jotform) covers event registration, volunteer intake and the program application, with submissions landing in one place instead of an inbox. It also takes payments through Stripe, PayPal or Square where a form needs to collect a fee. Free to start, and the nonprofit discount halves the paid tier if you hit the free plan's limits.
 
-**Grant research: Instrumentl (14-day trial, then $179/mo).** This is the one place a small shop should consider spending real money, and it comes with a condition. If you apply for three grants a year, do not buy it. If you are searching for funders every month, tracking deadlines across two people, and losing applications to dates that slipped, [Instrumentl](/go/instrumentl) pays for itself the first time it surfaces a funder you would not have found. Run the trial with your actual active applications loaded before deciding. One thing to skip at this size: federal grants. They carry reporting and audit obligations a one-person office cannot absorb, and foundation money is the better use of the same hours.
+**Grant research: the Foundation Directory, free at your library.** Candid's [Foundation Directory](/platforms/candid/) is the same funder database grant consultants use, and most public libraries in Candid's Funding Information Network offer it free on-site — search "Funding Information Network" plus your county. An afternoon at the library with a target list beats a subscription you use twice. When applications become a monthly job with deadlines across two people, that is when a paid tool like [Instrumentl](/go/instrumentl) starts earning its price — load the 14-day trial with your real applications before you commit, and skip federal grants at this size either way; the reporting obligations outweigh the money.
 
 ## What you should not buy yet
 

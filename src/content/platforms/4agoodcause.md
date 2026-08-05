@@ -8,14 +8,14 @@ pricingBasis: "flat subscription, no % of donations"
 pricingTiers:
   - tier: "Grassroots"
     price: "$99/mo billed annually"
-    note: "$1,188/yr; $129 month-to-month"
-  - tier: "Growth"
+    note: "$1,188/yr; $129 month-to-month; up to $50K online revenue/yr"
+  - tier: "Growing"
     price: "$249/mo billed annually"
-    note: "$2,988/yr; $289 month-to-month"
+    note: "$2,988/yr; $289 month-to-month; up to $250K online revenue/yr"
   - tier: "Scale"
     price: "$429/mo billed annually"
-    note: "$5,148/yr; $499 month-to-month"
-lastVerified: 2026-08-02
+    note: "$5,148/yr; $499 month-to-month; unlimited online revenue"
+lastVerified: 2026-08-04
 bestFor: "Shops that want a payment processor that does not charge per transaction, potentially saving thousands each year. Lighter CRM integration, but great for small shops just taking the next step and looking to cap costs on fees. Plentiful integrations (like Mailchimp and Quickbooks) to make up for fewer built-ins on the CRM. However, the price point justifies this and makes it our top pick for a donor processor."
 bestForByCategory:
   donor-crm: "A simpler CRM bundled with the giving platform: donor profiles, giving history, notes, tagging, custom fields and acknowledgement letters, verified on their own feature page. No built-in email marketing — it leans on the Mailchimp integration — so it fits shops that want records and fundraising on one bill rather than a deep standalone database."
@@ -35,7 +35,7 @@ featureNotes:
   donationForms: "all plans, no platform percentage"
   paymentProcessing: "bring Stripe/Authorize.net or use theirs; no added %"
   events: "registration and ticketing on all plans"
-  peerToPeer: "Growth plan and up — $249/mo billed annually"
+  peerToPeer: "Growing plan and up — $249/mo billed annually"
 draft: false
 strengths:
   - "Flat subscription with no platform percentage, so the fee stops scaling with your success"

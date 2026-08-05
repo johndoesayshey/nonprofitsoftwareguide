@@ -17,7 +17,7 @@ reasonsToLeave:
 picks:
   - platformSlug: 4agoodcause
     forWhom: "You raise real money online and want the fee to stop scaling"
-    note: "A flat subscription with no percentage taken from donations: $99/mo Grassroots ($1,188/yr), $249/mo Growth ($2,988/yr), $429/mo Scale ($5,148/yr), all published. This is the structural answer to Classy — you keep the predictable-subscription model you're used to, and lose the percentage on top. Built around monthly giving, with recurring pages, donor records and a campaign builder in one tool. First month free."
+    note: "A flat subscription with no percentage taken from donations: $99/mo Grassroots ($1,188/yr), $249/mo Growing ($2,988/yr), $429/mo Scale ($5,148/yr), all published. This is the structural answer to Classy — you keep the predictable-subscription model you're used to, and lose the percentage on top. Built around monthly giving, with recurring pages, donor records and a campaign builder in one tool. First month free."
   - platformSlug: donorbox
     forWhom: "You want strong recurring-gift tooling without a contract"
     note: "Free to start at roughly 2.95% platform fee, no subscription; the Pro plan at about $150/mo drops the rate to roughly 1.75% and pays for itself past around $150k a year in online giving. The recurring-gift management — donor portals, failed-card recovery, upgrade prompts — is the strongest in its price class, which is what most shops were actually paying Classy for. Attribution is link-only, so route through the link here if you use it."

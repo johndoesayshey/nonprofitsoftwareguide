@@ -63,7 +63,9 @@
       "checked": "2026-08-03",
       "quote": "You earn $500 cash from every new paid customer."
     },
-    "offerSource": "guide"
+    "offerSource": "guide",
+    "priority": 1,
+    "priorityNote": "Operator note n69 (2026-08-04): DonorDock is the CRM editor's choice and leads the donor-crm tables; +1 breaks the high-tier tie with 4aGoodCause, which stays first in donation processing."
   },
   "4agoodcause": {
     "name": "4aGoodCause",

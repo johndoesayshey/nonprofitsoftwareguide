@@ -78,7 +78,7 @@ const verified = formatMedium(s.lastVerified);
         <tbody>
           {s.components.map((c) => (
             <tr class:list={{ advisory: c.advisory }}>
-              <td>{categoryLabel(c.category)}</td>
+              <td>{c.categoryLabel ?? categoryLabel(c.category)}</td>
               <td>
                 {c.advisory || !c.platformSlug ? (
                   <a class="line-name" href="/consulting/">{c.label ?? 'No software yet'}</a>

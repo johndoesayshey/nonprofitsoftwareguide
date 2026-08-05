@@ -26,7 +26,7 @@ picks:
   - platformSlug: 4agoodcause
     award: "Best for online annual fund"
     forWhom: "A school running a parent annual fund online"
-    note: "$99/mo Grassroots ($1,188/yr), $249/mo Growth, $429/mo Scale, with no percentage taken from donations. Annual fund giving is concentrated into a few weeks and often includes some large gifts, which is where a percentage fee gets expensive fast — 2.95% of a $10,000 trustee gift is $295 for processing a single transaction. A flat subscription removes that, and the built-in donor CRM covers profiles, giving history and acknowledgement letters for a small annual fund."
+    note: "$99/mo Grassroots ($1,188/yr), $249/mo Growing, $429/mo Scale, with no percentage taken from donations. Annual fund giving is concentrated into a few weeks and often includes some large gifts, which is where a percentage fee gets expensive fast — 2.95% of a $10,000 trustee gift is $295 for processing a single transaction. A flat subscription removes that, and the built-in donor CRM covers profiles, giving history and acknowledgement letters for a small annual fund."
 decidingFactors:
   - factor: "Class year is not an optional field."
     detail: "Alumni fundraising is organized by class, reunion year and giving society. If the system can't hold class year as a first-class attribute you can segment and report on, you will be exporting to Excel for every mailing, forever. Test this in the trial, not from the feature list."

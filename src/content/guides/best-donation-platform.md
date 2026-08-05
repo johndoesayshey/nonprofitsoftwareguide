@@ -9,7 +9,7 @@ picks:
   - platformSlug: 4agoodcause
     award: "Best overall — Editor's choice"
     forWhom: "Shops that want a processor whose fee stops growing with them"
-    note: "$99/mo Grassroots ($1,188/yr), $249/mo Growth ($2,988/yr), $429/mo Scale ($5,148/yr), with no percentage taken from donations — the fee stops growing with you, which can save thousands a year and is why it is our top pick for a donation processor. Above roughly $40,000 a year online the entry tier beats a ~2.95% fee, and the advantage compounds. Built around monthly giving, with recurring pages, a built-in donor CRM, and integrations like Mailchimp and QuickBooks covering what isn't built in. First month free."
+    note: "$99/mo Grassroots ($1,188/yr), $249/mo Growing ($2,988/yr), $429/mo Scale ($5,148/yr), with no percentage taken from donations — the fee stops growing with you, which can save thousands a year and is why it is our top pick for a donation processor. Above roughly $40,000 a year online the entry tier beats a ~2.95% fee, and the advantage compounds. Built around monthly giving, with recurring pages, a built-in donor CRM, and integrations like Mailchimp and QuickBooks covering what isn't built in. First month free."
   - platformSlug: donorbox
     award: "Best for recurring giving"
     forWhom: "Shops where monthly donors are the growth engine"

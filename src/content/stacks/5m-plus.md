@@ -12,10 +12,14 @@ components:
     platformSlug: bloomerang
     annualCost: "~$4,000-$6,000/yr (scales with record count)"
     rationale: "System of record for a large team, with the retention reporting a board expects to see quarterly."
-  - category: prospect-research
-    platformSlug: kindsight
-    annualCost: "~$5,350/yr (Professional, reported)"
-    rationale: "Continuous screening, now that a named researcher owns the output and gift officers work the portfolios."
+  - category: donation-processing
+    platformSlug: 4agoodcause
+    annualCost: "$5,148/yr (Scale, $429/mo)"
+    rationale: "Flat pricing at high volume: the fee stops tracking revenue entirely, and at this size the saving against any percentage model is larger than the subscription."
+  - category: forms-ops
+    platformSlug: monday
+    annualCost: "~$720-$1,200/yr"
+    rationale: "Eight-plus seats for campaign planning, grant deliverables and cross-department program work."
   - category: grant-research
     platformSlug: instrumentl
     annualCost: "~$5,988/yr (Pro, $499/mo)"
@@ -25,14 +29,10 @@ components:
     label: "Bloomerang (same platform)"
     annualCost: "$0 additional"
     rationale: "Ticketing, check-in and auctions are native to the CRM, so event data lands on the donor record without an import."
-  - category: donation-processing
-    platformSlug: 4agoodcause
-    annualCost: "$5,148/yr (Scale, $429/mo)"
-    rationale: "Flat pricing at high volume: the fee stops tracking revenue entirely, and at this size the saving against any percentage model is larger than the subscription."
-  - category: forms-ops
-    platformSlug: monday
-    annualCost: "~$720-$1,200/yr"
-    rationale: "Eight-plus seats for campaign planning, grant deliverables and cross-department program work."
+  - category: prospect-research
+    platformSlug: kindsight
+    annualCost: "~$5,350/yr (Professional, reported)"
+    rationale: "Continuous screening, now that a named researcher owns the output and gift officers work the portfolios."
 ---
 
 At $5M+ the stack is a full operation: continuous wealth screening, a system-of-record CRM with real reporting, team-scale grant research, high-volume processing, and events that run inside the database rather than beside it. Budget roughly $18,000-$20,000 a year in subscriptions, plus processing fees. Every line supports a role, and the total is small against the salaries it makes productive.

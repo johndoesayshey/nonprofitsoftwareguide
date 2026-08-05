@@ -65,6 +65,10 @@ const platforms = defineCollection({
       z.object({
         need: z.string(),           // the reader's situation, phrased as theirs
         platformSlug: z.string().nullable().default(null),
+        // Display label override for the category cell — lets one ledger line
+        // cover a combined need ("Donor CRM + donation processing") without
+        // inventing a category slug.
+        categoryLabel: z.string().optional(),
         note: z.string(),           // one sentence: why that one instead
       })
     ),
@@ -140,6 +144,10 @@ const stacks = defineCollection({
         // subscription at a given size; those lines set advisory: true and
         // leave platformSlug empty.
         platformSlug: z.string().nullable().default(null),
+        // Display label override for the category cell — lets one ledger line
+        // cover a combined need ("Donor CRM + donation processing") without
+        // inventing a category slug.
+        categoryLabel: z.string().optional(),
         advisory: z.boolean().default(false),
         // Overrides the product name in the ledger. Used when one platform
         // fills two roles, or when an advisory line needs its own label.

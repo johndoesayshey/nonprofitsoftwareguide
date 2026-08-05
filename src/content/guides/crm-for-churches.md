@@ -22,7 +22,7 @@ picks:
   - platformSlug: 4agoodcause
     award: "Best for online and recurring giving"
     forWhom: "A church moving tithing online"
-    note: "$99/mo Grassroots ($1,188/yr), $249/mo Growth, $429/mo Scale, with no percentage taken from donations. That structure matters more for churches than almost anyone: recurring tithing is high-volume and steady, so a percentage fee compounds against you every single month. Past roughly $40,000 a year in online giving, a flat subscription is straightforwardly cheaper. A built-in donor CRM holds profiles, giving history and acknowledgement letters, so a smaller congregation may not need the separate database at all."
+    note: "$99/mo Grassroots ($1,188/yr), $249/mo Growing, $429/mo Scale, with no percentage taken from donations. That structure matters more for churches than almost anyone: recurring tithing is high-volume and steady, so a percentage fee compounds against you every single month. Past roughly $40,000 a year in online giving, a flat subscription is straightforwardly cheaper. A built-in donor CRM holds profiles, giving history and acknowledgement letters, so a smaller congregation may not need the separate database at all."
   - platformSlug: zeffy
     award: "Best free option"
     forWhom: "A small congregation with no software budget"

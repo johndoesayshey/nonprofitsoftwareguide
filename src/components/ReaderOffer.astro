@@ -28,7 +28,6 @@ const Tag = as;
 {offer && (
   <Tag class:list={['offer', source === 'vendor' ? 'offer-vendor' : 'offer-guide']}>
     <span class="offer-label">{label}</span>
-    <span class="offer-sep" aria-hidden="true"> · </span>
     <span class="offer-value">{offer}</span>
   </Tag>
 )}
@@ -36,7 +35,8 @@ const Tag = as;
 <style>
   .offer { display: block; font-size: .74rem; font-weight: 700; line-height: 1.35;
     color: var(--color-green-deep); margin: .25rem 0 0; }
-  .offer-label { text-transform: uppercase; letter-spacing: .06em; font-size: .93em; }
+  .offer-label { text-transform: uppercase; letter-spacing: .06em; font-size: .93em; display: block; }
+  .offer-value { display: block; margin-top: .1rem; }
   .offer-vendor { color: var(--color-muted); }
   .offer-vendor .offer-value { color: var(--color-ink); }
 </style>
