@@ -49,6 +49,7 @@ const grouped = Object.values(CATEGORIES)
       tool: t,
       versus: inCat
         .filter((p) => p.a.data.slug === t.slug || p.b.data.slug === t.slug)
+        .filter((p) => (p.a.data.slug === t.slug ? p.b.data.featured : p.a.data.featured))
         .map((p) => {
           const other = p.a.data.slug === t.slug ? p.b.data : p.a.data;
           return { slug: p.slug, other, v: valueOf(other.affiliateSlug) };

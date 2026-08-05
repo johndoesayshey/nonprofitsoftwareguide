@@ -42,6 +42,9 @@ const allPairs = (await comparePairs()).filter(
 const versusFor = (slug: string) =>
   allPairs
     .filter((x) => x.a.data.slug === slug || x.b.data.slug === slug)
+    // The pair pages stay live for search, but a row only links head-to-heads
+    // against products still in the public shortlist.
+    .filter((x) => (x.a.data.slug === slug ? x.b.data.featured : x.a.data.featured))
     .map((x) => {
       const other = x.a.data.slug === slug ? x.b.data : x.a.data;
       return { slug: x.slug, other, v: valueOf(other.affiliateSlug) };

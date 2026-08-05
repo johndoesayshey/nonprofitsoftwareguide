@@ -5,8 +5,11 @@ import { getCollection } from 'astro:content';
 import { CATEGORIES } from '../../lib/categories';
 
 const platforms = await getCollection('platforms', ({ data }) => data.draft === false);
-// Group by category, preserving the CATEGORIES display order.
-const grouped = Object.values(CATEGORIES).map((cat) => ({
+// Group by category in the same order as the navigation: ranked categories
+// first, the rest in the object's editorial order.
+const grouped = Object.values(CATEGORIES)
+  .sort((a, b) => (a.rank ?? Infinity) - (b.rank ?? Infinity))
+  .map((cat) => ({
   cat,
   items: platforms.filter((p) => p.data.category === cat.slug).sort((a, b) => a.data.name.localeCompare(b.data.name)),
 })).filter((g) => g.items.length > 0);
