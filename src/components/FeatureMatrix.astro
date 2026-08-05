@@ -79,7 +79,7 @@ const best = Math.max(0, ...scored.map((s) => s.score));
               something once there are several features to consolidate. */}
           {rows.length >= 3 && (
           <tr class="fm-total">
-            <th scope="row">Subscriptions it can replace</th>
+            <th scope="row">Subscriptions it can replace<br /><small class="fm-count-note">counts full Yes cells only</small></th>
             {scored.map(({ p, score }) => (
               <td class={score === best && best > 0 ? 'fm-win' : ''}>
                 {score} of {rows.length}
@@ -103,6 +103,8 @@ const best = Math.max(0, ...scored.map((s) => s.score));
      land at the table's full scrolled width, and stretch the whole document
      sideways. Cost me a page-level horizontal scrollbar to find. */
   .fm-scroll { overflow-x: auto; margin: 1rem 0 .8rem; position: relative; }
+  .fm-count-note { display: block; font-family: var(--font-mono); font-size: .6rem;
+    letter-spacing: .06em; text-transform: uppercase; color: var(--color-muted); font-weight: 400; }
 
   /* table-layout: fixed compresses columns to the container instead of
      overflowing it (operator note n55: no horizontal scroll). The wrapper's
