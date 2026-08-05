@@ -72,11 +72,11 @@ const posts = (await getCollection('posts', ({ data }) => data.draft === false))
             return (
               <>
               <tr class="tool-row">
-                <th scope="row">
-                  <a href={`/platforms/${p.data.slug}/`}>{p.data.name}</a>
+                <th scope="row" class:list={{ 'has-ribbon': p.data.editorsChoice && p.data.category === category }}>
                   {p.data.editorsChoice && p.data.category === category && (
-                    <span class="choice-chip">★ Editor's choice</span>
+                    <span class="choice-ribbon" role="img" aria-label="Editor's choice" title="Editor's choice">★</span>
                   )}
+                  <a href={`/platforms/${p.data.slug}/`}>{p.data.name}</a>
                 </th>
                 <td class="price">
                   {p.data.pricingTiers.length > 0 ? (
@@ -208,9 +208,14 @@ const posts = (await getCollection('posts', ({ data }) => data.draft === false))
     text-decoration: none; padding: .4rem .75rem; border-radius: 3px; font-size: .85rem; }
   .btn-visit:hover { background: var(--color-green); }
   .offer { margin: 0; font-size: .75rem; font-weight: 700; color: var(--color-green-deep); }
-  .choice-chip { display: inline-block; margin-left: .5rem; padding: .14rem .5rem; border-radius: 3px;
-    background: var(--color-ink); color: var(--color-paper, #fff); font-family: var(--font-mono);
-    font-size: .6rem; font-weight: 700; letter-spacing: .09em; text-transform: uppercase;
-    vertical-align: middle; white-space: nowrap; }
+  /* Editor's choice: a gold bookmark ribbon hung on the left edge of the row.
+     Positioned against the cell (not the scroll wrapper) so it can never
+     escape the overflow container or add a horizontal scrollbar. */
+  table.cmp th.has-ribbon { position: relative; padding-left: 1.95rem; }
+  .choice-ribbon { position: absolute; left: .42rem; top: 0; width: 1rem; height: 2.05rem;
+    background: linear-gradient(180deg, #d9b83c, #b8912a);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 50% calc(100% - .42rem), 0 100%);
+    display: flex; justify-content: center; align-items: flex-start;
+    padding-top: .3rem; font-size: .6rem; color: #3a2d05; }
   .empty { color: var(--color-muted); font-style: italic; }
 </style>

@@ -139,9 +139,9 @@ const datasetLd = {
                 {g.rows.map(({ tool: t, versus }) => (
                   <>
                   <tr class="tool-row">
-                    <th scope="row"><a href={`/platforms/${t.slug}/`}>{t.name}</a>{t.editorsChoice && (
-                      <span class="choice-chip">★ Editor's choice</span>
-                    )}</th>
+                    <th scope="row" class:list={{ 'has-ribbon': t.editorsChoice }}>{t.editorsChoice && (
+                      <span class="choice-ribbon" role="img" aria-label="Editor's choice" title="Editor's choice">★</span>
+                    )}<a href={`/platforms/${t.slug}/`}>{t.name}</a></th>
                     <td class="price">
                       {t.pricingTiers.length > 0 ? (
                         <>
@@ -271,10 +271,15 @@ const datasetLd = {
   table.cmp { min-width: 48rem; table-layout: fixed; }
   table.cmp col.c-tool { width: 14%; } table.cmp col.c-price { width: 26%; }
   table.cmp col.c-email { width: 12%; }
-  .choice-chip { display: inline-block; margin-left: .5rem; padding: .14rem .5rem; border-radius: 3px;
-    background: var(--color-ink); color: var(--color-paper, #fff); font-family: var(--font-mono);
-    font-size: .6rem; font-weight: 700; letter-spacing: .09em; text-transform: uppercase;
-    vertical-align: middle; white-space: nowrap; }
+  /* Editor's choice: a gold bookmark ribbon hung on the left edge of the row.
+     Positioned against the cell (not the scroll wrapper) so it can never
+     escape the overflow container or add a horizontal scrollbar. */
+  table.cmp th.has-ribbon { position: relative; padding-left: 1.95rem; }
+  .choice-ribbon { position: absolute; left: .42rem; top: 0; width: 1rem; height: 2.05rem;
+    background: linear-gradient(180deg, #d9b83c, #b8912a);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 50% calc(100% - .42rem), 0 100%);
+    display: flex; justify-content: center; align-items: flex-start;
+    padding-top: .3rem; font-size: .6rem; color: #3a2d05; }
   table.cmp col.c-best { width: 25%; } table.cmp col.c-cta { width: 20%; }
 
   /* Only "included" answers the question a buyer is actually asking — can I
