@@ -11,8 +11,8 @@ pricingTiers:
     price: "~$4,150/yr"
     note: "1 user, ~1,500 screens"
   - tier: "Professional"
-    price: "~$5,350/yr"
-    note: "3 users, ~5,000 screens"
+    price: "~$5,000-$8,000/yr"
+    note: "3 users, ~5,000 screens; additional credits for larger prospecting runs"
   - tier: "Premium"
     price: "Custom"
 lastVerified: 2026-07-29
@@ -48,7 +48,7 @@ Established shops with a real major-gifts function: a campaign to segment, portf
 | Tier (reported) | Approx. annual | Included |
 |---|---|---|
 | Starter | ~$4,150 | 1 user, ~1,500 screens |
-| Professional | ~$5,350 | 3 users, ~5,000 screens |
+| Professional | ~$5,000-$8,000 | 3 users, ~5,000 screens; extra credits for larger prospecting runs |
 | Premium | Custom | Custom |
 
 Exact pricing is quoted; the demo call is where you'll get your number.

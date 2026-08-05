@@ -9,7 +9,7 @@ picks:
   - platformSlug: kindsight
     award: "Best overall"
     forWhom: "Shops that want capacity scoring they can defend in a portfolio meeting"
-    note: "Reported from around $4,150/yr for one user and roughly 1,500 screens, with a Professional tier reported near $5,350/yr for three users and about 5,000 screens. The differentiator is transparency: Kindsight shows how each score is built, and that matters more than it sounds. A rating a gift officer can explain gets acted on; an unexplained number gets ignored. Consistently top-rated for satisfaction in the category."
+    note: "Reported from around $4,150/yr for one user and roughly 1,500 screens, with a Professional tier reported at $5,000-$8,000/yr for three users and about 5,000 screens, plus credits for larger prospecting runs. The differentiator is transparency: Kindsight shows how each score is built, and that matters more than it sounds. A rating a gift officer can explain gets acted on; an unexplained number gets ignored. Consistently top-rated for satisfaction in the category."
   - platformSlug: donorsearch
     award: "Best for a one-off screen"
     forWhom: "Shops that need a pre-campaign screen without an annual contract"

@@ -2,7 +2,7 @@
 shopSize: "$5M+"
 annualRevenue: "$5M+"
 staffSize: "8+ development staff, often with a researcher"
-totalStackCost: "~$20,900+/yr"
+totalStackCost: "~$20,600-$24,200+/yr"
 slug: 5m-plus
 targetQuery: "enterprise nonprofit fundraising software stack"
 lastVerified: 2026-08-04
@@ -11,7 +11,7 @@ components:
   - category: donor-crm
     categoryLabel: "Donor CRM + donation processing"
     platformSlug: donordock
-    annualCost: "$6,000/yr ($500/mo, billed annually)"
+    annualCost: "$6,000/yr ($500/mo, billed annually) + $3,800 one-time onboarding"
     rationale: "One plan carries the department: system of record for eight-plus staff, unlimited contacts, email marketing built in, and giving pages on the same bill. The 2% platform fee on online gifts is the number to weigh at this volume — the prose below does that math."
   - category: forms-ops
     platformSlug: jotform
@@ -23,15 +23,15 @@ components:
     rationale: "Twenty-plus live projects across a team, with the pipeline shared rather than owned by one writer."
   - category: events-auctions
     platformSlug: onecause
-    annualCost: "From ~$2,995/yr; larger packages quoted"
+    annualCost: "$2,995/yr + 5% platform fee + processing fees"
     rationale: "A dedicated auction and event platform for a gala program that clears six figures: mobile bidding, check-in, and event-night support at production scale."
   - category: prospect-research
     platformSlug: kindsight
-    annualCost: "~$5,350/yr (Professional, reported)"
+    annualCost: "~$5,000-$8,000/yr (Professional) + credits for larger prospecting runs"
     rationale: "Continuous screening, now that a named researcher owns the output and gift officers work the portfolios."
 ---
 
-At $5M+ the stack is a full operation: continuous wealth screening, team-scale grant research, high-volume processing with the CRM riding on the same bill, and an event platform built for a production-scale gala. Budget from roughly $20,900 a year plus the larger event package if your gala warrants one — modest against the $96,815 mean our benchmark reports from $5M+ organizations, and small against the salaries it makes productive.
+At $5M+ the stack is a full operation: continuous wealth screening, team-scale grant research, high-volume processing with the CRM riding on the same bill, and an event platform built for a production-scale gala. Budget roughly $20,600 to $24,200 a year in subscriptions — plus percentage and processing fees on event revenue, prospecting credits on big runs, and $3,800 of one-time DonorDock onboarding in year one. Still modest against the $96,815 mean our benchmark reports from $5M+ organizations, and small against the salaries it makes productive.
 
 ## Why these picks
 
@@ -41,11 +41,11 @@ Do the processing math with open eyes, because at this size it is the biggest nu
 
 The one thing to protect on the way across is recurring-gift tooling. A large monthly file leaks through expired cards, and [Donorbox](/go/donorbox) Pro's recovery machinery is the benchmark to hold any replacement against. Saving on fees while losing monthly donors to failed payments is a bad trade that shows up two quarters later.
 
-**Prospect research: Kindsight (~$5,350/yr Professional, reported).** Screening runs continuously now: new donors screened as they arrive, portfolios refreshed on a schedule, a researcher who owns the output. [Kindsight](/go/kindsight) (formerly iWave) is transparent about how its scores are built, which is what makes them defensible in a portfolio meeting. Book it alongside [DonorSearch](/go/donorsearch) and ask both to score a sample of donors you already know well. Watching a vendor score people you can verify is the fastest evaluation in this category. The discipline that makes either pay is unchanged: capacity is not inclination, and only visits convert scores into gifts.
+**Prospect research: Kindsight (~$5,000-$8,000/yr Professional, plus credits for larger prospecting runs).** Screening runs continuously now: new donors screened as they arrive, portfolios refreshed on a schedule, a researcher who owns the output. [Kindsight](/go/kindsight) (formerly iWave) is transparent about how its scores are built, which is what makes them defensible in a portfolio meeting. Book it alongside [DonorSearch](/go/donorsearch) and ask both to score a sample of donors you already know well. Watching a vendor score people you can verify is the fastest evaluation in this category. The discipline that makes either pay is unchanged: capacity is not inclination, and only visits convert scores into gifts.
 
 **Grant research: Instrumentl Pro ($499/mo).** Twenty-plus active projects across a team is Pro-tier volume. [Instrumentl](/go/instrumentl) runs the pipeline; pair it with desk access to [Candid](/go/candid) when a single funder deserves a deep workup.
 
-**Events: OneCause (from ~$2,995/yr; larger packages quoted).** A gala program clearing six figures deserves a platform whose whole product is event night: [OneCause](/go/onecause) covers mobile bidding, check-in, and event-night support at production scale, with packages sized to the program. Get the quote early in the event cycle, and price the package against last year's auction revenue rather than against cheaper software — at this size the risk is a stalled checkout line, not a subscription fee.
+**Events: OneCause ($2,995/yr + 5% platform fee + processing).** A gala program clearing six figures deserves a platform whose whole product is event night: [OneCause](/go/onecause) covers mobile bidding, check-in, and event-night support at production scale, with packages sized to the program. Price it with the 5% platform fee in view: on a $200,000 auction that is $10,000 on top of the subscription, so weigh the package against last year's auction revenue and what a stalled checkout line would cost — at this size that, not the subscription, is the real risk.
 
 **Forms and operations: Jotform (~$594-$1,188/yr, Gold).** Registration, intake, applications and payment forms across departments, with submissions landing in one place. Gold's 10,000 submissions a month is the right ceiling for a shop this size, and the 50% nonprofit discount applies.
 

@@ -22,7 +22,7 @@ picks:
   - platformSlug: kindsight
     award: "Best screening for a campaign"
     forWhom: "A foundation preparing a capital campaign with a defined prospect list"
-    note: "Reported from around $4,150/yr for one user and roughly 1,500 screens, with a Professional tier reported near $5,350/yr. Hospital foundations are one of the few verticals where screening genuinely pays, because capacity varies enormously across a community donor base. The constraint is legal rather than technical — be certain which lists you are permitted to screen before you buy any volume."
+    note: "Reported from around $4,150/yr for one user and roughly 1,500 screens, with a Professional tier reported at $5,000-$8,000/yr. Hospital foundations are one of the few verticals where screening genuinely pays, because capacity varies enormously across a community donor base. The constraint is legal rather than technical — be certain which lists you are permitted to screen before you buy any volume."
 decidingFactors:
   - factor: "HIPAA governs the referral, not the software."
     detail: "Patient information cannot move freely into fundraising, and the rules on what a foundation may receive, from whom, and with what opt-out are the binding constraint. Settle the compliance process with your privacy officer before you evaluate any system — the software question is downstream and much easier."
