@@ -69,6 +69,10 @@ const platforms = defineCollection({
         // cover a combined need ("Donor CRM + donation processing") without
         // inventing a category slug.
         categoryLabel: z.string().optional(),
+        // Grey the line and tag it "Optional at this size" — for tools most
+        // peers at this size skip (per the benchmark), kept in the ledger so
+        // the reader sees the whole decision.
+        optional: z.boolean().default(false),
         note: z.string(),           // one sentence: why that one instead
       })
     ),
@@ -148,6 +152,10 @@ const stacks = defineCollection({
         // cover a combined need ("Donor CRM + donation processing") without
         // inventing a category slug.
         categoryLabel: z.string().optional(),
+        // Grey the line and tag it "Optional at this size" — for tools most
+        // peers at this size skip (per the benchmark), kept in the ledger so
+        // the reader sees the whole decision.
+        optional: z.boolean().default(false),
         advisory: z.boolean().default(false),
         // Overrides the product name in the ledger. Used when one platform
         // fills two roles, or when an advisory line needs its own label.

@@ -34,6 +34,23 @@ const supporting = allPosts
   .sort((a, b) => +b.data.publishDate - +a.data.publishDate);
 
 const verified = formatMedium(s.lastVerified);
+
+// Consecutive lines sharing a label render as one category cell (rowspan) with
+// an "or" chip on the alternatives — two options, one recommendation slot.
+const ledger = s.components.map((c, i) => {
+  const label = c.categoryLabel ?? categoryLabel(c.category);
+  const prevC = s.components[i - 1];
+  const prevLabel = prevC ? (prevC.categoryLabel ?? categoryLabel(prevC.category)) : null;
+  const first = label !== prevLabel;
+  let span = 1;
+  if (first) {
+    for (let j = i + 1; j < s.components.length; j++) {
+      const l = s.components[j].categoryLabel ?? categoryLabel(s.components[j].category);
+      if (l === label) span++; else break;
+    }
+  }
+  return { c, label, first, span };
+});
 ---
 
 <BaseLayout
@@ -76,10 +93,12 @@ const verified = formatMedium(s.lastVerified);
           <tr><th>Category</th><th>Tool</th><th class="num">Per year</th></tr>
         </thead>
         <tbody>
-          {s.components.map((c) => (
-            <tr class:list={{ advisory: c.advisory }}>
-              <td>{c.categoryLabel ?? categoryLabel(c.category)}</td>
+          {ledger.map(({ c, label, first, span }) => (
+            <tr class:list={{ advisory: c.advisory, optional: c.optional }}>
+              {first && <td rowspan={span}>{label}</td>}
               <td>
+                {!first && <span class="or-chip" aria-label="or, alternatively">or</span>}
+                {c.optional && <span class="opt-tag">Optional at this size</span>}
                 {c.advisory || !c.platformSlug ? (
                   <a class="line-name" href="/consulting/">{c.label ?? 'No software yet'}</a>
                 ) : (
@@ -140,6 +159,16 @@ const verified = formatMedium(s.lastVerified);
   /* Canonical "Best for" line, pulled from the platform file. Distinct from the
      muted stack rationale below it so the two read as label vs. commentary. */
   .line-bestfor { color: var(--color-ink); }
+  /* Alternatives inside one category slot: chip marks the "or" row. */
+  .or-chip { display: inline-block; margin-right: .45rem; padding: .05rem .45rem; border: 1px solid var(--color-rule-strong);
+    border-radius: 999px; font-family: var(--font-mono); font-size: .6rem; letter-spacing: .08em;
+    text-transform: uppercase; color: var(--color-muted); vertical-align: middle; }
+  /* Optional lines stay legible but visibly secondary. */
+  tr.optional td, tr.optional a, tr.optional small { color: var(--color-muted); }
+  tr.optional a:hover { color: var(--color-green-deep); }
+  .opt-tag { display: inline-block; margin-right: .45rem; padding: .1rem .45rem; background: var(--color-paper-2);
+    border: 1px solid var(--color-rule); border-radius: 3px; font-family: var(--font-mono);
+    font-size: .6rem; letter-spacing: .07em; text-transform: uppercase; color: var(--color-muted); }
   .line-bestfor strong { font-family: var(--font-mono); font-size: .62rem; letter-spacing: .08em;
     text-transform: uppercase; color: var(--color-muted); font-weight: 700; }
   /* A line with no product still belongs in the ledger, but it should not read
