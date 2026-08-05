@@ -26,10 +26,9 @@ const inCategory = (await getCollection('platforms', ({ data }) => data.draft ==
 
 const platforms = byValue(inCategory, (p) => p.data.affiliateSlug);
 
-// The award column only exists when someone in this category holds the award.
+// The award renders only in the product's primary category.
 const isChoice = (p: (typeof platforms)[number]) =>
   p.data.editorsChoice && p.data.category === category;
-const hasChoice = platforms.some(isChoice);
 
 // Head-to-heads for each product, attached to its own row rather than pooled.
 // Reads name-first for the row it sits under, even though the slug is
@@ -37,9 +36,12 @@ const hasChoice = platforms.some(isChoice);
 const allPairs = (await comparePairs()).filter(
   (x) => x.a.data.draft === false && x.b.data.draft === false
 );
+// A cross-listed product's comparisons live in its PRIMARY category, so match
+// on participation rather than on this page's category — otherwise alsoIn rows
+// show no "vs" links at all.
 const versusFor = (slug: string) =>
   allPairs
-    .filter((x) => x.category === category && (x.a.data.slug === slug || x.b.data.slug === slug))
+    .filter((x) => x.a.data.slug === slug || x.b.data.slug === slug)
     .map((x) => {
       const other = x.a.data.slug === slug ? x.b.data : x.a.data;
       return { slug: x.slug, other, v: valueOf(other.affiliateSlug) };
@@ -60,11 +62,10 @@ const posts = (await getCollection('posts', ({ data }) => data.draft === false))
     <div class="cmp-scroll">
       <table class="cmp">
         <colgroup>
-          {hasChoice && <col class="c-choice" />}<col class="c-tool" /><col class="c-price" /><col class="c-best" /><col class="c-cta" />
+          <col class="c-tool" /><col class="c-price" /><col class="c-best" /><col class="c-cta" />
         </colgroup>
         <thead>
           <tr>
-            {hasChoice && <th scope="col" aria-label="Award"></th>}
             <th scope="col">Tool</th>
             <th scope="col">Pricing</th>
             <th scope="col">Best for</th>
@@ -78,13 +79,9 @@ const posts = (await getCollection('posts', ({ data }) => data.draft === false))
             return (
               <>
               <tr class="tool-row">
-                {hasChoice && (
-                  <td class="cell-choice">
-                    {isChoice(p) && <span class="choice-badge">★ Editor's choice</span>}
-                  </td>
-                )}
                 <th scope="row">
                   <a href={`/platforms/${p.data.slug}/`}>{p.data.name}</a>
+                  {isChoice(p) && <span class="choice-badge">★ Editor's choice</span>}
                 </th>
                 <td class="price">
                   {p.data.pricingTiers.length > 0 ? (
@@ -112,7 +109,7 @@ const posts = (await getCollection('posts', ({ data }) => data.draft === false))
               </tr>
               {versus.length > 0 && (
                 <tr class="versus-row">
-                  <td colspan={hasChoice ? 5 : 4}>
+                  <td colspan="4">
                     <div class="versus-inner">
                       <span class="versus-label">Compare {p.data.shortName ?? p.data.name}:</span>
                       {versus.map((v) => (
@@ -216,10 +213,9 @@ const posts = (await getCollection('posts', ({ data }) => data.draft === false))
     text-decoration: none; padding: .4rem .75rem; border-radius: 3px; font-size: .85rem; }
   .btn-visit:hover { background: var(--color-green); }
   .offer { margin: 0; font-size: .75rem; font-weight: 700; color: var(--color-green-deep); }
-  /* Editor's choice: its own leftmost column, shown only when the category has
-     one. The badge is a gold ribbon banner with a swallowtail right edge. */
-  table.cmp col.c-choice { width: 8.5rem; }
-  .choice-badge { display: inline-block; padding: .34rem .8rem .34rem .55rem;
+  /* Editor's choice: a gold ribbon banner with a swallowtail right edge,
+     sitting on its own line under the product name. */
+  .choice-badge { display: block; width: fit-content; margin-top: .35rem; padding: .34rem .8rem .34rem .55rem;
     background: linear-gradient(180deg, #d9b83c, #c19d2e); color: #2c2405;
     clip-path: polygon(0 0, 100% 0, calc(100% - .45rem) 50%, 100% 100%, 0 100%);
     font-family: var(--font-mono); font-size: .6rem; font-weight: 700;

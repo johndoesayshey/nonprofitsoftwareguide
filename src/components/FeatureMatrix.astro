@@ -103,7 +103,11 @@ const best = Math.max(0, ...scored.map((s) => s.score));
      sideways. Cost me a page-level horizontal scrollbar to find. */
   .fm-scroll { overflow-x: auto; margin: 1rem 0 .8rem; position: relative; }
 
-  table.fm { width: 100%; min-width: 44rem; border-collapse: collapse; font-size: .9rem; }
+  /* table-layout: fixed compresses columns to the container instead of
+     overflowing it (operator note n55: no horizontal scroll). The wrapper's
+     overflow-x stays as a safety net for very narrow phones. */
+  table.fm { width: 100%; table-layout: fixed; border-collapse: collapse; font-size: .9rem; }
+  table.fm th { overflow-wrap: break-word; hyphens: auto; }
   table.fm th, table.fm td { padding: .55rem .7rem; text-align: left;
     border-bottom: 1px solid var(--color-rule); }
   table.fm thead th { font-size: .72rem; letter-spacing: .05em; text-transform: uppercase;

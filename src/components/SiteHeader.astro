@@ -19,11 +19,12 @@ const categories = Object.values(CATEGORIES)
     href: c.path!,
     label: c.label,
     key: c.slug,
+    rank: c.rank ?? Infinity,
     value: categoryValue(
       allPlatforms.filter((p) => p.data.category === c.slug).map((p) => p.data.affiliateSlug ?? '')
     ),
   }))
-  .sort((a, b) => b.value - a.value);
+  .sort((a, b) => a.rank - b.rank || b.value - a.value);
 
 const softwareActive = categories.some((c) => c.key === section);
 

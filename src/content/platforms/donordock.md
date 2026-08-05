@@ -2,7 +2,7 @@
 name: DonorDock
 slug: donordock
 category: donor-crm
-entryPrice: "$500/mo, billed annually ($6,000/yr) — one plan, no tiers"
+entryPrice: "$500/mo, billed annually ($6,000/yr)"
 pricingModel: "Single plan, all features, unlimited contacts; 2% platform fee on online gifts"
 pricingBasis: "one flat plan, unlimited contacts"
 pricingTiers:

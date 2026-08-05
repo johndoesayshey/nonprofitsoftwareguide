@@ -1,6 +1,7 @@
 ---
 name: Neon CRM
 slug: neoncrm
+featured: false
 category: donor-crm
 entryPrice: "From $99/mo; reported to ~$409/mo by revenue"
 pricingModel: "Scales with organizational revenue; unlimited users; optional add-on modules"

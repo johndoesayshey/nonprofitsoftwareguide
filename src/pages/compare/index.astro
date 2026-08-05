@@ -57,10 +57,10 @@ const grouped = Object.values(CATEGORIES)
     }));
 
     const slugs = tools.map((t) => t.affiliateSlug).filter(Boolean) as string[];
-    return { cat, tools, rows, value: categoryValue(slugs), hasChoice: tools.some((t) => t.editorsChoice) };
+    return { cat, tools, rows, value: categoryValue(slugs) };
   })
   .filter((g) => g.tools.length > 0)
-  .sort((a, b) => b.value - a.value);
+  .sort((a, b) => (a.cat.rank ?? Infinity) - (b.cat.rank ?? Infinity) || b.value - a.value);
 
 const alternatives = (await getCollection('alternatives'))
   .filter((e) => e.data.draft === false)
@@ -125,11 +125,10 @@ const datasetLd = {
           <div class="table-scroll">
             <table class="cmp">
               <colgroup>
-                {g.hasChoice && <col class="c-choice" />}<col class="c-tool" /><col class="c-price" /><col class="c-best" /><col class="c-cta" />
+                <col class="c-tool" /><col class="c-price" /><col class="c-best" /><col class="c-cta" />
               </colgroup>
               <thead>
                 <tr>
-                  {g.hasChoice && <th scope="col" aria-label="Award"></th>}
                   <th scope="col">Tool</th>
                   <th scope="col">Pricing</th>
                   <th scope="col">Best for</th>
@@ -140,12 +139,8 @@ const datasetLd = {
                 {g.rows.map(({ tool: t, versus }) => (
                   <>
                   <tr class="tool-row">
-                    {g.hasChoice && (
-                      <td class="cell-choice">
-                        {t.editorsChoice && <span class="choice-badge">★ Editor's choice</span>}
-                      </td>
-                    )}
-                    <th scope="row"><a href={`/platforms/${t.slug}/`}>{t.name}</a></th>
+                    <th scope="row"><a href={`/platforms/${t.slug}/`}>{t.name}</a>
+                      {t.editorsChoice && <span class="choice-badge">★ Editor's choice</span>}</th>
                     <td class="price">
                       {t.pricingTiers.length > 0 ? (
                         <>
@@ -172,7 +167,7 @@ const datasetLd = {
                   </tr>
                   {versus.length > 0 && (
                     <tr class="versus-row">
-                      <td colspan={g.hasChoice ? 5 : 4}>
+                      <td colspan="4">
                         <div class="versus-inner">
                           <span class="versus-label">Compare {t.shortName ?? t.name}:</span>
                           {versus.map((v) => (
@@ -275,10 +270,9 @@ const datasetLd = {
   table.cmp { min-width: 48rem; table-layout: fixed; }
   table.cmp col.c-tool { width: 14%; } table.cmp col.c-price { width: 26%; }
   table.cmp col.c-email { width: 12%; }
-  /* Editor's choice: its own leftmost column, shown only when the category has
-     one. The badge is a gold ribbon banner with a swallowtail right edge. */
-  table.cmp col.c-choice { width: 8.5rem; }
-  .choice-badge { display: inline-block; padding: .34rem .8rem .34rem .55rem;
+  /* Editor's choice: a gold ribbon banner with a swallowtail right edge,
+     sitting on its own line under the product name. */
+  .choice-badge { display: block; width: fit-content; margin-top: .35rem; padding: .34rem .8rem .34rem .55rem;
     background: linear-gradient(180deg, #d9b83c, #c19d2e); color: #2c2405;
     clip-path: polygon(0 0, 100% 0, calc(100% - .45rem) 50%, 100% 100%, 0 100%);
     font-family: var(--font-mono); font-size: .6rem; font-weight: 700;

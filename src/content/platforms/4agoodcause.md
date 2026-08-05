@@ -17,6 +17,9 @@ pricingTiers:
     note: "$5,148/yr; $499 month-to-month"
 lastVerified: 2026-08-02
 bestFor: "Shops that want a payment processor that does not charge per transaction, potentially saving thousands each year. Lighter CRM integration, but great for small shops just taking the next step and looking to cap costs on fees. Plentiful integrations (like Mailchimp and Quickbooks) to make up for fewer built-ins on the CRM. However, the price point justifies this and makes it our top pick for a donor processor."
+bestForByCategory:
+  donor-crm: "A simpler CRM bundled with the giving platform: donor profiles, giving history, notes, tagging, custom fields and acknowledgement letters, verified on their own feature page. No built-in email marketing — it leans on the Mailchimp integration — so it fits shops that want records and fundraising on one bill rather than a deep standalone database."
+alsoIn: [donor-crm]
 targetQuery: "4agoodcause review pricing"
 affiliateSlug: 4agoodcause
 editorsChoice: true
@@ -50,7 +53,7 @@ otherOptions:
     note: "Giving platforms hold donors and gifts; a donor CRM holds the relationship history a major-gift program runs on."
 ---
 
-[4aGoodCause](/go/4agoodcause) is donation and event software built around monthly giving: donation pages, event registration, peer-to-peer, and a light donor record, sold as a flat subscription from $99 a month billed annually. It takes no percentage of your donations, which is the whole argument for it. Past roughly $40,000 of online giving a year, that flat fee costs less than a percentage platform.
+[4aGoodCause](/go/4agoodcause) is donation and event software built around monthly giving: donation pages, event registration, peer-to-peer, and a built-in donor CRM, sold as a flat subscription from $99 a month billed annually. The CRM is simpler than a standalone database but it is real — donor profiles, giving history, notes, tagging, custom fields and acknowledgement letters, per their own feature page — and there is no built-in email marketing, which is what the Mailchimp integration is for. It takes no percentage of your donations, which is the whole argument for it. Past roughly $40,000 of online giving a year, that flat fee costs less than a percentage platform.
 
 ## Who it fits
 

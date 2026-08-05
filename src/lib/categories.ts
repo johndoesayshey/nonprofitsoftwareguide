@@ -8,6 +8,9 @@ export interface CategoryMeta {
   short: string;
   blurb: string;
   path?: string; // set only for categories that have their own hub page
+  /** Editorial nav/listing rank. Lower comes first; unranked categories follow
+   *  in earning-value order. Operator note n56 (2026-08-04): donor CRM leads. */
+  rank?: number;
 }
 
 export const CATEGORIES: Record<string, CategoryMeta> = {
@@ -28,6 +31,7 @@ export const CATEGORIES: Record<string, CategoryMeta> = {
     path: '/wealth-screening/',
   },
   'donor-crm': {
+    rank: 1,
     slug: 'donor-crm',
     label: 'Donor CRM',
     short: 'Donor CRM',
