@@ -18,7 +18,7 @@ faq:
     a: "No. Both price by constituent or contact count, not seats. Bloomerang includes unlimited users, and LGL's tiers are based purely on record count, so adding staff or volunteers costs nothing on either platform."
 ---
 
-Little Green Light wins on price: $45/mo up to 2,500 constituents against Bloomerang's $125/mo start. Bloomerang wins on ease of use and retention dashboards. The decision comes down to who updates the database. A detail-oriented admin thrives in LGL; everyone else does better in Bloomerang.
+Little Green Light wins on price: $45/mo up to 2,500 constituents with forms included, against Bloomerang's $125/mo CRM start ($165/mo once the $40 Fundraising module that carries donation forms is bundled in). Bloomerang wins on ease of use and retention dashboards. The decision comes down to who updates the database. A detail-oriented admin thrives in LGL; everyone else does better in Bloomerang.
 
 ## Where LGL wins
 

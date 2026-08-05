@@ -98,7 +98,7 @@ means changing payment processors, which means re-enrolling recurring donors.
 ## How the QuickBooks sync actually works
 
 One-way, CharityEngine to QuickBooks Online, run as a scheduled job. Both
-granularities are offered as a setting, and the vendor pushes you toward summary ,
+granularities are offered as a setting, and the vendor pushes you toward summary,
 their own documentation recommends a daily summary and notes that detail mode, which
 creates line-item transactions, is for organizations that require individual
 transactions for reconciliation.

@@ -13,7 +13,7 @@ faq:
   - q: "What happened to Network for Good?"
     a: "The software is now Bonterra Guided Fundraising. The donor-advised fund of the same name was a separate entity, was excluded from the acquisition, and renamed itself For Good in May 2025. Two different organizations, one old name."
   - q: "Is Salsa Labs still available?"
-    a: "No. Salsa CRM and Salsa Engage were sunset, with a customer migration deadline of December 31, 2024. Customers were moved to EveryAction or Network for Good — now Bonterra Fundraising and Engagement or Bonterra Guided Fundraising."
+    a: "No. Salsa CRM and Salsa Engage were sunset, with a customer migration deadline of December 31, 2024. Customers were moved to EveryAction or Network for Good, now Bonterra Fundraising and Engagement or Bonterra Guided Fundraising."
   - q: "Is Charity Navigator's Giving Basket a Bonterra product?"
     a: "No. The Giving Basket is powered by Give Lively, through the Give Lively Foundation. It is frequently listed as a Bonterra product and is not one."
 draft: false
@@ -27,10 +27,10 @@ If you are trying to work out what you are actually buying from Bonterra, or wha
 |---|---|---|
 | EveryAction | **Bonterra Fundraising and Engagement** | Active, renamed |
 | Network for Good (the software) | **Bonterra Guided Fundraising** | Active, renamed |
-| Salsa CRM / Salsa Engage | — | **Sunset**, migration deadline 31 Dec 2024 |
+| Salsa CRM / Salsa Engage | n/a | **Sunset**, migration deadline 31 Dec 2024 |
 | CyberGrants | Bonterra corporate social responsibility | Active |
 | Jumpstart | Bonterra Jumpstart | Active |
-| Network for Good (the donor-advised fund) | **For Good** | **Never acquired** — separate company, renamed May 2025 |
+| Network for Good (the donor-advised fund) | **For Good** | **Never acquired**, separate company, renamed May 2025 |
 
 ## The two corrections
 
@@ -46,7 +46,7 @@ Because the sources disagree with each other right now, including the vendor's o
 
 Bonterra's product pages use the new names. But `everyaction.com` still resolves, Capterra's URL slugs still carry EveryAction- and Network-for-Good-era paths, and Capterra's display names sit somewhere in between. A buyer comparing "EveryAction vs Bonterra" is comparing a product to itself and has no way to know.
 
-That is not an accident of laziness — it is what happens when a company acquires four products and renames them faster than the ecosystem's URLs and review databases can follow.
+That is not an accident of laziness; it is what happens when a company acquires four products and renames them faster than the ecosystem's URLs and review databases can follow.
 
 ## What this means if you are buying
 
@@ -54,12 +54,12 @@ That is not an accident of laziness — it is what happens when a company acquir
 
 That is not a reason to rule Bonterra out. Fundraising and Engagement is a strong system for advocacy-heavy organizations, and Guided Fundraising bundles a human fundraising coach with the software, which nobody else does. It is a reason to ask what the plan is for the specific product you are signing for, and to know in advance how you would export your data.
 
-Two pricing mechanics worth knowing before you negotiate, both documented rather than rumoured. Pricing improves with renewal length, which means a one-year term is priced as a penalty. And Guided Fundraising prices on contact count with a break that arrives early — a reviewer in December 2025 described the increase at **501 contacts** as too low a threshold. Price your own list against that before the call.
+Two pricing mechanics worth knowing before you negotiate, both documented rather than rumoured. Pricing improves with renewal length, which means a one-year term is priced as a penalty. And Guided Fundraising prices on contact count with a break that arrives early, a reviewer in December 2025 described the increase at **501 contacts** as too low a threshold. Price your own list against that before the call.
 
-Nothing else is published. Figures circulating elsewhere — "$109 per feature monthly," "$3,588 a year over a 15-month contract" — trace back to no primary source, so we are not repeating them. Our [Bonterra write-up](/platforms/bonterra/) has the detail, and [what nonprofit software actually costs](/compare/) has every price we hold across the sector.
+Nothing else is published. Figures circulating elsewhere ("$109 per feature monthly," "$3,588 a year over a 15-month contract") trace back to no primary source, so we are not repeating them. Our [Bonterra write-up](/platforms/bonterra/) has the detail, and [what nonprofit software actually costs](/compare/) has every price we hold across the sector.
 
 ## What this means if you are a Salsa refugee
 
 You were migrated in 2024, probably to EveryAction or Network for Good, and both of those have since been renamed around you. If the destination never fit, you have now had two years of it, which is long enough to judge.
 
-The honest alternatives at most sizes are independent and publish their prices: [Eleo](/platforms/eleo/) from $39 a month with its whole ladder published, [Bloomerang](/platforms/bloomerang/) from $125 if adoption across a team is the real problem, or [DonorDock](/go/donordock) at a flat $500 a month if you are collapsing several subscriptions into one. Our [switching guides](/alternatives/) cover what each migration actually costs — the fields that break are always the same ones.
+The honest alternatives at most sizes are independent and publish their prices: [Eleo](/platforms/eleo/) from $39 a month with its whole ladder published, [Bloomerang](/platforms/bloomerang/) from $125 for the CRM ($165 with Fundraising) if adoption across a team is the real problem, or [DonorDock](/go/donordock) at a flat $500 a month if you are collapsing several subscriptions into one. Our [switching guides](/alternatives/) cover what each migration actually costs, the fields that break are always the same ones.

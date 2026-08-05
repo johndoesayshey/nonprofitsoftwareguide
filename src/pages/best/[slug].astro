@@ -133,7 +133,7 @@ const faqLd = g.faq?.length
         const plat = bySlug.get(p.platformSlug)!;
         return (
           <section class="pick-detail">
-            <h2>{plat.name} <span class="pick-award">— {p.award}</span></h2>
+            <h2>{plat.name} <span class="pick-award">{p.award}</span></h2>
             <p class="pick-for"><strong>Right for:</strong> {p.forWhom}</p>
             <p>{p.note}</p>
             <p class="pick-links">

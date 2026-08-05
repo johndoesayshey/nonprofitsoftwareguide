@@ -137,7 +137,7 @@ const itemListLd = {
         const plat = bySlug.get(p.platformSlug)!;
         return (
           <section class="pick-detail">
-            <h3>{i + 1}. {plat.name} <span class="pick-for">— {p.forWhom}</span></h3>
+            <h3>{i + 1}. {plat.name} <span class="pick-for">{p.forWhom}</span></h3>
             <p>{p.note}</p>
             <p class="pick-links">
               <a href={`/platforms/${p.platformSlug}/`}>Full {plat.name} write-up →</a>

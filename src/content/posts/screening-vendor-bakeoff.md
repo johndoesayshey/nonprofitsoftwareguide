@@ -26,13 +26,13 @@ It also means feature-list comparison is nearly useless. Every vendor claims com
 
 ## Build the test file
 
-Fifty to a hundred constituents whose capacity you can **independently verify**. Not a random sample — a deliberately constructed one.
+Fifty to a hundred constituents whose capacity you can **independently verify**. Not a random sample, a deliberately constructed one.
 
 Include:
 
 - **Board members**, whose situations you generally know
 - **Past major donors** at a range of levels
-- **People whose giving elsewhere is public** — named in another organization's annual report or on a donor wall
+- **People whose giving elsewhere is public**, named in another organization's annual report or on a donor wall
 - **Some you are confident cannot give at a major level**, which is the control group most people forget
 - **A few genuine unknowns**, to see what each vendor surfaces
 
@@ -60,11 +60,11 @@ Two vendors will rate the same person differently. That is the most informative 
 
 The products weight differently on purpose. [DonorSearch](/go/donorsearch) leads with demonstrated philanthropic history. [Kindsight](/go/kindsight) leads with wealth and capacity indicators and shows its sourcing. [WealthEngine](/go/wealthengine) models wealth across large lists.
 
-Which weighting is right depends entirely on your file. If your donors are modest people who give every year without fail, demonstrated-giving weighting will fit. If they are wealthy people who have not given yet, capacity weighting will. Nobody can tell you which you have except your own data — which is what the test file reveals.
+Which weighting is right depends entirely on your file. If your donors are modest people who give every year without fail, demonstrated-giving weighting will fit. If they are wealthy people who have not given yet, capacity weighting will. Nobody can tell you which you have except your own data, which is what the test file reveals.
 
 ## Then negotiate
 
-Tell each vendor you are running the same file past others. Not as a bluff — as a fact.
+Tell each vendor you are running the same file past others. Not as a bluff, as a fact.
 
 This is the whole of your leverage in a category with no published pricing, and it works far better before signing than at renewal. Reported figures give you a starting reference: Kindsight from around $4,150/yr for one user and roughly 1,500 screens; DonorSearch from about $4,000/yr for a small file, with per-record screening reported at roughly $1–$2 per record; WealthEngine from around $5,000/yr for a single user plus a one-time implementation fee reported anywhere between $2,000 and $20,000.
 
@@ -72,6 +72,6 @@ Ask about that implementation line specifically. It is the one most likely to ap
 
 ## The option to raise before any of this
 
-If what you actually need is one screen — pre-campaign feasibility, say — you may not need a subscription at all. DonorSearch's per-record pricing screens a file once with no annual commitment, and a consultant-run screen at roughly $4,000–$5,000 delivers a tiered portfolio with suggested asks rather than a data file.
+If what you actually need is one screen (pre-campaign feasibility, say) you may not need a subscription at all. DonorSearch's per-record pricing screens a file once with no annual commitment, and a consultant-run screen at roughly $4,000–$5,000 delivers a tiered portfolio with suggested asks rather than a data file.
 
-Our 2026 survey found 95% of shops under $250K raised spend $0 on screening, and half of the $250K–$1M segment still spends nothing. Before running a bake-off, it is worth confirming you are past the point where the category makes sense at all — [our wealth screening guide](/best/wealth-screening-software/) and [what a prospect research consultant does](/blog/prospect-research-consultant-cost/) both cover that test.
+Our 2026 survey found 95% of shops under $250K raised spend $0 on screening, and half of the $250K–$1M segment still spends nothing. Before running a bake-off, it is worth confirming you are past the point where the category makes sense at all, [our wealth screening guide](/best/wealth-screening-software/) and [what a prospect research consultant does](/blog/prospect-research-consultant-cost/) both cover that test.

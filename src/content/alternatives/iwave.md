@@ -17,11 +17,11 @@ reasonsToLeave:
 picks:
   - platformSlug: donorsearch
     forWhom: "You weight proven giving over wealth markers"
-    note: "The most credible head-to-head alternative, and the one to price against iWave directly. Reported at roughly $4,000/yr for a small file around 5,000 records, $6,000–$12,000/yr at 10,000–50,000 records, and $15,000–$22,000/yr at enterprise scale — with a pay-per-record option at roughly $1–$2 per record for a one-off screen with no subscription. That per-record route is the important one: it lets you buy a single screening project instead of a year. DonorSearch leads with demonstrated philanthropy rather than wealth indicators, and integrates scores directly into major donor CRMs."
+    note: "The most credible head-to-head alternative, and the one to price against iWave directly. Reported at roughly $4,000/yr for a small file around 5,000 records, $6,000–$12,000/yr at 10,000–50,000 records, and $15,000–$22,000/yr at enterprise scale, with a pay-per-record option at roughly $1–$2 per record for a one-off screen with no subscription. That per-record route is the important one: it lets you buy a single screening project instead of a year. DonorSearch leads with demonstrated philanthropy rather than wealth indicators, and integrates scores directly into major donor CRMs."
   - platformSlug: wealthengine
     forWhom: "You want a third bid before signing anything"
-    note: "Reported from around $5,000/yr for a single user, quoted per organization. Worth including in a competitive process specifically because these are negotiated deals — a vendor that knows it's the only bid quotes accordingly. Run the same test file through every option you're considering and compare who each one flags."
-stayIf: "You screen regularly, someone owns major gifts, and the scores are producing visits. Kindsight's scores are transparently sourced, which matters more than it sounds — a score you can defend in a portfolio meeting gets acted on, and an unexplained number gets ignored. If your team is demonstrably working the list, this is a category where the subscription pays for itself many times over on a single upgraded gift."
+    note: "Reported from around $5,000/yr for a single user, quoted per organization. Worth including in a competitive process specifically because these are negotiated deals, a vendor that knows it's the only bid quotes accordingly. Run the same test file through every option you're considering and compare who each one flags."
+stayIf: "You screen regularly, someone owns major gifts, and the scores are producing visits. Kindsight's scores are transparently sourced, which matters more than it sounds, a score you can defend in a portfolio meeting gets acted on, and an unexplained number gets ignored. If your team is demonstrably working the list, this is a category where the subscription pays for itself many times over on a single upgraded gift."
 draft: false
 ---
 
@@ -35,7 +35,7 @@ Our 2026 survey of 100 U.S. fundraising professionals found that 95% of shops un
 
 ## Buy the screen, not the year
 
-The most underused option here is a one-time screening project. DonorSearch's pay-per-record pricing — reported at roughly $1–$2 per record — means a 5,000-record file can be screened once for a few thousand dollars with no subscription attached. For pre-campaign feasibility, that's the entire job.
+The most underused option here is a one-time screening project. DonorSearch's pay-per-record pricing (reported at roughly $1–$2 per record) means a 5,000-record file can be screened once for a few thousand dollars with no subscription attached. For pre-campaign feasibility, that's the entire job.
 
 The alternative version of the same idea is hiring a prospect research consultant to run the screen and interpret it. That typically lands around $4,000–$5,000 as a project and includes the part the software doesn't do: turning scores into a tiered portfolio with suggested asks. For a shop screening for the first time, that interpretation is worth more than the data. If that's the situation you're in, [our consulting page](/consulting/) covers how that kind of engagement works.
 
@@ -43,8 +43,8 @@ The alternative version of the same idea is hiring a prospect research consultan
 
 Don't compare feature lists. Compare output on people you already know.
 
-Assemble a test file of 50–100 constituents whose capacity you can independently verify — board members, past major donors, people whose giving to other organizations is public. Ask every vendor you're considering to screen that file during the sales process. Most will.
+Assemble a test file of 50–100 constituents whose capacity you can independently verify, board members, past major donors, people whose giving to other organizations is public. Ask every vendor you're considering to screen that file during the sales process. Most will.
 
-Then check three things. Did they flag the people you know are capable? Did they miss anyone obvious? And how many false positives did you get — names scored high that you know can't give at that level? The vendor whose output most closely matches your independent knowledge is the one whose output your team will trust on the names you don't know.
+Then check three things. Did they flag the people you know are capable? Did they miss anyone obvious? And how many false positives did you get, names scored high that you know can't give at that level? The vendor whose output most closely matches your independent knowledge is the one whose output your team will trust on the names you don't know.
 
 That test also reveals the real difference between the products in this category. Kindsight weights wealth indicators heavily and shows its sourcing; DonorSearch weights demonstrated philanthropic history. Neither is wrong. Which one is right depends on whether your donors are wealthy people who haven't given yet, or modest people who give consistently.

@@ -54,7 +54,7 @@ const useEmbed = f.provider === 'jotform' && f.formUrl;
         <legend>2. Annual software spend, by category</legend>
         <p class="hint">
           Whole US dollars per year. Estimates are fine, and anything you leave
-          blank is recorded as <strong>$0</strong> — spending nothing in a
+          blank is recorded as <strong>$0</strong>, spending nothing in a
           category is a real answer and counts the same as any other.
         </p>
 
@@ -85,7 +85,7 @@ const useEmbed = f.provider === 'jotform' && f.formUrl;
         </p>
 
         <div class="verify-opt">
-          <p class="opt-head">Option A — your role</p>
+          <p class="opt-head">Option A: your role</p>
           <div class="grid">
             <div class="field">
               <label for="sv-title">Job title</label>
@@ -101,7 +101,7 @@ const useEmbed = f.provider === 'jotform' && f.formUrl;
         <p class="or-rule"><span>or</span></p>
 
         <div class="verify-opt">
-          <p class="opt-head">Option B — your LinkedIn</p>
+          <p class="opt-head">Option B: your LinkedIn</p>
           <div class="field">
             <label for="sv-li">LinkedIn profile</label>
             <input type="text" id="sv-li" name="linkedin" autocomplete="off" inputmode="url" />
@@ -165,7 +165,7 @@ const useEmbed = f.provider === 'jotform' && f.formUrl;
         var linkedin = form.querySelector('#sv-li').value.trim();
 
         // Two ways to verify: role (title AND organization) or a LinkedIn
-        // profile. Either one complete is enough. Spend fields are optional —
+        // profile. Either one complete is enough. Spend fields are optional;
         // a blank is a real answer and is recorded as zero.
         var hasRole = title && org;
         var missing = [];

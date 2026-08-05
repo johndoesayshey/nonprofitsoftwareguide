@@ -228,7 +228,7 @@ const datasetLd = {
                   <a href={`/stacks/${seg.stackSlug}/`}>{seg.label}</a>
                 </th>
                 <td class="num">{money(s.meanTotal[seg.slug])}</td>
-                <td class="num rec">{stackTotal.get(seg.stackSlug) ?? '—'}</td>
+                <td class="num rec">{stackTotal.get(seg.stackSlug) ?? 'n/a'}</td>
               </tr>
             ))}
           </tbody>

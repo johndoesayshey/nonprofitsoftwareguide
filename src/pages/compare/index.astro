@@ -27,12 +27,11 @@ const isFeatured = (slug: string) => featured.some((p) => p.data.slug === slug);
 
 const grouped = Object.values(CATEGORIES)
   .map((cat) => {
-    // Primary category only. `alsoIn` exists so a category hub can say "a
-    // structured list in monday.com is many small shops' first donor database"
-    // WITH that qualifier attached; a bare row in a price table carries no such
-    // nuance and just makes the shortlist look like eight CRMs.
+    // Same roster as the category hub (operator note n115): cross-listed
+    // products appear here too, and bestForIn() gives each row its
+    // category-appropriate text.
     const tools = featured
-      .filter((p) => p.data.category === cat.slug)
+      .filter((p) => p.data.category === cat.slug || (p.data.alsoIn ?? []).includes(cat.slug as any))
       .map((p) => p.data)
       .sort((a, b) => valueOf(b.affiliateSlug) - valueOf(a.affiliateSlug) || a.name.localeCompare(b.name));
 
@@ -47,7 +46,7 @@ const grouped = Object.values(CATEGORIES)
     const inCat = pairs.filter((p) => p.category === cat.slug);
     const rows = tools.map((t) => ({
       tool: t,
-      versus: inCat
+      versus: pairs
         .filter((p) => p.a.data.slug === t.slug || p.b.data.slug === t.slug)
         .filter((p) => (p.a.data.slug === t.slug ? p.b.data.featured : p.a.data.featured))
         .map((p) => {
@@ -113,7 +112,7 @@ const datasetLd = {
           <p class="switching-kicker">Already have a system?</p>
           <p class="switching-lede">
             This page is for choosing. If you're replacing something, start with the
-            <a href="/alternatives/">switching guides</a> — why shops leave, what to
+            <a href="/alternatives/">switching guides</a>: why shops leave, what to
             move to, and what the migration costs.
           </p>
         </section>
@@ -143,7 +142,7 @@ const datasetLd = {
                   <>
                   <tr class="tool-row">
                     <th scope="row"><a href={`/platforms/${t.slug}/`}>{t.name}</a>
-                      {t.editorsChoice && <span class="choice-badge">★ Editor's choice</span>}</th>
+                      {t.editorsChoice && t.category === g.cat.slug && <span class="choice-badge">★ Editor's choice</span>}</th>
                     <td class="price">
                       {t.pricingTiers.length > 0 ? (
                         <>

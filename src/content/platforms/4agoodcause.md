@@ -73,15 +73,15 @@ First month free on every plan. The revenue caps work in your favor: going over 
 
 This is the only number that decides it. Compare the platform fee only, since processing costs the same either way.
 
-| Online giving / yr | [Donorbox](/go/donorbox) standard (~2.95%) | 4aGoodCause Grassroots ($1,188 flat) | Cheaper |
+| Online giving / yr | [Donorbox](/go/donorbox) standard (~2.95%) | 4aGoodCause tier for that volume | Cheaper |
 |---|---|---|---|
-| $20,000 | $590 | $1,188 | Donorbox |
-| $40,000 | $1,180 | $1,188 | dead heat |
-| $75,000 | $2,213 | $1,188 | 4aGoodCause |
-| $150,000 | $4,425 | $1,188 | 4aGoodCause |
-| $300,000 | $8,850 | $1,188 | 4aGoodCause |
+| $20,000 | $590 | $1,188 (Grassroots) | Donorbox |
+| $45,000 | $1,328 | $1,188 (Grassroots) | 4aGoodCause |
+| $75,000 | $2,213 | $2,988 (Growing) | Donorbox |
+| $150,000 | $4,425 | $2,988 (Growing) | 4aGoodCause |
+| $300,000 | $8,850 | $5,148 (Scale) | 4aGoodCause |
 
-The crossover is about **$40,270**. Under it, pay the percentage. Over it, every additional dollar you raise online is free of platform fee, and the gap widens every year your program grows. Run your own last-12-months online total through the same arithmetic before you decide; that one number settles the question faster than any feature comparison.
+Two crossovers matter. Grassroots beats a 2.95% fee from about **$40,000** up to its $50,000 cap, and from about **$100,000** the flat plan wins for good: Growing beats the percentage all the way to its $250,000 cap, and Scale beats it at any volume above that. In the $50,000-$100,000 band a percentage platform is usually a little cheaper, so run your own last-12-months total through the arithmetic; that one number settles the question faster than any feature comparison.
 
 ## How it compares
 

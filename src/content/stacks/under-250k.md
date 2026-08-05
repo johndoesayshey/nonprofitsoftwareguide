@@ -12,7 +12,7 @@ components:
     categoryLabel: "Donor CRM + donation processing"
     platformSlug: zeffy
     annualCost: "$0"
-    rationale: "One line, two jobs. Zeffy processes gifts free at any volume — no platform fee, no processing fee — and keeps donor records of its own, which at this size is the donor database. Funded by an optional tip donors are asked for at checkout."
+    rationale: "One line, two jobs. Zeffy processes gifts free at any volume (no platform fee, no processing fee) and keeps donor records of its own, which at this size is the donor database. Funded by an optional tip donors are asked for at checkout."
   - category: forms-ops
     platformSlug: jotform
     annualCost: "$0-$204/yr"
@@ -28,11 +28,11 @@ At under $250k raised, your whole stack should be free. Collect gifts on a platf
 
 ## Why these picks
 
-**Money in and your donor record: Zeffy ($0).** At this size the donation platform *is* the database. [Zeffy](/go/zeffy) processes every gift free — no platform fee, no processing fee, a $100 gift deposits $100 — and holds the donor list, gift history and receipts that a shop this size would otherwise buy a CRM for. The trade to understand before your first campaign: it is funded by an optional tip donors are asked for at checkout, and some boards care about that. Decide once, on purpose. When receipting, soft credits or lapsed-donor reporting become real problems, that is the sign you have outgrown this stack, not that this pick was wrong.
+**Money in and your donor record: Zeffy ($0).** At this size the donation platform *is* the database. [Zeffy](/go/zeffy) processes every gift free (no platform fee, no processing fee, a $100 gift deposits $100) and holds the donor list, gift history and receipts that a shop this size would otherwise buy a CRM for. The trade to understand before your first campaign: it is funded by an optional tip donors are asked for at checkout, and some boards care about that. Decide once, on purpose. When receipting, soft credits or lapsed-donor reporting become real problems, that is the sign you have outgrown this stack, not that this pick was wrong.
 
 **Forms and operations: Jotform ($0 to about $17/mo).** [Jotform](/go/jotform) covers event registration, volunteer intake and the program application, with submissions landing in one place instead of an inbox. It also takes payments through Stripe, PayPal or Square where a form needs to collect a fee. Free to start, and the nonprofit discount halves the paid tier if you hit the free plan's limits.
 
-**Grant research: the Foundation Directory, free at your library.** Candid's [Foundation Directory](/platforms/candid/) is the same funder database grant consultants use, and most public libraries in Candid's Funding Information Network offer it free on-site — search "Funding Information Network" plus your county. An afternoon at the library with a target list beats a subscription you use twice. When applications become a monthly job with deadlines across two people, that is when a paid tool like [Instrumentl](/go/instrumentl) starts earning its price — load the 14-day trial with your real applications before you commit, and skip federal grants at this size either way; the reporting obligations outweigh the money.
+**Grant research: the Foundation Directory, free at your library.** Candid's [Foundation Directory](/platforms/candid/) is the same funder database grant consultants use, and most public libraries in Candid's Funding Information Network offer it free on-site; search "Funding Information Network" plus your county. An afternoon at the library with a target list beats a subscription you use twice. When applications become a monthly job with deadlines across two people, that is when a paid tool like [Instrumentl](/go/instrumentl) starts earning its price; load the 14-day trial with your real applications before you commit, and skip federal grants at this size either way; the reporting obligations outweigh the money.
 
 ## What you should not buy yet
 

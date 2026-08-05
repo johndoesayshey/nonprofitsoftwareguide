@@ -10,11 +10,11 @@ platformsMentioned: [kindsight, donorsearch, wealthengine]
 affiliateSlugs: [kindsight, donorsearch]
 faq:
   - q: "What does a prospect research consultant cost?"
-    a: "A screening-and-interpretation project typically runs around $4,000-$5,000 — comparable to a year of an entry-level screening subscription, with the difference that the deliverable is a tiered portfolio rather than a data file. Ongoing retainers and per-profile research are priced separately."
+    a: "A screening-and-interpretation project typically runs around $4,000-$5,000, comparable to a year of an entry-level screening subscription, with the difference that the deliverable is a tiered portfolio rather than a data file. Ongoing retainers and per-profile research are priced separately."
   - q: "Is a consultant cheaper than screening software?"
     a: "For a one-time need, usually yes in total cost, because you buy the project rather than a year plus the staff time to interpret it. For ongoing screening of a growing file, software is cheaper. The question is whether the need recurs."
   - q: "What should a prospect research engagement deliver?"
-    a: "A tiered prospect list with names, capacity ranges, suggested ask amounts and a rationale per prospect — plus a written method so your team can maintain it. A data file with scores is a partial deliverable, not the whole job."
+    a: "A tiered prospect list with names, capacity ranges, suggested ask amounts and a rationale per prospect, plus a written method so your team can maintain it. A data file with scores is a partial deliverable, not the whole job."
   - q: "Can we screen first and interpret later ourselves?"
     a: "You can, and shops do. It works when someone on staff has run a portfolio before. It fails when the scores land with a team that has never built one, which is the most common way a screening subscription produces nothing."
 draft: false
@@ -32,7 +32,7 @@ The prices are comparable. The deliverables are not.
 
 ## Why the interpretation is the hard part
 
-A screening file comes back with a few hundred names carrying scores. The obvious move — work down from the highest score — is usually wrong.
+A screening file comes back with a few hundred names carrying scores. The obvious move (work down from the highest score) is usually wrong.
 
 The top of the list is often people with significant wealth and no relationship to you. They screen high because capacity models measure capacity. Cold-soliciting them converts badly and burns the enthusiasm of whoever tried.
 
@@ -42,7 +42,7 @@ That is what the engagement buys. Someone who has built portfolios before, looki
 
 ## When the consultant is the better buy
 
-**A first screen.** If nobody on staff has run a major-gifts portfolio, scores arriving with no interpretation will sit in a folder. This is the single most common way a screening subscription produces nothing — and the survey data supports it: 95% of shops under $250K raised spend $0 here, and half of the $250K–$1M segment still spends nothing.
+**A first screen.** If nobody on staff has run a major-gifts portfolio, scores arriving with no interpretation will sit in a folder. This is the single most common way a screening subscription produces nothing, and the survey data supports it: 95% of shops under $250K raised spend $0 here, and half of the $250K–$1M segment still spends nothing.
 
 **Pre-campaign feasibility.** A one-time job. A project is the right shape for it; a year's subscription is not.
 
@@ -62,12 +62,12 @@ Whichever route you take, the deliverable should include a **written method**, n
 
 Without it you have bought one list with a shelf life of about eighteen months, and you will buy another one in two years. With it, your team can maintain the portfolio and you have bought a capability.
 
-Also ask, in both cases, for a test on people you already know. Give the consultant or vendor 50–100 constituents whose capacity you can independently verify — board members, past major donors, people whose giving elsewhere is public. Check who they flagged, who they missed, and how many high ratings you know are wrong. Our [wealth screening guide](/best/wealth-screening-software/) covers running that comparison properly.
+Also ask, in both cases, for a test on people you already know. Give the consultant or vendor 50–100 constituents whose capacity you can independently verify, board members, past major donors, people whose giving elsewhere is public. Check who they flagged, who they missed, and how many high ratings you know are wrong. Our [wealth screening guide](/best/wealth-screening-software/) covers running that comparison properly.
 
 ## The question underneath all of it
 
 Neither purchase works without a named person whose calendar has room for visits.
 
-That is the actual constraint, and it is worth being blunt about because both a subscription and an engagement will happily take your money regardless. If the answer to "who is making these visits" is unclear, spend the money on nothing at all, [hand-research your top 25](/blog/free-prospect-research/), and see whether that produces meetings. If it does not, the problem is capacity and no amount of data will fix it.
+That is the actual constraint, and it is worth naming up front, because neither a subscription nor an engagement can supply the person who makes the visits. If the answer to "who is making these visits" is unclear, spend the money on nothing at all, [hand-research your top 25](/blog/free-prospect-research/), and see whether that produces meetings. If it does not, the problem is capacity and no amount of data will fix it.
 
-If you want help thinking through which of these fits — or you would rather have someone run the first screen and hand you a portfolio — [that is what our consulting work covers](/consulting/).
+If you want help thinking through which of these fits (or you would rather have someone run the first screen and hand you a portfolio) [that is what our consulting work covers](/consulting/).

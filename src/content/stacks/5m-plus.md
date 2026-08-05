@@ -12,7 +12,7 @@ components:
     categoryLabel: "Donor CRM + donation processing"
     platformSlug: donordock
     annualCost: "$6,000/yr ($500/mo, billed annually) + $3,800 one-time onboarding"
-    rationale: "One plan carries the department: system of record for eight-plus staff, unlimited contacts, email marketing built in, and giving pages on the same bill. The 2% platform fee on online gifts is the number to weigh at this volume — the prose below does that math."
+    rationale: "One plan carries the department: system of record for eight-plus staff, unlimited contacts, email marketing built in, and giving pages on the same bill. The 2% platform fee on online gifts is the number to weigh at this volume, the prose below does that math."
   - category: forms-ops
     platformSlug: jotform
     annualCost: "~$594-$1,188/yr (Gold)"
@@ -31,13 +31,13 @@ components:
     rationale: "Continuous screening, now that a named researcher owns the output and gift officers work the portfolios."
 ---
 
-At $5M+ the stack is a full operation: continuous wealth screening, team-scale grant research, high-volume processing with the CRM riding on the same bill, and an event platform built for a production-scale gala. Budget roughly $20,600 to $24,200 a year in subscriptions — plus percentage and processing fees on event revenue, prospecting credits on big runs, and $3,800 of one-time DonorDock onboarding in year one. Still modest against the $96,815 mean our benchmark reports from $5M+ organizations, and small against the salaries it makes productive.
+At $5M+ the stack is a full operation: continuous wealth screening, team-scale grant research, high-volume processing with the CRM riding on the same bill, and an event platform built for a production-scale gala. Budget roughly $20,600 to $24,200 a year in subscriptions, plus percentage and processing fees on event revenue, prospecting credits on big runs, and $3,800 of one-time DonorDock onboarding in year one. Still modest against the $96,815 mean our benchmark reports from $5M+ organizations, and small against the salaries it makes productive.
 
 ## Why these picks
 
-**Donor CRM + donation processing: DonorDock ($500/mo, $6,000/yr).** One line carries the department. The database is the system of record for eight-plus people, and [DonorDock's](/go/donordock) single plan means neither a growing file nor another module ever re-prices the contract — unlimited contacts, email marketing built in, and the ActionBoard keeping daily follow-up alive across a big team. Onboarding is a separate $3,800 one-time line; put it in year one.
+**Donor CRM + donation processing: DonorDock ($500/mo, $6,000/yr).** One line carries the department. The database is the system of record for eight-plus people, and [DonorDock's](/go/donordock) single plan means neither a growing file nor another module ever re-prices the contract, unlimited contacts, email marketing built in, and the ActionBoard keeping daily follow-up alive across a big team. Onboarding is a separate $3,800 one-time line; put it in year one.
 
-Do the processing math with open eyes, because at this size it is the biggest number on the page: DonorDock's giving pages carry a **2% platform fee** on top of card processing, which is $10,000 a year at $500,000 of online giving. If your online program is that large, [4aGoodCause](/go/4agoodcause) Scale ($5,148/yr, unlimited online revenue, no percentage) is the flat-fee alternative for the giving side — running it alongside DonorDock splits the line back in two, and past roughly $250,000 online the split usually costs less in total. For deeper retention reporting, [Bloomerang](/go/bloomerang) remains the alternative on the database side, and a Salesforce build is excellent when a named admin and an implementation budget come with it, and a liability without them.
+Do the processing math with open eyes, because at this size it is the biggest number on the page: DonorDock's giving pages carry a **2% platform fee** on top of card processing, which is $10,000 a year at $500,000 of online giving. If your online program is that large, [4aGoodCause](/go/4agoodcause) Scale ($5,148/yr, unlimited online revenue, no percentage) is the flat-fee alternative for the giving side, running it alongside DonorDock splits the line back in two, and past roughly $250,000 online the split usually costs less in total. For deeper retention reporting, [Bloomerang](/go/bloomerang) remains the alternative on the database side, and a Salesforce build is excellent when a named admin and an implementation budget come with it, and a liability without them.
 
 The one thing to protect on the way across is recurring-gift tooling. A large monthly file leaks through expired cards, and [Donorbox](/go/donorbox) Pro's recovery machinery is the benchmark to hold any replacement against. Saving on fees while losing monthly donors to failed payments is a bad trade that shows up two quarters later.
 
@@ -45,7 +45,7 @@ The one thing to protect on the way across is recurring-gift tooling. A large mo
 
 **Grant research: Instrumentl Pro ($499/mo).** Twenty-plus active projects across a team is Pro-tier volume. [Instrumentl](/go/instrumentl) runs the pipeline; pair it with desk access to [Candid](/go/candid) when a single funder deserves a deep workup.
 
-**Events: OneCause ($2,995/yr + 5% platform fee + processing).** A gala program clearing six figures deserves a platform whose whole product is event night: [OneCause](/go/onecause) covers mobile bidding, check-in, and event-night support at production scale, with packages sized to the program. Price it with the 5% platform fee in view: on a $200,000 auction that is $10,000 on top of the subscription, so weigh the package against last year's auction revenue and what a stalled checkout line would cost — at this size that, not the subscription, is the real risk.
+**Events: OneCause ($2,995/yr + 5% platform fee + processing).** A gala program clearing six figures deserves a platform whose whole product is event night: [OneCause](/go/onecause) covers mobile bidding, check-in, and event-night support at production scale, with packages sized to the program. Price it with the 5% platform fee in view: on a $200,000 auction that is $10,000 on top of the subscription, so weigh the package against last year's auction revenue and what a stalled checkout line would cost, at this size that, not the subscription, is the real risk.
 
 **Forms and operations: Jotform (~$594-$1,188/yr, Gold).** Registration, intake, applications and payment forms across departments, with submissions landing in one place. Gold's 10,000 submissions a month is the right ceiling for a shop this size, and the 50% nonprofit discount applies.
 
