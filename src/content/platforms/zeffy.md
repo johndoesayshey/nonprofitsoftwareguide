@@ -10,7 +10,7 @@ pricingTiers:
     price: "$0"
     note: "funded by optional donor tips"
 lastVerified: 2026-07-29
-bestFor: "Fee-sensitive shops that want to keep every dollar of every gift"
+bestFor: "Fee-sensitive shops that want to keep every dollar of every gift and are okay with donors being prompted to tip when they donate."
 targetQuery: "is zeffy really free"
 affiliateSlug: zeffy
 freeTier: true

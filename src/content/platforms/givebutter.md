@@ -15,7 +15,7 @@ pricingTiers:
     price: "$29-$129/mo"
     note: "by contact count; adds texting, automations, deeper CRM"
 lastVerified: 2026-08-03
-bestFor: "Shops running campaigns, events, and peer-to-peer on one modern platform"
+bestFor: "Fee-sensitive shops that are okay with donors being prompted to tip but who also would like the option to do more robust fundraising down the road."
 targetQuery: "givebutter review"
 affiliateSlug: givebutter
 freeTier: true

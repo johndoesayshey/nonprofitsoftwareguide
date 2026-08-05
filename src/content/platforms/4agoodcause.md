@@ -16,7 +16,7 @@ pricingTiers:
     price: "$429/mo billed annually"
     note: "$5,148/yr; $499 month-to-month"
 lastVerified: 2026-08-02
-bestFor: "Shops past roughly $40k of online giving that want a fee that stops growing with them"
+bestFor: "Shops that want a payment processor that does not charge per transaction, potentially saving thousands each year. Lighter CRM integration, but great for small shops just taking the next step and looking to cap costs on fees. Plentiful integrations (like Mailchimp and Quickbooks) to make up for fewer built-ins on the CRM. However, the price point justifies this and makes it our top pick for a donor processor."
 targetQuery: "4agoodcause review pricing"
 affiliateSlug: 4agoodcause
 freeTier: false
