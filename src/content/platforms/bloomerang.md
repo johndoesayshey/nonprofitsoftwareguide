@@ -19,7 +19,7 @@ pricingTiers:
     price: "Quoted"
     note: "listed as additional features on Fundraising, not included"
 lastVerified: 2026-08-03
-bestFor: "Trusted name in the space with retention-focused features. Loved by all shop sizes, but works especially well for mid- to large organizations."
+bestFor: "Trusted name in the space with retention-focused features. Loved by all shop sizes, but works especially well for mid to large organizations."
 targetQuery: "bloomerang review"
 affiliateSlug: bloomerang
 freeTier: false

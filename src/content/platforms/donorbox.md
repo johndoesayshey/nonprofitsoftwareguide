@@ -14,10 +14,7 @@ pricingTiers:
     note: "fee drop pays for itself past ~$150k"
 lastVerified: 2026-07-29
 bestFor: "Shops that want a low barrier to entry on cost (no payments until you receive donations) with opportunities to unlock substantial features down the road (like their donor CRM). Earned place as a trusted brand in the non-profit community."
-bestForByCategory:
-  donor-crm: "A non-traditional first CRM: the donation platform's donor records cover what a small shop needs on day one, and the full CRM is a paid add-on when you outgrow them."
 targetQuery: "donorbox review"
-alsoIn: [donor-crm]
 affiliateSlug: donorbox
 freeTier: true
 features:

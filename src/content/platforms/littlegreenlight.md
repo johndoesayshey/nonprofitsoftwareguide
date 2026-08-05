@@ -15,7 +15,7 @@ pricingTiers:
   - tier: "Each +10,000 above"
     price: "+$15/mo"
 lastVerified: 2026-07-29
-bestFor: "Aging interface that takes some time to learn. All the features you need to keep track of donors with none of the frills."
+bestFor: "Aging interface that takes some time to learn. Most of the features you need to keep track of donors with none of the frills."
 targetQuery: "little green light review"
 affiliateSlug: littlegreenlight
 freeTier: false

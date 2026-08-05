@@ -11,12 +11,12 @@ pricingTiers:
     note: "billed annually, $6,000/yr; all features, unlimited contacts"
   - tier: "Platform fee on online gifts"
     price: "2%"
-    note: "plus Stripe/PayPal, typically 2.2% + $0.30"
+    note: "plus card processing, typically 2.3% + $0.30"
   - tier: "Onboarding & data migration"
     price: "$3,800 one-time"
     note: "paid service, not included in the plan, put it in your year-one math"
 lastVerified: 2026-08-04
-bestFor: "Everything in one easy to use software package including donation processing, CRM, email and text, plentiful integrations, and moves management. Great value for all the features included."
+bestFor: "Everything in one easy to use software package including donation processing, CRM, email and text, grants, plentiful integrations (like Quickbooks), and moves management. Great value for all the features included."
 targetQuery: "donordock review"
 affiliateSlug: donordock
 editorsChoice: true
@@ -70,11 +70,11 @@ If you only need a standalone database and nothing else, a smaller tool may fit 
 |---|---|
 | ONE, the only plan | **$500/mo**, billed annually ($6,000/yr) |
 | Onboarding and data migration | **$3,800 one-time** |
-| Platform fee on online gifts | 2% + Stripe/PayPal (~2.2% + $0.30) |
+| Platform fee on online gifts | 2%, plus card processing (typically 2.3% + $0.30) |
 | Contacts | Unlimited |
 | Guarantee | 90 days, money back |
 
-Plan year one at $9,800 plus processing, so the onboarding line lands in the board memo up front rather than as a surprise. The 2% platform fee applies to gifts through DonorDock's giving pages, on top of the card processor's own cut; at $150,000 of online giving that is $3,000 a year, which is worth including in the consolidation math alongside the email tool and giving platform you would retire.
+Plan year one at $9,800 plus processing, so the onboarding line lands in the board memo up front rather than as a surprise. The 2% platform fee applies to gifts through DonorDock's giving pages, on top of card processing (typically 2.3% + $0.30); at $150,000 of online giving the platform fee is $3,000 a year, which is worth including in the consolidation math alongside the email tool and giving platform you would retire.
 
 Readers get 10% off the first payment through [this site's link](/go/donordock).
 
