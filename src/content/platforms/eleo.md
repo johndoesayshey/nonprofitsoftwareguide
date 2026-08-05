@@ -24,13 +24,12 @@ targetQuery: "eleo crm review"
 affiliateSlug: eleo
 freeTier: false
 features:
-  emailMarketing: basic
+  emailMarketing: none
   donationForms: included
   paymentProcessing: included
   events: included
   peerToPeer: none
 featureNotes:
-  emailMarketing: "vendor FAQ contradicts itself; no click tracking documented"
   donationForms: "unlimited forms, every plan"
   paymentProcessing: "EleoPay, powered by Stripe"
   events: "registration forms confirmed; paid-ticket collection via EleoPay"

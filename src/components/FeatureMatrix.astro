@@ -69,7 +69,7 @@ const best = Math.max(0, ...scored.map((s) => s.score));
                   <td class={`lvl lvl-${lvl}`} title={LEVEL_MEANING[lvl]}
                       data-nsg-fslug={p.slug} data-nsg-fkey={key} data-nsg-flevel={lvl}>
                     <span class="lvl-mark">{LEVEL_LABEL[lvl]}</span>
-                    <span class="sr-only"> — {LEVEL_MEANING[lvl]}</span>
+                    <span class="sr-only">: {LEVEL_MEANING[lvl]}</span>
                     <span class="lvl-note">{note}</span>
                   </td>
                 );

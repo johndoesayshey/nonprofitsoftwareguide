@@ -36,7 +36,6 @@ features:
   events: basic
   peerToPeer: none
 featureNotes:
-  emailMarketing: "form emails and autoresponders, not campaigns"
   donationForms: "free plan caps payment submissions at 10/mo, separate from the regular cap"
   paymentProcessing: "passthrough to your own Stripe/PayPal; Jotform never holds the money"
   events: "registration forms only, no check-in or ticket scanning"

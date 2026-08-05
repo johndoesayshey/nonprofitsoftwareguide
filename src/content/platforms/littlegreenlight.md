@@ -20,13 +20,12 @@ targetQuery: "little green light review"
 affiliateSlug: littlegreenlight
 freeTier: false
 features:
-  emailMarketing: basic
+  emailMarketing: none
   donationForms: included
   paymentProcessing: included
   events: included
   peerToPeer: none
 featureNotes:
-  emailMarketing: "LGL says to use Mailchimp for marketing email"
   donationForms: "no added cost, embeddable"
   paymentProcessing: "from 2.2% + $0.30 to the processor; no fee to LGL"
   events: "ticket sales and registrations via LGL forms"

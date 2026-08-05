@@ -25,13 +25,13 @@ affiliateSlug: 4agoodcause
 editorsChoice: true
 freeTier: false
 features:
-  emailMarketing: basic
+  emailMarketing: none
   donationForms: included
   paymentProcessing: included
   events: included
   peerToPeer: add-on
 featureNotes:
-  emailMarketing: "receipts only; no email marketing on the pricing matrix"
+  emailMarketing: "Integrations for Mailchimp and Constant Contact"
   donationForms: "all plans, no platform percentage"
   paymentProcessing: "bring Stripe/Authorize.net or use theirs; no added %"
   events: "registration and ticketing on all plans"

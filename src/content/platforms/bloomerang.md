@@ -30,7 +30,6 @@ features:
   events: included
   peerToPeer: add-on
 featureNotes:
-  emailMarketing: "send caps not published"
   donationForms: "in Fundraising, $40/mo, must be bundled with the $125/mo CRM"
   paymentProcessing: "Bloomerang Payments, built in"
   events: "in Fundraising, QR check-in, table seating"

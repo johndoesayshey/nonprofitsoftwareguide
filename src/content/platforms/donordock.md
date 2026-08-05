@@ -28,7 +28,6 @@ features:
   events: basic
   peerToPeer: none
 featureNotes:
-  emailMarketing: "10,000/mo; +10,000 for $45"
   donationForms: "embeddable in-page forms"
   paymentProcessing: "2% platform fee + Stripe/PayPal fees"
   events: "their own word is basic, ticket purchases, no event suite; they point to OneCause"
