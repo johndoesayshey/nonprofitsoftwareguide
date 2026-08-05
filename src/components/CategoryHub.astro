@@ -26,6 +26,11 @@ const inCategory = (await getCollection('platforms', ({ data }) => data.draft ==
 
 const platforms = byValue(inCategory, (p) => p.data.affiliateSlug);
 
+// The award column only exists when someone in this category holds the award.
+const isChoice = (p: (typeof platforms)[number]) =>
+  p.data.editorsChoice && p.data.category === category;
+const hasChoice = platforms.some(isChoice);
+
 // Head-to-heads for each product, attached to its own row rather than pooled.
 // Reads name-first for the row it sits under, even though the slug is
 // alphabetical, and orders by the other product's affiliate value.
@@ -55,10 +60,11 @@ const posts = (await getCollection('posts', ({ data }) => data.draft === false))
     <div class="cmp-scroll">
       <table class="cmp">
         <colgroup>
-          <col class="c-tool" /><col class="c-price" /><col class="c-best" /><col class="c-cta" />
+          {hasChoice && <col class="c-choice" />}<col class="c-tool" /><col class="c-price" /><col class="c-best" /><col class="c-cta" />
         </colgroup>
         <thead>
           <tr>
+            {hasChoice && <th scope="col" aria-label="Award"></th>}
             <th scope="col">Tool</th>
             <th scope="col">Pricing</th>
             <th scope="col">Best for</th>
@@ -72,10 +78,12 @@ const posts = (await getCollection('posts', ({ data }) => data.draft === false))
             return (
               <>
               <tr class="tool-row">
-                <th scope="row" class:list={{ 'has-ribbon': p.data.editorsChoice && p.data.category === category }}>
-                  {p.data.editorsChoice && p.data.category === category && (
-                    <span class="choice-ribbon" role="img" aria-label="Editor's choice" title="Editor's choice">★</span>
-                  )}
+                {hasChoice && (
+                  <td class="cell-choice">
+                    {isChoice(p) && <span class="choice-badge">★ Editor's choice</span>}
+                  </td>
+                )}
+                <th scope="row">
                   <a href={`/platforms/${p.data.slug}/`}>{p.data.name}</a>
                 </th>
                 <td class="price">
@@ -104,7 +112,7 @@ const posts = (await getCollection('posts', ({ data }) => data.draft === false))
               </tr>
               {versus.length > 0 && (
                 <tr class="versus-row">
-                  <td colspan="4">
+                  <td colspan={hasChoice ? 5 : 4}>
                     <div class="versus-inner">
                       <span class="versus-label">Compare {p.data.shortName ?? p.data.name}:</span>
                       {versus.map((v) => (
@@ -208,14 +216,13 @@ const posts = (await getCollection('posts', ({ data }) => data.draft === false))
     text-decoration: none; padding: .4rem .75rem; border-radius: 3px; font-size: .85rem; }
   .btn-visit:hover { background: var(--color-green); }
   .offer { margin: 0; font-size: .75rem; font-weight: 700; color: var(--color-green-deep); }
-  /* Editor's choice: a gold bookmark ribbon hung on the left edge of the row.
-     Positioned against the cell (not the scroll wrapper) so it can never
-     escape the overflow container or add a horizontal scrollbar. */
-  table.cmp th.has-ribbon { position: relative; padding-left: 1.95rem; }
-  .choice-ribbon { position: absolute; left: .42rem; top: 0; width: 1rem; height: 2.05rem;
-    background: linear-gradient(180deg, #d9b83c, #b8912a);
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 50% calc(100% - .42rem), 0 100%);
-    display: flex; justify-content: center; align-items: flex-start;
-    padding-top: .3rem; font-size: .6rem; color: #3a2d05; }
+  /* Editor's choice: its own leftmost column, shown only when the category has
+     one. The badge is a gold ribbon banner with a swallowtail right edge. */
+  table.cmp col.c-choice { width: 8.5rem; }
+  .choice-badge { display: inline-block; padding: .34rem .8rem .34rem .55rem;
+    background: linear-gradient(180deg, #d9b83c, #c19d2e); color: #2c2405;
+    clip-path: polygon(0 0, 100% 0, calc(100% - .45rem) 50%, 100% 100%, 0 100%);
+    font-family: var(--font-mono); font-size: .6rem; font-weight: 700;
+    letter-spacing: .08em; text-transform: uppercase; white-space: nowrap; }
   .empty { color: var(--color-muted); font-style: italic; }
 </style>

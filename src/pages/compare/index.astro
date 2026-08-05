@@ -57,7 +57,7 @@ const grouped = Object.values(CATEGORIES)
     }));
 
     const slugs = tools.map((t) => t.affiliateSlug).filter(Boolean) as string[];
-    return { cat, tools, rows, value: categoryValue(slugs) };
+    return { cat, tools, rows, value: categoryValue(slugs), hasChoice: tools.some((t) => t.editorsChoice) };
   })
   .filter((g) => g.tools.length > 0)
   .sort((a, b) => b.value - a.value);
@@ -125,10 +125,11 @@ const datasetLd = {
           <div class="table-scroll">
             <table class="cmp">
               <colgroup>
-                <col class="c-tool" /><col class="c-price" /><col class="c-best" /><col class="c-cta" />
+                {g.hasChoice && <col class="c-choice" />}<col class="c-tool" /><col class="c-price" /><col class="c-best" /><col class="c-cta" />
               </colgroup>
               <thead>
                 <tr>
+                  {g.hasChoice && <th scope="col" aria-label="Award"></th>}
                   <th scope="col">Tool</th>
                   <th scope="col">Pricing</th>
                   <th scope="col">Best for</th>
@@ -139,9 +140,12 @@ const datasetLd = {
                 {g.rows.map(({ tool: t, versus }) => (
                   <>
                   <tr class="tool-row">
-                    <th scope="row" class:list={{ 'has-ribbon': t.editorsChoice }}>{t.editorsChoice && (
-                      <span class="choice-ribbon" role="img" aria-label="Editor's choice" title="Editor's choice">★</span>
-                    )}<a href={`/platforms/${t.slug}/`}>{t.name}</a></th>
+                    {g.hasChoice && (
+                      <td class="cell-choice">
+                        {t.editorsChoice && <span class="choice-badge">★ Editor's choice</span>}
+                      </td>
+                    )}
+                    <th scope="row"><a href={`/platforms/${t.slug}/`}>{t.name}</a></th>
                     <td class="price">
                       {t.pricingTiers.length > 0 ? (
                         <>
@@ -168,7 +172,7 @@ const datasetLd = {
                   </tr>
                   {versus.length > 0 && (
                     <tr class="versus-row">
-                      <td colspan="4">
+                      <td colspan={g.hasChoice ? 5 : 4}>
                         <div class="versus-inner">
                           <span class="versus-label">Compare {t.shortName ?? t.name}:</span>
                           {versus.map((v) => (
@@ -271,15 +275,14 @@ const datasetLd = {
   table.cmp { min-width: 48rem; table-layout: fixed; }
   table.cmp col.c-tool { width: 14%; } table.cmp col.c-price { width: 26%; }
   table.cmp col.c-email { width: 12%; }
-  /* Editor's choice: a gold bookmark ribbon hung on the left edge of the row.
-     Positioned against the cell (not the scroll wrapper) so it can never
-     escape the overflow container or add a horizontal scrollbar. */
-  table.cmp th.has-ribbon { position: relative; padding-left: 1.95rem; }
-  .choice-ribbon { position: absolute; left: .42rem; top: 0; width: 1rem; height: 2.05rem;
-    background: linear-gradient(180deg, #d9b83c, #b8912a);
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 50% calc(100% - .42rem), 0 100%);
-    display: flex; justify-content: center; align-items: flex-start;
-    padding-top: .3rem; font-size: .6rem; color: #3a2d05; }
+  /* Editor's choice: its own leftmost column, shown only when the category has
+     one. The badge is a gold ribbon banner with a swallowtail right edge. */
+  table.cmp col.c-choice { width: 8.5rem; }
+  .choice-badge { display: inline-block; padding: .34rem .8rem .34rem .55rem;
+    background: linear-gradient(180deg, #d9b83c, #c19d2e); color: #2c2405;
+    clip-path: polygon(0 0, 100% 0, calc(100% - .45rem) 50%, 100% 100%, 0 100%);
+    font-family: var(--font-mono); font-size: .6rem; font-weight: 700;
+    letter-spacing: .08em; text-transform: uppercase; white-space: nowrap; }
   table.cmp col.c-best { width: 25%; } table.cmp col.c-cta { width: 20%; }
 
   /* Only "included" answers the question a buyer is actually asking — can I
