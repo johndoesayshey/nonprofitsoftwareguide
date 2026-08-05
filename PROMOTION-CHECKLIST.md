@@ -99,13 +99,18 @@ the entire wire.
 **Use the verified Tier 1 from `OUTREACH-SHORTLIST.md`, not a generic press
 list** — Nonprofit Quarterly and Blue Avocado were both checked and ruled out
 (bylined-essay and first-person requirements, incompatible with staying
-anonymous). Personalized, ready-to-send drafts for the first four are in
-`OUTREACH-DRAFTS.md`.
+anonymous).
 
-- [ ] **GivingTuesday Data Commons** — send first, zero conflict, good dry run
-- [ ] **Nonprofit Tech for Good** — heather@nptechforgood.com
-- [ ] **NonProfit PRO** — acole@columbiabooks.com (Amanda Cole)
-- [ ] **National Council of Nonprofits** — via site contact form (browser only)
+**Three are done and sitting in Gmail Drafts** (nonprofitsoftwareguide@gmail.com),
+written, filled and verified 2026-08-05 — nothing sent, just open Drafts,
+attach the PDF, proofread, and hit send:
+
+- [ ] **Nonprofit Tech for Good** — heather@nptechforgood.com — draft ready
+- [ ] **NonProfit PRO** — acole@columbiabooks.com (Amanda Cole) — draft ready
+- [ ] **Whole Whale / Nonprofit News Feed** — NPNewsFeed@wholewhale.com — draft ready
+- [ ] **National Council of Nonprofits** — via site contact form, not email;
+      text is in `OUTREACH-DRAFTS.md` ready to paste, has to be submitted
+      by hand since their site blocks automated form submission
 - [ ] **DH Leonard** — Megan@dhleonardconsulting.com
 - [ ] **RKD Group / Rossi's Roundup** — connect@rkdgroup.com
 - [ ] **Missions to Movements** — kat@positiveequation.com
