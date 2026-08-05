@@ -28,10 +28,10 @@ features:
   donationForms: included
   paymentProcessing: included
   events: included
-  peerToPeer: included
+  peerToPeer: none
 featureNotes:
   donationForms: "in Fundraising, $40/mo, must be bundled with the $125/mo CRM"
-  peerToPeer: "separate cost"
+  peerToPeer: "event page forms as an option"
 draft: false
 strengths:
   - "Retention dashboards show who is lapsing before they're gone"
