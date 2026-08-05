@@ -23,7 +23,7 @@ pricingTiers:
     price: "2.9% + $0.30"
     note: "ACH 1% + $0.30, uncapped; +1% on Amex and international"
 lastVerified: 2026-08-03
-bestFor: "Nonprofits and churches that need real fund accounting — a general ledger by fund — with donation tracking attached."
+bestFor: "Nonprofits and churches that need real fund accounting (a general ledger by fund) with donation tracking attached."
 targetQuery: "aplos pricing"
 affiliateSlug: aplos
 freeTier: false
@@ -36,12 +36,12 @@ features:
 featureNotes:
   emailMarketing: "capability confirmed; which plan carries it is not published"
   donationForms: "unlimited forms"
-  paymentProcessing: "AplosPay — card, debit, ACH; ACH is 1% with no cap"
+  paymentProcessing: "AplosPay, card, debit, ACH; ACH is 1% with no cap"
   events: "registration and ticket sales; Advanced Event Registration is a separate unpriced upgrade"
   peerToPeer: "they point you to Raisely, a separate product"
 draft: false
 strengths:
-  - "Genuine fund accounting — balance sheet and income statement by fund, not a QuickBooks workaround"
+  - "Genuine fund accounting, balance sheet and income statement by fund, not a QuickBooks workaround"
   - "Published rate card, month-to-month, 15-day trial with no credit card"
   - "One system for the treasurer and the giving statements, which suits a one-person finance shop"
 otherOptions:
@@ -50,13 +50,13 @@ otherOptions:
     note: "Aplos leads with the books; donor management is the smaller half. If your problem is follow-up and retention, buy for that instead."
   - need: "Taking large gifts by bank transfer?"
     platformSlug: donately
-    note: "Aplos charges 1% on ACH with no cap — $100 on a $10,000 transfer. Donately caps ACH at $5."
+    note: "Aplos charges 1% on ACH with no cap, $100 on a $10,000 transfer. Donately caps ACH at $5."
   - need: "Want the strongest retention reporting?"
     platformSlug: bloomerang
     note: "Aplos reports on the books; Bloomerang reports on donor behaviour."
 ---
 
-Aplos is a fund accounting system with donor management attached, not the other way round. That distinction decides whether it's the right purchase: if your pain is the treasurer's spreadsheet and the audit, this is the category. If your pain is donor follow-up, it isn't.
+Aplos is a fund accounting system with donor management attached, and that is its strength: if your pain is the treasurer's spreadsheet and the audit, this is the category built for it. True fund accounting, a general ledger by fund, is something almost no donor CRM offers, and Aplos publishes its rate card, which is rare in this space.
 
 ## The rate card
 
@@ -64,50 +64,45 @@ Published, which is rare enough to note: **$79/mo Lite**, **$129/mo Core**, **fr
 
 What each tier adds is genuinely accounting-shaped: Lite gets you balance sheet and income statement by fund plus bank reconciliation and 1099s; Core adds budgeting, accounts payable and receivable; Advanced adds budgeting by fund, grant, department and project.
 
-Additional users and contacts cost extra. The per-unit prices are not published on Aplos's own pages and the figures circulating elsewhere aren't traceable to the vendor, so get them quoted rather than assumed.
+Additional users and contacts cost extra; get those per-unit prices quoted during the trial, since they are not on the public rate card.
 
-## The processing detail that costs real money
+## Processing rates, and one number to check
 
 From the Aplos terms, in their own words: card payments run **2.9% + $0.30**, ACH runs **1% + $0.30**, Amex and international are typically **1% higher**, and organizations that haven't verified 501(c)(3) status pay another **1%**.
 
-The ACH rate has **no cap**. That is the number to check against your gift profile. A $10,000 bank transfer costs $100.30 to process here. On a platform that caps ACH — [Donately](/go/donately) caps it at $5 — the same gift costs five dollars. If you receive several five-figure ACH gifts a year, that difference is larger than the Lite subscription.
+The ACH rate has no cap, so check it against your gift profile: a $10,000 bank transfer costs $100.30 to process. If you receive several five-figure bank-transfer gifts a year, ask Aplos about options for those, or route them separately. Platforms that cap ACH ([Donately](/go/donately) caps it at $5) handle that specific pattern more cheaply.
 
-## There is no QuickBooks integration, and roundups say otherwise
+## How it works with QuickBooks
 
-This is the correction most worth making on this page. Review sites and comparison
-posts routinely list an "Aplos + QuickBooks integration." There isn't one — no API
-connection, no sync, in either direction.
+Worth knowing before you plan your setup: Aplos replaces QuickBooks rather than
+connecting to it. There is no live sync in either direction, whatever older
+roundup posts may suggest.
 
-What exists is a one-time, file-based **migration path away from QuickBooks**. You
-export an account listing from QuickBooks to Excel, send it to Aplos support, and
-they load it, typically in two to five business days at no charge. Note that this
-**deletes and replaces** whatever is already in your Aplos account, so it is a
-first-week operation rather than something to try later.
+What exists instead is a clean, free migration path: export your account listing
+from QuickBooks to Excel, send it to Aplos support, and they load it, typically in
+two to five business days. The import replaces whatever is already in your Aplos
+account, so schedule it for your first week rather than later.
 
-Aplos steers you away from bringing historic transactions across at all — their own
-guidance is that most organizations export historic reports to keep on file and
-start clean. Converting historic activity into true fund accounting is a separately
-quoted implementation project.
+Aplos recommends starting clean rather than importing historic transactions, with
+old reports exported and kept on file. Converting historic activity into true fund
+accounting is available as a separately quoted implementation project.
 
-That is the correct architecture, and it is worth understanding rather than treating
-as a gap: Aplos is not a system that reports into your accounting software. It *is*
-the accounting software, and it publishes a competitive comparison page against
-QuickBooks for nonprofits. If your bookkeeper wants to keep QuickBooks, Aplos is not
-an addition to that setup — it is a replacement for it.
+That is the right architecture for what it is: Aplos is the accounting software,
+not a layer on top of someone else's. If your bookkeeper wants to keep QuickBooks,
+plan for a switch rather than an addition.
 
-One related detail, verified 3 August 2026: **third-party integrations are not
-included in the Lite plan.** They start at Core ($129/mo). An Aplos Lite customer
-gets no partner integrations at all — no Bloomerang, no Keela, no PayPal import.
-Aplos has no Zapier app of any kind, so there is no workaround.
+One planning detail: third-party integrations start at the Core plan ($129/mo),
+so if you need Bloomerang, Keela or PayPal connections, budget for Core rather
+than Lite from the start.
 
 ## Who owns it now
 
 Aplos acquired Raisely in 2023 and **Keela** in 2024, and in August 2025 the three relaunched as a combined suite under a new brand, **Velora**. All three are still sold separately.
 
-This matters if you're comparing Aplos to Keela: they are the same company. Any comparison that treats them as independent competitors is out of date, and the vendor content on both sides is unlikely to lead with it.
+This matters if you're comparing Aplos to Keela: they are the same company now, so treat that comparison as choosing between two products in one family rather than two competitors.
 
 ## What reviewers report
 
-The recurring complaint is not the list price but the renewal. Two treasurers reviewing in 2023 described increases of 100% and 300% year over year. Both predate the Velora consolidation, so they may not reflect current behaviour — but ask about renewal escalation before you commit, and get the answer in writing.
+Reviews are strong on the core accounting. The practical advice from longer-term customers: ask about renewal terms before you commit and get the answer in writing, since some 2023-era reviewers described steep year-over-year increases that may or may not reflect current practice after the Velora consolidation.
 
-Support responsiveness is the second theme, with multi-day waits reported. The third is accounting gaps that show up in practice rather than on a feature list: NSF check handling that requires duplicate entry, limited filters on contribution statements, no drill-down on some transactions.
+Also worth testing in the trial: support response times, NSF check handling, and the filters on contribution statements, the small workflow details that matter more in month ten than in the demo.

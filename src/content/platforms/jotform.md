@@ -8,7 +8,7 @@ pricingBasis: "by forms and submissions; 50% nonprofit discount applied"
 pricingTiers:
   - tier: "Starter (free)"
     price: "$0"
-    note: "5 forms, 100 submissions/mo — but only 10 payment submissions/mo"
+    note: "5 forms, 100 submissions/mo, but only 10 payment submissions/mo"
   - tier: "Bronze"
     price: "$34/mo billed annually"
     note: "$39 month-to-month; 25 forms, 1,000 submissions, 100 payment submissions"
@@ -24,7 +24,7 @@ pricingTiers:
 lastVerified: 2026-08-03
 bestFor: "Program applications, volunteer intake, and every form that outgrows email"
 bestForByCategory:
-  donor-crm: "Not a CRM — a form-first way to collect donor, volunteer and gift data cleanly before you buy a real database. The tidy version of the spreadsheet stage."
+  donor-crm: "Not a CRM, a form-first way to collect donor, volunteer and gift data cleanly before you buy a real database. The tidy version of the spreadsheet stage."
 targetQuery: "jotform for nonprofits"
 alsoIn: [donor-crm]
 affiliateSlug: jotform
@@ -37,9 +37,9 @@ features:
   peerToPeer: none
 featureNotes:
   emailMarketing: "form emails and autoresponders, not campaigns"
-  donationForms: "free plan caps payment submissions at 10/mo — separate from the regular cap"
+  donationForms: "free plan caps payment submissions at 10/mo, separate from the regular cap"
   paymentProcessing: "passthrough to your own Stripe/PayPal; Jotform never holds the money"
-  events: "registration forms only — no check-in or ticket scanning"
+  events: "registration forms only, no check-in or ticket scanning"
   peerToPeer: "their own content points to third-party platforms"
 draft: false
 strengths:
@@ -75,7 +75,7 @@ Any shop the day a program application outgrows an email thread. The features th
 
 The discount is permanent, not a first-year teaser, and the application is quick. [Apply for it at signup](/go/jotform) before paying list price.
 
-Watch the last column. Jotform caps *payment* submissions separately from regular submissions, and the marketing — free forms, 30+ gateways, no added transaction fees — does not mention it. On the free plan a nonprofit can accept ten gifts a month. If a form takes money, that cap is the number that decides your tier, not the form count.
+Watch the last column. Jotform caps *payment* submissions separately from regular submissions, and the marketing (free forms, 30+ gateways, no added transaction fees) does not mention it. On the free plan a nonprofit can accept ten gifts a month. If a form takes money, that cap is the number that decides your tier, not the form count.
 
 ## How it compares
 

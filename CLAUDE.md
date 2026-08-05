@@ -240,6 +240,18 @@ field. Sweep the entire site's content — guide pick notes, alternatives picks,
 stack rationales, posts, answer lines, hub prose — for wording that echoes the
 old positioning, and align it. The operator means the full site, every time.
 
+**Write for the reader, never at the operator** *(operator rule, 2026-08-04)*: platform
+pages are customer-facing sales-aware copy. No change-narratives ("pricing changed,"
+"we have repositioned," "until today"), no editorial process notes, no talking to the
+site itself. When a fact changes, rewrite the page as if the current fact were always
+true; the lastVerified date carries freshness. Lead with what the product does well.
+Honest tradeoffs stay, but framed constructively, and go easier on partners: a product
+with an affiliate relationship gets its strengths up front and its caveats stated as
+buying advice, not as verdicts.
+
+**No em dashes** *(operator rule, 2026-08-04)*: do not use em dashes in any content
+written for the site. Use commas, periods, colons, or parentheses instead.
+
 **Voice:** practitioner to practitioner. The reader is a development director with a board
 meeting Thursday. Short sentences. Name the tradeoff. Never "game-changing," "robust," or
 "seamless."

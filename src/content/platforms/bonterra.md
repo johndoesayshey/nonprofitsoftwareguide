@@ -30,9 +30,9 @@ features:
 featureNotes:
   emailMarketing: "unlimited; AI authoring costs extra"
   donationForms: "included for EveryAction; costs extra on Bonterra Que"
-  paymentProcessing: "2.9% + $0.30 — but 5.9% + $0.30 on auctions"
+  paymentProcessing: "2.9% + $0.30, but 5.9% + $0.30 on auctions"
   events: "ticketed events included"
-  peerToPeer: "no P2P in EveryAction — it lives in DonorDrive, sold separately"
+  peerToPeer: "no P2P in EveryAction, it lives in DonorDrive, sold separately"
 featured: false
 draft: false
 strengths:
@@ -59,27 +59,27 @@ Bonterra is a holding brand, not a product, and the single most useful thing thi
 |---|---|---|
 | EveryAction | **Bonterra Fundraising and Engagement** | Active, renamed |
 | Network for Good | **Bonterra Guided Fundraising** | Active, renamed |
-| Salsa CRM / Salsa Engage | — | **Sunset.** Migration deadline was 31 Dec 2024 |
+| Salsa CRM / Salsa Engage | n/a | **Sunset.** Migration deadline was 31 Dec 2024 |
 | CyberGrants | Bonterra corporate social responsibility | Active |
-| Network for Good (the donor-advised fund) | **For Good** | **Not acquired** — renamed May 2025, separate company |
+| Network for Good (the donor-advised fund) | **For Good** | **Not acquired**, renamed May 2025, separate company |
 
-Two corrections worth having, because both are widely repeated wrongly. The **donor-advised fund** called Network for Good was excluded from the acquisition and is now a separate organization called For Good — it is not part of Bonterra. And Charity Navigator's **Giving Basket** is powered by Give Lively, not by Bonterra, despite frequently being listed as theirs.
+Two details worth having straight, because both are widely repeated wrongly. The **donor-advised fund** called Network for Good was excluded from the acquisition and is now a separate organization called For Good; it is not part of Bonterra. And Charity Navigator's **Giving Basket** is powered by Give Lively, not by Bonterra, despite frequently being listed as theirs.
 
 ## The pricing, such as it is
 
-Three tiers — Essentials, Pro, Enterprise — with no figures published anywhere by the vendor or the directories. Two mechanics are documented and worth knowing before you negotiate:
+Three tiers (Essentials, Pro, Enterprise) with no figures published anywhere by the vendor or the directories. Two mechanics are documented and worth knowing before you negotiate:
 
 **Pricing improves with renewal length.** Longer commitment, better rate. That's a vendor-stated lever, which means a one-year term is priced as a penalty.
 
 **Guided Fundraising prices on contact count, and the first break comes early.** A reviewer in December 2025: *"Contact levels dictating the price levels for my foundation. I feel that increasing the yearly membership at 501 contacts is too low."* Five hundred and one contacts is a very small file to hit a tier break at, and it's the detail to price against your own list before you talk to sales.
 
-Figures circulating elsewhere — "$109 per feature monthly," "$3,588/year over a 15-month contract" — trace to no primary source. We're not publishing them.
+Figures circulating elsewhere ("$109 per feature monthly," "$3,588/year over a 15-month contract") trace to no primary source. We're not publishing them.
 
 ## The durability question
 
 Salsa customers were acquired and then force-migrated to a different product within about three years. That is the honest risk to weigh: Bonterra's strategy is consolidation, and consolidation means some products get retired.
 
-It is not a reason to rule them out — Fundraising and Engagement is a genuinely strong system for advocacy-heavy organizations, and Guided Fundraising's bundled coaching is something no competitor offers. It is a reason to ask, in writing, what the product roadmap is for the specific thing you're buying, and to know how you'd get your data out.
+It is not a reason to rule them out, Fundraising and Engagement is a genuinely strong system for advocacy-heavy organizations, and Guided Fundraising's bundled coaching is something no competitor offers. It is a reason to ask, in writing, what the product roadmap is for the specific thing you're buying, and to know how you'd get your data out.
 
 ## What reviewers say about cost
 

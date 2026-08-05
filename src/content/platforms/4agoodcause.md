@@ -18,7 +18,7 @@ pricingTiers:
 lastVerified: 2026-08-04
 bestFor: "Shops that want a payment processor that does not charge per transaction, potentially saving thousands each year. Lighter CRM integration, but great for small shops just taking the next step and looking to cap costs on fees. Plentiful integrations (like Mailchimp and Quickbooks) to make up for fewer built-ins on the CRM. However, the price point justifies this and makes it our top pick for a donor processor."
 bestForByCategory:
-  donor-crm: "A simpler CRM bundled with the giving platform: donor profiles, giving history, notes, tagging, custom fields and acknowledgement letters, verified on their own feature page. No built-in email marketing — it leans on the Mailchimp integration — so it fits shops that want records and fundraising on one bill rather than a deep standalone database."
+  donor-crm: "A simpler CRM bundled with the giving platform: donor profiles, giving history, notes, tagging, custom fields and acknowledgement letters, verified on their own feature page. No built-in email marketing (it leans on the Mailchimp integration) so it fits shops that want records and fundraising on one bill rather than a deep standalone database."
 alsoIn: [donor-crm]
 targetQuery: "4agoodcause review pricing"
 affiliateSlug: 4agoodcause
@@ -35,7 +35,7 @@ featureNotes:
   donationForms: "all plans, no platform percentage"
   paymentProcessing: "bring Stripe/Authorize.net or use theirs; no added %"
   events: "registration and ticketing on all plans"
-  peerToPeer: "Growing plan and up — $249/mo billed annually"
+  peerToPeer: "Growing plan and up, $249/mo billed annually"
 draft: false
 strengths:
   - "Flat subscription with no platform percentage, so the fee stops scaling with your success"
@@ -53,7 +53,7 @@ otherOptions:
     note: "Giving platforms hold donors and gifts; a donor CRM holds the relationship history a major-gift program runs on."
 ---
 
-[4aGoodCause](/go/4agoodcause) is donation and event software built around monthly giving: donation pages, event registration, peer-to-peer, and a built-in donor CRM, sold as a flat subscription from $99 a month billed annually. The CRM is simpler than a standalone database but it is real — donor profiles, giving history, notes, tagging, custom fields and acknowledgement letters, per their own feature page — and there is no built-in email marketing, which is what the Mailchimp integration is for. It takes no percentage of your donations, which is the whole argument for it. Past roughly $40,000 of online giving a year, that flat fee costs less than a percentage platform.
+[4aGoodCause](/go/4agoodcause) is donation and event software built around monthly giving: donation pages, event registration, peer-to-peer, and a built-in donor CRM, sold as a flat subscription from $99 a month billed annually. The CRM is simpler than a standalone database but it is real: donor profiles, giving history, notes, tagging, custom fields and acknowledgement letters. Email marketing runs through the Mailchimp integration rather than being built in. It takes no percentage of your donations, which is the whole argument for it. Past roughly $40,000 of online giving a year, that flat fee costs less than a percentage platform.
 
 ## Who it fits
 
@@ -61,13 +61,13 @@ Shops raising somewhere between $100k and a few million where online giving is g
 
 ## What it costs
 
-| Plan | Annual billing | Monthly billing |
-|---|---|---|
-| Grassroots | $99/mo ($1,188/yr) | $129/mo |
-| Growth | $249/mo ($2,988/yr) | $289/mo |
-| Scale | $429/mo ($5,148/yr) | $499/mo |
+| Plan | Annual billing | Monthly billing | Online revenue |
+|---|---|---|---|
+| Grassroots | $99/mo ($1,188/yr) | $129/mo | Up to $50K/yr |
+| Growing | $249/mo ($2,988/yr) | $289/mo | Up to $250K/yr |
+| Scale | $429/mo ($5,148/yr) | $499/mo | Unlimited |
 
-First month free on every plan. Your payment processor still charges its own transaction fees, typically 2.2-2.9% plus a per-gift amount, exactly as it would on any other platform. Donors can optionally tip to cover those, and that tip goes to you rather than to 4aGoodCause. Ask which plan covers your expected processing volume before you sign, since the higher tiers are where unlimited volume sits.
+First month free on every plan. The revenue caps work in your favor: going over one simply triggers an upgrade at renewal, and donations never stop. Your payment processor still charges its own transaction fees, typically 2.2-2.9% plus a per-gift amount, exactly as it would on any other platform. Donors can optionally tip to cover those, and that tip goes to you rather than to 4aGoodCause.
 
 ## The break-even, in dollars
 
@@ -85,7 +85,7 @@ The crossover is about **$40,270**. Under it, pay the percentage. Over it, every
 
 ## How it compares
 
-[Donorbox](/go/donorbox) has deeper recurring-gift tooling and costs nothing to start, which makes it the better first move for a small shop. Its Pro plan drops the platform fee to roughly 1.75% for about $150 a month, which changes the crossover, so run both. [Zeffy](/go/zeffy) charges nothing at any volume and is the honest answer when the fee is the only thing you care about. None of the three is a donor CRM; that line stays separate.
+[Donorbox](/go/donorbox) has deeper recurring-gift tooling and costs nothing to start, which makes it the better first move for a small shop. Its Pro plan drops the platform fee to roughly 1.75% for about $150 a month, which changes the crossover, so run both. [Zeffy](/go/zeffy) charges nothing at any volume and is the honest answer when the fee is the only thing you care about. Of the three, only 4aGoodCause brings a built-in donor CRM along with the giving pages, which is worth real money if it saves you a separate database subscription.
 
 ## Bottom line
 

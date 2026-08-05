@@ -26,7 +26,7 @@ freeTier: true
 featured: false
 draft: false
 strengths:
-  - "ACH at 0.8% capped at $5 — a $10,000 bank transfer costs five dollars to process"
+  - "ACH at 0.8% capped at $5, a $10,000 bank transfer costs five dollars to process"
   - "A published rate card with three clear structures and no quote required"
   - "Developer-friendly embeddable forms that live on your own site, not a hosted page"
 otherOptions:
@@ -38,7 +38,7 @@ otherOptions:
     note: "A flat subscription with no percentage stops the fee scaling with your success entirely."
   - need: "Need a donor database?"
     platformSlug: donordock
-    note: "This is a donation layer, not a CRM — no soft credits, no household records, no retention reporting."
+    note: "This is a donation layer, not a CRM, no soft credits, no household records, no retention reporting."
 ---
 
 Donately publishes a complete rate card, which by itself puts it ahead of most of this category. Three structures: $0 with a 4% platform fee, $99/month with 2%, or $5,000 prepaid for 0% up to $1M raised. Payment processing is separate at 2.2–2.9% + $0.30 on cards.
@@ -55,7 +55,7 @@ That cap is the most valuable thing on this page and almost nobody talks about i
 | Aplos (1% ACH, uncapped) | $100.30 |
 | A typical 2.9% card rate | $290.30 |
 
-If you receive major gifts by bank transfer — and most shops receiving five-figure gifts do — that single line can be worth more than the entire subscription. Two $10,000 ACH gifts a year on Donately cost $10 to process. The same gifts through an uncapped 1% ACH rate cost $200.
+If you receive major gifts by bank transfer (and most shops receiving five-figure gifts do), that single line can be worth more than the entire subscription. Two $10,000 ACH gifts a year on Donately cost $10 to process. The same gifts through an uncapped 1% ACH rate cost $200.
 
 ## Where the crossovers fall
 
@@ -70,7 +70,7 @@ There are no long-term contracts and Growth cancels anytime, so you can start on
 
 ## The risk worth naming
 
-Donately is a small company — company data listed roughly three employees as of the end of 2024. It is genuinely active: the blog is current, the review corpus runs through 2026, and shops were still switching *to* it in January 2026.
+Donately is a small company, company data listed roughly three employees as of the end of 2024. It is genuinely active: the blog is current, the review corpus runs through 2026, and shops were still switching *to* it in January 2026.
 
 But you are choosing donation infrastructure for a three-to-five-year horizon, and a three-person vendor holding your payment rails is a real consideration. It doesn't disqualify them. It does mean you should know how to export your donor and recurring-gift data, and check that you do before you migrate anything important.
 

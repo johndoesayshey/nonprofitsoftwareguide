@@ -9,7 +9,7 @@ pricingBasis: "quoted; no published rate card"
 pricingTiers:
   - tier: "Median Blackbaud contract"
     price: "~$20,417/yr"
-    note: "Vendr dataset, updated Feb 2026 — all Blackbaud products, not RE NXT alone"
+    note: "Vendr dataset, updated Feb 2026, all Blackbaud products, not RE NXT alone"
   - tier: "Reported spread"
     price: "~$16,117-$33,623/yr"
     note: "same dataset"
@@ -17,7 +17,7 @@ pricingTiers:
     price: "+30-50%"
     note: "Vendr: first-year costs typically run above the ongoing annual"
 lastVerified: 2026-08-03
-bestFor: "Large shops with a dedicated database administrator and genuinely complex gift structures — higher ed, hospitals, major arts institutions."
+bestFor: "Large shops with a dedicated database administrator and genuinely complex gift structures, higher ed, hospitals, major arts institutions."
 targetQuery: "raiser's edge nxt pricing"
 affiliateSlug: blackbaud
 freeTier: false
@@ -29,7 +29,7 @@ features:
   peerToPeer: none
 featureNotes:
   emailMarketing: "native; Blackbaud Marketing sold on top"
-  donationForms: "no extra cost per a 2024 release — US organizations only"
+  donationForms: "no extra cost per a 2024 release, US organizations only"
   paymentProcessing: "Blackbaud Merchant Services"
   events: "registration with paid fees in RE NXT"
   peerToPeer: "JustGiving is a separate Blackbaud product"
@@ -48,7 +48,7 @@ otherOptions:
     note: "Rate card published, unlimited users, and the retention reporting most shops actually open."
   - need: "Facing the 2027 migration and reconsidering?"
     platformSlug: null
-    note: "See our Raiser's Edge alternatives guide — the forced move to the unified web view is the natural moment to price the market."
+    note: "See our Raiser's Edge alternatives guide, the forced move to the unified web view is the natural moment to price the market."
 ---
 
 Blackbaud publishes no pricing. The product page carries an "Ask About Pricing" button and nothing else, which is why every figure circulating online is either a guess or a recycled guess.
@@ -59,7 +59,7 @@ Vendr, which aggregates real contract data from its buyers, puts the **median Bl
 
 Read that carefully: it covers all Blackbaud products, not Raiser's Edge NXT alone. It is still the only figure in this category traceable to actual contracts rather than to a roundup. Vendr also notes first-year costs typically run 30–50% above the ongoing annual, which is where implementation lands.
 
-Everything else you'll find disagrees violently — $4,000, $10,000–$15,000, $5,000–$50,000 — and none of those sources cite anything. That disagreement is the honest answer: nobody outside a negotiation knows, because Blackbaud doesn't publish.
+Everything else you'll find disagrees violently ($4,000, $10,000–$15,000, $5,000–$50,000) and none of those sources cite anything. That disagreement is the honest answer: nobody outside a negotiation knows, because Blackbaud doesn't publish.
 
 ## The thing to know before you sign in 2026
 
@@ -75,6 +75,6 @@ Diarize the 45-day window the day you sign. Reviewers describe missing it and be
 
 ## What reviewers consistently say
 
-Cost is the first complaint and the most common reason for leaving at renewal. The second is fit — one development coordinator's summary is representative: expensive and "probably overly detailed and complicated for many small organizations." Support responsiveness is the third, across multiple review platforms.
+Cost is the first complaint and the most common reason for leaving at renewal. The second is fit, one development coordinator's summary is representative: expensive and "probably overly detailed and complicated for many small organizations." Support responsiveness is the third, across multiple review platforms.
 
 None of that means it's a bad system. It means it's an enterprise system, and most of the shops running it aren't enterprises.

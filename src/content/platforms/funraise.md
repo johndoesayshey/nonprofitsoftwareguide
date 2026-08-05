@@ -26,7 +26,7 @@ freeTier: true
 featured: false
 draft: false
 strengths:
-  - "The donor-facing experience is among the best in the category — branded, modern, and it converts"
+  - "The donor-facing experience is among the best in the category, branded, modern, and it converts"
   - "Peer-to-peer, auctions and text-to-give included at Premium rather than bought separately"
   - "A genuinely usable free tier with no subscription and no commitment"
 otherOptions:
@@ -47,15 +47,15 @@ One practical note before anything else: the live domain is **funraise.org**. fu
 
 ## Read the free tier carefully
 
-Five percent is a high platform fee — higher than Donorbox's ~2.95%, higher than Givebutter's 3% with tips off. Free here means "no subscription," not "no cost."
+Five percent is a high platform fee, higher than Donorbox's ~2.95%, higher than Givebutter's 3% with tips off. Free here means "no subscription," not "no cost."
 
-Stack the processing on top and Essentials costs you roughly 7.9% + 60¢ per gift. On $50,000 of online giving that's about $3,950 plus per-transaction fees. Premium at $1,188/year plus a lower platform percentage overtakes it quickly — which is presumably the design.
+Stack the processing on top and Essentials costs you roughly 7.9% + 60¢ per gift. On $50,000 of online giving that's about $3,950 plus per-transaction fees. Premium at $1,188/year plus a lower platform percentage overtakes it quickly, which is presumably the design.
 
 Funraise's own blended estimates assume roughly 90% of donors opt to cover fees, which produces effective rates of 2.5% on Essentials and 0.8% on Premium. Those are real if your donors behave that way and optimistic if they don't. Check your actual fee-cover rate before believing any blended number, yours or theirs.
 
 ## Where the sources disagree
 
-Third-party roundups describe a completely different structure — a "Spark" plan at $300/month with 3% fees and a "Movement" plan at $550/month with 2%. Those plan names appear nowhere on Funraise's current pricing page and look like a superseded rate card.
+Third-party roundups describe a completely different structure, a "Spark" plan at $300/month with 3% fees and a "Movement" plan at $550/month with 2%. Those plan names appear nowhere on Funraise's current pricing page and look like a superseded rate card.
 
 Others quote "starts at $100/month" and estimate $500/month for ten users, but label those as estimates rather than reported prices. We're showing the conflict rather than picking a side. The vendor's current page is the only thing here we'd budget against.
 
@@ -63,7 +63,7 @@ No reviewer states a dollar figure they actually pay.
 
 ## What costs extra
 
-This is the recurring complaint, and it's specific. **Email is a paid add-on**, and reviewers rate the editor poorly — one May 2026 review calls it "awful, very little ability." **Custom domains are charged per site.** SMS is a Premium feature.
+This is the recurring complaint, and it's specific. **Email is a paid add-on**, and reviewers rate the editor poorly, one May 2026 review calls it "awful, very little ability." **Custom domains are charged per site.** SMS is a Premium feature.
 
 An April 2026 reviewer's summary is the fairest: "Pricing transparency is another area that needs work. The fee structure can feel misleading." Ask for a written all-in quote listing every add-on you saw in the demo.
 

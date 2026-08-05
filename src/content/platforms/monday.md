@@ -27,7 +27,7 @@ features:
 featureNotes:
   emailMarketing: "a work platform, not a sending tool"
   donationForms: "WorkForms collects submissions; no payment capability mentioned"
-  paymentProcessing: "their Stripe integration only pulls charge records into a board — it does not take payments"
+  paymentProcessing: "their Stripe integration only pulls charge records into a board, it does not take payments"
   events: "no vendor mention found"
   peerToPeer: "no vendor mention found"
 draft: false

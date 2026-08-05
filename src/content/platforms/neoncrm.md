@@ -34,7 +34,7 @@ featureNotes:
   emailMarketing: "in the base $99/mo plan"
   donationForms: "unlimited, every plan"
   paymentProcessing: "Neon Pay, built in"
-  events: "+20% of CRM fee — check-in, ticketing, seating charts"
+  events: "+20% of CRM fee, check-in, ticketing, seating charts"
   peerToPeer: "in the base $99/mo plan"
 draft: false
 strengths:

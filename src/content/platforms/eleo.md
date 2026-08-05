@@ -34,7 +34,7 @@ featureNotes:
   donationForms: "unlimited forms, every plan"
   paymentProcessing: "EleoPay, powered by Stripe"
   events: "registration forms confirmed; paid-ticket collection via EleoPay"
-  peerToPeer: "their FAQ says so plainly — the only vendor that does"
+  peerToPeer: "their FAQ says so plainly, the only vendor that does"
 draft: false
 strengths:
   - "Among the cheapest real donor CRMs, and the full price ladder is published"
@@ -46,7 +46,7 @@ otherOptions:
     note: "DonorDock's ActionBoard turns the database into a task list, and it carries a 90-day money-back guarantee."
   - need: "List growing fast?"
     platformSlug: donordock
-    note: "Record-count pricing re-prices your contract as you succeed; DonorDock's single plan includes unlimited contacts — at $500/mo, so it is a consolidation decision rather than a cheaper one."
+    note: "Record-count pricing re-prices your contract as you succeed; DonorDock's single plan includes unlimited contacts, at $500/mo, so it is a consolidation decision rather than a cheaper one."
   - need: "Need deeper retention analytics?"
     platformSlug: bloomerang
     note: "Bloomerang's reporting is built around who is about to lapse."
