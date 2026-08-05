@@ -266,7 +266,9 @@
       "url": "https://market.partnerstack.com/",
       "checked": "2026-08-03",
       "quote": "Zeffy — Earn 30% of all tips for the first 12 months - average of $500 per signup"
-    }
+    },
+    "priority": -61,
+    "priorityNote": "Operator note n44 (2026-08-04): place Zeffy below Donorbox everywhere. -61 drops its high(100) score to 39, one point under Donorbox's medium(40), while staying above unknown/low programs. Delete to fall back to payout order."
   },
   "givebutter": {
     "name": "Givebutter",

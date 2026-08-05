@@ -11,10 +11,6 @@ picks:
     award: "Best overall"
     forWhom: "A volunteer-run rescue tracking donors and volunteers together"
     note: "$39/mo up to 2,500 donor records, published all the way up to 20,000. Volunteers and events are included rather than sold as modules, which matters when your foster network, your transport drivers and your donors overlap heavily — often they're the same people. For a rescue whose whole software budget is under $1,000, this is the realistic database."
-  - platformSlug: zeffy
-    award: "Best free option"
-    forWhom: "A rescue where every dollar is vet bills"
-    note: "Free at any volume with no platform fee and no processing fee — a $50 donation deposits $50. Covers donations, ticketing, raffles and memberships, which happens to cover most of what a rescue runs. Funded by an optional tip donors are asked for at checkout. The trade-off is that your net per gift depends on donor behaviour rather than a fixed rate, and it isn't a donor database — it holds transactions, not relationship history."
   - platformSlug: donordock
     award: "Best for consolidating your stack"
     forWhom: "A rescue with a large list already paying for a CRM, email and giving pages separately"
@@ -23,6 +19,10 @@ picks:
     award: "Best for monthly giving"
     forWhom: "A rescue building a sponsor-a-pet recurring program"
     note: "Free to start at roughly 2.95%, no subscription; Pro at about $150/mo drops the rate to roughly 1.75% past around $150k. The recurring-gift tooling is the reason to consider it \u2014 donor portals, failed-card recovery, upgrade prompts. Sponsorship programs live or die on card failures nobody chases, and that's exactly what this handles."
+  - platformSlug: zeffy
+    award: "Best free option"
+    forWhom: "A rescue where every dollar is vet bills"
+    note: "Free at any volume with no platform fee and no processing fee — a $50 donation deposits $50. Covers donations, ticketing, raffles and memberships, which happens to cover most of what a rescue runs. Funded by an optional tip donors are asked for at checkout. The trade-off is that your net per gift depends on donor behaviour rather than a fixed rate, and it isn't a donor database — it holds transactions, not relationship history."
   - platformSlug: littlegreenlight
     award: "Best for custom tracking"
     forWhom: "A rescue that wants adoption and donor history in one record"
