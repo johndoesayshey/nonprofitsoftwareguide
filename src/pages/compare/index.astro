@@ -124,13 +124,12 @@ const datasetLd = {
           <div class="table-scroll">
             <table class="cmp">
               <colgroup>
-                <col class="c-tool" /><col class="c-price" /><col class="c-free" /><col class="c-best" /><col class="c-cta" />
+                <col class="c-tool" /><col class="c-price" /><col class="c-best" /><col class="c-cta" />
               </colgroup>
               <thead>
                 <tr>
                   <th scope="col">Tool</th>
                   <th scope="col">Pricing</th>
-                  <th scope="col">Free tier</th>
                   <th scope="col">Best for</th>
                   <th scope="col"></th>
                 </tr>
@@ -158,7 +157,6 @@ const datasetLd = {
                         <span class="num">{t.entryPrice}</span>
                       )}
                     </td>
-                    <td>{t.freeTier ? 'Yes' : 'No'}</td>
                     <td class="cmp-best">{t.bestFor}</td>
                     <td class="cmp-cta">
                       <a class="btn-visit" href={`/go/${t.affiliateSlug}`} rel={relFor(t.affiliateSlug)}>Visit →</a>
@@ -167,7 +165,7 @@ const datasetLd = {
                   </tr>
                   {versus.length > 0 && (
                     <tr class="versus-row">
-                      <td colspan="5">
+                      <td colspan="4">
                         <div class="versus-inner">
                           <span class="versus-label">Compare {t.shortName ?? t.name}:</span>
                           {versus.map((v) => (
@@ -269,7 +267,7 @@ const datasetLd = {
 
   table.cmp { min-width: 48rem; table-layout: fixed; }
   table.cmp col.c-tool { width: 14%; } table.cmp col.c-price { width: 26%; }
-  table.cmp col.c-free { width: 6%; }  table.cmp col.c-email { width: 12%; }
+  table.cmp col.c-email { width: 12%; }
   table.cmp col.c-best { width: 25%; } table.cmp col.c-cta { width: 20%; }
 
   /* Only "included" answers the question a buyer is actually asking — can I

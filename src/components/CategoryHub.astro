@@ -55,13 +55,12 @@ const posts = (await getCollection('posts', ({ data }) => data.draft === false))
     <div class="cmp-scroll">
       <table class="cmp">
         <colgroup>
-          <col class="c-tool" /><col class="c-price" /><col class="c-free" /><col class="c-best" /><col class="c-cta" />
+          <col class="c-tool" /><col class="c-price" /><col class="c-best" /><col class="c-cta" />
         </colgroup>
         <thead>
           <tr>
             <th scope="col">Tool</th>
             <th scope="col">Pricing</th>
-            <th scope="col">Free tier</th>
             <th scope="col">Best for</th>
             <th scope="col"></th>
           </tr>
@@ -94,7 +93,6 @@ const posts = (await getCollection('posts', ({ data }) => data.draft === false))
                     <span class="num">{p.data.entryPrice}</span>
                   )}
                 </td>
-                <td>{p.data.freeTier ? 'Yes' : 'No'}</td>
                 <td class="cmp-best">{p.data.bestFor}</td>
                 <td class="cmp-cta">
                   <a class="btn-visit" href={`/go/${p.data.affiliateSlug}`} rel={relFor(p.data.affiliateSlug)}>Visit →</a>
@@ -103,7 +101,7 @@ const posts = (await getCollection('posts', ({ data }) => data.draft === false))
               </tr>
               {versus.length > 0 && (
                 <tr class="versus-row">
-                  <td colspan="5">
+                  <td colspan="4">
                     <div class="versus-inner">
                       <span class="versus-label">Compare {p.data.shortName ?? p.data.name}:</span>
                       {versus.map((v) => (
@@ -192,7 +190,6 @@ const posts = (await getCollection('posts', ({ data }) => data.draft === false))
     table-layout: fixed; }
   table.cmp col.c-tool  { width: 15%; }
   table.cmp col.c-price { width: 26%; }
-  table.cmp col.c-free  { width: 7%; }
   table.cmp col.c-best  { width: 30%; }
   table.cmp col.c-cta   { width: 22%; }
   table.cmp th, table.cmp td { text-align: left; padding: .6rem .7rem; border-bottom: 1px solid var(--color-rule);

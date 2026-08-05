@@ -21,8 +21,11 @@ const isDraft = s.draft !== false;
 const tier = tierBySlug(s.slug);
 
 // Resolve platform slugs to display names for the ledger (fall back to the slug).
+// bestFor comes from the same lookup: platform frontmatter is the single source
+// for every "Best for" line on the site, so an edit there follows through here.
 const allPlatforms = await getCollection('platforms');
 const platformName = new Map(allPlatforms.map((p) => [p.data.slug, p.data.name]));
+const platformBestFor = new Map(allPlatforms.map((p) => [p.data.slug, p.data.bestFor]));
 
 // Supporting posts that name this hub (cluster down-links). Only published ones.
 const allPosts = await getCollection('posts', ({ data }) => data.draft === false);
@@ -82,6 +85,9 @@ const verified = formatMedium(s.lastVerified);
                 ) : (
                   <a href={`/platforms/${c.platformSlug}/`}>{c.label ?? platformName.get(c.platformSlug) ?? c.platformSlug}</a>
                 )}
+                {!c.advisory && c.platformSlug && platformBestFor.get(c.platformSlug) && (
+                  <><br /><small class="line-bestfor"><strong>Best for:</strong> {platformBestFor.get(c.platformSlug)}</small></>
+                )}
                 <br /><small style="color:var(--color-muted)">{c.rationale}</small>
               </td>
               <td class="num">{c.annualCost}</td>
@@ -131,6 +137,11 @@ const verified = formatMedium(s.lastVerified);
     text-transform: uppercase; color: var(--color-muted); }
   .total-facts dd { margin: .1rem 0 0; font-size: 1.05rem; }
   .cluster { margin-top: 2rem; padding-top: 1rem; border-top: 1px solid var(--color-rule); }
+  /* Canonical "Best for" line, pulled from the platform file. Distinct from the
+     muted stack rationale below it so the two read as label vs. commentary. */
+  .line-bestfor { color: var(--color-ink); }
+  .line-bestfor strong { font-family: var(--font-mono); font-size: .62rem; letter-spacing: .08em;
+    text-transform: uppercase; color: var(--color-muted); font-weight: 700; }
   /* A line with no product still belongs in the ledger, but it should not read
      like a recommendation to buy something. */
   .advisory .line-name { font-weight: 700; color: var(--color-muted); }

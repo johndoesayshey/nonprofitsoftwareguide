@@ -48,7 +48,6 @@ const itemListLd = {
 const rows: Array<[string, string, string]> = [
   ['Entry price', a.entryPrice, b.entryPrice],
   ['Pricing model', a.pricingModel, b.pricingModel],
-  ['Free tier', a.freeTier ? 'Yes' : 'No', b.freeTier ? 'Yes' : 'No'],
   ['Best for', a.bestFor, b.bestFor],
   ['Last verified', fmt(a.lastVerified), fmt(b.lastVerified)],
 ];
@@ -56,7 +55,7 @@ const rows: Array<[string, string, string]> = [
 
 <BaseLayout
   title={`${a.name} vs ${b.name}`}
-  description={`${a.name} vs ${b.name}: price, free tier, and fit for ${catLabel.toLowerCase()}. Which one fits your shop.`}
+  description={`${a.name} vs ${b.name}: price, pricing model, and fit for ${catLabel.toLowerCase()}. Which one fits your shop.`}
   section="compare"
   noindex={isDraft}>
   <div class="wrap">
@@ -76,7 +75,7 @@ const rows: Array<[string, string, string]> = [
       <p class="lead">
         {a.name} and {b.name} are both {catLabel.toLowerCase()} tools.
         {a.name} fits {a.bestFor.toLowerCase()}; {b.name} fits {b.bestFor.toLowerCase()}.
-        The table below lines up price, free tier, and fit so you can see which one
+        The table below lines up price and fit so you can see which one
         matches your shop.
       </p>
 

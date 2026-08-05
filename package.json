@@ -10,7 +10,7 @@
     "preview": "astro preview",
     "astro": "astro",
     "guardrails": "npm run guardrails:src && npm run guardrails:dist",
-    "guardrails:src": "node scripts/check-factcheck.mjs && node scripts/check-clusters.mjs && node scripts/check-depth.mjs && node scripts/check-queries.mjs",
+    "guardrails:src": "node scripts/check-factcheck.mjs && node scripts/check-clusters.mjs && node scripts/check-depth.mjs && node scripts/check-queries.mjs && node scripts/check-bestfor.mjs",
     "guardrails:dist": "node scripts/check-disclosure.mjs && node scripts/check-cluster-links.mjs",
     "check-freshness": "node scripts/check-freshness.mjs",
     "check-links": "node scripts/check-links.mjs",
