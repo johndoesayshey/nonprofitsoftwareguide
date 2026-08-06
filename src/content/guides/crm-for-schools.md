@@ -56,7 +56,7 @@ School advancement is the vertical where generic donor software strains hardest,
 
 **Grandparents** are the most underworked list in school fundraising and are usually invisible in the database because nobody captured the relationship at enrollment.
 
-**Trustees and past parents** are your major-gift pipeline and need cultivation tracking rather than appeal codes.
+**Trustees and past parents** are your major-gift pipeline and need cultivation tracking instead of appeal codes.
 
 A CRM that models these as one flat list of "donors" will still work. It just makes every segmentation an export to Excel, which means most of them don't happen.
 
@@ -72,7 +72,7 @@ If the answer is "someone exports it in August," fine, but write it down as a pr
 
 Schools add a graduating class every June, forever. Those records can never be deleted, a 1998 alum who has never given is exactly the person who might give at their 30th reunion.
 
-Under contact-count pricing, twenty years of that is a bill that rises every year independent of revenue. Flat-tier pricing with unlimited contacts is the structural answer, which is why [DonorDock](/go/donordock) ranks high on this page despite being a general-purpose CRM rather than a school product.
+Under contact-count pricing, twenty years of that is a bill that rises every year independent of revenue. Flat-tier pricing with unlimited contacts is the structural answer, which is why [DonorDock](/go/donordock) ranks high on this page despite being a general-purpose CRM, not a school product.
 
 ## The auction question
 

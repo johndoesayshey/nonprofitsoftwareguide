@@ -42,4 +42,4 @@ Match effort to evidence. A funder whose last three 990s confirm real, recent, o
 
 Reading the 990 first puts limited proposal hours where the money has actually been going. Twenty minutes of filing time against a week of writing time is the best trade in grant work.
 
-This piece is part of the guide to [the $1M-$5M fundraising stack](/stacks/1m-5m/), where grant research becomes a program rather than a side task.
+This piece is part of the guide to [the $1M-$5M fundraising stack](/stacks/1m-5m/), where grant research becomes a program instead of a side task.

@@ -57,7 +57,7 @@ Funraise's own blended estimates assume roughly 90% of donors opt to cover fees,
 
 Third-party roundups describe a completely different structure, a "Spark" plan at $300/month with 3% fees and a "Movement" plan at $550/month with 2%. Those plan names appear nowhere on Funraise's current pricing page and look like a superseded rate card.
 
-Others quote "starts at $100/month" and estimate $500/month for ten users, but label those as estimates rather than reported prices. We're showing the conflict rather than picking a side. The vendor's current page is the only thing here we'd budget against.
+Others quote "starts at $100/month" and estimate $500/month for ten users, but label those as estimates instead of reported prices. We're showing the conflict instead of picking a side. The vendor's current page is the only thing here we'd budget against.
 
 No reviewer states a dollar figure they actually pay.
 

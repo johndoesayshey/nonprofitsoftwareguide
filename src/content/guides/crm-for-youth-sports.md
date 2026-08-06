@@ -22,7 +22,7 @@ picks:
   - platformSlug: zeffy
     award: "Best free option"
     forWhom: "A volunteer-run league with no budget at all"
-    note: "Free at any volume with no platform fee and no processing fee, a $100 sponsorship deposits $100. Covers donations, ticketing, raffles and memberships, which is most of what a league runs. Funded by an optional tip donors are asked for at checkout. It holds transactions rather than relationships, so pair it with a database if you want sponsor history."
+    note: "Free at any volume with no platform fee and no processing fee, a $100 sponsorship deposits $100. Covers donations, ticketing, raffles and memberships, which is most of what a league runs. Funded by an optional tip donors are asked for at checkout. It holds transactions instead of relationships, so pair it with a database if you want sponsor history."
   - platformSlug: littlegreenlight
     award: "Best for custom tracking"
     forWhom: "A league that wants sponsor tiers and family history in one record"
@@ -42,7 +42,7 @@ faq:
   - q: "Should registration fees go in our donor database?"
     a: "No. They are program revenue, not gifts, and mixing them distorts every fundraising metric you report. More seriously, it risks acknowledgement letters that imply a registration fee was tax-deductible. Keep the two systems separate and reconcile totals at the season's end."
   - q: "How do we track sponsors year over year?"
-    a: "As organizations rather than individuals, with a sponsorship level, a season, and a named contact. Little Green Light and Eleo both do this cheaply with custom fields. The important part is not the field; it is that someone is prompted to ask again before next season's deadline."
+    a: "As organizations, not individuals, with a sponsorship level, a season, and a named contact. Little Green Light and Eleo both do this cheaply with custom fields. The important part is not the field; it is that someone is prompted to ask again before next season's deadline."
 draft: false
 ---
 

@@ -48,7 +48,7 @@ When the triggers hit, the objection is always the same: what if we buy it and n
 
 The cheap way is to keep the stakes low. [Eleo](/go/eleo) at $39 a month up to 2,500 donor records, or [Little Green Light](/go/littlegreenlight) at $45, are month-to-month with no setup fee. A serious three-month trial costs you less than a board dinner, and if it fails you have lost almost nothing.
 
-The other way is a guarantee. [DonorDock](/go/donordock) runs a single plan at $500/mo billed annually ($6,000 a year) with a 90-day money-back guarantee behind it. That removes the risk rather than the cost, and it is the right shape of decision only if you are consolidating several subscriptions into one.
+The other way is a guarantee. [DonorDock](/go/donordock) runs a single plan at $500/mo billed annually ($6,000 a year) with a 90-day money-back guarantee behind it. That removes the risk instead of the cost, and it is the right shape of decision only if you are consolidating several subscriptions into one.
 
 What DonorDock has that the cheaper systems don't is the whole stack in one plan: donation processing, email and text, grants and moves management, surfaced through the ActionBoard, a daily feed of who to thank and who is about to lapse. New CRM owners rarely fail at data entry; they fail at knowing what to do with the data. For a shop consolidating several subscriptions into one bill, the price is buying more than a database, and [our DonorDock review](/platforms/donordock/) works through the math.
 

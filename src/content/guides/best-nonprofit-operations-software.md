@@ -9,11 +9,11 @@ picks:
   - platformSlug: monday
     award: "Best overall"
     forWhom: "Any team tracking work that isn't gifts"
-    note: "Free for 2 seats, about $9/seat/mo Basic, about $12/seat Standard. It ships as a workflow tool rather than a database you have to design (boards, owners, statuses, due dates) which is what nonprofit operations work actually is. That distinction matters more than features: a system a new hire can use on their first day is worth more than a more capable one that only its builder understands. Grant pipelines, program delivery, campaign calendars and board task lists all fit without anyone configuring a schema."
+    note: "Free for 2 seats, about $9/seat/mo Basic, about $12/seat Standard. It ships as a workflow tool instead of a database you have to design (boards, owners, statuses, due dates) which is what nonprofit operations work actually is. That distinction matters more than features: a system a new hire can use on their first day is worth more than a more capable one that only its builder understands. Grant pipelines, program delivery, campaign calendars and board task lists all fit without anyone configuring a schema."
   - platformSlug: jotform
     award: "Best for intake"
     forWhom: "Program applications, volunteer sign-ups, and every form that outgrew email"
-    note: "Free tier, then about $17/mo Bronze with the 50% nonprofit discount, priced per account, not per seat, which is the whole argument at small scale. Ten staff touching forms costs the same as one. Conditional logic, file uploads, approval routing and payment fields that pass through to your own Stripe or PayPal are all included rather than sold up, and forms embed anywhere. This is the tool that ends the 'email me your application' era, and it costs less than a phone line."
+    note: "Free tier, then about $17/mo Bronze with the 50% nonprofit discount, priced per account, not per seat, which is the whole argument at small scale. Ten staff touching forms costs the same as one. Conditional logic, file uploads, approval routing and payment fields that pass through to your own Stripe or PayPal are all included, not sold up, and forms embed anywhere. This is the tool that ends the 'email me your application' era, and it costs less than a phone line."
   - platformSlug: aplos
     award: "Best for the books"
     forWhom: "Anyone whose real operations problem is fund accounting"
@@ -29,7 +29,7 @@ decidingFactors:
     detail: "Operations tools die of neglect faster than any other category, because nothing breaks visibly when they stop being used, the work just quietly moves back to email. Name an owner and put a monthly review in their calendar, or do not buy."
 faq:
   - q: "What do nonprofits spend on operations software?"
-    a: "Our 2026 survey of 100 U.S. fundraising professionals put mean annual forms and operations spend at $175 for shops under $250K raised, $572 at $250K-$1M, and $2,062 at $1M-$5M. Most of that is a couple of small subscriptions rather than one platform."
+    a: "Our 2026 survey of 100 U.S. fundraising professionals put mean annual forms and operations spend at $175 for shops under $250K raised, $572 at $250K-$1M, and $2,062 at $1M-$5M. Most of that is a couple of small subscriptions, not one platform."
   - q: "Is monday.com or Airtable better for a nonprofit?"
     a: "monday.com for most. It ships as a workflow tool and costs about $9-$12 a seat against Airtable's $20-$45. Airtable wins when you have genuinely relational data (a grants pipeline linked to funders linked to reporting deadlines) and a person who will own the build."
   - q: "Do nonprofits get a discount on these?"
@@ -39,7 +39,7 @@ faq:
 draft: false
 ---
 
-This is the category where nonprofits overspend by buying one impressive tool instead of two cheap ones that each do their job.
+This is the category where nonprofits overspend by buying one impressive tool when two cheap ones would each do their job.
 
 ## The two jobs
 
@@ -47,7 +47,7 @@ This is the category where nonprofits overspend by buying one impressive tool in
 
 **Workflow**, who is doing what, by when, and what is blocked. Program delivery, campaign calendars, grant pipelines, board tasks. This is a boards-and-owners problem, and [monday.com](/go/monday) solves it from about $9 a seat.
 
-Together that is roughly $750–$950 a year for a small team. Our 2026 survey puts mean spend in this category at $175 under $250K raised and $572 at $250K–$1M, so a full setup sits slightly above the median band, which is defensible, because this is the category where the tools actually save staff time rather than producing reports.
+Together that is roughly $750–$950 a year for a small team. Our 2026 survey puts mean spend in this category at $175 under $250K raised and $572 at $250K–$1M, so a full setup sits slightly above the median band, which is defensible, because this is the category where the tools actually save staff time, not just produce reports.
 
 ## The per-seat trap
 
@@ -59,7 +59,7 @@ Headline prices mislead here more than anywhere else on this site, because the p
 | monday.com Standard | per **seat** | ~$720/yr |
 | Airtable Team | per **seat** | $1,200/yr |
 
-Jotform pricing the account rather than the seat is the single most underrated fact in this category. Ten people touching forms costs exactly what one person costs. Count seats before you compare anything.
+Jotform pricing the account, not the seat, is the single most underrated fact in this category. Ten people touching forms costs exactly what one person costs. Count seats before you compare anything.
 
 ## Workflow tool or database
 
@@ -69,7 +69,7 @@ The other decision, and the one people get wrong.
 
 monday.com ships with the structure already decided. Less capable, and considerably more likely to still be in use in two years.
 
-Buy Airtable when you have genuinely relational data *and* a named person who will own it. If the person is aspirational rather than actual, buy the simpler thing.
+Buy Airtable when you have genuinely relational data *and* a named person who will own it. If the person is aspirational, not actual, buy the simpler thing.
 
 ## The failure mode to plan for
 

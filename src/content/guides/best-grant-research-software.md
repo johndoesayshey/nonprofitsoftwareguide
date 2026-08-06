@@ -17,14 +17,14 @@ picks:
   - platformSlug: candid
     award: "Best for depth on one funder"
     forWhom: "Anyone doing serious diligence before applying"
-    note: "Free on site at hundreds of Candid partner libraries; individual subscriptions from about $449/yr. The most authoritative foundation and 990 data available, and the grant-history detail shows who a funder actually gives to rather than who they say they fund. It is a reference work with no pipeline attached, which is exactly right if your grant program runs on twenty relationships you already know."
+    note: "Free on site at hundreds of Candid partner libraries; individual subscriptions from about $449/yr. The most authoritative foundation and 990 data available, and the grant-history detail shows who a funder actually gives to instead of who they say they fund. It is a reference work with no pipeline attached, which is exactly right if your grant program runs on twenty relationships you already know."
 decidingFactors:
   - factor: "Count your applications, not your budget."
     detail: "Under about eight submissions a year handled by one person, you need a database and a calendar; that is $199 and a shared spreadsheet. Past about fifteen, or with more than one person writing, the deadline tracking is the product and it pays for itself on a single renewal you would otherwise have missed."
   - factor: "Matching and searching are different products."
     detail: "A database answers the question you asked. Matching works forward from your program profile and proposes funders you would not have searched for. Matching is worth the most to a shop expanding into new funders and the least to one stewarding an established portfolio, if your last five grants came from foundations you already knew, you have a stewardship program, not a prospecting problem."
   - factor: "The library route is free and almost nobody uses it."
-    detail: "Candid's full Foundation Directory is available on site at no charge at hundreds of Funding Information Network partner libraries. Not a trial, the database, at the desk. Two afternoons before your fall application push replaces a subscription for a small shop. It is a genuine inconvenience, which is the honest argument for paying, but it should be a deliberate purchase of convenience rather than a default."
+    detail: "Candid's full Foundation Directory is available on site at no charge at hundreds of Funding Information Network partner libraries. Not a trial, the database, at the desk. Two afternoons before your fall application push replaces a subscription for a small shop. It is a genuine inconvenience, which is the honest argument for paying, but it should be a deliberate purchase of convenience, not a default."
   - factor: "Government grants are a different search."
     detail: "These tools are built on private and corporate foundation data. If most of your money is federal or state, Grants.gov and your state's portal are the primary sources, and a foundation database is doing less for you than the price implies."
 faq:
@@ -60,7 +60,7 @@ From our 2026 survey of 100 U.S. fundraising professionals, mean annual grant re
 - **$1M–$5M**, $2,278
 - **$5M+**, $5,713
 
-Instrumentl's entry tier is $2,148 a year. That sits above the band for everyone under $1M, which does not make it wrong; it makes it a purchase that has to be justified by grants won rather than by convenience.
+Instrumentl's entry tier is $2,148 a year. That sits above the band for everyone under $1M, which does not make it wrong; it makes it a purchase that has to be justified by grants won instead of by convenience.
 
 ## The free path most shops miss
 

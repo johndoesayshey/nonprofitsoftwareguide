@@ -42,7 +42,7 @@ faq:
   - q: "What is the cheapest donor software for a small church?"
     a: "Zeffy is free at any volume including processing fees, funded by an optional donor tip at checkout. For a database rather than a giving page, Eleo starts at $39/mo up to 2,500 records with the full price ladder published."
   - q: "Can donor software produce year-end giving statements?"
-    a: "Every system on this page can, but the quality varies and the details matter, non-cash gifts, quid-pro-quo disclosures for fundraising dinners and auctions, and household versus individual attribution. Ask to see a real generated statement during the sales process rather than taking it on the feature list."
+    a: "Every system on this page can, but the quality varies and the details matter, non-cash gifts, quid-pro-quo disclosures for fundraising dinners and auctions, and household versus individual attribution. Ask to see a real generated statement during the sales process instead of taking it on the feature list."
 draft: false
 ---
 

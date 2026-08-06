@@ -64,7 +64,7 @@ The directories disagree on whether a free trial exists (Capterra says no, GetAp
 
 ## What to ask the sales team
 
-Four numbers are not public and belong on your question list: the payment processing rate (CharityEngine processes in-house, so the rate is part of your negotiated deal rather than a market rate), implementation fees, the minimum contract term, and total cost at your contact count and email volume, since the vendor confirms all of those are levers in the quote.
+Four numbers are not public and belong on your question list: the payment processing rate (CharityEngine processes in-house, so the rate is part of your negotiated deal instead of a market rate), implementation fees, the minimum contract term, and total cost at your contact count and email volume, since the vendor confirms all of those are levers in the quote.
 
 A roundup range of "$450–700/month" circulates; we couldn't trace it to a source, so it isn't here.
 
@@ -87,8 +87,8 @@ nothing on it is labelled. Verified 3 August 2026:
 
 Salesforce appears on that wall and has zero documentation anywhere in
 CharityEngine's help center. Given that Blackbaud and Luminate are plainly migration
-sources rather than integrations, Salesforce most likely is too, but we could not
-confirm it either way, so treat it as unestablished rather than as a feature.
+sources, not integrations, Salesforce most likely is too, but we could not
+confirm it either way, so treat it as unestablished instead of as a feature.
 
 **Stripe is absent, and that is a real constraint.** CharityEngine processes payments
 itself; its published gateways are Authorize.net, BluePay, First Data, PayGate,

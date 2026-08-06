@@ -31,7 +31,7 @@ stayIf: "You run multi-channel campaigns with a marketing team, or peer-to-peer 
 draft: false
 ---
 
-**First, a change worth knowing about:** classy.org now redirects wholesale to GoFundMe Pro. The Classy brand has been absorbed, and if you are evaluating or renewing, you are dealing with GoFundMe rather than the company you originally signed with. Checked 3 August 2026.
+**First, a change worth knowing about:** classy.org now redirects wholesale to GoFundMe Pro. The Classy brand has been absorbed, and if you are evaluating or renewing, you are dealing with GoFundMe instead of the company you originally signed with. Checked 3 August 2026.
 
 The question that decides this is not which platform has better features. It is which fee structure fits your volume, because online giving platforms are priced three different ways and the cheapest one flips as you grow.
 
@@ -41,7 +41,7 @@ Take your online giving total for last year. Then compare:
 
 **Percentage-only** (Donorbox at roughly 2.95%, Givebutter at about 3% with tips off) costs you that rate on every dollar, forever, with no floor. At $25,000 online, that's around $740 a year. Cheap. At $250,000, it's roughly $7,400.
 
-**Flat subscription** (4aGoodCause at $1,188 / $2,988 / $5,148 a year) costs a fixed amount inside each revenue band ($50K, $250K, then unlimited) rather than a percentage of every gift. It is worse than a percentage at low volume and better past roughly $40,000 in online giving, where the entry tier crosses a ~2.95% rate.
+**Flat subscription** (4aGoodCause at $1,188 / $2,988 / $5,148 a year) costs a fixed amount inside each revenue band ($50K, $250K, then unlimited), not a percentage of every gift. It is worse than a percentage at low volume and better past roughly $40,000 in online giving, where the entry tier crosses a ~2.95% rate.
 
 **Free with donor tips** (Zeffy, Givebutter with tips on) costs you nothing directly and shifts the cost to your donors as an optional checkout tip. Your effective rate depends on how many donors leave the tip on, which you cannot forecast and cannot control.
 

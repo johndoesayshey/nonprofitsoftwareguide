@@ -43,7 +43,7 @@ otherOptions:
     note: "Eleo covers donors, gifts, events and volunteers from $39 a month with published pricing."
   - need: "Want the database to drive your daily follow-up?"
     platformSlug: donordock
-    note: "DonorDock's ActionBoard is a to-do list rather than a dashboard, which suits a team that keeps dropping the follow-up."
+    note: "DonorDock's ActionBoard is a to-do list instead of a dashboard, which suits a team that keeps dropping the follow-up."
   - need: "Memberships central to your model?"
     platformSlug: neoncrm
     note: "Neon CRM handles renewals and member benefits natively."
@@ -66,13 +66,13 @@ Bloomerang sells three products and prices them separately.
 | Bloomerang Volunteer | From $119 | Scheduling, screening, volunteer/donor sync |
 | Auctions, peer-to-peer | Quoted | Listed as additional features on Fundraising |
 
-Two things to take from that table. The $40 Fundraising price is the one that shows up in comparisons against Donorbox and Givebutter, and it comes bundled with the CRM rather than on its own, so plan the floor for forms plus database at $165 a month, or $1,980 a year.
+Two things to take from that table. The $40 Fundraising price is the one that shows up in comparisons against Donorbox and Givebutter, and it comes bundled with the CRM, not on its own, so plan the floor for forms plus database at $165 a month, or $1,980 a year.
 
 And the ladder above $125 is not published. Bloomerang prices on record count, so clean your list before you migrate and count it honestly when you take the quote. Compare that with [Little Green Light](/go/littlegreenlight) and [Eleo](/go/eleo), which publish every step of theirs.
 
 ## How it compares
 
-[Little Green Light](/go/littlegreenlight) is about a third of the entry price and very flexible; Bloomerang is friendlier and stronger on retention analytics. [Eleo](/go/eleo) undercuts both and publishes its whole ladder. [DonorDock](/go/donordock) turns the database into a daily to-do list, priced as a consolidation of several tools rather than as a standalone database. [Neon CRM](/go/neoncrm) adds memberships and events for organizations that need the breadth. Teams choose Bloomerang when adoption matters most, because the CRM your staff actually updates beats the more powerful one they don't.
+[Little Green Light](/go/littlegreenlight) is about a third of the entry price and very flexible; Bloomerang is friendlier and stronger on retention analytics. [Eleo](/go/eleo) undercuts both and publishes its whole ladder. [DonorDock](/go/donordock) turns the database into a daily to-do list, priced as a consolidation of several tools instead of as a standalone database. [Neon CRM](/go/neoncrm) adds memberships and events for organizations that need the breadth. Teams choose Bloomerang when adoption matters most, because the CRM your staff actually updates beats the more powerful one they don't.
 
 ## Bottom line
 

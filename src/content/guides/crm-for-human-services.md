@@ -22,14 +22,14 @@ picks:
   - platformSlug: neoncrm
     award: "Best for volunteer programs"
     forWhom: "An agency running a substantial volunteer operation"
-    note: "From $99/mo, priced by organizational revenue, reported to about $409/mo at the top of the published band. Volunteers add roughly 10% of the CRM fee, events 20%. Where volunteers are a workforce rather than an occasional help, having their hours and history in the same system as donor records lets you see the person who gives 200 hours a year and could also give money."
+    note: "From $99/mo, priced by organizational revenue, reported to about $409/mo at the top of the published band. Volunteers add roughly 10% of the CRM fee, events 20%. Where volunteers are a workforce instead of an occasional help, having their hours and history in the same system as donor records lets you see the person who gives 200 hours a year and could also give money."
   - platformSlug: littlegreenlight
     award: "Best value for a single administrator"
     forWhom: "A small agency with one detail-oriented database person"
     note: "$45/mo up to 2,500 constituents, about $135/mo at 50,000, no contracts, no setup fees. Maximum configurability per dollar, which suits an agency that needs to track corporate partners, in-kind donors and grant funders as distinct constituent types without paying for a bigger system."
 decidingFactors:
   - factor: "Client data does not belong in the donor database. Ever."
-    detail: "This is the defining constraint of the vertical. Case notes, service records and client identities are confidential, frequently governed by funder requirements or law, and must not be reachable from a system your development volunteers can open. Use a separate case management system, and treat any vendor pitching one platform for both as a compliance question rather than an efficiency opportunity."
+    detail: "This is the defining constraint of the vertical. Case notes, service records and client identities are confidential, frequently governed by funder requirements or law, and must not be reachable from a system your development volunteers can open. Use a separate case management system, and treat any vendor pitching one platform for both as a compliance question, not an efficiency opportunity."
   - factor: "A client may also be a donor, and that is delicate."
     detail: "Former clients give, and they are often your most powerful supporters. But the fact that someone received services is confidential information, and it must not be visible in the donor record or drive a solicitation. Decide the policy with your leadership before you build anything, and write it down."
   - factor: "Government and foundation grants are usually the bigger line."
@@ -54,9 +54,9 @@ This is the one thing on this page that is not a preference.
 
 Case notes, service records and client identities are confidential. They are frequently governed by funder requirements, sometimes by law, and always by an obligation to the people you serve. A donor database is opened by development staff, occasionally by board members, sometimes by volunteers, none of whom should be able to see who received services.
 
-Keep them in separate systems. When a vendor pitches one platform holding both, that is a compliance question rather than an efficiency opportunity, and the burden is on them to explain exactly how access is partitioned.
+Keep them in separate systems. When a vendor pitches one platform holding both, that is a compliance question instead of an efficiency opportunity, and the burden is on them to explain exactly how access is partitioned.
 
-The harder version of the problem is the person who is both. Former clients do give, and they are often the most compelling supporters an agency has. Handle it by recording the gift as a gift, with nothing in the donor record indicating service history, and by setting the policy with leadership before the situation arises rather than in the moment.
+The harder version of the problem is the person who is both. Former clients do give, and they are often the most compelling supporters an agency has. Handle it by recording the gift as a gift, with nothing in the donor record indicating service history, and by setting the policy with leadership before the situation arises, not in the moment.
 
 ## Buy the grant tool first
 
@@ -74,7 +74,7 @@ Human services agencies operate under more overhead scrutiny than any other part
 
 That environment makes a published price ladder genuinely more useful than a negotiated quote. "Eleo is $39 a month up to 2,500 records, here is the page" is a different conversation from "we negotiated a rate I can't show you." Both [Eleo](/platforms/eleo/) and [Little Green Light](/platforms/littlegreenlight/) publish everything.
 
-It is also worth making the case rather than just minimizing the number. A donor database that recovers one lapsed $500 donor a year has paid for itself several times over, and that is a defensible sentence to put in front of a board.
+It is also worth making the case instead of just minimizing the number. A donor database that recovers one lapsed $500 donor a year has paid for itself several times over, and that is a defensible sentence to put in front of a board.
 
 ## In-kind support belongs in the donor record
 

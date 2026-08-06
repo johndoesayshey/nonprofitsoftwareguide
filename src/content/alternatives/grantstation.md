@@ -47,7 +47,7 @@ Two distinct things, and it's worth being clear which one you need.
 
 ## The cheapest fix most shops miss
 
-If your complaint is research depth rather than volume, don't buy a subscription. Candid's Foundation Directory is free, on site, at hundreds of Funding Information Network partner libraries, the full database, at the desk, no cost. Two afternoons before your fall application push will do the diligence on fifteen foundations properly.
+If your complaint is research depth instead of volume, don't buy a subscription. Candid's Foundation Directory is free, on site, at hundreds of Funding Information Network partner libraries, the full database, at the desk, no cost. Two afternoons before your fall application push will do the diligence on fifteen foundations properly.
 
 Keeping GrantStation for broad discovery, using the library for deep 990 work on funders that survive the first cut, and running deadlines in a shared spreadsheet is a complete grant research setup for about $199 a year. It costs time instead of money, which is the right trade when you have more of one than the other.
 

@@ -82,4 +82,4 @@ The difference between free filings and a research database is structure. A PDF 
 
 Twenty minutes per funder, before writing anything. Grant list, median, geography, repetition, trustees.
 
-Most declines are fit problems rather than writing problems, and nearly all of them are visible in the filing beforehand. That is the whole return on learning to read one.
+Most declines are fit problems instead of writing problems, and nearly all of them are visible in the filing beforehand. That is the whole return on learning to read one.

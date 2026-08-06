@@ -17,7 +17,7 @@ reasonsToLeave:
 picks:
   - platformSlug: donordock
     forWhom: "You have no database administrator and never will"
-    note: "DonorDock runs one plan ($500/mo billed annually, $6,000/yr) with every feature in it and unlimited contacts, which is the direct answer to record-count bill creep. Coming from Raiser's Edge that is usually a cut rather than an increase, which is not true of most moves onto this platform. The ActionBoard turns the database into a daily follow-up list rather than a reporting tool, which matters when the person running the CRM is also writing the appeal and staffing the gala. There is a 90-day money-back guarantee, so the migration decision is reversible."
+    note: "DonorDock runs one plan ($500/mo billed annually, $6,000/yr) with every feature in it and unlimited contacts, which is the direct answer to record-count bill creep. Coming from Raiser's Edge that is usually a cut rather than an increase, which is not true of most moves onto this platform. The ActionBoard turns the database into a daily follow-up list instead of a reporting tool, which matters when the person running the CRM is also writing the appeal and staffing the gala. There is a 90-day money-back guarantee, so the migration decision is reversible."
   - platformSlug: bloomerang
     forWhom: "You raise $1M–$5M and want reporting your board understands"
     note: "Bloomerang is the closest honest peer for a shop leaving Raiser's Edge with a real major-gifts program. The CRM starts at $125/mo billed annually ($1,500/yr) with unlimited users, scaling with record count above that on a quoted ladder, so adding staff, board members or volunteers costs nothing. The retention dashboards are the part that changes behavior: they put lapsing donors on the home screen instead of behind a query. You lose Raiser's Edge's depth on planned giving and complex constituent relationships. Most shops under $5M never used that depth."
@@ -35,7 +35,7 @@ Raiser's Edge is not a bad system. It is a system priced and built for organizat
 
 ## What actually breaks first
 
-Two things push shops out. The first is the renewal quote, a number arrived at through negotiation rather than a rate card, which is difficult to defend to a finance committee that can look up competitors' published pricing in ten minutes. The second is staff turnover. Raiser's Edge concentrates capability in whoever knows how to build a query. When that person leaves, the institutional knowledge leaves with them, and the organization discovers it has been paying enterprise prices for a contact list.
+Two things push shops out. The first is the renewal quote, a number arrived at through negotiation, not a rate card, which is difficult to defend to a finance committee that can look up competitors' published pricing in ten minutes. The second is staff turnover. Raiser's Edge concentrates capability in whoever knows how to build a query. When that person leaves, the institutional knowledge leaves with them, and the organization discovers it has been paying enterprise prices for a contact list.
 
 ## The cost math
 

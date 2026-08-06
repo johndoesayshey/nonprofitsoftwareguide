@@ -37,7 +37,7 @@ draft: false
 strengths:
   - "Marketing automation and donor journeys are native to the CRM rather than bolted on through an integration"
   - "Unlimited users on both tiers, so access is never the thing you are rationing"
-  - "Events, workflow automation and reporting included in the base platform rather than sold as modules"
+  - "Events, workflow automation and reporting included in the base platform, not sold as modules"
 otherOptions:
   - need: "Not staffed to run automation?"
     platformSlug: bloomerang
@@ -50,7 +50,7 @@ otherOptions:
     note: "Reviewers consistently name moves management as Virtuous's weakest area; if portfolios are your core work, test it hard."
 ---
 
-We could not source a price for Virtuous, and we're saying so rather than inventing one.
+We could not source a price for Virtuous, and we're saying so instead of inventing one.
 
 ## Why there's no number here
 
@@ -71,11 +71,11 @@ Since you're going into a negotiation without a reference point, make the vendor
 - The **renewal escalator**, the percentage increase built into year two and three, in writing.
 - **Contract term and notice period** for non-renewal.
 
-Onboarding is mandatory and delivered either by Virtuous or an implementation partner. No figures for it are published anywhere either, so ask for it as a separate line rather than letting it disappear into a bundled total.
+Onboarding is mandatory and delivered either by Virtuous or an implementation partner. No figures for it are published anywhere either, so ask for it as a separate line, so it cannot disappear into a bundled total.
 
 ## Where it genuinely fits
 
-Virtuous's argument is that donor journeys and marketing automation belong inside the CRM rather than in a separate email tool wired to it. That's a real advantage for an organization that will actually build and maintain journeys, which means someone whose job includes it, not an aspiration.
+Virtuous's argument is that donor journeys and marketing automation belong inside the CRM, not in a separate email tool wired to it. That's a real advantage for an organization that will actually build and maintain journeys, which means someone whose job includes it, not an aspiration.
 
 If nobody owns marketing automation at your organization, you'll pay for the differentiator and use the parts every cheaper system also has.
 
@@ -102,7 +102,7 @@ Virtuous's own documentation on 3 August 2026:
 - It requires a dedicated admin service account **without SSO or two-factor**, which
   is a security trade-off worth raising with whoever owns your IT policy.
 
-If your finance team wants journal entries rather than sales receipts, a paid
+If your finance team wants journal entries and not sales receipts, a paid
 third-party connector in the Virtuous marketplace produces them, implementation fee
 plus an annual subscription that scales with donation volume. That is a real cost to
 factor in if sales receipts do not suit your books.

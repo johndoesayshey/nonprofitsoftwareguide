@@ -40,7 +40,7 @@ faq:
   - q: "How do food banks track in-kind donations?"
     a: "In the donor record, with a fair market value and a non-cash gift type, separate from cash so your acknowledgements and your reporting stay correct. Most donor CRMs support this; the quality varies a lot. Test it with a real example during a trial, including what the thank-you letter says."
   - q: "What is the cheapest donor software for a food pantry?"
-    a: "Zeffy is free at any volume, including processing fees, funded by an optional donor tip. For a database rather than a giving page, Eleo starts at $39/mo up to 2,500 donor records with volunteer tracking included and the full price ladder published."
+    a: "Zeffy is free at any volume, including processing fees, funded by an optional donor tip. For a database instead of a giving page, Eleo starts at $39/mo up to 2,500 donor records with volunteer tracking included and the full price ladder published."
   - q: "Should a food bank buy donor software or grant research software first?"
     a: "Usually grant research, if grants are a bigger revenue line than individual giving, which for most food banks they are. GrantStation runs about $199/yr through TechSoup. A spreadsheet holds a donor list far longer than it holds a grant pipeline with reporting deadlines."
 draft: false
@@ -68,7 +68,7 @@ Test it during the trial with a real example. Record a donated pallet of food wi
 
 ## The seasonality problem
 
-Food banks routinely take a third or more of annual individual revenue in the last six weeks of the year. Two consequences follow, and both are operational rather than technical.
+Food banks routinely take a third or more of annual individual revenue in the last six weeks of the year. Two consequences follow, and both are operational, not technical.
 
 The acknowledgement process has to survive a surge. Whatever takes two days in April takes three weeks in December, and a thank-you that arrives in February doesn't convert anyone.
 

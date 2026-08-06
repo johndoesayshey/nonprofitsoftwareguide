@@ -42,7 +42,7 @@ The instinct that federal grants are the serious money is right. The instinct th
 
 **Procurement rules.** Federal awards come with requirements about how you buy things above certain thresholds, quotes, competition, documentation.
 
-**A single audit above a spending threshold.** Organizations expending federal awards over a threshold set in federal guidance must have a single audit performed, which costs real money and takes real staff time. Confirm the current threshold in the applicable Uniform Guidance rather than in any secondary source, including this one; it has changed.
+**A single audit above a spending threshold.** Organizations expending federal awards over a threshold set in federal guidance must have a single audit performed, which costs real money and takes real staff time. Confirm the current threshold in the applicable Uniform Guidance instead of in any secondary source, including this one; it has changed.
 
 **Indirect cost recovery you have to claim properly.** Either a negotiated rate agreement or the de minimis rate applied to modified total direct costs. Claiming zero here means your general operations subsidize the federal program.
 

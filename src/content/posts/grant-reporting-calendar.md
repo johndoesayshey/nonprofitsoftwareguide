@@ -49,7 +49,7 @@ Per grant, minimally:
 - **The named owner** and a backup
 - **The contact** at the funder, with the address that actually reaches a person
 
-The field most often missing is what the report requires. A narrative report is an afternoon; one requiring outcome data you have not been collecting is a crisis, and you want to discover that eleven months out rather than eleven days.
+The field most often missing is what the report requires. A narrative report is an afternoon; one requiring outcome data you have not been collecting is a crisis, and you want to discover that eleven months out instead of eleven days.
 
 ## Set the reminder backwards from the deadline
 
@@ -85,6 +85,6 @@ Contact them. Today, before they contact you.
 
 A short, plain note: the report is late, here is when it will arrive, here is why. Most funders will accept it. Almost none will forgive silence, because silence is what a struggling grantee looks like.
 
-If you are late on several, prioritize by relationship value rather than by deadline order, the funder most likely to renew is the one to call first.
+If you are late on several, prioritize by relationship value, not by deadline order, the funder most likely to renew is the one to call first.
 
 And then build the calendar, for every active grant, in one sitting. It takes an afternoon and it is the single highest-return afternoon available to a grant program.

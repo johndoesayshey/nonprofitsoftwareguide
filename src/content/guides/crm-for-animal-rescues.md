@@ -22,7 +22,7 @@ picks:
   - platformSlug: zeffy
     award: "Best free option"
     forWhom: "A rescue where every dollar is vet bills"
-    note: "Free at any volume with no platform fee and no processing fee, a $50 donation deposits $50. Covers donations, ticketing, raffles and memberships, which happens to cover most of what a rescue runs. Funded by an optional tip donors are asked for at checkout. The trade-off is that your net per gift depends on donor behavior rather than a fixed rate, and it isn't a donor database; it holds transactions, not relationship history."
+    note: "Free at any volume with no platform fee and no processing fee, a $50 donation deposits $50. Covers donations, ticketing, raffles and memberships, which happens to cover most of what a rescue runs. Funded by an optional tip donors are asked for at checkout. The trade-off is that your net per gift depends on donor behavior instead of a fixed rate, and it isn't a donor database; it holds transactions, not relationship history."
   - platformSlug: littlegreenlight
     award: "Best for custom tracking"
     forWhom: "A rescue that wants adoption and donor history in one record"
@@ -42,7 +42,7 @@ faq:
   - q: "Do animal rescues need a CRM or is a giving page enough?"
     a: "A giving page is enough until you want the second gift. Platforms like Zeffy and Givebutter hold transactions; they don't hold that someone adopted in 2024, fostered twice, and gives $20 a month. That history is what a renewal ask is built on, and it's what a CRM is for."
   - q: "How do we track adopters, fosters, volunteers and donors as the same person?"
-    a: "Look for custom constituent types or tags rather than a single fixed role. Little Green Light and Eleo both handle overlapping roles well at low cost. Test it during a trial with a real person who wears three hats; this is where cheap systems break."
+    a: "Look for custom constituent types or tags, not a single fixed role. Little Green Light and Eleo both handle overlapping roles well at low cost. Test it during a trial with a real person who wears three hats; this is where cheap systems break."
 draft: false
 ---
 

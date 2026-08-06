@@ -41,11 +41,11 @@ otherOptions:
 
 ## Who it fits
 
-School foundations, hospital foundations, and anyone whose signature event is genuinely an auction rather than a dinner with a raffle. The bundled hardware and event-night support are the difference from a general fundraising platform, and they matter most when a hundred people are bidding at once.
+School foundations, hospital foundations, and anyone whose signature event is genuinely an auction instead of a dinner with a raffle. The bundled hardware and event-night support are the difference from a general fundraising platform, and they matter most when a hundred people are bidding at once.
 
 ## What it costs
 
-Every package is quoted per organization through a regional manager, so budget a conversation rather than a checkout. Organizations report platform fees running roughly $2,500 to $15,000 a year depending on event size, with card processing on top at about 2.9% to 3.5% plus $0.30 per transaction, and one-time implementation somewhere between $500 and $5,000.
+Every package is quoted per organization through a regional manager, so budget a conversation, not a checkout. Organizations report platform fees running roughly $2,500 to $15,000 a year depending on event size, with card processing on top at about 2.9% to 3.5% plus $0.30 per transaction, and one-time implementation somewhere between $500 and $5,000.
 
 | Line | Reported |
 |---|---|

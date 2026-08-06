@@ -22,7 +22,7 @@ picks:
   - platformSlug: kindsight
     award: "Best screening for a campaign"
     forWhom: "A foundation preparing a capital campaign with a defined prospect list"
-    note: "Reported from around $4,150/yr for one user and roughly 1,500 screens, with a Professional tier reported at $5,000-$8,000/yr. Hospital foundations are one of the few verticals where screening genuinely pays, because capacity varies enormously across a community donor base. The constraint is legal rather than technical, be certain which lists you are permitted to screen before you buy any volume."
+    note: "Reported from around $4,150/yr for one user and roughly 1,500 screens, with a Professional tier reported at $5,000-$8,000/yr. Hospital foundations are one of the few verticals where screening genuinely pays, because capacity varies enormously across a community donor base. The constraint is legal instead of technical, be certain which lists you are permitted to screen before you buy any volume."
 decidingFactors:
   - factor: "HIPAA governs the referral, not the software."
     detail: "Patient information cannot move freely into fundraising, and the rules on what a foundation may receive, from whom, and with what opt-out are the binding constraint. Settle the compliance process with your privacy officer before you evaluate any system, the software question is downstream and much easier."
@@ -42,7 +42,7 @@ faq:
 draft: false
 ---
 
-Hospital foundations are the one vertical where the binding constraint on fundraising software is legal rather than financial. Everything else follows from that.
+Hospital foundations are the one vertical where the binding constraint on fundraising software is legal, not financial. Everything else follows from that.
 
 ## Settle the compliance question first
 
@@ -89,4 +89,4 @@ at about $20,417 a year.
 
 Payroll-deduction campaigns among hospital staff produce thousands of small recurring gifts administered through a payroll system you don't control.
 
-Decide deliberately whether those records enter the CRM. If they do, every average you report (average gift, retention rate, donor count) shifts, and comparisons to your peers stop meaning anything. Many foundations keep employee giving in a separate reporting stream for exactly that reason, and that's a defensible choice as long as it's a choice rather than an accident.
+Decide deliberately whether those records enter the CRM. If they do, every average you report (average gift, retention rate, donor count) shifts, and comparisons to your peers stop meaning anything. Many foundations keep employee giving in a separate reporting stream for exactly that reason, and that's a defensible choice as long as it's a choice instead of an accident.

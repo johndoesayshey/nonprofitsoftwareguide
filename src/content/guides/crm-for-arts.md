@@ -14,7 +14,7 @@ picks:
   - platformSlug: donordock
     award: "Best for a large patron file"
     forWhom: "A theatre or ensemble with thousands of ticket buyers and few donors"
-    note: "One plan at $500/mo billed annually, $6,000/yr, all features, unlimited contacts, plus a 2% platform fee on gifts through its giving pages. Arts organizations carry enormous contact files relative to their donor counts, because everyone who ever bought a ticket is in there. Under record-count pricing you pay for all of them. The ActionBoard is also the right shape for converting single-ticket buyers into donors, which is a follow-up problem rather than a reporting one."
+    note: "One plan at $500/mo billed annually, $6,000/yr, all features, unlimited contacts, plus a 2% platform fee on gifts through its giving pages. Arts organizations carry enormous contact files relative to their donor counts, because everyone who ever bought a ticket is in there. Under record-count pricing you pay for all of them. The ActionBoard is also the right shape for converting single-ticket buyers into donors, which is a follow-up problem instead of a reporting one."
   - platformSlug: bloomerang
     award: "Best for shared data entry"
     forWhom: "A development office where the box office and marketing also need access"
@@ -33,7 +33,7 @@ decidingFactors:
   - factor: "A subscriber is not a member is not a donor."
     detail: "Arts organizations routinely have all three, sometimes in one household, with different renewal cycles and different benefits. A system that flattens them into one 'constituent type' will make renewal campaigns manual forever. Test this with a real patron who is all three."
   - factor: "Your contact file is enormous and mostly non-donors."
-    detail: "Every ticket buyer is a record. Under contact-count pricing you pay for a decade of single-ticket purchasers who will never give. Either buy flat pricing or decide, explicitly, which non-donor records earn their place in the CRM rather than the ticketing system."
+    detail: "Every ticket buyer is a record. Under contact-count pricing you pay for a decade of single-ticket purchasers who will never give. Either buy flat pricing or decide, explicitly, which non-donor records earn their place in the CRM, not the ticketing system."
   - factor: "Benefit fair market value affects every acknowledgement."
     detail: "Membership benefits, gala tickets and comp seats all carry a fair market value that reduces the deductible portion of a gift. Whatever you buy has to record that and put it in the letter correctly, or your most engaged patrons get the wrong tax documentation."
 faq:
@@ -42,7 +42,7 @@ faq:
   - q: "How do we track members and donors as the same person?"
     a: "You need a system where one record can carry both a membership with a renewal date and a giving history, reportable independently. Neon CRM handles this natively. Little Green Light will do it through custom fields at a much lower price if someone is willing to build it."
   - q: "What does a small arts nonprofit spend on donor software?"
-    a: "Our 2026 survey put mean annual donor CRM spend at $716 for organizations under $250K raised and $2,726 at $250K-$1M. Arts organizations often land above their band because of contact-file size rather than feature needs, which is an argument for flat pricing, not a bigger budget."
+    a: "Our 2026 survey put mean annual donor CRM spend at $716 for organizations under $250K raised and $2,726 at $250K-$1M. Arts organizations often land above their band because of contact-file size instead of feature needs, which is an argument for flat pricing, not a bigger budget."
 draft: false
 ---
 
@@ -52,7 +52,7 @@ Arts fundraising has a structural problem no other vertical shares to the same d
 
 Your ticketing platform holds who came, what they paid, where they sat and how often they return. That is the richest behavioral data in your organization, and in most arts nonprofits it lives somewhere development can't query.
 
-There's no clean solution, but there is a decision that has to be made explicitly rather than by default. Pick which system is authoritative for the patron record. Then define what moves the other way and how often.
+There's no clean solution, but there is a decision that has to be made explicitly, not by default. Pick which system is authoritative for the patron record. Then define what moves the other way and how often.
 
 The pattern that works: ticketing owns attendance and purchase history, the CRM owns contributed income and relationship history, and a named person reconciles them quarterly. The pattern that fails is assuming an integration handles it and discovering in year two that the lists have quietly diverged.
 

@@ -42,7 +42,7 @@ faq:
   - q: "How do museums track members who are also donors?"
     a: "You need one record holding both a membership with a renewal date and a giving history, each reportable on its own. Test it with a real household that holds a family membership and gave to the annual fund, then try to pull members lapsing next month who have also given."
   - q: "What does a small museum spend on donor software?"
-    a: "Our 2026 survey put mean annual donor CRM spend at $716 for organizations under $250K raised and $2,726 at $250K-$1M. Museums frequently exceed their band because of contact-file size rather than feature needs, which argues for a flat single-plan price rather than a larger budget."
+    a: "Our 2026 survey put mean annual donor CRM spend at $716 for organizations under $250K raised and $2,726 at $250K-$1M. Museums frequently exceed their band because of contact-file size rather than feature needs, which argues for a flat single-plan price instead of a larger budget."
 draft: false
 ---
 
@@ -54,9 +54,9 @@ For most museums, membership revenue exceeds contributed income and is far more 
 
 A member lapses because a renewal notice didn't go out, or went out at the wrong level, or went to the household's old address. Nobody decides to leave. The revenue just doesn't arrive, and by the time the annual report shows it, twelve months of win-back opportunity has passed.
 
-That makes one question worth more than any feature comparison: **can the system produce a list of members lapsing next month, segmented by level?** Ask for it in the demo. Systems built for donors rather than members will need a custom field and a manual date calculation, which works until it's someone's forgotten task.
+That makes one question worth more than any feature comparison: **can the system produce a list of members lapsing next month, segmented by level?** Ask for it in the demo. Systems built for donors, not members will need a custom field and a manual date calculation, which works until it's someone's forgotten task.
 
-[Neon CRM](/go/neoncrm) leads this page because memberships are native rather than improvised, and the add-on is roughly 10% of the base fee.
+[Neon CRM](/go/neoncrm) leads this page because memberships are native instead of improvised, and the add-on is roughly 10% of the base fee.
 
 ## The admissions data problem
 
@@ -64,7 +64,7 @@ Your point-of-sale system knows who visited, how often, and what they bought. De
 
 There is no clean fix, only an explicit decision. Name one system as authoritative for the household record. Define what flows the other way and how often. Assign it to a person.
 
-The failure mode is assuming an integration handles it and discovering in year two that the membership list in the POS and the constituent list in the CRM disagree about several hundred households, at which point reconciling them is a project rather than a task.
+The failure mode is assuming an integration handles it and discovering in year two that the membership list in the POS and the constituent list in the CRM disagree about several hundred households, at which point reconciling them is a project, not a task.
 
 ## Benefits and the acknowledgement letter
 

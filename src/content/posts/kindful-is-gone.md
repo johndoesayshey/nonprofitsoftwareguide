@@ -19,7 +19,7 @@ draft: false
 
 Kindful is no longer sold to new customers. Bloomerang acquired it in January 2021, kindful.com now presents itself as a Bloomerang product with a Bloomerang demo as its only call to action, and TrustRadius lists the product as discontinued.
 
-If you are still on it, nothing has broken. But you are running software that will not meaningfully develop again, and that is a decision to make deliberately rather than to discover at a renewal.
+If you are still on it, nothing has broken. But you are running software that will not meaningfully develop again, and that is a decision to make deliberately, not to discover at a renewal.
 
 ## What "discontinued" does and does not mean
 
@@ -27,7 +27,7 @@ It does not mean a shutdown date. Existing customers are supported and no end-of
 
 It does mean the roadmap is somewhere else. Features get folded into Bloomerang, not built into Kindful. Integrations that break get fixed slowly or not at all. The people who knew the product best have had five years to move on to other things.
 
-That is a slow problem, not an urgent one. Give yourself a quarter to decide rather than a week.
+That is a slow problem, not an urgent one. Give yourself a quarter to decide instead of a week.
 
 ## The obvious destination, and why obvious is not the same as right
 
@@ -35,7 +35,7 @@ Bloomerang owns Kindful, which means Bloomerang has every incentive to make the 
 
 But convenience is not fit. Before you take the path of least resistance, check the two things that would actually make you unhappy in year two:
 
-**Contact-record pricing.** [Bloomerang](/go/bloomerang) bills on contact-record count, from $125/mo billed annually ($1,500/yr) for the CRM, with donation forms in the $40/mo Fundraising module, on a ladder they quote rather than publish. If your file is large relative to your donor count, that structure will cost you. Count your actual file before you accept a quote, because organically grown lists are routinely 30–40% duplicates, deceased records and one-time event attendees. Cleaning that first can drop a whole tier.
+**Contact-record pricing.** [Bloomerang](/go/bloomerang) bills on contact-record count, from $125/mo billed annually ($1,500/yr) for the CRM, with donation forms in the $40/mo Fundraising module, on a ladder they quote, not publish. If your file is large relative to your donor count, that structure will cost you. Count your actual file before you accept a quote, because organically grown lists are routinely 30–40% duplicates, deceased records and one-time event attendees. Cleaning that first can drop a whole tier.
 
 **Reporting shape.** Bloomerang leads with retention, who is lapsing, on the home screen. That is genuinely valuable and it is not what everyone needs. If your work is grant-heavy or event-heavy, you may be paying for analytics you will not open.
 
@@ -47,7 +47,7 @@ But convenience is not fit. Before you take the path of least resistance, check 
 
 **[Little Green Light](/platforms/littlegreenlight/)** if one capable person owns the database and wants maximum configurability per dollar. $45/mo up to 2,500 constituents, no contracts.
 
-One thing to be aware of if you are comparing against [Aplos](/platforms/aplos/): Aplos acquired Keela in 2024, and Aplos, Keela and Raisely now sit under the Velora brand. Treat them as one product family rather than three separate quotes.
+One thing to be aware of if you are comparing against [Aplos](/platforms/aplos/): Aplos acquired Keela in 2024, and Aplos, Keela and Raisely now sit under the Velora brand. Treat them as one product family instead of three separate quotes.
 
 ## What the migration actually costs
 

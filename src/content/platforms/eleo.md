@@ -50,11 +50,11 @@ otherOptions:
     note: "Bloomerang's reporting is built around who is about to lapse."
 ---
 
-[Eleo](/go/eleo) is a low-cost donor CRM for small shops: donors, gifts, events, volunteers and mailings in one system, starting at $39 a month for up to 2,500 records. Its real advantage is transparency, since the whole price ladder is published rather than quoted.
+[Eleo](/go/eleo) is a low-cost donor CRM for small shops: donors, gifts, events, volunteers and mailings in one system, starting at $39 a month for up to 2,500 records. Its real advantage is transparency, since the whole price ladder is published, not quoted.
 
 ## Who it fits
 
-Organizations that want a real database rather than a spreadsheet and are counting every dollar. It sits alongside [Little Green Light](/platforms/littlegreenlight/) as a value pick, and the published pricing makes it easy to budget three years ahead without a sales call.
+Organizations that want a real database, not a spreadsheet and are counting every dollar. It sits alongside [Little Green Light](/platforms/littlegreenlight/) as a value pick, and the published pricing makes it easy to budget three years ahead without a sales call.
 
 ## Pricing
 

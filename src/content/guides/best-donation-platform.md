@@ -12,7 +12,7 @@ picks:
     note: "$99/mo Grassroots ($1,188/yr, up to $50K online), $249/mo Growing ($2,988/yr, to $250K), $429/mo Scale ($5,148/yr, unlimited), with no percentage taken from donations, the fee stops growing with you, which can save thousands a year and is why it is our top pick for a donation processor. The entry tier beats a ~2.95% fee from roughly $40,000 online to its $50K cap, and from about $100,000 the flat tiers win at every volume. Built around monthly giving, with recurring pages, a built-in donor CRM, and integrations like Mailchimp, Constant Contact and QuickBooks covering what isn't built in. First month free."
   - platformSlug: donorbox
     award: "Best for recurring giving"
-    forWhom: "Shops where monthly donors are the growth engine"
+    forWhom: "Shops that want to start without a subscription to justify"
     note: "Free to start at roughly 2.95%, no subscription; Pro at about $150/mo drops the rate to roughly 1.75% and pays for itself past around $150k. The recurring-gift management is the strongest in its price class, donor portals, automatic retries on failed cards, upgrade prompts, and that machinery produces revenue. Card failure silently kills monthly donors at platforms that do not chase them. Attribution is link-only and never retroactive."
   - platformSlug: givebutter
     award: "Best for events and peer-to-peer"
@@ -30,14 +30,14 @@ decidingFactors:
   - factor: "Recurring donors do not transfer between platforms."
     detail: "Cards on file live with the payment processor, so switching means every monthly donor re-enrolls. Expect attrition. Ask in writing whether token migration is possible before you assume a clean handoff, run a real re-enrollment campaign with a deadline, and do it in a quiet month, never in December."
   - factor: "A giving platform is not a donor database."
-    detail: "These hold transactions and contact details. They do not hold soft credits on donor-advised-fund gifts, household records, or the retention history a second ask is built on. If your gap is donor history rather than checkout, a CRM behind your existing platform is the cheaper fix."
+    detail: "These hold transactions and contact details. They do not hold soft credits on donor-advised-fund gifts, household records, or the retention history a second ask is built on. If your gap is donor history instead of checkout, a CRM behind your existing platform is the cheaper fix."
 faq:
   - q: "What is the cheapest donation platform for nonprofits?"
-    a: "Zeffy, which charges nothing at any volume including processing fees, funded by an optional tip donors are asked for at checkout. Givebutter is also free with tips on. Both make your effective cost depend on donor behavior rather than a fixed rate."
+    a: "Zeffy, which charges nothing at any volume including processing fees, funded by an optional tip donors are asked for at checkout. Givebutter is also free with tips on. Both make your effective cost depend on donor behavior, not a fixed rate."
   - q: "Is Zeffy really free?"
     a: "Yes, to the nonprofit, a $100 gift deposits $100. The model is that donors are asked to add an optional tip at checkout, which funds the company. When donors decline, your net per gift is unchanged but Zeffy earns nothing on it. The trade-off is the ask appearing on your giving page, not a hidden fee."
   - q: "At what point should we switch from a percentage fee to a subscription?"
-    a: "Around $40,000 a year in online giving, where a $1,188 flat subscription crosses a ~2.95% percentage fee. Above that the subscription wins and the gap widens every year you grow. Run it with your own number rather than the rule of thumb."
+    a: "Around $40,000 a year in online giving, where a $1,188 flat subscription crosses a ~2.95% percentage fee. Above that the subscription wins and the gap widens every year you grow. Run it with your own number instead of the rule of thumb."
   - q: "What do nonprofits spend on donation processing?"
     a: "Our 2026 survey put mean annual donation processing spend at $1,024 for shops under $250K raised, $3,493 at $250K-$1M, $9,906 at $1M-$5M, and $30,824 at $5M+. Those totals include processing fees, which is why the number climbs so steeply with revenue."
 draft: false

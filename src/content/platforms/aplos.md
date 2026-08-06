@@ -74,22 +74,22 @@ The ACH rate has no cap, so check it against your gift profile: a $10,000 bank t
 
 ## How it works with QuickBooks
 
-Worth knowing before you plan your setup: Aplos replaces QuickBooks rather than
+Worth knowing before you plan your setup: Aplos replaces QuickBooks instead of
 connecting to it. There is no live sync in either direction, whatever older
 roundup posts may suggest.
 
 What exists instead is a clean, free migration path: export your account listing
 from QuickBooks to Excel, send it to Aplos support, and they load it, typically in
 two to five business days. The import replaces whatever is already in your Aplos
-account, so schedule it for your first week rather than later.
+account, so schedule it for your first week and not later.
 
-Aplos recommends starting clean rather than importing historic transactions, with
+Aplos recommends starting clean instead of importing historic transactions, with
 old reports exported and kept on file. Converting historic activity into true fund
 accounting is available as a separately quoted implementation project.
 
 That is the right architecture for what it is: Aplos is the accounting software,
 not a layer on top of someone else's. If your bookkeeper wants to keep QuickBooks,
-plan for a switch rather than an addition.
+plan for a switch, not an addition.
 
 One planning detail: third-party integrations start at the Core plan ($129/mo),
 so if you need Bloomerang, Keela or PayPal connections, budget for Core rather
@@ -99,7 +99,7 @@ than Lite from the start.
 
 Aplos acquired Raisely in 2023 and **Keela** in 2024, and in August 2025 the three relaunched as a combined suite under a new brand, **Velora**. All three are still sold separately.
 
-This matters if you're comparing Aplos to Keela: they are the same company now, so treat that comparison as choosing between two products in one family rather than two competitors.
+This matters if you're comparing Aplos to Keela: they are the same company now, so treat that comparison as choosing between two products in one family, not two competitors.
 
 ## What reviewers report
 

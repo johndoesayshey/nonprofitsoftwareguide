@@ -13,7 +13,7 @@ picks:
   - platformSlug: bloomerang
     award: "Best for adoption"
     forWhom: "Teams where several people enter gifts"
-    note: "From $125/mo billed annually ($1,500/yr) for the CRM, unlimited users; donation forms sit in the bundled-only $40/mo Fundraising module, so the practical floor is $165/mo. Consistently rated the easiest system in the category to learn, and the retention dashboards put lapsing donors on the home screen rather than behind a report build. The premium over cheaper systems is roughly the cost of the database actually getting used, which is a good trade right up until the contact-record bill outruns it."
+    note: "From $125/mo billed annually ($1,500/yr) for the CRM, unlimited users; donation forms sit in the bundled-only $40/mo Fundraising module, so the practical floor is $165/mo. Consistently rated the easiest system in the category to learn, and the retention dashboards put lapsing donors on the home screen instead of behind a report build. The premium over cheaper systems is roughly the cost of the database actually getting used, which is a good trade right up until the contact-record bill outruns it."
   - platformSlug: donordock
     award: "Best overall: Editor's choice"
     forWhom: "Shops that want the whole fundraising stack in one plan"
@@ -29,7 +29,7 @@ picks:
   - platformSlug: donorbox
     award: "Best before you buy a CRM"
     forWhom: "A shop keeping donors in a spreadsheet right now"
-    note: "Free to start at roughly 2.95% per donation, no subscription. This is the answer nobody in a vendor roundup gives, and it comes up constantly in real conversations: if donations already arrive through Donorbox, donor records and gift history accumulate there on their own, no migration, no second subscription, nothing to configure. For an organization running a spreadsheet, that is a real step up on day one and it costs nothing to start. The ceiling is specific rather than vague: no soft credits on donor-advised-fund or joint gifts, no household records, no contact history, thin retention reporting. You hit it at the first major-gift conversation. Until then it is a legitimate place to keep donor records."
+    note: "Free to start at roughly 2.95% per donation, no subscription. This is the answer nobody in a vendor roundup gives, and it comes up constantly in real conversations: if donations already arrive through Donorbox, donor records and gift history accumulate there on their own, no migration, no second subscription, nothing to configure. For an organization running a spreadsheet, that is a real step up on day one and it costs nothing to start. The ceiling is specific, not vague: no soft credits on donor-advised-fund or joint gifts, no household records, no contact history, thin retention reporting. You hit it at the first major-gift conversation. Until then it is a legitimate place to keep donor records."
   - platformSlug: littlegreenlight
     award: "Best for a single power user"
     forWhom: "One detail-oriented person who owns the database"
@@ -101,4 +101,4 @@ If a quote lands well above the band for your size, the burden of proof is on th
 
 ## If you already have a system
 
-The decision is different when you're replacing rather than buying. Start with the switching guide for what you're on: [Bloomerang](/alternatives/bloomerang/), [DonorPerfect](/alternatives/donorperfect/), [Little Green Light](/alternatives/little-green-light/), [Raiser's Edge](/alternatives/blackbaud-raisers-edge/) or [Salesforce](/alternatives/salesforce-nonprofit/). Each covers why shops leave, what to move to, and (the part that matters) when staying put is the right answer.
+The decision is different when you're replacing instead of buying. Start with the switching guide for what you're on: [Bloomerang](/alternatives/bloomerang/), [DonorPerfect](/alternatives/donorperfect/), [Little Green Light](/alternatives/little-green-light/), [Raiser's Edge](/alternatives/blackbaud-raisers-edge/) or [Salesforce](/alternatives/salesforce-nonprofit/). Each covers why shops leave, what to move to, and (the part that matters) when staying put is the right answer.

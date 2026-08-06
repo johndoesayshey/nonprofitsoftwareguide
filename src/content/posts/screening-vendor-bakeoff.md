@@ -20,7 +20,7 @@ faq:
 draft: false
 ---
 
-Nothing in wealth screening publishes a rate card. Kindsight, DonorSearch and WealthEngine are all quoted per organization, which means the price you are offered reflects how the negotiation went rather than a market rate.
+Nothing in wealth screening publishes a rate card. Kindsight, DonorSearch and WealthEngine are all quoted per organization, which means the price you are offered reflects how the negotiation went instead of a market rate.
 
 It also means feature-list comparison is nearly useless. Every vendor claims comprehensive data and accurate scoring. The only comparison that tells you anything is output on people you already know.
 
@@ -52,7 +52,7 @@ Give each of them the identical file, with the same fields. Any difference in wh
 
 **Can they explain a rating?** Pick a name and ask how the score was built. This matters more than it sounds. A rating that a gift officer can defend in a portfolio meeting gets acted on; an unexplained number gets quietly ignored, and then you are paying for data nobody uses. Kindsight's transparency on sourcing is its main differentiator for exactly this reason.
 
-**What did they surface that you did not know?** The whole point of screening a file rather than hand-researching a shortlist is finding the quiet $80-a-year donor sitting on real capacity. If nothing in the output surprised you, the tool is confirming your existing list rather than extending it.
+**What did they surface that you did not know?** The whole point of screening a file, not hand-researching a shortlist is finding the quiet $80-a-year donor sitting on real capacity. If nothing in the output surprised you, the tool is confirming your existing list instead of extending it.
 
 ## Expect them to disagree, and use it
 
@@ -72,6 +72,6 @@ Ask about that implementation line specifically. It is the one most likely to ap
 
 ## The option to raise before any of this
 
-If what you actually need is one screen (pre-campaign feasibility, say) you may not need a subscription at all. DonorSearch's per-record pricing screens a file once with no annual commitment, and a consultant-run screen at roughly $4,000–$5,000 delivers a tiered portfolio with suggested asks rather than a data file.
+If what you actually need is one screen (pre-campaign feasibility, say) you may not need a subscription at all. DonorSearch's per-record pricing screens a file once with no annual commitment, and a consultant-run screen at roughly $4,000–$5,000 delivers a tiered portfolio with suggested asks instead of a data file.
 
 Our 2026 survey found 95% of shops under $250K raised spend $0 on screening, and half of the $250K–$1M segment still spends nothing. Before running a bake-off, it is worth confirming you are past the point where the category makes sense at all, [our wealth screening guide](/best/wealth-screening-software/) and [what a prospect research consultant does](/blog/prospect-research-consultant-cost/) both cover that test.

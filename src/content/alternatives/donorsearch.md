@@ -21,7 +21,7 @@ picks:
   - platformSlug: wealthengine
     forWhom: "You screen very large lists and want a third bid"
     note: "Reported from around $5,000/yr for a single user, roughly $15,000/yr at about ten users and roughly $50,000/yr at around a hundred, plus a one-time implementation fee reported anywhere from $2,000 to $20,000. Strong wealth-indicator modeling and built for broad list segmentation rather than deep individual profiles. Include it in a competitive process specifically because these are negotiated deals, a vendor that knows it's the only bid quotes accordingly."
-stayIf: "Your donors give consistently at modest levels and you're looking for the ones who could give more. Demonstrated philanthropic history is the single best predictor of future giving, and weighting it first is DonorSearch's actual thesis rather than a marketing line. The integrations are the other reason to stay: scores that land inside your CRM get used, and scores that live in a separate portal get exported once and forgotten."
+stayIf: "Your donors give consistently at modest levels and you're looking for the ones who could give more. Demonstrated philanthropic history is the single best predictor of future giving, and weighting it first is DonorSearch's actual thesis instead of a marketing line. The integrations are the other reason to stay: scores that land inside your CRM get used, and scores that live in a separate portal get exported once and forgotten."
 draft: false
 ---
 

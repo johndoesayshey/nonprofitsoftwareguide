@@ -14,7 +14,7 @@ picks:
   - platformSlug: zeffy
     award: "Best free option"
     forWhom: "An organization with no budget line for software at all"
-    note: "Free at any volume with no platform fee and no processing fee, a $100 donation deposits $100. Covers donations, ticketing, raffles and memberships. Funded by an optional tip donors are asked for at checkout, which is worth raising with your board before it appears on the giving page. It holds transactions rather than donor history, so it is a giving page rather than a database."
+    note: "Free at any volume with no platform fee and no processing fee, a $100 donation deposits $100. Covers donations, ticketing, raffles and memberships. Funded by an optional tip donors are asked for at checkout, which is worth raising with your board before it appears on the giving page. It holds transactions instead of donor history, so it is a giving page, not a database."
   - platformSlug: givebutter
     award: "Best for events"
     forWhom: "A group whose fundraising is one annual event"
@@ -31,7 +31,7 @@ decidingFactors:
   - factor: "Use an organizational email, never a personal one."
     detail: "Every account should be registered to an address the organization controls, treasurer@yourgroup.org, not a volunteer's Gmail. This single decision prevents most of the access disasters in this vertical, and it costs nothing."
   - factor: "Free is genuinely competitive here."
-    detail: "At this scale the free platforms are not a compromise. Zeffy and Givebutter do what most all-volunteer groups need, and the gap versus a paid CRM only opens up when you want donor history and a second ask, which requires someone to work it, and that is a capacity question rather than a software one."
+    detail: "At this scale the free platforms are not a compromise. Zeffy and Givebutter do what most all-volunteer groups need, and the gap versus a paid CRM only opens up when you want donor history and a second ask, which requires someone to work it, and that is a capacity question instead of a software one."
 faq:
   - q: "What is the cheapest donor software for a small volunteer nonprofit?"
     a: "Zeffy is free at any volume, including processing fees, funded by an optional donor tip at checkout. Givebutter is free with tips on and adds events and peer-to-peer. For an actual database with donor history, Eleo starts at $39/mo up to 2,500 records."

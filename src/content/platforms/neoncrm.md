@@ -53,7 +53,7 @@ otherOptions:
     note: "Bloomerang leads with lapsing donors rather than breadth."
 ---
 
-[Neon CRM](/go/neoncrm) is a broad donor-management platform that folds donations, memberships, events, and email into one system. Pricing starts around $99 a month and scales with your organization's revenue rather than record count, with unlimited users. For organizations paying for three separate tools, the consolidation is the draw.
+[Neon CRM](/go/neoncrm) is a broad donor-management platform that folds donations, memberships, events, and email into one system. Pricing starts around $99 a month and scales with your organization's revenue instead of record count, with unlimited users. For organizations paying for three separate tools, the consolidation is the draw.
 
 ## Who it fits
 

@@ -29,7 +29,7 @@ One disclosure worth making: this site earns affiliate income from several platf
 
 ## Consideration one: the tip prompt
 
-The tip ask is donor-facing, which means a step in your checkout carries Zeffy's request rather than yours. Some organizations pause on that.
+The tip ask is donor-facing, which means a step in your checkout carries Zeffy's request instead of yours. Some organizations pause on that.
 
 In practice, most shops find donors take it in stride. The prompt is transparent about what it funds, the donor stays in control of the amount, and the alternative on other platforms is fees quietly deducted from the gift. Many organizations see it as the cleaner arrangement: the donor knowingly funds the tool instead of the nonprofit silently paying for it. It is a tradeoff, and one that plenty of shops accept happily.
 
@@ -37,7 +37,7 @@ Worth doing before you decide: run a $5 test donation to yourself and see the pr
 
 ## Consideration two: payout timing
 
-Zeffy pays out on a schedule rather than instantly. For routine operations this is a bookkeeping detail. It matters in two cases: a shop running very tight on cash flow, or an event where you want proceeds in the account the next morning. If either describes you, plan the calendar around the payout dates. That is the entire adjustment.
+Zeffy pays out on a schedule, not instantly. For routine operations this is a bookkeeping detail. It matters in two cases: a shop running very tight on cash flow, or an event where you want proceeds in the account the next morning. If either describes you, plan the calendar around the payout dates. That is the entire adjustment.
 
 ## Who Zeffy fits
 

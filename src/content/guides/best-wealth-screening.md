@@ -17,7 +17,7 @@ picks:
   - platformSlug: wealthengine
     award: "Best for very large lists"
     forWhom: "Shops segmenting a hundred thousand records into capacity bands"
-    note: "Reported from around $5,000/yr for a single user, roughly $15,000/yr at about ten users and roughly $50,000/yr at around a hundred, plus a one-time implementation fee reported between $2,000 and $20,000. Built for breadth rather than depth on individuals. Include it in a competitive process specifically because these are negotiated deals and a vendor that knows it is the only bid quotes accordingly."
+    note: "Reported from around $5,000/yr for a single user, roughly $15,000/yr at about ten users and roughly $50,000/yr at around a hundred, plus a one-time implementation fee reported between $2,000 and $20,000. Built for breadth instead of depth on individuals. Include it in a competitive process specifically because these are negotiated deals and a vendor that knows it is the only bid quotes accordingly."
 decidingFactors:
   - factor: "The test is a calendar, not a feature list."
     detail: "Ask who by name will make the visits, and whether that is on their calendar. If there is no answer, no screening product on the market will pay for itself, and hand-researching your top 25 prospects is the cheaper experiment. The output of every tool here is a ranked list, and a ranked list nobody works is an expensive PDF."
@@ -80,7 +80,7 @@ That test also exposes the real difference between these products, which no mark
 
 ## On price
 
-Nothing in this category publishes a rate card, which means your quote reflects the negotiation rather than a market rate.
+Nothing in this category publishes a rate card, which means your quote reflects the negotiation, not a market rate.
 
 Run the same test file past at least two vendors and tell each one you are doing it. That is the entirety of your leverage, and it works far better before you sign than at renewal.
 

@@ -34,7 +34,7 @@ Before any external source. Pull your own giving history and sort three ways:
 
 **Anyone whose giving stepped up.** A donor who went from $250 to $1,000 made a decision. That decision is worth a conversation.
 
-This costs nothing and produces a better starting list than any screening tool, because it is built on behavior toward *you* rather than capacity in general.
+This costs nothing and produces a better starting list than any screening tool, because it is built on behavior toward *you* instead of capacity in general.
 
 ## The free external sources, in order of usefulness
 
@@ -80,6 +80,6 @@ The trigger is not a revenue number, it is a capacity one: the month hand resear
 
 Our survey puts mean prospect research spend at $1,319 for shops raising $250K–$1M and $4,135 at $1M–$5M. Entry subscriptions are reported from around $4,000–$5,000 a year: [Kindsight](/go/kindsight) from about $4,150 for one user and roughly 1,500 screens, [DonorSearch](/go/donorsearch) from about $4,000 for a small file.
 
-There is also a middle option most shops miss. DonorSearch's pay-per-record screening, reported at roughly $1–$2 per record, screens a file once with no subscription at all, which is the right shape for pre-campaign feasibility, since that is a project rather than an ongoing need. Our [wealth screening guide](/best/wealth-screening-software/) covers how to compare vendors properly using a test file of people whose capacity you already know.
+There is also a middle option most shops miss. DonorSearch's pay-per-record screening, reported at roughly $1–$2 per record, screens a file once with no subscription at all, which is the right shape for pre-campaign feasibility, since that is a project, not an ongoing need. Our [wealth screening guide](/best/wealth-screening-software/) covers how to compare vendors properly using a test file of people whose capacity you already know.
 
 Until then, the day spent on your top 25 is the better investment, and it is the one that tells you whether anyone is going to make the visits at all.

@@ -57,7 +57,7 @@ Grassroots and small shops where every fee dollar matters, and any organization 
 | Processing fee | $0 |
 | Funded by | Optional donor tips at checkout |
 
-Two things to plan around. The tip prompt is donor-facing, so look at the checkout flow yourself and make sure you're comfortable with it; many shops are, and donors can always decline. Payouts are scheduled rather than instant, so if event cash needs to arrive by a specific date, check the disbursement calendar ahead of time.
+Two things to plan around. The tip prompt is donor-facing, so look at the checkout flow yourself and make sure you're comfortable with it; many shops are, and donors can always decline. Payouts are scheduled instead of instant, so if event cash needs to arrive by a specific date, check the disbursement calendar ahead of time.
 
 ## How it compares
 

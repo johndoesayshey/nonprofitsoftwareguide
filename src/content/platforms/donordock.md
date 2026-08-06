@@ -78,7 +78,7 @@ Readers get 10% off the first payment through [this site's link](/go/donordock).
 
 ## How it compares
 
-[Bloomerang](/go/bloomerang) has deeper retention analytics and prices by record count. [Eleo](/go/eleo) is the budget pick with its whole price ladder published. [Little Green Light](/go/littlegreenlight) offers the most configurability per dollar for a single capable admin. The dividing line is temperament: choose DonorDock when you want the software to drive the follow-up habit, and choose on three-year cost rather than entry price alone.
+[Bloomerang](/go/bloomerang) has deeper retention analytics and prices by record count. [Eleo](/go/eleo) is the budget pick with its whole price ladder published. [Little Green Light](/go/littlegreenlight) offers the most configurability per dollar for a single capable admin. The dividing line is temperament: choose DonorDock when you want the software to drive the follow-up habit, and choose on three-year cost instead of entry price alone.
 
 ## Bottom line
 

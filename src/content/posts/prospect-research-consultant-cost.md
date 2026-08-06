@@ -12,7 +12,7 @@ faq:
   - q: "What does a prospect research consultant cost?"
     a: "A screening-and-interpretation project typically runs around $4,000-$5,000, comparable to a year of an entry-level screening subscription, with the difference that the deliverable is a tiered portfolio rather than a data file. Ongoing retainers and per-profile research are priced separately."
   - q: "Is a consultant cheaper than screening software?"
-    a: "For a one-time need, usually yes in total cost, because you buy the project rather than a year plus the staff time to interpret it. For ongoing screening of a growing file, software is cheaper. The question is whether the need recurs."
+    a: "For a one-time need, usually yes in total cost, because you buy the project instead of a year plus the staff time to interpret it. For ongoing screening of a growing file, software is cheaper. The question is whether the need recurs."
   - q: "What should a prospect research engagement deliver?"
     a: "A tiered prospect list with names, capacity ranges, suggested ask amounts and a rationale per prospect, plus a written method so your team can maintain it. A data file with scores is a partial deliverable, not the whole job."
   - q: "Can we screen first and interpret later ourselves?"
@@ -36,7 +36,7 @@ A screening file comes back with a few hundred names carrying scores. The obviou
 
 The top of the list is often people with significant wealth and no relationship to you. They screen high because capacity models measure capacity. Cold-soliciting them converts badly and burns the enthusiasm of whoever tried.
 
-The names worth working are further down: moderate capacity with a long giving history, someone connected to a board member, a donor whose giving stepped up last year. Finding those requires reading the screening output against your own data and your own relationships, which is judgment rather than sorting.
+The names worth working are further down: moderate capacity with a long giving history, someone connected to a board member, a donor whose giving stepped up last year. Finding those requires reading the screening output against your own data and your own relationships, which is judgment instead of sorting.
 
 That is what the engagement buys. Someone who has built portfolios before, looking at your file, saying: start with these twelve, this is the range, this is why.
 

@@ -53,7 +53,7 @@ otherOptions:
     note: "Giving platforms hold donors and gifts; a donor CRM holds the relationship history a major-gift program runs on."
 ---
 
-[4aGoodCause](/go/4agoodcause) is donation and event software built around monthly giving: donation pages, event registration, peer-to-peer, and a built-in donor CRM, sold as a flat subscription from $99 a month billed annually. The CRM is simpler than a standalone database but it is real: donor profiles, giving history, notes, tagging, custom fields and acknowledgement letters. Email marketing runs through the Mailchimp integration rather than being built in. It takes no percentage of your donations, which is the whole argument for it. Past roughly $40,000 of online giving a year, that flat fee costs less than a percentage platform.
+[4aGoodCause](/go/4agoodcause) is donation and event software built around monthly giving: donation pages, event registration, peer-to-peer, and a built-in donor CRM, sold as a flat subscription from $99 a month billed annually. The CRM is simpler than a standalone database but it is real: donor profiles, giving history, notes, tagging, custom fields and acknowledgement letters. Email marketing runs through the Mailchimp integration instead of being built in. It takes no percentage of your donations, which is the whole argument for it. Past roughly $40,000 of online giving a year, that flat fee costs less than a percentage platform.
 
 ## Who it fits
 
@@ -67,7 +67,7 @@ Shops raising somewhere between $100k and a few million where online giving is g
 | Growing | $249/mo ($2,988/yr) | $289/mo | Up to $250K/yr |
 | Scale | $429/mo ($5,148/yr) | $499/mo | Unlimited |
 
-First month free on every plan. The revenue caps work in your favor: going over one simply triggers an upgrade at renewal, and donations never stop. Your payment processor still charges its own transaction fees, typically 2.2-2.9% plus a per-gift amount, exactly as it would on any other platform. Donors can optionally tip to cover those, and that tip goes to you rather than to 4aGoodCause.
+First month free on every plan. The revenue caps work in your favor: going over one simply triggers an upgrade at renewal, and donations never stop. Your payment processor still charges its own transaction fees, typically 2.2-2.9% plus a per-gift amount, exactly as it would on any other platform. Donors can optionally tip to cover those, and that tip goes to you, not to 4aGoodCause.
 
 ## The break-even, in dollars
 
@@ -89,4 +89,4 @@ Two crossovers matter. Grassroots beats a 2.95% fee from about **$40,000** up to
 
 ## Bottom line
 
-Add up what you raised online last year and multiply by your current platform's percentage. If that number is over about $1,200, this is worth a call. [See 4aGoodCause pricing](/go/4agoodcause), and use the first free month to move one recurring campaign across rather than the whole operation.
+Add up what you raised online last year and multiply by your current platform's percentage. If that number is over about $1,200, this is worth a call. [See 4aGoodCause pricing](/go/4agoodcause), and use the first free month to move one recurring campaign across instead of the whole operation.

@@ -16,7 +16,7 @@ faq:
   - q: "What should a one-person shop track for each grant?"
     a: "Funder, program, amount requested, submission date, decision date, outcome, reporting deadlines, and the contact you dealt with. Reporting deadlines are the field people leave out and the one that costs renewals."
   - q: "Is it better to apply for more grants or fewer?"
-    a: "Fewer, better matched. Most small shops have a poor hit rate because they apply widely rather than because they write badly. Fit is visible in a funder's 990 giving history before you write a word."
+    a: "Fewer, better matched. Most small shops have a poor hit rate because they apply widely instead of because they write badly. Fit is visible in a funder's 990 giving history before you write a word."
 draft: false
 ---
 
@@ -24,7 +24,7 @@ One-person grant programs almost never fail at writing. They fail at the calenda
 
 ## The volume that is actually sustainable
 
-Eight to twelve well-researched applications a year, if grant writing is part of a job rather than the whole job.
+Eight to twelve well-researched applications a year, if grant writing is part of a job, not the whole job.
 
 Each application runs roughly 15–25 hours: researching the funder properly, drafting, building the budget, getting internal review, assembling attachments, submitting. Twelve applications is 200–300 hours, which is most of a day a week, every week.
 
@@ -70,7 +70,7 @@ The order to cut in:
 
 **Never cut reporting.** A late report on a funded grant is worse than a missed application. It damages a relationship you already have.
 
-**Cut the weakest-fit application first**, not the one due soonest. If you were applying on hope rather than on giving history, that is the one to drop, and dropping it costs you almost nothing.
+**Cut the weakest-fit application first**, not the one due soonest. If you were applying on hope instead of on giving history, that is the one to drop, and dropping it costs you almost nothing.
 
 **Ask for an extension before you are late, not after.** Many funders will grant one. Almost none will forgive silence.
 
