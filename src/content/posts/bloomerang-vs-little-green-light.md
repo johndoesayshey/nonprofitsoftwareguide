@@ -50,4 +50,4 @@ Take advantage of the fact that both vendors make trying easy. LGL offers a free
 
 Then ask the one question that settles it: who, by name, will open this system every day? Buy for that person.
 
-Both are credible answers to the CRM line in [the $250k-$1M stack](/stacks/250k-1m/), where our own default is DonorDock for its unlimited contacts and 90-day guarantee. Bloomerang becomes the recommendation at [$5M+](/stacks/5m-plus/), where the reporting is the point.
+Both are credible answers to the CRM line in [the $250k-$1M stack](/stacks/250k-1m/), where our own default is DonorDock for its unlimited contacts and 90-day guarantee. DonorDock stays the pick at [$5M+](/stacks/5m-plus/) as well, where consolidating the database, online giving, email and text under one contract is worth more than any single best-in-class tool. Bloomerang is the alternative to weigh there when retention reporting is the thing the board asks about most.

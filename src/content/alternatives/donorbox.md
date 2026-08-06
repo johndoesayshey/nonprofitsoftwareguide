@@ -26,7 +26,7 @@ picks:
     note: "0% platform fee with donor tips on, roughly 3% with tips off, processing fees either way. Ticketing, auctions, campaign pages and peer-to-peer in one modern package, considerably more event machinery than Donorbox carries, at no subscription cost. Same tip-dependence caveat as Zeffy."
   - platformSlug: zeffy
     forWhom: "You'd rather your donors carry the cost than your budget"
-    note: "Free at any volume, including processing fees, a $100 gift deposits $100. Covers donations, ticketing, raffles and memberships, running on Stripe underneath. The tradeoff is that it's funded by an optional tip donors are asked for at checkout, so your net per gift depends on donor behaviour rather than a fixed rate. For a shop under roughly $40k online, this is very hard to beat on cost."
+    note: "Free at any volume, including processing fees, a $100 gift deposits $100. Covers donations, ticketing, raffles and memberships, running on Stripe underneath. The tradeoff is that it's funded by an optional tip donors are asked for at checkout, so your net per gift depends on donor behavior rather than a fixed rate. For a shop under roughly $40k online, this is very hard to beat on cost."
 stayIf: "Recurring giving is your growth engine. Donorbox's monthly-gift tooling (donor portals, failed-card recovery, upgrade prompts) is the strongest in its price class, and the reason a percentage fee is defensible is that recovered failed cards and upgraded monthly gifts routinely return more than the fee costs. Before you move, price what you'd lose: if 40% of your online revenue is recurring, a cheaper platform with weaker retention tooling can easily cost more than it saves."
 draft: false
 ---

@@ -3,17 +3,15 @@ product: "DonorPerfect"
 slug: donorperfect
 category: donor-crm
 targetQuery: "donorperfect alternatives"
-lastVerified: 2026-08-03
+lastVerified: 2026-08-06
 incumbentSlug: null
 reasonsToLeave:
   - reason: "The bill grows with the record count."
-    detail: "Pricing steps up as the file grows, which means a successful year (a good acquisition mailing, an inherited list, an event that added 4,000 names) arrives as a renewal increase."
-  - reason: "Features are tiered, not included."
-    detail: "Online forms, monthly giving tools, mobile access and advanced reporting sit on different plans. Shops routinely find the feature they were sold requires the tier above the one they bought."
+    detail: "Pricing steps up as the file grows, which means a successful year (a good acquisition mailing, an inherited list, an event that added 4,000 names) arrives as a renewal increase. The quote form asks for your constituent count in bands before anyone quotes you, which tells you what the price is keyed to."
+  - reason: "There is no published price."
+    detail: "DonorPerfect's pricing page names no rate at any tier. It is a custom-quote form: you give a representative your constituent count and your goals, and a number comes back. Budgeting two years ahead means asking a salesperson what year two costs, and comparing offers means running that process at every vendor."
   - reason: "The interface shows its age."
     detail: "It is a deep, capable system with a long history, and it looks like one. Part-time staff and board members tend not to log in, which is how databases go stale."
-  - reason: "Support and training are priced separately."
-    detail: "Onboarding packages and premium support are real line items. Compare the first-year total, not the monthly rate."
 picks:
   - platformSlug: donordock
     forWhom: "Your list is growing and you want the price to stop moving"
@@ -31,7 +29,9 @@ stayIf: "Your file is large, your gift entry is high-volume, and someone on staf
 draft: false
 ---
 
-Most shops don't leave DonorPerfect because it can't do the job. They leave because the invoice moves in the wrong direction: up with the record count, up with the feature tier, up with the support package. The alternative that fixes that is usually a system with published, flat, or small-step pricing.
+Most shops don't leave DonorPerfect because it can't do the job. They leave because of the invoice: it moves up with the record count, and there is no published rate card to check it against. The alternative that fixes that is usually a system with published, flat, or small-step pricing.
+
+Credit where it is due first. Every DonorPerfect system now includes the pieces that used to sit behind tiers: online donation forms, the mobile app, advanced reporting dashboards, volunteer tracking, grant management, chat support and training webinars, plus Constant Contact and a Mailchimp integration. If you shopped DonorPerfect a few years ago and ruled it out because the feature you needed was one tier up, that specific objection no longer holds.
 
 ## Sort the complaint before you shop
 

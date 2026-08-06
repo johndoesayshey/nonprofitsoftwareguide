@@ -76,7 +76,7 @@ The one thing to settle first: both are funded by asking your donors to add an o
 
 ## When a database starts to earn its price
 
-Not at a donor count. At a behaviour.
+Not at a donor count. At a behavior.
 
 A spreadsheet holds 300 donors perfectly well. What it cannot do is tell you who gave last year and hasn't this year, hold what was said at the last conversation, or survive being handed between four people.
 

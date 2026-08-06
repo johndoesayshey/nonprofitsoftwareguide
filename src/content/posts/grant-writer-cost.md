@@ -44,7 +44,7 @@ You will be offered it, usually by someone new to the field, and it is worth und
 
 **Many funders prohibit it.** Using grant funds to pay a percentage to the person who secured them is disallowed under a lot of award terms, and discovering that after the fact is a real problem.
 
-**The incentive is wrong.** A writer paid on outcome is rewarded for volume and for chasing the largest possible ask, not for fit. Volume applications to poorly matched funders is precisely the behaviour that burns relationships you will want in five years.
+**The incentive is wrong.** A writer paid on outcome is rewarded for volume and for chasing the largest possible ask, not for fit. Volume applications to poorly matched funders is precisely the behavior that burns relationships you will want in five years.
 
 **The timing does not work.** Grant decisions land three to nine months after submission. A commission arrangement means nobody gets paid for most of a year, which selects for people who cannot afford to wait, and produces pressure to submit rather than to submit well.
 

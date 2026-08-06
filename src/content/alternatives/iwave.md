@@ -7,7 +7,7 @@ lastVerified: 2026-08-03
 incumbentSlug: kindsight
 reasonsToLeave:
   - reason: "It's an annual contract at four figures."
-    detail: "Reported entry is around $4,150/yr for one user and roughly 1,500 screens; the Professional tier is reported at $5,000-$8,000/yr for three users and about 5,000 screens, plus credits for larger prospecting runs. That's a commitment before you know whether the output changes anyone's behaviour."
+    detail: "Reported entry is around $4,150/yr for one user and roughly 1,500 screens; the Professional tier is reported at $5,000-$8,000/yr for three users and about 5,000 screens, plus credits for larger prospecting runs. That's a commitment before you know whether the output changes anyone's behavior."
   - reason: "Screening volume is capped."
     detail: "Tiers are bounded by seats and screens. A single full-file screen can consume most of a year's allocation, which is awkward for a shop that screens once and then wants to re-screen after an acquisition push."
   - reason: "Scores don't create a portfolio."

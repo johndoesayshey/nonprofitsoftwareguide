@@ -70,4 +70,4 @@ Log it: funder, date, amount, program, expected response window. Then leave it a
 
 If the guidelines state a response time, wait it out before following up once. If they say you will only hear if invited, that is the whole process, do not follow up at all, and do not read silence as anything other than a decline.
 
-An invitation is not an award. Invited proposals still get declined. But the fit question has been settled in your favour, which is the hardest part, and the odds from there are far better than a cold submission ever offers.
+An invitation is not an award. Invited proposals still get declined. But the fit question has been settled in your favor, which is the hardest part, and the odds from there are far better than a cold submission ever offers.

@@ -53,7 +53,7 @@ otherOptions:
     note: "Aplos charges 1% on ACH with no cap, $100 on a $10,000 transfer. Donately caps ACH at $5."
   - need: "Want the strongest retention reporting?"
     platformSlug: bloomerang
-    note: "Aplos reports on the books; Bloomerang reports on donor behaviour."
+    note: "Aplos reports on the books; Bloomerang reports on donor behavior."
 ---
 
 Aplos is a fund accounting system with donor management attached, and that is its strength: if your pain is the treasurer's spreadsheet and the audit, this is the category built for it. True fund accounting, a general ledger by fund, is something almost no donor CRM offers, and Aplos publishes its rate card, which is rare in this space.

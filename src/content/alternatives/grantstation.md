@@ -53,4 +53,4 @@ Keeping GrantStation for broad discovery, using the library for deep 990 work on
 
 ## Reading the 990 either way
 
-Whichever tool you use, the discipline matters more than the source. A foundation's stated priorities are marketing; its 990 giving history is behaviour. When the two disagree, the giving history is the truth, and applying against the stated priorities is how a strong proposal gets declined for reasons nobody ever explains to you.
+Whichever tool you use, the discipline matters more than the source. A foundation's stated priorities are marketing; its 990 giving history is behavior. When the two disagree, the giving history is the truth, and applying against the stated priorities is how a strong proposal gets declined for reasons nobody ever explains to you.

@@ -86,7 +86,7 @@ nothing on it is labelled. Verified 3 August 2026:
 - **Shipping and telephony vendors**, FedEx, UPS, USPS, Twilio
 
 Salesforce appears on that wall and has zero documentation anywhere in
-CharityEngine's help centre. Given that Blackbaud and Luminate are plainly migration
+CharityEngine's help center. Given that Blackbaud and Luminate are plainly migration
 sources rather than integrations, Salesforce most likely is too, but we could not
 confirm it either way, so treat it as unestablished rather than as a feature.
 

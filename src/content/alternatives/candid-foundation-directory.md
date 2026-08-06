@@ -45,6 +45,6 @@ The cheap version of the same fix: a shared spreadsheet with columns for funder,
 
 ## Reading 990s either way
 
-Whichever tool you use, the discipline matters more than the source. A foundation's stated priorities are marketing; its 990 giving history is behaviour. When the two disagree, the giving history is the truth, and applying against the stated priorities is how a strong proposal gets declined for reasons nobody ever explains to you.
+Whichever tool you use, the discipline matters more than the source. A foundation's stated priorities are marketing; its 990 giving history is behavior. When the two disagree, the giving history is the truth, and applying against the stated priorities is how a strong proposal gets declined for reasons nobody ever explains to you.
 
 Both Foundation Directory and Instrumentl put grant history in front of you. GrantStation is thinner here, if you go that route, pair it with the library for diligence on any funder you're seriously pursuing. That combination runs about $199 a year and is the most cost-effective grant research setup available to a small shop.

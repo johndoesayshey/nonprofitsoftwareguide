@@ -22,7 +22,7 @@ picks:
   - platformSlug: zeffy
     award: "Best free option"
     forWhom: "A rescue where every dollar is vet bills"
-    note: "Free at any volume with no platform fee and no processing fee, a $50 donation deposits $50. Covers donations, ticketing, raffles and memberships, which happens to cover most of what a rescue runs. Funded by an optional tip donors are asked for at checkout. The trade-off is that your net per gift depends on donor behaviour rather than a fixed rate, and it isn't a donor database; it holds transactions, not relationship history."
+    note: "Free at any volume with no platform fee and no processing fee, a $50 donation deposits $50. Covers donations, ticketing, raffles and memberships, which happens to cover most of what a rescue runs. Funded by an optional tip donors are asked for at checkout. The trade-off is that your net per gift depends on donor behavior rather than a fixed rate, and it isn't a donor database; it holds transactions, not relationship history."
   - platformSlug: littlegreenlight
     award: "Best for custom tracking"
     forWhom: "A rescue that wants adoption and donor history in one record"

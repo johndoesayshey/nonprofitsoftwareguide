@@ -50,7 +50,7 @@ Arts fundraising has a structural problem no other vertical shares to the same d
 
 ## The box office question
 
-Your ticketing platform holds who came, what they paid, where they sat and how often they return. That is the richest behavioural data in your organization, and in most arts nonprofits it lives somewhere development can't query.
+Your ticketing platform holds who came, what they paid, where they sat and how often they return. That is the richest behavioral data in your organization, and in most arts nonprofits it lives somewhere development can't query.
 
 There's no clean solution, but there is a decision that has to be made explicitly rather than by default. Pick which system is authoritative for the patron record. Then define what moves the other way and how often.
 

@@ -34,7 +34,7 @@ Before any external source. Pull your own giving history and sort three ways:
 
 **Anyone whose giving stepped up.** A donor who went from $250 to $1,000 made a decision. That decision is worth a conversation.
 
-This costs nothing and produces a better starting list than any screening tool, because it is built on behaviour toward *you* rather than capacity in general.
+This costs nothing and produces a better starting list than any screening tool, because it is built on behavior toward *you* rather than capacity in general.
 
 ## The free external sources, in order of usefulness
 

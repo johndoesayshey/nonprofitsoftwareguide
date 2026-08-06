@@ -72,7 +72,7 @@ The cheapest complete setup for a small shop: GrantStation for discovery, the li
 
 ## Reading the 990, whichever tool you use
 
-The discipline matters more than the source. A foundation's stated priorities are marketing. Its 990 giving history is behaviour.
+The discipline matters more than the source. A foundation's stated priorities are marketing. Its 990 giving history is behavior.
 
 When those disagree, the giving history is the truth, and applying against the stated priorities is how a strong proposal gets declined for reasons nobody ever explains to you. Every tool here puts grant history in front of you. Whether you read it before writing is the part that decides your hit rate.
 

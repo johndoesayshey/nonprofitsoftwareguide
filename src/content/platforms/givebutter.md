@@ -37,7 +37,7 @@ strengths:
   - "The most modern donor-facing experience among the free options"
   - "Clean pricing switch: tips on for 0%, tips off for a flat 3%"
 otherOptions:
-  - need: "Want fees that don't depend on donor behaviour?"
+  - need: "Want fees that don't depend on donor behavior?"
     platformSlug: 4agoodcause
     note: "The 0% headline holds only while tips are on and donors leave them on; turn tips off and a platform fee applies."
   - need: "Running a large auction?"

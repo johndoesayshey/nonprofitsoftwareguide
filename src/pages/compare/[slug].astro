@@ -55,7 +55,7 @@ const rows: Array<[string, string, string]> = [
 
 <BaseLayout
   title={`${a.name} vs ${b.name}`}
-  description={`${a.name} vs ${b.name}: price, pricing model, and fit for ${catLabel.toLowerCase()}. Which one fits your shop.`}
+  description={`${a.name} vs ${b.name}: price, pricing model, and fit. Which one fits your shop.`}
   section="compare"
   noindex={isDraft}>
   <div class="wrap">
@@ -71,12 +71,21 @@ const rows: Array<[string, string, string]> = [
       <p class="kicker">{catLabel} · head to head</p>
       <h1>{a.name} vs {b.name}</h1>
 
-      <!-- Answer first: assembled from real fields, not invented. -->
+      <!--
+        Answer first, assembled from real fields, not invented.
+
+        Only short fields get spliced into the sentence. The previous version
+        lowercased each product's whole "best for" paragraph and joined the two
+        with a semicolon, which turned CRM into "crm" and Mailchimp into
+        "mailchimp", and produced ".;" and ".." wherever the source text already
+        ended in a period. Both paragraphs render verbatim in the table below,
+        so the intro does not need to repeat them.
+      -->
       <p class="lead">
-        {a.name} and {b.name} are both {catLabel.toLowerCase()} tools.
-        {a.name} fits {bestForIn(a, pair.category).toLowerCase()}; {b.name} fits {bestForIn(b, pair.category).toLowerCase()}.
-        The table below lines up price and fit so you can see which one
-        matches your shop.
+        {a.name} and {b.name} both sit in {catLabel}.
+        {a.name}: {a.entryPrice}. {b.name}: {b.entryPrice}.
+        The table below lines up pricing model and fit, each in the product's own
+        terms, so you can see which one matches your shop.
       </p>
 
       <AffiliateDisclosure />

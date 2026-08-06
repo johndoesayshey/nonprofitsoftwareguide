@@ -44,7 +44,7 @@ otherOptions:
     note: "Jotform is the better front door for applications, intake and registrations."
   - need: "Team past a few seats?"
     platformSlug: null
-    note: "Per-seat pricing adds up, so apply to the nonprofit program before you scale the licence count."
+    note: "Per-seat pricing adds up, so apply to the nonprofit program before you scale the license count."
 ---
 
 [monday.com](/go/monday) is a work-management platform that many nonprofits run alongside their fundraising stack: program tracking, grant deliverables, event run-of-show, volunteer coordination. There's a free two-seat plan, paid plans start at $9 per seat per month billed annually, and monday.com operates a nonprofit program with discounted plans.

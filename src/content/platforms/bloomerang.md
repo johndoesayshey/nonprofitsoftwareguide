@@ -49,7 +49,7 @@ otherOptions:
     note: "Neon CRM handles renewals and member benefits natively."
 ---
 
-[Bloomerang](/go/bloomerang) is a donor CRM built around retention. Its dashboards put lapsing donors in front of you before they're gone. The CRM starts at $125 a month billed annually ($1,500 a year) with unlimited users. It's the ease-of-use pick for small and midsize teams.
+[Bloomerang](/go/bloomerang) is a donor CRM built around retention. Its dashboards put lapsing donors in front of you before they're gone. The CRM starts at $125 a month billed annually ($1,500 a year) with unlimited users. It's the ease-of-use pick once several people share the database, which is why it earns its keep at mid to large organizations.
 
 ## Who it fits
 

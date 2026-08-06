@@ -46,7 +46,7 @@ faq:
 draft: false
 ---
 
-School advancement is the vertical where generic donor software strains hardest, and the reason is structural: schools have four constituencies with different giving behaviours, and the same human being is frequently in three of them.
+School advancement is the vertical where generic donor software strains hardest, and the reason is structural: schools have four constituencies with different giving behaviors, and the same human being is frequently in three of them.
 
 ## The four lists
 

@@ -16,11 +16,11 @@ faq:
   - q: "Does 'we received more requests than we could fund' mean anything?"
     a: "It is almost always true and almost never the whole reason. Funders decline far more applications than budget alone requires, because fit, capacity and timing screen most of them out before money is the constraint."
   - q: "How can I tell if we are a fit before applying?"
-    a: "The 990 giving history. It shows which organizations a funder actually gave to, at what size, in what geography, over several years. Stated priorities are marketing; the grant list is behaviour. When the two disagree, believe the list."
+    a: "The 990 giving history. It shows which organizations a funder actually gave to, at what size, in what geography, over several years. Stated priorities are marketing; the grant list is behavior. When the two disagree, believe the list."
 draft: false
 ---
 
-Decline letters are written to close the conversation without giving offence, which is why they all say the same thing: many worthy applications, limited resources, we encourage you to apply again.
+Decline letters are written to close the conversation without giving offense, which is why they all say the same thing: many worthy applications, limited resources, we encourage you to apply again.
 
 That sentence is usually true and almost never the reason. Here are the reasons, roughly in order of how often they apply.
 
@@ -28,7 +28,7 @@ That sentence is usually true and almost never the reason. Here are the reasons,
 
 This is the largest category by a wide margin, and it is entirely preventable.
 
-A foundation's stated priorities are marketing copy. Its 990 giving history is behaviour, who it actually funded, for how much, where, over several years. When the two disagree, the giving history is the truth.
+A foundation's stated priorities are marketing copy. Its 990 giving history is behavior, who it actually funded, for how much, where, over several years. When the two disagree, the giving history is the truth.
 
 The mismatches that produce declines are usually obvious in hindsight. A funder whose stated interest is "education" but whose entire grant list is scholarships at three universities. A regional funder with a geographic footprint you sit just outside. A funder whose largest grant in four years was $10,000, receiving a $60,000 request.
 

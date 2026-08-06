@@ -13,7 +13,7 @@ pricingTiers:
     price: "~$150/mo + ~1.75%"
     note: "fee drop pays for itself past ~$150k"
 lastVerified: 2026-07-29
-bestFor: "Shops that want a low barrier to entry on cost (no payments until you receive donations) with opportunities to unlock substantial features down the road (like their donor CRM). Earned place as a trusted brand in the non-profit community."
+bestFor: "Shops that want a low barrier to entry on cost (no payments until you receive donations) with opportunities to unlock substantial features down the road (like their donor CRM). It has earned its place as a trusted brand in the nonprofit community."
 targetQuery: "donorbox review"
 affiliateSlug: donorbox
 freeTier: true

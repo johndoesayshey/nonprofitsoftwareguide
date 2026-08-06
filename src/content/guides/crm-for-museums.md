@@ -25,7 +25,7 @@ picks:
     note: "$45/mo up to 2,500 constituents, about $135/mo at 50,000, no contracts, no setup fees. Historical societies and small museums have unusual constituent structures (life members, honorary members, family memberships, collection donors) and LGL's custom fields will model them at a price a volunteer board will approve."
   - platformSlug: givebutter
     award: "Best for events and campaigns"
-    forWhom: "A museum whose fundraising centres on an annual benefit"
+    forWhom: "A museum whose fundraising centers on an annual benefit"
     note: "0% platform fee with donor tips on, roughly 3% with tips off, processing fees either way. Ticketing, auctions and campaign pages in one free package, enough to run a benefit without a seasonal contract, and enough for a small capital appeal."
 decidingFactors:
   - factor: "Membership is a renewal business, not a donor list."

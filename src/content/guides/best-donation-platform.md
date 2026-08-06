@@ -16,12 +16,12 @@ picks:
     note: "Free to start at roughly 2.95%, no subscription; Pro at about $150/mo drops the rate to roughly 1.75% and pays for itself past around $150k. The recurring-gift management is the strongest in its price class, donor portals, automatic retries on failed cards, upgrade prompts, and that machinery produces revenue. Card failure silently kills monthly donors at platforms that do not chase them. Attribution is link-only and never retroactive."
   - platformSlug: givebutter
     award: "Best for events and peer-to-peer"
-    forWhom: "Shops whose fundraising centres on campaigns and events"
+    forWhom: "Shops whose fundraising centers on campaigns and events"
     note: "0% platform fee with donor tips on, roughly 3% with tips off, processing fees either way. Ticketing, auctions, campaign pages and peer-to-peer in one modern package, with the best donor-facing experience among the free options. Your effective rate depends on how many donors leave the tip on, which is the tradeoff of the 0% model."
   - platformSlug: zeffy
     award: "Best free option"
     forWhom: "Shops under about $40k online, or anyone who wants to keep every dollar"
-    note: "Free at any volume including processing fees, a $100 gift deposits $100. Covers donations, ticketing, raffles and memberships, running on Stripe underneath. Funded by an optional tip donors are asked for at checkout, so your net per gift depends on donor behaviour rather than a fixed rate. Below roughly $40,000 online, nothing beats it on cost."
+    note: "Free at any volume including processing fees, a $100 gift deposits $100. Covers donations, ticketing, raffles and memberships, running on Stripe underneath. Funded by an optional tip donors are asked for at checkout, so your net per gift depends on donor behavior rather than a fixed rate. Below roughly $40,000 online, nothing beats it on cost."
 decidingFactors:
   - factor: "Four pricing models, and the winner changes with volume."
     detail: "Percentage-only costs the same rate forever with no floor, cheap when small, expensive when big. Flat subscription costs the same whether you raise $40,000 or $400,000, so it is worse at low volume and better at high. Free-with-donor-tips shifts the cost to your donors and makes your effective rate unpredictable. Subscription-plus-percentage charges you both ways. Multiply last year's online total by each and compare."
@@ -33,7 +33,7 @@ decidingFactors:
     detail: "These hold transactions and contact details. They do not hold soft credits on donor-advised-fund gifts, household records, or the retention history a second ask is built on. If your gap is donor history rather than checkout, a CRM behind your existing platform is the cheaper fix."
 faq:
   - q: "What is the cheapest donation platform for nonprofits?"
-    a: "Zeffy, which charges nothing at any volume including processing fees, funded by an optional tip donors are asked for at checkout. Givebutter is also free with tips on. Both make your effective cost depend on donor behaviour rather than a fixed rate."
+    a: "Zeffy, which charges nothing at any volume including processing fees, funded by an optional tip donors are asked for at checkout. Givebutter is also free with tips on. Both make your effective cost depend on donor behavior rather than a fixed rate."
   - q: "Is Zeffy really free?"
     a: "Yes, to the nonprofit, a $100 gift deposits $100. The model is that donors are asked to add an optional tip at checkout, which funds the company. When donors decline, your net per gift is unchanged but Zeffy earns nothing on it. The trade-off is the ask appearing on your giving page, not a hidden fee."
   - q: "At what point should we switch from a percentage fee to a subscription?"
