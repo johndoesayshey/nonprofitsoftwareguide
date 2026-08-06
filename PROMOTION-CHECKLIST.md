@@ -101,7 +101,12 @@ list** — Nonprofit Quarterly and Blue Avocado were both checked and ruled out
 (bylined-essay and first-person requirements, incompatible with staying
 anonymous).
 
-**Status as of 2026-08-05, see `OUTREACH-DRAFTS.md` for the full story:**
+**Status as of 2026-08-06, see `OUTREACH-DRAFTS.md` for the full story.** All
+open drafts were rewritten on 2026-08-06 to match the operator's own sent
+messages: subject is always "Intro + <topic>" with no statistic in it, body opens
+with the introduction, first person singular, URL alone on its line with no
+trailing punctuation. The voice rule is written out at the top of
+`OUTREACH-DRAFTS.md`; use it for every future pitch.
 
 - [x] **Nonprofit Tech for Good** — heather@nptechforgood.com — **sent** (the
       operator's own version, PDF attached)
@@ -111,18 +116,26 @@ anonymous).
       content marketing, not an outlet; dropped
 - [x] **Jeff Brooks, Future Fundraising Now** — jeff@jeff-brooks.com — **sent
       2026-08-05**, PDF attached
-- [ ] **Peak Proposals** — peakproposals@peakproposals.com — draft ready in
-      Gmail. Their contact page openly invites blog topic suggestions; pitched
-      on the grant-research cut (55% of small shops spend $0)
-- [ ] **Nonprofit Marketing Guide** — kivi@nonprofitmarketingguide.com — draft
-      ready in Gmail. Contact corrected: media inquiries go to Kivi directly,
-      not the helpdesk address the old shortlist listed
+- [ ] **Peak Proposals** — peakproposals@peakproposals.com — **draft ready in
+      Gmail, rewritten 2026-08-06.** Their contact page openly invites blog topic
+      suggestions; pitched on the grant-research cut (55% of small shops spend $0)
+- [ ] **Nonprofit Marketing Guide** — kivi@nonprofitmarketingguide.com — **draft
+      ready in Gmail, rewritten 2026-08-06.** Contact corrected: media inquiries
+      go to Kivi directly, not the helpdesk address the old shortlist listed
+- [ ] **Selfish Giving (Joe Waters)** — joe@selfishgiving.com — **draft ready in
+      Gmail 2026-08-06.** Weekly curated newsletter, latest issue 5 Aug 2026,
+      address confirmed on his own About page. Corporate-partnerships beat, so
+      the pitch is short and hands him one liftable number
 - [ ] **National Council of Nonprofits** — via site contact form, not email;
       text is in `OUTREACH-DRAFTS.md` ready to paste, has to be submitted
       by hand since their site blocks automated form submission
-- [ ] **DH Leonard** — Megan@dhleonardconsulting.com
-- [ ] **RKD Group / Rossi's Roundup** — connect@rkdgroup.com
-- [ ] **Missions to Movements** — kat@positiveequation.com
+- [ ] **DH Leonard** — Megan@dhleonardconsulting.com — verified real and a good
+      fit, but **hold until January 2027.** The roundup publishes every early
+      January (2021, 2022, 2024, 2025 editions); pitching in August gets forgotten
+- [ ] **RKD Group / Rossi's Roundup** — connect@rkdgroup.com — *unverified,
+      check in a browser before drafting*
+- [ ] **Missions to Movements** — kat@positiveequation.com — *unverified, check
+      in a browser before drafting*
 - [ ] **Philanthropy News Digest** (Candid) — pnd@candid.org, Tier 2 but the
       single most authoritative outcome available if it lands
 - [ ] Consider offering **one** outlet a 48-hour exclusive once the first
@@ -201,6 +214,10 @@ was tried and when — and to be able to spot a pattern before a moderator does.
 |---|---|---|---|
 | 2026-08-03 | Affiliate | DonorDock, Donorbox, 4aGoodCause, PartnerStack, Jotform, Instrumentl applied | All pending |
 | 2026-08-03 | Reddit | 7 comments including a site link | **6 survived, 1 removed** |
+| 2026-08-05 | Press | Nonprofit Tech for Good, survey + PDF | Sent, no reply yet |
+| 2026-08-05 | Press | Jeff Brooks / Future Fundraising Now, survey + PDF | Sent, no reply yet |
+| 2026-08-05 | Affiliate | Zeffy approved via direct route | **Live, 26 pages** |
+| 2026-08-06 | Press | Peak Proposals, Nonprofit Marketing Guide, Selfish Giving | Drafted in Gmail, awaiting send |
 
 ### On the Reddit result
 
