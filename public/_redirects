@@ -10,3 +10,17 @@
 # comparing these products IS comparing their prices — so they competed for one
 # intent while neither carried the whole answer.
 /pricing/  /compare/  301
+
+# Trailing-punctuation rescue, added 2026-08-05 after GA4 showed real sessions
+# landing on "/benchmarks,". LinkedIn and Gmail both swallow a comma or period
+# that sits immediately after a bare URL into the link itself, and Cloudflare's
+# fallback then serves the homepage instead of the page the link promised. These
+# cover the pages we actually promote. The real fix is a space before the comma.
+/benchmarks,   /benchmarks/   301
+/benchmarks.   /benchmarks/   301
+/compare,      /compare/      301
+/compare.      /compare/      301
+/donor-crm,    /donor-crm/    301
+/donor-crm.    /donor-crm/    301
+/best,         /best/         301
+/best.         /best/         301
