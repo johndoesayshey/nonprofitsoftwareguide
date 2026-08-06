@@ -38,7 +38,8 @@ been checked before drafting, not after. Not pursuing.
 ---
 
 ## 4. Jeff Brooks, Future Fundraising Now — jeff@jeff-brooks.com
-**Status: saved as a Gmail draft**, still needs the PDF attached and a send.
+**Status: SENT 2026-08-05**, PDF attached, subject "Intro + New data point on
+donor databases." Operator sent their own version.
 
 Operator-sourced lead. Verified before drafting: an individually-authored
 practitioner blog (Jeff Brooks, 35+ years in nonprofit fundraising, blogging
@@ -96,6 +97,45 @@ hand: open Drafts, click the paperclip, pick
 `public/2026-nonprofit-software-spend-survey.pdf` (the current one, rebuilt
 tonight after the pricing corrections — not the older copy at the repo
 root), then send.
+
+## 5. Peak Proposals — peakproposals@peakproposals.com
+**Status: saved as a Gmail draft 2026-08-05.** No PDF needed, the link carries it.
+
+Verified before drafting. Contact address confirmed on their own Contact page,
+which also says outright: *"Is there a topic or resource you'd like to see
+covered on the blog? Use the contact form to let us know."* That is an open
+invitation, and the pitch takes them up on it directly.
+
+Best structural fit of anything verified: no author bylines anywhere on the
+site, a standing "Tools & Resources" category, and a current top post reviewing
+three grant-writing certifications on **what each one costs**. Monthly cadence.
+
+The angle is grant-specific rather than the generic CRM stat, because they are a
+grants blog: **55% of nonprofits under $250K spend nothing on grant research
+tools**, median $0, rising to $5,713 mean at $5M+ where nobody reports zero.
+
+**Subject:** A topic suggestion with data: 55% of small nonprofits spend $0 on grant research
+
+---
+
+## 6. Nonprofit Marketing Guide — kivi@nonprofitmarketingguide.com
+**Status: saved as a Gmail draft 2026-08-05.**
+
+**Contact corrected.** The old shortlist said to use `helpdesk@` and address
+Kristina Leroux. Their Contact page says the helpdesk address is for general
+questions and customer service, and that **media inquiries go to Kivi Leroux
+Miller directly** at `kivi@nonprofitmarketingguide.com`. A data pitch is a media
+inquiry, so it goes to Kivi.
+
+The angle reframes the survey finding as a communications problem rather than a
+fundraising one: 36% of small shops have no donor database, so segmented email
+and donor journeys are a data gap, not a strategy gap. The draft also names
+their own Communications Trends Report up front and positions this as
+complementary rather than competing, which is the obvious objection to disarm.
+
+**Subject:** New data: 36% of small nonprofits have no donor database at all
+
+---
 
 ## What's left
 

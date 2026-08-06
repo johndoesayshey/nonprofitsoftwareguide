@@ -109,8 +109,14 @@ anonymous).
       fit; not pursuing
 - ~~Whole Whale / Nonprofit News Feed~~ — turned out to be the agency's own
       content marketing, not an outlet; dropped
-- [ ] **Jeff Brooks, Future Fundraising Now** — jeff@jeff-brooks.com — draft
-      ready in Gmail, needs the PDF attached and a send
+- [x] **Jeff Brooks, Future Fundraising Now** — jeff@jeff-brooks.com — **sent
+      2026-08-05**, PDF attached
+- [ ] **Peak Proposals** — peakproposals@peakproposals.com — draft ready in
+      Gmail. Their contact page openly invites blog topic suggestions; pitched
+      on the grant-research cut (55% of small shops spend $0)
+- [ ] **Nonprofit Marketing Guide** — kivi@nonprofitmarketingguide.com — draft
+      ready in Gmail. Contact corrected: media inquiries go to Kivi directly,
+      not the helpdesk address the old shortlist listed
 - [ ] **National Council of Nonprofits** — via site contact form, not email;
       text is in `OUTREACH-DRAFTS.md` ready to paste, has to be submitted
       by hand since their site blocks automated form submission
