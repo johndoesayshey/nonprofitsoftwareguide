@@ -62,8 +62,15 @@ account is live.
 
 ---
 
-### 4. Zeffy — 30% of donor tips, ~$500 per signup
-🔀 **ROUTE CHANGED 2026-08-04: applying directly, outside PartnerStack.**
+### 4. Zeffy — 30% of donor tips, ~$500 per signup ✅ APPROVED 2026-08-05 — link live
+The direct route worked. `join.zeffy.com/mstjd5knqjnz` resolves to Zeffy's
+registration page carrying live PartnerStack tracking parameters, so the program
+runs on PartnerStack even though the PartnerStack *network* account was denied.
+Applying direct was the right call and it unblocked the single best-placed
+opportunity on the list.
+
+Historical note on how it got here:
+🔀 **ROUTE CHANGED 2026-08-04: applied directly, outside PartnerStack.**
 The operator found a direct application on Zeffy's side and is submitting it —
 answers drafted in the operator's voice (org description, site, audience, leads).
 When it clears, compare the direct terms against PartnerStack's published

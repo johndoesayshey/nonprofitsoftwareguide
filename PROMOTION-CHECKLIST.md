@@ -26,9 +26,9 @@ Approval takes days to weeks, so start the clock before anything else.
       nonprofit-specific content). **Appealed 2026-08-04**, pending. Gated
       behind it while denied: Ticket Tailor, Xero, Brevo, monday.com,
       Bloomerang's agency track. **Zeffy no longer waits on this** — see below.
-- [x] **Zeffy** — 🔀 found a **direct application outside PartnerStack**;
-      submitted. Compare the terms against PartnerStack's published 30% of
-      tips / ~$500 per signup before accepting.
+- [x] **Zeffy** — ✅ **approved 2026-08-05, link live.** The direct route
+      (outside the denied PartnerStack network account) worked. 26 pages now
+      route to a program that pays ~$500/signup and previously earned nothing.
 - [ ] **Eleo** — https://eleoonline.com/consultant-partner-interest/ *($100/referral)*
       → it is the *Consultant* Community form, so lead with the consulting work
 
