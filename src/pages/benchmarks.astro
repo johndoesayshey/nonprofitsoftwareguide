@@ -76,7 +76,13 @@ const datasetLd = {
 
       <p class="dl">
         <a class="btn-dl" href={s.pdf} download>Download the full results (PDF)</a>
-        <span class="dl-note">2 pages · free to cite with attribution</span>
+        <a class="btn-dl alt" href={s.boardPdf} download>Board briefing, one page (PDF)</a>
+        <span class="dl-note">Free to cite with attribution</span>
+      </p>
+      <p class="table-note">
+        The board briefing is the same data on a single sheet, written to be handed
+        round a board table: what organizations your size spend, what they buy first,
+        and four questions to ask before approving a line.
       </p>
 
       <h2>Mean annual spend by category</h2>
@@ -264,8 +270,9 @@ const datasetLd = {
         Nonprofit Software Guide, “{s.title}” ({s.fielded}).
         https://nonprofitsoftwareguide.com/benchmarks/
       </blockquote>
-      <p>
+      <p class="dl">
         <a class="btn-dl" href={s.pdf} download>Download the full results (PDF)</a>
+        <a class="btn-dl alt" href={s.boardPdf} download>Board briefing, one page (PDF)</a>
       </p>
 
       <SurveyForm />
@@ -295,6 +302,11 @@ const datasetLd = {
     font-weight: 700; text-decoration: none; padding: .6rem 1.1rem; border-radius: 3px;
     font-size: .92rem; }
   .btn-dl:hover { background: var(--color-green); color: #fff; }
+  /* Second download is the same offer in a shorter format, so it reads as a
+     companion to the primary button rather than competing with it. */
+  .btn-dl.alt { background: transparent; color: var(--color-green-deep);
+    box-shadow: inset 0 0 0 1.5px var(--color-green-deep); }
+  .btn-dl.alt:hover { background: var(--color-green-deep); color: #fff; }
   .dl-note { display: block; margin-top: .45rem; font-size: .78rem; color: var(--color-muted); }
 
   .table-note { color: var(--color-muted); font-size: .92rem; margin: -.4rem 0 .2rem; }

@@ -1,182 +1,36 @@
 #!/usr/bin/env node
 // Builds the downloadable survey PDF from src/data/survey-2026.json.
 //
-// Written by hand against the PDF spec rather than pulling in a PDF library:
-// the document is a few pages of text and rules, the site has no other runtime
-// dependencies, and a library would be ~2MB of node_modules to draw a table.
-// Runs as part of `npm run build`, so the PDF can never disagree with the page.
+// The PDF machinery lives in scripts/lib/pdf.mjs and is shared with
+// build-board-onepager.mjs. Runs as part of `npm run build`, so the PDF can
+// never disagree with the page.
 
 import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { Page, buildPdf, loadPng, paragraph as wrap, textWidth, rgb, PAGE_W, PAGE_H } from './lib/pdf.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const survey = JSON.parse(readFileSync(join(ROOT, 'src/data/survey-2026.json'), 'utf8'));
 const OUT = join(ROOT, 'public', survey.pdf.replace(/^\//, ''));
 
 const SITE = 'https://nonprofitsoftwareguide.com';
-const PAGE_W = 612;   // US Letter, 72dpi
-const PAGE_H = 792;
 const MARGIN = 54;
 
 // Brand palette, matched to src/styles/global.css so the PDF and the site are
-// recognisably the same publication. PDF colour is 0-1 per channel, not 0-255.
-const rgb = (hex) => [
-  parseInt(hex.slice(1, 3), 16) / 255,
-  parseInt(hex.slice(3, 5), 16) / 255,
-  parseInt(hex.slice(5, 7), 16) / 255,
-].map((n) => n.toFixed(3));
+// recognisably the same publication.
 const INK = rgb('#141514');
 const TEAL = rgb('#0e4f4a');       // bands, emphasis
 const TEAL_MID = rgb('#0a6a62');   // accents
-const BAR = rgb('#8fbfba');        // data bars — must read as a scale, not a smudge
+const BAR = rgb('#8fbfba');        // data bars, must read as a scale not a smudge
 const PAPER = ['1', '1', '1'];
 
-// ---------- tiny PDF writer -------------------------------------------------
-
-/**
- * PDF text strings escape backslash and both parentheses. Typographic
- * characters are folded to ASCII first: the base-14 Helvetica WinAnsi encoding
- * drops en-dashes and curly quotes silently, so they vanish from the page
- * rather than raising an error.
- */
-const ASCII = { '\u2013': '-', '\u2014': '-', '\u2018': "'", '\u2019': "'",
-                '\u201c': '"', '\u201d': '"', '\u2026': '...', '\u00a0': ' ', '\u00b7': '-' };
-const esc = (s) =>
-  String(s)
-    .replace(/[\u2013\u2014\u2018\u2019\u201c\u201d\u2026\u00a0\u00b7]/g, (c) => ASCII[c])
-    .replace(/\\/g, '\\\\')
-    .replace(/\(/g, '\\(')
-    .replace(/\)/g, '\\)');
-
-// Helvetica advance widths (units/1000) for the printable ASCII range. Enough
-// to right-align currency and centre a title without guessing.
-const W = {
-  ' ': 278, '!': 278, '"': 355, '#': 556, '$': 556, '%': 889, '&': 667, "'": 191,
-  '(': 333, ')': 333, '*': 389, '+': 584, ',': 278, '-': 333, '.': 278, '/': 278,
-  '0': 556, '1': 556, '2': 556, '3': 556, '4': 556, '5': 556, '6': 556, '7': 556,
-  '8': 556, '9': 556, ':': 278, ';': 278, '<': 584, '=': 584, '>': 584, '?': 556,
-  '@': 1015, 'A': 667, 'B': 667, 'C': 722, 'D': 722, 'E': 667, 'F': 611, 'G': 778,
-  'H': 722, 'I': 278, 'J': 500, 'K': 667, 'L': 556, 'M': 833, 'N': 722, 'O': 778,
-  'P': 667, 'Q': 778, 'R': 722, 'S': 667, 'T': 611, 'U': 722, 'V': 667, 'W': 944,
-  'X': 667, 'Y': 667, 'Z': 611, '[': 278, '\\': 278, ']': 278, '^': 469, '_': 556,
-  '`': 333, 'a': 556, 'b': 556, 'c': 500, 'd': 556, 'e': 556, 'f': 278, 'g': 556,
-  'h': 556, 'i': 222, 'j': 222, 'k': 500, 'l': 222, 'm': 833, 'n': 556, 'o': 556,
-  'p': 556, 'q': 556, 'r': 333, 's': 500, 't': 278, 'u': 556, 'v': 500, 'w': 722,
-  'x': 500, 'y': 500, 'z': 500, '{': 334, '|': 260, '}': 334, '~': 584,
-};
-const BOLD_FACTOR = 1.0; // Helvetica-Bold is close enough at these sizes
-
-function textWidth(str, size, bold = false) {
-  let n = 0;
-  const folded = String(str).replace(/[\u2013\u2014\u2018\u2019\u201c\u201d\u2026\u00a0\u00b7]/g, (c) => ASCII[c]);
-  for (const ch of folded) n += W[ch] ?? 556;
-  return (n / 1000) * size * (bold ? BOLD_FACTOR : 1);
-}
-
-class Page {
-  constructor() { this.ops = []; }
-  /** Brand mark, drawn as strokes. Scale 1 ≈ 26pt wide. */
-  mark(x, y, scale = 1, gray = 0.35) {
-    const s = scale, o = [];
-    o.push(`q ${gray} G ${(1.4 * s).toFixed(2)} w 1 J 1 j`);
-    // screen
-    o.push(`${(x).toFixed(2)} ${(y).toFixed(2)} ${(22 * s).toFixed(2)} ${(15 * s).toFixed(2)} re S`);
-    // base
-    o.push(`${(x - 3 * s).toFixed(2)} ${(y - 3.4 * s).toFixed(2)} m ${(x + 25 * s).toFixed(2)} ${(y - 3.4 * s).toFixed(2)} l`);
-    o.push(`${(x + 23 * s).toFixed(2)} ${(y).toFixed(2)} l ${(x - 1 * s).toFixed(2)} ${(y).toFixed(2)} l h S`);
-    // </>
-    const cy = y + 7.5 * s;
-    o.push(`${(x + 7 * s).toFixed(2)} ${(cy + 3 * s).toFixed(2)} m ${(x + 4 * s).toFixed(2)} ${cy.toFixed(2)} l ${(x + 7 * s).toFixed(2)} ${(cy - 3 * s).toFixed(2)} l S`);
-    o.push(`${(x + 15 * s).toFixed(2)} ${(cy + 3 * s).toFixed(2)} m ${(x + 18 * s).toFixed(2)} ${cy.toFixed(2)} l ${(x + 15 * s).toFixed(2)} ${(cy - 3 * s).toFixed(2)} l S`);
-    o.push(`${(x + 12.5 * s).toFixed(2)} ${(cy + 4 * s).toFixed(2)} m ${(x + 9.5 * s).toFixed(2)} ${(cy - 4 * s).toFixed(2)} l S`);
-    // gear
-    o.push(`${(x + 11 * s).toFixed(2)} ${(y + 15 * s).toFixed(2)} m ${(x + 11 * s).toFixed(2)} ${(y + 18 * s).toFixed(2)} l S`);
-    const gx = x + 11 * s, gy = y + 21 * s, r = 3 * s, k = 0.5523 * r;
-    o.push(`${(gx - r).toFixed(2)} ${gy.toFixed(2)} m`);
-    o.push(`${(gx - r).toFixed(2)} ${(gy + k).toFixed(2)} ${(gx - k).toFixed(2)} ${(gy + r).toFixed(2)} ${gx.toFixed(2)} ${(gy + r).toFixed(2)} c`);
-    o.push(`${(gx + k).toFixed(2)} ${(gy + r).toFixed(2)} ${(gx + r).toFixed(2)} ${(gy + k).toFixed(2)} ${(gx + r).toFixed(2)} ${gy.toFixed(2)} c`);
-    o.push(`${(gx + r).toFixed(2)} ${(gy - k).toFixed(2)} ${(gx + k).toFixed(2)} ${(gy - r).toFixed(2)} ${gx.toFixed(2)} ${(gy - r).toFixed(2)} c`);
-    o.push(`${(gx - k).toFixed(2)} ${(gy - r).toFixed(2)} ${(gx - r).toFixed(2)} ${(gy - k).toFixed(2)} ${(gx - r).toFixed(2)} ${gy.toFixed(2)} c S`);
-    o.push('Q');
-    this.ops.push(o.join('\n'));
-    return this;
-  }
-  /** Horizontal proportional bar behind a figure. The strongest single signal
-   *  that a table is a report rather than a text dump, and it costs one rect. */
-  bar(xRight, y, value, max, { width = 66, height = 3, color = BAR } = {}) {
-    if (!max || value <= 0) return this;
-    const w = Math.max(1.2, (value / max) * width);
-    this.rect(xRight - w, y - 4, w, height, 0, color);
-    return this;
-  }
-  text(x, y, str, { size = 10, bold = false, gray = 0, color = null, align = 'left' } = {}) {
-    const font = bold ? '/F2' : '/F1';
-    let tx = x;
-    if (align === 'right') tx = x - textWidth(str, size, bold);
-    if (align === 'center') tx = x - textWidth(str, size, bold) / 2;
-    const fill = color ? `${color.join(' ')} rg` : `${gray} g`;
-    this.ops.push(`BT ${fill} ${font} ${size} Tf 1 0 0 1 ${tx.toFixed(2)} ${y.toFixed(2)} Tm (${esc(str)}) Tj ET`);
-    return this;
-  }
-  line(x1, y1, x2, y2, { width = 0.5, gray = 0.75, color = null } = {}) {
-    const stroke = color ? `${color.join(' ')} RG` : `${gray} G`;
-    this.ops.push(`${stroke} ${width} w ${x1.toFixed(2)} ${y1.toFixed(2)} m ${x2.toFixed(2)} ${y2.toFixed(2)} l S`);
-    return this;
-  }
-  rect(x, y, w, h, gray = 0.94, color = null) {
-    const fill = color ? `${color.join(' ')} rg` : `${gray} g`;
-    this.ops.push(`${fill} ${x.toFixed(2)} ${y.toFixed(2)} ${w.toFixed(2)} ${h.toFixed(2)} re f`);
-    return this;
-  }
-  get stream() { return this.ops.join('\n'); }
-}
-
-function buildPdf(pages, meta) {
-  const objs = [];
-  const add = (body) => { objs.push(body); return objs.length; }; // 1-indexed
-
-  const kidsIds = [];
-  const contentIds = [];
-  for (const p of pages) contentIds.push(null);
-
-  // reserve: 1 catalog, 2 pages, 3 F1, 4 F2, then page/content pairs
-  const catalogId = 1, pagesId = 2, f1Id = 3, f2Id = 4;
-  objs.length = 4;
-  objs[2] = '<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>';
-  objs[3] = '<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>';
-
-  pages.forEach((p) => {
-    const stream = p.stream;
-    const cid = add(`<< /Length ${Buffer.byteLength(stream, 'latin1')} >>\nstream\n${stream}\nendstream`);
-    const pid = add(
-      `<< /Type /Page /Parent ${pagesId} 0 R /MediaBox [0 0 ${PAGE_W} ${PAGE_H}] ` +
-      `/Resources << /Font << /F1 ${f1Id} 0 R /F2 ${f2Id} 0 R >> >> /Contents ${cid} 0 R >>`
-    );
-    kidsIds.push(pid);
-  });
-
-  objs[0] = `<< /Type /Catalog /Pages ${pagesId} 0 R >>`;
-  objs[1] = `<< /Type /Pages /Kids [${kidsIds.map((i) => `${i} 0 R`).join(' ')}] /Count ${kidsIds.length} >>`;
-  const infoId = add(
-    `<< /Title (${esc(meta.title)}) /Author (${esc(meta.author)}) /Subject (${esc(meta.subject)}) ` +
-    `/Creator (${esc(meta.author)}) /Producer (${esc(meta.author)}) >>`
-  );
-
-  let out = '%PDF-1.4\n';
-  const offsets = [0];
-  objs.forEach((body, i) => {
-    offsets.push(Buffer.byteLength(out, 'latin1'));
-    out += `${i + 1} 0 obj\n${body}\nendobj\n`;
-  });
-  const xrefPos = Buffer.byteLength(out, 'latin1');
-  out += `xref\n0 ${objs.length + 1}\n0000000000 65535 f \n`;
-  for (let i = 1; i <= objs.length; i++) {
-    out += String(offsets[i]).padStart(10, '0') + ' 00000 n \n';
-  }
-  out += `trailer\n<< /Size ${objs.length + 1} /Root ${catalogId} 0 R /Info ${infoId} 0 R >>\nstartxref\n${xrefPos}\n%%EOF\n`;
-  return Buffer.from(out, 'latin1');
-}
+// The actual logo file, drawn as a raster. It used to be redrawn here in vector
+// strokes, which never looked like the real mark (the gear came out a plain
+// circle). The band behind it is painted the logo's own background colour so
+// the edge of the square tile disappears.
+const logo = loadPng(join(ROOT, 'public/logo-512.png'), { maxSize: 128 });
+const BRAND = logo.corner;
 
 // ---------- document --------------------------------------------------------
 
@@ -237,7 +91,7 @@ function table(p, y, { caption, note, values, totals, fmt, bars = true }) {
     // Zebra banding, very light — enough to track a row across four columns.
     if (rowIdx % 2 === 1) p.rect(MARGIN - 4, y - 4.5, PAGE_W - 2 * MARGIN + 8, 15, 0.972);
     survey.segments.forEach((s, i) => {
-      if (bars) p.bar(COL_X[i], y, values[c.slug][s.slug], colMax[s.slug]);
+      if (bars) p.bar(COL_X[i], y, values[c.slug][s.slug], colMax[s.slug], { color: BAR });
     });
     p.text(LABEL_X, y, c.label, { size: 9.5, color: INK });
     survey.segments.forEach((s, i) => {
@@ -263,33 +117,22 @@ function table(p, y, { caption, note, values, totals, fmt, bars = true }) {
   return y;
 }
 
-/** Naive greedy wrap against the Helvetica metrics above. */
-function paragraph(p, y, str, { size = 9.5, gray = 0.15, leading = 13, width = PAGE_W - 2 * MARGIN } = {}) {
-  let line = '';
-  for (const word of str.split(' ')) {
-    const next = line ? line + ' ' + word : word;
-    if (textWidth(next, size) > width && line) {
-      p.text(LABEL_X, y, line, { size, gray });
-      y -= leading;
-      line = word;
-    } else line = next;
-  }
-  if (line) { p.text(LABEL_X, y, line, { size, gray }); y -= leading; }
-  return y;
-}
+/** Wrapped body copy, always in the left text column. */
+const paragraph = (p, y, str, opts = {}) =>
+  wrap(p, LABEL_X, y, str, { width: PAGE_W - 2 * MARGIN, ...opts });
 
 // --- page 1: cover ---------------------------------------------------------
 // A cover rather than a crammed first page. Two tables on page one was the main
 // reason this read as a text dump: no entry point, no headline finding, nothing
 // to look at before the data starts.
 const p1 = new Page();
+p1.rect(0, 0, PAGE_W, PAGE_H, 1);
 
 const BAND_H = 250;
-p1.rect(0, PAGE_H - BAND_H, PAGE_W, BAND_H, 0, TEAL);
+p1.rect(0, PAGE_H - BAND_H, PAGE_W, BAND_H, 0, BRAND);
 
-p1.mark(MARGIN, PAGE_H - 92, 1.3, 1);   // white mark on the band
-p1.text(MARGIN + 46, PAGE_H - 78, 'NONPROFIT', { size: 10, bold: true, color: PAPER });
-p1.text(MARGIN + 46, PAGE_H - 90, 'SOFTWARE GUIDE', { size: 10, bold: true, color: PAPER });
+const LOGO = 76;
+p1.image('Logo', MARGIN, PAGE_H - 22 - LOGO, LOGO, LOGO);
 
 let cy = PAGE_H - 150;
 const coverTitleSize = Math.min(27, (PAGE_W - 2 * MARGIN) / textWidth(survey.title, 1, true));
@@ -371,6 +214,7 @@ footer(p1, 1, 3);
 
 // --- page 2: the data -------------------------------------------------------
 const pData = new Page();
+pData.rect(0, 0, PAGE_W, PAGE_H, 1);
 y = header(pData, PAGE_H - MARGIN);
 
 y = section(pData, y, '02', 'Mean annual spend');
@@ -411,6 +255,7 @@ footer(pData, 2, 3);
 
 // --- page 3: zero-spend, method, citation -----------------------------------
 const p2 = new Page();
+p2.rect(0, 0, PAGE_W, PAGE_H, 1);
 y = header(p2, PAGE_H - MARGIN);
 
 y = section(p2, y, '04', 'Who spends nothing');
@@ -458,7 +303,7 @@ const SPLIT = process.env.PDF_SPLIT;
 if (SPLIT) {
   mkdirSync(SPLIT, { recursive: true });
   [p1, pData, p2].forEach((pg, i) => {
-    writeFileSync(join(SPLIT, `page-${i + 1}.pdf`), buildPdf([pg], { title: survey.title, author: 'Nonprofit Software Guide', subject: '' }));
+    writeFileSync(join(SPLIT, `page-${i + 1}.pdf`), buildPdf([pg], { title: survey.title, author: 'Nonprofit Software Guide', subject: '' }, { Logo: logo }));
   });
   console.log(`  split pages -> ${SPLIT}`);
 }
